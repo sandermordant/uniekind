@@ -1,0 +1,19 @@
+{
+  "toelichting": "Denkniveaus. Bloom (herzien, Anderson & Krathwohl 2001) is de standaard; RTTI is een optie. De koppeling Bloom → RTTI is een vereenvoudiging om tussen de twee te kunnen schakelen; de werkelijke indeling hangt af van hoe nieuw de situatie voor de leerling is.",
+  "bloom": [
+    { "id": "onthouden", "naam": "Onthouden", "rtti": "R", "werkwoorden": ["noemen", "opsommen", "herkennen", "benoemen", "opzoeken"], "vraagstammen": ["Noem drie …", "Wat is de definitie van {begrip}?", "Welke … horen bij {begrip}?"] },
+    { "id": "begrijpen", "naam": "Begrijpen", "rtti": "T1", "werkwoorden": ["uitleggen", "in eigen woorden zeggen", "samenvatten", "een voorbeeld geven", "vergelijken"], "vraagstammen": ["Leg in eigen woorden uit wat {begrip} is.", "Geef een eigen voorbeeld van {begrip}.", "Wat is het verschil tussen {begrip} en {begrip2}?"] },
+    { "id": "toepassen", "naam": "Toepassen", "rtti": "T2", "werkwoorden": ["berekenen", "gebruiken", "oplossen", "uitvoeren", "toepassen"], "vraagstammen": ["Gebruik {begrip} om … op te lossen.", "Wat gebeurt er met … als …?", "Pas {begrip} toe op deze nieuwe situatie: …"] },
+    { "id": "analyseren", "naam": "Analyseren", "rtti": "I", "werkwoorden": ["ontleden", "verklaren", "verbanden leggen", "onderscheiden", "ordenen"], "vraagstammen": ["Welke oorzaken en gevolgen zie je bij …?", "Hoe hangen {begrip} en {begrip2} samen?", "Wat valt op als je … vergelijkt met …?"] },
+    { "id": "evalueren", "naam": "Evalueren", "rtti": "I", "werkwoorden": ["beoordelen", "beargumenteren", "kiezen en onderbouwen", "kritisch bekijken"], "vraagstammen": ["Ben je het eens met …? Onderbouw met {begrip}.", "Welke oplossing is het beste en waarom?", "Wat is sterk en wat is zwak aan …?"] },
+    { "id": "creeren", "naam": "Creëren", "rtti": "I", "werkwoorden": ["ontwerpen", "bedenken", "maken", "plannen", "formuleren"], "vraagstammen": ["Ontwerp een … waarin je {begrip} gebruikt.", "Bedenk een eigen vraag over {begrip} voor een klasgenoot.", "Maak een plan om …"] }
+  ],
+  "rtti": [
+    { "id": "R", "naam": "Reproductie", "omschrijving": "Kennis herhalen zoals geleerd." },
+    { "id": "T1", "naam": "Training type 1", "omschrijving": "Toepassen in een bekende, geoefende situatie." },
+    { "id": "T2", "naam": "Training type 2", "omschrijving": "Toepassen in een nieuwe, onbekende situatie." },
+    { "id": "I", "naam": "Inzicht", "omschrijving": "Verbanden leggen, beoordelen en iets nieuws maken." }
+  ],
+  "nietWaarneembaar": ["begrijpen", "begrijp", "weten", "weet", "kennen", "ken", "inzien", "snappen", "snap", "beseffen", "leren", "zich bewust zijn", "bekend zijn met"],
+  "tipWaarneembaar": "Kies een werkwoord dat je kunt zien of horen: 'je kunt uitleggen…', 'je kunt berekenen…', 'je kunt drie voorbeelden noemen…'. 'Je begrijpt…' kun je niet waarnemen."
+}

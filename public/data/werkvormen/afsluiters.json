@@ -1,0 +1,183 @@
+{
+  "categorie": "afsluiter",
+  "titel": "Afsluiters",
+  "items": [
+    {
+      "id": "een-ding-meenemen",
+      "naam": "Eén ding dat ik meeneem",
+      "alias": ["take-away", "één ding", "wat neem je mee?"],
+      "categorie": "afsluiter",
+      "kort": "Elke leerling noemt of schrijft aan het eind van de les één ding dat hij meeneemt uit de les.",
+      "startzin": "We sluiten af. Schrijf in één zin op: wat is het belangrijkste dat jij vandaag meeneemt? Niet wat ik belangrijk vind, maar wat jij belangrijk vindt.",
+      "stappen": [
+        "Laat leerlingen in één zin opschrijven wat ze meenemen.",
+        "Vraag 3-4 leerlingen het voor te lezen (vrijwillig of willekeurig).",
+        "Koppel terug aan het lesdoel: zit de kern erbij?",
+        "Vul aan wat je mist."
+      ],
+      "duur": { "min": 2, "max": 4 },
+      "groepsvorm": ["individueel", "klas"],
+      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
+      "middelen": { "lijst": ["schrift of briefje"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "geen",
+      "lesfase": ["afsluiting"],
+      "denkniveau": ["onthouden", "begrijpen", "evalueren"],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "goed", "tip": "Eén zin of steekwoord." },
+        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk." },
+        "nt2": { "past": "aanpassen", "tip": "Zinsstarter: 'Ik neem mee dat…'." },
+        "faalangst": { "past": "goed", "tip": "Voorlezen vrijwillig." },
+        "structuur": { "past": "goed", "tip": "Vaste afsluiting." },
+        "hoogbegaafd": { "past": "goed", "tip": "Vraag ook: waar wil je meer over weten?" }
+      },
+      "energie": "rustig",
+      "docentstijl": ["relatie", "structuur", "houvast"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        { "valkuil": "Algemene antwoorden ('veel').", "oplossing": "Vraag om iets wat je aan iemand thuis zou kunnen vertellen." }
+      ],
+      "varianten": {
+        "vmbo": "Mondeling of met zinsstarter.",
+        "havo": "Eén zin.",
+        "vwo": "Eén zin plus waarom.",
+        "steun": "Zinsstarter.",
+        "basis": "Standaard.",
+        "verdieping": "Plus een vervolgvraag."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Maatschappijleer", "voorbeeld": "'Ik neem mee dat de rechter onafhankelijk moet zijn.'" },
+        { "vak": "Biologie", "voorbeeld": "'Ik neem mee dat planten zuurstof maken.'" },
+        { "vak": "LO", "voorbeeld": "'Ik neem mee dat ik eerst mijn knieën moet buigen bij het landen.'" }
+      ],
+      "waarom": "Een korte samenvatting in eigen woorden is een vorm van ophalen en reflecteren. Het is een praktijkafsluiter; het effect zit vooral in het actief ophalen.",
+      "bewijs": "praktijk",
+      "bronnen": ["roediger-karpicke-2006"],
+      "materiaal": []
+    },
+    {
+      "id": "zes-woorden",
+      "naam": "Samenvatten in zes woorden",
+      "alias": ["zeswoordensamenvatting", "kop boven de les", "tweet van de les"],
+      "categorie": "afsluiter",
+      "kort": "Leerlingen vatten de les samen in precies zes woorden, wat dwingt tot kiezen wat de kern is.",
+      "startzin": "Vat de les van vandaag samen in precies zes woorden. Niet meer, niet minder. Kies goed: wat is echt de kern?",
+      "stappen": [
+        "Leerlingen schrijven hun zeswoordensamenvatting.",
+        "Tweetallen vergelijken en kiezen de beste van de twee.",
+        "Een paar samenvattingen op het bord.",
+        "Bespreek: welke vat het lesdoel het beste samen?"
+      ],
+      "duur": { "min": 3, "max": 5 },
+      "groepsvorm": ["individueel", "tweetal"],
+      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
+      "middelen": { "lijst": ["briefje of wisbordje"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "geen",
+      "lesfase": ["afsluiting"],
+      "denkniveau": ["begrijpen", "evalueren"],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "goed", "tip": "Kort; spelling telt niet." },
+        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk." },
+        "nt2": { "past": "aanpassen", "tip": "Kernwoorden op het bord als hulp." },
+        "faalangst": { "past": "goed", "tip": "Kort en speels." },
+        "structuur": { "past": "goed", "tip": "Duidelijke regel: zes woorden." },
+        "hoogbegaafd": { "past": "goed", "tip": "Daag uit met een samenvatting die ook het waarom bevat." }
+      },
+      "energie": "rustig",
+      "docentstijl": ["structuur", "relatie", "houvast"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        { "valkuil": "Leerlingen tellen woorden in plaats van na te denken.", "oplossing": "Eerst een langere zin, dan inkorten tot zes." }
+      ],
+      "varianten": {
+        "vmbo": "Vier woorden, met kernwoorden op het bord.",
+        "havo": "Zes woorden.",
+        "vwo": "Zes woorden die ook een verband laten zien.",
+        "steun": "Kernwoorden op het bord.",
+        "basis": "Standaard.",
+        "verdieping": "Inclusief waarom."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Economie", "voorbeeld": "'Hogere prijzen, minder kopen, behalve noodzakelijk.'" },
+        { "vak": "Geschiedenis", "voorbeeld": "'Boeren verloren grond, steden groeiden snel.'" },
+        { "vak": "Natuurkunde", "voorbeeld": "'Snelheid is afstand gedeeld door tijd.'" }
+      ],
+      "waarom": "Samenvatten in een beperkt aantal woorden dwingt tot het selecteren van de kern. Samenvatten als leertechniek heeft in het overzicht van Dunlosky e.a. een lage tot gemiddelde bruikbaarheid; als korte afsluiter en check werkt het vooral als ophaalmoment.",
+      "bewijs": "beperkt",
+      "bronnen": ["dunlosky-2013"],
+      "materiaal": []
+    },
+    {
+      "id": "vooruitblik",
+      "naam": "Vooruitblik",
+      "alias": ["cliffhanger", "volgende keer", "teaser"],
+      "categorie": "afsluiter",
+      "kort": "Je sluit af met een korte blik op de volgende les: wat komt er, en welke vraag gaan we dan beantwoorden?",
+      "startzin": "Vandaag hebben we geleerd dat … Volgende les gaan we kijken naar … En ik wil dat je erover nadenkt: …?",
+      "stappen": [
+        "Vat in één zin samen wat het lesdoel van vandaag was.",
+        "Benoem wat de volgende les komt en hoe het aansluit.",
+        "Stel een vraag die nieuwsgierig maakt naar de volgende les.",
+        "Noem eventueel kort het huiswerk en waarom het helpt."
+      ],
+      "duur": { "min": 1, "max": 3 },
+      "groepsvorm": ["klas"],
+      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": false },
+      "middelen": { "lijst": ["vooruitblik op het bord"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "geen",
+      "lesfase": ["afsluiting"],
+      "denkniveau": ["begrijpen"],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "goed", "tip": "Ook op het bord zetten." },
+        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk." },
+        "nt2": { "past": "goed", "tip": "Noem de nieuwe kernbegrippen al." },
+        "faalangst": { "past": "goed", "tip": "Voorspelbaarheid geeft rust." },
+        "structuur": { "past": "goed", "tip": "Leerlingen weten wat er komt." },
+        "hoogbegaafd": { "past": "goed", "tip": "Geef een uitdagende vraag om alvast over na te denken." }
+      },
+      "energie": "rustig",
+      "docentstijl": ["uitleggen", "structuur", "houvast"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        { "valkuil": "De bel gaat voordat je eraan toekomt.", "oplossing": "Plan de vooruitblik 2 minuten voor het einde, vóór het opruimen." }
+      ],
+      "varianten": {
+        "vmbo": "Eén zin en één vraag.",
+        "havo": "Samenvatting plus vooruitblik.",
+        "vwo": "Plus een verband met eerder geleerde stof.",
+        "steun": "Kernbegrippen van de volgende les.",
+        "basis": "Standaard.",
+        "verdieping": "Uitdagende vraag."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Wiskunde", "voorbeeld": "'Vandaag: lineaire formules. Volgende keer: wat als de grafiek geen rechte lijn is?'" },
+        { "vak": "Geschiedenis", "voorbeeld": "'Vandaag: de oorzaken. Volgende keer: liep het goed af?'" },
+        { "vak": "Duits", "voorbeeld": "'Vandaag: de derde naamval. Volgende keer: waarom zeggen Duitsers soms toch iets anders?'" }
+      ],
+      "waarom": "Een korte samenvatting en vooruitblik geven structuur en verbinden lessen met elkaar; terugblikken en vooruitblikken horen bij de principes van Rosenshine. Het is een eenvoudige praktijkafsluiter.",
+      "bewijs": "redelijk",
+      "bronnen": ["rosenshine-2012"],
+      "materiaal": []
+    }
+  ]
+}

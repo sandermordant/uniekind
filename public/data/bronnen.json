@@ -1,0 +1,231 @@
+{
+  "toelichting": "Bronnenlijst van de kennisbank. Alleen echte publicaties. 'status' is 'gecontroleerd' als titel, auteur en jaar zijn nagelopen; 'nog-controleren' als een detail (jaar, druk, link) nog nagekeken moet worden. Effectgroottes nemen we bewust niet over.",
+  "bronnen": {
+    "rosenshine-2012": {
+      "titel": "Principles of Instruction: Research-based strategies that all teachers should know",
+      "auteur": "Rosenshine, B.",
+      "jaar": 2012,
+      "waar": "American Educator, 36(1), 12-19, 39",
+      "url": "https://www.aft.org/sites/default/files/periodicals/Rosenshine.pdf",
+      "status": "gecontroleerd"
+    },
+    "wiliam-2011": {
+      "titel": "Embedded Formative Assessment",
+      "auteur": "Wiliam, D.",
+      "jaar": 2011,
+      "waar": "Solution Tree Press (tweede druk 2018)",
+      "status": "gecontroleerd"
+    },
+    "wiliam-leahy-2015": {
+      "titel": "Embedding Formative Assessment: Practical Techniques for K-12 Classrooms",
+      "auteur": "Wiliam, D. & Leahy, S.",
+      "jaar": 2015,
+      "waar": "Learning Sciences International",
+      "status": "gecontroleerd"
+    },
+    "leahy-2005": {
+      "titel": "Classroom Assessment: Minute by Minute, Day by Day",
+      "auteur": "Leahy, S., Lyon, C., Thompson, M. & Wiliam, D.",
+      "jaar": 2005,
+      "waar": "Educational Leadership, 63(3), 18-24",
+      "status": "gecontroleerd"
+    },
+    "black-wiliam-1998": {
+      "titel": "Inside the Black Box: Raising Standards Through Classroom Assessment",
+      "auteur": "Black, P. & Wiliam, D.",
+      "jaar": 1998,
+      "waar": "Phi Delta Kappan, 80(2), 139-148",
+      "status": "gecontroleerd"
+    },
+    "eef-toolkit": {
+      "titel": "Teaching and Learning Toolkit",
+      "auteur": "Education Endowment Foundation",
+      "jaar": 2021,
+      "waar": "Online overzicht, wordt doorlopend bijgewerkt",
+      "url": "https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit",
+      "status": "gecontroleerd"
+    },
+    "eef-metacognitie": {
+      "titel": "Metacognition and Self-Regulated Learning: Guidance Report",
+      "auteur": "Education Endowment Foundation",
+      "jaar": 2018,
+      "waar": "EEF (herziene versie 2021)",
+      "status": "nog-controleren"
+    },
+    "surma-2019": {
+      "titel": "Wijze lessen: Twaalf bouwstenen voor effectieve didactiek",
+      "auteur": "Surma, T., Vanhoyweghen, K., Camp, G. & Kirschner, P. A.",
+      "jaar": 2019,
+      "waar": "ExpertiseCentrum Nederlands / Ten Brink Uitgevers",
+      "status": "gecontroleerd"
+    },
+    "dunlosky-2013": {
+      "titel": "Improving Students' Learning With Effective Learning Techniques",
+      "auteur": "Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J. & Willingham, D. T.",
+      "jaar": 2013,
+      "waar": "Psychological Science in the Public Interest, 14(1), 4-58",
+      "status": "gecontroleerd"
+    },
+    "roediger-karpicke-2006": {
+      "titel": "Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention",
+      "auteur": "Roediger, H. L. & Karpicke, J. D.",
+      "jaar": 2006,
+      "waar": "Psychological Science, 17(3), 249-255",
+      "status": "gecontroleerd"
+    },
+    "agarwal-bain-2019": {
+      "titel": "Powerful Teaching: Unleash the Science of Learning",
+      "auteur": "Agarwal, P. K. & Bain, P. M.",
+      "jaar": 2019,
+      "waar": "Jossey-Bass",
+      "status": "gecontroleerd"
+    },
+    "cepeda-2006": {
+      "titel": "Distributed Practice in Verbal Recall Tasks: A Review and Quantitative Synthesis",
+      "auteur": "Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T. & Rohrer, D.",
+      "jaar": 2006,
+      "waar": "Psychological Bulletin, 132(3), 354-380",
+      "status": "gecontroleerd"
+    },
+    "rohrer-taylor-2007": {
+      "titel": "The Shuffling of Mathematics Problems Improves Learning",
+      "auteur": "Rohrer, D. & Taylor, K.",
+      "jaar": 2007,
+      "waar": "Instructional Science, 35, 481-498",
+      "status": "gecontroleerd"
+    },
+    "chi-1989": {
+      "titel": "Self-Explanations: How Students Study and Use Examples in Learning to Solve Problems",
+      "auteur": "Chi, M. T. H., Bassok, M., Lewis, M. W., Reimann, P. & Glaser, R.",
+      "jaar": 1989,
+      "waar": "Cognitive Science, 13(2), 145-182",
+      "status": "gecontroleerd"
+    },
+    "mayer-2009": {
+      "titel": "Multimedia Learning (2nd ed.)",
+      "auteur": "Mayer, R. E.",
+      "jaar": 2009,
+      "waar": "Cambridge University Press",
+      "status": "gecontroleerd"
+    },
+    "sweller-1998": {
+      "titel": "Cognitive Architecture and Instructional Design",
+      "auteur": "Sweller, J., van Merriënboer, J. J. G. & Paas, F. G. W. C.",
+      "jaar": 1998,
+      "waar": "Educational Psychology Review, 10(3), 251-296",
+      "status": "gecontroleerd"
+    },
+    "renkl-atkinson-2003": {
+      "titel": "Structuring the Transition From Example Study to Problem Solving in Cognitive Skill Acquisition: A Cognitive Load Perspective",
+      "auteur": "Renkl, A. & Atkinson, R. K.",
+      "jaar": 2003,
+      "waar": "Educational Psychologist, 38(1), 15-22",
+      "status": "gecontroleerd"
+    },
+    "kirschner-2006": {
+      "titel": "Why Minimal Guidance During Instruction Does Not Work",
+      "auteur": "Kirschner, P. A., Sweller, J. & Clark, R. E.",
+      "jaar": 2006,
+      "waar": "Educational Psychologist, 41(2), 75-86",
+      "status": "gecontroleerd"
+    },
+    "wood-bruner-ross-1976": {
+      "titel": "The Role of Tutoring in Problem Solving",
+      "auteur": "Wood, D., Bruner, J. S. & Ross, G.",
+      "jaar": 1976,
+      "waar": "Journal of Child Psychology and Psychiatry, 17(2), 89-100",
+      "status": "gecontroleerd"
+    },
+    "johnson-2009": {
+      "titel": "An Educational Psychology Success Story: Social Interdependence Theory and Cooperative Learning",
+      "auteur": "Johnson, D. W. & Johnson, R. T.",
+      "jaar": 2009,
+      "waar": "Educational Researcher, 38(5), 365-379",
+      "status": "gecontroleerd"
+    },
+    "aronson-patnoe-2011": {
+      "titel": "Cooperation in the Classroom: The Jigsaw Method (3rd ed.)",
+      "auteur": "Aronson, E. & Patnoe, S.",
+      "jaar": 2011,
+      "waar": "Pinter & Martin",
+      "status": "nog-controleren"
+    },
+    "hollingsworth-ybarra-2009": {
+      "titel": "Explicit Direct Instruction (EDI): The Power of the Well-Crafted, Well-Taught Lesson",
+      "auteur": "Hollingsworth, J. & Ybarra, S.",
+      "jaar": 2009,
+      "waar": "Corwin",
+      "status": "gecontroleerd"
+    },
+    "ebbens-ettekoven": {
+      "titel": "Effectief leren (basisboek; activerende directe instructie)",
+      "auteur": "Ebbens, S. & Ettekoven, S.",
+      "jaar": 2013,
+      "waar": "Noordhoff Uitgevers (meerdere drukken; jaar en druk nog nalopen)",
+      "status": "nog-controleren"
+    },
+    "igdi-slo": {
+      "titel": "Interactief Gedifferentieerde Directe Instructie (IGDI), uitgewerkt in Nederlandse handreikingen (o.a. SLO en Expertisecentrum Nederlands)",
+      "auteur": "diverse auteurs",
+      "jaar": null,
+      "waar": "Nederlandse onderwijspraktijk; precieze bron nog kiezen",
+      "status": "nog-controleren"
+    },
+    "lemov-2015": {
+      "titel": "Teach Like a Champion 2.0",
+      "auteur": "Lemov, D.",
+      "jaar": 2015,
+      "waar": "Jossey-Bass",
+      "status": "gecontroleerd"
+    },
+    "pashler-2008": {
+      "titel": "Learning Styles: Concepts and Evidence",
+      "auteur": "Pashler, H., McDaniel, M., Rohrer, D. & Bjork, R.",
+      "jaar": 2008,
+      "waar": "Psychological Science in the Public Interest, 9(3), 105-119",
+      "status": "gecontroleerd"
+    },
+    "pauk": {
+      "titel": "How to Study in College (Cornell-notitiesysteem)",
+      "auteur": "Pauk, W.",
+      "jaar": 1962,
+      "waar": "Houghton Mifflin (veel latere drukken)",
+      "status": "gecontroleerd"
+    },
+    "naylor-keogh-2000": {
+      "titel": "Concept Cartoons in Science Education",
+      "auteur": "Naylor, S. & Keogh, B.",
+      "jaar": 2000,
+      "waar": "Millgate House",
+      "status": "nog-controleren"
+    },
+    "daly-smith-2018": {
+      "titel": "Systematic review of acute physically active learning and classroom movement breaks on children's physical activity, cognition, academic performance and classroom behaviour",
+      "auteur": "Daly-Smith, A. J. e.a.",
+      "jaar": 2018,
+      "waar": "BMJ Open Sport & Exercise Medicine, 4(1)",
+      "status": "nog-controleren"
+    },
+    "kennisnet": {
+      "titel": "Kennisnet – kennis over ict en onderwijs",
+      "auteur": "Kennisnet",
+      "jaar": null,
+      "url": "https://www.kennisnet.nl",
+      "status": "gecontroleerd"
+    },
+    "leraar24": {
+      "titel": "Leraar24 – kennisplatform voor leraren",
+      "auteur": "Leraar24",
+      "jaar": null,
+      "url": "https://www.leraar24.nl",
+      "status": "gecontroleerd"
+    },
+    "nro": {
+      "titel": "Nationaal Regieorgaan Onderwijsonderzoek",
+      "auteur": "NRO",
+      "jaar": null,
+      "url": "https://www.nro.nl",
+      "status": "gecontroleerd"
+    }
+  }
+}

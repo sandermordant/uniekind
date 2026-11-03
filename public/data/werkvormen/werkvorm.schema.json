@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uniekind.local/schema/werkvorm.schema.json",
+  "title": "Uniekind werkvorm",
+  "description": "Eén item uit de kennisbank van Uniekind. Alle teksten in het Nederlands, in 'je'-vorm, collegiaal en concreet.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "naam", "alias", "categorie", "kort", "startzin", "stappen", "duur", "groepsvorm",
+    "ruimte", "middelen", "voorbereiding", "lesfase", "denkniveau", "differentiatie", "richting",
+    "doeldomein", "burgerschap", "ondersteuning", "energie", "docentstijl", "instapniveau",
+    "vereist", "beweegmoment", "perspectieven", "valkuilen", "varianten", "vakvoorbeelden",
+    "waarom", "bewijs", "bronnen", "materiaal"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Unieke sleutel, kleine letters en streepjes." },
+    "naam": { "type": "string", "minLength": 3, "maxLength": 60 },
+    "alias": { "type": "array", "items": { "type": "string" } },
+    "categorie": {
+      "enum": ["instructiemodel", "differentiatievorm", "activerende-werkvorm", "leerstrategie", "formatieve-check", "aandachtrichter", "energizer", "afsluiter", "routine"]
+    },
+    "kort": { "type": "string", "minLength": 20, "maxLength": 220, "description": "Eén zin: wat is het?" },
+    "startzin": { "type": "string", "minLength": 15, "description": "Wat je letterlijk zegt bij de start." },
+    "stappen": { "type": "array", "minItems": 3, "maxItems": 10, "items": { "type": "string", "minLength": 10 } },
+    "duur": {
+      "type": "object", "additionalProperties": false, "required": ["min", "max"],
+      "properties": { "min": { "type": "integer", "minimum": 1, "maximum": 100 }, "max": { "type": "integer", "minimum": 1, "maximum": 100 } }
+    },
+    "groepsvorm": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["individueel", "tweetal", "groepje", "klas"] } },
+    "ruimte": {
+      "type": "object", "additionalProperties": false, "required": ["M", "L", "plein", "stilte", "beweging"],
+      "properties": {
+        "M": { "type": "boolean", "description": "Werkt in een M-lokaal (krukken, max 26)." },
+        "L": { "type": "boolean", "description": "Werkt in een L-lokaal." },
+        "plein": { "type": "boolean", "description": "Werkt op een deelplein (alleen laptop, onder toezicht)." },
+        "stilte": { "type": "boolean", "description": "Werkt in een stilteruimte." },
+        "beweging": { "type": "boolean", "description": "Vraagt ruimte om te bewegen." }
+      }
+    },
+    "middelen": {
+      "type": "object", "additionalProperties": false, "required": ["lijst", "laptop", "telefoon"],
+      "properties": {
+        "lijst": { "type": "array", "items": { "type": "string" } },
+        "laptop": { "enum": ["nee", "optioneel", "vereist"] },
+        "telefoon": { "const": false, "description": "Altijd false: 'Thuis of in de kluis'." }
+      }
+    },
+    "voorbereiding": { "enum": ["geen", "kort", "uitgebreid"] },
+    "lesfase": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["opening", "voorkennis", "instructie", "inoefenen", "verwerken", "check", "afsluiting"] } },
+    "denkniveau": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": { "enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creeren"] },
+      "description": "Bloom (herzien). De RTTI-koppeling staat in data/taxonomie.json en wordt automatisch afgeleid."
+    },
+    "differentiatie": {
+      "type": "array", "uniqueItems": true,
+      "items": { "enum": ["niveau", "tempo", "ondersteuning", "keuze-aanpak", "interesse", "groepering", "leeromgeving"] }
+    },
+    "richting": { "enum": ["convergent", "divergent", "beide", "nvt"] },
+    "doeldomein": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["kwalificatie", "socialisatie", "persoonsvorming"] } },
+    "burgerschap": { "type": "array", "uniqueItems": true, "items": { "enum": ["rechtvaardigheid", "inclusie", "gemeenschappelijkheid", "duurzaamheid"] } },
+    "ondersteuning": {
+      "type": "object", "additionalProperties": false,
+      "required": ["dyslexie", "dyscalculie", "nt2", "faalangst", "structuur", "hoogbegaafd"],
+      "patternProperties": { "": { "$ref": "#/$defs/steun" } }
+    },
+    "energie": { "enum": ["rustig", "gemiddeld", "actief"] },
+    "docentstijl": {
+      "type": "array", "uniqueItems": true,
+      "items": { "enum": ["uitleggen", "structuur", "samenwerken", "ontdekken", "digitaal", "relatie", "houvast"] },
+      "description": "Past bij deze uitspraken uit het docentprofiel. 'houvast' = past bij wie het spannend vindt de klas los te laten."
+    },
+    "instapniveau": { "type": "integer", "minimum": 1, "maximum": 3 },
+    "vereist": {
+      "type": "object", "additionalProperties": false, "required": ["onderwijsassistent", "plein"],
+      "properties": {
+        "onderwijsassistent": { "type": "boolean" },
+        "plein": { "type": "boolean", "description": "Kan alleen met een deelplein (en dus toezicht daar)." }
+      }
+    },
+    "beweegmoment": { "type": "boolean", "description": "Telt als beweegmoment (opstaan/verplaatsen) in een blokuur." },
+    "perspectieven": { "type": "boolean", "description": "Werkvorm brengt meerdere perspectieven in beeld (label 'actualiteit en diversiteit')." },
+    "alsDan": {
+      "type": "array", "items": {
+        "type": "object", "additionalProperties": false, "required": ["als", "dan"],
+        "properties": { "als": { "type": "string" }, "dan": { "type": "string" } }
+      },
+      "description": "Verplicht bij formatieve checks: wat doe je bij welke uitslag."
+    },
+    "valkuilen": {
+      "type": "array", "minItems": 1, "items": {
+        "type": "object", "additionalProperties": false, "required": ["valkuil", "oplossing"],
+        "properties": { "valkuil": { "type": "string" }, "oplossing": { "type": "string" } }
+      }
+    },
+    "varianten": {
+      "type": "object", "additionalProperties": false,
+      "required": ["vmbo", "havo", "vwo", "steun", "basis", "verdieping"],
+      "properties": {
+        "vmbo": { "type": "string" }, "havo": { "type": "string" }, "vwo": { "type": "string" },
+        "steun": { "type": "string" }, "basis": { "type": "string" }, "verdieping": { "type": "string" }
+      }
+    },
+    "vakvoorbeelden": {
+      "type": "array", "minItems": 3, "items": {
+        "type": "object", "additionalProperties": false, "required": ["vak", "voorbeeld"],
+        "properties": { "vak": { "type": "string" }, "voorbeeld": { "type": "string" } }
+      }
+    },
+    "waarom": { "type": "string", "minLength": 60, "description": "Twee of drie zinnen onderbouwing, eerlijk over de sterkte van het bewijs." },
+    "bewijs": { "enum": ["sterk", "redelijk", "beperkt", "praktijk"], "description": "praktijk = praktijkervaring, weinig onderzoek." },
+    "bronnen": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "description": "Sleutels uit data/bronnen.json. Leeg mag." },
+    "materiaal": { "type": "array", "items": { "type": "string" }, "description": "Materiaalsjablonen die deze werkvorm gebruikt (fase 3)." },
+    "beginHier": {
+      "type": "object", "additionalProperties": false, "required": ["volgorde", "uitleg"],
+      "properties": {
+        "volgorde": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "uitleg": { "type": "string", "minLength": 200, "description": "Uitleg van één minuut lezen voor de pagina 'Begin hier'." }
+      }
+    },
+    "opbouw": {
+      "type": "array",
+      "description": "Alleen bij instructiemodellen: de fasen van het model in volgorde.",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["fase", "wat"],
+        "properties": { "fase": { "type": "string" }, "wat": { "type": "string" } }
+      }
+    }
+  },
+  "$defs": {
+    "steun": {
+      "type": "object", "additionalProperties": false, "required": ["past", "tip"],
+      "properties": {
+        "past": { "enum": ["goed", "aanpassen", "minder"] },
+        "tip": { "type": "string", "minLength": 10 }
+      }
+    }
+  }
+}

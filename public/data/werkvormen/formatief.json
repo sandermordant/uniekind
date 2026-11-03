@@ -1,0 +1,680 @@
+{
+  "categorie": "formatieve-check",
+  "titel": "Formatieve checks",
+  "items": [
+    {
+      "id": "wisbordjes",
+      "naam": "Wisbordjes",
+      "alias": ["whiteboardjes", "mini-whiteboards", "laat-zien-bordjes"],
+      "categorie": "formatieve-check",
+      "kort": "Alle leerlingen schrijven tegelijk hun antwoord op een wisbordje en houden het op jouw teken omhoog, zodat je in één oogopslag ziet wie het snapt.",
+      "startzin": "Schrijf je antwoord op je bordje. Nog niet laten zien. … Drie, twee, één: omhoog!",
+      "stappen": [
+        "Deel de wisbordjes en stiften uit (of laat ze op een vaste plek liggen).",
+        "Stel een vraag met een kort antwoord: een getal, een woord, een keuze, een schets.",
+        "Geef denktijd en laat iedereen schrijven zonder het te laten zien.",
+        "Tel af en laat iedereen tegelijk het bordje omhoog houden.",
+        "Kijk rond en benoem wat je ziet: 'Ik zie veel 12 en een paar 21. Laten we kijken waar dat verschil zit.'",
+        "Beslis met de als-dan-regel: doorgaan, opnieuw uitleggen of splitsen."
+      ],
+      "duur": { "min": 2, "max": 6 },
+      "groepsvorm": ["klas", "individueel"],
+      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
+      "middelen": { "lijst": ["wisbordjes", "whiteboardstiften", "doekjes of sokken om te wissen"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "geen",
+      "lesfase": ["check", "instructie", "opening", "voorkennis"],
+      "denkniveau": ["onthouden", "begrijpen", "toepassen"],
+      "differentiatie": ["groepering"],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "goed", "tip": "Kies vragen met korte antwoorden; spelling telt niet." },
+        "dyscalculie": { "past": "goed", "tip": "Laat tussenstappen op het bordje toe." },
+        "nt2": { "past": "goed", "tip": "Een woord of schets is genoeg; je ziet begrip los van zinsbouw." },
+        "faalangst": { "past": "goed", "tip": "Iedereen tegelijk, niemand alleen. Benoem patronen, geen namen." },
+        "structuur": { "past": "goed", "tip": "Vast ritme: schrijven, wachten, omhoog." },
+        "hoogbegaafd": { "past": "aanpassen", "tip": "Vraag deze leerlingen een tweede manier op hun bordje te zetten." }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": ["uitleggen", "structuur", "houvast", "relatie"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "alsDan": [
+        { "als": "Bijna iedereen (ongeveer 80% of meer) heeft het goed", "dan": "Ga door; geef de enkelen met een fout antwoord een plek aan de instructietafel." },
+        { "als": "Ongeveer de helft heeft het goed", "dan": "Laat tweetallen met een verschillend antwoord elkaar overtuigen, en vraag daarna opnieuw." },
+        { "als": "De meeste leerlingen hebben het fout", "dan": "Leg het opnieuw uit met een ander voorbeeld voordat je verder gaat." },
+        { "als": "Veel leerlingen geven hetzelfde foute antwoord", "dan": "Dat is een misvatting: bespreek juist dat antwoord ('Waarom is 21 zo logisch, en waarom klopt het toch niet?')." }
+      ],
+      "valkuilen": [
+        { "valkuil": "Leerlingen kijken bij elkaar af.", "oplossing": "Iedereen tegelijk omhoog op jouw teken; geef genoeg denktijd." },
+        { "valkuil": "Je kijkt, maar doet niets met wat je ziet.", "oplossing": "Bedenk vooraf je als-dan-regel." },
+        { "valkuil": "Gedoe met uitdelen en tekenen op de bordjes.", "oplossing": "Vaste plek, vaste afspraak: bordje plat op tafel tot je erom vraagt." }
+      ],
+      "varianten": {
+        "vmbo": "Korte vragen, kiezen uit twee of drie, schetsen mag.",
+        "havo": "Mix van kennis- en toepassingsvragen.",
+        "vwo": "Ook 'leg in vijf woorden uit waarom'.",
+        "steun": "Wie fout zit, schuift aan bij de instructietafel.",
+        "basis": "Doorgaan met de verwerking.",
+        "verdieping": "Wie goed zit en snel klaar is: tweede oplossing op de achterkant."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Wiskunde", "voorbeeld": "'Los op: 3x + 4 = 19.' Je ziet direct wie 5 heeft en wie 7,7." },
+        { "vak": "Frans", "voorbeeld": "'Schrijf de juiste vorm van être bij nous.'" },
+        { "vak": "Aardrijkskunde", "voorbeeld": "'Teken het stroomgebied van een rivier met bron en monding.'" }
+      ],
+      "waarom": "Iedereen tegelijk laten antwoorden geeft je informatie over de hele klas in plaats van over de leerling met de vinger in de lucht. Dat is de kern van formatief handelen volgens Wiliam, en Rosenshine noemt het controleren van begrip bij alle leerlingen als kenmerk van effectieve lessen.",
+      "bewijs": "sterk",
+      "bronnen": ["wiliam-2011", "rosenshine-2012", "lemov-2015"],
+      "materiaal": ["wisbordjes"],
+      "beginHier": {
+        "volgorde": 1,
+        "uitleg": "Je stelt al vragen in je les. Het enige dat verandert: niet één leerling antwoordt, maar iedereen tegelijk, op een wisbordje. Stel een vraag met een kort antwoord, geef tien seconden denktijd, en zeg 'drie, twee, één, omhoog!'. In één blik zie je wie het snapt en wie niet. Dat is goud waard: je weet of je door kunt, of dat je het nog een keer anders moet uitleggen. Leerlingen met faalangst vinden het prettig, want niemand staat alleen in de spotlight. Een set wisbordjes is goedkoop; vraag op school of er al een set is."
+      }
+    },
+    {
+      "id": "abcd-kaarten",
+      "naam": "ABCD-kaarten",
+      "alias": ["antwoordkaarten", "keuzekaarten", "meerkeuzekaarten"],
+      "categorie": "formatieve-check",
+      "kort": "Elke leerling heeft vier gekleurde kaarten (A, B, C, D) en houdt bij een meerkeuzevraag tegelijk met de rest de kaart van zijn antwoord omhoog.",
+      "startzin": "Pak je ABCD-kaarten. Lees de vraag op het bord. Kies je antwoord, houd de kaart nog tegen je borst… en omhoog!",
+      "stappen": [
+        "Maak een meerkeuzevraag waarin elk fout antwoord een bekende misvatting is.",
+        "Toon de vraag en geef denktijd.",
+        "Iedereen houdt tegelijk de kaart omhoog.",
+        "Kijk naar de kleurenverdeling en kies je als-dan-actie.",
+        "Vraag een leerling met A en een met C om hun redenering uit te leggen (zonder te zeggen wie gelijk heeft)."
+      ],
+      "duur": { "min": 1, "max": 4 },
+      "groepsvorm": ["klas", "individueel"],
+      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
+      "middelen": { "lijst": ["ABCD-kaarten per leerling (geprint, gekleurd)"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "kort",
+      "lesfase": ["check", "instructie", "opening"],
+      "denkniveau": ["onthouden", "begrijpen", "toepassen", "analyseren"],
+      "differentiatie": ["groepering"],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "aanpassen", "tip": "Lees de vraag en de opties hardop voor." },
+        "dyscalculie": { "past": "goed", "tip": "Geef rekentijd of een rekenhulpkaart." },
+        "nt2": { "past": "aanpassen", "tip": "Korte opties in eenvoudige taal." },
+        "faalangst": { "past": "goed", "tip": "Iedereen tegelijk; je bespreekt antwoorden, geen personen." },
+        "structuur": { "past": "goed", "tip": "Vaste routine." },
+        "hoogbegaafd": { "past": "aanpassen", "tip": "Vraag: 'Bedenk bij welk fout antwoord welke denkfout hoort.'" }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": ["uitleggen", "structuur", "houvast"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "alsDan": [
+        { "als": "Bijna iedereen kiest het goede antwoord", "dan": "Ga door." },
+        { "als": "Twee antwoorden zijn ongeveer even populair", "dan": "Laat tweetallen met verschillende kaarten elkaar overtuigen; vraag opnieuw." },
+        { "als": "Een groot deel kiest dezelfde foute optie", "dan": "Bespreek die misvatting met een nieuw voorbeeld." }
+      ],
+      "valkuilen": [
+        { "valkuil": "Afleiders zijn duidelijk fout, dus je leert niets.", "oplossing": "Maak elk fout antwoord een echte, veelgemaakte denkfout." }
+      ],
+      "varianten": {
+        "vmbo": "Drie opties, met plaatjes.",
+        "havo": "Vier opties, misvattingen als afleider.",
+        "vwo": "Meerdere goede antwoorden mogelijk ('houd alle goede omhoog').",
+        "steun": "Instructietafel bij fout antwoord.",
+        "basis": "Doorgaan.",
+        "verdieping": "Zelf een ABCD-vraag met afleiders maken."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Natuurkunde", "voorbeeld": "'Een zware en een lichte bal vallen tegelijk. Welke is eerst beneden?' met de bekende misvatting als optie." },
+        { "vak": "Geschiedenis", "voorbeeld": "'Welke gebeurtenis was een oorzaak van de Eerste Wereldoorlog?'" },
+        { "vak": "Engels", "voorbeeld": "'Welke zin is in de present perfect?'" }
+      ],
+      "waarom": "Een goede meerkeuzevraag met misvattingen als afleiders laat in seconden zien wat de klas denkt. Het is een vorm van de 'all-student response' die Wiliam aanraadt; de waarde zit vooral in de kwaliteit van de afleiders.",
+      "bewijs": "redelijk",
+      "bronnen": ["wiliam-2011", "leahy-2005"],
+      "materiaal": ["abcd-kaarten"]
+    },
+    {
+      "id": "duimen-vingers",
+      "naam": "Duimen en vingers",
+      "alias": ["vuist-tot-vijf", "duim omhoog/omlaag", "fist to five"],
+      "categorie": "formatieve-check",
+      "kort": "Leerlingen laten met een duim of met nul tot vijf vingers zien hoe zeker ze zijn, of kiezen een antwoord met vingers.",
+      "startzin": "Hoe zeker ben je dat je deze stap zelf kunt? Vuist is helemaal niet, vijf vingers is: ik kan het iemand anders uitleggen. Op drie: één, twee, drie!",
+      "stappen": [
+        "Stel een vraag over zekerheid of een keuzevraag met maximaal vijf opties.",
+        "Laat iedereen tegelijk zijn hand opsteken (tegen de borst, zodat buren het minder zien).",
+        "Scan de klas.",
+        "Combineer met een inhoudelijke check: zelfinschatting alleen is niet betrouwbaar.",
+        "Kies je als-dan-actie."
+      ],
+      "duur": { "min": 1, "max": 2 },
+      "groepsvorm": ["klas"],
+      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
+      "middelen": { "lijst": ["geen"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "geen",
+      "lesfase": ["check", "instructie", "afsluiting"],
+      "denkniveau": ["onthouden", "begrijpen"],
+      "differentiatie": ["groepering"],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "goed", "tip": "Geen lezen of schrijven nodig." },
+        "dyscalculie": { "past": "goed", "tip": "Geen rekenen nodig." },
+        "nt2": { "past": "goed", "tip": "Leg de schaal uit met een plaatje op het bord." },
+        "faalangst": { "past": "goed", "tip": "Hand tegen de borst, dan ziet alleen jij het." },
+        "structuur": { "past": "goed", "tip": "Snel en voorspelbaar." },
+        "hoogbegaafd": { "past": "goed", "tip": "Wie vijf vingers geeft, kan als maatje helpen." }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": ["uitleggen", "structuur", "houvast", "relatie"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "alsDan": [
+        { "als": "Meeste leerlingen 4-5 vingers", "dan": "Geef één inhoudelijke controlevraag; klopt die, ga door." },
+        { "als": "Veel 2-3 vingers", "dan": "Doe nog een voorbeeld samen." },
+        { "als": "Enkele leerlingen 0-1", "dan": "Nodig hen uit aan de instructietafel." }
+      ],
+      "valkuilen": [
+        { "valkuil": "Leerlingen overschatten zichzelf.", "oplossing": "Gebruik het als aanvulling op een inhoudelijke check, niet als vervanging." }
+      ],
+      "varianten": {
+        "vmbo": "Duim omhoog, opzij of omlaag.",
+        "havo": "Nul tot vijf vingers.",
+        "vwo": "Vingers plus: 'Wat zou je nodig hebben om een vijf te geven?'",
+        "steun": "Instructietafel bij lage score.",
+        "basis": "Doorgaan.",
+        "verdieping": "Maatje voor een klasgenoot."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Engels", "voorbeeld": "'Hoe zeker ben je van het verschil tussen some en any?'" },
+        { "vak": "Biologie", "voorbeeld": "'Welke van de vijf organen op het bord hoort niet bij de spijsvertering? Steek het nummer op.'" },
+        { "vak": "LO", "voorbeeld": "'Hoe zeker ben je dat je deze oefening veilig kunt doen?'" }
+      ],
+      "waarom": "Een snelle peiling bij de hele klas is beter dan 'Zijn er nog vragen?'. Zelfinschatting van leerlingen is echter niet altijd betrouwbaar, dus combineer dit met een inhoudelijke vraag. Het onderzoek naar deze specifieke techniek is beperkt.",
+      "bewijs": "beperkt",
+      "bronnen": ["wiliam-2011"],
+      "materiaal": []
+    },
+    {
+      "id": "stoplichtkaart",
+      "naam": "Stoplichtkaart",
+      "alias": ["verkeerslicht", "kleurenkaart", "stoplicht"],
+      "categorie": "formatieve-check",
+      "kort": "Leerlingen geven met een rood, oranje of groen kaartje of bekertje op tafel aan hoe het gaat, zodat je tijdens het zelfstandig werken ziet waar hulp nodig is.",
+      "startzin": "Zet je stoplicht op tafel. Groen: ik kan verder. Oranje: ik twijfel, maar ik werk door. Rood: ik zit vast en heb hulp nodig. Ik kom eerst bij rood.",
+      "stappen": [
+        "Geef elke leerling of elk tweetal een kaartje met drie kleuren (of drie bekertjes).",
+        "Leg de betekenis uit en zet die op het bord.",
+        "Tijdens het zelfstandig werken zet de leerling de kleur die past.",
+        "Loop eerst naar rood, dan naar oranje.",
+        "Laat leerlingen met groen een oranje klasgenoot helpen als dat past."
+      ],
+      "duur": { "min": 1, "max": 30 },
+      "groepsvorm": ["individueel", "tweetal"],
+      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": false },
+      "middelen": { "lijst": ["stoplichtkaartjes of drie gekleurde bekertjes per tweetal"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "kort",
+      "lesfase": ["verwerken", "inoefenen", "check"],
+      "denkniveau": ["begrijpen", "toepassen"],
+      "differentiatie": ["ondersteuning", "tempo"],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "goed", "tip": "Geen lezen nodig." },
+        "dyscalculie": { "past": "goed", "tip": "Rood betekent snel hulp, zonder hand op te steken." },
+        "nt2": { "past": "goed", "tip": "Kleuren zijn taalonafhankelijk." },
+        "faalangst": { "past": "goed", "tip": "Hulp vragen zonder je hand op te steken voor de hele klas." },
+        "structuur": { "past": "goed", "tip": "Vaste kleuren, vaste betekenis." },
+        "hoogbegaafd": { "past": "goed", "tip": "Groen kan helpen of naar de pluskaart." }
+      },
+      "energie": "rustig",
+      "docentstijl": ["structuur", "relatie", "houvast"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "alsDan": [
+        { "als": "Veel rood tegelijk", "dan": "Stop de klas even en geef een korte extra uitleg aan iedereen." },
+        { "als": "Enkele rood", "dan": "Ga langs of nodig hen uit aan de instructietafel." },
+        { "als": "Bijna alles groen", "dan": "Wijs op de pluskaart; overweeg het tempo te verhogen." }
+      ],
+      "valkuilen": [
+        { "valkuil": "Leerlingen zetten rood en wachten in plaats van verder te werken.", "oplossing": "Spreek af: bij rood ga je door met een volgende opgave of pak je een hintkaart." },
+        { "valkuil": "Leerlingen schamen zich voor rood.", "oplossing": "Waardeer rood hardop: 'Fijn dat je het laat zien, nu kan ik helpen.'" }
+      ],
+      "varianten": {
+        "vmbo": "Bekertjes op tafel, goed zichtbaar.",
+        "havo": "Kaartje.",
+        "vwo": "Kaartje plus op een briefje wát je niet snapt.",
+        "steun": "Rood: hulp.",
+        "basis": "Oranje: hintkaart.",
+        "verdieping": "Groen: pluskaart of helpen."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Wiskunde", "voorbeeld": "Tijdens het oefenen met formules zie je in één blik waar je moet beginnen." },
+        { "vak": "Nederlands", "voorbeeld": "Tijdens het schrijven aan een tekst zetten leerlingen oranje als ze twijfelen over de opbouw." },
+        { "vak": "Beroepsgericht profielvak", "voorbeeld": "Tijdens een praktijkopdracht zetten leerlingen rood als ze niet verder kunnen." }
+      ],
+      "waarom": "Leerlingen laten aangeven hoe het gaat, maakt hun voortgang zichtbaar en helpt je je tijd te verdelen. Het is een praktijkinstrument dat aansluit bij formatief handelen en zelfregulatie; specifiek onderzoek naar stoplichtkaarten is er weinig.",
+      "bewijs": "praktijk",
+      "bronnen": ["wiliam-2011"],
+      "materiaal": ["stoplichtkaart"],
+      "beginHier": {
+        "volgorde": 7,
+        "uitleg": "Tijdens het zelfstandig werken weet je vaak niet wie er vastzit tot het te laat is. Geef elk tweetal drie bekertjes of een kaartje: groen, oranje, rood. Groen: ik kan verder. Oranje: ik twijfel, maar werk door. Rood: ik zit vast. Jij loopt eerst naar rood. Je ziet zo in één blik waar je nodig bent, en leerlingen hoeven hun hand niet op te steken. Dat scheelt onrust, en leerlingen die niet graag om hulp vragen, doen het ineens wel. Leg bij rood wel uit: 'Ga ondertussen door met de volgende opgave of pak een hintkaart.'"
+      }
+    },
+    {
+      "id": "scharniervraag",
+      "naam": "Scharniervraag",
+      "alias": ["hinge question", "draaipuntvraag", "kantelvraag"],
+      "categorie": "formatieve-check",
+      "kort": "Eén goed ontworpen meerkeuzevraag op een kantelmoment in de les, waarvan de uitkomst bepaalt of je verder gaat of eerst iets herstelt.",
+      "startzin": "Voordat we verdergaan, één belangrijke vraag. Je hebt 30 seconden. Daarna laat iedereen tegelijk zijn antwoord zien.",
+      "stappen": [
+        "Bepaal het kantelpunt: het moment waarop de rest van de les leunt op dit begrip.",
+        "Ontwerp één vraag waarbij elk fout antwoord een andere misvatting laat zien.",
+        "Laat iedereen binnen 30 seconden tot 2 minuten antwoorden (wisbordje, ABCD-kaart).",
+        "Bekijk de antwoorden binnen 30 seconden.",
+        "Voer je vooraf bedachte als-dan-actie uit."
+      ],
+      "duur": { "min": 2, "max": 4 },
+      "groepsvorm": ["klas", "individueel"],
+      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
+      "middelen": { "lijst": ["scharniervraag op het bord", "ABCD-kaarten of wisbordjes"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "kort",
+      "lesfase": ["check"],
+      "denkniveau": ["begrijpen", "toepassen", "analyseren"],
+      "differentiatie": ["groepering"],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "aanpassen", "tip": "Lees de vraag voor; korte opties." },
+        "dyscalculie": { "past": "aanpassen", "tip": "Geef tijd of hulpkaart als rekenen niet het doel is." },
+        "nt2": { "past": "aanpassen", "tip": "Eenvoudige taal zodat je het vakbegrip meet." },
+        "faalangst": { "past": "goed", "tip": "Iedereen tegelijk, geen beurt." },
+        "structuur": { "past": "goed", "tip": "Kondig het kantelmoment aan." },
+        "hoogbegaafd": { "past": "goed", "tip": "Vraag na afloop: welke denkfout hoort bij welk fout antwoord?" }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": ["uitleggen", "structuur", "houvast"],
+      "instapniveau": 2,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "alsDan": [
+        { "als": "80% of meer goed", "dan": "Splits: de goede groep gaat zelfstandig of naar verdieping, de rest naar de instructietafel." },
+        { "als": "Tussen 40% en 80% goed", "dan": "Bespreek de meest gekozen misvatting en vraag opnieuw met een parallelle vraag." },
+        { "als": "Minder dan 40% goed", "dan": "Herhaal de instructie met een andere aanpak voor de hele klas." }
+      ],
+      "valkuilen": [
+        { "valkuil": "De vraag is te makkelijk te raden.", "oplossing": "Elk fout antwoord moet aantrekkelijk zijn voor iemand met een specifieke misvatting." },
+        { "valkuil": "Je hebt geen plan voor de uitkomst.", "oplossing": "Schrijf je als-dan vooraf in je lesplan." }
+      ],
+      "varianten": {
+        "vmbo": "Drie opties met beeld.",
+        "havo": "Vier opties.",
+        "vwo": "Vier opties, mogelijk meer dan één goed.",
+        "steun": "Instructietafel.",
+        "basis": "Zelfstandig.",
+        "verdieping": "Verdieping."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Economie", "voorbeeld": "'De prijs stijgt. Wat gebeurt er met de gevraagde hoeveelheid?' met opties die verschuiving en beweging langs de curve verwarren." },
+        { "vak": "Scheikunde", "voorbeeld": "'Welke reactievergelijking klopt?' met afleiders voor de bekende fouten met indexen." },
+        { "vak": "Duits", "voorbeeld": "'Ich gehe mit … Freund.' Opties: der, den, dem, des." }
+      ],
+      "waarom": "Wiliam beschrijft de scharniervraag als een van de krachtigste formatieve technieken: één vraag op het juiste moment, die laat zien of je verder kunt. Het werkt alleen als de afleiders echte misvattingen zijn en als je een vooraf bedacht plan hebt.",
+      "bewijs": "redelijk",
+      "bronnen": ["wiliam-2011", "wiliam-leahy-2015"],
+      "materiaal": ["scharniervraag"]
+    },
+    {
+      "id": "exit-ticket",
+      "naam": "Exit ticket",
+      "alias": ["uitgangskaartje", "exit card", "afsluitkaartje"],
+      "categorie": "formatieve-check",
+      "kort": "Aan het eind van de les beantwoorden leerlingen op een klein kaartje 1-3 vragen over het lesdoel, en leveren het in bij de deur.",
+      "startzin": "Voordat je gaat: pak een exit ticket. Drie vragen, drie minuten. Naam erop mag, hoeft niet. Je levert hem in bij de deur.",
+      "stappen": [
+        "Maak 1-3 vragen die direct over het lesdoel gaan (één kennisvraag, één toepassingsvraag, eventueel één zelfinschatting).",
+        "Deel de kaartjes 4 minuten voor het einde uit.",
+        "Leerlingen werken zelfstandig en leveren in bij het verlaten van het lokaal.",
+        "Sorteer na de les in drie stapels: kan het, bijna, nog niet.",
+        "Gebruik de stapels om de start van de volgende les te plannen (wie naar de instructietafel, wie verdieping)."
+      ],
+      "duur": { "min": 3, "max": 5 },
+      "groepsvorm": ["individueel"],
+      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
+      "middelen": { "lijst": ["exit tickets (geprint of briefjes)"], "laptop": "optioneel", "telefoon": false },
+      "voorbereiding": "kort",
+      "lesfase": ["afsluiting", "check"],
+      "denkniveau": ["onthouden", "begrijpen", "toepassen"],
+      "differentiatie": ["groepering"],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "aanpassen", "tip": "Korte vragen, groot lettertype, antwoorden mogen in steekwoorden." },
+        "dyscalculie": { "past": "aanpassen", "tip": "Rekenhulpkaart mag erbij als rekenen niet het doel is." },
+        "nt2": { "past": "aanpassen", "tip": "Zinsstarter erbij ('Ik weet nu dat…')." },
+        "faalangst": { "past": "goed", "tip": "Zonder naam mag ook; geen cijfer." },
+        "structuur": { "past": "goed", "tip": "Elke les hetzelfde einde." },
+        "hoogbegaafd": { "past": "aanpassen", "tip": "Voeg een uitdagingsvraag toe die niet verplicht is." }
+      },
+      "energie": "rustig",
+      "docentstijl": ["structuur", "uitleggen", "houvast"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "alsDan": [
+        { "als": "Bijna alle kaartjes goed", "dan": "Start de volgende les met een korte ophaalvraag en ga door met nieuwe stof." },
+        { "als": "Een groepje heeft het nog niet", "dan": "Plan voor hen een instructietafel aan het begin van de volgende les." },
+        { "als": "Veel kaartjes met dezelfde fout", "dan": "Begin de volgende les met een korte herhaling van precies dat punt." }
+      ],
+      "valkuilen": [
+        { "valkuil": "Je verzamelt de kaartjes maar kijkt er nooit naar.", "oplossing": "Sorteer in drie stapels, dat kost twee minuten." },
+        { "valkuil": "Te weinig tijd aan het eind.", "oplossing": "Zet een timer 5 minuten voor het einde; de exit ticket heeft voorrang." }
+      ],
+      "varianten": {
+        "vmbo": "Eén of twee vragen, met keuzeantwoorden of een plaatje.",
+        "havo": "Twee vragen: kennis en toepassing.",
+        "vwo": "Drie vragen, waarvan één 'leg uit waarom'.",
+        "steun": "Variant met steun (zinsstarter, voorbeeld).",
+        "basis": "Standaardvariant.",
+        "verdieping": "Variant met uitdagingsvraag."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Geschiedenis", "voorbeeld": "'Noem één oorzaak van de Opstand. Waarom was die oorzaak belangrijk?'" },
+        { "vak": "Wiskunde", "voorbeeld": "'Bereken: 15% van 80. Hoe zeker ben je (1-5)?'" },
+        { "vak": "Duits", "voorbeeld": "'Vertaal: Ik ga met mijn vriend naar school.'" }
+      ],
+      "waarom": "Een exit ticket geeft je aan het eind van de les per leerling zicht op het lesdoel, zodat je de volgende les gerichter kunt beginnen. Het past in de formatieve cyclus van Wiliam en Leahy; het effect zit niet in het kaartje zelf, maar in wat je ermee doet.",
+      "bewijs": "redelijk",
+      "bronnen": ["wiliam-2011", "leahy-2005"],
+      "materiaal": ["exit-ticket"],
+      "beginHier": {
+        "volgorde": 3,
+        "uitleg": "Je eindigt je les toch al. Doe het vandaag vier minuten eerder, met een klein kaartje: één vraag over het lesdoel en één vraag 'Hoe zeker ben je?'. Leerlingen leveren het in bij de deur. Na de les sorteer je de kaartjes in twee minuten in drie stapeltjes: kan het, bijna, nog niet. De volgende les weet je precies wie je aan de instructietafel wilt hebben en wie meteen verder kan. Zo wordt differentiëren geen gok, maar een beslissing op basis van wat je ziet. En leerlingen merken dat je kijkt naar wat zij geleerd hebben."
+      }
+    },
+    {
+      "id": "drie-twee-een",
+      "naam": "3-2-1",
+      "alias": ["3-2-1 reflectie", "drie-twee-een"],
+      "categorie": "formatieve-check",
+      "kort": "Leerlingen schrijven drie dingen die ze geleerd hebben, twee dingen die ze interessant vonden of willen onthouden, en één vraag die ze nog hebben.",
+      "startzin": "Schrijf op: drie dingen die je vandaag hebt geleerd, twee die je wilt onthouden, en één vraag die je nog hebt.",
+      "stappen": [
+        "Zet de 3-2-1-structuur op het bord of op een kaartje.",
+        "Geef 3-4 minuten stille schrijftijd.",
+        "Laat eventueel een paar leerlingen hun vraag voorlezen.",
+        "Verzamel de kaartjes en lees vooral de vragen: die zijn je startpunt voor de volgende les."
+      ],
+      "duur": { "min": 3, "max": 6 },
+      "groepsvorm": ["individueel"],
+      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
+      "middelen": { "lijst": ["3-2-1-kaartje of schrift"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "geen",
+      "lesfase": ["afsluiting", "check"],
+      "denkniveau": ["onthouden", "begrijpen", "evalueren"],
+      "differentiatie": ["keuze-aanpak"],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "aanpassen", "tip": "Steekwoorden zijn genoeg; maak er 2-1-1 van." },
+        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk." },
+        "nt2": { "past": "aanpassen", "tip": "Zinsstarters: 'Ik heb geleerd dat…', 'Ik vraag me af…'." },
+        "faalangst": { "past": "goed", "tip": "Niet hardop voorlezen, tenzij vrijwillig." },
+        "structuur": { "past": "goed", "tip": "Vaste structuur." },
+        "hoogbegaafd": { "past": "goed", "tip": "De vraag mag een echte onderzoeksvraag zijn." }
+      },
+      "energie": "rustig",
+      "docentstijl": ["structuur", "relatie", "houvast"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "alsDan": [
+        { "als": "De 'drie geleerd' sluiten aan bij het lesdoel", "dan": "Ga in de volgende les door met de volgende stap." },
+        { "als": "De 'drie geleerd' missen de kern van het lesdoel", "dan": "Herhaal de kern aan het begin van de volgende les." },
+        { "als": "Veel dezelfde vragen", "dan": "Begin de volgende les met het antwoord op die vraag." }
+      ],
+      "valkuilen": [
+        { "valkuil": "Antwoorden blijven vaag ('ik heb veel geleerd').", "oplossing": "Vraag om iets wat je aan een klasgenoot zou kunnen uitleggen." }
+      ],
+      "varianten": {
+        "vmbo": "2-1-1 met zinsstarters.",
+        "havo": "3-2-1.",
+        "vwo": "3-2-1 met een verbinding naar een eerder onderwerp.",
+        "steun": "Zinsstarters.",
+        "basis": "Standaard.",
+        "verdieping": "De vraag is een onderzoeksvraag."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Maatschappijleer", "voorbeeld": "Drie dingen over de rechtsstaat, twee voorbeelden uit het nieuws, één vraag." },
+        { "vak": "Biologie", "voorbeeld": "Drie organen en hun functie, twee verbanden, één vraag." },
+        { "vak": "Kunst", "voorbeeld": "Drie technieken, twee die je wilt proberen, één vraag over je eigen werk." }
+      ],
+      "waarom": "Een korte schriftelijke terugblik laat leerlingen ophalen en reflecteren, en geeft jou zicht op wat er is blijven hangen. Ophalen uit het geheugen versterkt het leren; de 3-2-1-vorm zelf is een praktijkformat.",
+      "bewijs": "redelijk",
+      "bronnen": ["roediger-karpicke-2006", "agarwal-bain-2019"],
+      "materiaal": ["exit-ticket"]
+    },
+    {
+      "id": "vaagste-punt",
+      "naam": "Wat is nog het vaagst?",
+      "alias": ["muddiest point", "vaagste punt", "modderigste punt"],
+      "categorie": "formatieve-check",
+      "kort": "Leerlingen schrijven op wat ze aan het eind van de les nog het minst helder vinden, zodat je weet waar je de volgende les moet beginnen.",
+      "startzin": "Iedereen heeft vandaag iets dat nog een beetje vaag is. Schrijf op: wat is voor jou nog het vaagst? Er is geen fout antwoord.",
+      "stappen": [
+        "Deel briefjes uit of laat in het schrift schrijven.",
+        "Leerlingen schrijven in één of twee zinnen wat nog onduidelijk is.",
+        "Verzamel en lees de briefjes na de les.",
+        "Groepeer de antwoorden in 2-3 thema's.",
+        "Begin de volgende les met het meest genoemde punt."
+      ],
+      "duur": { "min": 2, "max": 4 },
+      "groepsvorm": ["individueel"],
+      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
+      "middelen": { "lijst": ["briefjes"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "geen",
+      "lesfase": ["afsluiting", "check"],
+      "denkniveau": ["begrijpen", "evalueren"],
+      "differentiatie": ["groepering"],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "aanpassen", "tip": "Eén zin of een woord is genoeg." },
+        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk." },
+        "nt2": { "past": "aanpassen", "tip": "Laat de leerling een woord of opgave-nummer opschrijven." },
+        "faalangst": { "past": "goed", "tip": "Anoniem mag; normaliseer onduidelijkheid." },
+        "structuur": { "past": "goed", "tip": "Kort en voorspelbaar." },
+        "hoogbegaafd": { "past": "goed", "tip": "Vraag ook: wat zou je willen weten?" }
+      },
+      "energie": "rustig",
+      "docentstijl": ["relatie", "houvast", "structuur"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "alsDan": [
+        { "als": "Veel leerlingen noemen hetzelfde punt", "dan": "Begin de volgende les met een nieuwe uitleg van dat punt." },
+        { "als": "Verspreide punten", "dan": "Maak hintkaarten of een instructietafel voor de genoemde punten." },
+        { "als": "Bijna niemand noemt iets", "dan": "Controleer met een inhoudelijke vraag of het echt helder is." }
+      ],
+      "valkuilen": [
+        { "valkuil": "Leerlingen schrijven 'alles' of 'niets'.", "oplossing": "Vraag om een specifiek moment of opgave." }
+      ],
+      "varianten": {
+        "vmbo": "Kies uit een lijstje van 3-4 onderdelen.",
+        "havo": "Vrij antwoord.",
+        "vwo": "Vrij antwoord plus waarom het vaag is.",
+        "steun": "Lijstje om uit te kiezen.",
+        "basis": "Vrij antwoord.",
+        "verdieping": "Ook: welke vraag zou je willen onderzoeken?"
+      },
+      "vakvoorbeelden": [
+        { "vak": "Natuurkunde", "voorbeeld": "'Het verschil tussen massa en gewicht is nog vaag.'" },
+        { "vak": "Economie", "voorbeeld": "'Waarom inflatie slecht is als je spaart.'" },
+        { "vak": "Frans", "voorbeeld": "'Wanneer je avoir en wanneer je être gebruikt in de passé composé.'" }
+      ],
+      "waarom": "Leerlingen laten benoemen wat nog onduidelijk is, geeft je gerichte informatie en stimuleert reflectie op het eigen begrip (metacognitie). Het is een eenvoudig praktijkinstrument uit het hoger onderwijs; specifiek onderzoek in het vo is beperkt.",
+      "bewijs": "beperkt",
+      "bronnen": ["eef-metacognitie"],
+      "materiaal": ["exit-ticket"]
+    },
+    {
+      "id": "succescriteria-zelfbeoordeling",
+      "naam": "Succescriteria en zelfcheck",
+      "alias": ["ik-kan-kaart", "zelfbeoordeling", "succescriteria"],
+      "categorie": "formatieve-check",
+      "kort": "Je maakt het lesdoel concreet in 2-4 'Ik kan…'-zinnen, en leerlingen kruisen aan het begin en eind aan hoe goed ze het al kunnen.",
+      "startzin": "Op deze kaart staat wat je aan het eind van de les kunt. Kruis nu eerlijk aan hoe goed je het al kunt. Aan het eind doen we het nog een keer.",
+      "stappen": [
+        "Vertaal het lesdoel naar 2-4 waarneembare 'Ik kan…'-zinnen.",
+        "Laat leerlingen bij de start per zin aankruisen: nog niet, een beetje, ja.",
+        "Verwijs tijdens de les naar de criteria: 'Welk criterium oefen je nu?'",
+        "Laat aan het eind opnieuw aankruisen en bij elk 'ja' een bewijsje noteren (een opgavenummer).",
+        "Bekijk de kaarten: ze laten verschil tussen start en eind zien."
+      ],
+      "duur": { "min": 2, "max": 5 },
+      "groepsvorm": ["individueel"],
+      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
+      "middelen": { "lijst": ["succescriteriakaart"], "laptop": "nee", "telefoon": false },
+      "voorbereiding": "kort",
+      "lesfase": ["opening", "afsluiting", "check"],
+      "denkniveau": ["begrijpen", "evalueren"],
+      "differentiatie": ["ondersteuning"],
+      "richting": "nvt",
+      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": { "past": "goed", "tip": "Korte zinnen, groot lettertype, pictogrammen voor de schaal." },
+        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk." },
+        "nt2": { "past": "aanpassen", "tip": "Eenvoudige 'Ik kan…'-zinnen met een voorbeeld." },
+        "faalangst": { "past": "goed", "tip": "Zichtbare groei geeft vertrouwen; geen cijfer." },
+        "structuur": { "past": "goed", "tip": "Leerlingen weten precies waar ze naartoe werken." },
+        "hoogbegaafd": { "past": "aanpassen", "tip": "Voeg een uitdagend criterium toe ('Ik kan het uitleggen aan een ander')." }
+      },
+      "energie": "rustig",
+      "docentstijl": ["structuur", "uitleggen", "houvast", "relatie"],
+      "instapniveau": 1,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "alsDan": [
+        { "als": "Bij de start kruist bijna iedereen al 'ja' aan", "dan": "Controleer met een startcheck; compact als het klopt." },
+        { "als": "Aan het eind blijft een criterium bij veel leerlingen 'nog niet'", "dan": "Plan dat criterium als start van de volgende les." },
+        { "als": "Zelfinschatting en exit ticket wijken sterk af", "dan": "Bespreek met die leerlingen hoe je kunt weten of je iets kunt." }
+      ],
+      "valkuilen": [
+        { "valkuil": "Criteria zijn niet waarneembaar ('Ik begrijp…').", "oplossing": "Gebruik werkwoorden die je kunt zien: uitleggen, berekenen, noemen." },
+        { "valkuil": "Leerlingen overschatten zichzelf.", "oplossing": "Vraag bij elk 'ja' om een bewijsje." }
+      ],
+      "varianten": {
+        "vmbo": "2-3 criteria met pictogrammen.",
+        "havo": "3 criteria.",
+        "vwo": "3-4 criteria, met een 'meesterniveau'.",
+        "steun": "Criteria met voorbeeld.",
+        "basis": "Standaard.",
+        "verdieping": "Plus een uitdagend criterium."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Nederlands", "voorbeeld": "'Ik kan de hoofdgedachte van een alinea in één zin opschrijven.'" },
+        { "vak": "O&O", "voorbeeld": "'Ik kan drie eisen voor ons ontwerp formuleren.'" },
+        { "vak": "LO", "voorbeeld": "'Ik kan de handstand met hulp drie seconden vasthouden.'" }
+      ],
+      "waarom": "Duidelijk maken waar leerlingen naartoe werken is een van de vijf kernstrategieën van formatief handelen volgens Wiliam. Zelfbeoordeling met concrete criteria helpt leerlingen hun eigen leren te sturen, zeker als je het combineert met een inhoudelijke check.",
+      "bewijs": "redelijk",
+      "bronnen": ["wiliam-2011", "eef-metacognitie"],
+      "materiaal": ["succescriteriakaart"],
+      "beginHier": {
+        "volgorde": 10,
+        "uitleg": "Je zet het lesdoel al op het bord. Maak het vandaag nog iets concreter: schrijf twee of drie zinnen die beginnen met 'Ik kan…', bijvoorbeeld 'Ik kan uitleggen wat inflatie is' en 'Ik kan berekenen hoeveel minder je kunt kopen'. Leerlingen kruisen aan het begin aan hoe goed ze het al kunnen, en aan het eind nog een keer. Ze zien zelf dat ze vooruitgaan, en jij ziet wie nog twijfelt. Let op: 'Ik begrijp…' werkt niet, want dat kun je niet zien. Kies werkwoorden als uitleggen, noemen, berekenen of tekenen."
+      }
+    },
+    {
+      "id": "peerfeedback-criteria",
+      "naam": "Peerfeedback met criteria",
+      "alias": ["peer-assessment", "feedback van een klasgenoot", "twee tips en een top"],
+      "categorie": "formatieve-check",
+      "kort": "Leerlingen beoordelen elkaars werk aan de hand van dezelfde succescriteria en geven één compliment en één concrete tip.",
+      "startzin": "Ruil je werk met je buur. Lees het met de criteria naast je. Schrijf één ding dat al goed is volgens de criteria, en één tip die je buur echt verder helpt.",
+      "stappen": [
+        "Zorg dat de succescriteria helder en zichtbaar zijn.",
+        "Doe het eerst samen voor met een voorbeeld (anoniem, of van een vorig jaar).",
+        "Laat tweetallen werk ruilen en per criterium kijken.",
+        "Leerlingen schrijven één top (wat voldoet al) en één tip (concreet, met 'Probeer eens…').",
+        "Geef tijd om het eigen werk te verbeteren met de tip."
+      ],
+      "duur": { "min": 8, "max": 15 },
+      "groepsvorm": ["tweetal"],
+      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": false },
+      "middelen": { "lijst": ["succescriteriakaart", "feedbackformulier (top en tip)"], "laptop": "optioneel", "telefoon": false },
+      "voorbereiding": "kort",
+      "lesfase": ["verwerken", "check"],
+      "denkniveau": ["evalueren", "analyseren"],
+      "differentiatie": ["groepering", "ondersteuning"],
+      "richting": "convergent",
+      "doeldomein": ["kwalificatie", "socialisatie", "persoonsvorming"],
+      "burgerschap": ["gemeenschappelijkheid"],
+      "ondersteuning": {
+        "dyslexie": { "past": "aanpassen", "tip": "Mondelinge feedback mag; of een kort formulier met keuzes." },
+        "dyscalculie": { "past": "goed", "tip": "Bij rekenwerk: controleer met een uitwerking erbij." },
+        "nt2": { "past": "aanpassen", "tip": "Zinsstarters: 'Wat al goed is…', 'Probeer eens…'." },
+        "faalangst": { "past": "aanpassen", "tip": "Vaste, vertrouwde partner; feedback op het werk, niet op de persoon." },
+        "structuur": { "past": "goed", "tip": "Vast formulier met criteria." },
+        "hoogbegaafd": { "past": "goed", "tip": "Laat hen ook een tip geven voor een hoger niveau." }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": ["samenwerken", "relatie"],
+      "instapniveau": 2,
+      "vereist": { "onderwijsassistent": false, "plein": false },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "alsDan": [
+        { "als": "Tips zijn concreet en gebaseerd op criteria", "dan": "Laat leerlingen hun werk verbeteren en lever daarna in." },
+        { "als": "Tips zijn vaag ('Het is goed')", "dan": "Doe het opnieuw samen voor met een voorbeeld." },
+        { "als": "Veel werk voldoet nog niet aan hetzelfde criterium", "dan": "Geef een korte klassikale mini-instructie op dat criterium." }
+      ],
+      "valkuilen": [
+        { "valkuil": "Feedback is vaag of onaardig.", "oplossing": "Formulier met zinsstarters en de afspraak: feedback gaat over het werk, volgens de criteria." },
+        { "valkuil": "Leerlingen doen niets met de feedback.", "oplossing": "Plan verbetertijd direct erna." }
+      ],
+      "varianten": {
+        "vmbo": "Eén criterium tegelijk, met afvinklijst.",
+        "havo": "Twee of drie criteria.",
+        "vwo": "Volledige rubric.",
+        "steun": "Werken met een uitgewerkt voorbeeld ernaast.",
+        "basis": "Top en tip.",
+        "verdieping": "Tip richting het hoogste niveau van de rubric."
+      },
+      "vakvoorbeelden": [
+        { "vak": "Nederlands", "voorbeeld": "Feedback op een betoog: zijn er minstens twee argumenten met een voorbeeld?" },
+        { "vak": "O&O", "voorbeeld": "Feedback op een ontwerpschets: voldoet het aan de drie eisen van de opdrachtgever?" },
+        { "vak": "Engels", "voorbeeld": "Feedback op een e-mail: klopt de aanhef, de afsluiting en de tijd?" }
+      ],
+      "waarom": "Leerlingen inzetten als bron van feedback voor elkaar is een van de kernstrategieën van Wiliam, en het EEF ziet in feedback een van de meest opbrengstrijke aanpakken. Het werkt vooral als de criteria helder zijn en leerlingen geleerd hebben hoe je goede feedback geeft.",
+      "bewijs": "redelijk",
+      "bronnen": ["wiliam-2011", "eef-toolkit"],
+      "materiaal": ["succescriteriakaart", "feedbackformulier"]
+    }
+  ]
+}

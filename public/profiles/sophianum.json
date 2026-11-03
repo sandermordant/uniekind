@@ -1,0 +1,265 @@
+{
+  "profielVersie": 1,
+  "id": "sophianum",
+  "toelichting": "Schoolprofiel Sophianum. Alle schoolspecifieke tekst en instellingen staan hier; de code bevat geen Sophianum-tekst. Velden met \"aanname\": true komen niet uit het schoolplan of de schoolgids en zijn een instelbare standaardwaarde. Bronnen: Schoolplan 2025-2029 en Schoolgids 2026-2027.",
+
+  "school": {
+    "naam": "Sophianum",
+    "volledigeNaam": "Sophianum, scholengemeenschap voor het Heuvelland",
+    "adres": "Landsraderweg 3, 6271 NT Gulpen",
+    "plaats": "Gulpen",
+    "bestuur": "Stichting LVO",
+    "website": "https://www.sophianum.nl",
+    "regio": "Heuvelland (Zuid-Limburg), in de Euregio Maas-Rijn"
+  },
+
+  "uniekind": {
+    "titel": "Uniekind",
+    "ondertitel": "Lessen op maat, al was het maar voor één kind",
+    "kernbelofte": "Je hoeft niet opnieuw te leren lesgeven. Uniekind begint bij hoe jij nu lesgeeft en helpt je stap voor stap verder, met materiaal dat al klaarligt.",
+    "noindex": true,
+    "toegangscode": null,
+    "toegangscodeToelichting": "Zet hier één woord neer om een drempel bij het eerste bezoek aan te zetten. Let op: iedereen kan dit woord in de broncode lezen; het is geen beveiliging."
+  },
+
+  "huisstijl": {
+    "logo": "huisstijl/sophianum/logo.png",
+    "logoAlt": "Sophianum, de scholengemeenschap voor het Heuvelland: gymnasium, atheneum, havo, mavo, vmbo",
+    "motief": "huisstijl/hoogtelijnen.svg",
+    "lettertype": "Nunito Sans",
+    "lettertypeToelichting": "De schoolgids gebruikt Avenir (betaald). Nunito Sans is de gratis variant die er het dichtst bij komt; hij wordt lokaal meegeleverd, zonder verzoek aan Google.",
+    "kleuren": {
+      "hoofd": "#00489a",
+      "paars": "#934d98",
+      "rood": "#d70926",
+      "oranje": "#f39000",
+      "geel": "#ffcf21",
+      "groen": "#2ea836",
+      "grijs": "#86888c"
+    },
+    "kleurenBron": "Gemeten in de PDF van de Schoolgids 2026-2027 (omslag, hoofdstukpagina's en logo).",
+    "afdelingskleur": { "vwo-g": "paars", "vwo-a": "rood", "havo": "oranje", "mavo": "geel", "vmbo-b": "groen", "vmbo-k": "groen" },
+    "categoriekleur": {
+      "instructiemodel": "hoofd",
+      "differentiatievorm": "paars",
+      "activerende-werkvorm": "oranje",
+      "leerstrategie": "groen",
+      "formatieve-check": "rood",
+      "aandachtrichter": "geel",
+      "energizer": "groen",
+      "afsluiter": "paars",
+      "routine": "grijs"
+    }
+  },
+
+  "motto": {
+    "tekst": "Al was het maar voor één kind",
+    "herkomst": "Sophie Barat (1779-1865)",
+    "toelichting": "De school vindt haar oorsprong in het onderwijs van de zusters van de Sociëteit van het Heilig Hart, gesticht door Madeleine Sophie Barat. Haar visie op onderwijs is gericht op persoonlijke ontwikkeling, verantwoordelijkheid en aandacht voor de individuele leerling.",
+    "inDeLes": "Elke les heeft aandacht voor de leerling die net buiten de boot dreigt te vallen, aan beide kanten: wie extra steun nodig heeft én wie meer uitdaging nodig heeft."
+  },
+
+  "kernwaarden": ["respect", "verantwoordelijkheid", "betrokkenheid"],
+
+  "koers": {
+    "thema": "Een nieuw-wij",
+    "citaat": "Leren doe je samen. Onderwijs geven ook.",
+    "toelichting": "De school bouwt aan een cultuur waarin samenwerking, betrokkenheid en eigenaarschap centraal staan."
+  },
+
+  "pijlers": [
+    { "id": "goed-onderwijs", "naam": "Goed onderwijs", "omschrijving": "Doordachte vernieuwing van het onderwijs, met aandacht voor en samenspel tussen de doeldomeinen kwalificatie, socialisatie en persoonsvorming.", "inDeLes": "Elke les dient het lesdoel (kwalificatie) en geeft ruimte aan samenwerken (socialisatie) en reflectie op jezelf (persoonsvorming)." },
+    { "id": "goed-leven", "naam": "Goed leven", "omschrijving": "Eigenheid, levenswijsheid, veerkracht en weerbaarheid, zodat leerlingen gefundeerde keuzes kunnen maken.", "inDeLes": "Leerlingen kiezen soms zelf hun route of eindproduct en reflecteren op wat bij hen past; fouten maken mag." },
+    { "id": "goed-samenleven", "naam": "Goed samenleven", "omschrijving": "Samenwerken en samenleven, respectvol omgaan met diversiteit en verschillende perspectieven.", "inDeLes": "Werkvormen waarin leerlingen van elkaars perspectief leren krijgen een label." },
+    { "id": "regionale-verbinding", "naam": "Regionale verbinding", "omschrijving": "Verbinding met de regio via lokale bedrijven en instellingen; relevante leerervaringen en vitaliteit van het Heuvelland.", "inDeLes": "De relevantie-haak gebruikt bij voorkeur een voorbeeld uit het Heuvelland, Zuid-Limburg of de Euregio." }
+  ],
+
+  "principes": [
+    { "id": "differentiatie-instructie", "paragraaf": "1.1", "naam": "Leerlinggericht onderwijs", "schoolplan": "We stemmen het onderwijsaanbod af op de individuele behoeften, mogelijkheden en talenten van leerlingen door middel van gedifferentieerde instructie en begeleiding.", "uniekind": "Elke les bevat minimaal één expliciete differentiatievorm en verlengde instructie of verdieping.", "regel": "minEenDifferentiatievorm" },
+    { "id": "evidence-informed", "paragraaf": "1.1", "naam": "Innovatie en vernieuwing", "schoolplan": "We implementeren innovatieve onderwijsmethoden en technologieën om het leerproces te verrijken en te ondersteunen. Hierbij streven we naar een 'evidence informed' werkwijze.", "uniekind": "Elke werkvorm heeft een korte, eerlijke onderbouwing; geen mythes.", "regel": "onderbouwingTonen" },
+    { "id": "individueel-samenwerkend", "paragraaf": "1.3", "naam": "Individueel en samenwerkend leren", "schoolplan": "We zorgen ervoor dat binnen ons onderwijs zowel individueel als samenwerkend geleerd wordt, zodat leerlingen verschillende leerervaringen opdoen.", "uniekind": "Elke les bevat beide; de generator bewaakt de balans.", "regel": "individueelEnSamen" },
+    { "id": "relevantie", "paragraaf": "1.3", "naam": "Relevantie van theorie", "schoolplan": "We zorgen ervoor dat leerlingen begrijpen wat ze leren, door de relevantie van theorie voor de praktijk uit te leggen.", "uniekind": "Elke les heeft een relevantie-haak, bij voorkeur met een voorbeeld uit het Heuvelland of de Euregio.", "regel": "relevantieHaak" },
+    { "id": "actualiteit-diversiteit", "paragraaf": "1.3", "naam": "Aandacht voor actualiteit en diversiteit", "schoolplan": "We besteden, binnen ons onderwijs, aandacht aan de actualiteit en de diversiteit tussen leerlingen, waarbij verschillende gezichtspunten worden besproken.", "uniekind": "Optioneel actualiteitsmoment; werkvormen met meerdere perspectieven worden gelabeld.", "regel": "perspectievenLabel" },
+    { "id": "digitaal-ai", "paragraaf": "1.3", "naam": "Digitale geletterdheid en verantwoord omgaan met AI", "schoolplan": "We benutten AI bewust als ondersteuning van het onderwijs. Tegelijk blijven we alert op risico's zoals afhankelijkheid en oneigenlijk gebruik, en houden we de focus op begeleiding, toetsing en het leerproces zelf.", "uniekind": "Digitale werkvormen gaan via de schoollaptop; AI-werkvormen en de AI-brug benoemen risico's zoals afhankelijkheid.", "regel": "laptopNietTelefoon" },
+    { "id": "differentieren-perspectieven", "paragraaf": "1.4", "naam": "Differentiatie", "schoolplan": "We differentiëren bij alle vakken vanuit verschillende perspectieven, zoals tempo, niveau, leerstijl en/of interesse van de leerling.", "uniekind": "Uniekind differentieert op tempo, niveau, interesse en 'keuze in aanpak en verwerking' (de invulling van 'leerstijl', zie de pagina Visie).", "regel": "differentiatieTaxonomie" },
+    { "id": "passende-ondersteuning", "paragraaf": "1.4", "naam": "Passende ondersteuning", "schoolplan": "We streven naar passende ondersteuning en begeleiding voor iedere leerling, afgestemd op hun individuele behoeften.", "uniekind": "Routes voor extra steun en voor verdieping; compacten als optie.", "regel": "routesSteunEnVerdieping" },
+    { "id": "taal-rekenen", "paragraaf": "1.10-1.12", "naam": "Taal, NT2 en rekenen", "schoolplan": "We bieden gerichte ondersteuning om ervoor te zorgen dat alle leerlingen de taal- en rekenvaardigheden ontwikkelen die nodig zijn voor hun verdere schoolloopbaan en daarbuiten.", "uniekind": "Vaktaal-steunkaart en, waar het vak dat vraagt, een rekenhulpkaart als standaardmateriaal.", "regel": "vaktaalEnRekenkaart" }
+  ],
+
+  "leerstijl": {
+    "schoolplanTerm": "leerstijl",
+    "uniekindTerm": "keuze in aanpak en verwerking",
+    "uitleg": "Het schoolplan noemt differentiëren op leerstijl. Uniekind vult dat in als 'keuze in aanpak en verwerking': de stof in meerdere vormen aanbieden (tekst, schema, uitgewerkt voorbeeld) en leerlingen keuze geven in hoe ze verwerken en wat ze maken. Het idee dat leerlingen beter leren als je lesgeeft in 'hun' leerstijl (bijvoorbeeld visueel of auditief) wordt door onderzoek niet ondersteund. Meerdere representaties en keuze helpen wél, voor iedere leerling. Zo sluit Uniekind aan bij zowel de bedoeling van het schoolplan als bij de evidence-informed werkwijze die het schoolplan ook vraagt.",
+    "bronnen": ["pashler-2008", "eef-toolkit", "mayer-2009"]
+  },
+
+  "burgerschap": {
+    "kernwaarden": [
+      { "id": "rechtvaardigheid", "naam": "Rechtvaardigheid", "omschrijving": "Kennis van de rechtsbeginselen van de democratie, zelf ethische afwegingen maken, discussiëren op basis van argumenten met respect voor andermans mening." },
+      { "id": "inclusie", "naam": "Inclusie", "omschrijving": "Respect voor ieders herkomst, geloofsovertuiging, geaardheid, (gender)identiteit en sociaaleconomische achtergrond; kennis van verschillende levensbeschouwelijke visies." },
+      { "id": "gemeenschappelijkheid", "naam": "Gemeenschappelijkheid", "omschrijving": "Samen zorgen voor verdraagzaamheid en een veilig leefklimaat; via dialoog op zoek naar gemeenschappelijke waarden en normen; onderdeel zijn van de regionale gemeenschap." },
+      { "id": "duurzaamheid", "naam": "Duurzaamheid", "omschrijving": "Kennis over oorzaken en gevolgen van klimaatverandering, respect voor dier en natuur, de eigen impact op het milieu verminderen." }
+    ],
+    "toelichting": "Elke vakgroep beschrijft in het vakwerkplan hoe zij aandacht besteedt aan de vier schoolkernwaarden van burgerschap. Uniekind labelt lessen en werkvormen die eraan raken."
+  },
+
+  "speerpunten": {
+    "schooljaar": "2026-2027",
+    "items": [
+      "Versterking van de pedagogiek ten behoeve van de leskwaliteit en positief schoolklimaat",
+      "Versterking van de didactiek ten behoeve van de leskwaliteit",
+      "Versterking van de schoolbrede verbondenheid en professionele kwaliteitscultuur",
+      "Verbetering van de schoolbrede onderwijslogistiek",
+      "Verbetering van de doorstroom in de onderbouw"
+    ],
+    "kwaliteitsinstrumenten": ["professionele leergemeenschappen (PLG's)", "collegiale lesbezoeken", "jaarlijkse interne review", "leerlingpanels", "gevalideerde leerlingvragenlijsten"],
+    "uniekind": "Bij elke les hoort een kijkwijzer voor een collegiaal lesbezoek, gekoppeld aan het speerpunt didactiek."
+  },
+
+  "afdelingen": [
+    { "id": "vmbo-b", "naam": "vmbo basis", "kort": "vmbo-b", "kolom": "vmbo", "niveau": "vmbo", "leerjaren": [1, 2, 3, 4], "label12": "vmbo-MiX", "lesduren": [70, 35], "standaardLesduur": 70, "rooster": "flexuurmodel" },
+    { "id": "vmbo-k", "naam": "vmbo kader", "kort": "vmbo-k", "kolom": "vmbo", "niveau": "vmbo", "leerjaren": [1, 2, 3, 4], "label12": "vmbo-MiX", "lesduren": [70, 35], "standaardLesduur": 70, "rooster": "flexuurmodel" },
+    { "id": "mavo", "naam": "vmbo-tl / mavo", "kort": "mavo", "kolom": "mavo", "niveau": "vmbo", "leerjaren": [1, 2, 3, 4], "lesduren": [70, 35], "standaardLesduur": 70, "rooster": "flexuurmodel" },
+    { "id": "havo", "naam": "havo", "kort": "havo", "kolom": "havo", "niveau": "havo", "leerjaren": [1, 2, 3, 4, 5], "lesduren": [50, 100], "standaardLesduur": 50 },
+    { "id": "vwo-a", "naam": "vwo atheneum", "kort": "atheneum", "kolom": "vwo", "niveau": "vwo", "leerjaren": [1, 2, 3, 4, 5, 6], "lesduren": [50, 100], "standaardLesduur": 50 },
+    { "id": "vwo-g", "naam": "vwo gymnasium", "kort": "gymnasium", "kolom": "vwo", "niveau": "vwo", "leerjaren": [1, 2, 3, 4, 5, 6], "lesduren": [50, 100], "standaardLesduur": 50 }
+  ],
+  "afdelingToelichting": "vmbo-basis en vmbo-kader zitten in leerjaar 1 en 2 samen in vmbo-MiX; aan het eind van leerjaar 2 wordt de leerweg bepaald. Lesduren: havo/vwo 50 minuten (enkel uur) of 100 minuten (blokuur); vmbo/mavo (flexuurmodel) meestal 70, soms 35 minuten. Een vrije lesduur kan altijd.",
+
+  "vakken": [
+    { "id": "nederlands", "naam": "Nederlands", "afdelingen": "alle", "rekenen": false, "taal": true },
+    { "id": "engels", "naam": "Engels", "afdelingen": "alle", "rekenen": false, "taal": true },
+    { "id": "duits", "naam": "Duits", "afdelingen": "alle", "rekenen": false, "taal": true, "bron": "schoolgids: Duits schoolbreed" },
+    { "id": "frans", "naam": "Frans", "afdelingen": ["havo", "vwo-a", "vwo-g"], "rekenen": false, "taal": true, "bron": "schoolgids: Frans op havo en vwo" },
+    { "id": "latijn", "naam": "Latijn", "afdelingen": ["vwo-g"], "rekenen": false, "taal": true, "aanname": true },
+    { "id": "grieks", "naam": "Grieks", "afdelingen": ["vwo-g"], "rekenen": false, "taal": true, "aanname": true },
+    { "id": "wiskunde", "naam": "Wiskunde", "afdelingen": "alle", "rekenen": true },
+    { "id": "rekenen", "naam": "Rekenen", "afdelingen": "alle", "rekenen": true, "aanname": true },
+    { "id": "geschiedenis", "naam": "Geschiedenis", "afdelingen": "alle", "rekenen": false },
+    { "id": "aardrijkskunde", "naam": "Aardrijkskunde", "afdelingen": "alle", "rekenen": true },
+    { "id": "economie", "naam": "Economie", "afdelingen": "alle", "rekenen": true },
+    { "id": "bedrijfseconomie", "naam": "Bedrijfseconomie", "afdelingen": ["havo", "vwo-a", "vwo-g"], "rekenen": true, "aanname": true },
+    { "id": "maatschappijleer", "naam": "Maatschappijleer", "afdelingen": "alle", "rekenen": false, "bron": "schoolgids" },
+    { "id": "biologie", "naam": "Biologie", "afdelingen": "alle", "rekenen": true },
+    { "id": "natuurkunde", "naam": "Natuurkunde / NaSk", "afdelingen": "alle", "rekenen": true },
+    { "id": "scheikunde", "naam": "Scheikunde", "afdelingen": "alle", "rekenen": true },
+    { "id": "informatica", "naam": "Informatica", "afdelingen": ["havo", "vwo-a", "vwo-g"], "rekenen": false, "aanname": true },
+    { "id": "kunst", "naam": "Kunst (beeldend, muziek, drama, CKV)", "afdelingen": "alle", "rekenen": false },
+    { "id": "lo", "naam": "Lichamelijke opvoeding", "afdelingen": "alle", "rekenen": false, "bron": "schoolgids" },
+    { "id": "filosofie", "naam": "Filosofie & levensbeschouwing", "afdelingen": ["vwo-a", "vwo-g"], "rekenen": false, "bron": "schoolgids: vwo" },
+    { "id": "dp", "naam": "D&P (Dienstverlening en producten)", "afdelingen": ["vmbo-b", "vmbo-k"], "rekenen": true, "onderbouwVakoverstijgend": true, "bron": "schoolgids" },
+    { "id": "mm", "naam": "M&M (Mens en Maatschappij)", "afdelingen": ["vmbo-b", "vmbo-k"], "rekenen": false, "onderbouwVakoverstijgend": true, "bron": "schoolgids" },
+    { "id": "mn", "naam": "M&N (Mens en Natuur)", "afdelingen": ["vmbo-b", "vmbo-k"], "rekenen": true, "onderbouwVakoverstijgend": true, "bron": "schoolgids" },
+    { "id": "tt", "naam": "T&T (Technologie en Toepassing)", "afdelingen": ["mavo"], "rekenen": true, "onderbouwVakoverstijgend": true, "bron": "schoolgids" },
+    { "id": "oo", "naam": "O&O (Onderzoek en Ontwerpen)", "afdelingen": ["havo", "vwo-a", "vwo-g"], "rekenen": true, "onderbouwVakoverstijgend": true, "bron": "schoolgids" },
+    { "id": "beroepsgericht", "naam": "Beroepsgericht profielvak", "afdelingen": ["vmbo-b", "vmbo-k"], "rekenen": true, "aanname": true }
+  ],
+  "vakkenToelichting": "Vakken met 'bron' komen uit de schoolgids. De overige zijn een standaardlijst die de school zelf aanvult of aanpast. 'rekenen: true' betekent dat Uniekind standaard een rekenhulpkaart aanbiedt.",
+
+  "ruimtes": [
+    { "id": "M", "naam": "M-lokaal (instructieruimte)", "kort": "M-lokaal", "capaciteit": 26, "krukken": true, "maxInstructieAaneengesloten": 15, "richtlijnInstructie": [10, 15], "heeftPlein": true, "omschrijving": "Kleiner lokaal met krukken, gekoppeld aan een eigen deelplein. Lang zitten op krukken is onprettig: instructie bij voorkeur kort." },
+    { "id": "plein", "naam": "Deelplein", "kort": "plein", "capaciteit": 40, "aanname": true, "capaciteitToelichting": "Ruim voldoende voor de groep die uit het lokaal vertrekt. Het getal is instelbaar.", "alleenBij": "M", "alleenLaptop": true, "toezicht": "docent of onderwijsassistent", "cameratoezicht": true, "omschrijving": "Deel van het leerplein, vast gekoppeld aan één instructielokaal. Alleen de schoollaptop, alleen voor lesdoelen, onder toezicht van de docent of een onderwijsassistent." },
+    { "id": "L", "naam": "L-lokaal", "kort": "L-lokaal", "capaciteit": 32, "krukken": false, "heeftPlein": false, "omschrijving": "Standaard lokaal zonder plein: differentiëren via hoeken of zones in het lokaal." },
+    { "id": "stilte", "naam": "Stilteruimte", "kort": "stilteruimte", "capaciteit": 8, "aanname": true, "toezicht": "volgens afspraak van de school", "aannameToelichting": "Het aantal plekken en de toezichtsregel zijn niet bekend uit de schooldocumenten en staan op een voorzichtige standaard. Pas aan in het profiel.", "omschrijving": "Extra werkplek voor leerlingen die rust of focus nodig hebben." },
+    { "id": "anders", "naam": "Anders (praktijklokaal, gymzaal, aula, buiten)", "kort": "anders", "capaciteit": null, "omschrijving": "De docent beschrijft de ruimte zelf." }
+  ],
+
+  "regels": {
+    "telefoon": {
+      "toegestaan": false,
+      "motto": "Thuis of in de kluis",
+      "uitleg": "Mobiele telefoons, tablets en smartwatches zijn in de les niet toegestaan. Digitaal werken gaat via de schoollaptop. Uniekind stelt nooit werkvormen voor die een telefoon vereisen."
+    },
+    "plein": "Op het leerplein mag alleen de (school)laptop worden gebruikt, voor lesdoelen, onder toezicht van de aanwezige docent of onderwijsassistent. Er is cameratoezicht.",
+    "onderwijsassistenten": "Er zijn onderwijsassistenten op school. Of er één beschikbaar is, verschilt per les; de docent geeft dat aan."
+  },
+
+  "ondersteuning": [
+    { "id": "dyslexie", "naam": "Dyslexie", "aanbod": "Faciliteiten volgens de dyslexiepas; remedial teaching", "inDeLes": "Dyslexievriendelijk materiaal, tekst ook voorlezen of laten beluisteren via de laptop, extra tijd." },
+    { "id": "dyscalculie", "naam": "Dyscalculie", "aanbod": "Faciliteiten na verklaring; remedial teaching", "inDeLes": "Rekenhulpkaart, stappenplan, rekenmachine waar toegestaan." },
+    { "id": "nt2", "naam": "NT2 (nieuwkomers)", "aanbod": "Aanvullende taalondersteuning in individuele trajecten of kleine groepjes", "inDeLes": "Vaktaal-steunkaart met omschrijvingen in eenvoudig Nederlands en zinsstarters; vaste maatje." },
+    { "id": "taal-rekenen", "naam": "Ondersteuningslessen taal en rekenen", "aanbod": "Ondersteuningslessen en keuzewerktijd", "inDeLes": "Verwijs naar het aanbod als de achterstand groter is dan je in de les kunt opvangen." },
+    { "id": "faalangst", "naam": "Faalangst", "aanbod": "Faalangstreductietraining", "inDeLes": "Antwoorden eerst op papier of wisbordje, nooit ongevraagd voor de hele klas; vaste duopartner; rustige versie van het materiaal." },
+    { "id": "maatwerk", "naam": "Maatwerkplaats", "aanbod": "Voor leerlingen die tijdelijk dreigen vast te lopen", "inDeLes": "Geen lesactiviteit; overleg met de mentor of ondersteuningscoördinator." },
+    { "id": "hoogbegaafd", "naam": "Meer- en hoogbegaafdheid", "aanbod": "Compacten en verrijken van de lesstof, extra vak, versneld examen", "inDeLes": "Compacten: sla herhalingsopdrachten over na een startcheck en werk aan een verrijkingsopdracht." },
+    { "id": "examenstress", "naam": "Examenstress", "aanbod": "De leerlinggeleding van de MR geeft aan dat examenstress speelt; de school werkt aan een aanbod.", "inDeLes": "Bij toetsvoorbereiding: oefenen zonder cijfer, ophaaloefeningen, duidelijke succescriteria en een planning in kleine stappen." }
+  ],
+  "ondersteuningToelichting": "Uniekind verwijst naar dit aanbod waar passend, maar slaat nooit leerlinggegevens op. Voor individuele leerlingen loop je via de mentor en de ondersteuningscoördinator.",
+
+  "didactiek": {
+    "taxonomie": "bloom",
+    "taxonomieOpties": ["bloom", "rtti"],
+    "lesmodel": "di",
+    "lesmodelOpties": [
+      { "id": "di", "naam": "Directe instructie (standaard)" },
+      { "id": "adi", "naam": "Activerende directe instructie (ADI)" },
+      { "id": "edi", "naam": "Expliciete directe instructie (EDI)" },
+      { "id": "igdi", "naam": "Interactief gedifferentieerde directe instructie (IGDI)" },
+      { "id": "eigen", "naam": "Eigen opzet" }
+    ]
+  },
+
+  "sectieAccenten": {
+    "toelichting": "Het schoolplan geeft secties en teams ruimte om eigen accenten te leggen. Een sectie kan hier per vak een voorkeur vastleggen. Leeg betekent: de schoolstandaard.",
+    "opties": [
+      { "id": "lesmodel", "vraag": "Met welk lesmodel werkt onze sectie?", "type": "lesmodel" },
+      { "id": "taxonomie", "vraag": "Welke taxonomie gebruiken wij?", "type": "taxonomie" },
+      { "id": "methodesite", "vraag": "Naam en adres van onze methodewebsite", "type": "tekst" },
+      { "id": "werkvormVanDeMaand", "vraag": "Werkvorm van de maand (PLG)", "type": "werkvorm" }
+    ],
+    "perVak": {}
+  },
+
+  "generator": {
+    "gewichten": {
+      "denkniveau": 3,
+      "lesfase": 2,
+      "docentstijl": { "1": 3, "2": 2, "3": 1 },
+      "klas": 2,
+      "visie": 1.5,
+      "variatie": 1,
+      "ervaring": 0.5
+    },
+    "beweegmomentElkeMinuten": 25,
+    "instructieMaxMlokaal": 15,
+    "instructieMaxStandaard": 20,
+    "visieAccenten": ["individueel-samenwerkend", "relevantie", "persoonsvorming", "socialisatie", "regionaal"]
+  },
+
+  "terminologie": {
+    "sectie": "sectie",
+    "mentor": "mentor",
+    "plein": "deelplein",
+    "kolom": "kolom",
+    "onderwijsassistent": "onderwijsassistent"
+  },
+
+  "regio": {
+    "naam": "Heuvelland",
+    "toelichting": "Startpunten voor een relevantie-haak. Het zijn onderwerpen, geen kant-en-klare feiten: check altijd de actuele details voordat je ze in de les gebruikt.",
+    "haken": [
+      { "thema": "Vergrijzing en jongeren die wegtrekken uit het Heuvelland (uit het schoolplan)", "vakken": ["aardrijkskunde", "economie", "maatschappijleer", "mm", "wiskunde"] },
+      { "thema": "Wonen en werken over de grens in de Euregio Maas-Rijn (Aken, Luik, Maastricht)", "vakken": ["duits", "frans", "economie", "aardrijkskunde", "maatschappijleer"] },
+      { "thema": "De Geul en wateroverlast in Zuid-Limburg", "vakken": ["aardrijkskunde", "biologie", "natuurkunde", "mn", "geschiedenis"] },
+      { "thema": "Mergel, mergelgroeven en grotten in Zuid-Limburg", "vakken": ["aardrijkskunde", "scheikunde", "geschiedenis", "biologie"] },
+      { "thema": "Toerisme, fietsen en wandelen in het Heuvelland", "vakken": ["economie", "aardrijkskunde", "engels", "duits", "dp"] },
+      { "thema": "Landbouw, fruitteelt en natuurbeheer in het Heuvelland", "vakken": ["biologie", "aardrijkskunde", "economie", "mn"] },
+      { "thema": "Lokale bedrijven, ambacht en ondernemerschap in de regio", "vakken": ["economie", "bedrijfseconomie", "dp", "tt", "oo"] },
+      { "thema": "De geschiedenis van de school: in 1848 begonnen door de zusters in Vaals (uit de schoolgids)", "vakken": ["geschiedenis", "nederlands", "filosofie"] },
+      { "thema": "Grenzen in Europa, het Drielandenpunt en Europese samenwerking", "vakken": ["geschiedenis", "maatschappijleer", "aardrijkskunde", "duits", "frans"] },
+      { "thema": "Dialect en meertaligheid in Limburg en de Euregio", "vakken": ["nederlands", "duits", "frans", "engels"] },
+      { "thema": "Ontwerpen voor de eigen omgeving: school, dorp, natuur", "vakken": ["oo", "tt", "kunst", "dp"] },
+      { "thema": "Bewegen en gezond leven: de meeste leerlingen fietsen dagelijks naar school (uit de schoolgids)", "vakken": ["lo", "biologie", "natuurkunde", "wiskunde"] }
+    ]
+  },
+
+  "bronnenZoeken": [
+    { "id": "schooltv", "naam": "Schooltv", "url": "https://schooltv.nl/zoeken?q={q}" },
+    { "id": "wikiwijs", "naam": "Wikiwijs", "url": "https://www.wikiwijs.nl/zoeken/?q={q}" },
+    { "id": "kennisnet", "naam": "Kennisnet", "url": "https://www.kennisnet.nl/zoeken/?q={q}" },
+    { "id": "youtube", "naam": "YouTube (Nederlandstalig)", "url": "https://www.youtube.com/results?search_query={q}+uitleg" },
+    { "id": "jeugdjournaal", "naam": "NOS Jeugdjournaal", "url": "https://www.google.com/search?q=site%3Anos.nl%2Fjeugdjournaal+{q}" },
+    { "id": "l1", "naam": "L1 (regionaal nieuws)", "url": "https://www.google.com/search?q=site%3Al1nieuws.nl+{q}" }
+  ],
+  "bronnenZoekenToelichting": "Zoeklinks met het onderwerp ingevuld. Uniekind toont of embedt nooit automatisch een video; een link komt pas in het materiaal als de docent hem heeft aangevinkt."
+}

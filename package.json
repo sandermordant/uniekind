@@ -1,0 +1,27 @@
+{
+  "name": "uniekind",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Uniekind – lessen op maat, al was het maar voor één kind. Lesgenerator voor gedifferentieerd lesgeven.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run valideer && vite build",
+    "build:sophianum": "npm run valideer && vite build --mode sophianum",
+    "build:algemeen": "npm run valideer && vite build --mode algemeen",
+    "preview": "vite preview",
+    "valideer": "node tools/valideer-kennisbank.js",
+    "test": "vitest run"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "ajv-formats": "^3.0.1",
+    "vite": "^6.4.5",
+    "vitest": "^3.2.7"
+  },
+  "dependencies": {
+    "@fontsource/nunito": "^5.3.0",
+    "@fontsource/nunito-sans": "^5.3.0",
+    "ajv": "^8.20.0"
+  }
+}
