@@ -173,7 +173,7 @@
    "categorie": "instructiemodel",
    "kort": "Directe instructie waarin leerlingen in elke fase actief meedoen: ze denken, schrijven en overleggen tussen jouw uitlegblokjes door.",
    "duur": {
-    "min": 10,
+    "min": 8,
     "max": 15
    },
    "groepsvorm": [
@@ -1081,7 +1081,7 @@
    "categorie": "instructiemodel",
    "kort": "Een strak opgebouwd instructiemodel met veel controle van begrip: je stelt na elke kleine stap een vraag aan een willekeurige leerling en laat iedereen meeschrijven.",
    "duur": {
-    "min": 10,
+    "min": 8,
     "max": 15
    },
    "groepsvorm": [
@@ -1133,7 +1133,7 @@
    "categorie": "instructiemodel",
    "kort": "Een groep krijgt de instructie via een korte kennisclip of uitwerkblad op de laptop, zodat jij tegelijk met een andere groep kunt werken.",
    "duur": {
-    "min": 8,
+    "min": 6,
     "max": 15
    },
    "groepsvorm": [
@@ -1615,7 +1615,7 @@
    "categorie": "instructiemodel",
    "kort": "Directe instructie met ingebouwde splitsing in drie groepen: wie het al kan gaat na een korte instructie aan de slag, de basisgroep oefent begeleid, en de steungroep krijgt verlengde instructie.",
    "duur": {
-    "min": 10,
+    "min": 7,
     "max": 15
    },
    "groepsvorm": [
@@ -1892,7 +1892,7 @@
    "categorie": "activerende-werkvorm",
    "kort": "Groepjes werken aan een echte vraag van een (regionale) opdrachtgever en doorlopen de stappen van een ontwerp- of onderzoekscyclus.",
    "duur": {
-    "min": 30,
+    "min": 20,
     "max": 100
    },
    "groepsvorm": [
@@ -2901,7 +2901,7 @@
    "ruimte": {
     "M": true,
     "L": true,
-    "plein": false,
+    "plein": true,
     "stilte": false,
     "beweging": false
    },
@@ -3415,7 +3415,7 @@
    "categorie": "instructiemodel",
    "kort": "Leerlingen bestuderen eerst een volledig uitgewerkt voorbeeld, maken dan een opgave waarin stappen ontbreken, en daarna een opgave helemaal zelf.",
    "duur": {
-    "min": 8,
+    "min": 6,
     "max": 20
    },
    "groepsvorm": [

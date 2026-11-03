@@ -40,7 +40,7 @@ export default {
             </div>
           </section>
           <section class="sectie">
-            <p class="fase-melding"><b>Preview fase 1.</b> De kennisbank, het schoolprofiel en de werkvormenbibliotheek staan klaar. De lesgenerator volgt in fase 2.</p>
+            <p class="fase-melding"><b>Preview fase 2.</b> De lesgenerator werkt: kies de snelle modus of alle zeven stappen. Materiaal en export volgen in fase 3.</p>
           </section>
         </main>`,
       na(root) {

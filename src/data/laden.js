@@ -34,3 +34,10 @@ export async function laadWerkvorm(id) {
   const cat = await json(`./data/werkvormen/${kort.bestand}`);
   return cat.items.find((i) => i.id === id) ?? null;
 }
+
+/** Alle werkvormen volledig (nodig voor de generator). Wordt pas geladen als je een les maakt. */
+export async function laadAlleWerkvormen() {
+  const index = await laadIndex();
+  const cats = await Promise.all(index.categorieen.map((c) => json(`./data/werkvormen/${c.bestand}`)));
+  return cats.flatMap((c) => c.items);
+}

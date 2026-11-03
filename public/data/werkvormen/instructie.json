@@ -5,7 +5,11 @@
     {
       "id": "directe-instructie",
       "naam": "Directe instructie",
-      "alias": ["DI", "directe-instructiemodel", "expliciete instructie"],
+      "alias": [
+        "DI",
+        "directe-instructiemodel",
+        "expliciete instructie"
+      ],
       "categorie": "instructiemodel",
       "kort": "Een vaste lesopbouw waarin je terugblikt, het doel noemt, kort en helder uitlegt, samen oefent, controleert en daarna zelfstandig laat werken.",
       "startzin": "Vandaag leer je … Aan het eind van de les kun je … Eerst kijken we even terug naar vorige les.",
@@ -18,35 +22,99 @@
         "Zelfstandige verwerking: leerlingen oefenen alleen of in tweetallen; jij loopt rond of zit aan de instructietafel.",
         "Afsluiting: exit ticket en vooruitblik op de volgende les."
       ],
-      "duur": { "min": 8, "max": 15 },
-      "groepsvorm": ["klas", "individueel"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["digibord", "uitgewerkt voorbeeld", "wisbordjes of ABCD-kaarten"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 8,
+        "max": 15
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "uitgewerkt voorbeeld",
+          "wisbordjes of ABCD-kaarten"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["instructie"],
-      "denkniveau": ["onthouden", "begrijpen", "toepassen"],
-      "differentiatie": ["ondersteuning"],
+      "lesfase": [
+        "instructie"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Zet de kernstappen ook op papier, zodat niet alles van het bord hoeft te worden overgeschreven." },
-        "dyscalculie": { "past": "goed", "tip": "Laat het uitgewerkte voorbeeld liggen tijdens de verwerking." },
-        "nt2": { "past": "goed", "tip": "Noem en schrijf de kernbegrippen; gebruik een plaatje of schema bij de uitleg." },
-        "faalangst": { "past": "goed", "tip": "Laat bij de check iedereen tegelijk antwoorden, zodat niemand alleen in de spotlight staat." },
-        "structuur": { "past": "goed", "tip": "Toon de lesopbouw op het bord en vink de fasen af." },
-        "hoogbegaafd": { "past": "aanpassen", "tip": "Laat wie de startcheck foutloos maakt de instructie overslaan en direct aan verdieping werken." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Zet de kernstappen ook op papier, zodat niet alles van het bord hoeft te worden overgeschreven."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Laat het uitgewerkte voorbeeld liggen tijdens de verwerking."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Noem en schrijf de kernbegrippen; gebruik een plaatje of schema bij de uitleg."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat bij de check iedereen tegelijk antwoorden, zodat niemand alleen in de spotlight staat."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Toon de lesopbouw op het bord en vink de fasen af."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Laat wie de startcheck foutloos maakt de instructie overslaan en direct aan verdieping werken."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["uitleggen", "structuur", "houvast"],
+      "docentstijl": [
+        "uitleggen",
+        "structuur",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "De instructie wordt te lang, zeker op krukken in een M-lokaal.", "oplossing": "Knip de uitleg op in blokjes van maximaal 10 minuten met telkens een korte vraag ertussen." },
-        { "valkuil": "Je vraagt 'Is het duidelijk?' en iedereen knikt.", "oplossing": "Vraag niet óf het duidelijk is, maar laat iets zien: een antwoord op een wisbordje." },
-        { "valkuil": "De begeleide inoefening wordt overgeslagen door tijdgebrek.", "oplossing": "Doe liever één opgave samen dan geen; daar zie je de misvattingen." }
+        {
+          "valkuil": "De instructie wordt te lang, zeker op krukken in een M-lokaal.",
+          "oplossing": "Knip de uitleg op in blokjes van maximaal 10 minuten met telkens een korte vraag ertussen."
+        },
+        {
+          "valkuil": "Je vraagt 'Is het duidelijk?' en iedereen knikt.",
+          "oplossing": "Vraag niet óf het duidelijk is, maar laat iets zien: een antwoord op een wisbordje."
+        },
+        {
+          "valkuil": "De begeleide inoefening wordt overgeslagen door tijdgebrek.",
+          "oplossing": "Doe liever één opgave samen dan geen; daar zie je de misvattingen."
+        }
       ],
       "varianten": {
         "vmbo": "Kortere instructieblokken, meer voordoen en samen doen; stappenplan op een kaart.",
@@ -57,28 +125,69 @@
         "verdieping": "Na de check direct naar een plusopdracht op hoger denkniveau."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Je doet het oplossen van een vergelijking stap voor stap voor, maakt er twee samen en laat dan vijf zelf maken." },
-        { "vak": "Duits", "voorbeeld": "Je legt de naamvallen na een voorzetsel uit met drie voorbeeldzinnen en laat leerlingen op wisbordjes de juiste vorm kiezen." },
-        { "vak": "Economie", "voorbeeld": "Je legt het verschil tussen vraag en aanbod uit met een grafiek, tekent er samen één en laat daarna een opgave zelf maken." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Je doet het oplossen van een vergelijking stap voor stap voor, maakt er twee samen en laat dan vijf zelf maken."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Je legt de naamvallen na een voorzetsel uit met drie voorbeeldzinnen en laat leerlingen op wisbordjes de juiste vorm kiezen."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Je legt het verschil tussen vraag en aanbod uit met een grafiek, tekent er samen één en laat daarna een opgave zelf maken."
+        }
       ],
       "waarom": "Directe instructie met kleine stappen, veel vragen en begeleide inoefening hoort bij de best onderbouwde aanpakken voor nieuwe stof, vooral voor beginnende leerders. Rosenshine vatte dit samen in zijn principes; Kirschner, Sweller en Clark laten zien waarom te weinig sturing bij nieuwe stof minder goed werkt.",
       "bewijs": "sterk",
-      "bronnen": ["rosenshine-2012", "kirschner-2006", "surma-2019"],
-      "materiaal": ["lesplan", "uitgewerkt-voorbeeld", "exit-ticket"],
+      "bronnen": [
+        "rosenshine-2012",
+        "kirschner-2006",
+        "surma-2019"
+      ],
+      "materiaal": [
+        "lesplan",
+        "uitgewerkt-voorbeeld",
+        "exit-ticket"
+      ],
       "opbouw": [
-        { "fase": "Terugblik", "wat": "Ophaaloefening over vorige les" },
-        { "fase": "Doel en relevantie", "wat": "Lesdoel in leerlingtaal en waarom het ertoe doet" },
-        { "fase": "Instructie", "wat": "Kort, in kleine stappen, met voorbeeld" },
-        { "fase": "Begeleide inoefening", "wat": "Samen oefenen, veel vragen" },
-        { "fase": "Check", "wat": "Iedereen antwoordt, als-dan-beslissing" },
-        { "fase": "Zelfstandig verwerken", "wat": "Oefenen met routes" },
-        { "fase": "Afsluiting", "wat": "Exit ticket en vooruitblik" }
+        {
+          "fase": "Terugblik",
+          "wat": "Ophaaloefening over vorige les"
+        },
+        {
+          "fase": "Doel en relevantie",
+          "wat": "Lesdoel in leerlingtaal en waarom het ertoe doet"
+        },
+        {
+          "fase": "Instructie",
+          "wat": "Kort, in kleine stappen, met voorbeeld"
+        },
+        {
+          "fase": "Begeleide inoefening",
+          "wat": "Samen oefenen, veel vragen"
+        },
+        {
+          "fase": "Check",
+          "wat": "Iedereen antwoordt, als-dan-beslissing"
+        },
+        {
+          "fase": "Zelfstandig verwerken",
+          "wat": "Oefenen met routes"
+        },
+        {
+          "fase": "Afsluiting",
+          "wat": "Exit ticket en vooruitblik"
+        }
       ]
     },
     {
       "id": "activerende-directe-instructie",
       "naam": "Activerende directe instructie (ADI)",
-      "alias": ["ADI", "ADI-model"],
+      "alias": [
+        "ADI",
+        "ADI-model"
+      ],
       "categorie": "instructiemodel",
       "kort": "Directe instructie waarin leerlingen in elke fase actief meedoen: ze denken, schrijven en overleggen tussen jouw uitlegblokjes door.",
       "startzin": "Ik ga zo iets uitleggen, maar jullie zijn niet alleen aan het luisteren: na elke stap ga je zelf iets doen.",
@@ -90,34 +199,98 @@
         "Zelfstandige verwerking, met een instructietafel voor wie meer uitleg nodig heeft.",
         "Nabespreking: wat heb je geleerd, hoe heb je het aangepakt? Koppel terug aan het lesdoel."
       ],
-      "duur": { "min": 10, "max": 15 },
-      "groepsvorm": ["klas", "tweetal", "individueel"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["digibord", "wisbordjes", "timer"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 8,
+        "max": 15
+      },
+      "groepsvorm": [
+        "klas",
+        "tweetal",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "wisbordjes",
+          "timer"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["instructie"],
-      "denkniveau": ["begrijpen", "toepassen", "analyseren"],
-      "differentiatie": ["ondersteuning", "groepering"],
+      "lesfase": [
+        "instructie"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "ondersteuning",
+        "groepering"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "socialisatie"],
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Geef de opdrachtjes tussendoor ook mondeling en op het bord." },
-        "dyscalculie": { "past": "goed", "tip": "Laat tweetallen hardop rekenen; de controleur volgt het stappenplan." },
-        "nt2": { "past": "goed", "tip": "Het overleg met een buur helpt om vaktaal te oefenen; geef zinsstarters." },
-        "faalangst": { "past": "goed", "tip": "Eerst zelf opschrijven, dan pas delen met één klasgenoot: dat voelt veilig." },
-        "structuur": { "past": "aanpassen", "tip": "Gebruik steeds dezelfde opdrachtjes tussendoor, zodat het een voorspelbaar ritme wordt." },
-        "hoogbegaafd": { "past": "goed", "tip": "Geef bij de tussenopdrachtjes een extra 'waarom'-vraag voor wie snel klaar is." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Geef de opdrachtjes tussendoor ook mondeling en op het bord."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Laat tweetallen hardop rekenen; de controleur volgt het stappenplan."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Het overleg met een buur helpt om vaktaal te oefenen; geef zinsstarters."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Eerst zelf opschrijven, dan pas delen met één klasgenoot: dat voelt veilig."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Gebruik steeds dezelfde opdrachtjes tussendoor, zodat het een voorspelbaar ritme wordt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef bij de tussenopdrachtjes een extra 'waarom'-vraag voor wie snel klaar is."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["uitleggen", "structuur", "samenwerken"],
+      "docentstijl": [
+        "uitleggen",
+        "structuur",
+        "samenwerken"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "De opdrachtjes tussendoor lopen uit en je uitleg komt in tijdnood.", "oplossing": "Zet een zichtbare timer van 1-2 minuten per tussenopdracht." },
-        { "valkuil": "In tweetallen doet één leerling al het werk.", "oplossing": "Geef rollen (doener en controleur) en wissel na elke opgave." }
+        {
+          "valkuil": "De opdrachtjes tussendoor lopen uit en je uitleg komt in tijdnood.",
+          "oplossing": "Zet een zichtbare timer van 1-2 minuten per tussenopdracht."
+        },
+        {
+          "valkuil": "In tweetallen doet één leerling al het werk.",
+          "oplossing": "Geef rollen (doener en controleur) en wissel na elke opgave."
+        }
       ],
       "varianten": {
         "vmbo": "Heel korte uitlegblokjes; tussenopdrachten waarin leerlingen iets doen of aanwijzen.",
@@ -128,27 +301,63 @@
         "verdieping": "Leerlingen die het snel beheersen, maken een eigen voorbeeld of uitleg voor een klasgenoot."
       },
       "vakvoorbeelden": [
-        { "vak": "Biologie", "voorbeeld": "Na elke stap van de uitleg over de bloedsomloop tekenen leerlingen het pad van het bloed verder op hun eigen schema." },
-        { "vak": "Nederlands", "voorbeeld": "Je legt een signaalwoord uit, leerlingen zoeken er direct met een buur een voorbeeld van in de tekst." },
-        { "vak": "Geschiedenis", "voorbeeld": "Na elk blokje over de Franse Revolutie bedenken tweetallen één oorzaak en één gevolg." }
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Na elke stap van de uitleg over de bloedsomloop tekenen leerlingen het pad van het bloed verder op hun eigen schema."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Je legt een signaalwoord uit, leerlingen zoeken er direct met een buur een voorbeeld van in de tekst."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Na elk blokje over de Franse Revolutie bedenken tweetallen één oorzaak en één gevolg."
+        }
       ],
       "waarom": "ADI combineert de structuur van directe instructie met veel momenten waarop leerlingen actief verwerken. Dat leerlingen tijdens de instructie zelf iets moeten doen en antwoorden, sluit aan bij de principes van Rosenshine. Het ADI-model zelf is vooral een Nederlandse praktijkuitwerking; het is als geheel weinig apart onderzocht.",
       "bewijs": "redelijk",
-      "bronnen": ["ebbens-ettekoven", "rosenshine-2012"],
-      "materiaal": ["lesplan", "wisbordjes"],
+      "bronnen": [
+        "ebbens-ettekoven",
+        "rosenshine-2012"
+      ],
+      "materiaal": [
+        "lesplan",
+        "wisbordjes"
+      ],
       "opbouw": [
-        { "fase": "Terugblik", "wat": "Leerlingen schrijven zelf op wat ze weten" },
-        { "fase": "Oriëntatie", "wat": "Lesdoel en relevantie" },
-        { "fase": "Uitleg", "wat": "Korte blokjes met activerende opdrachtjes ertussen" },
-        { "fase": "Begeleide inoefening", "wat": "In tweetallen met rollen" },
-        { "fase": "Zelfstandig verwerken", "wat": "Met instructietafel" },
-        { "fase": "Nabespreking", "wat": "Product en proces, terug naar het doel" }
+        {
+          "fase": "Terugblik",
+          "wat": "Leerlingen schrijven zelf op wat ze weten"
+        },
+        {
+          "fase": "Oriëntatie",
+          "wat": "Lesdoel en relevantie"
+        },
+        {
+          "fase": "Uitleg",
+          "wat": "Korte blokjes met activerende opdrachtjes ertussen"
+        },
+        {
+          "fase": "Begeleide inoefening",
+          "wat": "In tweetallen met rollen"
+        },
+        {
+          "fase": "Zelfstandig verwerken",
+          "wat": "Met instructietafel"
+        },
+        {
+          "fase": "Nabespreking",
+          "wat": "Product en proces, terug naar het doel"
+        }
       ]
     },
     {
       "id": "expliciete-directe-instructie",
       "naam": "Expliciete directe instructie (EDI)",
-      "alias": ["EDI", "Explicit Direct Instruction"],
+      "alias": [
+        "EDI",
+        "Explicit Direct Instruction"
+      ],
       "categorie": "instructiemodel",
       "kort": "Een strak opgebouwd instructiemodel met veel controle van begrip: je stelt na elke kleine stap een vraag aan een willekeurige leerling en laat iedereen meeschrijven.",
       "startzin": "Het lesdoel van vandaag staat op het bord. Lees het samen met me hardop voor. Wat gaan we vandaag leren? Zeg het tegen je buur.",
@@ -161,34 +370,95 @@
         "Begeleide inoefening: samen opgaven maken, stap voor stap, met check na elke opgave.",
         "Laat leerlingen pas zelfstandig werken als ongeveer 80% het goed heeft; de rest krijgt verlengde instructie."
       ],
-      "duur": { "min": 10, "max": 15 },
-      "groepsvorm": ["klas", "individueel"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["digibord", "wisbordjes", "beurtstokjes of willekeurige kiezer"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 8,
+        "max": 15
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "wisbordjes",
+          "beurtstokjes of willekeurige kiezer"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["instructie"],
-      "denkniveau": ["onthouden", "begrijpen", "toepassen"],
-      "differentiatie": ["ondersteuning"],
+      "lesfase": [
+        "instructie"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Lees het lesdoel samen hardop: dan hoeft niemand alleen te lezen." },
-        "dyscalculie": { "past": "goed", "tip": "De kleine stappen en het modelleren helpen; laat het voorbeeld zichtbaar." },
-        "nt2": { "past": "goed", "tip": "Het hardop herhalen van doel en definitie is goede taaloefening." },
-        "faalangst": { "past": "aanpassen", "tip": "Kies willekeurig, maar pas nadat iedereen het antwoord heeft opgeschreven; dan weet de leerling al wat hij kan zeggen." },
-        "structuur": { "past": "goed", "tip": "Het vaste ritme van uitleg-vraag-check geeft houvast." },
-        "hoogbegaafd": { "past": "minder", "tip": "Laat leerlingen die het al kunnen na de eerste check doorwerken aan verdieping." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees het lesdoel samen hardop: dan hoeft niemand alleen te lezen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "De kleine stappen en het modelleren helpen; laat het voorbeeld zichtbaar."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Het hardop herhalen van doel en definitie is goede taaloefening."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Kies willekeurig, maar pas nadat iedereen het antwoord heeft opgeschreven; dan weet de leerling al wat hij kan zeggen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Het vaste ritme van uitleg-vraag-check geeft houvast."
+        },
+        "hoogbegaafd": {
+          "past": "minder",
+          "tip": "Laat leerlingen die het al kunnen na de eerste check doorwerken aan verdieping."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["uitleggen", "structuur", "houvast"],
+      "docentstijl": [
+        "uitleggen",
+        "structuur",
+        "houvast"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "De checks worden een verhoor.", "oplossing": "Houd de toon licht: 'Laat maar zien, fouten zijn juist handig om van te leren.'" },
-        { "valkuil": "Snelle leerlingen vervelen zich in de vele kleine stappen.", "oplossing": "Gebruik de eerste check om te compacten." }
+        {
+          "valkuil": "De checks worden een verhoor.",
+          "oplossing": "Houd de toon licht: 'Laat maar zien, fouten zijn juist handig om van te leren.'"
+        },
+        {
+          "valkuil": "Snelle leerlingen vervelen zich in de vele kleine stappen.",
+          "oplossing": "Gebruik de eerste check om te compacten."
+        }
       ],
       "varianten": {
         "vmbo": "Heel kleine stappen; veel samen hardop.",
@@ -199,27 +469,63 @@
         "verdieping": "Compacten na de eerste check."
       },
       "vakvoorbeelden": [
-        { "vak": "Engels", "voorbeeld": "Je legt de past simple uit met drie zinnen en laat na elke zin op het wisbordje de juiste vorm schrijven." },
-        { "vak": "Scheikunde", "voorbeeld": "Je doet het kloppend maken van een reactievergelijking voor en checkt per stap." },
-        { "vak": "Rekenen", "voorbeeld": "Procenten berekenen: elke stap voordoen, samen doen, dan zelf doen, met check per stap." }
+        {
+          "vak": "Engels",
+          "voorbeeld": "Je legt de past simple uit met drie zinnen en laat na elke zin op het wisbordje de juiste vorm schrijven."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Je doet het kloppend maken van een reactievergelijking voor en checkt per stap."
+        },
+        {
+          "vak": "Rekenen",
+          "voorbeeld": "Procenten berekenen: elke stap voordoen, samen doen, dan zelf doen, met check per stap."
+        }
       ],
       "waarom": "EDI maakt de principes van goede instructie zeer concreet: een helder doel, voordoen, veel begripscontrole bij alle leerlingen en pas zelfstandig werken als het grootste deel het kan. Die onderdelen zijn elk goed onderbouwd; het model als geheel is vooral een praktijkuitwerking van Hollingsworth en Ybarra.",
       "bewijs": "redelijk",
-      "bronnen": ["hollingsworth-ybarra-2009", "rosenshine-2012"],
-      "materiaal": ["lesplan", "wisbordjes"],
+      "bronnen": [
+        "hollingsworth-ybarra-2009",
+        "rosenshine-2012"
+      ],
+      "materiaal": [
+        "lesplan",
+        "wisbordjes"
+      ],
       "opbouw": [
-        { "fase": "Voorkennis", "wat": "Alleen wat nodig is" },
-        { "fase": "Lesdoel", "wat": "Hardop, in eigen woorden" },
-        { "fase": "Concept", "wat": "Definitie of regel" },
-        { "fase": "Vaardigheid", "wat": "Voordoen, hardop denken" },
-        { "fase": "Begeleide inoefening", "wat": "Check na elke stap" },
-        { "fase": "Zelfstandig", "wat": "Bij ongeveer 80% goed" }
+        {
+          "fase": "Voorkennis",
+          "wat": "Alleen wat nodig is"
+        },
+        {
+          "fase": "Lesdoel",
+          "wat": "Hardop, in eigen woorden"
+        },
+        {
+          "fase": "Concept",
+          "wat": "Definitie of regel"
+        },
+        {
+          "fase": "Vaardigheid",
+          "wat": "Voordoen, hardop denken"
+        },
+        {
+          "fase": "Begeleide inoefening",
+          "wat": "Check na elke stap"
+        },
+        {
+          "fase": "Zelfstandig",
+          "wat": "Bij ongeveer 80% goed"
+        }
       ]
     },
     {
       "id": "igdi",
       "naam": "Interactief gedifferentieerde directe instructie (IGDI)",
-      "alias": ["IGDI", "IGDI-model"],
+      "alias": [
+        "IGDI",
+        "IGDI-model"
+      ],
       "categorie": "instructiemodel",
       "kort": "Directe instructie met ingebouwde splitsing in drie groepen: wie het al kan gaat na een korte instructie aan de slag, de basisgroep oefent begeleid, en de steungroep krijgt verlengde instructie.",
       "startzin": "Ik leg eerst iets kort uit aan iedereen. Daarna kijken we wie al zelf verder kan, en wie nog even bij mij aan tafel komt.",
@@ -232,34 +538,99 @@
         "Verlengde instructie aan de instructietafel voor de steungroep.",
         "Afsluiting met de hele klas: wat heb je geleerd, en hoe ging het werken in jouw groep?"
       ],
-      "duur": { "min": 10, "max": 15 },
-      "groepsvorm": ["klas", "groepje", "individueel"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["instructietafel", "opdrachtkaarten per groep", "timer"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 7,
+        "max": 15
+      },
+      "groepsvorm": [
+        "klas",
+        "groepje",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "instructietafel",
+          "opdrachtkaarten per groep",
+          "timer"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["instructie", "verwerken"],
-      "denkniveau": ["begrijpen", "toepassen", "analyseren"],
-      "differentiatie": ["ondersteuning", "niveau", "groepering", "leeromgeving"],
+      "lesfase": [
+        "instructie",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "ondersteuning",
+        "niveau",
+        "groepering",
+        "leeromgeving"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Geef opdrachtkaarten in dyslexievriendelijke opmaak." },
-        "dyscalculie": { "past": "goed", "tip": "Aan de instructietafel kun je met concreet materiaal werken." },
-        "nt2": { "past": "goed", "tip": "De kleine groep aan de instructietafel geeft ruimte om vaktaal te oefenen." },
-        "faalangst": { "past": "aanpassen", "tip": "Laat leerlingen zelf kiezen om aan te schuiven ('kom erbij als je wilt'), en noem de groep nooit 'de zwakke groep'." },
-        "structuur": { "past": "goed", "tip": "Zet op het bord welke groep wat doet en tot hoe laat." },
-        "hoogbegaafd": { "past": "goed", "tip": "De verdiepingsgroep vertrekt na de korte instructie: geen onnodige herhaling." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Geef opdrachtkaarten in dyslexievriendelijke opmaak."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Aan de instructietafel kun je met concreet materiaal werken."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "De kleine groep aan de instructietafel geeft ruimte om vaktaal te oefenen."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Laat leerlingen zelf kiezen om aan te schuiven ('kom erbij als je wilt'), en noem de groep nooit 'de zwakke groep'."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Zet op het bord welke groep wat doet en tot hoe laat."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "De verdiepingsgroep vertrekt na de korte instructie: geen onnodige herhaling."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["uitleggen", "structuur"],
+      "docentstijl": [
+        "uitleggen",
+        "structuur"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Groepen worden vaste etiketten.", "oplossing": "Bepaal de groepen per les opnieuw, op basis van een check." },
-        { "valkuil": "Terwijl je aan de instructietafel zit, komen er steeds vragen van anderen.", "oplossing": "Spreek 'eerst drie, dan ik' af en gebruik signaalkaarten." }
+        {
+          "valkuil": "Groepen worden vaste etiketten.",
+          "oplossing": "Bepaal de groepen per les opnieuw, op basis van een check."
+        },
+        {
+          "valkuil": "Terwijl je aan de instructietafel zit, komen er steeds vragen van anderen.",
+          "oplossing": "Spreek 'eerst drie, dan ik' af en gebruik signaalkaarten."
+        }
       ],
       "varianten": {
         "vmbo": "Duidelijke opdrachtkaarten per groep met plaatjes en stappen.",
@@ -270,27 +641,66 @@
         "verdieping": "Verdiepingsopdracht direct na de korte instructie."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Na de uitleg over breuken vermenigvuldigen gaat de verdiepingsgroep aan een contextprobleem; de steungroep oefent met breukstroken aan tafel." },
-        { "vak": "Frans", "voorbeeld": "De verdiepingsgroep schrijft een korte tekst met de nieuwe tijd; de steungroep oefent de vervoeging samen." },
-        { "vak": "Aardrijkskunde", "voorbeeld": "De verdiepingsgroep analyseert een kaart van de Euregio; de basisgroep maakt de oefeningen uit de methode." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Na de uitleg over breuken vermenigvuldigen gaat de verdiepingsgroep aan een contextprobleem; de steungroep oefent met breukstroken aan tafel."
+        },
+        {
+          "vak": "Frans",
+          "voorbeeld": "De verdiepingsgroep schrijft een korte tekst met de nieuwe tijd; de steungroep oefent de vervoeging samen."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "De verdiepingsgroep analyseert een kaart van de Euregio; de basisgroep maakt de oefeningen uit de methode."
+        }
       ],
       "waarom": "IGDI bouwt verlengde instructie en verdieping vast in de lesopbouw. Dat sluit aan bij onderzoek naar directe instructie en bij het principe dat extra tijd en uitleg voor wie het nodig heeft helpt. Het EEF wijst er wel op dat vaste niveaugroepen binnen de klas nadelig kunnen uitpakken voor de zwakste leerlingen; wissel de groepen daarom per les.",
       "bewijs": "redelijk",
-      "bronnen": ["igdi-slo", "rosenshine-2012", "eef-toolkit"],
-      "materiaal": ["lesplan", "opdrachtkaart-route", "routeschema"],
+      "bronnen": [
+        "igdi-slo",
+        "rosenshine-2012",
+        "eef-toolkit"
+      ],
+      "materiaal": [
+        "lesplan",
+        "opdrachtkaart-route",
+        "routeschema"
+      ],
       "opbouw": [
-        { "fase": "Terugblik", "wat": "Met check op voorkennis" },
-        { "fase": "Korte instructie", "wat": "Hele groep, max 10 min" },
-        { "fase": "Verdieping vertrekt", "wat": "Zelfstandige verdiepingsopdracht" },
-        { "fase": "Begeleide inoefening", "wat": "Basis + steun" },
-        { "fase": "Verwerken / verlengde instructie", "wat": "Basis zelfstandig, steun aan tafel" },
-        { "fase": "Afsluiting", "wat": "Hele klas, product en proces" }
+        {
+          "fase": "Terugblik",
+          "wat": "Met check op voorkennis"
+        },
+        {
+          "fase": "Korte instructie",
+          "wat": "Hele groep, max 10 min"
+        },
+        {
+          "fase": "Verdieping vertrekt",
+          "wat": "Zelfstandige verdiepingsopdracht"
+        },
+        {
+          "fase": "Begeleide inoefening",
+          "wat": "Basis + steun"
+        },
+        {
+          "fase": "Verwerken / verlengde instructie",
+          "wat": "Basis zelfstandig, steun aan tafel"
+        },
+        {
+          "fase": "Afsluiting",
+          "wat": "Hele klas, product en proces"
+        }
       ]
     },
     {
       "id": "modelleren-hardop-denken",
       "naam": "Modelleren en hardop denken",
-      "alias": ["voordoen", "hardop denkend voordoen", "modeling"],
+      "alias": [
+        "voordoen",
+        "hardop denkend voordoen",
+        "modeling"
+      ],
       "categorie": "instructiemodel",
       "kort": "Je doet een taak voor en zegt hardop wat je denkt, zodat leerlingen niet alleen het antwoord zien, maar ook hoe een expert erover nadenkt.",
       "startzin": "Ik ga deze opdracht nu zelf maken, en ik zeg hardop alles wat er in mijn hoofd gebeurt. Let vooral op mijn keuzes: waarom doe ik dit?",
@@ -302,34 +712,96 @@
         "Doe een tweede opgave samen: leerlingen zeggen de stappen, jij schrijft.",
         "Laat leerlingen een derde opgave in tweetallen maken, waarbij één hardop denkt en de ander luistert."
       ],
-      "duur": { "min": 4, "max": 10 },
-      "groepsvorm": ["klas", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["digibord of visualizer", "voorbeeldopgave"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 4,
+        "max": 10
+      },
+      "groepsvorm": [
+        "klas",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord of visualizer",
+          "voorbeeldopgave"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["instructie"],
-      "denkniveau": ["begrijpen", "toepassen", "analyseren", "evalueren"],
-      "differentiatie": ["ondersteuning"],
+      "lesfase": [
+        "instructie"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen",
+        "analyseren",
+        "evalueren"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Laat zien hoe je zelf een lastige tekst aanpakt (bijvoorbeeld eerst de vragen lezen)." },
-        "dyscalculie": { "past": "goed", "tip": "Hardop rekenen maakt de tussenstappen zichtbaar." },
-        "nt2": { "past": "goed", "tip": "Je gebruikt vaktaal in een context; schrijf de belangrijkste woorden erbij." },
-        "faalangst": { "past": "goed", "tip": "Laat zien dat ook jij twijfelt en fouten herstelt: dat normaliseert fouten maken." },
-        "structuur": { "past": "goed", "tip": "Het stappenplan achteraf geeft houvast." },
-        "hoogbegaafd": { "past": "aanpassen", "tip": "Vraag deze leerlingen om een andere aanpak te bedenken en die hardop te vergelijken." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Laat zien hoe je zelf een lastige tekst aanpakt (bijvoorbeeld eerst de vragen lezen)."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Hardop rekenen maakt de tussenstappen zichtbaar."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Je gebruikt vaktaal in een context; schrijf de belangrijkste woorden erbij."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat zien dat ook jij twijfelt en fouten herstelt: dat normaliseert fouten maken."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Het stappenplan achteraf geeft houvast."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Vraag deze leerlingen om een andere aanpak te bedenken en die hardop te vergelijken."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["uitleggen", "structuur", "houvast"],
+      "docentstijl": [
+        "uitleggen",
+        "structuur",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Je doet de taak voor, maar vergeet je gedachten uit te spreken.", "oplossing": "Schrijf vooraf drie denkzinnen op die je zeker wilt zeggen." },
-        { "valkuil": "Te snel: voor jou is het vanzelfsprekend.", "oplossing": "Bedenk waar een beginner vastloopt en vertraag daar." }
+        {
+          "valkuil": "Je doet de taak voor, maar vergeet je gedachten uit te spreken.",
+          "oplossing": "Schrijf vooraf drie denkzinnen op die je zeker wilt zeggen."
+        },
+        {
+          "valkuil": "Te snel: voor jou is het vanzelfsprekend.",
+          "oplossing": "Bedenk waar een beginner vastloopt en vertraag daar."
+        }
       ],
       "varianten": {
         "vmbo": "Concrete taken, kleine stappen, stappenplan met pictogrammen.",
@@ -340,19 +812,38 @@
         "verdieping": "Zelf een opgave modelleren voor de klas of een klasgenoot."
       },
       "vakvoorbeelden": [
-        { "vak": "Nederlands", "voorbeeld": "Je leest een alinea en zegt hardop hoe je de hoofdgedachte vindt." },
-        { "vak": "Natuurkunde", "voorbeeld": "Je maakt een rekenopgave en zegt: 'Eerst schrijf ik op wat gegeven is en wat gevraagd wordt…'" },
-        { "vak": "Kunst", "voorbeeld": "Je bekijkt een schilderij en verwoordt hoe je naar compositie en kleur kijkt." }
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Je leest een alinea en zegt hardop hoe je de hoofdgedachte vindt."
+        },
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Je maakt een rekenopgave en zegt: 'Eerst schrijf ik op wat gegeven is en wat gevraagd wordt…'"
+        },
+        {
+          "vak": "Kunst",
+          "voorbeeld": "Je bekijkt een schilderij en verwoordt hoe je naar compositie en kleur kijkt."
+        }
       ],
       "waarom": "Voordoen met uitgesproken denkstappen maakt de onzichtbare aanpak van een expert zichtbaar. Rosenshine noemt het voordoen van stappen als kernprincipe, en het EEF-rapport over metacognitie raadt expliciet modelleren van denkstrategieën aan.",
       "bewijs": "sterk",
-      "bronnen": ["rosenshine-2012", "eef-metacognitie"],
-      "materiaal": ["stappenplan"]
+      "bronnen": [
+        "rosenshine-2012",
+        "eef-metacognitie"
+      ],
+      "materiaal": [
+        "stappenplan"
+      ]
     },
     {
       "id": "uitgewerkt-voorbeeld-fading",
       "naam": "Uitgewerkt voorbeeld, aanvulopdracht, zelfstandig",
-      "alias": ["fading", "worked example", "geleidelijk afbouwen", "van voorbeeld naar zelf"],
+      "alias": [
+        "fading",
+        "worked example",
+        "geleidelijk afbouwen",
+        "van voorbeeld naar zelf"
+      ],
       "categorie": "instructiemodel",
       "kort": "Leerlingen bestuderen eerst een volledig uitgewerkt voorbeeld, maken dan een opgave waarin stappen ontbreken, en daarna een opgave helemaal zelf.",
       "startzin": "Je krijgt drie opgaven. De eerste is al helemaal uitgewerkt: lees hem goed en kijk waarom elke stap er staat. Bij de tweede moet je een paar stappen zelf invullen. De derde doe je helemaal zelf.",
@@ -364,34 +855,94 @@
         "Laat daarna een opgave helemaal zelfstandig maken.",
         "Bespreek één fout die vaak voorkwam."
       ],
-      "duur": { "min": 8, "max": 20 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["werkblad met uitgewerkt voorbeeld en aanvulopdrachten"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 6,
+        "max": 20
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "werkblad met uitgewerkt voorbeeld en aanvulopdrachten"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["instructie", "inoefenen"],
-      "denkniveau": ["begrijpen", "toepassen"],
-      "differentiatie": ["ondersteuning", "tempo"],
+      "lesfase": [
+        "instructie",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "ondersteuning",
+        "tempo"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Houd de toelichting per stap kort; gebruik kaders en ruime regelafstand." },
-        "dyscalculie": { "past": "goed", "tip": "Het uitgewerkte voorbeeld werkt als stappenplan; laat het naast de eigen opgave liggen." },
-        "nt2": { "past": "goed", "tip": "Uitgewerkte voorbeelden leunen minder op taal dan een uitleg in woorden." },
-        "faalangst": { "past": "goed", "tip": "De geleidelijke opbouw geeft succeservaringen voordat het moeilijk wordt." },
-        "structuur": { "past": "goed", "tip": "Altijd dezelfde opbouw: voorbeeld, aanvullen, zelf." },
-        "hoogbegaafd": { "past": "aanpassen", "tip": "Laat deze leerlingen direct met de zelfstandige opgave beginnen; het voorbeeld is er voor wie vastloopt." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Houd de toelichting per stap kort; gebruik kaders en ruime regelafstand."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Het uitgewerkte voorbeeld werkt als stappenplan; laat het naast de eigen opgave liggen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Uitgewerkte voorbeelden leunen minder op taal dan een uitleg in woorden."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "De geleidelijke opbouw geeft succeservaringen voordat het moeilijk wordt."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Altijd dezelfde opbouw: voorbeeld, aanvullen, zelf."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Laat deze leerlingen direct met de zelfstandige opgave beginnen; het voorbeeld is er voor wie vastloopt."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "uitleggen", "houvast"],
+      "docentstijl": [
+        "structuur",
+        "uitleggen",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen slaan het voorbeeld over en beginnen gelijk.", "oplossing": "Laat ze bij het voorbeeld eerst één 'waarom'-vraag beantwoorden." },
-        { "valkuil": "Gevorderde leerlingen worden afgeremd door voorbeelden.", "oplossing": "Bij wie het al kan werken voorbeelden minder goed (expertise-omkeringseffect): laat hen overslaan." }
+        {
+          "valkuil": "Leerlingen slaan het voorbeeld over en beginnen gelijk.",
+          "oplossing": "Laat ze bij het voorbeeld eerst één 'waarom'-vraag beantwoorden."
+        },
+        {
+          "valkuil": "Gevorderde leerlingen worden afgeremd door voorbeelden.",
+          "oplossing": "Bij wie het al kan werken voorbeelden minder goed (expertise-omkeringseffect): laat hen overslaan."
+        }
       ],
       "varianten": {
         "vmbo": "Meer aanvulstappen, kleinere stapjes, plaatjes bij het voorbeeld.",
@@ -402,14 +953,30 @@
         "verdieping": "Direct zelfstandig, daarna zelf een uitgewerkt voorbeeld maken voor een klasgenoot."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Een uitgewerkte stelling van Pythagoras, dan een opgave waarin alleen de wortel nog moet, dan zelf." },
-        { "vak": "Economie", "voorbeeld": "Een uitgewerkte berekening van de break-evenafzet, dan aanvullen, dan zelf." },
-        { "vak": "Duits", "voorbeeld": "Een uitgewerkte zin met de juiste naamval en uitleg, dan zinnen aanvullen, dan zelf vertalen." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Een uitgewerkte stelling van Pythagoras, dan een opgave waarin alleen de wortel nog moet, dan zelf."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Een uitgewerkte berekening van de break-evenafzet, dan aanvullen, dan zelf."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Een uitgewerkte zin met de juiste naamval en uitleg, dan zinnen aanvullen, dan zelf vertalen."
+        }
       ],
       "waarom": "Het bestuderen van uitgewerkte voorbeelden leidt bij beginners tot beter leren dan meteen zelf problemen oplossen, omdat het werkgeheugen minder wordt belast. Het geleidelijk weglaten van stappen ('fading') helpt de overgang naar zelfstandig werken. Bij leerlingen die de stof al beheersen verdwijnt dit voordeel.",
       "bewijs": "sterk",
-      "bronnen": ["sweller-1998", "renkl-atkinson-2003", "surma-2019"],
-      "materiaal": ["uitgewerkt-voorbeeld", "werkblad"],
+      "bronnen": [
+        "sweller-1998",
+        "renkl-atkinson-2003",
+        "surma-2019"
+      ],
+      "materiaal": [
+        "uitgewerkt-voorbeeld",
+        "werkblad"
+      ],
       "beginHier": {
         "volgorde": 8,
         "uitleg": "Je legt al uit en je laat al oefenen. Voeg er één ding tussen: een uitgewerkt voorbeeld op papier, gevolgd door een opgave waarin een paar stappen al zijn ingevuld. Leerlingen die na jouw uitleg nog twijfelen, hebben zo een stappenplan in handen, zonder dat ze op jou hoeven te wachten. Leerlingen die het al kunnen, slaan het voorbeeld over. Het kost je één keer tien minuten voorbereiding, en je kunt het blad elk jaar opnieuw gebruiken. Tip: zet bij één stap in het voorbeeld de vraag 'Waarom staat deze stap hier?', dan lezen ze het echt."
@@ -418,7 +985,11 @@
     {
       "id": "socratisch-gesprek",
       "naam": "Socratisch gesprek en sturende vragen",
-      "alias": ["socratisch vragen", "doorvragen", "onderwijsleergesprek met sturende vragen"],
+      "alias": [
+        "socratisch vragen",
+        "doorvragen",
+        "onderwijsleergesprek met sturende vragen"
+      ],
       "categorie": "instructiemodel",
       "kort": "Je geeft het antwoord niet, maar stelt een reeks vragen waarmee leerlingen zelf tot het inzicht komen.",
       "startzin": "Ik ga je vandaag geen antwoord geven. Ik ga je alleen vragen stellen. Het antwoord vind je zelf, en je mag hardop twijfelen.",
@@ -430,35 +1001,102 @@
         "Vat tussendoor samen wat de groep al heeft gevonden.",
         "Laat leerlingen aan het eind zelf de conclusie formuleren en opschrijven."
       ],
-      "duur": { "min": 8, "max": 20 },
-      "groepsvorm": ["klas", "groepje"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["kernvraag of casus", "lijst met sturende vragen"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 8,
+        "max": 20
+      },
+      "groepsvorm": [
+        "klas",
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "kernvraag of casus",
+          "lijst met sturende vragen"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["instructie", "verwerken"],
-      "denkniveau": ["begrijpen", "analyseren", "evalueren"],
-      "differentiatie": ["ondersteuning"],
+      "lesfase": [
+        "instructie",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren",
+        "evalueren"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming", "socialisatie"],
-      "burgerschap": ["rechtvaardigheid"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming",
+        "socialisatie"
+      ],
+      "burgerschap": [
+        "rechtvaardigheid"
+      ],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Het gesprek is mondeling; zet de kernvraag wel op het bord." },
-        "dyscalculie": { "past": "goed", "tip": "Werk met concrete getallen voordat je generaliseert." },
-        "nt2": { "past": "aanpassen", "tip": "Geef zinsstarters ('Ik denk dat…, omdat…') en extra denktijd." },
-        "faalangst": { "past": "aanpassen", "tip": "Laat eerst opschrijven of met een buur overleggen voordat iemand hardop antwoordt." },
-        "structuur": { "past": "aanpassen", "tip": "Schrijf tussenconclusies zichtbaar op, zodat het gesprek een spoor heeft." },
-        "hoogbegaafd": { "past": "goed", "tip": "Daag uit met 'Geldt dat altijd?' en tegenvoorbeelden." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Het gesprek is mondeling; zet de kernvraag wel op het bord."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Werk met concrete getallen voordat je generaliseert."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters ('Ik denk dat…, omdat…') en extra denktijd."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Laat eerst opschrijven of met een buur overleggen voordat iemand hardop antwoordt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Schrijf tussenconclusies zichtbaar op, zodat het gesprek een spoor heeft."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Daag uit met 'Geldt dat altijd?' en tegenvoorbeelden."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["ontdekken", "relatie"],
+      "docentstijl": [
+        "ontdekken",
+        "relatie"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": true,
       "valkuilen": [
-        { "valkuil": "Je geeft toch het antwoord omdat het stil blijft.", "oplossing": "Verdraag de stilte, of maak de vraag kleiner in plaats van het antwoord te geven." },
-        { "valkuil": "Alleen de snelle denkers praten.", "oplossing": "Laat eerst iedereen opschrijven en kies daarna willekeurig." },
-        { "valkuil": "Nieuwe stof zonder voorkennis: leerlingen kunnen niets vinden.", "oplossing": "Gebruik dit vooral als leerlingen genoeg voorkennis hebben; anders eerst uitleggen." }
+        {
+          "valkuil": "Je geeft toch het antwoord omdat het stil blijft.",
+          "oplossing": "Verdraag de stilte, of maak de vraag kleiner in plaats van het antwoord te geven."
+        },
+        {
+          "valkuil": "Alleen de snelle denkers praten.",
+          "oplossing": "Laat eerst iedereen opschrijven en kies daarna willekeurig."
+        },
+        {
+          "valkuil": "Nieuwe stof zonder voorkennis: leerlingen kunnen niets vinden.",
+          "oplossing": "Gebruik dit vooral als leerlingen genoeg voorkennis hebben; anders eerst uitleggen."
+        }
       ],
       "varianten": {
         "vmbo": "Concrete situatie of voorwerp als vertrekpunt, korte vragen.",
@@ -469,19 +1107,37 @@
         "verdieping": "Leerlingen bedenken zelf de vervolgvragen."
       },
       "vakvoorbeelden": [
-        { "vak": "Filosofie & levensbeschouwing", "voorbeeld": "Is het eerlijk dat iedereen evenveel krijgt? Doorvragen tot leerlingen gelijkheid en rechtvaardigheid onderscheiden." },
-        { "vak": "Natuurkunde", "voorbeeld": "Waarom valt een veer langzamer dan een knikker? Doorvragen tot luchtweerstand." },
-        { "vak": "Maatschappijleer", "voorbeeld": "Moet de gemeente geld uitgeven aan een jongerenplek in het dorp? Doorvragen op argumenten en belangen." }
+        {
+          "vak": "Filosofie & levensbeschouwing",
+          "voorbeeld": "Is het eerlijk dat iedereen evenveel krijgt? Doorvragen tot leerlingen gelijkheid en rechtvaardigheid onderscheiden."
+        },
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Waarom valt een veer langzamer dan een knikker? Doorvragen tot luchtweerstand."
+        },
+        {
+          "vak": "Maatschappijleer",
+          "voorbeeld": "Moet de gemeente geld uitgeven aan een jongerenplek in het dorp? Doorvragen op argumenten en belangen."
+        }
       ],
       "waarom": "Goede vragen stellen en leerlingen laten uitleggen hoe ze denken, helpt om begrip te verdiepen en misvattingen boven water te krijgen; Rosenshine noemt veel vragen stellen als kenmerk van effectieve docenten. Voor volledig nieuwe stof werkt dit minder goed dan uitleg, omdat leerlingen dan te weinig kennis hebben om op te bouwen.",
       "bewijs": "redelijk",
-      "bronnen": ["rosenshine-2012", "kirschner-2006"],
-      "materiaal": ["vragenkaart-docent"]
+      "bronnen": [
+        "rosenshine-2012",
+        "kirschner-2006"
+      ],
+      "materiaal": [
+        "vragenkaart-docent"
+      ]
     },
     {
       "id": "flipped-start-kennisclip",
       "naam": "Flipped start met een kennisclip",
-      "alias": ["flipped classroom", "omgedraaide les", "kennisclip"],
+      "alias": [
+        "flipped classroom",
+        "omgedraaide les",
+        "kennisclip"
+      ],
       "categorie": "instructiemodel",
       "kort": "Een groep krijgt de instructie via een korte kennisclip of uitwerkblad op de laptop, zodat jij tegelijk met een andere groep kunt werken.",
       "startzin": "Groep B: jullie krijgen de uitleg vandaag van mij, maar dan via een filmpje van een paar minuten. Kijk het, maak de drie controlevragen, en dan begin je aan de opdracht.",
@@ -493,34 +1149,97 @@
         "Loop na de clip langs of laat de controlevragen inleveren om te zien of de uitleg is aangekomen.",
         "Bespreek aan het eind kort met de hele klas wat de clipgroep leerde."
       ],
-      "duur": { "min": 8, "max": 15 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["schoollaptop", "koptelefoon of oordopjes", "kennisclip", "opdrachtkaart met controlevragen"], "laptop": "vereist", "telefoon": false },
+      "duur": {
+        "min": 6,
+        "max": 15
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "schoollaptop",
+          "koptelefoon of oordopjes",
+          "kennisclip",
+          "opdrachtkaart met controlevragen"
+        ],
+        "laptop": "vereist",
+        "telefoon": false
+      },
       "voorbereiding": "uitgebreid",
-      "lesfase": ["instructie"],
-      "denkniveau": ["onthouden", "begrijpen"],
-      "differentiatie": ["tempo", "leeromgeving", "keuze-aanpak"],
+      "lesfase": [
+        "instructie"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [
+        "tempo",
+        "leeromgeving",
+        "keuze-aanpak"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Een clip leunt minder op lezen; leerlingen kunnen terugspoelen." },
-        "dyscalculie": { "past": "goed", "tip": "Pauzeren en terugkijken bij rekenstappen helpt." },
-        "nt2": { "past": "aanpassen", "tip": "Kies een clip met ondertiteling of geef een woordenlijst." },
-        "faalangst": { "past": "goed", "tip": "Leerlingen kunnen in eigen tempo kijken zonder dat iemand meekijkt." },
-        "structuur": { "past": "aanpassen", "tip": "Een opdrachtkaart met vaste stappen en tijden is nodig." },
-        "hoogbegaafd": { "past": "goed", "tip": "Kan versneld; geef een verdiepende vraag bij de clip." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Een clip leunt minder op lezen; leerlingen kunnen terugspoelen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Pauzeren en terugkijken bij rekenstappen helpt."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Kies een clip met ondertiteling of geef een woordenlijst."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Leerlingen kunnen in eigen tempo kijken zonder dat iemand meekijkt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Een opdrachtkaart met vaste stappen en tijden is nodig."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Kan versneld; geef een verdiepende vraag bij de clip."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["digitaal", "structuur"],
+      "docentstijl": [
+        "digitaal",
+        "structuur"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen kijken de clip half en gaan dan iets anders doen.", "oplossing": "Controlevragen eerst; pas daarna de opdracht." },
-        { "valkuil": "Geen koptelefoons, dus geluidsoverlast.", "oplossing": "Neem ondertiteling of een uitwerkblad als alternatief." }
+        {
+          "valkuil": "Leerlingen kijken de clip half en gaan dan iets anders doen.",
+          "oplossing": "Controlevragen eerst; pas daarna de opdracht."
+        },
+        {
+          "valkuil": "Geen koptelefoons, dus geluidsoverlast.",
+          "oplossing": "Neem ondertiteling of een uitwerkblad als alternatief."
+        }
       ],
       "varianten": {
         "vmbo": "Korte clip (max 4 min) met pauzemomenten en invulblad.",
@@ -531,14 +1250,28 @@
         "verdieping": "Clip versneld kijken en daarna een verdiepingsopdracht."
       },
       "vakvoorbeelden": [
-        { "vak": "Economie", "voorbeeld": "De verdiepingsgroep kijkt op het plein een clip over prijselasticiteit, terwijl jij de rest in het lokaal instrueert." },
-        { "vak": "Engels", "voorbeeld": "Een clip over de present perfect met daarna invuloefeningen op de laptop." },
-        { "vak": "Biologie", "voorbeeld": "Een clip over de bouw van de cel, daarna een schema invullen." }
+        {
+          "vak": "Economie",
+          "voorbeeld": "De verdiepingsgroep kijkt op het plein een clip over prijselasticiteit, terwijl jij de rest in het lokaal instrueert."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Een clip over de present perfect met daarna invuloefeningen op de laptop."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Een clip over de bouw van de cel, daarna een schema invullen."
+        }
       ],
       "waarom": "Een kennisclip maakt het mogelijk om op twee plekken tegelijk instructie te geven, en leerlingen kunnen terugkijken. Het EEF ziet bij lessen met een flipped opzet wisselende resultaten; het werkt vooral als de clip kort is, gecontroleerd wordt en er in de les goed op wordt voortgebouwd. Het onderzoek is beperkt.",
       "bewijs": "beperkt",
-      "bronnen": ["eef-toolkit", "mayer-2009"],
-      "materiaal": ["opdrachtkaart-route"]
+      "bronnen": [
+        "eef-toolkit",
+        "mayer-2009"
+      ],
+      "materiaal": [
+        "opdrachtkaart-route"
+      ]
     }
   ]
 }

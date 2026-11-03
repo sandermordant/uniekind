@@ -5,7 +5,11 @@
     {
       "id": "instructietafel",
       "naam": "Instructietafel",
-      "alias": ["verlengde-instructietafel", "steuntafel", "hulptafel"],
+      "alias": [
+        "verlengde-instructietafel",
+        "steuntafel",
+        "hulptafel"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Na de klassikale uitleg schuift een kleine groep aan bij jou aan tafel voor extra uitleg, terwijl de rest zelfstandig werkt.",
       "startzin": "Wie wil nog een keer met mij de eerste opgave doen? Schuif aan bij de tafel. Wie het al snapt, begint zelf; ik kom straks ook bij jou langs.",
@@ -17,35 +21,100 @@
         "Laat ze een derde opgave zelf maken terwijl je meekijkt; wie het heeft, gaat terug naar zijn plek.",
         "Loop daarna een rondje langs de rest van de klas."
       ],
-      "duur": { "min": 5, "max": 15 },
-      "groepsvorm": ["groepje"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["tafel met 4-6 plekken", "extra voorbeeldopgave", "wisbordje voor jezelf"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 5,
+        "max": 15
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "tafel met 4-6 plekken",
+          "extra voorbeeldopgave",
+          "wisbordje voor jezelf"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["verwerken", "inoefenen"],
-      "denkniveau": ["begrijpen", "toepassen"],
-      "differentiatie": ["ondersteuning", "groepering"],
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "ondersteuning",
+        "groepering"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Lees opgaven aan tafel samen hardop." },
-        "dyscalculie": { "past": "goed", "tip": "Gebruik aan tafel concreet materiaal of de rekenhulpkaart." },
-        "nt2": { "past": "goed", "tip": "In de kleine groep kun je vaktaal rustig herhalen en laten gebruiken." },
-        "faalangst": { "past": "aanpassen", "tip": "Maak aanschuiven gewoon en vrijwillig; noem het nooit 'de groep die het niet snapt'." },
-        "structuur": { "past": "goed", "tip": "Vaste plek, vaste aanpak: leerlingen weten wat ze kunnen verwachten." },
-        "hoogbegaafd": { "past": "aanpassen", "tip": "Ook zij kunnen soms aanschuiven, bijvoorbeeld voor een verdiepende mini-instructie." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees opgaven aan tafel samen hardop."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Gebruik aan tafel concreet materiaal of de rekenhulpkaart."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "In de kleine groep kun je vaktaal rustig herhalen en laten gebruiken."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Maak aanschuiven gewoon en vrijwillig; noem het nooit 'de groep die het niet snapt'."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste plek, vaste aanpak: leerlingen weten wat ze kunnen verwachten."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Ook zij kunnen soms aanschuiven, bijvoorbeeld voor een verdiepende mini-instructie."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["uitleggen", "relatie", "structuur", "houvast"],
+      "docentstijl": [
+        "uitleggen",
+        "relatie",
+        "structuur",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "De rest van de klas komt steeds met vragen naar de tafel.", "oplossing": "Spreek 'eerst drie, dan ik' af en gebruik signaalkaarten; leg hintkaarten klaar." },
-        { "valkuil": "Altijd dezelfde leerlingen aan tafel.", "oplossing": "Laat de check bepalen wie komt, en laat leerlingen terug gaan zodra ze het kunnen." },
-        { "valkuil": "Je blijft te lang aan tafel zitten.", "oplossing": "Zet een timer op 8-10 minuten en loop daarna een ronde." }
+        {
+          "valkuil": "De rest van de klas komt steeds met vragen naar de tafel.",
+          "oplossing": "Spreek 'eerst drie, dan ik' af en gebruik signaalkaarten; leg hintkaarten klaar."
+        },
+        {
+          "valkuil": "Altijd dezelfde leerlingen aan tafel.",
+          "oplossing": "Laat de check bepalen wie komt, en laat leerlingen terug gaan zodra ze het kunnen."
+        },
+        {
+          "valkuil": "Je blijft te lang aan tafel zitten.",
+          "oplossing": "Zet een timer op 8-10 minuten en loop daarna een ronde."
+        }
       ],
       "varianten": {
         "vmbo": "Concrete materialen, korte opdrachten, veel voordoen.",
@@ -56,14 +125,29 @@
         "verdieping": "Soms een korte verdiepingsinstructie aan tafel voor de snelle groep."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Na de uitleg over procenten komen vijf leerlingen aan tafel voor een uitleg met een strook." },
-        { "vak": "Duits", "voorbeeld": "Leerlingen die op het wisbordje de verkeerde naamval kozen, oefenen aan tafel met de naamvallenkaart." },
-        { "vak": "Geschiedenis", "voorbeeld": "Aan tafel samen een bron analyseren met een stappenplan, terwijl de rest zelf een bron doet." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Na de uitleg over procenten komen vijf leerlingen aan tafel voor een uitleg met een strook."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Leerlingen die op het wisbordje de verkeerde naamval kozen, oefenen aan tafel met de naamvallenkaart."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Aan tafel samen een bron analyseren met een stappenplan, terwijl de rest zelf een bron doet."
+        }
       ],
       "waarom": "Extra, gerichte instructie in een kleine groep is een van de best onderbouwde manieren om leerlingen die achterblijven te helpen: het EEF ziet bij instructie in kleine groepen gemiddeld een duidelijke opbrengst. De instructietafel brengt dat binnen je eigen les, zonder dat je je les hoeft om te gooien.",
       "bewijs": "redelijk",
-      "bronnen": ["eef-toolkit", "rosenshine-2012"],
-      "materiaal": ["instructietafel-kaart", "signaalkaarten"],
+      "bronnen": [
+        "eef-toolkit",
+        "rosenshine-2012"
+      ],
+      "materiaal": [
+        "instructietafel-kaart",
+        "signaalkaarten"
+      ],
       "beginHier": {
         "volgorde": 4,
         "uitleg": "Jij legt goed uit. Dat blijf je doen. Na je uitleg zeg je alleen: 'Wie wil de eerste opgave nog een keer met mij doen? Schuif aan.' Vier, vijf leerlingen komen aan tafel; de rest begint zelf. Aan tafel doe je één opgave opnieuw voor, met een ander voorbeeld, en laat je ze er samen één maken. Wie het snapt, gaat terug naar zijn plek. Zo krijg je in tien minuten de leerlingen te pakken die anders de hele les stil zouden blijven zitten. Tip: leg hintkaarten klaar en spreek af dat leerlingen eerst drie klasgenoten vragen voordat ze naar jou komen."
@@ -72,7 +156,10 @@
     {
       "id": "verlengde-instructie",
       "naam": "Verlengde instructie",
-      "alias": ["extra instructie", "herhaalde instructie"],
+      "alias": [
+        "extra instructie",
+        "herhaalde instructie"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Een tweede, aangepaste uitleg voor de leerlingen die na de eerste instructie en check nog niet zover zijn.",
       "startzin": "De check laat zien dat een deel van jullie nog twijfelt. Dat is prima. Wie bij vraag 2 of 3 fout zat, blijft nu bij mij; de rest gaat aan de slag.",
@@ -84,33 +171,91 @@
         "Check opnieuw; wie het nu kan, gaat zelfstandig verder.",
         "Plan voor wie het nog niet heeft een volgende stap (volgende les, ondersteuningsles)."
       ],
-      "duur": { "min": 5, "max": 15 },
-      "groepsvorm": ["groepje"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["alternatieve uitleg of representatie", "extra opgaven"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 5,
+        "max": 15
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "alternatieve uitleg of representatie",
+          "extra opgaven"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["verwerken", "instructie"],
-      "denkniveau": ["begrijpen", "toepassen"],
-      "differentiatie": ["ondersteuning", "groepering"],
+      "lesfase": [
+        "verwerken",
+        "instructie"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "ondersteuning",
+        "groepering"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Gebruik een representatie die minder op tekst leunt (schema, voorbeeld)." },
-        "dyscalculie": { "past": "goed", "tip": "Werk met een stappenplan en concrete getallen." },
-        "nt2": { "past": "goed", "tip": "Leg vaktaal opnieuw uit met beelden; laat leerlingen begrippen herhalen." },
-        "faalangst": { "past": "aanpassen", "tip": "Benoem dat twijfel normaal is; vraag zonder publiek." },
-        "structuur": { "past": "goed", "tip": "Kleine stappen, voorspelbaar." },
-        "hoogbegaafd": { "past": "minder", "tip": "Niet voor deze groep; zij gaan naar verdieping." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Gebruik een representatie die minder op tekst leunt (schema, voorbeeld)."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Werk met een stappenplan en concrete getallen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Leg vaktaal opnieuw uit met beelden; laat leerlingen begrippen herhalen."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Benoem dat twijfel normaal is; vraag zonder publiek."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kleine stappen, voorspelbaar."
+        },
+        "hoogbegaafd": {
+          "past": "minder",
+          "tip": "Niet voor deze groep; zij gaan naar verdieping."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["uitleggen", "relatie", "structuur", "houvast"],
+      "docentstijl": [
+        "uitleggen",
+        "relatie",
+        "structuur",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Je herhaalt dezelfde uitleg, alleen langzamer.", "oplossing": "Kies bewust een andere ingang: een tekening, een concreet voorbeeld, een fout die je samen analyseert." }
+        {
+          "valkuil": "Je herhaalt dezelfde uitleg, alleen langzamer.",
+          "oplossing": "Kies bewust een andere ingang: een tekening, een concreet voorbeeld, een fout die je samen analyseert."
+        }
       ],
       "varianten": {
         "vmbo": "Concreet en visueel.",
@@ -121,19 +266,36 @@
         "verdieping": "Verdiepingsopdracht."
       },
       "vakvoorbeelden": [
-        { "vak": "Natuurkunde", "voorbeeld": "Na de check over snelheid tekenen de leerlingen met verlengde instructie eerst een afstand-tijdgrafiek." },
-        { "vak": "Engels", "voorbeeld": "Uitleg van de verleden tijd opnieuw met een tijdlijn op het bord." },
-        { "vak": "Rekenen", "voorbeeld": "Breuken opnieuw met een pizza-tekening in plaats van met getallen." }
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Na de check over snelheid tekenen de leerlingen met verlengde instructie eerst een afstand-tijdgrafiek."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Uitleg van de verleden tijd opnieuw met een tijdlijn op het bord."
+        },
+        {
+          "vak": "Rekenen",
+          "voorbeeld": "Breuken opnieuw met een pizza-tekening in plaats van met getallen."
+        }
       ],
       "waarom": "Extra instructietijd voor wie het nodig heeft, op basis van een check, sluit aan bij mastery learning en instructie in kleine groepen; beide hebben in de EEF-toolkit een positieve opbrengst. Het werkt het best als de tweede uitleg anders is dan de eerste.",
       "bewijs": "redelijk",
-      "bronnen": ["eef-toolkit", "rosenshine-2012"],
-      "materiaal": ["instructietafel-kaart"]
+      "bronnen": [
+        "eef-toolkit",
+        "rosenshine-2012"
+      ],
+      "materiaal": [
+        "instructietafel-kaart"
+      ]
     },
     {
       "id": "pre-teaching",
       "naam": "Pre-teaching",
-      "alias": ["voorinstructie", "vooruit-instructie"],
+      "alias": [
+        "voorinstructie",
+        "vooruit-instructie"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Een kleine groep krijgt vóór de les of aan het begin van de les alvast de kernbegrippen en een eerste voorbeeld, zodat ze de klassikale uitleg beter kunnen volgen.",
       "startzin": "Jullie krijgen nu vijf minuten een voorproefje van wat we straks met de hele klas gaan doen. Dan heb je straks een voorsprong.",
@@ -144,33 +306,93 @@
         "Laat hen één eenvoudige opgave maken.",
         "Geef hen een vaktaalkaart mee die ze tijdens de klassikale uitleg naast zich hebben."
       ],
-      "duur": { "min": 5, "max": 10 },
-      "groepsvorm": ["groepje"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["vaktaal-steunkaart", "eenvoudig voorbeeld"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 5,
+        "max": 10
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "vaktaal-steunkaart",
+          "eenvoudig voorbeeld"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["opening", "voorkennis"],
-      "denkniveau": ["onthouden", "begrijpen"],
-      "differentiatie": ["ondersteuning", "groepering"],
+      "lesfase": [
+        "opening",
+        "voorkennis"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [
+        "ondersteuning",
+        "groepering"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
-      "burgerschap": ["inclusie"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [
+        "inclusie"
+      ],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Begrippen alvast zien en horen scheelt leeswerk tijdens de les." },
-        "dyscalculie": { "past": "goed", "tip": "Laat de rekenstap alvast zien met concreet materiaal." },
-        "nt2": { "past": "goed", "tip": "Vooral voor NT2-leerlingen: de vaktaal staat dan al klaar." },
-        "faalangst": { "past": "goed", "tip": "Een voorsprong geeft zelfvertrouwen in de klassikale uitleg." },
-        "structuur": { "past": "goed", "tip": "Leerlingen weten wat er komt." },
-        "hoogbegaafd": { "past": "minder", "tip": "Niet nodig voor deze groep." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Begrippen alvast zien en horen scheelt leeswerk tijdens de les."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Laat de rekenstap alvast zien met concreet materiaal."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vooral voor NT2-leerlingen: de vaktaal staat dan al klaar."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Een voorsprong geeft zelfvertrouwen in de klassikale uitleg."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Leerlingen weten wat er komt."
+        },
+        "hoogbegaafd": {
+          "past": "minder",
+          "tip": "Niet nodig voor deze groep."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["uitleggen", "relatie", "structuur"],
+      "docentstijl": [
+        "uitleggen",
+        "relatie",
+        "structuur"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "De rest van de klas weet niet wat ze moeten doen.", "oplossing": "Zorg voor een startopdracht die altijd klaarligt." }
+        {
+          "valkuil": "De rest van de klas weet niet wat ze moeten doen.",
+          "oplossing": "Zorg voor een startopdracht die altijd klaarligt."
+        }
       ],
       "varianten": {
         "vmbo": "Met plaatjes en voorwerpen.",
@@ -181,19 +403,37 @@
         "verdieping": "Startopdracht met uitdaging."
       },
       "vakvoorbeelden": [
-        { "vak": "Aardrijkskunde", "voorbeeld": "NT2-leerlingen krijgen vooraf de begrippen bron, monding, stroomgebied, met een kaart van de Geul." },
-        { "vak": "Biologie", "voorbeeld": "Vooraf de begrippen cel, celkern, celmembraan met een tekening." },
-        { "vak": "Economie", "voorbeeld": "Vooraf de begrippen inkomen, uitgaven en begroting met een voorbeeld van zakgeld." }
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "NT2-leerlingen krijgen vooraf de begrippen bron, monding, stroomgebied, met een kaart van de Geul."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Vooraf de begrippen cel, celkern, celmembraan met een tekening."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Vooraf de begrippen inkomen, uitgaven en begroting met een voorbeeld van zakgeld."
+        }
       ],
       "waarom": "Vooraf kernwoorden en een voorbeeld aanbieden verlaagt de belasting tijdens de klassikale uitleg; dat sluit aan bij inzichten over voorkennis en cognitieve belasting. Specifiek onderzoek naar pre-teaching in het voortgezet onderwijs is beperkt; het is vooral een praktijkaanpak uit taal- en NT2-onderwijs.",
       "bewijs": "beperkt",
-      "bronnen": ["sweller-1998", "surma-2019"],
-      "materiaal": ["vaktaal-steunkaart"]
+      "bronnen": [
+        "sweller-1998",
+        "surma-2019"
+      ],
+      "materiaal": [
+        "vaktaal-steunkaart"
+      ]
     },
     {
       "id": "hintkaarten",
       "naam": "Hintkaarten",
-      "alias": ["hulpkaarten", "tipkaarten", "oplopende hulp"],
+      "alias": [
+        "hulpkaarten",
+        "tipkaarten",
+        "oplopende hulp"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Kaarten met oplopende hulp (hint 1, hint 2, uitwerking) die leerlingen zelf pakken als ze vastlopen, zodat ze niet op jou hoeven te wachten.",
       "startzin": "Loop je vast? Pak dan eerst hint 1 van de tafel. Helpt dat niet, dan hint 2. Pas als je hint 2 hebt gelezen, mag je de uitwerking pakken. Eerst zelf proberen!",
@@ -204,34 +444,96 @@
         "Leg het systeem uit bij de start van de verwerking.",
         "Kijk na de les welke hints het meest gepakt zijn: dat is informatie voor je volgende instructie."
       ],
-      "duur": { "min": 1, "max": 30 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["hintkaarten (geprint, gekleurd)", "vaste plek in het lokaal"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 1,
+        "max": 30
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "hintkaarten (geprint, gekleurd)",
+          "vaste plek in het lokaal"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["inoefenen", "verwerken"],
-      "denkniveau": ["toepassen", "analyseren"],
-      "differentiatie": ["ondersteuning", "tempo"],
+      "lesfase": [
+        "inoefenen",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "ondersteuning",
+        "tempo"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "aanpassen", "tip": "Korte zinnen, groot lettertype; eventueel een tekening." },
-        "dyscalculie": { "past": "goed", "tip": "Hint 2 kan een rekenstap met tussenresultaat zijn." },
-        "nt2": { "past": "aanpassen", "tip": "Gebruik eenvoudige taal en een voorbeeld in plaats van alleen woorden." },
-        "faalangst": { "past": "goed", "tip": "Hulp halen zonder dat de hele klas het ziet: dat voelt veilig." },
-        "structuur": { "past": "goed", "tip": "Vaste plek en vaste volgorde." },
-        "hoogbegaafd": { "past": "aanpassen", "tip": "Maak ook een 'uitdagingskaart' voor wie klaar is." }
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Korte zinnen, groot lettertype; eventueel een tekening."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Hint 2 kan een rekenstap met tussenresultaat zijn."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Gebruik eenvoudige taal en een voorbeeld in plaats van alleen woorden."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Hulp halen zonder dat de hele klas het ziet: dat voelt veilig."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste plek en vaste volgorde."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Maak ook een 'uitdagingskaart' voor wie klaar is."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["ontdekken", "structuur", "houvast"],
+      "docentstijl": [
+        "ontdekken",
+        "structuur",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen pakken direct de uitwerking.", "oplossing": "Leg de uitwerking bij jou op het bureau; die haal je pas na hint 2." },
-        { "valkuil": "Hints verklappen te veel.", "oplossing": "Hint 1 is een vraag, geen antwoord: 'Welke formule hoort bij oppervlakte?'" }
+        {
+          "valkuil": "Leerlingen pakken direct de uitwerking.",
+          "oplossing": "Leg de uitwerking bij jou op het bureau; die haal je pas na hint 2."
+        },
+        {
+          "valkuil": "Hints verklappen te veel.",
+          "oplossing": "Hint 1 is een vraag, geen antwoord: 'Welke formule hoort bij oppervlakte?'"
+        }
       ],
       "varianten": {
         "vmbo": "Hints met plaatjes en een concreet voorbeeld.",
@@ -242,14 +544,28 @@
         "verdieping": "Uitdagingskaart in plaats van hints."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Hint 1: 'Wat weet je over de hoeken van een driehoek?' Hint 2: 'Tel de twee gegeven hoeken op.'" },
-        { "vak": "Scheikunde", "voorbeeld": "Hint 1: 'Tel de atomen links en rechts.' Hint 2: 'Begin met het element dat maar in één stof voorkomt.'" },
-        { "vak": "Nederlands", "voorbeeld": "Hint 1: 'Zoek de signaalwoorden.' Hint 2: 'Welk signaalwoord geeft een tegenstelling?'" }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Hint 1: 'Wat weet je over de hoeken van een driehoek?' Hint 2: 'Tel de twee gegeven hoeken op.'"
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Hint 1: 'Tel de atomen links en rechts.' Hint 2: 'Begin met het element dat maar in één stof voorkomt.'"
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Hint 1: 'Zoek de signaalwoorden.' Hint 2: 'Welk signaalwoord geeft een tegenstelling?'"
+        }
       ],
       "waarom": "Hintkaarten zijn een vorm van 'scaffolding': tijdelijke hulp die precies genoeg ondersteunt en weer wordt weggenomen. Het idee is goed onderbouwd (Wood, Bruner en Ross); onderzoek naar hintkaarten zelf is beperkt. Ze passen bij het principe dat leerlingen eerst zelf denken.",
       "bewijs": "redelijk",
-      "bronnen": ["wood-bruner-ross-1976", "rosenshine-2012"],
-      "materiaal": ["hintkaarten"],
+      "bronnen": [
+        "wood-bruner-ross-1976",
+        "rosenshine-2012"
+      ],
+      "materiaal": [
+        "hintkaarten"
+      ],
       "beginHier": {
         "volgorde": 5,
         "uitleg": "Ken je dat: tien vingers in de lucht tijdens het zelfstandig werken, en jij kunt maar bij één tegelijk zijn? Hintkaarten lossen dat voor een deel op. Kies de opgave waarop leerlingen altijd vastlopen. Schrijf drie kaartjes: hint 1 is een vraag die de goede kant op wijst, hint 2 is de eerste stap, en de uitwerking leg je bij jezelf op het bureau. Leerlingen halen zelf hulp, in hun eigen tempo, zonder dat de hele klas meekijkt. En achteraf zie je welke hint het vaakst is gepakt: dat vertelt je wat je volgende les nog eens moet uitleggen."
@@ -258,7 +574,12 @@
     {
       "id": "drie-sporen",
       "naam": "Drie sporen: basis, plus en verdieping",
-      "alias": ["gelaagde opdrachten", "drie-sporenaanpak", "tiered assignments", "niveau-opdrachten"],
+      "alias": [
+        "gelaagde opdrachten",
+        "drie-sporenaanpak",
+        "tiered assignments",
+        "niveau-opdrachten"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Leerlingen werken aan hetzelfde lesdoel met opdrachten op drie niveaus van ondersteuning en uitdaging.",
       "startzin": "Iedereen werkt vandaag aan hetzelfde doel. Je kiest – of ik geef je – een route: basis, plus of verdieping. Je mag altijd een niveau omhoog.",
@@ -269,35 +590,100 @@
         "Geef elke route een opdrachtkaart met wat, hoe lang en wat je doet als je klaar bent.",
         "Sluit af met een gezamenlijke check op het ene lesdoel."
       ],
-      "duur": { "min": 10, "max": 40 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["werkbladen per niveau", "opdrachtkaarten"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 10,
+        "max": 40
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "werkbladen per niveau",
+          "opdrachtkaarten"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "uitgebreid",
-      "lesfase": ["verwerken"],
-      "denkniveau": ["toepassen", "analyseren", "evalueren", "creeren"],
-      "differentiatie": ["niveau", "ondersteuning", "tempo"],
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren",
+        "evalueren",
+        "creeren"
+      ],
+      "differentiatie": [
+        "niveau",
+        "ondersteuning",
+        "tempo"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Maak de steunroute dyslexievriendelijk; minder tekst per pagina." },
-        "dyscalculie": { "past": "goed", "tip": "Steunroute met rekenhulpkaart en tussenstappen." },
-        "nt2": { "past": "goed", "tip": "Vaktaalkaart in elke route." },
-        "faalangst": { "past": "aanpassen", "tip": "Noem routes niet 'zwak' en 'sterk'; gebruik kleuren of namen." },
-        "structuur": { "past": "goed", "tip": "Opdrachtkaart met vaste stappen en tijd." },
-        "hoogbegaafd": { "past": "goed", "tip": "De verdiepingsroute op hoger denkniveau, niet alleen méér opgaven." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Maak de steunroute dyslexievriendelijk; minder tekst per pagina."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Steunroute met rekenhulpkaart en tussenstappen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaktaalkaart in elke route."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Noem routes niet 'zwak' en 'sterk'; gebruik kleuren of namen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Opdrachtkaart met vaste stappen en tijd."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "De verdiepingsroute op hoger denkniveau, niet alleen méér opgaven."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "relatie"],
+      "docentstijl": [
+        "structuur",
+        "relatie"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Verdieping is gewoon méér van hetzelfde.", "oplossing": "Verdieping vraagt een hoger denkniveau: analyseren, beoordelen, ontwerpen." },
-        { "valkuil": "Leerlingen blijven altijd in dezelfde route.", "oplossing": "Bepaal de route per les en laat leerlingen omhoog schuiven." },
-        { "valkuil": "Te veel voorbereiding.", "oplossing": "Gebruik de methode als basis; maak alleen een steunblad en één verdiepingsvraag." }
+        {
+          "valkuil": "Verdieping is gewoon méér van hetzelfde.",
+          "oplossing": "Verdieping vraagt een hoger denkniveau: analyseren, beoordelen, ontwerpen."
+        },
+        {
+          "valkuil": "Leerlingen blijven altijd in dezelfde route.",
+          "oplossing": "Bepaal de route per les en laat leerlingen omhoog schuiven."
+        },
+        {
+          "valkuil": "Te veel voorbereiding.",
+          "oplossing": "Gebruik de methode als basis; maak alleen een steunblad en één verdiepingsvraag."
+        }
       ],
       "varianten": {
         "vmbo": "Steunroute met veel structuur; verdieping als praktische toepassing.",
@@ -308,19 +694,40 @@
         "verdieping": "Open opdracht op hoger denkniveau."
       },
       "vakvoorbeelden": [
-        { "vak": "Geschiedenis", "voorbeeld": "Basis: vragen bij de tekst. Plus: oorzaak-gevolgschema. Verdieping: beoordeel twee bronnen die elkaar tegenspreken." },
-        { "vak": "Wiskunde", "voorbeeld": "Basis: sommen met lineaire formules. Plus: context. Verdieping: bedenk zelf een situatie bij een formule." },
-        { "vak": "Engels", "voorbeeld": "Basis: zinnen aanvullen. Plus: zinnen maken. Verdieping: een korte tekst schrijven met de nieuwe grammatica." }
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Basis: vragen bij de tekst. Plus: oorzaak-gevolgschema. Verdieping: beoordeel twee bronnen die elkaar tegenspreken."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Basis: sommen met lineaire formules. Plus: context. Verdieping: bedenk zelf een situatie bij een formule."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Basis: zinnen aanvullen. Plus: zinnen maken. Verdieping: een korte tekst schrijven met de nieuwe grammatica."
+        }
       ],
       "waarom": "Werken aan hetzelfde doel met verschillende hoeveelheden steun (convergent differentiëren) houdt alle leerlingen bij het lesdoel en voorkomt dat de verschillen groter worden. Onderzoek naar 'tiered assignments' is beperkt; de onderdelen (passend niveau, scaffolding, uitdaging) zijn wel goed onderbouwd.",
       "bewijs": "beperkt",
-      "bronnen": ["eef-toolkit", "wood-bruner-ross-1976"],
-      "materiaal": ["werkblad-steun", "werkblad-basis", "werkblad-verdieping", "opdrachtkaart-route"]
+      "bronnen": [
+        "eef-toolkit",
+        "wood-bruner-ross-1976"
+      ],
+      "materiaal": [
+        "werkblad-steun",
+        "werkblad-basis",
+        "werkblad-verdieping",
+        "opdrachtkaart-route"
+      ]
     },
     {
       "id": "compacten-verrijken",
       "naam": "Compacten en verrijken",
-      "alias": ["compacten", "verrijken", "versnellen"],
+      "alias": [
+        "compacten",
+        "verrijken",
+        "versnellen"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Leerlingen die de stof al beheersen, slaan herhaling en oefenstof over en gebruiken die tijd voor een verrijkingsopdracht.",
       "startzin": "Je hebt de startcheck foutloos gemaakt. Dat betekent: je hoeft vandaag niet alle oefenopgaven te maken. Je maakt alleen de sterretjesopgaven en daarna werk je aan deze uitdaging.",
@@ -331,34 +738,97 @@
         "Spreek met de leerling af wat het eindproduct is en wanneer je het bekijkt (leercontract).",
         "Bespreek het product kort; geef feedback op denken, niet alleen op juistheid."
       ],
-      "duur": { "min": 15, "max": 60 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["startcheck", "verrijkingsopdracht", "afsprakenkaart of leercontract"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 15,
+        "max": 60
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "startcheck",
+          "verrijkingsopdracht",
+          "afsprakenkaart of leercontract"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "uitgebreid",
-      "lesfase": ["verwerken"],
-      "denkniveau": ["analyseren", "evalueren", "creeren"],
-      "differentiatie": ["tempo", "niveau", "interesse"],
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "evalueren",
+        "creeren"
+      ],
+      "differentiatie": [
+        "tempo",
+        "niveau",
+        "interesse"
+      ],
       "richting": "divergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Ook dyslectische leerlingen kunnen hoogbegaafd zijn: kies verrijking die niet alleen op lezen leunt." },
-        "dyscalculie": { "past": "aanpassen", "tip": "Niet bij rekenonderdelen; wel bij andere onderdelen van het vak." },
-        "nt2": { "past": "goed", "tip": "Leerling kan sterk zijn in het vak terwijl de taal nog groeit: verrijking met beperkte taaldruk." },
-        "faalangst": { "past": "aanpassen", "tip": "Benadruk dat fouten maken bij verrijking hoort; beoordeel het proces." },
-        "structuur": { "past": "aanpassen", "tip": "Een duidelijk leercontract met tussenstappen." },
-        "hoogbegaafd": { "past": "goed", "tip": "Hiervoor is het bedoeld; sluit aan bij het aanbod compacten en verrijken van de school." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Ook dyslectische leerlingen kunnen hoogbegaafd zijn: kies verrijking die niet alleen op lezen leunt."
+        },
+        "dyscalculie": {
+          "past": "aanpassen",
+          "tip": "Niet bij rekenonderdelen; wel bij andere onderdelen van het vak."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Leerling kan sterk zijn in het vak terwijl de taal nog groeit: verrijking met beperkte taaldruk."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Benadruk dat fouten maken bij verrijking hoort; beoordeel het proces."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Een duidelijk leercontract met tussenstappen."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Hiervoor is het bedoeld; sluit aan bij het aanbod compacten en verrijken van de school."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["ontdekken", "relatie"],
+      "docentstijl": [
+        "ontdekken",
+        "relatie"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Verrijking is 'extra werk' en voelt als straf.", "oplossing": "Verrijking vervangt herhaling, het komt er niet bovenop." },
-        { "valkuil": "Je bekijkt het product nooit.", "oplossing": "Plan een vast moment (bijvoorbeeld 5 minuten aan het eind van de les)." }
+        {
+          "valkuil": "Verrijking is 'extra werk' en voelt als straf.",
+          "oplossing": "Verrijking vervangt herhaling, het komt er niet bovenop."
+        },
+        {
+          "valkuil": "Je bekijkt het product nooit.",
+          "oplossing": "Plan een vast moment (bijvoorbeeld 5 minuten aan het eind van de les)."
+        }
       ],
       "varianten": {
         "vmbo": "Verrijking als praktische opdracht of uitlegtaak voor medeleerlingen.",
@@ -369,19 +839,38 @@
         "verdieping": "Dit is de verdiepingsroute."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Na een foutloze startcheck werkt een leerling aan een puzzelprobleem dat dezelfde vaardigheid in een nieuwe vorm vraagt." },
-        { "vak": "Geschiedenis", "voorbeeld": "Een leerling onderzoekt een gebeurtenis uit de regio aan de hand van een bron uit het archief." },
-        { "vak": "Frans", "voorbeeld": "Een leerling schrijft een korte brief aan een partnerschool in plaats van de invuloefeningen." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Na een foutloze startcheck werkt een leerling aan een puzzelprobleem dat dezelfde vaardigheid in een nieuwe vorm vraagt."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een leerling onderzoekt een gebeurtenis uit de regio aan de hand van een bron uit het archief."
+        },
+        {
+          "vak": "Frans",
+          "voorbeeld": "Een leerling schrijft een korte brief aan een partnerschool in plaats van de invuloefeningen."
+        }
       ],
       "waarom": "Compacten voorkomt dat leerlingen die de stof al beheersen hun tijd vullen met herhaling. Het EEF ziet bij programma's voor versnellen en verrijken positieve uitkomsten voor hoog presterende leerlingen, al is het bewijs per vorm wisselend.",
       "bewijs": "redelijk",
-      "bronnen": ["eef-toolkit"],
-      "materiaal": ["leercontract", "werkblad-verdieping"]
+      "bronnen": [
+        "eef-toolkit"
+      ],
+      "materiaal": [
+        "leercontract",
+        "werkblad-verdieping"
+      ]
     },
     {
       "id": "plusopdracht-klaar",
       "naam": "Plusopdracht voor wie klaar is",
-      "alias": ["doorwerkkaart", "klaar-kaart", "uitdagingskaart", "verdiepingskaart"],
+      "alias": [
+        "doorwerkkaart",
+        "klaar-kaart",
+        "uitdagingskaart",
+        "verdiepingskaart"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Een kaart met een uitdagende opdracht op hoger denkniveau die klaarligt voor leerlingen die eerder klaar zijn.",
       "startzin": "Ben je klaar en heb je je werk gecontroleerd? Pak dan een pluskaart. Die opdracht is lastiger, en dat is precies de bedoeling.",
@@ -392,34 +881,96 @@
         "Spreek af: eerst je eigen werk controleren, dan pas de pluskaart.",
         "Laat aan het eind één leerling kort vertellen wat hij ontdekte, als dat kan."
       ],
-      "duur": { "min": 5, "max": 20 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["pluskaarten"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 5,
+        "max": 20
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "pluskaarten"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["verwerken"],
-      "denkniveau": ["analyseren", "evalueren", "creeren"],
-      "differentiatie": ["niveau", "tempo"],
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "evalueren",
+        "creeren"
+      ],
+      "differentiatie": [
+        "niveau",
+        "tempo"
+      ],
       "richting": "divergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Kort en helder geformuleerd; niet te veel tekst." },
-        "dyscalculie": { "past": "goed", "tip": "Kies ook pluskaarten zonder rekenwerk." },
-        "nt2": { "past": "aanpassen", "tip": "Eenvoudige taal, uitdaging in het denken, niet in de woorden." },
-        "faalangst": { "past": "aanpassen", "tip": "Maak duidelijk dat de pluskaart niet beoordeeld wordt." },
-        "structuur": { "past": "goed", "tip": "Vaste plek, vaste regel." },
-        "hoogbegaafd": { "past": "goed", "tip": "Geef echte uitdaging, niet meer van hetzelfde." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Kort en helder geformuleerd; niet te veel tekst."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Kies ook pluskaarten zonder rekenwerk."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Eenvoudige taal, uitdaging in het denken, niet in de woorden."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Maak duidelijk dat de pluskaart niet beoordeeld wordt."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste plek, vaste regel."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef echte uitdaging, niet meer van hetzelfde."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["uitleggen", "structuur", "houvast", "ontdekken"],
+      "docentstijl": [
+        "uitleggen",
+        "structuur",
+        "houvast",
+        "ontdekken"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen jagen door hun werk om bij de pluskaart te komen.", "oplossing": "Eerst nakijken met de antwoordkaart, dan pas plus." },
-        { "valkuil": "De pluskaart is méér werk in plaats van ander werk.", "oplossing": "Hoger denkniveau: 'Bedenk zelf…', 'Wat als…?', 'Welke is beter en waarom?'" }
+        {
+          "valkuil": "Leerlingen jagen door hun werk om bij de pluskaart te komen.",
+          "oplossing": "Eerst nakijken met de antwoordkaart, dan pas plus."
+        },
+        {
+          "valkuil": "De pluskaart is méér werk in plaats van ander werk.",
+          "oplossing": "Hoger denkniveau: 'Bedenk zelf…', 'Wat als…?', 'Welke is beter en waarom?'"
+        }
       ],
       "varianten": {
         "vmbo": "Pluskaart met een praktische of creatieve opdracht.",
@@ -430,14 +981,25 @@
         "verdieping": "Dit is de verdieping."
       },
       "vakvoorbeelden": [
-        { "vak": "Biologie", "voorbeeld": "'Bedenk wat er gebeurt als een plant geen licht krijgt. Teken het verloop.'" },
-        { "vak": "Economie", "voorbeeld": "'Een bakker in Gulpen verhoogt zijn prijs. Wat gebeurt er met zijn omzet? Wanneer wel, wanneer niet?'" },
-        { "vak": "Nederlands", "voorbeeld": "'Herschrijf de alinea zodat hij overtuigt in plaats van informeert.'" }
+        {
+          "vak": "Biologie",
+          "voorbeeld": "'Bedenk wat er gebeurt als een plant geen licht krijgt. Teken het verloop.'"
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "'Een bakker in Gulpen verhoogt zijn prijs. Wat gebeurt er met zijn omzet? Wanneer wel, wanneer niet?'"
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "'Herschrijf de alinea zodat hij overtuigt in plaats van informeert.'"
+        }
       ],
       "waarom": "Een klaarliggende uitdaging zorgt dat ook de leerling aan de bovenkant van de klas leertijd houdt, in lijn met het motto 'al was het maar voor één kind'. Het gaat om opdrachten op een hoger denkniveau; specifiek onderzoek naar pluskaarten is er nauwelijks, het is een praktijkaanpak.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["pluskaart"],
+      "materiaal": [
+        "pluskaart"
+      ],
       "beginHier": {
         "volgorde": 9,
         "uitleg": "Er is altijd een leerling die na tien minuten klaar is. Die gaat dan kletsen of nog meer van hetzelfde doen. Leg vandaag één pluskaart klaar: een opdracht bij het lesdoel, maar dan op een hoger denkniveau. Bijvoorbeeld 'Bedenk zelf een voorbeeld', 'Wat zou er gebeuren als…?' of 'Welke oplossing is beter, en waarom?'. Spreek af dat leerlingen eerst hun eigen werk nakijken en dan pas de pluskaart pakken. Zo heb je in één beweging iets voor de leerling aan de bovenkant van de klas, zonder dat je je les verandert. Bewaar de kaart: volgend jaar ligt hij weer klaar."
@@ -446,7 +1008,12 @@
     {
       "id": "stations-carrousel",
       "naam": "Stations of carrousel",
-      "alias": ["circuit", "hoekenwerk", "carrousel", "stations rotation"],
+      "alias": [
+        "circuit",
+        "hoekenwerk",
+        "carrousel",
+        "stations rotation"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Leerlingen rouleren in groepjes langs 3-5 stations met elk een andere opdracht bij hetzelfde onderwerp; één station kan jouw instructietafel zijn.",
       "startzin": "Er zijn vandaag vier stations. Je groepje begint bij het station met jullie letter. Als de timer gaat, schuif je door naar het volgende station, met de klok mee.",
@@ -458,34 +1025,98 @@
         "Oefen de eerste wissel: in stilte, binnen 30 seconden.",
         "Sluit af met een gezamenlijke check of exit ticket."
       ],
-      "duur": { "min": 25, "max": 60 },
-      "groepsvorm": ["groepje"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": true },
-      "middelen": { "lijst": ["opdrachtkaarten per station", "timer op het digibord", "materiaal per station"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 25,
+        "max": 60
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "opdrachtkaarten per station",
+          "timer op het digibord",
+          "materiaal per station"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "uitgebreid",
-      "lesfase": ["verwerken", "inoefenen"],
-      "denkniveau": ["begrijpen", "toepassen", "analyseren"],
-      "differentiatie": ["groepering", "leeromgeving", "keuze-aanpak", "ondersteuning"],
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "groepering",
+        "leeromgeving",
+        "keuze-aanpak",
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "socialisatie"],
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Opdrachtkaarten kort, met pictogrammen." },
-        "dyscalculie": { "past": "goed", "tip": "Een station met concreet materiaal." },
-        "nt2": { "past": "goed", "tip": "Vaktaalkaart op elk station." },
-        "faalangst": { "past": "aanpassen", "tip": "Vaste groepjes met een vertrouwde klasgenoot." },
-        "structuur": { "past": "aanpassen", "tip": "Duidelijke timer, wisselsignaal en routeschema op het bord." },
-        "hoogbegaafd": { "past": "goed", "tip": "Op elk station een plusvraag." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Opdrachtkaarten kort, met pictogrammen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Een station met concreet materiaal."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaktaalkaart op elk station."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Vaste groepjes met een vertrouwde klasgenoot."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Duidelijke timer, wisselsignaal en routeschema op het bord."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Op elk station een plusvraag."
+        }
       },
       "energie": "actief",
-      "docentstijl": ["samenwerken", "ontdekken"],
+      "docentstijl": [
+        "samenwerken",
+        "ontdekken"
+      ],
       "instapniveau": 3,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": true,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Wissels kosten veel tijd en onrust.", "oplossing": "Oefen de wissel, gebruik een vast signaal en houd minder stations aan." },
-        { "valkuil": "Stations zijn niet even lang.", "oplossing": "Geef op elk station een 'klaar?'-opdracht." }
+        {
+          "valkuil": "Wissels kosten veel tijd en onrust.",
+          "oplossing": "Oefen de wissel, gebruik een vast signaal en houd minder stations aan."
+        },
+        {
+          "valkuil": "Stations zijn niet even lang.",
+          "oplossing": "Geef op elk station een 'klaar?'-opdracht."
+        }
       ],
       "varianten": {
         "vmbo": "3 stations, korte rondes, concrete opdrachten.",
@@ -496,19 +1127,37 @@
         "verdieping": "Een verdiepingsstation in plaats van het oefenstation."
       },
       "vakvoorbeelden": [
-        { "vak": "Biologie", "voorbeeld": "Stations: microscoop, schema tekenen, uitleg bij de docent, quiz op de laptop." },
-        { "vak": "Duits", "voorbeeld": "Stations: luisteren, woordjes oefenen, spreken met een maatje, grammatica bij de docent." },
-        { "vak": "M&N", "voorbeeld": "Stations: proefje, tekst lezen, filmpje, vragen bij de docent." }
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Stations: microscoop, schema tekenen, uitleg bij de docent, quiz op de laptop."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Stations: luisteren, woordjes oefenen, spreken met een maatje, grammatica bij de docent."
+        },
+        {
+          "vak": "M&N",
+          "voorbeeld": "Stations: proefje, tekst lezen, filmpje, vragen bij de docent."
+        }
       ],
       "waarom": "Stations maken het mogelijk om op één station gerichte instructie te geven terwijl andere groepen zelfstandig verwerken, en ze brengen beweging in een blokuur. Onderzoek naar stationsrotatie zelf is beperkt; het effect hangt sterk af van de kwaliteit van de opdrachten en de organisatie.",
       "bewijs": "praktijk",
-      "bronnen": ["eef-toolkit"],
-      "materiaal": ["opdrachtkaart-route", "routeschema"]
+      "bronnen": [
+        "eef-toolkit"
+      ],
+      "materiaal": [
+        "opdrachtkaart-route",
+        "routeschema"
+      ]
     },
     {
       "id": "rotatie-lokaal-plein",
       "naam": "Rotatiemodel lokaal en plein",
-      "alias": ["carrousel lokaal-plein", "wisselmodel", "lokaal-plein-rotatie"],
+      "alias": [
+        "carrousel lokaal-plein",
+        "wisselmodel",
+        "lokaal-plein-rotatie"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Twee groepen wisselen halverwege: de ene groep krijgt instructie in het M-lokaal terwijl de andere op het deelplein zelfstandig verwerkt, en daarna andersom.",
       "startzin": "Groep A blijft eerst bij mij voor uitleg. Groep B gaat naar het plein met de opdrachtkaart. Om … uur wisselen we. Op het plein: alleen de laptop, alleen voor deze opdracht.",
@@ -520,34 +1169,98 @@
         "Instrueer groep B.",
         "Breng iedereen terug voor de afsluiting en het exit ticket."
       ],
-      "duur": { "min": 30, "max": 70 },
-      "groepsvorm": ["groepje", "individueel"],
-      "ruimte": { "M": true, "L": false, "plein": true, "stilte": false, "beweging": true },
-      "middelen": { "lijst": ["opdrachtkaart plein", "pleinafsprakenkaart", "routeschema op het digibord", "timer"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 30,
+        "max": 70
+      },
+      "groepsvorm": [
+        "groepje",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": false,
+        "plein": true,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "opdrachtkaart plein",
+          "pleinafsprakenkaart",
+          "routeschema op het digibord",
+          "timer"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["instructie", "verwerken"],
-      "denkniveau": ["begrijpen", "toepassen"],
-      "differentiatie": ["leeromgeving", "groepering", "ondersteuning"],
+      "lesfase": [
+        "instructie",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "leeromgeving",
+        "groepering",
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Pleinopdracht ook in dyslexievriendelijke opmaak." },
-        "dyscalculie": { "past": "goed", "tip": "Rekenhulpkaart mee naar het plein." },
-        "nt2": { "past": "goed", "tip": "Vaktaalkaart mee naar het plein." },
-        "faalangst": { "past": "goed", "tip": "Kleinere instructiegroep is rustiger en veiliger." },
-        "structuur": { "past": "aanpassen", "tip": "Routeschema en tijden zichtbaar; vaste plek op het plein." },
-        "hoogbegaafd": { "past": "goed", "tip": "Laat hen eventueel alleen de instructie van de tweede helft volgen." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Pleinopdracht ook in dyslexievriendelijke opmaak."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart mee naar het plein."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaktaalkaart mee naar het plein."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Kleinere instructiegroep is rustiger en veiliger."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Routeschema en tijden zichtbaar; vaste plek op het plein."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen eventueel alleen de instructie van de tweede helft volgen."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["uitleggen", "structuur"],
+      "docentstijl": [
+        "uitleggen",
+        "structuur"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": true },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": true
+      },
       "beweegmoment": true,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Op het plein wordt niet gewerkt.", "oplossing": "Geef een concrete opdracht met een product dat je ziet bij de wissel; spreek de pleinafspraken vooraf door." },
-        { "valkuil": "Je hebt geen zicht op het plein.", "oplossing": "Ga bij de wissel even langs; met een onderwijsassistent heeft het plein eigen toezicht." }
+        {
+          "valkuil": "Op het plein wordt niet gewerkt.",
+          "oplossing": "Geef een concrete opdracht met een product dat je ziet bij de wissel; spreek de pleinafspraken vooraf door."
+        },
+        {
+          "valkuil": "Je hebt geen zicht op het plein.",
+          "oplossing": "Ga bij de wissel even langs; met een onderwijsassistent heeft het plein eigen toezicht."
+        }
       ],
       "varianten": {
         "vmbo": "Korte, concrete pleinopdracht met afvinklijst.",
@@ -558,19 +1271,38 @@
         "verdieping": "Langer op het plein met een verdiepingsopdracht."
       },
       "vakvoorbeelden": [
-        { "vak": "Economie", "voorbeeld": "Groep A krijgt uitleg over inflatie; groep B maakt op het plein herhalingsopgaven over koopkracht. Na 22 minuten wisselen." },
-        { "vak": "Nederlands", "voorbeeld": "Groep A krijgt instructie over argumenteren; groep B leest op het plein een betoog en markeert argumenten." },
-        { "vak": "Wiskunde", "voorbeeld": "Groep A krijgt uitleg over grafieken tekenen; groep B oefent eerdere stof op de laptop." }
+        {
+          "vak": "Economie",
+          "voorbeeld": "Groep A krijgt uitleg over inflatie; groep B maakt op het plein herhalingsopgaven over koopkracht. Na 22 minuten wisselen."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Groep A krijgt instructie over argumenteren; groep B leest op het plein een betoog en markeert argumenten."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Groep A krijgt uitleg over grafieken tekenen; groep B oefent eerdere stof op de laptop."
+        }
       ],
       "waarom": "De rotatie halveert de instructiegroep, waardoor je dichter op begrip kunt zitten en de instructie korter kan; dat past bij de krukken in het M-lokaal. Er is weinig onderzoek naar deze specifieke organisatievorm; het principe van kleinere instructiegroepen heeft in de EEF-toolkit wel een positieve opbrengst.",
       "bewijs": "praktijk",
-      "bronnen": ["eef-toolkit"],
-      "materiaal": ["opdrachtkaart-route", "pleinafsprakenkaart", "routeschema", "overgangsscript"]
+      "bronnen": [
+        "eef-toolkit"
+      ],
+      "materiaal": [
+        "opdrachtkaart-route",
+        "pleinafsprakenkaart",
+        "routeschema",
+        "overgangsscript"
+      ]
     },
     {
       "id": "gespreide-start",
       "naam": "Gespreide start",
-      "alias": ["verspringende start", "start op het plein"],
+      "alias": [
+        "verspringende start",
+        "start op het plein"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Een groep die de stof al beheerst of zelfstandig verder kan, begint direct op het deelplein; de rest krijgt instructie in het lokaal.",
       "startzin": "Groep C: jullie beginnen vandaag direct op het plein met de startopdracht op deze kaart. Groep A en B: jullie blijven hier, ik begin met de uitleg.",
@@ -582,33 +1314,94 @@
         "Ga na de instructie kort langs het plein of laat de assistent daar toezicht houden.",
         "Breng iedereen samen voor de afsluiting."
       ],
-      "duur": { "min": 15, "max": 50 },
-      "groepsvorm": ["groepje", "individueel"],
-      "ruimte": { "M": true, "L": false, "plein": true, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["opdrachtkaart plein", "pleinafsprakenkaart", "routeschema"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 15,
+        "max": 50
+      },
+      "groepsvorm": [
+        "groepje",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": false,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "opdrachtkaart plein",
+          "pleinafsprakenkaart",
+          "routeschema"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["opening", "instructie", "verwerken"],
-      "denkniveau": ["toepassen", "analyseren"],
-      "differentiatie": ["leeromgeving", "tempo", "groepering"],
+      "lesfase": [
+        "opening",
+        "instructie",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "leeromgeving",
+        "tempo",
+        "groepering"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Duidelijke, korte opdrachtkaart." },
-        "dyscalculie": { "past": "goed", "tip": "Rekenhulpkaart bij de pleinopdracht." },
-        "nt2": { "past": "goed", "tip": "Vaktaalkaart bij de pleinopdracht." },
-        "faalangst": { "past": "goed", "tip": "Kleinere groep in het lokaal is rustiger." },
-        "structuur": { "past": "aanpassen", "tip": "Vaste pleinplek en een tijdlijn op de kaart." },
-        "hoogbegaafd": { "past": "goed", "tip": "Ideaal om te compacten: zij beginnen op het plein met verdieping." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Duidelijke, korte opdrachtkaart."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart bij de pleinopdracht."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaktaalkaart bij de pleinopdracht."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Kleinere groep in het lokaal is rustiger."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Vaste pleinplek en een tijdlijn op de kaart."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Ideaal om te compacten: zij beginnen op het plein met verdieping."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["uitleggen", "structuur"],
+      "docentstijl": [
+        "uitleggen",
+        "structuur"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": true },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": true
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "De vertrekkende groep weet niet precies wat te doen.", "oplossing": "Opdrachtkaart vooraf klaar, en het eerste wat ze doen staat bovenaan." }
+        {
+          "valkuil": "De vertrekkende groep weet niet precies wat te doen.",
+          "oplossing": "Opdrachtkaart vooraf klaar, en het eerste wat ze doen staat bovenaan."
+        }
       ],
       "varianten": {
         "vmbo": "Kleine pleingroep met heel concrete opdracht.",
@@ -619,19 +1412,38 @@
         "verdieping": "Start op het plein."
       },
       "vakvoorbeelden": [
-        { "vak": "Economie", "voorbeeld": "Bij 30 leerlingen in een M-lokaal starten 6 leerlingen die de startcheck goed hadden op het plein met een casus." },
-        { "vak": "Wiskunde", "voorbeeld": "Leerlingen met een voldoende op de vorige toets beginnen op het plein met verdieping." },
-        { "vak": "Engels", "voorbeeld": "Een groep begint op het plein met een leestekst; de rest krijgt grammatica-uitleg." }
+        {
+          "vak": "Economie",
+          "voorbeeld": "Bij 30 leerlingen in een M-lokaal starten 6 leerlingen die de startcheck goed hadden op het plein met een casus."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Leerlingen met een voldoende op de vorige toets beginnen op het plein met verdieping."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Een groep begint op het plein met een leestekst; de rest krijgt grammatica-uitleg."
+        }
       ],
       "waarom": "Een gespreide start lost het capaciteitsprobleem van het M-lokaal op en geeft leerlingen die de stof al beheersen direct uitdaging. Het is een organisatievorm uit de praktijk; de onderliggende principes (compacten, kleinere instructiegroep) hebben elk een positieve onderbouwing.",
       "bewijs": "praktijk",
-      "bronnen": ["eef-toolkit"],
-      "materiaal": ["opdrachtkaart-route", "pleinafsprakenkaart", "routeschema"]
+      "bronnen": [
+        "eef-toolkit"
+      ],
+      "materiaal": [
+        "opdrachtkaart-route",
+        "pleinafsprakenkaart",
+        "routeschema"
+      ]
     },
     {
       "id": "startcheck-routes",
       "naam": "Startcheck bepaalt de route",
-      "alias": ["instapcheck", "voortoets", "flexibele groepering"],
+      "alias": [
+        "instapcheck",
+        "voortoets",
+        "flexibele groepering"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Leerlingen maken aan het begin 3-5 korte vragen; de uitkomst bepaalt wie direct naar verdieping gaat en wie instructie krijgt.",
       "startzin": "Je krijgt vijf vragen. Maak ze zelf, zonder overleg. Het is geen toets: het helpt ons om te kiezen wat jij vandaag het beste kunt doen.",
@@ -642,40 +1454,114 @@
         "Alles goed: route verdieping (plein of verdiepingshoek). 1-2 fout: basisroute na korte instructie. Meer fout: instructie en instructietafel.",
         "Benoem dat de route per les verschilt en dat iedereen omhoog kan schuiven."
       ],
-      "duur": { "min": 4, "max": 8 },
-      "groepsvorm": ["individueel"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["startcheck (3-5 vragen)", "antwoordkaart", "wisbordjes of papier"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 4,
+        "max": 8
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "startcheck (3-5 vragen)",
+          "antwoordkaart",
+          "wisbordjes of papier"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["opening", "check"],
-      "denkniveau": ["onthouden", "begrijpen", "toepassen"],
-      "differentiatie": ["groepering", "niveau", "tempo"],
+      "lesfase": [
+        "opening",
+        "check"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "groepering",
+        "niveau",
+        "tempo"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "aanpassen", "tip": "Lees de vragen voor of geef ze groot en kort." },
-        "dyscalculie": { "past": "aanpassen", "tip": "Zet een rekenhulpkaart erbij als het rekenen niet het doel is." },
-        "nt2": { "past": "aanpassen", "tip": "Eenvoudige vraagstelling: je wilt het vak meten, niet de taal." },
-        "faalangst": { "past": "aanpassen", "tip": "Zeg nadrukkelijk dat het geen cijfer is; laat zelf nakijken." },
-        "structuur": { "past": "goed", "tip": "Een vast begin van de les." },
-        "hoogbegaafd": { "past": "goed", "tip": "Geeft deze leerlingen de kans om direct te compacten." }
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Lees de vragen voor of geef ze groot en kort."
+        },
+        "dyscalculie": {
+          "past": "aanpassen",
+          "tip": "Zet een rekenhulpkaart erbij als het rekenen niet het doel is."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Eenvoudige vraagstelling: je wilt het vak meten, niet de taal."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Zeg nadrukkelijk dat het geen cijfer is; laat zelf nakijken."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Een vast begin van de les."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geeft deze leerlingen de kans om direct te compacten."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "uitleggen"],
+      "docentstijl": [
+        "structuur",
+        "uitleggen"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "alsDan": [
-        { "als": "Alles goed", "dan": "Route verdieping: direct naar het plein of de verdiepingshoek met de verdiepingskaart." },
-        { "als": "1 of 2 fout", "dan": "Route basis: korte instructie, dan zelfstandig met hintkaarten." },
-        { "als": "3 of meer fout", "dan": "Route steun: volledige instructie en daarna de instructietafel." },
-        { "als": "Meer dan de helft van de klas heeft 3 of meer fout", "dan": "Geef eerst klassikale instructie aan iedereen; splits pas na de check op begrip." }
+        {
+          "als": "Alles goed",
+          "dan": "Route verdieping: direct naar het plein of de verdiepingshoek met de verdiepingskaart."
+        },
+        {
+          "als": "1 of 2 fout",
+          "dan": "Route basis: korte instructie, dan zelfstandig met hintkaarten."
+        },
+        {
+          "als": "3 of meer fout",
+          "dan": "Route steun: volledige instructie en daarna de instructietafel."
+        },
+        {
+          "als": "Meer dan de helft van de klas heeft 3 of meer fout",
+          "dan": "Geef eerst klassikale instructie aan iedereen; splits pas na de check op begrip."
+        }
       ],
       "valkuilen": [
-        { "valkuil": "Het nakijken kost te veel tijd.", "oplossing": "Gebruik wisbordjes of ABCD-kaarten zodat je het in één oogopslag ziet." },
-        { "valkuil": "Leerlingen zien het als toets.", "oplossing": "Geen cijfer, zelf nakijken, en zeg dat de route morgen weer anders kan zijn." }
+        {
+          "valkuil": "Het nakijken kost te veel tijd.",
+          "oplossing": "Gebruik wisbordjes of ABCD-kaarten zodat je het in één oogopslag ziet."
+        },
+        {
+          "valkuil": "Leerlingen zien het als toets.",
+          "oplossing": "Geen cijfer, zelf nakijken, en zeg dat de route morgen weer anders kan zijn."
+        }
       ],
       "varianten": {
         "vmbo": "3 vragen, concreet, met plaatjes.",
@@ -686,19 +1572,39 @@
         "verdieping": "Wordt bepaald door de check."
       },
       "vakvoorbeelden": [
-        { "vak": "Biologie", "voorbeeld": "Vier vragen over fotosynthese; wie alles goed heeft, gaat naar het plein voor een proefopzet." },
-        { "vak": "Duits", "voorbeeld": "Vijf zinnen met de juiste naamval invullen." },
-        { "vak": "Wiskunde", "voorbeeld": "Drie sommen van oplopende moeilijkheid over de stof van vandaag." }
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Vier vragen over fotosynthese; wie alles goed heeft, gaat naar het plein voor een proefopzet."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Vijf zinnen met de juiste naamval invullen."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Drie sommen van oplopende moeilijkheid over de stof van vandaag."
+        }
       ],
       "waarom": "Groeperen op basis van een actuele check, in plaats van vaste niveaugroepen, voorkomt de nadelen van vaste indeling en zorgt dat instructietijd terechtkomt waar die nodig is. Dit sluit aan bij formatief handelen (Wiliam) en mastery learning; het EEF waarschuwt dat vaste niveaugroepen binnen de klas nadelig kunnen zijn voor zwakkere leerlingen.",
       "bewijs": "redelijk",
-      "bronnen": ["wiliam-2011", "eef-toolkit"],
-      "materiaal": ["startcheck", "routeschema"]
+      "bronnen": [
+        "wiliam-2011",
+        "eef-toolkit"
+      ],
+      "materiaal": [
+        "startcheck",
+        "routeschema"
+      ]
     },
     {
       "id": "hoeken-l-lokaal",
       "naam": "Hoeken of zones in het L-lokaal",
-      "alias": ["zones", "werkhoeken", "hoekenwerk", "lokaalindeling"],
+      "alias": [
+        "zones",
+        "werkhoeken",
+        "hoekenwerk",
+        "lokaalindeling"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Je deelt een gewoon lokaal in drie zones in: een instructiehoek, een stille werkzone en een overlegzone, zodat je kunt differentiëren zonder plein.",
       "startzin": "Het lokaal heeft vandaag drie zones. Vooraan bij mij: instructie. Achterin bij het raam: stil werken. Bij de deur: samen overleggen op fluistertoon.",
@@ -709,33 +1615,94 @@
         "Laat leerlingen na de check naar de juiste zone gaan.",
         "Houd vanuit de instructiezone zicht op de andere zones."
       ],
-      "duur": { "min": 15, "max": 60 },
-      "groepsvorm": ["groepje", "individueel", "tweetal"],
-      "ruimte": { "M": false, "L": true, "plein": false, "stilte": false, "beweging": true },
-      "middelen": { "lijst": ["zonekaarten", "routeschema op het digibord"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 15,
+        "max": 60
+      },
+      "groepsvorm": [
+        "groepje",
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": false,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "zonekaarten",
+          "routeschema op het digibord"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["verwerken", "inoefenen"],
-      "denkniveau": ["begrijpen", "toepassen", "analyseren"],
-      "differentiatie": ["leeromgeving", "groepering", "ondersteuning"],
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "leeromgeving",
+        "groepering",
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "socialisatie"],
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Stille zone helpt bij lezen." },
-        "dyscalculie": { "past": "goed", "tip": "Instructiezone met concreet materiaal." },
-        "nt2": { "past": "goed", "tip": "Overlegzone met zinsstarters." },
-        "faalangst": { "past": "goed", "tip": "Stille zone als veilige plek." },
-        "structuur": { "past": "goed", "tip": "Vaste zones, elke les dezelfde plek." },
-        "hoogbegaafd": { "past": "goed", "tip": "Verdieping in de stille zone of de overlegzone." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Stille zone helpt bij lezen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Instructiezone met concreet materiaal."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Overlegzone met zinsstarters."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Stille zone als veilige plek."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste zones, elke les dezelfde plek."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Verdieping in de stille zone of de overlegzone."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["structuur", "samenwerken"],
+      "docentstijl": [
+        "structuur",
+        "samenwerken"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": true,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Het geluid uit de overlegzone stoort de stille zone.", "oplossing": "Zet de zones zo ver mogelijk uit elkaar en spreek fluistertoon af." }
+        {
+          "valkuil": "Het geluid uit de overlegzone stoort de stille zone.",
+          "oplossing": "Zet de zones zo ver mogelijk uit elkaar en spreek fluistertoon af."
+        }
       ],
       "varianten": {
         "vmbo": "Twee zones is ook goed: instructie en werken.",
@@ -746,19 +1713,35 @@
         "verdieping": "Overlegzone met een verdiepingsopdracht."
       },
       "vakvoorbeelden": [
-        { "vak": "Nederlands", "voorbeeld": "Instructiezone: werkwoordspelling. Stille zone: leesopdracht. Overlegzone: samen een tekst verbeteren." },
-        { "vak": "Geschiedenis", "voorbeeld": "Instructiezone: bronanalyse. Stille zone: vragen maken. Overlegzone: tijdlijn maken in tweetallen." },
-        { "vak": "Engels", "voorbeeld": "Instructiezone: grammatica. Stille zone: lezen. Overlegzone: spreekopdracht." }
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Instructiezone: werkwoordspelling. Stille zone: leesopdracht. Overlegzone: samen een tekst verbeteren."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Instructiezone: bronanalyse. Stille zone: vragen maken. Overlegzone: tijdlijn maken in tweetallen."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Instructiezone: grammatica. Stille zone: lezen. Overlegzone: spreekopdracht."
+        }
       ],
       "waarom": "Zones maken differentiatie zichtbaar en voorspelbaar in een lokaal zonder plein. Het is een organisatievorm uit de praktijk zonder eigen onderzoeksbasis; het helpt vooral om instructie in kleine groepen mogelijk te maken.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["zonekaarten", "routeschema"]
+      "materiaal": [
+        "zonekaarten",
+        "routeschema"
+      ]
     },
     {
       "id": "stilteruimte-route",
       "naam": "Stilteroute",
-      "alias": ["werken in de stilteruimte", "focusplek", "rustplek"],
+      "alias": [
+        "werken in de stilteruimte",
+        "focusplek",
+        "rustplek"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Leerlingen die rust of focus nodig hebben, werken met een eigen opdrachtkaart in de stilteruimte.",
       "startzin": "Heb je vandaag behoefte aan rust om je te concentreren? Dan mag je met deze kaart in de stilteruimte werken. Om … uur ben je terug.",
@@ -769,33 +1752,87 @@
         "Spreek af wanneer je langskomt of wanneer ze terug zijn.",
         "Bespreek kort bij terugkomst wat ze hebben gedaan."
       ],
-      "duur": { "min": 10, "max": 45 },
-      "groepsvorm": ["individueel"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["opdrachtkaart stilteruimte"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 10,
+        "max": 45
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "opdrachtkaart stilteruimte"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["verwerken"],
-      "denkniveau": ["toepassen", "analyseren"],
-      "differentiatie": ["leeromgeving"],
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "leeromgeving"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Rust helpt bij lezen." },
-        "dyscalculie": { "past": "goed", "tip": "Rekenhulpkaart mee." },
-        "nt2": { "past": "aanpassen", "tip": "Alleen als de opdracht zelfstandig te doen is." },
-        "faalangst": { "past": "goed", "tip": "Een rustige plek zonder publiek." },
-        "structuur": { "past": "goed", "tip": "Een duidelijke kaart met tijden." },
-        "hoogbegaafd": { "past": "goed", "tip": "Geschikt voor een verdiepingsopdracht." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Rust helpt bij lezen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart mee."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Alleen als de opdracht zelfstandig te doen is."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Een rustige plek zonder publiek."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Een duidelijke kaart met tijden."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geschikt voor een verdiepingsopdracht."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["relatie", "structuur"],
+      "docentstijl": [
+        "relatie",
+        "structuur"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "De stilteruimte wordt een plek om je af te zonderen van de les.", "oplossing": "Concrete opdracht met een product en een vast terugkommoment." }
+        {
+          "valkuil": "De stilteruimte wordt een plek om je af te zonderen van de les.",
+          "oplossing": "Concrete opdracht met een product en een vast terugkommoment."
+        }
       ],
       "varianten": {
         "vmbo": "Korte, afvinkbare opdracht.",
@@ -806,19 +1843,35 @@
         "verdieping": "Verdiepingsopdracht in rust."
       },
       "vakvoorbeelden": [
-        { "vak": "Nederlands", "voorbeeld": "Een leerling schrijft in de stilteruimte aan een betoog." },
-        { "vak": "Wiskunde", "voorbeeld": "Een leerling met faalangst maakt de oefenopgaven in rust." },
-        { "vak": "Geschiedenis", "voorbeeld": "Een leerling bereidt een bronanalyse voor." }
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Een leerling schrijft in de stilteruimte aan een betoog."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Een leerling met faalangst maakt de oefenopgaven in rust."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een leerling bereidt een bronanalyse voor."
+        }
       ],
       "waarom": "Een rustige werkplek kan helpen bij concentratie, vooral voor leerlingen die snel afgeleid zijn of spanning ervaren. Het is een praktijkvoorziening; onderzoek naar stilteruimtes zelf is beperkt.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["opdrachtkaart-route"]
+      "materiaal": [
+        "opdrachtkaart-route"
+      ]
     },
     {
       "id": "keuzebord",
       "naam": "Keuzebord of menukaart",
-      "alias": ["keuzemenu", "menukaart", "keuzeopdrachten", "choice board"],
+      "alias": [
+        "keuzemenu",
+        "menukaart",
+        "keuzeopdrachten",
+        "choice board"
+      ],
       "categorie": "differentiatievorm",
       "kort": "Leerlingen kiezen uit een bord van opdrachten bij hetzelfde lesdoel, met verplichte 'hoofdgerechten' en keuze in 'bijgerechten' of eindproduct.",
       "startzin": "Op de menukaart staan opdrachten. Het hoofdgerecht maakt iedereen. Daarna kies je twee bijgerechten. Kies wat bij jou past, maar kies niet alleen het makkelijkste!",
@@ -829,34 +1882,97 @@
         "Laat leerlingen hun keuze opschrijven voordat ze beginnen.",
         "Sluit af met een check op het lesdoel, los van welke opdracht ze kozen."
       ],
-      "duur": { "min": 20, "max": 60 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["menukaart", "materiaal per opdracht"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 20,
+        "max": 60
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "menukaart",
+          "materiaal per opdracht"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "uitgebreid",
-      "lesfase": ["verwerken"],
-      "denkniveau": ["toepassen", "analyseren", "evalueren", "creeren"],
-      "differentiatie": ["keuze-aanpak", "interesse", "niveau"],
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren",
+        "evalueren",
+        "creeren"
+      ],
+      "differentiatie": [
+        "keuze-aanpak",
+        "interesse",
+        "niveau"
+      ],
       "richting": "beide",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Zorg dat er ook keuzes zijn die niet op veel lezen of schrijven leunen." },
-        "dyscalculie": { "past": "goed", "tip": "Keuzes zonder rekenwerk waar het vak het toelaat." },
-        "nt2": { "past": "goed", "tip": "Keuzes met beeld of schema." },
-        "faalangst": { "past": "goed", "tip": "Zelf kiezen geeft gevoel van controle." },
-        "structuur": { "past": "aanpassen", "tip": "Beperk het aantal keuzes en laat de keuze vooraf opschrijven." },
-        "hoogbegaafd": { "past": "goed", "tip": "Zet er een uitdagende 'chef-opdracht' op." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Zorg dat er ook keuzes zijn die niet op veel lezen of schrijven leunen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Keuzes zonder rekenwerk waar het vak het toelaat."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Keuzes met beeld of schema."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Zelf kiezen geeft gevoel van controle."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Beperk het aantal keuzes en laat de keuze vooraf opschrijven."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Zet er een uitdagende 'chef-opdracht' op."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["ontdekken", "relatie"],
+      "docentstijl": [
+        "ontdekken",
+        "relatie"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen kiezen alleen het makkelijkste.", "oplossing": "Geef punten of sterren per opdracht en een minimum." },
-        { "valkuil": "Te veel keuze geeft chaos.", "oplossing": "Maximaal 6 keuzes." }
+        {
+          "valkuil": "Leerlingen kiezen alleen het makkelijkste.",
+          "oplossing": "Geef punten of sterren per opdracht en een minimum."
+        },
+        {
+          "valkuil": "Te veel keuze geeft chaos.",
+          "oplossing": "Maximaal 6 keuzes."
+        }
       ],
       "varianten": {
         "vmbo": "4 keuzes met plaatjes.",
@@ -867,14 +1983,28 @@
         "verdieping": "Chef-opdracht verplicht."
       },
       "vakvoorbeelden": [
-        { "vak": "Geschiedenis", "voorbeeld": "Hoofdgerecht: tijdlijn. Keuze: strip, dagboekfragment, schema of interview." },
-        { "vak": "Biologie", "voorbeeld": "Hoofdgerecht: schema van de spijsvertering. Keuze: poster, uitleg aan een klasgenoot, quiz maken." },
-        { "vak": "Engels", "voorbeeld": "Hoofdgerecht: woordenlijst leren. Keuze: verhaal, dialoog, liedtekst, woordspel." }
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Hoofdgerecht: tijdlijn. Keuze: strip, dagboekfragment, schema of interview."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Hoofdgerecht: schema van de spijsvertering. Keuze: poster, uitleg aan een klasgenoot, quiz maken."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Hoofdgerecht: woordenlijst leren. Keuze: verhaal, dialoog, liedtekst, woordspel."
+        }
       ],
       "waarom": "Keuze in aanpak en verwerking kan motivatie en eigenaarschap vergroten, en meerdere representaties helpen alle leerlingen. Dit is de invulling van 'leerstijl' uit het schoolplan, zonder het idee van vaste leerstijlen, waarvoor geen bewijs is. Het onderzoek naar keuzeborden zelf is beperkt.",
       "bewijs": "beperkt",
-      "bronnen": ["pashler-2008", "mayer-2009"],
-      "materiaal": ["menukaart"]
+      "bronnen": [
+        "pashler-2008",
+        "mayer-2009"
+      ],
+      "materiaal": [
+        "menukaart"
+      ]
     }
   ]
 }

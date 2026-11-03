@@ -1,6 +1,7 @@
 // Uniekind – start van de app: profiel laden, huisstijl toepassen, kop en voet tekenen, routeren.
 import './stijl/lettertypen.css';
 import './stijl/basis.css';
+import './stijl/wizard.css';
 import './stijl/print.css';
 
 import { html, escape } from './util/html.js';
@@ -12,7 +13,7 @@ import werkvorm from './pages/werkvorm.js';
 import beginHier from './pages/begin-hier.js';
 import visie from './pages/visie.js';
 import invulformulier from './pages/invulformulier.js';
-import binnenkort from './pages/binnenkort.js';
+import lesMaken from './pages/les-maken.js';
 
 const NAV = [
   { hash: 'les-maken', label: 'Maak een les' },
@@ -30,7 +31,7 @@ function kiesPagina(hash) {
     'begin-hier': beginHier,
     'visie': visie,
     'invulformulier': invulformulier,
-    'les-maken': binnenkort
+    'les-maken': lesMaken
   };
   return { pagina: routes[hash] ?? home, nav: routes[hash] ? hash : '' };
 }
@@ -78,7 +79,7 @@ async function start() {
   }
   pasHuisstijlToe(profiel);
   app.innerHTML = String(shell(profiel));
-  const inhoud = document.getElementById('inhoud');
+  let inhoud = document.getElementById('inhoud');
   const ctx = { profiel };
 
   let teller = 0;
@@ -93,6 +94,10 @@ async function start() {
     try {
       const resultaat = await pagina.render(ctx, arg);
       if (mijn !== teller) return; // inmiddels naar een andere pagina genavigeerd
+      // Verse container, zodat event-listeners van de vorige pagina niet blijven hangen
+      const nieuw = inhoud.cloneNode(false);
+      inhoud.replaceWith(nieuw);
+      inhoud = nieuw;
       inhoud.innerHTML = String(resultaat.html);
       document.title = `${resultaat.titel ? resultaat.titel + ' · ' : ''}${profiel.uniekind.titel} – ${profiel.school.naam}`;
       resultaat.na?.(inhoud);

@@ -6,7 +6,7 @@ Uniekind helpt docenten gedifferentieerde lessen te ontwerpen. De docent geeft a
 
 De eerste versie is gemaakt voor **Sophianum** (Gulpen). Later volgt een **algemene versie**, waarin elke school haar eigen visie, lokalen en lestijden instelt. Beide versies gebruiken dezelfde code; het verschil zit alleen in het schoolprofiel.
 
-> Status: **fase 1 (fundament)**. Het schoolprofiel, de kennisbank (74 werkvormen), de validatie, de werkvormenbibliotheek en het invulformulier zijn klaar. De lesgenerator volgt in fase 2.
+> Status: **fase 2 (generator)**. Schoolprofiel, kennisbank (74 werkvormen), bibliotheek en invulformulier (fase 1), plus de lesgenerator: wizard in 7 stappen of snel, filter- en scorelogica, lessjablonen, splitsplanner, "Waarom deze?" en aanpassen (fase 2). Materiaal en export volgen in fase 3.
 
 ---
 
@@ -19,6 +19,7 @@ npm install          # eenmalig
 npm run dev          # ontwikkelserver op http://localhost:5173
 npm run valideer     # controleer de kennisbank en de profielen
 npm run build        # bouw de website in dist/ (valideert eerst)
+npm test             # draai de tests van de generator (testcases, 600 willekeurige lessen)
 ```
 
 De map `dist/` is de complete website. Die zet je op Netlify of GitHub Pages; er is geen server nodig.
@@ -54,7 +55,8 @@ src/
   data/                laden van profiel en kennisbank, leesbare labels
   opslag/              veilige browseropslag (werkt ook als opslag geblokkeerd is)
   stijl/               CSS: lettertypen, basisstijl, printstijl
-  engine/              (fase 2) filter- en scorelogica, lessjablonen, splitsplanner
+  engine/              de generator: context, filters, score, sjablonen, splitsplanner, opbouw, controle, uitleg
+  wizard/              de stappen van de lesgenerator en de weergave van het lesplan
   export/              (fase 3) PDF, Word, PowerPoint, lesbestand
   ai/                  (fase 4) AI-brug en voorbereide API-laag
 tools/
@@ -76,6 +78,18 @@ Alles wat schoolspecifiek is, staat in `public/profiles/sophianum.json`: naam, m
 Een ander profiel bouwen: `UNIEKIND_PROFIEL=naam npm run build` (met `public/profiles/naam.json`).
 
 ---
+
+## Hoe de generator werkt
+
+De generator (`src/engine/`) is deterministisch: dezelfde invoer geeft dezelfde les.
+
+1. **Context** (`context.js`): de invoer wordt aangevuld met standaardwaarden uit het schoolprofiel (lesduur, capaciteit, plein, stilteruimte).
+2. **Sjabloon** (`sjablonen.js`): de lesopbouw met uitgewerkte tijden voor 35, 50, 70 en 100 minuten; een vrije lesduur wordt geschaald. In een M-lokaal is instructie maximaal 15 minuten aaneen, en geen fase duurt langer dan 25 minuten.
+3. **Splitsplanner** (`splitsplanner.js`): bij meer leerlingen dan het lokaal bergt (of bij stand 3) kiest Uniekind een opzet: gespreide start, startcheck, carrousel, flipped start, met onderwijsassistent of stilteruimte.
+4. **Harde filters** (`filters.js`): tijd, ruimte, telefoon (nooit), laptops, assistent, plein, instapniveau.
+5. **Score** (`score.js`): denkniveau, lesfase en plek in de reeks, docentprofiel, klas, schoolvisie, variatie, eigen ervaring. De gewichten staan in het schoolprofiel (`generator.gewichten`).
+6. **Controle** (`controle.js`): veertien harde eisen, zichtbaar als checklist in de les.
+7. **Uitleg** (`uitleg.js`): bij elke werkvorm "Waarom deze?" en bij de les twee zinnen waarom deze opzet past.
 
 ## Privacy en de toegangscode
 
@@ -113,7 +127,7 @@ build-commando `npm run build`, publiceermap `dist`.
 |---|---|---|
 | 0 | Plan | klaar |
 | 1 | Schoolprofiel, schema's, kennisbank (74 items), validatie, bibliotheek, invulformulier | klaar |
-| 2 | Wizard, filter- en scorelogica, lessjablonen 35/50/70/100, splitsplanner, "Waarom deze?" | volgt |
+| 2 | Wizard, filter- en scorelogica, lessjablonen 35/50/70/100, splitsplanner, "Waarom deze?" | klaar (zie docs/testverslag-fase2.md) |
 | 3 | Materialen, digibordmodus, export PDF/Word/PowerPoint/lesbestand | volgt |
 | 4 | OCR, AI-brug (Copilot), zoeklinks | volgt |
 | 5 | Kennisbank naar 150+, pagina's Hulp, Mijn profiel, reflectie | volgt |
