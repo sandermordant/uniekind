@@ -243,7 +243,9 @@
         35
       ],
       "standaardLesduur": 70,
-      "rooster": "flexuurmodel"
+      "rooster": "flexuurmodel",
+      "slo": "vmbo-bb",
+      "onderbouwTot": 2
     },
     {
       "id": "vmbo-k",
@@ -263,7 +265,9 @@
         35
       ],
       "standaardLesduur": 70,
-      "rooster": "flexuurmodel"
+      "rooster": "flexuurmodel",
+      "slo": "vmbo-kb",
+      "onderbouwTot": 2
     },
     {
       "id": "mavo",
@@ -282,7 +286,9 @@
         35
       ],
       "standaardLesduur": 70,
-      "rooster": "flexuurmodel"
+      "rooster": "flexuurmodel",
+      "slo": "vmbo-gltl",
+      "onderbouwTot": 2
     },
     {
       "id": "havo",
@@ -301,7 +307,9 @@
         50,
         100
       ],
-      "standaardLesduur": 50
+      "standaardLesduur": 50,
+      "slo": "havo",
+      "onderbouwTot": 3
     },
     {
       "id": "vwo-a",
@@ -321,7 +329,9 @@
         50,
         100
       ],
-      "standaardLesduur": 50
+      "standaardLesduur": 50,
+      "slo": "vwo",
+      "onderbouwTot": 3
     },
     {
       "id": "vwo-g",
@@ -341,7 +351,9 @@
         50,
         100
       ],
-      "standaardLesduur": 50
+      "standaardLesduur": 50,
+      "slo": "vwo",
+      "onderbouwTot": 3
     }
   ],
   "afdelingToelichting": "vmbo-basis en vmbo-kader zitten in leerjaar 1 en 2 samen in vmbo-MiX; aan het eind van leerjaar 2 wordt de leerweg bepaald. Lesduren: havo/vwo 50 minuten (enkel uur) of 100 minuten (blokuur); vmbo/mavo (flexuurmodel) meestal 70, soms 35 minuten. Een vrije lesduur kan altijd.",
@@ -479,8 +491,26 @@
       "aanname": true
     },
     {
+      "id": "digitale-geletterdheid",
+      "naam": "Digitale geletterdheid",
+      "afdelingen": "alle",
+      "rekenen": false
+    },
+    {
       "id": "kunst",
-      "naam": "Kunst (beeldend, muziek, drama, CKV)",
+      "naam": "Kunst (beeldend)",
+      "afdelingen": "alle",
+      "rekenen": false
+    },
+    {
+      "id": "muziek",
+      "naam": "Muziek",
+      "afdelingen": "alle",
+      "rekenen": false
+    },
+    {
+      "id": "ckv",
+      "naam": "CKV (culturele en kunstzinnige vorming)",
       "afdelingen": "alle",
       "rekenen": false
     },
@@ -493,8 +523,9 @@
     },
     {
       "id": "filosofie",
-      "naam": "Filosofie & levensbeschouwing",
+      "naam": "Filosofie",
       "afdelingen": [
+        "havo",
         "vwo-a",
         "vwo-g"
       ],
@@ -514,10 +545,11 @@
     },
     {
       "id": "mm",
-      "naam": "M&M (Mens en Maatschappij)",
+      "naam": "M&M (Mens & Maatschappij)",
       "afdelingen": [
         "vmbo-b",
-        "vmbo-k"
+        "vmbo-k",
+        "mavo"
       ],
       "rekenen": false,
       "onderbouwVakoverstijgend": true,
@@ -536,7 +568,7 @@
     },
     {
       "id": "tt",
-      "naam": "T&T (Technologie en Toepassing)",
+      "naam": "T&T (Technologie & Toepassen)",
       "afdelingen": [
         "mavo"
       ],
@@ -549,7 +581,7 @@
     },
     {
       "id": "oo",
-      "naam": "O&O (Onderzoek en Ontwerpen)",
+      "naam": "O&O (Onderzoeken & Ontwerpen)",
       "afdelingen": [
         "havo",
         "vwo-a",

@@ -31,10 +31,12 @@ export function legVast(id, les, extra = {}) {
     onderwerp: String(les.doel?.onderwerp ?? '').slice(0, 120),
     vak: extra.vak ?? oud?.vak ?? '',
     afdeling: extra.afdeling ?? oud?.afdeling ?? '',
+    leerjaar: Number(les.invoer?.context?.leerjaar) || oud?.leerjaar || null,
     lesduur: les.lesduur,
     stand: les.stand,
     opzet: les.opzetNaam,
     werkvormen: werkvormenVan(les),
+    eindtermen: (les.doel?.eindtermen ?? []).length ? (les.invoer?.inhoud?.eindtermen ?? []).filter((g) => g?.sleutel).map((g) => ({ sleutel: String(g.sleutel).slice(0, 120), kader: g.kader, kaderTitel: String(g.kaderTitel ?? '').slice(0, 120), code: String(g.code ?? '').slice(0, 60), tekst: String(g.tekst ?? '').slice(0, 400) })) : [],
     reflectie: oud?.reflectie ?? null
   };
   bewaar([regel, ...lijst.filter((x) => x.id !== id)]);
@@ -125,10 +127,12 @@ export function uitBestand(tekst) {
     onderwerp: String(x.onderwerp ?? '').slice(0, 120),
     vak: String(x.vak ?? '').slice(0, 40),
     afdeling: String(x.afdeling ?? '').slice(0, 40),
+    leerjaar: Number(x.leerjaar) || null,
     lesduur: Number(x.lesduur) || null,
     stand: [1, 2, 3].includes(Number(x.stand)) ? Number(x.stand) : null,
     opzet: String(x.opzet ?? '').slice(0, 80),
     werkvormen: x.werkvormen.filter((w) => w && typeof w.id === 'string').map((w) => ({ id: String(w.id).slice(0, 80), naam: String(w.naam ?? w.id).slice(0, 80) })),
+    eindtermen: (Array.isArray(x.eindtermen) ? x.eindtermen : []).filter((g) => g && typeof g.sleutel === 'string').map((g) => ({ sleutel: g.sleutel.slice(0, 120), kader: String(g.kader ?? '').slice(0, 120), kaderTitel: String(g.kaderTitel ?? '').slice(0, 120), code: String(g.code ?? '').slice(0, 60), tekst: String(g.tekst ?? '').slice(0, 400) })),
     reflectie: x.reflectie && typeof x.reflectie === 'object' ? {
       datum: String(x.reflectie.datum ?? '').slice(0, 10),
       oordeel: Object.fromEntries(Object.entries(x.reflectie.oordeel ?? {}).filter(([, v]) => v === 1 || v === -1)),
@@ -142,4 +146,19 @@ export function uitBestand(tekst) {
   bewaar(samen);
   werkDuimenBij();
   return schoon.length;
+}
+
+/** Per kader: welke kerndoelen of eindtermen in welke lessen aan bod kwamen. */
+export function dekking(lijst = alleLessen()) {
+  const per = new Map();
+  for (const les of lijst) {
+    for (const g of les.eindtermen ?? []) {
+      const k = per.get(g.kader) ?? { kader: g.kader, titel: g.kaderTitel, regels: new Map() };
+      const r = k.regels.get(g.sleutel) ?? { ...g, lessen: [] };
+      r.lessen.push({ datum: les.datum, onderwerp: les.onderwerp });
+      k.regels.set(g.sleutel, r);
+      per.set(g.kader, k);
+    }
+  }
+  return [...per.values()].map((k) => ({ ...k, regels: [...k.regels.values()].sort((a, b) => a.code.localeCompare(b.code, 'nl', { numeric: true })) }));
 }

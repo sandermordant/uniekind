@@ -138,3 +138,58 @@ describe('Verwijzing naar het ondersteuningsaanbod van de school', () => {
     expect(zonder.tips.some((t) => t.startsWith('Op school'))).toBe(false);
   });
 });
+
+describe('Kerndoelen en eindtermen van SLO', async () => {
+  const { readFileSync } = await import('node:fs');
+  const { kadersVoor, vlak, alsLesdoel, isOnderbouw } = await import('../src/data/kaders.js');
+  const index = JSON.parse(readFileSync('public/data/kaders/index.json', 'utf8'));
+  const kader = (k) => JSON.parse(readFileSync(`public/data/kaders/${k.bestand}`, 'utf8'));
+  const afd = (id) => sopho.profiel.afdelingen.find((a) => a.id === id);
+
+  it('elk vak van Sophianum heeft een kader, behalve de vakken waarvoor SLO er geen heeft', () => {
+    const zonder = sopho.profiel.vakken.filter((v) => !index.kaders.some((k) => k.vakken.includes(v.id))).map((v) => v.id);
+    expect(zonder).toEqual(['beroepsgericht']);
+  });
+  it('onderbouw krijgt eerst de geldende kerndoelen, bovenbouw eerst het examenprogramma van het eigen niveau', () => {
+    const h1 = kadersVoor(index, { vak: 'economie', afdeling: afd('havo'), leerjaar: 1 });
+    expect(h1[0].soort).toBe('kerndoelen');
+    expect(h1[0].status).toBe('geldend');
+    const h4 = kadersVoor(index, { vak: 'economie', afdeling: afd('havo'), leerjaar: 4 });
+    expect(h4[0].titel).toBe('Examenprogramma Economie havo');
+    expect(h4.some((k) => k.soort === 'syllabus' && k.niveaus.includes('havo'))).toBe(true);
+    expect(h4.some((k) => k.niveaus.includes('vwo') && !k.niveaus.includes('havo') && k.soort !== 'kerndoelen')).toBe(false);
+    const kb = kadersVoor(index, { vak: 'wiskunde', afdeling: afd('vmbo-k'), leerjaar: 3 });
+    expect(kb.find((k) => k.soort === 'syllabus').titel).toMatch(/vmbo kb/);
+    expect(isOnderbouw(afd('vwo-g'), 3)).toBe(true);
+    expect(isOnderbouw(afd('mavo'), 3)).toBe(false);
+  });
+  it('digitale geletterdheid, T&T en O&O hebben een kader, met de juiste status', () => {
+    const dg = kadersVoor(index, { vak: 'digitale-geletterdheid', afdeling: afd('havo'), leerjaar: 1 });
+    expect(dg[0].titel).toBe('Kerndoelen digitale geletterdheid');
+    expect(dg[0].status).toBe('concept');
+    expect(index.kaders.some((k) => k.vakken.includes('tt') && /Technologie en Toepassing/.test(k.titel))).toBe(true);
+    expect(index.kaders.some((k) => k.vakken.includes('oo') && /onderzoek en ontwerpen havo/.test(k.titel))).toBe(true);
+  });
+  it('de 58 kerndoelen onderbouw staan er allemaal in', () => {
+    const nummers = new Set(index.kaders.filter((k) => k.id.startsWith('kerndoelen-onderbouw-')).flatMap((k) => kader(k).items.map((x) => x.c)));
+    expect(nummers.size).toBe(58);
+  });
+  it('sleutels zijn uniek binnen een kader en verwijzen naar echte tekst', () => {
+    for (const k of index.kaders.slice(0, 60)) {
+      const r = vlak(kader(k));
+      expect(new Set(r.map((x) => x.sleutel)).size).toBe(r.length);
+      expect(r.every((x) => x.tekst.length > 2)).toBe(true);
+    }
+  });
+  it('maakt van een eindterm een eerste lesdoel in de je-vorm', () => {
+    expect(alsLesdoel('De kandidaat kan economische concepten herkennen en toepassen in uiteenlopende contexten')).toBe('Je kunt economische concepten herkennen en toepassen in uiteenlopende contexten.');
+    expect(alsLesdoel('De leerling zet digitale systemen functioneel in.')).toBe('Je zet digitale systemen functioneel in.');
+  });
+  it('gekoppelde eindtermen komen in het lesplan, de AI-prompt en het logboek', async () => {
+    const { maakPrompt } = await import('../src/ai/prompt.js');
+    const g = { sleutel: 'examenprogramma-ec-havo:1.0', kader: 'examenprogramma-ec-havo', kaderTitel: 'Examenprogramma Economie havo', code: 'Domein B · 2', tekst: 'De kandidaat kan in contexten analyseren dat beperkte middelen dwingen tot keuzes' };
+    const les = genereerLes(invoer({ context: { afdeling: 'havo', leerjaar: 4, vak: 'economie', lesduur: 50, ruimte: 'L', aantal: 24 }, inhoud: { onderwerp: 'Schaarste', eindtermen: [g] } }), sopho);
+    expect(les.doel.eindtermen).toEqual([{ code: g.code, tekst: g.tekst, kaderTitel: g.kaderTitel }]);
+    expect(maakPrompt(les, sopho.profiel)).toContain('Domein B · 2: De kandidaat kan in contexten analyseren');
+  });
+});

@@ -1,0 +1,3866 @@
+{
+ "toelichting": "Gemaakt door tools/importeer-slo.js uit de open data van SLO (licentie MIT). Niet met de hand aanpassen: draai het script opnieuw.",
+ "licentie": "Bron: SLO, nationaal expertisecentrum leerplanontwikkeling. Open data onder MIT-licentie, https://github.com/slonl",
+ "gemaakt": "2026-11-04",
+ "kaders": [
+  {
+   "id": "kerndoelen-onderbouw-aardrijkskunde",
+   "titel": "Kerndoelen onderbouw: Aardrijkskunde",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "aardrijkskunde"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 17,
+   "bestand": "kerndoelen-onderbouw-aardrijkskunde.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-bewegen-en-sport",
+   "titel": "Kerndoelen onderbouw: Bewegen en sport",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "lo"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 6,
+   "bestand": "kerndoelen-onderbouw-bewegen-en-sport.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-biologie",
+   "titel": "Kerndoelen onderbouw: Biologie",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "biologie"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 8,
+   "bestand": "kerndoelen-onderbouw-biologie.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-economie",
+   "titel": "Kerndoelen onderbouw: Economie",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "economie"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 12,
+   "bestand": "kerndoelen-onderbouw-economie.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-engels",
+   "titel": "Kerndoelen onderbouw: Engels",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 8,
+   "bestand": "kerndoelen-onderbouw-engels.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-geschiedenis",
+   "titel": "Kerndoelen onderbouw: Geschiedenis",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "geschiedenis"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 12,
+   "bestand": "kerndoelen-onderbouw-geschiedenis.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-kunst-en-cultuur",
+   "titel": "Kerndoelen onderbouw: Kunst en cultuur",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "kunst",
+    "muziek",
+    "drama",
+    "ckv"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 5,
+   "bestand": "kerndoelen-onderbouw-kunst-en-cultuur.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-mens-en-maatschappij",
+   "titel": "Kerndoelen onderbouw: Mens en maatschappij",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "maatschappijleer",
+    "mm"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 12,
+   "bestand": "kerndoelen-onderbouw-mens-en-maatschappij.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-mens-en-natuur",
+   "titel": "Kerndoelen onderbouw: Mens en natuur",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "mn",
+    "oo"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 8,
+   "bestand": "kerndoelen-onderbouw-mens-en-natuur.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-natuur-en-scheikunde-i",
+   "titel": "Kerndoelen onderbouw: Natuur- en scheikunde I",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 8,
+   "bestand": "kerndoelen-onderbouw-natuur-en-scheikunde-i.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-natuurkunde",
+   "titel": "Kerndoelen onderbouw: Natuurkunde",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 8,
+   "bestand": "kerndoelen-onderbouw-natuurkunde.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-nederlands",
+   "titel": "Kerndoelen onderbouw: Nederlands",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 10,
+   "bestand": "kerndoelen-onderbouw-nederlands.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-rekenen-en-wiskunde",
+   "titel": "Kerndoelen onderbouw: Rekenen en wiskunde",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "wiskunde",
+    "rekenen"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 9,
+   "bestand": "kerndoelen-onderbouw-rekenen-en-wiskunde.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-scheikunde",
+   "titel": "Kerndoelen onderbouw: Scheikunde",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "scheikunde"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 8,
+   "bestand": "kerndoelen-onderbouw-scheikunde.json"
+  },
+  {
+   "id": "kerndoelen-onderbouw-techniek",
+   "titel": "Kerndoelen onderbouw: Techniek",
+   "soort": "kerndoelen",
+   "status": "geldend",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "tt"
+   ],
+   "bron": {
+    "naam": "SLO, kerndoelen onderbouw VO",
+    "repo": "slonl/curriculum-kerndoelen",
+    "versie": "2026-08-17"
+   },
+   "aantal": 8,
+   "bestand": "kerndoelen-onderbouw-techniek.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-bewegen-en-sport",
+   "titel": "Kerndoelen bewegen en sport",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "lo"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 13,
+   "bestand": "nieuw-kerndoelen-bewegen-en-sport.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-burgerschap",
+   "titel": "Kerndoelen burgerschap",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "maatschappijleer",
+    "mm"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 11,
+   "bestand": "nieuw-kerndoelen-burgerschap.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-digitale-geletterdheid",
+   "titel": "Kerndoelen digitale geletterdheid",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "informatica",
+    "digitale-geletterdheid"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 15,
+   "bestand": "nieuw-kerndoelen-digitale-geletterdheid.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-engels",
+   "titel": "Kerndoelen Engels",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 13,
+   "bestand": "nieuw-kerndoelen-engels.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-kunst-en-cultuur",
+   "titel": "Kerndoelen kunst en cultuur",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "kunst",
+    "muziek",
+    "drama",
+    "ckv"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 13,
+   "bestand": "nieuw-kerndoelen-kunst-en-cultuur.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-mens-en-maatschappij",
+   "titel": "Kerndoelen mens en maatschappij",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "geschiedenis",
+    "aardrijkskunde",
+    "economie",
+    "mm"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 38,
+   "bestand": "nieuw-kerndoelen-mens-en-maatschappij.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-mens-en-natuur",
+   "titel": "Kerndoelen mens en natuur",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "biologie",
+    "natuurkunde",
+    "scheikunde",
+    "mn"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 35,
+   "bestand": "nieuw-kerndoelen-mens-en-natuur.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-moderne-vreemde-talen",
+   "titel": "Kerndoelen moderne vreemde talen",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "duits",
+    "frans"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 15,
+   "bestand": "nieuw-kerndoelen-moderne-vreemde-talen.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-nederlands",
+   "titel": "Kerndoelen Nederlands",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 34,
+   "bestand": "nieuw-kerndoelen-nederlands.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-nederlandse-gebarentaal",
+   "titel": "Kerndoelen Nederlandse gebarentaal",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 28,
+   "bestand": "nieuw-kerndoelen-nederlandse-gebarentaal.json"
+  },
+  {
+   "id": "nieuw-kerndoelen-rekenen-en-wiskunde",
+   "titel": "Kerndoelen rekenen en wiskunde",
+   "soort": "kerndoelen",
+   "status": "concept",
+   "niveaus": [
+    "onderbouw"
+   ],
+   "vakken": [
+    "wiskunde",
+    "rekenen"
+   ],
+   "bron": {
+    "naam": "SLO, nieuwe kerndoelen (definitief concept, nog niet wettelijk vastgesteld)",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 38,
+   "bestand": "nieuw-kerndoelen-rekenen-en-wiskunde.json"
+  },
+  {
+   "id": "examenprogramma-ak-havo",
+   "titel": "Examenprogramma Aardrijkskunde havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "aardrijkskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/aardrijkskunde-havo/2020/f=/aard_havo.pdf",
+    "ingang": null
+   },
+   "aantal": 44,
+   "bestand": "examenprogramma-ak-havo.json"
+  },
+  {
+   "id": "examenprogramma-ak-vmbo",
+   "titel": "Examenprogramma Aardrijkskunde vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "aardrijkskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/aardrijkskunde-vmbo-3/2020/f=/examenprogramma_vmbo_aardrijkskunde_vanaf_2014_2015.pdf",
+    "ingang": "2014-2015"
+   },
+   "aantal": 106,
+   "bestand": "examenprogramma-ak-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-ak-vwo",
+   "titel": "Examenprogramma Aardrijkskunde vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "aardrijkskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/aardrijkskunde-vwo-2/2020/f=/aard_vwo.pdf",
+    "ingang": null
+   },
+   "aantal": 44,
+   "bestand": "examenprogramma-ak-vwo.json"
+  },
+  {
+   "id": "examenprogramma-be-havo",
+   "titel": "Examenprogramma Bedrijfseconomie havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "bedrijfseconomie"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/examenprogramma-bedrijfseconomie/2020/f=/Examenprogramma_Bedrijfseconomie_havo.pdf",
+    "ingang": "vanaf CE 2020"
+   },
+   "aantal": 60,
+   "bestand": "examenprogramma-be-havo.json"
+  },
+  {
+   "id": "examenprogramma-be-vwo",
+   "titel": "Examenprogramma Bedrijfseconomie vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "bedrijfseconomie"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/examenprogramma-bedrijfseconomie-2/2021/f=/Examenprogramma_Bedrijfseconomie_vwo.pdf",
+    "ingang": "Vanaf CE 2021"
+   },
+   "aantal": 67,
+   "bestand": "examenprogramma-be-vwo.json"
+  },
+  {
+   "id": "examenprogramma-bv-vmbo",
+   "titel": "Examenprogramma Beeldende vorming vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/beeldende-vorming-vmbo/2020/f=/beeldendevorming.pdf",
+    "ingang": null
+   },
+   "aantal": 78,
+   "bestand": "examenprogramma-bv-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-bio-havo",
+   "titel": "Examenprogramma Biologie havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "biologie"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examen/biologie-havo-3/2020",
+    "ingang": "vanaf CE 2015"
+   },
+   "aantal": 84,
+   "bestand": "examenprogramma-bio-havo.json"
+  },
+  {
+   "id": "examenprogramma-bio-vmbo",
+   "titel": "Examenprogramma Biologie vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "biologie"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/biologie-vmbo-2/2020/f=/biologie.pdf",
+    "ingang": null
+   },
+   "aantal": 99,
+   "bestand": "examenprogramma-bio-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-bio-vwo",
+   "titel": "Examenprogramma Biologie vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "biologie"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/biologie-vwo-3/2020/f=/examenprogramma_biologie_vwo_2015_2016.pdf",
+    "ingang": "vanaf CE 2016"
+   },
+   "aantal": 84,
+   "bestand": "examenprogramma-bio-vwo.json"
+  },
+  {
+   "id": "examenprogramma-ckv-havo",
+   "titel": "Examenprogramma Culturele en kunstzinnige vorming havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "ckv"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/culturele-en-kunstzinnige-vorming-6/2020/f=/examenprogramma_culturele_en_kunstzinnige_vorming_havo_vanaf_2019.pdf",
+    "ingang": "Vanaf ex.jaar 2019"
+   },
+   "aantal": 30,
+   "bestand": "examenprogramma-ckv-havo.json"
+  },
+  {
+   "id": "examenprogramma-ckv-vwo",
+   "titel": "Examenprogramma Culturele en kunstzinnige vorming vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "ckv"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/culturele-en-kunstzinnige-vorming-7/2020/f=/examenprogramma_culturele_en_kunstzinnige_vorming_vwo_vanaf_2020.pdf",
+    "ingang": "Vanaf ex.jaar 2020"
+   },
+   "aantal": 30,
+   "bestand": "examenprogramma-ckv-vwo.json"
+  },
+  {
+   "id": "examenprogramma-dr-vmbo",
+   "titel": "Examenprogramma Drama vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "drama"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/drama-vmbo-2/2020/f=/drama.pdf",
+    "ingang": null
+   },
+   "aantal": 81,
+   "bestand": "examenprogramma-dr-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-ec-havo",
+   "titel": "Examenprogramma Economie havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "economie"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/economie-vwo-en-havo/2020/f=/examenprogramma_economie_havo_vwo_2015.pdf",
+    "ingang": "Vanaf CE 2014"
+   },
+   "aantal": 25,
+   "bestand": "examenprogramma-ec-havo.json"
+  },
+  {
+   "id": "examenprogramma-ec-vmbo",
+   "titel": "Examenprogramma Economie vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "economie"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/economie-vmbo-2/2020/f=/economie.pdf",
+    "ingang": null
+   },
+   "aantal": 78,
+   "bestand": "examenprogramma-ec-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-ec-vwo",
+   "titel": "Examenprogramma Economie vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "economie"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/syllabus-economie-vwo-2021/2021/f=/economie_vwo_2021_versie_2.pdf",
+    "ingang": "vanaf CE 2014"
+   },
+   "aantal": 26,
+   "bestand": "examenprogramma-ec-vwo.json"
+  },
+  {
+   "id": "examenprogramma-fi-havo",
+   "titel": "Examenprogramma Filosofie havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "filosofie"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/filosofie-havo-3/2020/f=/Examenprogramma_filosofie_havo.pdf",
+    "ingang": "vanaf CE 2020"
+   },
+   "aantal": 36,
+   "bestand": "examenprogramma-fi-havo.json"
+  },
+  {
+   "id": "examenprogramma-fi-vwo",
+   "titel": "Examenprogramma Filosofie vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "filosofie"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/filosofie-vwo-3/2020/f=/Examenprogramma_filosofie_vwo.pdf",
+    "ingang": "Vanaf CE 2020"
+   },
+   "aantal": 43,
+   "bestand": "examenprogramma-fi-vwo.json"
+  },
+  {
+   "id": "examenprogramma-gs-vmbo",
+   "titel": "Examenprogramma Geschiedenis en staatsinrichting vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "geschiedenis"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/geschiedenis-en-staatsinrichting-2/2020/f=/examenprogramma_geschiedenis_vmbo_vanaf_ce_2018.pdf",
+    "ingang": "Vanaf CE 2018"
+   },
+   "aantal": 98,
+   "bestand": "examenprogramma-gs-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-gs-havo",
+   "titel": "Examenprogramma Geschiedenis havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "geschiedenis"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/geschiedenis-havo-vanaf-2018/2020/f=/Examenprogramma_geschiedenis_havo_2018.pdf",
+    "ingang": "Vanaf CE 2018"
+   },
+   "aantal": 88,
+   "bestand": "examenprogramma-gs-havo.json"
+  },
+  {
+   "id": "examenprogramma-gs-vwo",
+   "titel": "Examenprogramma Geschiedenis vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "geschiedenis"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/geschiedenis-vwo-2/2020/f=/Examenprogramma_geschiedenis_vwo_vanaf_2015_wijziging_2013.pdf",
+    "ingang": "Vanaf CE 2015"
+   },
+   "aantal": 92,
+   "bestand": "examenprogramma-gs-vwo.json"
+  },
+  {
+   "id": "examenprogramma-gtc-vwo",
+   "titel": "Examenprogramma Griekse taal en cultuur vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "grieks"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/griekse-taal-en-cultuur-en/2020/f=/examenprogramma_gtc_en_ltc_vwo.pdf",
+    "ingang": "Augustus 2014"
+   },
+   "aantal": 24,
+   "bestand": "examenprogramma-gtc-vwo.json"
+  },
+  {
+   "id": "examenprogramma-tht-h-havo",
+   "titel": "Examenprogramma Handvaardigheid havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/handvaardigheid-havo/2020/f=/hv_havo.pdf",
+    "ingang": null
+   },
+   "aantal": 10,
+   "bestand": "examenprogramma-tht-h-havo.json"
+  },
+  {
+   "id": "examenprogramma-tht-h-vwo",
+   "titel": "Examenprogramma Handvaardigheid vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/handvaardigheid-vwo/2020/f=/hv_vwo.pdf",
+    "ingang": null
+   },
+   "aantal": 9,
+   "bestand": "examenprogramma-tht-h-vwo.json"
+  },
+  {
+   "id": "examenprogramma-inf-havo",
+   "titel": "Examenprogramma Informatica havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "informatica"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/informatica-havo-en-vwo-3/2020/f=/examenprogramma_Informatica_havo-vwo.pdf",
+    "ingang": "Vanaf schooljaar 2019"
+   },
+   "aantal": 146,
+   "bestand": "examenprogramma-inf-havo.json"
+  },
+  {
+   "id": "examenprogramma-inf-vwo",
+   "titel": "Examenprogramma Informatica vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "informatica"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/informatica-havo-en-vwo-3/2020/f=/examenprogramma_Informatica_havo-vwo.pdf",
+    "ingang": "Vanaf schooljaar 2019"
+   },
+   "aantal": 146,
+   "bestand": "examenprogramma-inf-vwo.json"
+  },
+  {
+   "id": "examenprogramma-kua-havo",
+   "titel": "Examenprogramma Kunst (algemeen) havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/kunst-algemeen-havo/2020/f=/kunstalg_havovwo.pdf",
+    "ingang": null
+   },
+   "aantal": 25,
+   "bestand": "examenprogramma-kua-havo.json"
+  },
+  {
+   "id": "examenprogramma-kua-vwo",
+   "titel": "Examenprogramma Kunst (algemeen) vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/kunst-algemeen-havo/2020/f=/kunstalg_havovwo.pdf",
+    "ingang": null
+   },
+   "aantal": 26,
+   "bestand": "examenprogramma-kua-vwo.json"
+  },
+  {
+   "id": "examenprogramma-kubv-havo",
+   "titel": "Examenprogramma Kunst (beeldende vormgeving) havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/kunst-beeldende-vormgeving-havo/2020/f=/kunstbv_havo.pdf",
+    "ingang": null
+   },
+   "aantal": 11,
+   "bestand": "examenprogramma-kubv-havo.json"
+  },
+  {
+   "id": "examenprogramma-kubv-vwo",
+   "titel": "Examenprogramma Kunst (beeldende vormgeving) vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/kunst-beeldende-vormgeving-havo/2020/f=/kunstbv_havo.pdf",
+    "ingang": null
+   },
+   "aantal": 11,
+   "bestand": "examenprogramma-kubv-vwo.json"
+  },
+  {
+   "id": "examenprogramma-kudr-havo",
+   "titel": "Examenprogramma Kunst (drama) havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "drama"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/kunst-drama-havo/2020/f=/kunstdrama_havo.pdf",
+    "ingang": null
+   },
+   "aantal": 24,
+   "bestand": "examenprogramma-kudr-havo.json"
+  },
+  {
+   "id": "examenprogramma-kudr-vwo",
+   "titel": "Examenprogramma Kunst (drama) vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "drama"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/kunst-drama-vwo/2020/f=/kunst_drama_vwo.pdf",
+    "ingang": null
+   },
+   "aantal": 27,
+   "bestand": "examenprogramma-kudr-vwo.json"
+  },
+  {
+   "id": "examenprogramma-kumu-havo",
+   "titel": "Examenprogramma Kunst (muziek) havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "muziek"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/kunst-muziek-havo/2020/f=/kunstmuz_havo.pdf",
+    "ingang": null
+   },
+   "aantal": 21,
+   "bestand": "examenprogramma-kumu-havo.json"
+  },
+  {
+   "id": "examenprogramma-kumu-vwo",
+   "titel": "Examenprogramma Kunst (muziek) vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "muziek"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/kunst-muziek-vwo/2020/f=/kunstmuz_vwo.pdf",
+    "ingang": null
+   },
+   "aantal": 21,
+   "bestand": "examenprogramma-kumu-vwo.json"
+  },
+  {
+   "id": "examenprogramma-kv-vmbo",
+   "titel": "Examenprogramma Kunstvakken incl. CKV vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "ckv"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/examenprogramma-kunstvakken/2020/f=/Examenprogramma_kunstvakken_inclusief_ckv.pdf",
+    "ingang": "vanaf schooljaar 2018-2019"
+   },
+   "aantal": 8,
+   "bestand": "examenprogramma-kv-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-ltc-vwo",
+   "titel": "Examenprogramma Latijnse taal en cultuur vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "latijn"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/griekse-taal-en-cultuur-en/2020/f=/examenprogramma_gtc_en_ltc_vwo.pdf",
+    "ingang": "Augustus 2014"
+   },
+   "aantal": 24,
+   "bestand": "examenprogramma-ltc-vwo.json"
+  },
+  {
+   "id": "examenprogramma-lo1-vmbo",
+   "titel": "Examenprogramma Lichamelijke opvoeding 1 vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "lo"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/lichamelijke-opvoeding-vmbo-2/2020/f=/lichamelijke_oefening1.pdf",
+    "ingang": null
+   },
+   "aantal": 71,
+   "bestand": "examenprogramma-lo1-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-lo2-vmbo",
+   "titel": "Examenprogramma Lichamelijke opvoeding 2 vmbo gl/tl",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "lo"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/lichamelijke-opvoeding-2-vmbo/2020/f=/examenprogramma_lo2_vmbo_20120213.pdf",
+    "ingang": null
+   },
+   "aantal": 81,
+   "bestand": "examenprogramma-lo2-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-lo-havo",
+   "titel": "Examenprogramma Lichamelijke opvoeding havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "lo"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/lichamelijke-opvoeding-vwo-3/2020/f=/lo_havovwo.pdf",
+    "ingang": null
+   },
+   "aantal": 14,
+   "bestand": "examenprogramma-lo-havo.json"
+  },
+  {
+   "id": "examenprogramma-lo-v",
+   "titel": "Examenprogramma Lichamelijke opvoeding vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "lo"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": null,
+    "ingang": null
+   },
+   "aantal": 14,
+   "bestand": "examenprogramma-lo-v.json"
+  },
+  {
+   "id": "examenprogramma-ml-havo",
+   "titel": "Examenprogramma Maatschappijleer havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "maatschappijleer"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/maatschappijleer-havo-2/2020/f=/mijleer_havo.pdf",
+    "ingang": null
+   },
+   "aantal": 56,
+   "bestand": "examenprogramma-ml-havo.json"
+  },
+  {
+   "id": "examenprogramma-ml-vmbo",
+   "titel": "Examenprogramma Maatschappijleer vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "maatschappijleer"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/maatschappijleer-gemeenschappelijk/2020/f=/maatschappijleer1.pdf",
+    "ingang": null
+   },
+   "aantal": 85,
+   "bestand": "examenprogramma-ml-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-ml-vwo",
+   "titel": "Examenprogramma Maatschappijleer vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "maatschappijleer"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/management-en-organisatie-vwo-2/2020/f=/examenprogramma_management_en_organisatie_vwo.pdf",
+    "ingang": null
+   },
+   "aantal": 65,
+   "bestand": "examenprogramma-ml-vwo.json"
+  },
+  {
+   "id": "examenprogramma-mvt-dui-h",
+   "titel": "Examenprogramma Moderne vreemde talen Duits havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "duits"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": null,
+    "ingang": null
+   },
+   "aantal": 35,
+   "bestand": "examenprogramma-mvt-dui-h.json"
+  },
+  {
+   "id": "examenprogramma-du-vmbo",
+   "titel": "Examenprogramma Moderne vreemde talen Duits vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "duits"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/duits-vmbo/2020/f=/duits.pdf",
+    "ingang": null
+   },
+   "aantal": 88,
+   "bestand": "examenprogramma-du-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-mvt-dui-v",
+   "titel": "Examenprogramma Moderne vreemde talen Duits vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "duits"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": null,
+    "ingang": null
+   },
+   "aantal": 40,
+   "bestand": "examenprogramma-mvt-dui-v.json"
+  },
+  {
+   "id": "examenprogramma-mvt-en-h",
+   "titel": "Examenprogramma Moderne vreemde talen Engels havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/moderne-vreemde-talen-havo/2020/f=/mvt_havovwo.pdf",
+    "ingang": null
+   },
+   "aantal": 36,
+   "bestand": "examenprogramma-mvt-en-h.json"
+  },
+  {
+   "id": "examenprogramma-en-vmbo",
+   "titel": "Examenprogramma Moderne vreemde talen Engels vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/engels-vmbo-2/2020/f=/Examenprogramma_Engelse_taal_vanaf_CE_2017_def.pdf",
+    "ingang": "Vanaf CE 2017"
+   },
+   "aantal": 89,
+   "bestand": "examenprogramma-en-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-mvt-en-v",
+   "titel": "Examenprogramma Moderne vreemde talen Engels vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": null,
+    "ingang": null
+   },
+   "aantal": 40,
+   "bestand": "examenprogramma-mvt-en-v.json"
+  },
+  {
+   "id": "examenprogramma-mvt-fa-h",
+   "titel": "Examenprogramma Moderne vreemde talen Frans havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "frans"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": null,
+    "ingang": null
+   },
+   "aantal": 35,
+   "bestand": "examenprogramma-mvt-fa-h.json"
+  },
+  {
+   "id": "examenprogramma-fa-vmbo",
+   "titel": "Examenprogramma Moderne vreemde talen Frans vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "frans"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/frans-vmbo/2020/f=/frans.pdf",
+    "ingang": null
+   },
+   "aantal": 88,
+   "bestand": "examenprogramma-fa-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-mvt-fa-v",
+   "titel": "Examenprogramma Moderne vreemde talen Frans vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "frans"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": null,
+    "ingang": null
+   },
+   "aantal": 40,
+   "bestand": "examenprogramma-mvt-fa-v.json"
+  },
+  {
+   "id": "examenprogramma-mu-havo",
+   "titel": "Examenprogramma Muziek havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "muziek"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/muziek-havo/2020/f=/muz_havo.pdf",
+    "ingang": null
+   },
+   "aantal": 23,
+   "bestand": "examenprogramma-mu-havo.json"
+  },
+  {
+   "id": "examenprogramma-mu-vmbo",
+   "titel": "Examenprogramma Muziek vmbo gl/tl",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "muziek"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/muziek-vmbo-2/2020/f=/muziek.pdf",
+    "ingang": null
+   },
+   "aantal": 78,
+   "bestand": "examenprogramma-mu-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-mu-vwo",
+   "titel": "Examenprogramma Muziek vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "muziek"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/muziek-vwo/2020/f=/muz_vwo.pdf",
+    "ingang": null
+   },
+   "aantal": 23,
+   "bestand": "examenprogramma-mu-vwo.json"
+  },
+  {
+   "id": "examenprogramma-nask1-vmbo",
+   "titel": "Examenprogramma Natuur- en scheikunde I vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/natuur-en-scheikunde-1-vmbo/2020/f=/nask1.pdf",
+    "ingang": null
+   },
+   "aantal": 122,
+   "bestand": "examenprogramma-nask1-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-nask2-vmbo",
+   "titel": "Examenprogramma Natuur- en scheikunde II vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "scheikunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/natuur-en-scheikunde-2-vmbo/2019/f=/nask2.pdf",
+    "ingang": null
+   },
+   "aantal": 98,
+   "bestand": "examenprogramma-nask2-vmbo.json"
+  },
+  {
+   "id": "examenprogramma-na-havo",
+   "titel": "Examenprogramma Natuurkunde havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/natuurkunde-havo-2/2020/f=/examenprogramma_natuurkunde_havo_2014_2015.pdf",
+    "ingang": "Vanaf CE 2015"
+   },
+   "aantal": 69,
+   "bestand": "examenprogramma-na-havo.json"
+  },
+  {
+   "id": "examenprogramma-na-vwo",
+   "titel": "Examenprogramma Natuurkunde vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/natuurkunde-vwo-2/2020/f=/examenprogramma_natuurkunde_vwo_2015_2016.pdf",
+    "ingang": "Vanaf CE 2016"
+   },
+   "aantal": 74,
+   "bestand": "examenprogramma-na-vwo.json"
+  },
+  {
+   "id": "examenprogramma-ne-h",
+   "titel": "Examenprogramma Nederlandse taal en literatuur havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/nederlandse-taal-en-literatuur-2/2020/f=/examenprogramma_nederlands_havo_vwo_2014.pdf",
+    "ingang": "Vanaf CE 2014"
+   },
+   "aantal": 33,
+   "bestand": "examenprogramma-ne-h.json"
+  },
+  {
+   "id": "examenprogramma-ne-vwo",
+   "titel": "Examenprogramma Nederlandse taal en literatuur vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": null,
+    "ingang": null
+   },
+   "aantal": 33,
+   "bestand": "examenprogramma-ne-vwo.json"
+  },
+  {
+   "id": "examenprogramma-ne-vmbo",
+   "titel": "Examenprogramma Nederlandse taal vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/nederlands-vmbo-3/2020/f=/examenprogramma_nederlands_vmbo_2014.pdf",
+    "ingang": "Vanaf CE 2014"
+   },
+   "aantal": 104,
+   "bestand": "examenprogramma-ne-vmbo.json"
+  },
+  {
+   "id": "nieuw-examenprogramma-praktijkgericht-programma-dienstverlening-en-producten",
+   "titel": "Examenprogramma praktijkgericht programma Dienstverlening en Producten",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "dp"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 20,
+   "bestand": "nieuw-examenprogramma-praktijkgericht-programma-dienstverlening-en-producten.json"
+  },
+  {
+   "id": "nieuw-examenprogramma-praktijkgericht-programma-technologie-en-toepassing",
+   "titel": "Examenprogramma praktijkgericht programma Technologie en Toepassing",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "tt"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 20,
+   "bestand": "nieuw-examenprogramma-praktijkgericht-programma-technologie-en-toepassing.json"
+  },
+  {
+   "id": "examenprogramma-sk-havo",
+   "titel": "Examenprogramma Scheikunde havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "scheikunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/scheikunde-havo-3/2020/f=/examenprogramma_scheikunde_havo_2014_2015.pdf",
+    "ingang": "Vanaf CE 2015"
+   },
+   "aantal": 97,
+   "bestand": "examenprogramma-sk-havo.json"
+  },
+  {
+   "id": "examenprogramma-sk-vwo",
+   "titel": "Examenprogramma Scheikunde vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "scheikunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/scheikunde-vwo-3/2020/f=/examenprogramma_scheikunde_vwo_2015_2016.pdf",
+    "ingang": "Vanaf CE 2016"
+   },
+   "aantal": 103,
+   "bestand": "examenprogramma-sk-vwo.json"
+  },
+  {
+   "id": "examenprogramma-tht-t-havo",
+   "titel": "Examenprogramma Tekenen havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/tekenen-havo/2020/f=/tek_havo.pdf",
+    "ingang": null
+   },
+   "aantal": 10,
+   "bestand": "examenprogramma-tht-t-havo.json"
+  },
+  {
+   "id": "examenprogramma-tht-t-vwo",
+   "titel": "Examenprogramma Tekenen vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/tekenen-vwo/2020/f=/tek_vwo.pdf",
+    "ingang": null
+   },
+   "aantal": 9,
+   "bestand": "examenprogramma-tht-t-vwo.json"
+  },
+  {
+   "id": "examenprogramma-tht-tv-havo",
+   "titel": "Examenprogramma Textiele vormgeving havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/textiele-vormgeving-havo/2020/f=/tw_havo.pdf",
+    "ingang": null
+   },
+   "aantal": 10,
+   "bestand": "examenprogramma-tht-tv-havo.json"
+  },
+  {
+   "id": "examenprogramma-tht-tv-vwo",
+   "titel": "Examenprogramma Textiele vormgeving vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/textiele-vormgeving-vwo/2020/f=/tw_vwo.pdf",
+    "ingang": null
+   },
+   "aantal": 9,
+   "bestand": "examenprogramma-tht-tv-vwo.json"
+  },
+  {
+   "id": "examenprogramma-wi-a-havo",
+   "titel": "Examenprogramma Wiskunde A havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/wiskunde-a-havo-2/2020/f=/examenprogramma_wiskunde_a_havo.pdf",
+    "ingang": "vanaf CE 2017"
+   },
+   "aantal": 40,
+   "bestand": "examenprogramma-wi-a-havo.json"
+  },
+  {
+   "id": "examenprogramma-wi-a-vwo",
+   "titel": "Examenprogramma Wiskunde A vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/wiskunde-a-vwo-2/2020/f=/examenprogramma_wiskunde_a_vwo.pdf",
+    "ingang": "Vanaf CE 2018"
+   },
+   "aantal": 41,
+   "bestand": "examenprogramma-wi-a-vwo.json"
+  },
+  {
+   "id": "examenprogramma-wi-b-havo",
+   "titel": "Examenprogramma Wiskunde B havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/wiskunde-b-havo-2/2020/f=/Examenprogramma_wiskunde_B_havo_versie_van_OCW_CORRECTIE_DEC_2017.pdf",
+    "ingang": "Vanaf CE 2017"
+   },
+   "aantal": 30,
+   "bestand": "examenprogramma-wi-b-havo.json"
+  },
+  {
+   "id": "examenprogramma-wi-b-vwo",
+   "titel": "Examenprogramma Wiskunde B vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/wiskunde-b-vwo-2/2020/f=/Examenprogramma_wiskunde_B_vwo%20_%20versie_van_OCW_CORRECTIE_DEC_2017.pdf",
+    "ingang": "Vanaf CE 2018"
+   },
+   "aantal": 40,
+   "bestand": "examenprogramma-wi-b-vwo.json"
+  },
+  {
+   "id": "examenprogramma-wi-c-vwo",
+   "titel": "Examenprogramma Wiskunde C vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/wiskunde-c-vwo-2/2020/f=/examenprogramma_wiskunde_c_vwo.pdf",
+    "ingang": "Vanaf CE 2018"
+   },
+   "aantal": 35,
+   "bestand": "examenprogramma-wi-c-vwo.json"
+  },
+  {
+   "id": "examenprogramma-wi-d-havo",
+   "titel": "Examenprogramma Wiskunde D havo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/wiskunde-d-havo-gewijzigd/2020/f=/examenprogramma_wiskunde_d_havo.pdf",
+    "ingang": "vanaf schooljaar 2016-2017"
+   },
+   "aantal": 33,
+   "bestand": "examenprogramma-wi-d-havo.json"
+  },
+  {
+   "id": "examenprogramma-wi-d-vwo",
+   "titel": "Examenprogramma Wiskunde D vwo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/wiskunde-d-vwo-gewijzigd/2020/f=/examenprogramma_wiskunde_dvwo.pdf",
+    "ingang": "vanaf schooljaar 2017-2018"
+   },
+   "aantal": 47,
+   "bestand": "examenprogramma-wi-d-vwo.json"
+  },
+  {
+   "id": "examenprogramma-wi-vmbo",
+   "titel": "Examenprogramma Wiskunde vmbo",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO, examenprogramma",
+    "repo": "slonl/curriculum-examenprogramma",
+    "versie": "2026-10-15",
+    "url": "https://www.examenblad.nl/examenstof/wiskunde-vmbo-2/2020/f=/wiskunde.pdf",
+    "ingang": "Vanaf CE 2017"
+   },
+   "aantal": 91,
+   "bestand": "examenprogramma-wi-vmbo.json"
+  },
+  {
+   "id": "nieuw-definitief-conceptexamenprogramma-onderzoek-en-ontwerpen-havo",
+   "titel": "Definitief conceptexamenprogramma onderzoek en ontwerpen havo",
+   "soort": "examenprogramma",
+   "status": "concept",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "oo"
+   ],
+   "bron": {
+    "naam": "SLO, conceptexamenprogramma",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 36,
+   "bestand": "nieuw-definitief-conceptexamenprogramma-onderzoek-en-ontwerpen-havo.json"
+  },
+  {
+   "id": "nieuw-definitief-conceptexamenprogramma-onderzoek-en-ontwerpen-vwo",
+   "titel": "Definitief conceptexamenprogramma onderzoek en ontwerpen vwo",
+   "soort": "examenprogramma",
+   "status": "concept",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "oo"
+   ],
+   "bron": {
+    "naam": "SLO, conceptexamenprogramma",
+    "repo": "slonl/curriculum-fo",
+    "versie": "2026-10-15"
+   },
+   "aantal": 36,
+   "bestand": "nieuw-definitief-conceptexamenprogramma-onderzoek-en-ontwerpen-vwo.json"
+  },
+  {
+   "id": "syllabus-aardrijkskunde-havo-2024",
+   "titel": "Syllabus Aardrijkskunde havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "aardrijkskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 55,
+   "bestand": "syllabus-aardrijkskunde-havo-2024.json"
+  },
+  {
+   "id": "syllabus-aardrijkskunde-vmbo-bb-2024",
+   "titel": "Syllabus Aardrijkskunde vmbo bb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb"
+   ],
+   "vakken": [
+    "aardrijkskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 50,
+   "bestand": "syllabus-aardrijkskunde-vmbo-bb-2024.json"
+  },
+  {
+   "id": "syllabus-aardrijkskunde-vmbo-gl-2024",
+   "titel": "Syllabus Aardrijkskunde vmbo gl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "aardrijkskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 75,
+   "bestand": "syllabus-aardrijkskunde-vmbo-gl-2024.json"
+  },
+  {
+   "id": "syllabus-aardrijkskunde-vmbo-kb-2024",
+   "titel": "Syllabus Aardrijkskunde vmbo kb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-kb"
+   ],
+   "vakken": [
+    "aardrijkskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 63,
+   "bestand": "syllabus-aardrijkskunde-vmbo-kb-2024.json"
+  },
+  {
+   "id": "syllabus-aardrijkskunde-vmbo-tl-2024",
+   "titel": "Syllabus Aardrijkskunde vmbo tl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "aardrijkskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 75,
+   "bestand": "syllabus-aardrijkskunde-vmbo-tl-2024.json"
+  },
+  {
+   "id": "syllabus-aardrijkskunde-vwo-2024",
+   "titel": "Syllabus Aardrijkskunde vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "aardrijkskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 75,
+   "bestand": "syllabus-aardrijkskunde-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-bedrijfseconomie-havo-2024",
+   "titel": "Syllabus Bedrijfseconomie havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "bedrijfseconomie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 125,
+   "bestand": "syllabus-bedrijfseconomie-havo-2024.json"
+  },
+  {
+   "id": "syllabus-bedrijfseconomie-vwo-2024",
+   "titel": "Syllabus Bedrijfseconomie vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "bedrijfseconomie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 162,
+   "bestand": "syllabus-bedrijfseconomie-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-beeldende-vakken-vwo-2023",
+   "titel": "Syllabus Beeldende vakken vwo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 4,
+   "bestand": "syllabus-beeldende-vakken-vwo-2023.json"
+  },
+  {
+   "id": "syllabus-biologie-havo-2024",
+   "titel": "Syllabus Biologie havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "biologie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 159,
+   "bestand": "syllabus-biologie-havo-2024.json"
+  },
+  {
+   "id": "syllabus-biologie-vmbo-bb-2024",
+   "titel": "Syllabus Biologie vmbo bb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb"
+   ],
+   "vakken": [
+    "biologie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 121,
+   "bestand": "syllabus-biologie-vmbo-bb-2024.json"
+  },
+  {
+   "id": "syllabus-biologie-vmbo-gl-2024",
+   "titel": "Syllabus Biologie vmbo gl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "biologie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 197,
+   "bestand": "syllabus-biologie-vmbo-gl-2024.json"
+  },
+  {
+   "id": "syllabus-biologie-vmbo-kb-2024",
+   "titel": "Syllabus Biologie vmbo kb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-kb"
+   ],
+   "vakken": [
+    "biologie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 154,
+   "bestand": "syllabus-biologie-vmbo-kb-2024.json"
+  },
+  {
+   "id": "syllabus-biologie-vmbo-tl-2024",
+   "titel": "Syllabus Biologie vmbo tl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "biologie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 197,
+   "bestand": "syllabus-biologie-vmbo-tl-2024.json"
+  },
+  {
+   "id": "syllabus-biologie-vwo-2024",
+   "titel": "Syllabus Biologie vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "biologie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 201,
+   "bestand": "syllabus-biologie-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-economie-havo-2024",
+   "titel": "Syllabus Economie havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "economie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 143,
+   "bestand": "syllabus-economie-havo-2024.json"
+  },
+  {
+   "id": "syllabus-economie-vmbo-bb-2024",
+   "titel": "Syllabus Economie vmbo bb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb"
+   ],
+   "vakken": [
+    "economie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 147,
+   "bestand": "syllabus-economie-vmbo-bb-2024.json"
+  },
+  {
+   "id": "syllabus-economie-vmbo-gl-2024",
+   "titel": "Syllabus Economie vmbo gl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "economie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 290,
+   "bestand": "syllabus-economie-vmbo-gl-2024.json"
+  },
+  {
+   "id": "syllabus-economie-vmbo-kb-2024",
+   "titel": "Syllabus Economie vmbo kb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-kb"
+   ],
+   "vakken": [
+    "economie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 220,
+   "bestand": "syllabus-economie-vmbo-kb-2024.json"
+  },
+  {
+   "id": "syllabus-economie-vmbo-tl-2024",
+   "titel": "Syllabus Economie vmbo tl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "economie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 290,
+   "bestand": "syllabus-economie-vmbo-tl-2024.json"
+  },
+  {
+   "id": "syllabus-economie-vwo-2024",
+   "titel": "Syllabus Economie vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "economie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 228,
+   "bestand": "syllabus-economie-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-filosofie-havo-2024",
+   "titel": "Syllabus Filosofie havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "filosofie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 109,
+   "bestand": "syllabus-filosofie-havo-2024.json"
+  },
+  {
+   "id": "syllabus-filosofie-vwo-2024",
+   "titel": "Syllabus Filosofie vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "filosofie"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 98,
+   "bestand": "syllabus-filosofie-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-geschiedenis-en-staatsinrichting-vmbo-bb-2024",
+   "titel": "Syllabus Geschiedenis en staatsinrichting vmbo bb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb"
+   ],
+   "vakken": [
+    "geschiedenis"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 37,
+   "bestand": "syllabus-geschiedenis-en-staatsinrichting-vmbo-bb-2024.json"
+  },
+  {
+   "id": "syllabus-geschiedenis-en-staatsinrichting-vmbo-gl-2024",
+   "titel": "Syllabus Geschiedenis en staatsinrichting vmbo gl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "geschiedenis"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 43,
+   "bestand": "syllabus-geschiedenis-en-staatsinrichting-vmbo-gl-2024.json"
+  },
+  {
+   "id": "syllabus-geschiedenis-en-staatsinrichting-vmbo-kb-2024",
+   "titel": "Syllabus Geschiedenis en staatsinrichting vmbo kb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-kb"
+   ],
+   "vakken": [
+    "geschiedenis"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 40,
+   "bestand": "syllabus-geschiedenis-en-staatsinrichting-vmbo-kb-2024.json"
+  },
+  {
+   "id": "syllabus-geschiedenis-en-staatsinrichting-vmbo-tl-2024",
+   "titel": "Syllabus Geschiedenis en staatsinrichting vmbo tl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "geschiedenis"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 43,
+   "bestand": "syllabus-geschiedenis-en-staatsinrichting-vmbo-tl-2024.json"
+  },
+  {
+   "id": "syllabus-geschiedenis-havo-2024",
+   "titel": "Syllabus Geschiedenis havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "geschiedenis"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 27,
+   "bestand": "syllabus-geschiedenis-havo-2024.json"
+  },
+  {
+   "id": "syllabus-geschiedenis-vwo-2024",
+   "titel": "Syllabus Geschiedenis vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "geschiedenis"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 28,
+   "bestand": "syllabus-geschiedenis-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-griekse-taal-en-cultuur-vwo-2024",
+   "titel": "Syllabus Griekse taal en cultuur vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "grieks"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 9,
+   "bestand": "syllabus-griekse-taal-en-cultuur-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-handvaardigheid-havo-2023",
+   "titel": "Syllabus Handvaardigheid havo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2022"
+   },
+   "aantal": 12,
+   "bestand": "syllabus-handvaardigheid-havo-2023.json"
+  },
+  {
+   "id": "syllabus-kunst-algemeen-havo-2023",
+   "titel": "Syllabus Kunst (algemeen) havo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "kunst",
+    "muziek",
+    "drama"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 4,
+   "bestand": "syllabus-kunst-algemeen-havo-2023.json"
+  },
+  {
+   "id": "syllabus-kunst-algemeen-vwo-2024",
+   "titel": "Syllabus Kunst (algemeen) vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "kunst",
+    "muziek",
+    "drama"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 5,
+   "bestand": "syllabus-kunst-algemeen-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-latijnse-taal-en-cultuur-vwo-2024",
+   "titel": "Syllabus Latijnse taal en cultuur vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "latijn"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 15,
+   "bestand": "syllabus-latijnse-taal-en-cultuur-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-duits-havo-2023",
+   "titel": "Syllabus Moderne vreemde talen Duits havo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "duits"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-duits-havo-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-duits-vmbo-bb-2023",
+   "titel": "Syllabus Moderne vreemde talen Duits vmbo bb 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb"
+   ],
+   "vakken": [
+    "duits"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-duits-vmbo-bb-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-duits-vmbo-gl-2023",
+   "titel": "Syllabus Moderne vreemde talen Duits vmbo gl 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "duits"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-duits-vmbo-gl-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-duits-vmbo-kb-2023",
+   "titel": "Syllabus Moderne vreemde talen Duits vmbo kb 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-kb"
+   ],
+   "vakken": [
+    "duits"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-duits-vmbo-kb-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-duits-vmbo-tl-2023",
+   "titel": "Syllabus Moderne vreemde talen Duits vmbo tl 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "duits"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-duits-vmbo-tl-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-duits-vwo-2023",
+   "titel": "Syllabus Moderne vreemde talen Duits vwo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "duits"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-duits-vwo-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-engels-havo-2023",
+   "titel": "Syllabus Moderne vreemde talen Engels havo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-engels-havo-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-engels-vmbo-bb-2023",
+   "titel": "Syllabus Moderne vreemde talen Engels vmbo bb 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-engels-vmbo-bb-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-engels-vmbo-gl-2023",
+   "titel": "Syllabus Moderne vreemde talen Engels vmbo gl 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-engels-vmbo-gl-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-engels-vmbo-kb-2023",
+   "titel": "Syllabus Moderne vreemde talen Engels vmbo kb 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-kb"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-engels-vmbo-kb-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-engels-vmbo-tl-2023",
+   "titel": "Syllabus Moderne vreemde talen Engels vmbo tl 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-engels-vmbo-tl-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-engels-vwo-2023",
+   "titel": "Syllabus Moderne vreemde talen Engels vwo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "engels"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-engels-vwo-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-frans-havo-2023",
+   "titel": "Syllabus Moderne vreemde talen Frans havo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "frans"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-frans-havo-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-frans-vmbo-bb-2023",
+   "titel": "Syllabus Moderne vreemde talen Frans vmbo bb 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb"
+   ],
+   "vakken": [
+    "frans"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-frans-vmbo-bb-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-frans-vmbo-gl-2023",
+   "titel": "Syllabus Moderne vreemde talen Frans vmbo gl 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "frans"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-frans-vmbo-gl-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-frans-vmbo-kb-2023",
+   "titel": "Syllabus Moderne vreemde talen Frans vmbo kb 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-kb"
+   ],
+   "vakken": [
+    "frans"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-frans-vmbo-kb-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-frans-vmbo-tl-2023",
+   "titel": "Syllabus Moderne vreemde talen Frans vmbo tl 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "frans"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-frans-vmbo-tl-2023.json"
+  },
+  {
+   "id": "syllabus-moderne-vreemde-talen-frans-vwo-2023",
+   "titel": "Syllabus Moderne vreemde talen Frans vwo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "frans"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 2,
+   "bestand": "syllabus-moderne-vreemde-talen-frans-vwo-2023.json"
+  },
+  {
+   "id": "syllabus-natuur-en-scheikunde-i-vmbo-bb-2024",
+   "titel": "Syllabus Natuur- en scheikunde I vmbo bb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 48,
+   "bestand": "syllabus-natuur-en-scheikunde-i-vmbo-bb-2024.json"
+  },
+  {
+   "id": "syllabus-natuur-en-scheikunde-i-vmbo-gl-2024",
+   "titel": "Syllabus Natuur- en scheikunde I vmbo gl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 70,
+   "bestand": "syllabus-natuur-en-scheikunde-i-vmbo-gl-2024.json"
+  },
+  {
+   "id": "syllabus-natuur-en-scheikunde-i-vmbo-kb-2024",
+   "titel": "Syllabus Natuur- en scheikunde I vmbo kb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-kb"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 65,
+   "bestand": "syllabus-natuur-en-scheikunde-i-vmbo-kb-2024.json"
+  },
+  {
+   "id": "syllabus-natuur-en-scheikunde-i-vmbo-tl-2024",
+   "titel": "Syllabus Natuur- en scheikunde I vmbo tl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 70,
+   "bestand": "syllabus-natuur-en-scheikunde-i-vmbo-tl-2024.json"
+  },
+  {
+   "id": "syllabus-natuur-en-scheikunde-ii-vmbo-gl-2024",
+   "titel": "Syllabus Natuur- en scheikunde II vmbo gl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "scheikunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 91,
+   "bestand": "syllabus-natuur-en-scheikunde-ii-vmbo-gl-2024.json"
+  },
+  {
+   "id": "syllabus-natuur-en-scheikunde-ii-vmbo-tl-2024",
+   "titel": "Syllabus Natuur- en scheikunde II vmbo tl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "scheikunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 91,
+   "bestand": "syllabus-natuur-en-scheikunde-ii-vmbo-tl-2024.json"
+  },
+  {
+   "id": "syllabus-natuurkunde-havo-2024",
+   "titel": "Syllabus Natuurkunde havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 112,
+   "bestand": "syllabus-natuurkunde-havo-2024.json"
+  },
+  {
+   "id": "syllabus-natuurkunde-vwo-2024",
+   "titel": "Syllabus Natuurkunde vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "natuurkunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 131,
+   "bestand": "syllabus-natuurkunde-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-nederlandse-taal-havo-2024",
+   "titel": "Syllabus Nederlandse taal havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 30,
+   "bestand": "syllabus-nederlandse-taal-havo-2024.json"
+  },
+  {
+   "id": "syllabus-nederlandse-taal-vmbo-bb-2024",
+   "titel": "Syllabus Nederlandse taal vmbo bb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 28,
+   "bestand": "syllabus-nederlandse-taal-vmbo-bb-2024.json"
+  },
+  {
+   "id": "syllabus-nederlandse-taal-vmbo-gl-2024",
+   "titel": "Syllabus Nederlandse taal vmbo gl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 21,
+   "bestand": "syllabus-nederlandse-taal-vmbo-gl-2024.json"
+  },
+  {
+   "id": "syllabus-nederlandse-taal-vmbo-kb-2024",
+   "titel": "Syllabus Nederlandse taal vmbo kb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-kb"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 29,
+   "bestand": "syllabus-nederlandse-taal-vmbo-kb-2024.json"
+  },
+  {
+   "id": "syllabus-nederlandse-taal-vmbo-tl-2024",
+   "titel": "Syllabus Nederlandse taal vmbo tl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 21,
+   "bestand": "syllabus-nederlandse-taal-vmbo-tl-2024.json"
+  },
+  {
+   "id": "syllabus-nederlandse-taal-vwo-2024",
+   "titel": "Syllabus Nederlandse taal vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "nederlands"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 30,
+   "bestand": "syllabus-nederlandse-taal-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-scheikunde-havo-2024",
+   "titel": "Syllabus Scheikunde havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "scheikunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 154,
+   "bestand": "syllabus-scheikunde-havo-2024.json"
+  },
+  {
+   "id": "syllabus-scheikunde-vwo-2024",
+   "titel": "Syllabus Scheikunde vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "scheikunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 188,
+   "bestand": "syllabus-scheikunde-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-tekenen-havo-2023",
+   "titel": "Syllabus Tekenen havo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 12,
+   "bestand": "syllabus-tekenen-havo-2023.json"
+  },
+  {
+   "id": "syllabus-textiele-vormgeving-havo-2023",
+   "titel": "Syllabus Textiele vormgeving havo 2023",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "kunst"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2023"
+   },
+   "aantal": 12,
+   "bestand": "syllabus-textiele-vormgeving-havo-2023.json"
+  },
+  {
+   "id": "syllabus-wiskunde-a-havo-2024",
+   "titel": "Syllabus Wiskunde A havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 99,
+   "bestand": "syllabus-wiskunde-a-havo-2024.json"
+  },
+  {
+   "id": "syllabus-wiskunde-a-vwo-2024",
+   "titel": "Syllabus Wiskunde A vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 78,
+   "bestand": "syllabus-wiskunde-a-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-wiskunde-b-havo-2024",
+   "titel": "Syllabus Wiskunde B havo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "havo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 116,
+   "bestand": "syllabus-wiskunde-b-havo-2024.json"
+  },
+  {
+   "id": "syllabus-wiskunde-b-vwo-2024",
+   "titel": "Syllabus Wiskunde B vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 168,
+   "bestand": "syllabus-wiskunde-b-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-wiskunde-c-vwo-2024",
+   "titel": "Syllabus Wiskunde C vwo 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vwo"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 103,
+   "bestand": "syllabus-wiskunde-c-vwo-2024.json"
+  },
+  {
+   "id": "syllabus-wiskunde-vmbo-bb-2024",
+   "titel": "Syllabus Wiskunde vmbo bb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 68,
+   "bestand": "syllabus-wiskunde-vmbo-bb-2024.json"
+  },
+  {
+   "id": "syllabus-wiskunde-vmbo-gl-2024",
+   "titel": "Syllabus Wiskunde vmbo gl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 125,
+   "bestand": "syllabus-wiskunde-vmbo-gl-2024.json"
+  },
+  {
+   "id": "syllabus-wiskunde-vmbo-kb-2024",
+   "titel": "Syllabus Wiskunde vmbo kb 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-kb"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 96,
+   "bestand": "syllabus-wiskunde-vmbo-kb-2024.json"
+  },
+  {
+   "id": "syllabus-wiskunde-vmbo-tl-2024",
+   "titel": "Syllabus Wiskunde vmbo tl 2024",
+   "soort": "syllabus",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-gltl"
+   ],
+   "vakken": [
+    "wiskunde"
+   ],
+   "bron": {
+    "naam": "SLO/CvTE, syllabus centraal examen",
+    "repo": "slonl/curriculum-syllabus",
+    "versie": "2025-11-26",
+    "url": null,
+    "examenjaar": "2024"
+   },
+   "aantal": 125,
+   "bestand": "syllabus-wiskunde-vmbo-tl-2024.json"
+  }
+ ]
+}

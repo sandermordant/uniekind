@@ -4,7 +4,8 @@ import { html, $ } from '../util/html.js';
 import { DOCENTSTIJL } from '../data/labels.js';
 import { STAND } from '../wizard/stappen.js';
 import { laadDocent, laadConcept, bewaarConcept } from '../wizard/staat.js';
-import { alleLessen, bewaarReflectie, verwijder, wisAlles, ervaringen, naarBestand, uitBestand } from '../opslag/logboek.js';
+import { alleLessen, bewaarReflectie, verwijder, wisAlles, ervaringen, naarBestand, uitBestand, dekking } from '../opslag/logboek.js';
+import { laadKaderIndex, laadKader, vlak } from '../data/kaders.js';
 import { download, bestandsnaam } from '../export/delen.js';
 import * as opslag from '../opslag/opslag.js';
 
@@ -79,7 +80,7 @@ function lessenBlok(profiel, lessen) {
           <details ${!l.reflectie && l === lessen.find((x) => !x.reflectie) ? 'open' : ''}>
             <summary>
               <span class="les-titel">${l.onderwerp || 'Les zonder onderwerp'}</span>
-              <span class="les-meta">${datumTekst(l.datum)} · ${vakNaam(l.vak)}${l.lesduur ? ` · ${l.lesduur} min` : ''}</span>
+              <span class="les-meta">${datumTekst(l.datum)} · ${vakNaam(l.vak)}${l.afdeling ? ` · ${profiel.afdelingen.find((a) => a.id === l.afdeling)?.naam ?? l.afdeling}${l.leerjaar ? ` ${l.leerjaar}` : ''}` : ''}${l.lesduur ? ` · ${l.lesduur} min` : ''}</span>
               ${l.reflectie ? html`<span class="chip goed">Teruggekeken</span>` : html`<span class="chip">Nog terugkijken</span>`}
             </summary>
             ${reflectieFormulier(l)}
@@ -106,6 +107,27 @@ function werktBlok(lessen) {
     </section>`;
 }
 
+function dekkingBlok(lessen, open) {
+  const d = dekking(lessen);
+  return html`
+    <section class="sectie" aria-labelledby="kop-dekking">
+      <h2 id="kop-dekking">Behandelde kerndoelen en eindtermen</h2>
+      ${d.length ? html`
+        <p class="lees">Per kader zie je welke kerndoelen of eindtermen je aan een les hebt gekoppeld. Zo zie je wat al aan bod kwam en wat nog niet.</p>
+        <div class="dekking">${d.map((k) => html`
+          <details class="paneel" ${open[k.kader] ? 'open' : ''}>
+            <summary>${k.titel} <span class="chip">${k.regels.length} gekoppeld</span></summary>
+            <div class="paneel-inhoud">
+              <ul class="et-gekozen">${k.regels.map((r) => html`<li><span>${r.code ? html`<b>${r.code}</b> ` : ''}${r.tekst}<span class="hulp">${r.lessen.map((x) => `${datumTekst(x.datum)}: ${x.onderwerp || 'les'}`).join(' · ')}</span></span></li>`)}</ul>
+              ${open[k.kader] ? html`<h3 class="klein-kop">Nog niet gekoppeld (${open[k.kader].length})</h3>
+                <ul class="werktlijst">${open[k.kader].map((r) => html`<li>${r.code ? html`<b>${r.code}</b> ` : ''}${r.tekst}</li>`)}</ul>`
+              : html`<button type="button" class="knop secundair klein" data-actie="nog-niet" data-kader="${k.kader}">Toon wat nog niet aan bod kwam</button>`}
+            </div>
+          </details>`)}</div>`
+      : html`<p class="lees">Koppel bij het maken van een les je lesdoelen aan de kerndoelen of eindtermen van SLO (bij Inhoud of in de snelle modus). Dan zie je hier welke stof je al hebt behandeld.</p>`}
+    </section>`;
+}
+
 function gegevensBlok(lessen) {
   return html`
     <section class="sectie" aria-labelledby="kop-gegevens">
@@ -126,6 +148,7 @@ function gegevensBlok(lessen) {
 
 export default {
   async render({ profiel }) {
+    const nogNiet = {};
     const pagina = () => {
       const docent = laadDocent(profiel);
       const heeftProfiel = !!opslag.lees('docentprofiel');
@@ -140,6 +163,7 @@ export default {
           ${profielBlok(profiel, docent, heeftProfiel)}
           ${lessenBlok(profiel, lessen)}
           ${werktBlok(lessen)}
+          ${dekkingBlok(lessen, nogNiet)}
           ${gegevensBlok(lessen)}
         </main>`;
     };
@@ -185,6 +209,17 @@ export default {
             location.hash = 'les-maken';
           } else if (a === 'verwijder') {
             if (window.confirm('Deze les uit de lijst halen? De reflectie verdwijnt ook.')) { verwijder(k.dataset.les); teken(); }
+          } else if (a === 'nog-niet') {
+            k.disabled = true; k.textContent = 'Laden…';
+            laadKaderIndex().then(async (index) => {
+              const info = index.kaders.find((x) => x.id === k.dataset.kader);
+              if (!info) throw new Error('kader niet gevonden');
+              const kader = await laadKader(info.bestand);
+              const gehad = new Set(dekking().find((x) => x.kader === k.dataset.kader)?.regels.map((r) => r.sleutel));
+              // alleen de onderste regels (eindtermen, kerndoelen), niet de domeinkoppen
+              nogNiet[k.dataset.kader] = vlak(kader).filter((r) => !r.heeftKinderen && !gehad.has(r.sleutel));
+              teken();
+            }).catch(() => { k.textContent = 'Dit kader is niet (meer) beschikbaar'; });
           } else if (a === 'download') {
             download(new Blob([naarBestand()], { type: 'application/json' }), bestandsnaam('mijn-lessen', 'json'));
           } else if (a === 'wis-lessen') {

@@ -24,7 +24,7 @@ Je hebt [Node.js](https://nodejs.org) versie 20 of hoger nodig.
 ```bash
 npm install          # eenmalig
 npm run dev          # ontwikkelserver op http://localhost:5173
-npm run valideer     # controleer de kennisbank en de profielen
+npm run valideer     # controleer de kennisbank, de profielen en de SLO-kaders
 npm run dev:algemeen # hetzelfde voor de algemene versie
 npm test             # alle tests: testcases 1-9, 900 willekeurige lessen, materiaal, export, OCR, AI-brug
 npm run build:alles  # bouw beide versies (valideert eerst)
@@ -134,6 +134,20 @@ Bij het materiaal staat **Maak af met AI**. Uniekind maakt een prompt met alleen
 ## Bronnen en media
 
 Per les maakt Uniekind zoeklinks met het onderwerp (Schooltv, Wikiwijs, Kennisnet, YouTube, Jeugdjournaal, L1 en de methodewebsite van de sectie) en toont het een gecureerde lijst per vak uit `public/data/bronnen-per-vak.json`. Een link komt pas in het lesplan als de docent hem aanvinkt of zelf toevoegt. Secties stellen nieuwe bronnen voor via een formuliertje dat een stukje tekst voor de beheerder maakt.
+
+## Kerndoelen, examenprogramma's en syllabi (SLO)
+
+Docenten kunnen hun les koppelen aan de officiële leerdoelen. De gegevens komen uit de **open data van SLO** (licentie MIT, [github.com/slonl](https://github.com/slonl)) en staan als kleine JSON-bestanden in `public/data/kaders/` (één per kader, ongeveer 2,7 MB in totaal, geladen per vak als de docent het opent):
+
+- de **58 kerndoelen onderbouw VO** (geldend), per leergebied;
+- de **examenprogramma's** (geldend) met domeinen, subdomeinen en eindtermen, voor vmbo, havo en vwo;
+- de **syllabi** voor het centraal examen (nieuwste per examenprogramma en per vmbo-leerweg), met de specifieke eindtermen;
+- de **nieuwe kerndoelen** (definitief concept, nog niet wettelijk), onder meer voor digitale geletterdheid en burgerschap;
+- de **praktijkgerichte programma's** (onder meer Technologie en Toepassing, Dienstverlening en Producten) en het conceptexamenprogramma Onderzoeken en Ontwerpen.
+
+In de wizard kiest Uniekind het kader bij vak, afdeling en leerjaar: onderbouw (vmbo t/m 2, havo/vwo t/m 3; instelbaar met `onderbouwTot` per afdeling) eerst kerndoelen, bovenbouw eerst examenprogramma en syllabus van het eigen niveau (`slo` per afdeling: `vmbo-bb`, `vmbo-kb`, `vmbo-gltl`, `havo`, `vwo`). Gekoppelde regels staan in het lesplan, het lesplandocument, de AI-prompt, het lesbestand en Mijn lessen. Mijn profiel toont per kader wat al aan bod kwam en wat nog niet.
+
+**Bijwerken** (eenmaal per jaar, als SLO een nieuwe release heeft): clone de vier repositories (`curriculum-kerndoelen`, `curriculum-examenprogramma`, `curriculum-syllabus`, `curriculum-fo`) in één map en draai `npm run importeer-slo -- <map>`. Welke SLO-kaders bij welk vak horen, staat bovenin `tools/importeer-slo.js`; een nieuw vak in het schoolprofiel met een passende id (bijvoorbeeld `drama`) krijgt de kaders vanzelf.
 
 ## Hoe de generator werkt
 

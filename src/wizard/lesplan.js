@@ -118,6 +118,7 @@ function doelWeergave(les) {
   const d = les.doel;
   return html`<div class="doelblok">
     ${d.lesdoelen.length ? html`<ul class="lesdoelen">${d.lesdoelen.map((x) => html`<li>${x.tekst} <span class="doelcheck ok">${DENKNIVEAU[x.niveau] ?? x.niveau}</span></li>`)}</ul>` : html`<p class="invulveld">Vul hier je lesdoel in.</p>`}
+    ${d.eindtermen?.length ? html`<p><b>Sluit aan bij:</b></p><ul class="lesdoelen">${d.eindtermen.map((g) => html`<li>${g.code ? html`<b>${g.code}</b> ` : ''}${g.tekst} <span class="hulp">${g.kaderTitel}</span></li>`)}</ul>` : ''}
     <p><b>Relevantie-haak:</b> ${d.relevantie.vraag}</p>
     ${d.relevantie.regionaal ? html`<p><b>Idee uit de regio:</b> ${d.relevantie.regionaal}</p>` : ''}
     <p class="invulveld">${d.relevantie.invulveld}</p>

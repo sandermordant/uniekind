@@ -2,11 +2,13 @@
 import { html, raw } from '../util/html.js';
 import { controleerLesdoel } from '../engine/tekst.js';
 import { DOCENTSTIJL, DENKNIVEAU } from '../data/labels.js';
+import { eindtermenVeld } from './eindtermen.js';
 
 /* ── Bouwstenen ─────────────────────────────────── */
 
 export const info = (tekst) => html`<details class="info"><summary aria-label="Uitleg">i</summary><p>${tekst}</p></details>`;
 
+const leerjaarOpties = (afd) => afd.leerjaren.map((j) => [j, `${afd.naam} ${j}${afd.label12 && j <= 2 ? ` (${afd.label12})` : ''}`]);
 const veldId = (pad) => `v-${pad.replace(/\./g, '-')}`;
 
 export function tekstveld(pad, label, waarde, o = {}) {
@@ -116,6 +118,22 @@ export function standKiezer(pad, waarde, label) {
     </div></fieldset>`;
 }
 
+/** Lesdoelen: een of meer, elk met een controle op waarneembaarheid en denkniveau. */
+export function lesdoelenVeld(inh, tax, rtti) {
+  return html`
+    <fieldset class="veld"><legend>Lesdoelen ${info('Schrijf het doel zo dat je kunt zien of horen of het gelukt is: "Je kunt uitleggen…", niet "Je begrijpt…". Uniekind koppelt elk doel aan een denkniveau.')}</legend>
+      <div class="doelen">
+        ${(inh.lesdoelen?.length ? inh.lesdoelen : [{ tekst: '' }]).map((d, i) => html`
+          <div class="doel">
+            <input type="text" aria-label="Lesdoel ${i + 1}" data-pad="inhoud.lesdoelen.${i}.tekst" data-doel="${i}" value="${d.tekst}" placeholder="Je kunt …">
+            <button type="button" class="knop secundair klein" data-actie="doel-weg" data-i="${i}" aria-label="Lesdoel ${i + 1} weghalen">×</button>
+            <div id="doelcheck-${i}" class="doelcheck-vak">${raw(doelCheck(d.tekst, tax, rtti))}</div>
+          </div>`)}
+      </div>
+      <button type="button" class="knop secundair klein" data-actie="doel-erbij">Lesdoel toevoegen</button>
+    </fieldset>`;
+}
+
 /* ── Stap 2 · Lescontext ────────────────────────── */
 
 export function stapContext({ profiel, concept }) {
@@ -126,7 +144,7 @@ export function stapContext({ profiel, concept }) {
   return html`
     <div class="veldrij">
       ${keuzeveld('context.afdeling', 'Afdeling', afdelingOpties(profiel), c.afdeling, { herteken: true })}
-      ${keuzeveld('context.leerjaar', 'Leerjaar', afd.leerjaren.map((j) => [j, `${j}${afd.label12 && j <= 2 ? ` (${afd.label12})` : ''}`]), c.leerjaar, { getal: true })}
+      ${keuzeveld('context.leerjaar', 'Leerjaar', leerjaarOpties(afd), c.leerjaar, { getal: true, herteken: true })}
       ${keuzeveld('context.vak', 'Vak', vakOpties(profiel, afd.id), c.vak)}
     </div>
     ${knoppenveld('lesduurKeuze', 'Lesduur', lesduurOpties(afd), vrij ? 'vrij' : String(c.lesduur), { herteken: true, info: profiel.afdelingToelichting })}
@@ -155,7 +173,8 @@ export function doelCheck(doel, taxonomie, rtti) {
     : `<span class="doelcheck let">${ch.tip}</span>`;
 }
 
-export function stapInhoud({ concept, taxonomie }) {
+export function stapInhoud(ctx) {
+  const { concept, taxonomie } = ctx;
   const inh = concept.invoer.inhoud;
   const tax = concept.invoer.docent.taxonomie;
   const rtti = Object.fromEntries(taxonomie.bloom.map((b) => [b.id, b.rtti]));
@@ -181,17 +200,8 @@ export function stapInhoud({ concept, taxonomie }) {
         <div id="ocrStatus" aria-live="polite"></div>` : ''}
       ${concept.ocrMelding ? html`<p class="melding">${concept.ocrMelding}</p>` : ''}
     </fieldset>
-    <fieldset class="veld"><legend>Lesdoelen ${info('Schrijf het doel zo dat je kunt zien of horen of het gelukt is: "Je kunt uitleggen…", niet "Je begrijpt…". Uniekind koppelt elk doel aan een denkniveau.')}</legend>
-      <div class="doelen">
-        ${(inh.lesdoelen?.length ? inh.lesdoelen : [{ tekst: '' }]).map((d, i) => html`
-          <div class="doel">
-            <input type="text" aria-label="Lesdoel ${i + 1}" data-pad="inhoud.lesdoelen.${i}.tekst" data-doel="${i}" value="${d.tekst}" placeholder="Je kunt …">
-            <button type="button" class="knop secundair klein" data-actie="doel-weg" data-i="${i}" aria-label="Lesdoel ${i + 1} weghalen">×</button>
-            <div id="doelcheck-${i}" class="doelcheck-vak">${raw(doelCheck(d.tekst, tax, rtti))}</div>
-          </div>`)}
-      </div>
-      <button type="button" class="knop secundair klein" data-actie="doel-erbij">Lesdoel toevoegen</button>
-    </fieldset>
+    ${lesdoelenVeld(inh, tax, rtti)}
+    ${eindtermenVeld(ctx)}
     <fieldset class="veld"><legend>Kernbegrippen</legend>
       ${begrippen.length ? html`<div class="vinkjes">${begrippen.map((b) => html`<label><input type="checkbox" data-pad="inhoud.begrippen" data-type="lijst" value="${b}" ${(inh.begrippen ?? []).includes(b) ? 'checked' : ''}> ${b}</label>`)}</div>` : html`<p class="hulp">Nog geen begrippen. Plak een tekst en laat Uniekind voorstellen doen, of voeg ze zelf toe.</p>`}
       <div class="veldrij klein-boven"><input type="text" id="nieuwBegrip" aria-label="Nieuw kernbegrip" placeholder="Begrip toevoegen"><button type="button" class="knop secundair klein" data-actie="begrip-erbij">Toevoegen</button></div>
@@ -229,24 +239,26 @@ export function stapKlas({ concept }) {
 
 /* ── Snelle modus ───────────────────────────────── */
 
-export function stapSnel({ profiel, concept }) {
+export function stapSnel(ctx) {
+  const { profiel, concept, taxonomie } = ctx;
   const c = concept.invoer.context;
   const inh = concept.invoer.inhoud;
+  const tax = concept.invoer.docent.taxonomie;
+  const rtti = Object.fromEntries((taxonomie?.bloom ?? []).map((b) => [b.id, b.rtti]));
   const afd = profiel.afdelingen.find((a) => a.id === c.afdeling) ?? profiel.afdelingen[0];
   const vrij = !afd.lesduren.includes(Number(c.lesduur));
   const melding = capaciteitMelding(profiel, c);
   return html`
-    <p class="stapintro">Zes vragen, de rest vult Uniekind in met verstandige standaardwaarden. Je kunt daarna alles aanpassen.</p>
+    <p class="stapintro">Een paar vragen, de rest vult Uniekind in met verstandige standaardwaarden. Je kunt daarna alles aanpassen.</p>
     ${tekstveld('inhoud.onderwerp', 'Onderwerp', inh.onderwerp, { placeholder: 'Bijvoorbeeld: 3.2 Inflatie' })}
-    <div class="veld">
-      <label for="v-snel-doel">Lesdoel</label>
-      <input type="text" id="v-snel-doel" data-pad="inhoud.lesdoelen.0.tekst" data-doel="0" value="${inh.lesdoelen?.[0]?.tekst ?? ''}" placeholder="Je kunt …">
-      <div id="doelcheck-0" class="doelcheck-vak"></div>
-    </div>
+    ${lesdoelenVeld(inh, tax, rtti)}
     <div class="veldrij">
       ${keuzeveld('context.afdeling', 'Afdeling', afdelingOpties(profiel), c.afdeling, { herteken: true })}
-      ${keuzeveld('context.vak', 'Vak', vakOpties(profiel, afd.id), c.vak)}
+      ${keuzeveld('context.leerjaar', 'Leerjaar', leerjaarOpties(afd), c.leerjaar, { getal: true, herteken: true })}
+      ${keuzeveld('context.vak', 'Vak', vakOpties(profiel, afd.id), c.vak, { herteken: true })}
     </div>
+    <p class="hulp">${afd.naam} ${c.leerjaar ?? ''}. Zie je een vak niet? De vakkenlijst hangt af van de afdeling${profiel.vakken.some((v) => Array.isArray(v.afdelingen) && v.afdelingen.length === 1) ? `; ${profiel.vakken.filter((v) => Array.isArray(v.afdelingen) && v.afdelingen.length === 1).map((v) => `${v.naam} staat bij ${profiel.afdelingen.find((a) => a.id === v.afdelingen[0])?.naam ?? v.afdelingen[0]}`).join(', ')}` : ''}.</p>
+    ${eindtermenVeld(ctx)}
     ${knoppenveld('lesduurKeuze', 'Lesduur', lesduurOpties(afd), vrij ? 'vrij' : String(c.lesduur), { herteken: true })}
     ${vrij ? tekstveld('context.lesduur', 'Lesduur in minuten', c.lesduur, { type: 'number', min: 20, max: 240 }) : ''}
     ${knoppenveld('context.ruimte', 'Lokaal', profiel.ruimtes.filter((r) => ['M', 'L', 'anders'].includes(r.id)).map((r) => [r.id, r.kort.charAt(0).toUpperCase() + r.kort.slice(1)]), c.ruimte, { herteken: true })}

@@ -41,7 +41,7 @@ describe('Kennisbank fase 5', () => {
     const p = data.profiel;
     const vak = (id) => p.vakken.find((v) => v.id === id);
     expect(pastBijVak(data.items.find((i) => i.id === 'korte-demonstratie'), vak('natuurkunde'))).toBe(true);
-    expect(pastBijVak(data.items.find((i) => i.id === 'geluidsfragment'), vak('kunst'))).toBe(true);
+    expect(pastBijVak(data.items.find((i) => i.id === 'geluidsfragment'), vak('muziek'))).toBe(true);
     expect(pastBijVak(data.items.find((i) => i.id === 'rebus'), vak('latijn'))).toBe(false);
   });
   it('verschillende onderwerpen geven niet allemaal dezelfde opener', () => {
@@ -68,7 +68,7 @@ describe('Mijn lessen en reflectie', () => {
     const lijst = logboek.alleLessen();
     expect(lijst).toHaveLength(1);
     expect(lijst[0].werkvormen.length).toBeGreaterThan(2);
-    expect(Object.keys(lijst[0]).sort()).toEqual(['afdeling', 'datum', 'id', 'lesduur', 'onderwerp', 'opzet', 'reflectie', 'stand', 'vak', 'werkvormen']);
+    expect(Object.keys(lijst[0]).sort()).toEqual(['afdeling', 'datum', 'eindtermen', 'id', 'leerjaar', 'lesduur', 'onderwerp', 'opzet', 'reflectie', 'stand', 'vak', 'werkvormen']);
   });
 
   it('een reflectie wordt een duim voor de generator', () => {

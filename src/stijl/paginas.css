@@ -77,3 +77,18 @@ kbd { font-family: ui-monospace, monospace; font-size: 0.85em; padding: 0.1rem 0
 .overslaan { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: 0.6rem 1rem; border-radius: 8px; border: 0; background: var(--accent); color: var(--accent-fg); font-weight: 800; cursor: pointer; }
 .overslaan:focus { top: 0.5rem; outline: 3px solid var(--focus); outline-offset: 2px; }
 body.digibord .overslaan { display: none; }
+
+/* Kerndoelen en eindtermen (SLO) */
+.eindtermen .paneel-inhoud { display: grid; gap: 0.8rem; }
+.et-gekozen { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.et-gekozen li { display: flex; gap: 0.6rem; justify-content: space-between; align-items: flex-start; background: var(--accent-zacht); border-radius: 8px; padding: 0.5rem 0.7rem; font-size: var(--t-s); }
+.et-gekozen li > span:first-child { min-width: 0; }
+.et-gekozen .hulp { display: block; }
+.knoppen-klein { display: inline-flex; gap: 0.3rem; flex: none; flex-wrap: wrap; justify-content: flex-end; }
+.et-boom { display: grid; gap: 0.35rem; max-height: 28rem; overflow: auto; border: 1px solid var(--line); border-radius: var(--r); padding: 0.5rem; background: var(--surface); }
+.et-groep > summary { cursor: pointer; font-size: var(--t-s); padding: 0.35rem 0.25rem; font-weight: 600; }
+.et-regel { display: flex; gap: 0.5rem; align-items: flex-start; font-size: var(--t-s); padding: 0.3rem 0.25rem 0.3rem calc(0.25rem + var(--d, 0) * 1.1rem); cursor: pointer; border-radius: 6px; }
+.et-regel:hover { background: var(--surface-2); }
+.et-regel input { margin-top: 0.2rem; accent-color: var(--accent); width: 1.05rem; height: 1.05rem; flex: none; }
+.et-tag { font-size: var(--t-xs); font-weight: 800; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 0.25rem; }
+.et-bron { margin: 0; }

@@ -33,6 +33,7 @@ export function maakPrompt(les, profiel, pakketId = 'alles') {
     'Lesdoelen:',
     ...(doelen.length ? doelen : ['- (geen lesdoel opgegeven: leid een passend lesdoel af uit het onderwerp)']),
     `Kernbegrippen: ${begrippen}`,
+    ...(les.doel.eindtermen?.length ? ['Sluit aan bij deze kerndoelen of eindtermen (SLO):', ...les.doel.eindtermen.map((g) => `- ${g.code ? `${g.code}: ` : ''}${g.tekst} (${g.kaderTitel})`)] : []),
     `Werkvormen in de les: ${werkvormen.join(', ') || '-'}`,
     `Routes: ${routes.join('; ')}. Iedereen werkt aan hetzelfde lesdoel, met meer of minder steun; alleen de verdieping gaat verder dan het doel.`,
     ...(les.invoer?.inhoud?.misvattingen ? [`Bekende misvattingen: ${les.invoer.inhoud.misvattingen}`] : []),

@@ -17,7 +17,8 @@
     "dev:algemeen": "vite --mode algemeen",
     "build:alles": "npm run build:sophianum && npm run build:algemeen",
     "preview:algemeen": "vite preview --mode algemeen --port 4174",
-    "site": "npm run build:alles && node tools/maak-site.js"
+    "site": "npm run build:alles && node tools/maak-site.js",
+    "importeer-slo": "node tools/importeer-slo.js"
   },
   "license": "UNLICENSED",
   "devDependencies": {

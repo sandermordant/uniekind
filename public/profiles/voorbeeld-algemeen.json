@@ -150,7 +150,9 @@
         50,
         100
       ],
-      "standaardLesduur": 50
+      "standaardLesduur": 50,
+      "slo": "vmbo-bb",
+      "onderbouwTot": 2
     },
     {
       "id": "vmbo-k",
@@ -168,7 +170,9 @@
         50,
         100
       ],
-      "standaardLesduur": 50
+      "standaardLesduur": 50,
+      "slo": "vmbo-kb",
+      "onderbouwTot": 2
     },
     {
       "id": "mavo",
@@ -186,7 +190,9 @@
         50,
         100
       ],
-      "standaardLesduur": 50
+      "standaardLesduur": 50,
+      "slo": "vmbo-gltl",
+      "onderbouwTot": 2
     },
     {
       "id": "havo",
@@ -205,7 +211,9 @@
         50,
         100
       ],
-      "standaardLesduur": 50
+      "standaardLesduur": 50,
+      "slo": "havo",
+      "onderbouwTot": 3
     },
     {
       "id": "vwo",
@@ -225,7 +233,9 @@
         50,
         100
       ],
-      "standaardLesduur": 50
+      "standaardLesduur": 50,
+      "slo": "vwo",
+      "onderbouwTot": 3
     }
   ],
   "afdelingToelichting": "Voorbeeld: alle afdelingen werken met lessen van 50 minuten en blokuren van 100 minuten. Pas de lestijden per afdeling aan in de schoolprofiel-wizard.",
@@ -360,8 +370,26 @@
       "aanname": true
     },
     {
+      "id": "digitale-geletterdheid",
+      "naam": "Digitale geletterdheid",
+      "afdelingen": "alle",
+      "rekenen": false
+    },
+    {
       "id": "kunst",
-      "naam": "Kunst (beeldend, muziek, drama, CKV)",
+      "naam": "Kunst (beeldend)",
+      "afdelingen": "alle",
+      "rekenen": false
+    },
+    {
+      "id": "muziek",
+      "naam": "Muziek",
+      "afdelingen": "alle",
+      "rekenen": false
+    },
+    {
+      "id": "ckv",
+      "naam": "CKV (culturele en kunstzinnige vorming)",
       "afdelingen": "alle",
       "rekenen": false
     },
@@ -374,8 +402,9 @@
     },
     {
       "id": "filosofie",
-      "naam": "Filosofie & levensbeschouwing",
+      "naam": "Filosofie",
       "afdelingen": [
+        "havo",
         "vwo"
       ],
       "rekenen": false,

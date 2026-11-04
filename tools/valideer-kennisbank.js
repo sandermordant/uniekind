@@ -109,6 +109,19 @@ for (const p of readdirSync(profDir).filter((f) => f.endsWith('.json') && f !== 
   if (prof.regels?.telefoon?.toegestaan) let_op(`profiel ${p}`, 'telefoon toegestaan: Uniekind stelt alsnog geen telefoonwerkvormen voor');
 }
 
+// Leerdoelenkaders van SLO (tools/importeer-slo.js): index en bestanden moeten kloppen
+const kaderDir = join(root, 'public/data/kaders');
+let kaderAantal = 0;
+try {
+  const ki = lees(join(kaderDir, 'index.json'));
+  for (const k of ki.kaders) {
+    kaderAantal++;
+    let data;
+    try { data = lees(join(kaderDir, k.bestand)); } catch { fout(`kader ${k.id}`, `bestand ${k.bestand} ontbreekt of is geen JSON`); continue; }
+    if (data.id !== k.id || !Array.isArray(data.items) || !data.items.length) fout(`kader ${k.id}`, 'id klopt niet of er staan geen regels in');
+  }
+} catch { let_op('kaders', 'public/data/kaders/index.json ontbreekt; draai tools/importeer-slo.js'); }
+
 // Samenvatting
 const perCat = {};
 for (const i of alleItems) perCat[i.categorie] = (perCat[i.categorie] ?? 0) + 1;
@@ -117,6 +130,7 @@ console.log('───────────────────');
 for (const [c, n] of Object.entries(perCat)) console.log(`  ${c.padEnd(22)} ${n}`);
 console.log(`  ${'totaal'.padEnd(22)} ${alleItems.length}`);
 console.log(`  ${'Begin hier'.padEnd(22)} ${bh.length}/10`);
+console.log(`  ${'SLO-kaders'.padEnd(22)} ${kaderAantal}`);
 const nogControleren = Object.entries(bronnen).filter(([, b]) => b.status !== 'gecontroleerd').map(([k]) => k);
 if (nogControleren.length) console.log(`  bronnen nog controleren: ${nogControleren.join(', ')}`);
 

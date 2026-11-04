@@ -10,6 +10,8 @@ import { laadDocent, bewaarDocent, laadConcept, bewaarConcept, nieuwConcept, lee
 import { stapProfiel, stapContext, stapInhoud, stapKlas, stapSnel, standKiezer, doelCheck, capaciteitMelding } from '../wizard/stappen.js';
 import { varianten, lesplan } from '../wizard/lesplan.js';
 import { materiaalStap, exporteer, printAlles } from '../wizard/materiaalstap.js';
+import { eindtermenVeld, regelBijSleutel } from '../wizard/eindtermen.js';
+import { laadKaderIndex, laadKader, kadersVoor, alsLesdoel } from '../data/kaders.js';
 
 const STAPPEN = {
   uitgebreid: [['profiel', 'Mijn profiel'], ['context', 'Lescontext'], ['inhoud', 'Inhoud'], ['klas', 'Klasbeeld'], ['varianten', 'Genereren'], ['aanpassen', 'Aanpassen'], ['materiaal', 'Materiaal']],
@@ -28,7 +30,8 @@ const UITLEG = {
 
 export default {
   async render({ profiel }) {
-    const [items, taxonomie, bronnenPerVak] = await Promise.all([laadAlleWerkvormen(), laadTaxonomie(), laadBronnenPerVak().catch(() => null)]);
+    const [items, taxonomie, bronnenPerVak, kaderIndex] = await Promise.all([laadAlleWerkvormen(), laadTaxonomie(), laadBronnenPerVak().catch(() => null), laadKaderIndex().catch(() => null)]);
+    const kaderCache = new Map();
     const itemMap = new Map(items.map((i) => [i.id, i]));
     const data = { profiel, items };
     let docent = laadDocent(profiel);
@@ -45,7 +48,7 @@ export default {
 
     function inhoudStap() {
       const s = concept.stap;
-      const ctx = { profiel, concept, taxonomie };
+      const ctx = { profiel, concept, taxonomie, kaders: { index: kaderIndex, cache: kaderCache } };
       if (s === 'profiel') return stapProfiel(ctx);
       if (s === 'context') return stapContext(ctx);
       if (s === 'inhoud') return stapInhoud(ctx);
@@ -101,10 +104,31 @@ export default {
         const bewaar = () => bewaarConcept(concept);
         const teken = (scroll = false) => {
           const y = window.scrollY;
+          // focus en cursor bewaren, bijvoorbeeld tijdens het zoeken in een kader
+          const actief = document.activeElement?.id;
+          const sel = actief ? [document.activeElement.selectionStart, document.activeElement.selectionEnd] : null;
           root.innerHTML = String(pagina());
           koppelDoelchecks();
           koppelSlepen();
           if (!scroll) window.scrollTo(0, y); else window.scrollTo(0, 0);
+          if (actief && !scroll) { const el = document.getElementById(actief); if (el) { el.focus({ preventScroll: true }); try { if (sel?.[0] != null) el.setSelectionRange(sel[0], sel[1]); } catch { /* geen tekstveld */ } } }
+          zorgKader();
+        };
+        // Het voorgestelde of gekozen kader laden zodra het in beeld komt
+        const laadt = new Set();
+        function zorgKader() {
+          if (!kaderIndex || !$('[data-paneel="eindtermen"]', root)) return;
+          const c = inv().context;
+          const lijst = kadersVoor(kaderIndex, { vak: c.vak, afdeling: profiel.afdelingen.find((a) => a.id === c.afdeling), leerjaar: c.leerjaar });
+          const k = lijst.find((x) => x.id === concept.kader?.id) ?? lijst[0];
+          if (!k || kaderCache.has(k.bestand) || laadt.has(k.bestand)) return;
+          laadt.add(k.bestand);
+          laadKader(k.bestand).then((d) => { kaderCache.set(k.bestand, d); laadt.delete(k.bestand); teken(); }).catch(() => laadt.delete(k.bestand));
+        }
+        // Gekoppelde eindtermen uit eerdere kaders ook laden, zodat "ontkoppelen" en "gebruik als lesdoel" werken
+        const zorgVoorSleutel = async (sleutel) => {
+          const k = kaderIndex?.kaders.find((x) => x.id === sleutel.split(':')[0]);
+          if (k && !kaderCache.has(k.bestand)) kaderCache.set(k.bestand, await laadKader(k.bestand));
         };
         const gaNaar = (stap) => { concept.stap = stap; bewaar(); teken(true); $('#wizard h2', root)?.focus?.(); };
         const tax = () => inv().docent.taxonomie;
@@ -199,10 +223,22 @@ export default {
           if (cap) { const m = capaciteitMelding(profiel, inv().context); cap.textContent = m; cap.hidden = !m; }
           if (isChange && el.hasAttribute('data-herteken')) herteken();
         }
-        root.addEventListener('input', (e) => { if (e.target.matches('[data-pad]') && e.target.type !== 'radio') verwerkVeld(e.target, false); });
+        let zoekTimer;
+        root.addEventListener('input', (e) => {
+          if (e.target.dataset.actie === 'et-zoek') { (concept.kader ??= {}).zoek = e.target.value; concept.kader.open = true; clearTimeout(zoekTimer); zoekTimer = setTimeout(() => { bewaar(); teken(); }, 250); return; }
+          if (e.target.matches('[data-pad]') && e.target.type !== 'radio') verwerkVeld(e.target, false);
+        });
         root.addEventListener('change', (e) => {
           const t = e.target;
           if (t.matches('[data-pad]')) return verwerkVeld(t, true);
+          if (t.dataset.actie === 'et-kader') { concept.kader = { id: t.value, zoek: '', open: true }; bewaar(); return teken(); }
+          if (t.dataset.actie === 'et-vink') {
+            const lijst = (inv().inhoud.eindtermen ??= []);
+            if (t.checked) { const r = regelBijSleutel(kaderCache, kaderIndex, t.value); if (r && !lijst.some((g) => g.sleutel === r.sleutel)) lijst.push(r); }
+            else inv().inhoud.eindtermen = lijst.filter((g) => g.sleutel !== t.value);
+            (concept.kader ??= {}).open = true;
+            bewaar(); return teken();
+          }
           if (t.dataset.actie === 'kies-alt' && t.value) { inv().opties.vastgezet[t.dataset.sleutel] = t.value; bewaar(); teken(); }
           if (t.dataset.actie === 'splitsing') { inv().opties.splitsing = t.value; concept.aanpassingen = {}; bewaar(); teken(); }
           if (t.id === 'ocrBestand') return herkenFoto(t.files?.[0]);
@@ -225,6 +261,18 @@ export default {
           const a = k.dataset.actie;
           const st = stappen();
           const i = st.findIndex(([x]) => x === concept.stap);
+          if (a === 'et-weg') { inv().inhoud.eindtermen = (inv().inhoud.eindtermen ?? []).filter((g) => g.sleutel !== k.dataset.sleutel); bewaar(); return teken(); }
+          if (a === 'et-doel') {
+            const g = (inv().inhoud.eindtermen ?? []).find((x) => x.sleutel === k.dataset.sleutel);
+            if (!g) return;
+            const doelen = (inv().inhoud.lesdoelen ?? []).filter((d) => d.tekst?.trim());
+            doelen.push({ tekst: alsLesdoel(g.tekst) });
+            inv().inhoud.lesdoelen = doelen;
+            concept.aanpassingen = {};
+            bewaar(); teken();
+            $(`[data-doel="${doelen.length - 1}"]`, root)?.focus();
+            return;
+          }
           if (a === 'stap') return gaNaar(k.dataset.stap);
           if (a === 'volgende') {
             if (concept.stap === 'varianten') { concept.gekozenStand = inv().stand; }

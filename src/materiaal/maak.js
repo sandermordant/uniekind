@@ -459,7 +459,8 @@ function lesplanDoc(les, inf, profiel, itemMap, ai = {}) {
       ...(Object.keys(ai).length ? [alinea('Deze les bevat materiaal dat met AI is gemaakt. Lees het altijd na op juistheid en niveau voordat je het gebruikt.', { nadruk: true })] : []),
       kader('Lesdoelen', [
         lijst(les.doel.lesdoelen.length ? les.doel.lesdoelen.map((d) => `${d.tekst} (${denkLabel(d.niveau, inf.taxonomie)})`) : ['⟦lesdoel⟧']),
-        les.doel.begrippen?.length ? alinea(`Kernbegrippen: ${les.doel.begrippen.join(', ')}.`) : invulveld('Kernbegrippen', '')
+        les.doel.begrippen?.length ? alinea(`Kernbegrippen: ${les.doel.begrippen.join(', ')}.`) : invulveld('Kernbegrippen', ''),
+        ...(les.doel.eindtermen?.length ? [alinea('Sluit aan bij:', { nadruk: true }), lijst(les.doel.eindtermen.map((g) => `${g.code ? `${g.code}: ` : ''}${g.tekst} (${g.kaderTitel})`))] : [])
       ]),
       alinea(les.waarom),
       kop('Verloop'),

@@ -463,7 +463,7 @@ export function bouwLes(ctx, items) {
     splitsing: split,
     differentiatie: differentiatie.map((id) => ({ id, naam: items.find((i) => i.id === id)?.naam ?? id })),
     routines: [...new Set(routines)],
-    doel: { lesdoelen: ctx.inhoud.doelen, onderwerp: ctx.inhoud.onderwerp, begrippen: ctx.inhoud.begrippen ?? [], relevantie: relevantie(ctx) },
+    doel: { lesdoelen: ctx.inhoud.doelen, onderwerp: ctx.inhoud.onderwerp, begrippen: ctx.inhoud.begrippen ?? [], eindtermen: (ctx.inhoud.eindtermen ?? []).filter((g) => g && g.tekst).map((g) => ({ code: g.code, tekst: g.tekst, kaderTitel: g.kaderTitel })), relevantie: relevantie(ctx) },
     vooruitblik: 'Vertel kort wat de volgende les komt en hoe het aansluit op vandaag.',
     materiaalAdvies: {
       dyslexievriendelijk: ctx.behoeften.dyslexie > 0,

@@ -52,7 +52,7 @@ export default {
               <details open><summary>Hoe maak ik een les in drie minuten?</summary>
                 <ol>
                   <li>Ga naar <a href="#les-maken">Maak een les</a> en blijf in de modus <b>Snel</b>.</li>
-                  <li>Vul afdeling, vak, lesduur, lokaal en het aantal leerlingen in, en je lesdoel. Een foto van de paragraaf mag ook.</li>
+                  <li>Vul je lesdoelen in (één of meer), en afdeling, leerjaar, vak, lesduur, lokaal en het aantal leerlingen. Een foto van de paragraaf mag ook (bij Alle zeven stappen).</li>
                   <li>Kies hoe ver je wilt gaan en klik op <b>Genereer de les</b>. Je krijgt drie varianten; kies er één.</li>
                   <li>Pas aan wat je wilt (volgorde, minuten, een andere werkvorm) en ga naar <b>Materiaal</b>. Print of exporteer.</li>
                 </ol>
@@ -61,6 +61,14 @@ export default {
               <details><summary>Wat betekenen de drie standen?</summary>
                 <ul>${STAND.map(([k, n, t]) => html`<li><b>${n}</b>: ${t}</li>`)}</ul>
                 <p>Begin gerust bij ${STAND[0][1]}. Je hoeft niet opnieuw te leren lesgeven; elke stand is een stap verder vanuit hoe je nu werkt.</p>
+              </details>
+              <details><summary>Hoe koppel ik mijn les aan de kerndoelen of eindtermen?</summary>
+                <p>Kies afdeling, leerjaar en vak en open <b>Kerndoelen en eindtermen (SLO)</b>. In de onderbouw staan de kerndoelen bovenaan, in de bovenbouw het examenprogramma en de syllabus van jouw niveau. Zoek, vink aan, en kies eventueel <b>Gebruik als lesdoel</b>; pas dat lesdoel daarna aan in je eigen woorden.</p>
+                <p>De koppeling staat in je lesplan en gaat mee in de AI-opdracht. In <a href="#mijn-profiel">Mijn profiel</a> zie je per kader wat al aan bod kwam en wat nog niet.</p>
+                <p>De teksten komen uit de open data van SLO. Kaders met "concept" zijn nieuwe kerndoelen of examenprogramma's die nog niet wettelijk gelden.</p>
+              </details>
+              <details><summary>Ik zie mijn vak niet in de lijst</summary>
+                <p>De vakkenlijst hangt af van de afdeling. Latijn en Grieks staan bijvoorbeeld bij vwo gymnasium, T&T bij vmbo-tl/mavo. Mis je een vak helemaal, vraag de beheerder het toe te voegen in het schoolprofiel.</p>
               </details>
               <details><summary>Waarom kiest Uniekind deze werkvorm?</summary>
                 <p>Bij elke werkvorm in je lesplan staat <b>Waarom deze?</b>. Uniekind kijkt naar je lesdoel (welk denkniveau), de lesfase, je profiel, je klas (aantallen en ondersteuning), de visie van de school en de harde eisen: de totale tijd klopt, nooit een telefoon, nooit boven de capaciteit van een ruimte.</p>

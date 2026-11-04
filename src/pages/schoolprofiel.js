@@ -92,6 +92,7 @@ function sectieAfdelingen(p) {
     <p class="hulp">Per afdeling: welke leerjaren en welke lesduren. De docent kan altijd ook een vrije lesduur kiezen.</p>
     ${p.afdelingen.map((a, i) => html`<div class="lijstrij">
       <div class="veldrij">${tekst(`afdelingen.${i}.naam`, 'Afdeling', a.naam)}${keuze(`afdelingen.${i}.niveau`, 'Niveau voor de varianten', [['vmbo', 'vmbo'], ['havo', 'havo'], ['vwo', 'vwo']], a.niveau)}</div>
+      <div class="veldrij">${keuze(`afdelingen.${i}.slo`, 'Niveau voor kerndoelen en eindtermen (SLO)', [['', 'Automatisch'], ['vmbo-bb', 'vmbo basis'], ['vmbo-kb', 'vmbo kader'], ['vmbo-gltl', 'vmbo gl/tl (mavo)'], ['havo', 'havo'], ['vwo', 'vwo']], a.slo)}${tekst(`afdelingen.${i}.onderbouwTot`, 'Onderbouw tot en met leerjaar', a.onderbouwTot, { type: 'number', hulp: 'Tot dan toont Uniekind eerst de kerndoelen, daarna het examenprogramma.' })}</div>
       <div class="veldrij">${getallen(`afdelingen.${i}.leerjaren`, 'Leerjaren', a.leerjaren, 'Bijvoorbeeld: 1, 2, 3, 4')}${getallen(`afdelingen.${i}.lesduren`, 'Lesduren in minuten', a.lesduren, 'Bijvoorbeeld: 50, 100')}${tekst(`afdelingen.${i}.standaardLesduur`, 'Standaard', a.standaardLesduur, { type: 'number' })}</div>
       <button type="button" class="knop secundair klein" data-actie="weg" data-lijst="afdelingen" data-i="${i}" ${p.afdelingen.length < 2 ? 'disabled' : ''}>Afdeling weghalen</button></div>`)}
     <button type="button" class="knop secundair klein" data-actie="erbij" data-lijst="afdelingen">Afdeling toevoegen</button>`;
