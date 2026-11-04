@@ -5,7 +5,10 @@
     {
       "id": "opstaan-als-je",
       "naam": "Opstaan als je…",
-      "alias": ["sta op als", "stand up if"],
+      "alias": [
+        "sta op als",
+        "stand up if"
+      ],
       "categorie": "energizer",
       "kort": "Je doet een uitspraak over de stof; wie denkt dat die klopt, staat op. Wie twijfelt, blijft zitten.",
       "startzin": "Iedereen even rechtop. Ik noem een uitspraak. Klopt die volgens jou? Dan sta je op. Klopt hij niet, dan blijf je zitten. Klaar? Eerste uitspraak:",
@@ -16,33 +19,88 @@
         "Geef het juiste antwoord en ga snel door.",
         "Na 2-3 minuten: iedereen gaat zitten en je gaat verder met de les."
       ],
-      "duur": { "min": 1, "max": 3 },
-      "groepsvorm": ["klas"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["4-6 uitspraken"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 1,
+        "max": 3
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "4-6 uitspraken"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["inoefenen", "check", "voorkennis"],
-      "denkniveau": ["onthouden", "begrijpen"],
+      "lesfase": [
+        "inoefenen",
+        "check",
+        "voorkennis"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
       "differentiatie": [],
       "richting": "nvt",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Mondeling." },
-        "dyscalculie": { "past": "goed", "tip": "Kies uitspraken zonder rekenwerk of met ronde getallen." },
-        "nt2": { "past": "aanpassen", "tip": "Korte, eenvoudige uitspraken; zet ze ook op het bord." },
-        "faalangst": { "past": "aanpassen", "tip": "Vraag geen uitleg aan wie niet wil; iedereen doet tegelijk mee." },
-        "structuur": { "past": "goed", "tip": "Kort en voorspelbaar." },
-        "hoogbegaafd": { "past": "goed", "tip": "Laat hen een uitspraak bedenken." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Mondeling."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Kies uitspraken zonder rekenwerk of met ronde getallen."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Korte, eenvoudige uitspraken; zet ze ook op het bord."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Vraag geen uitleg aan wie niet wil; iedereen doet tegelijk mee."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen een uitspraak bedenken."
+        }
       },
       "energie": "actief",
-      "docentstijl": ["uitleggen", "structuur", "houvast", "relatie"],
+      "docentstijl": [
+        "uitleggen",
+        "structuur",
+        "houvast",
+        "relatie"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": true,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen kijken wat de rest doet.", "oplossing": "Tel af: 'Drie, twee, één, nu!'" }
+        {
+          "valkuil": "Leerlingen kijken wat de rest doet.",
+          "oplossing": "Tel af: 'Drie, twee, één, nu!'"
+        }
       ],
       "varianten": {
         "vmbo": "Heel concrete uitspraken.",
@@ -53,19 +111,34 @@
         "verdieping": "Zelf een uitspraak bedenken."
       },
       "vakvoorbeelden": [
-        { "vak": "Biologie", "voorbeeld": "'Een walvis is een vis.'" },
-        { "vak": "Engels", "voorbeeld": "'Je zegt: he don't like it.'" },
-        { "vak": "Aardrijkskunde", "voorbeeld": "'Gulpen ligt hoger dan Maastricht.'" }
+        {
+          "vak": "Biologie",
+          "voorbeeld": "'Een walvis is een vis.'"
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "'Je zegt: he don't like it.'"
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "'Gulpen ligt hoger dan Maastricht.'"
+        }
       ],
       "waarom": "Een kort beweegmoment onderbreekt lang zitten, wat in M-lokalen met krukken extra belangrijk is, en is tegelijk een ophaaloefening. Onderzoek naar korte beweegpauzes in de klas wijst op positieve effecten op actieve leertijd; de onderzoeken zijn vooral in het basisonderwijs gedaan.",
       "bewijs": "beperkt",
-      "bronnen": ["daly-smith-2018", "roediger-karpicke-2006"],
+      "bronnen": [
+        "daly-smith-2018",
+        "roediger-karpicke-2006"
+      ],
       "materiaal": []
     },
     {
       "id": "vier-hoeken",
       "naam": "Vier hoeken",
-      "alias": ["hoekenspel", "kies je hoek"],
+      "alias": [
+        "hoekenspel",
+        "kies je hoek"
+      ],
       "categorie": "energizer",
       "kort": "Elke hoek van het lokaal staat voor een antwoord (A, B, C, D); leerlingen lopen naar de hoek van hun keuze en bespreken daar kort waarom.",
       "startzin": "Elke hoek is een antwoord. Kies je antwoord en loop rustig naar die hoek. Bespreek in je hoek in één minuut: waarom kozen jullie dit?",
@@ -76,34 +149,95 @@
         "In de hoek: 1 minuut overleggen waarom.",
         "Elke hoek geeft één argument; daarna terug naar de plek."
       ],
-      "duur": { "min": 2, "max": 3 },
-      "groepsvorm": ["groepje", "klas"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": true },
-      "middelen": { "lijst": ["kaarten A, B, C, D in de hoeken"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 2,
+        "max": 3
+      },
+      "groepsvorm": [
+        "groepje",
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "kaarten A, B, C, D in de hoeken"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["opening", "check", "voorkennis"],
-      "denkniveau": ["begrijpen", "evalueren"],
+      "lesfase": [
+        "opening",
+        "check",
+        "voorkennis"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "evalueren"
+      ],
       "differentiatie": [],
       "richting": "nvt",
-      "doeldomein": ["kwalificatie", "socialisatie"],
-      "burgerschap": ["rechtvaardigheid"],
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [
+        "rechtvaardigheid"
+      ],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Lees de opties voor." },
-        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk." },
-        "nt2": { "past": "aanpassen", "tip": "Opties kort en met beeld." },
-        "faalangst": { "past": "aanpassen", "tip": "Je loopt met een groepje; argument geven gebeurt namens de hoek." },
-        "structuur": { "past": "aanpassen", "tip": "Duidelijk signaal om te lopen en terug te gaan." },
-        "hoogbegaafd": { "past": "goed", "tip": "Vraag ze een tegenargument voor hun eigen hoek." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees de opties voor."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Opties kort en met beeld."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Je loopt met een groepje; argument geven gebeurt namens de hoek."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Duidelijk signaal om te lopen en terug te gaan."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag ze een tegenargument voor hun eigen hoek."
+        }
       },
       "energie": "actief",
-      "docentstijl": ["samenwerken", "relatie", "ontdekken"],
+      "docentstijl": [
+        "samenwerken",
+        "relatie",
+        "ontdekken"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": true,
       "perspectieven": true,
       "valkuilen": [
-        { "valkuil": "Leerlingen volgen hun vrienden.", "oplossing": "Laat eerst het antwoord opschrijven, dan pas lopen." },
-        { "valkuil": "Krap M-lokaal.", "oplossing": "Gebruik twee hoeken (eens/oneens) of de muren." }
+        {
+          "valkuil": "Leerlingen volgen hun vrienden.",
+          "oplossing": "Laat eerst het antwoord opschrijven, dan pas lopen."
+        },
+        {
+          "valkuil": "Krap M-lokaal.",
+          "oplossing": "Gebruik twee hoeken (eens/oneens) of de muren."
+        }
       ],
       "varianten": {
         "vmbo": "Twee of drie hoeken.",
@@ -114,19 +248,36 @@
         "verdieping": "Tegenargument geven."
       },
       "vakvoorbeelden": [
-        { "vak": "Maatschappijleer", "voorbeeld": "'Vanaf welke leeftijd mag je stemmen? 14, 16, 18 of 21?'" },
-        { "vak": "Wiskunde", "voorbeeld": "'Welke grafiek hoort bij deze tabel?'" },
-        { "vak": "Nederlands", "voorbeeld": "'Welk signaalwoord past in deze zin?'" }
+        {
+          "vak": "Maatschappijleer",
+          "voorbeeld": "'Vanaf welke leeftijd mag je stemmen? 14, 16, 18 of 21?'"
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "'Welke grafiek hoort bij deze tabel?'"
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "'Welk signaalwoord past in deze zin?'"
+        }
       ],
       "waarom": "Combineert een keuze maken en beargumenteren met beweging. Onderzoek naar korte beweegmomenten is in ontwikkeling; de waarde zit vooral in het onderbreken van lang zitten en het activeren van alle leerlingen.",
       "bewijs": "beperkt",
-      "bronnen": ["daly-smith-2018"],
-      "materiaal": ["hoekkaarten"]
+      "bronnen": [
+        "daly-smith-2018"
+      ],
+      "materiaal": [
+        "hoekkaarten"
+      ]
     },
     {
       "id": "stellingenlijn",
       "naam": "Stellingenlijn",
-      "alias": ["meningslijn", "waardenlijn", "lijnopstelling"],
+      "alias": [
+        "meningslijn",
+        "waardenlijn",
+        "lijnopstelling"
+      ],
       "categorie": "energizer",
       "kort": "Leerlingen gaan op een denkbeeldige lijn staan tussen 'helemaal eens' en 'helemaal oneens' en leggen kort uit waarom ze daar staan.",
       "startzin": "Deze muur is 'helemaal eens', die muur is 'helemaal oneens'. Ga staan waar jij staat bij deze stelling. Het midden mag ook, maar dan moet je wel uitleggen waarom.",
@@ -137,33 +288,93 @@
         "Vraag aan beide uitersten en het midden een korte reactie.",
         "Vraag: wie is van plek veranderd na de argumenten? Daarna terug."
       ],
-      "duur": { "min": 2, "max": 3 },
-      "groepsvorm": ["klas"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": true },
-      "middelen": { "lijst": ["kaarten 'eens' en 'oneens'", "stelling"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 2,
+        "max": 3
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "kaarten 'eens' en 'oneens'",
+          "stelling"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["opening", "verwerken", "afsluiting"],
-      "denkniveau": ["evalueren"],
+      "lesfase": [
+        "opening",
+        "verwerken",
+        "afsluiting"
+      ],
+      "denkniveau": [
+        "evalueren"
+      ],
       "differentiatie": [],
       "richting": "nvt",
-      "doeldomein": ["socialisatie", "persoonsvorming", "kwalificatie"],
-      "burgerschap": ["rechtvaardigheid", "inclusie", "gemeenschappelijkheid"],
+      "doeldomein": [
+        "socialisatie",
+        "persoonsvorming",
+        "kwalificatie"
+      ],
+      "burgerschap": [
+        "rechtvaardigheid",
+        "inclusie",
+        "gemeenschappelijkheid"
+      ],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Mondeling; stelling ook op het bord." },
-        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk." },
-        "nt2": { "past": "aanpassen", "tip": "Zinsstarter: 'Ik sta hier omdat…'." },
-        "faalangst": { "past": "aanpassen", "tip": "Niemand hoeft iets te zeggen; staan is genoeg." },
-        "structuur": { "past": "aanpassen", "tip": "Duidelijke regels voor het gesprek." },
-        "hoogbegaafd": { "past": "goed", "tip": "Vraag om het sterkste argument van de andere kant." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Mondeling; stelling ook op het bord."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Zinsstarter: 'Ik sta hier omdat…'."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Niemand hoeft iets te zeggen; staan is genoeg."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Duidelijke regels voor het gesprek."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om het sterkste argument van de andere kant."
+        }
       },
       "energie": "actief",
-      "docentstijl": ["relatie", "samenwerken", "ontdekken"],
+      "docentstijl": [
+        "relatie",
+        "samenwerken",
+        "ontdekken"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": true,
       "perspectieven": true,
       "valkuilen": [
-        { "valkuil": "Gevoelige stelling leidt tot persoonlijke aanvallen.", "oplossing": "Spreek af: we reageren op argumenten, niet op personen." }
+        {
+          "valkuil": "Gevoelige stelling leidt tot persoonlijke aanvallen.",
+          "oplossing": "Spreek af: we reageren op argumenten, niet op personen."
+        }
       ],
       "varianten": {
         "vmbo": "Concrete stelling uit het dagelijks leven.",
@@ -174,19 +385,34 @@
         "verdieping": "Argument van de andere kant."
       },
       "vakvoorbeelden": [
-        { "vak": "Maatschappijleer", "voorbeeld": "'Jongeren in het Heuvelland moeten na hun studie terugkomen om hier te wonen.'" },
-        { "vak": "Biologie", "voorbeeld": "'Vlees eten moet duurder worden voor het klimaat.'" },
-        { "vak": "Filosofie & levensbeschouwing", "voorbeeld": "'Liegen is altijd verkeerd.'" }
+        {
+          "vak": "Maatschappijleer",
+          "voorbeeld": "'Jongeren in het Heuvelland moeten na hun studie terugkomen om hier te wonen.'"
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "'Vlees eten moet duurder worden voor het klimaat.'"
+        },
+        {
+          "vak": "Filosofie & levensbeschouwing",
+          "voorbeeld": "'Liegen is altijd verkeerd.'"
+        }
       ],
       "waarom": "Een stellingenlijn maakt meningen en nuance zichtbaar en laat leerlingen verschillende perspectieven horen, wat aansluit bij de pijler goed samenleven en de burgerschapswaarde rechtvaardigheid. Het effect is vooral onderzocht als gespreksvorm, niet als beweegmoment.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["stellingkaarten"]
+      "materiaal": [
+        "stellingkaarten"
+      ]
     },
     {
       "id": "staande-ophaaloefening",
       "naam": "Staande ophaaloefening",
-      "alias": ["wissel van plek", "staand overleg", "loop naar een nieuwe partner"],
+      "alias": [
+        "wissel van plek",
+        "staand overleg",
+        "loop naar een nieuwe partner"
+      ],
       "categorie": "energizer",
       "kort": "Leerlingen staan op, lopen naar een klasgenoot aan de andere kant van het lokaal en noemen samen staand drie dingen die ze vandaag geleerd hebben.",
       "startzin": "Iedereen staat op. Zoek iemand aan de andere kant van het lokaal. Noem samen staand drie dingen die je vandaag hebt geleerd. Je hebt 90 seconden.",
@@ -197,33 +423,88 @@
         "Na 90 seconden: terug naar de plek, of op de nieuwe plek blijven zitten.",
         "Vraag één tweetal om hun drie dingen."
       ],
-      "duur": { "min": 1, "max": 3 },
-      "groepsvorm": ["tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": true },
-      "middelen": { "lijst": ["timer"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 1,
+        "max": 3
+      },
+      "groepsvorm": [
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "timer"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["inoefenen", "verwerken", "afsluiting"],
-      "denkniveau": ["onthouden", "begrijpen"],
+      "lesfase": [
+        "inoefenen",
+        "verwerken",
+        "afsluiting"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
       "differentiatie": [],
       "richting": "nvt",
-      "doeldomein": ["kwalificatie", "socialisatie"],
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Mondeling." },
-        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk." },
-        "nt2": { "past": "goed", "tip": "Korte, herhaalde taaloefening." },
-        "faalangst": { "past": "goed", "tip": "Gesprek met één persoon." },
-        "structuur": { "past": "aanpassen", "tip": "Duidelijk start- en stopsignaal." },
-        "hoogbegaafd": { "past": "goed", "tip": "Vraag om een verband in plaats van drie feiten." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Mondeling."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Korte, herhaalde taaloefening."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Gesprek met één persoon."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Duidelijk start- en stopsignaal."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een verband in plaats van drie feiten."
+        }
       },
       "energie": "actief",
-      "docentstijl": ["relatie", "samenwerken", "houvast"],
+      "docentstijl": [
+        "relatie",
+        "samenwerken",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": true,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Het duurt langer dan gepland.", "oplossing": "Zichtbare timer van 90 seconden." }
+        {
+          "valkuil": "Het duurt langer dan gepland.",
+          "oplossing": "Zichtbare timer van 90 seconden."
+        }
       ],
       "varianten": {
         "vmbo": "Eén vraag in plaats van drie dingen.",
@@ -234,13 +515,790 @@
         "verdieping": "Verband leggen."
       },
       "vakvoorbeelden": [
-        { "vak": "Geschiedenis", "voorbeeld": "Drie kenmerken van de Middeleeuwen." },
-        { "vak": "Scheikunde", "voorbeeld": "Drie begrippen over zuren en basen." },
-        { "vak": "Frans", "voorbeeld": "Drie zinnetjes in het Frans over je weekend." }
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Drie kenmerken van de Middeleeuwen."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Drie begrippen over zuren en basen."
+        },
+        {
+          "vak": "Frans",
+          "voorbeeld": "Drie zinnetjes in het Frans over je weekend."
+        }
       ],
       "waarom": "Combineert ophalen uit het geheugen met opstaan en lopen; dat onderbreekt lang zitten op krukken. Ophaaloefening is goed onderbouwd; voor korte beweegmomenten is het bewijs nog beperkt.",
       "bewijs": "beperkt",
-      "bronnen": ["roediger-karpicke-2006", "daly-smith-2018"],
+      "bronnen": [
+        "roediger-karpicke-2006",
+        "daly-smith-2018"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "rek-en-strek",
+      "naam": "Rek en strek",
+      "alias": [
+        "stretchpauze",
+        "even uitrekken"
+      ],
+      "categorie": "energizer",
+      "kort": "Een minuut staan en rekken met een paar vaste bewegingen, om het lijf even los te maken na lang zitten.",
+      "startzin": "Iedereen staat op. Doe mee: armen omhoog, naar links, naar rechts, schouders rollen. Nog tien seconden. Zitten.",
+      "stappen": [
+        "Laat iedereen opstaan naast de kruk of stoel.",
+        "Doe drie of vier rekbewegingen voor (armen, schouders, nek).",
+        "Tel hardop mee, ongeveer een minuut.",
+        "Sluit af met een diepe ademhaling.",
+        "Zitten en direct verder met de volgende opdracht."
+      ],
+      "duur": {
+        "min": 1,
+        "max": 2
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "geen"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Mondeling; zet de vraag ook op het bord."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Korte, eenvoudige vragen; voordoen helpt."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Iedereen doet hetzelfde; niemand valt op."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Elke keer dezelfde bewegingen."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen een vraag bedenken."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "structuur",
+        "relatie",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": true,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen gaan kletsen.",
+          "oplossing": "Houd het kort en tel hardop."
+        },
+        {
+          "valkuil": "Een leerling kan door een blessure niet meedoen.",
+          "oplossing": "Zittend meedoen met armen of nek is ook goed."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Eenvoudig voordoen.",
+        "havo": "Een leerling doet voor.",
+        "vwo": "Koppel elke beweging aan een begrip.",
+        "steun": "Vragen ook op het bord.",
+        "basis": "Standaard.",
+        "verdieping": "Laat hen een vraag bedenken."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Na twintig minuten sommen maken."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Na een lange leesopdracht."
+        },
+        {
+          "vak": "Frans",
+          "voorbeeld": "Rekken en hardop tellen in het Frans."
+        }
+      ],
+      "waarom": "Korte beweegmomenten onderbreken lang zitten. Onderzoek naar effecten op leren is wisselend; ze lijken in elk geval niet te schaden en worden vaak als prettig ervaren (Daly-Smith en anderen).",
+      "bewijs": "beperkt",
+      "bronnen": [
+        "daly-smith-2018"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "samen-tellen",
+      "naam": "Samen tot twintig",
+      "alias": [
+        "telspel",
+        "concentratiespel"
+      ],
+      "categorie": "energizer",
+      "kort": "De klas telt samen tot twintig, steeds één leerling per getal zonder afspraak; zeggen twee tegelijk een getal, dan begin je opnieuw.",
+      "startzin": "Iedereen staat. We tellen tot twintig. Wie een getal zegt, gaat zitten. Zeggen twee mensen tegelijk iets, dan beginnen we bij één.",
+      "stappen": [
+        "Iedereen staat op.",
+        "Iemand begint met één; wie een getal zegt, gaat zitten.",
+        "Bij twee tegelijk: iedereen staat weer op en je begint opnieuw.",
+        "Stop na twee minuten, ook als het niet gelukt is.",
+        "Vraag: wat hielp om het te laten lukken?"
+      ],
+      "duur": {
+        "min": 2,
+        "max": 3
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "geen"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Mondeling; zet de vraag ook op het bord."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Korte, eenvoudige vragen; voordoen helpt."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Niemand hoeft een getal te zeggen."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Duidelijk start- en stopsignaal."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen een vraag bedenken."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": true,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Een paar leerlingen roepen snel alle getallen.",
+          "oplossing": "Regel: je mag maar één getal zeggen."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Tot tien.",
+        "havo": "Tot twintig.",
+        "vwo": "Tellen in een vreemde taal of met tafels van drie.",
+        "steun": "Vragen ook op het bord.",
+        "basis": "Standaard.",
+        "verdieping": "Laat hen een vraag bedenken."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Duits",
+          "voorbeeld": "Tellen in het Duits."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Alleen veelvouden van drie."
+        },
+        {
+          "vak": "Lichamelijke opvoeding",
+          "voorbeeld": "Als opwarmer voor samenwerken."
+        }
+      ],
+      "waarom": "Een korte concentratieopdracht met de hele klas geeft beweging (opstaan, zitten) en vraagt om samen op te letten. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "uitbeelden",
+      "naam": "Begrippen uitbeelden",
+      "alias": [
+        "pantomime",
+        "hints"
+      ],
+      "categorie": "energizer",
+      "kort": "Een leerling of tweetal beeldt een begrip uit zonder te praten; de klas raadt welk begrip het is.",
+      "startzin": "Ik geef een begrip aan een vrijwilliger. Die beeldt het uit, zonder praten. Jullie raden.",
+      "stappen": [
+        "Schrijf begrippen uit de les op kaartjes.",
+        "Vraag een vrijwilliger of tweetal.",
+        "Zij beelden het begrip 30 seconden uit.",
+        "De klas raadt; wie het weet, legt het begrip in één zin uit.",
+        "Twee of drie rondes."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "begripskaartjes"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "inoefenen",
+        "afsluiting"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Mondeling; zet de vraag ook op het bord."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Taalarm en visueel."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Alleen vrijwilligers; uitbeelden in tweetallen voelt veiliger."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Duidelijk start- en stopsignaal."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen een vraag bedenken."
+        }
+      },
+      "energie": "actief",
+      "docentstijl": [
+        "relatie",
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": true,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen die niet willen, worden gedwongen.",
+          "oplossing": "Alleen vrijwilligers."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Concrete begrippen.",
+        "havo": "Abstractere begrippen.",
+        "vwo": "Een proces in meerdere stappen uitbeelden.",
+        "steun": "Vragen ook op het bord.",
+        "basis": "Standaard.",
+        "verdieping": "Laat hen een vraag bedenken."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Fotosynthese, verdampen, ademen."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Werkwoorden uitbeelden."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Ambachtsman, ridder, monnik."
+        }
+      ],
+      "waarom": "Bewegen en een begrip koppelen kan helpen onthouden, en het geeft energie. Het bewijs voor leren is beperkt; het is vooral een goede pauze met inhoud.",
+      "bewijs": "beperkt",
+      "bronnen": [
+        "daly-smith-2018"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "sta-op-en-wissel",
+      "naam": "Sta op en wissel",
+      "alias": [
+        "zoek een nieuwe partner",
+        "stand up, hand up, pair up"
+      ],
+      "categorie": "energizer",
+      "kort": "Leerlingen staan op, zoeken iemand van een andere tafel, bespreken één vraag en gaan weer zitten.",
+      "startzin": "Sta op, steek je hand op en zoek iemand van een andere tafel met de hand omhoog. Geef een high five en bespreek de vraag op het bord.",
+      "stappen": [
+        "Zet een vraag op het bord.",
+        "Iedereen staat op en steekt de hand op.",
+        "Leerlingen zoeken iemand van een andere tafel en laten de hand zakken.",
+        "Ze bespreken de vraag (één minuut).",
+        "Terug naar de plek; vraag twee leerlingen wat ze hoorden."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": false,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "vraag op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "inoefenen",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "socialisatie",
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Mondeling; zet de vraag ook op het bord."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Korte, eenvoudige vragen; voordoen helpt."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Mag ook met iemand die je kent; geen kring."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Vaste regel: nooit iemand van je eigen tafel."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen een vraag bedenken."
+        }
+      },
+      "energie": "actief",
+      "docentstijl": [
+        "samenwerken",
+        "relatie"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": true,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen zoeken altijd dezelfde vrienden.",
+          "oplossing": "Regel: iemand van een andere tafel."
+        },
+        {
+          "valkuil": "In een M-lokaal is geen ruimte.",
+          "oplossing": "Doe dan opstaan en draaien naar de tafel erachter."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een eenvoudige vraag.",
+        "havo": "Een vraag die uitleg vraagt.",
+        "vwo": "Twee rondes met een vervolgvraag.",
+        "steun": "Vragen ook op het bord.",
+        "basis": "Standaard.",
+        "verdieping": "Laat hen een vraag bedenken."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Leg je partner uit hoe je de vorige som oploste."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Ask your partner about their weekend."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Noem samen drie gevolgen van de zeespiegelstijging."
+        }
+      ],
+      "waarom": "Opstaan en met een nieuwe partner praten combineert beweging met ophalen en verwoorden. Praktijkervaring; de vorm komt uit coöperatief leren.",
+      "bewijs": "beperkt",
+      "bronnen": [
+        "daly-smith-2018"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "spiegelen",
+      "naam": "Spiegelen",
+      "alias": [
+        "spiegelspel",
+        "mirroring"
+      ],
+      "categorie": "energizer",
+      "kort": "In tweetallen doet de een langzaam bewegingen voor en spiegelt de ander die precies; na een halve minuut wisselen.",
+      "startzin": "Ga tegenover je buur staan. A beweegt langzaam, B is de spiegel. Na dertig seconden wisselen.",
+      "stappen": [
+        "Leerlingen staan in tweetallen tegenover elkaar.",
+        "A beweegt langzaam met armen en gezicht.",
+        "B spiegelt zo precies mogelijk.",
+        "Na 30 seconden wisselen.",
+        "Terug naar de plek en verder."
+      ],
+      "duur": {
+        "min": 1,
+        "max": 2
+      },
+      "groepsvorm": [
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "geen"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "inoefenen",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Mondeling; zet de vraag ook op het bord."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Korte, eenvoudige vragen; voordoen helpt."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Met een bekende partner; alle tweetallen tegelijk."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Duidelijk start- en stopsignaal."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen een vraag bedenken."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": true,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het wordt giechelig.",
+          "oplossing": "Spreek af: langzaam en zonder geluid."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Alleen armen.",
+        "havo": "Armen en gezicht.",
+        "vwo": "Spiegel een beweging die bij een begrip past.",
+        "steun": "Vragen ook op het bord.",
+        "basis": "Standaard.",
+        "verdieping": "Laat hen een vraag bedenken."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Lichamelijke opvoeding",
+          "voorbeeld": "Als coördinatieoefening."
+        },
+        {
+          "vak": "Drama",
+          "voorbeeld": "Als warming-up."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Spiegelen als opstap naar symmetrie."
+        }
+      ],
+      "waarom": "Een korte oefening in tweetallen die concentratie vraagt en lichaam en hoofd even resetten. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "vraag-en-vang",
+      "naam": "Vraag en vang",
+      "alias": [
+        "balletje gooien",
+        "gooi en vraag"
+      ],
+      "categorie": "energizer",
+      "kort": "Je gooit een zacht balletje naar een leerling; wie vangt, beantwoordt een korte vraag en gooit door naar iemand die nog niet aan de beurt was.",
+      "startzin": "Wie het balletje vangt, beantwoordt de vraag op het bord en gooit het naar iemand die nog niet geweest is.",
+      "stappen": [
+        "Zorg voor een zacht balletje of een prop papier.",
+        "Zet een reeks korte vragen klaar.",
+        "Gooi naar een leerling; die antwoordt.",
+        "De leerling gooit door naar iemand die nog niet geweest is.",
+        "Stop na drie minuten."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "zacht balletje",
+          "vragen"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "inoefenen",
+        "voorkennis",
+        "afsluiting"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Mondeling; zet de vraag ook op het bord."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Korte, eenvoudige vragen; voordoen helpt."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Wie het niet weet, mag \"door\" zeggen en doorgooien."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Duidelijk start- en stopsignaal."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen een vraag bedenken."
+        }
+      },
+      "energie": "actief",
+      "docentstijl": [
+        "relatie",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": true,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Er wordt hard gegooid.",
+          "oplossing": "Alleen onderhands en zacht; anders stopt het spel."
+        },
+        {
+          "valkuil": "Steeds dezelfde leerlingen.",
+          "oplossing": "Regel: alleen naar wie nog niet geweest is."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Ja/nee-vragen.",
+        "havo": "Korte feitvragen.",
+        "vwo": "Vragen waarbij je doorvraagt: waarom?",
+        "steun": "Vragen ook op het bord.",
+        "basis": "Standaard.",
+        "verdieping": "Laat hen een vraag bedenken."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Frans",
+          "voorbeeld": "Vertaal het woord."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Tafels en kwadraten."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Noem een functie van dit orgaan."
+        }
+      ],
+      "waarom": "Snel ophalen in een spelvorm houdt de aandacht vast en geeft een korte beweging. Ophaaloefeningen zijn goed onderzocht; de spelvorm zelf is praktijk.",
+      "bewijs": "beperkt",
+      "bronnen": [
+        "roediger-karpicke-2006",
+        "daly-smith-2018"
+      ],
       "materiaal": []
     }
   ]

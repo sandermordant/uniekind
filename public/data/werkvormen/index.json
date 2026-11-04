@@ -5,55 +5,55 @@
    "categorie": "aandachtrichter",
    "titel": "Aandachtrichters en lesopeners",
    "bestand": "aandachtrichters.json",
-   "aantal": 6
+   "aantal": 41
   },
   {
    "categorie": "activerende-werkvorm",
    "titel": "Activerende en coöperatieve werkvormen",
    "bestand": "activerend.json",
-   "aantal": 15
+   "aantal": 29
   },
   {
    "categorie": "afsluiter",
    "titel": "Afsluiters",
    "bestand": "afsluiters.json",
-   "aantal": 3
+   "aantal": 8
   },
   {
    "categorie": "differentiatievorm",
    "titel": "Differentiatievormen en organisatievormen",
    "bestand": "differentiatie.json",
-   "aantal": 14
+   "aantal": 20
   },
   {
    "categorie": "energizer",
    "titel": "Energizers en beweegmomenten (onder 3 minuten)",
    "bestand": "energizers.json",
-   "aantal": 4
+   "aantal": 10
   },
   {
    "categorie": "formatieve-check",
    "titel": "Formatieve checks",
    "bestand": "formatief.json",
-   "aantal": 10
+   "aantal": 18
   },
   {
    "categorie": "instructiemodel",
    "titel": "Instructiemodellen en -vormen",
    "bestand": "instructie.json",
-   "aantal": 8
+   "aantal": 10
   },
   {
    "categorie": "leerstrategie",
    "titel": "Leerstrategieën uit de cognitieve psychologie",
    "bestand": "leerstrategie.json",
-   "aantal": 6
+   "aantal": 11
   },
   {
    "categorie": "routine",
    "titel": "Klassenmanagement-routines voor differentiatie",
    "bestand": "routines.json",
-   "aantal": 8
+   "aantal": 13
   }
  ],
  "items": [
@@ -217,6 +217,54 @@
    "bestand": "instructie.json"
   },
   {
+   "id": "advertentie-ontleden",
+   "naam": "Advertentie of verpakking",
+   "alias": [
+    "reclame",
+    "etiket"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je laat een advertentie, etiket of verpakking zien en leerlingen zoeken wat erop staat dat met de stof te maken heeft.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "evalueren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
    "id": "pleinafspraken",
    "naam": "Afsprakenkaart voor het plein",
    "alias": [
@@ -318,6 +366,398 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "leerstrategie.json"
+  },
+  {
+   "id": "ankeropdracht",
+   "naam": "Ankeropdracht",
+   "alias": [
+    "vaste doorwerkopdracht",
+    "anchor activity"
+   ],
+   "categorie": "differentiatievorm",
+   "kort": "Een vaste, zinvolle opdracht waar leerlingen altijd aan kunnen werken als ze klaar zijn of moeten wachten.",
+   "duur": {
+    "min": 5,
+    "max": 20
+   },
+   "groepsvorm": [
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "optioneel",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken",
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "toepassen",
+    "onthouden"
+   ],
+   "differentiatie": [
+    "tempo"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "differentiatie.json"
+  },
+  {
+   "id": "begeleid-ontdekken",
+   "naam": "Begeleid ontdekken",
+   "alias": [
+    "geleid onderzoek",
+    "guided discovery"
+   ],
+   "categorie": "instructiemodel",
+   "kort": "Leerlingen ontdekken een regel of verband uit een reeks zorgvuldig gekozen voorbeelden, met vragen van jou als leidraad, gevolgd door een expliciete samenvatting.",
+   "duur": {
+    "min": 12,
+    "max": 20
+   },
+   "groepsvorm": [
+    "tweetal",
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "uitgebreid",
+   "lesfase": [
+    "instructie"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "begrijpen"
+   ],
+   "differentiatie": [
+    "ondersteuning"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "instructie.json"
+  },
+  {
+   "id": "uitbeelden",
+   "naam": "Begrippen uitbeelden",
+   "alias": [
+    "pantomime",
+    "hints"
+   ],
+   "categorie": "energizer",
+   "kort": "Een leerling of tweetal beeldt een begrip uit zonder te praten; de klas raadt welk begrip het is.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": true
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "inoefenen",
+    "afsluiting"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "actief",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "energizers.json"
+  },
+  {
+   "id": "domino-memory",
+   "naam": "Begrippendomino of memory",
+   "alias": [
+    "kaartspel",
+    "begrippen koppelen"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Leerlingen koppelen in tweetallen kaartjes met begrippen aan uitleg, plaatjes of voorbeelden, als domino of memory.",
+   "duur": {
+    "min": 8,
+    "max": 15
+   },
+   "groepsvorm": [
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "uitgebreid",
+   "lesfase": [
+    "inoefenen",
+    "verwerken"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
+  },
+  {
+   "id": "begrippenkaart",
+   "naam": "Begrippenkaart",
+   "alias": [
+    "concept map",
+    "mindmap met verbanden"
+   ],
+   "categorie": "leerstrategie",
+   "kort": "Leerlingen zetten de begrippen van een hoofdstuk op een blad en verbinden ze met pijlen waarop staat hoe ze samenhangen.",
+   "duur": {
+    "min": 10,
+    "max": 20
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken",
+    "afsluiting"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "analyseren"
+   ],
+   "differentiatie": [
+    "tempo"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "leerstrategie.json"
+  },
+  {
+   "id": "begroeten-bij-de-deur",
+   "naam": "Begroeten bij de deur",
+   "alias": [
+    "ontvangst bij de deur",
+    "welkom heten"
+   ],
+   "categorie": "routine",
+   "kort": "Je staat bij binnenkomst bij de deur, begroet elke leerling kort en wijst op de startopdracht.",
+   "duur": {
+    "min": 1,
+    "max": 3
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "verwerken",
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "routines.json"
+  },
+  {
+   "id": "bericht-aan-afwezige",
+   "naam": "Bericht aan een afwezige klasgenoot",
+   "alias": [
+    "uitleg voor wie er niet was",
+    "drie zinnen"
+   ],
+   "categorie": "afsluiter",
+   "kort": "Leerlingen schrijven in drie zinnen aan een denkbeeldige klasgenoot die ziek was wat die vandaag gemist heeft.",
+   "duur": {
+    "min": 3,
+    "max": 6
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "afsluiting"
+   ],
+   "denkniveau": [
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "afsluiters.json"
+  },
+  {
+   "id": "bericht-uit-het-verleden",
+   "naam": "Bericht uit het verleden",
+   "alias": [
+    "brief van toen",
+    "nep-bericht van een historisch persoon"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je toont een kort bericht, alsof het geschreven is door een persoon uit de stof, en leerlingen raden wie het schreef en wanneer.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
   },
   {
    "id": "binnen-buitenkring",
@@ -432,6 +872,56 @@
    "bestand": "activerend.json"
   },
   {
+   "id": "checkpoint-bij-docent",
+   "naam": "Checkpoint",
+   "alias": [
+    "laat zien voor je verder gaat",
+    "tussenstop"
+   ],
+   "categorie": "formatieve-check",
+   "kort": "In de opdracht staat een checkpoint: na een bepaalde opgave laat de leerling het werk zien voordat die verder mag.",
+   "duur": {
+    "min": 5,
+    "max": 15
+   },
+   "groepsvorm": [
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "inoefenen",
+    "check"
+   ],
+   "denkniveau": [
+    "toepassen"
+   ],
+   "differentiatie": [
+    "tempo",
+    "ondersteuning"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "aanpassen",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "formatief.json"
+  },
+  {
    "id": "compacten-verrijken",
    "naam": "Compacten en verrijken",
    "alias": [
@@ -540,6 +1030,157 @@
    "bestand": "activerend.json"
   },
   {
+   "id": "concrete-voorbeelden",
+   "naam": "Concrete voorbeelden",
+   "alias": [
+    "voorbeeld en niet-voorbeeld",
+    "abstract maken concreet"
+   ],
+   "categorie": "leerstrategie",
+   "kort": "Bij een abstract begrip zoeken leerlingen twee concrete voorbeelden en één niet-voorbeeld, en leggen uit wat ze gemeen hebben.",
+   "duur": {
+    "min": 5,
+    "max": 12
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "instructie",
+    "inoefenen",
+    "verwerken"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "tempo"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "leerstrategie.json"
+  },
+  {
+   "id": "eerste-zin",
+   "naam": "De eerste zin",
+   "alias": [
+    "openingszin",
+    "begin van een tekst"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je leest alleen de eerste zin van een tekst, verhaal of bron voor en leerlingen voorspellen waar het over gaat.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "debat-in-tweetallen",
+   "naam": "Debat in tweetallen",
+   "alias": [
+    "kort debat",
+    "voor en tegen"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Twee leerlingen krijgen elk een kant van een stelling en wisselen in korte rondes argumenten uit; daarna wisselen ze van kant.",
+   "duur": {
+    "min": 10,
+    "max": 15
+   },
+   "groepsvorm": [
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "evalueren"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 2,
+   "burgerschap": [
+    "rechtvaardigheid"
+   ],
+   "beginHier": null,
+   "bestand": "activerend.json"
+  },
+  {
    "id": "denken-delen-uitwisselen",
    "naam": "Denken-delen-uitwisselen",
    "alias": [
@@ -598,6 +1239,104 @@
    "bestand": "activerend.json"
   },
   {
+   "id": "diamant-rangschikken",
+   "naam": "Diamant rangschikken",
+   "alias": [
+    "diamond ranking",
+    "negen kaartjes"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Groepjes leggen negen kaartjes in een ruitvorm van belangrijkst naar minst belangrijk en moeten het eens worden.",
+   "duur": {
+    "min": 12,
+    "max": 20
+   },
+   "groepsvorm": [
+    "groepje"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "evalueren"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
+  },
+  {
+   "id": "dilemma",
+   "naam": "Dilemma",
+   "alias": [
+    "wat zou jij doen",
+    "keuzevraag"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je legt een kort dilemma voor zonder goed of fout antwoord; leerlingen kiezen een kant en geven één reden.",
+   "duur": {
+    "min": 3,
+    "max": 6
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "evalueren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [
+    "rechtvaardigheid"
+   ],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
    "id": "directe-instructie",
    "naam": "Directe instructie",
    "alias": [
@@ -648,6 +1387,54 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "instructie.json"
+  },
+  {
+   "id": "kijkvragen-bij-een-beeld",
+   "naam": "Drie kijkvragen bij een beeld",
+   "alias": [
+    "visual thinking",
+    "wat zie je"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Bij een rijk beeld stel je drie vaste vragen: wat gebeurt hier, waaraan zie je dat, wat zie je nog meer?",
+   "duur": {
+    "min": 3,
+    "max": 6
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
   },
   {
    "id": "drie-sporen",
@@ -912,6 +1699,102 @@
    "bestand": "aandachtrichters.json"
   },
   {
+   "id": "minuut-schrijven",
+   "naam": "Eén minuut alles opschrijven",
+   "alias": [
+    "brainflits",
+    "schrijfminuut"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Leerlingen schrijven in één minuut alles op wat ze al weten over het onderwerp, zonder te stoppen.",
+   "duur": {
+    "min": 2,
+    "max": 3
+   },
+   "groepsvorm": [
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "een-zin-samenvatting",
+   "naam": "Eén zin",
+   "alias": [
+    "één-zinsamenvatting",
+    "kern in één zin"
+   ],
+   "categorie": "formatieve-check",
+   "kort": "Leerlingen vatten de kern van het lesdeel samen in één zin, met een verplicht begrip erin.",
+   "duur": {
+    "min": 2,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "check",
+    "afsluiting"
+   ],
+   "denkniveau": [
+    "begrijpen"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "aanpassen",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "formatief.json"
+  },
+  {
    "id": "eerst-drie-dan-ik",
    "naam": "Eerst drie, dan ik",
    "alias": [
@@ -963,6 +1846,103 @@
    ],
    "beginHier": null,
    "bestand": "routines.json"
+  },
+  {
+   "id": "einde-les-routine",
+   "naam": "Einde-lesroutine",
+   "alias": [
+    "opruimen",
+    "afsluiten en vertrekken"
+   ],
+   "categorie": "routine",
+   "kort": "De laatste twee minuten verlopen elke les hetzelfde: opruimen, laptop dicht, huiswerk noteren en pas bij jouw signaal vertrekken.",
+   "duur": {
+    "min": 2,
+    "max": 3
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "afsluiting"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "routines.json"
+  },
+  {
+   "id": "escaperoom-papier",
+   "naam": "Escaperoom op papier",
+   "alias": [
+    "breakout",
+    "puzzeltocht"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Groepjes lossen een reeks opdrachten op; elk antwoord levert een code op die het volgende slot opent.",
+   "duur": {
+    "min": 20,
+    "max": 40
+   },
+   "groepsvorm": [
+    "groepje"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "optioneel",
+   "voorbereiding": "uitgebreid",
+   "lesfase": [
+    "inoefenen",
+    "verwerken"
+   ],
+   "denkniveau": [
+    "toepassen",
+    "analyseren"
+   ],
+   "differentiatie": [
+    "groepering",
+    "ondersteuning"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "actief",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
   },
   {
    "id": "exit-ticket",
@@ -1123,6 +2103,111 @@
    "bestand": "instructie.json"
   },
   {
+   "id": "fishbowl",
+   "naam": "Fishbowl",
+   "alias": [
+    "vissenkom",
+    "binnen- en buitencirkel gesprek"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Een klein groepje voert een gesprek in het midden; de rest kijkt toe met een observatieopdracht en kan later instappen.",
+   "duur": {
+    "min": 15,
+    "max": 25
+   },
+   "groepsvorm": [
+    "groepje",
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": true
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "evalueren"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 3,
+   "burgerschap": [
+    "gemeenschappelijkheid"
+   ],
+   "beginHier": null,
+   "bestand": "activerend.json"
+  },
+  {
+   "id": "flexibele-groepen",
+   "naam": "Flexibele groepen na een check",
+   "alias": [
+    "herindelen",
+    "groepen op basis van check"
+   ],
+   "categorie": "differentiatievorm",
+   "kort": "Na een korte check deel je de klas voor dit lesdeel in drie groepen in: instructie, oefenen en verdieping. Volgende les is de indeling weer anders.",
+   "duur": {
+    "min": 15,
+    "max": 35
+   },
+   "groepsvorm": [
+    "groepje",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "optioneel",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken",
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "toepassen",
+    "analyseren"
+   ],
+   "differentiatie": [
+    "niveau",
+    "groepering",
+    "ondersteuning"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "differentiatie.json"
+  },
+  {
    "id": "flipped-start-kennisclip",
    "naam": "Flipped start met een kennisclip",
    "alias": [
@@ -1176,6 +2261,55 @@
    "bestand": "instructie.json"
   },
   {
+   "id": "flitskaarten",
+   "naam": "Flitskaarten met bakjes",
+   "alias": [
+    "leitnersysteem",
+    "flashcards"
+   ],
+   "categorie": "leerstrategie",
+   "kort": "Leerlingen maken kaartjes met vraag en antwoord en oefenen ze zo dat moeilijke kaartjes vaker terugkomen.",
+   "duur": {
+    "min": 5,
+    "max": 15
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [
+    "tempo"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "leerstrategie.json"
+  },
+  {
    "id": "foto-zonder-context",
    "naam": "Foto of voorwerp zonder context",
    "alias": [
@@ -1225,6 +2359,56 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "foutenanalyse",
+   "naam": "Foutenanalyse na een toets",
+   "alias": [
+    "toetsanalyse",
+    "leren van je fouten"
+   ],
+   "categorie": "formatieve-check",
+   "kort": "Na een toets zoeken leerlingen bij elke fout de oorzaak en maken ze een plan voor wat ze gaan oefenen.",
+   "duur": {
+    "min": 10,
+    "max": 20
+   },
+   "groepsvorm": [
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "check",
+    "verwerken"
+   ],
+   "denkniveau": [
+    "evalueren",
+    "analyseren"
+   ],
+   "differentiatie": [
+    "ondersteuning"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "aanpassen",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "goed",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "formatief.json"
   },
   {
    "id": "galerijwandeling",
@@ -1444,6 +2628,54 @@
    "bestand": "differentiatie.json"
   },
   {
+   "id": "grafiek-zonder-titel",
+   "naam": "Grafiek zonder titel",
+   "alias": [
+    "wat laat dit zien",
+    "raad de grafiek"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je toont een grafiek of tabel zonder titel en zonder namen bij de assen; leerlingen raden wat hij laat zien.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "aanpassen",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
    "id": "hintkaarten",
    "naam": "Hintkaarten",
    "alias": [
@@ -1495,6 +2727,54 @@
    "burgerschap": [],
    "beginHier": 5,
    "bestand": "differentiatie.json"
+  },
+  {
+   "id": "hoe-zou-jij-het-oplossen",
+   "naam": "Hoe zou jij het oplossen?",
+   "alias": [
+    "probleem vooraf",
+    "productieve worsteling"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je legt vóór de uitleg een echt probleem voor en laat leerlingen kort zelf een aanpak bedenken.",
+   "duur": {
+    "min": 3,
+    "max": 6
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "toepassen",
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
   },
   {
    "id": "hoeken-l-lokaal",
@@ -1552,6 +2832,152 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "differentiatie.json"
+  },
+  {
+   "id": "paradox",
+   "naam": "Iets wat niet kan",
+   "alias": [
+    "paradox",
+    "tegenstrijdigheid"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je laat iets zien dat onmogelijk lijkt en leerlingen bedenken hoe het toch kan.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "evalueren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "ik-wij-jij",
+   "naam": "Ik doe, wij doen, jij doet",
+   "alias": [
+    "gradual release",
+    "voordoen, samen doen, zelf doen"
+   ],
+   "categorie": "instructiemodel",
+   "kort": "Je doet eerst voor, dan doe je het samen met de klas en daarna doen leerlingen het zelf, steeds met minder hulp.",
+   "duur": {
+    "min": 10,
+    "max": 20
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "instructie",
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "ondersteuning"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "instructie.json"
+  },
+  {
+   "id": "ingezoomde-foto",
+   "naam": "Ingezoomde foto",
+   "alias": [
+    "zoom uit",
+    "detail raden"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je toont een sterk ingezoomd detail van een afbeelding en zoomt in stappen uit; leerlingen raden steeds wat het is.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
   },
   {
    "id": "instructietafel",
@@ -1662,6 +3088,56 @@
    "bestand": "instructie.json"
   },
   {
+   "id": "keuze-in-context",
+   "naam": "Keuze in context",
+   "alias": [
+    "interessekeuze",
+    "zelfde doel, eigen onderwerp"
+   ],
+   "categorie": "differentiatievorm",
+   "kort": "Leerlingen werken aan hetzelfde lesdoel, maar kiezen zelf de context of het onderwerp waarin ze het toepassen.",
+   "duur": {
+    "min": 15,
+    "max": 30
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "optioneel",
+   "voorbereiding": "uitgebreid",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "toepassen"
+   ],
+   "differentiatie": [
+    "interesse",
+    "keuze-aanpak"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "differentiatie.json"
+  },
+  {
    "id": "keuzebord",
    "naam": "Keuzebord of menukaart",
    "alias": [
@@ -1716,6 +3192,634 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "differentiatie.json"
+  },
+  {
+   "id": "misvatting-stelling",
+   "naam": "Klopt dit?",
+   "alias": [
+    "misvatting",
+    "mythe of feit"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je zet een veelvoorkomende misvatting als stelling op het bord en laat leerlingen kiezen: klopt of klopt niet.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "evalueren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "kort-filmfragment",
+   "naam": "Kort filmfragment",
+   "alias": [
+    "videofragment",
+    "clip"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je toont een fragment van hooguit twee minuten met één kijkvraag die leerlingen vooraf krijgen.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "verhaal-van-de-docent",
+   "naam": "Kort verhaal van de docent",
+   "alias": [
+    "anekdote",
+    "persoonlijk verhaal"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je vertelt in twee minuten een echt, kort verhaal uit je eigen leven of werk dat met de stof te maken heeft.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "korte-demonstratie",
+   "naam": "Korte demonstratie",
+   "alias": [
+    "proefje",
+    "demo"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je doet voorin een korte proef of handeling die verrast; leerlingen voorspellen eerst wat er gebeurt.",
+   "duur": {
+    "min": 3,
+    "max": 6
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "krantenkop-van-de-les",
+   "naam": "Krantenkop van de les",
+   "alias": [
+    "kop bedenken",
+    "titel van vandaag"
+   ],
+   "categorie": "afsluiter",
+   "kort": "Leerlingen bedenken een krantenkop van hooguit acht woorden die de kern van de les samenvat.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "individueel",
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "afsluiting"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "creeren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "afsluiters.json"
+  },
+  {
+   "id": "laptopafspraken",
+   "naam": "Laptopafspraken",
+   "alias": [
+    "klep dicht",
+    "schermen omlaag"
+   ],
+   "categorie": "routine",
+   "kort": "Vaste afspraken voor de schoollaptop: wanneer open, wanneer half dicht, en wat er op het scherm mag staan.",
+   "duur": {
+    "min": 1,
+    "max": 2
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "vereist",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken",
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "routines.json"
+  },
+  {
+   "id": "leercontract-afspraak",
+   "naam": "Leercontract",
+   "alias": [
+    "leerafspraak",
+    "persoonlijk contract"
+   ],
+   "categorie": "differentiatievorm",
+   "kort": "Je maakt met een leerling een korte schriftelijke afspraak over een leerdoel, de aanpak en wanneer je samen kijkt hoe het ging.",
+   "duur": {
+    "min": 10,
+    "max": 20
+   },
+   "groepsvorm": [
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "optioneel",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "evalueren"
+   ],
+   "differentiatie": [
+    "niveau",
+    "tempo",
+    "keuze-aanpak"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "differentiatie.json"
+  },
+  {
+   "id": "leerling-als-tutor",
+   "naam": "Leerling als tutor",
+   "alias": [
+    "peer tutoring",
+    "maatjesleren"
+   ],
+   "categorie": "differentiatievorm",
+   "kort": "Een leerling die de stof beheerst, legt het met een uitlegkaart uit aan een klasgenoot die nog hulp nodig heeft.",
+   "duur": {
+    "min": 10,
+    "max": 20
+   },
+   "groepsvorm": [
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "optioneel",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "inoefenen",
+    "verwerken"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "ondersteuning",
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "differentiatie.json"
+  },
+  {
+   "id": "leerplanning",
+   "naam": "Leerplanning maken",
+   "alias": [
+    "toets plannen",
+    "spreiden plannen"
+   ],
+   "categorie": "leerstrategie",
+   "kort": "Leerlingen maken een planning voor een toets waarin ze het leren spreiden over meerdere dagen en elke dag zichzelf overhoren.",
+   "duur": {
+    "min": 8,
+    "max": 15
+   },
+   "groepsvorm": [
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "afsluiting",
+    "verwerken"
+   ],
+   "denkniveau": [
+    "evalueren"
+   ],
+   "differentiatie": [
+    "tempo"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "leerstrategie.json"
+  },
+  {
+   "id": "legkaart",
+   "naam": "Legkaart",
+   "alias": [
+    "jigsaw",
+    "puzzelmethode"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Elk lid van een groepje leest een ander deel van de stof en legt het daarna uit aan de anderen; samen hebben ze het hele verhaal.",
+   "duur": {
+    "min": 20,
+    "max": 35
+   },
+   "groepsvorm": [
+    "groepje"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "uitgebreid",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "groepering",
+    "niveau"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
+  },
+  {
+   "id": "lesprogramma-op-het-bord",
+   "naam": "Lesprogramma op het bord",
+   "alias": [
+    "agenda van de les",
+    "dagplanning"
+   ],
+   "categorie": "routine",
+   "kort": "Het programma van de les staat zichtbaar op het bord, met tijden, en je vinkt af wat klaar is.",
+   "duur": {
+    "min": 1,
+    "max": 1
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "instructie",
+    "verwerken"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "routines.json"
+  },
+  {
+   "id": "letterhusselaar",
+   "naam": "Letterhusselaar",
+   "alias": [
+    "anagram",
+    "woordpuzzel"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Het kernbegrip van de les staat met de letters door elkaar op het bord; wie ontcijfert het?",
+   "duur": {
+    "min": 1,
+    "max": 3
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "minder",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "lopend-dictee",
+   "naam": "Lopend dictee",
+   "alias": [
+    "running dictation",
+    "renner en schrijver"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Een tekst hangt verderop in het lokaal; de loper leest een stukje, onthoudt het en dicteert het aan de schrijver.",
+   "duur": {
+    "min": 10,
+    "max": 15
+   },
+   "groepsvorm": [
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": false,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": true
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "actief",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
   },
   {
    "id": "mix-en-koppel",
@@ -1826,6 +3930,54 @@
    "bestand": "instructie.json"
   },
   {
+   "id": "mysterie-voorwerp",
+   "naam": "Mysterievoorwerp",
+   "alias": [
+    "voorwerp in een tas",
+    "wat zit erin"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je neemt een echt voorwerp mee dat met de les te maken heeft en laat leerlingen raden wat het is of waarvoor het dient.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
    "id": "regionaal-nieuwsitem",
    "naam": "Nieuwsitem uit de regio",
    "alias": [
@@ -1879,6 +4031,57 @@
    ],
    "beginHier": null,
    "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "oefentoetsje",
+   "naam": "Oefentoetsje zonder cijfer",
+   "alias": [
+    "quizje",
+    "oefenquiz"
+   ],
+   "categorie": "formatieve-check",
+   "kort": "Een korte toets van vijf vragen zonder cijfer, die leerlingen zelf nakijken: om te oefenen en te zien waar ze staan.",
+   "duur": {
+    "min": 6,
+    "max": 12
+   },
+   "groepsvorm": [
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "check",
+    "voorkennis"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "aanpassen",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "formatief.json"
   },
   {
    "id": "ontwerpopdracht",
@@ -1937,6 +4140,55 @@
    ],
    "beginHier": null,
    "bestand": "activerend.json"
+  },
+  {
+   "id": "opdekmethode",
+   "naam": "Opdekmethode",
+   "alias": [
+    "afdekken en opzeggen",
+    "zelfoverhoring"
+   ],
+   "categorie": "leerstrategie",
+   "kort": "Leerlingen dekken de antwoorden of uitleg in hun boek of schrift af, proberen ze op te zeggen en controleren dan.",
+   "duur": {
+    "min": 5,
+    "max": 10
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [
+    "tempo"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "leerstrategie.json"
   },
   {
    "id": "ophaaloefening",
@@ -2091,6 +4343,57 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "routines.json"
+  },
+  {
+   "id": "peer-instruction",
+   "naam": "Peer instruction",
+   "alias": [
+    "overtuig je buur",
+    "conceptvraag met herstemming"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Je stelt een meerkeuzevraag, iedereen kiest, daarna overtuigen buren elkaar en stemt de klas opnieuw.",
+   "duur": {
+    "min": 6,
+    "max": 12
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "instructie",
+    "check"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
   },
   {
    "id": "leren-door-uitleggen",
@@ -2411,6 +4714,247 @@
    "bestand": "aandachtrichters.json"
   },
   {
+   "id": "quiz-in-teams",
+   "naam": "Quiz in teams",
+   "alias": [
+    "teamquiz",
+    "kennisquiz"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Teams van drie of vier beantwoorden samen quizvragen op een wisbordje; elk team overlegt en schrijft één antwoord op.",
+   "duur": {
+    "min": 10,
+    "max": 20
+   },
+   "groepsvorm": [
+    "groepje"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "optioneel",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "inoefenen",
+    "check"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "actief",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
+  },
+  {
+   "id": "geluidsfragment",
+   "naam": "Raad het geluid",
+   "alias": [
+    "geluid zonder beeld",
+    "luisterfragment"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je laat een geluid of geluidsfragment horen zonder beeld en leerlingen raden wat het is en wat het met de les te maken heeft.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "raadsel-van-de-dag",
+   "naam": "Raadsel van de dag",
+   "alias": [
+    "puzzel",
+    "denkertje"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Een kort raadsel of denkpuzzel op het bord dat aansluit bij de stof en dat leerlingen bij binnenkomst meteen aan het denken zet.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "toepassen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "rebus",
+   "naam": "Rebus of beeldraadsel",
+   "alias": [
+    "plaatjestaal",
+    "pictogrammenraadsel"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je zet het kernbegrip of een kernzin in plaatjes en pictogrammen op het bord; leerlingen ontcijferen het.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "rek-en-strek",
+   "naam": "Rek en strek",
+   "alias": [
+    "stretchpauze",
+    "even uitrekken"
+   ],
+   "categorie": "energizer",
+   "kort": "Een minuut staan en rekken met een paar vaste bewegingen, om het lijf even los te maken na lang zitten.",
+   "duur": {
+    "min": 1,
+    "max": 2
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": true
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "energizers.json"
+  },
+  {
    "id": "rolkaarten",
    "naam": "Rolkaarten voor samenwerking",
    "alias": [
@@ -2461,6 +5005,58 @@
    ],
    "beginHier": null,
    "bestand": "routines.json"
+  },
+  {
+   "id": "rollenspel",
+   "naam": "Rollenspel",
+   "alias": [
+    "naspelen",
+    "situatie spelen"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Leerlingen spelen in groepjes een korte situatie uit de stof na, elk vanuit een rol met een eigen belang.",
+   "duur": {
+    "min": 15,
+    "max": 25
+   },
+   "groepsvorm": [
+    "groepje"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "uitgebreid",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "toepassen",
+    "analyseren",
+    "evalueren"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "actief",
+   "instapniveau": 3,
+   "burgerschap": [
+    "gemeenschappelijkheid"
+   ],
+   "beginHier": null,
+   "bestand": "activerend.json"
   },
   {
    "id": "ronde-tafel",
@@ -2516,6 +5112,58 @@
    "bestand": "activerend.json"
   },
   {
+   "id": "rondloopcheck",
+   "naam": "Rondloopcheck met lijst",
+   "alias": [
+    "meekijken",
+    "rondlopen met een doel"
+   ],
+   "categorie": "formatieve-check",
+   "kort": "Tijdens zelfstandig werken loop je rond met een korte lijst en noteer je bij welke opgave leerlingen vastlopen, zonder namen.",
+   "duur": {
+    "min": 5,
+    "max": 15
+   },
+   "groepsvorm": [
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "inoefenen",
+    "verwerken",
+    "check"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "aanpassen",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "formatief.json"
+  },
+  {
    "id": "rotatie-lokaal-plein",
    "naam": "Rotatiemodel lokaal en plein",
    "alias": [
@@ -2568,6 +5216,52 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "differentiatie.json"
+  },
+  {
+   "id": "samen-tellen",
+   "naam": "Samen tot twintig",
+   "alias": [
+    "telspel",
+    "concentratiespel"
+   ],
+   "categorie": "energizer",
+   "kort": "De klas telt samen tot twintig, steeds één leerling per getal zonder afspraak; zeggen twee tegelijk een getal, dan begin je opnieuw.",
+   "duur": {
+    "min": 2,
+    "max": 3
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": true
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "energizers.json"
   },
   {
    "id": "zes-woorden",
@@ -2671,6 +5365,54 @@
    "bestand": "formatief.json"
   },
   {
+   "id": "schatvraag",
+   "naam": "Schatvraag",
+   "alias": [
+    "fermivraag",
+    "hoeveel denk je"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je stelt een vraag waar niemand het precieze antwoord op weet en laat leerlingen een onderbouwde schatting maken.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "toepassen",
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "aanpassen",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
    "id": "signaalkaarten",
    "naam": "Signaalkaarten rood en groen",
    "alias": [
@@ -2719,6 +5461,54 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "routines.json"
+  },
+  {
+   "id": "snel-rangschikken",
+   "naam": "Snel rangschikken",
+   "alias": [
+    "op volgorde",
+    "ranking"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Leerlingen zetten vier of vijf dingen zo snel mogelijk op volgorde (grootte, tijd, belang) en vergelijken met de buur.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "evalueren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
   },
   {
    "id": "socratisch-gesprek",
@@ -2830,6 +5620,150 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "activerend.json"
+  },
+  {
+   "id": "speeddate",
+   "naam": "Speeddate",
+   "alias": [
+    "wisselende tweetallen",
+    "carrouselgesprek"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Leerlingen praten in korte rondes van twee minuten met steeds een andere partner over een vraag; na elke ronde schuift één rij door.",
+   "duur": {
+    "min": 10,
+    "max": 15
+   },
+   "groepsvorm": [
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": false,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": true
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "actief",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
+  },
+  {
+   "id": "spiegelen",
+   "naam": "Spiegelen",
+   "alias": [
+    "spiegelspel",
+    "mirroring"
+   ],
+   "categorie": "energizer",
+   "kort": "In tweetallen doet de een langzaam bewegingen voor en spiegelt de ander die precies; na een halve minuut wisselen.",
+   "duur": {
+    "min": 1,
+    "max": 2
+   },
+   "groepsvorm": [
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": true
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "inoefenen",
+    "verwerken"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "energizers.json"
+  },
+  {
+   "id": "sta-op-en-wissel",
+   "naam": "Sta op en wissel",
+   "alias": [
+    "zoek een nieuwe partner",
+    "stand up, hand up, pair up"
+   ],
+   "categorie": "energizer",
+   "kort": "Leerlingen staan op, zoeken iemand van een andere tafel, bespreken één vraag en gaan weer zitten.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": false,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": true
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "inoefenen",
+    "verwerken"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "actief",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "energizers.json"
   },
   {
    "id": "staande-ophaaloefening",
@@ -3098,6 +6032,55 @@
    "bestand": "energizers.json"
   },
   {
+   "id": "stellingen-in-groepjes",
+   "naam": "Stellingenspel in groepjes",
+   "alias": [
+    "stellingkaarten",
+    "eens of oneens aan tafel"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Een groepje trekt om de beurt een stellingkaart, kiest eens of oneens en onderbouwt; de anderen reageren met een argument.",
+   "duur": {
+    "min": 10,
+    "max": 20
+   },
+   "groepsvorm": [
+    "groepje"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "evalueren"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
+  },
+  {
    "id": "stilteruimte-route",
    "naam": "Stilteroute",
    "alias": [
@@ -3254,6 +6237,54 @@
    "bestand": "formatief.json"
   },
   {
+   "id": "terug-naar-de-vraag",
+   "naam": "Terug naar de openingsvraag",
+   "alias": [
+    "cirkel rond",
+    "vraag van het begin"
+   ],
+   "categorie": "afsluiter",
+   "kort": "Je komt aan het eind terug op de vraag of het raadsel van het begin, en leerlingen geven nu een beter antwoord.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "individueel",
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "afsluiting"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "evalueren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "afsluiters.json"
+  },
+  {
    "id": "timer-geluidsniveau",
    "naam": "Timer en geluidsniveau zichtbaar",
    "alias": [
@@ -3301,6 +6332,202 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "routines.json"
+  },
+  {
+   "id": "toen-en-nu",
+   "naam": "Toen en nu",
+   "alias": [
+    "vergelijk de tijd",
+    "oud en nieuw"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je zet een oude en een nieuwe afbeelding naast elkaar en leerlingen benoemen wat er veranderd is en wat niet.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "vragen-bedenken",
+   "naam": "Toetsvragen bedenken",
+   "alias": [
+    "zelf vragen maken",
+    "vragenmaker"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Leerlingen maken zelf toetsvragen met antwoord over de stof en wisselen die uit met een ander tweetal.",
+   "duur": {
+    "min": 10,
+    "max": 20
+   },
+   "groepsvorm": [
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "toepassen",
+    "creeren"
+   ],
+   "differentiatie": [
+    "niveau"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
+  },
+  {
+   "id": "twee-sterren-een-wens",
+   "naam": "Twee sterren en een wens",
+   "alias": [
+    "tops en tip",
+    "feedback in drie zinnen"
+   ],
+   "categorie": "formatieve-check",
+   "kort": "Leerlingen geven elkaar feedback op werk: twee dingen die goed zijn (sterren) en één ding om te verbeteren (wens), gekoppeld aan de succescriteria.",
+   "duur": {
+    "min": 8,
+    "max": 15
+   },
+   "groepsvorm": [
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "check",
+    "verwerken"
+   ],
+   "denkniveau": [
+    "evalueren"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "aanpassen",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "goed",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "formatief.json"
+  },
+  {
+   "id": "twee-waar-een-niet",
+   "naam": "Twee waar, één niet",
+   "alias": [
+    "twee waarheden en een leugen",
+    "welke klopt niet"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je zet drie uitspraken over het onderwerp op het bord; twee kloppen en één niet. Leerlingen kiezen welke niet waar is.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen",
+    "evalueren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
   },
   {
    "id": "cornell-notities",
@@ -3404,6 +6631,53 @@
    "bestand": "activerend.json"
   },
   {
+   "id": "uitdaging-van-de-les",
+   "naam": "Uitdaging van de les",
+   "alias": [
+    "wedden dat",
+    "lesdoel als uitdaging"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je toont aan het begin een opdracht die leerlingen nu nog niet kunnen, en belooft dat ze hem aan het eind wel kunnen.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "toepassen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
    "id": "uitgewerkt-voorbeeld-fading",
    "naam": "Uitgewerkt voorbeeld, aanvulopdracht, zelfstandig",
    "alias": [
@@ -3456,6 +6730,54 @@
    "burgerschap": [],
    "beginHier": 8,
    "bestand": "instructie.json"
+  },
+  {
+   "id": "aandachtssignaal",
+   "naam": "Vast aandachtssignaal",
+   "alias": [
+    "stiltesignaal",
+    "hand omhoog"
+   ],
+   "categorie": "routine",
+   "kort": "Een vast signaal, zoals een opgestoken hand of een aftelling, waarop iedereen stopt, kijkt en luistert.",
+   "duur": {
+    "min": 1,
+    "max": 1
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "instructie",
+    "verwerken",
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "routines.json"
   },
   {
    "id": "vaste-duopartner",
@@ -3762,6 +7084,245 @@
    "bestand": "afsluiters.json"
   },
   {
+   "id": "vraag-en-vang",
+   "naam": "Vraag en vang",
+   "alias": [
+    "balletje gooien",
+    "gooi en vraag"
+   ],
+   "categorie": "energizer",
+   "kort": "Je gooit een zacht balletje naar een leerling; wie vangt, beantwoordt een korte vraag en gooit door naar iemand die nog niet aan de beurt was.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": true
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "inoefenen",
+    "voorkennis",
+    "afsluiting"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "actief",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "energizers.json"
+  },
+  {
+   "id": "vraag-uit-de-doos",
+   "naam": "Vraag uit de doos",
+   "alias": [
+    "vragenbox",
+    "vraag van vorig jaar"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je leest een echte, anonieme vraag voor die een leerling eerder over dit onderwerp stelde, en laat de klas eerst zelf antwoorden.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "vraag-voor-volgende-les",
+   "naam": "Vraag voor de volgende les",
+   "alias": [
+    "open vraag mee",
+    "wat wil je nog weten"
+   ],
+   "categorie": "afsluiter",
+   "kort": "Leerlingen schrijven op een briefje één vraag die ze nog hebben; je begint de volgende les met een paar van die vragen.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "individueel",
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "afsluiting"
+   ],
+   "denkniveau": [
+    "evalueren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "afsluiters.json"
+  },
+  {
+   "id": "wat-als",
+   "naam": "Wat als…?",
+   "alias": [
+    "stel je voor",
+    "gedachte-experiment"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je stelt een wat-als-vraag die de stof op zijn kop zet, en leerlingen bedenken wat er dan zou gebeuren.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "creeren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "wat-is-hier-gebeurd",
+   "naam": "Wat is hier gebeurd?",
+   "alias": [
+    "gevolg zonder oorzaak",
+    "detectivevraag"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je laat een beeld of situatie zien van een gevolg en leerlingen bedenken welke oorzaak erachter zit.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
    "id": "vaagste-punt",
    "naam": "Wat is nog het vaagst?",
    "alias": [
@@ -3805,6 +7366,494 @@
     "faalangst": "goed",
     "structuur": "goed",
     "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "formatief.json"
+  },
+  {
+   "id": "ontbrekend-stuk",
+   "naam": "Wat ontbreekt er?",
+   "alias": [
+    "gat in het schema",
+    "aanvullen"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je toont een tekst, schema of formule waar een stuk uit weg is en leerlingen bedenken wat er hoort te staan.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "wat-wil-jij-weten",
+   "naam": "Wat wil jij weten?",
+   "alias": [
+    "eigen vraag",
+    "nieuwsgierigheidsvraag"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Leerlingen schrijven bij binnenkomst één vraag op die zij hebben over het onderwerp; je kiest er een paar uit om de les mee te beginnen.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "individueel",
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "weektaak",
+   "naam": "Weektaak",
+   "alias": [
+    "planbord",
+    "weekplanning",
+    "studiewijzer"
+   ],
+   "categorie": "differentiatievorm",
+   "kort": "Leerlingen krijgen voor een week een takenlijst met verplichte en keuzetaken, en plannen zelf wanneer ze wat doen.",
+   "duur": {
+    "min": 20,
+    "max": 60
+   },
+   "groepsvorm": [
+    "individueel",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "optioneel",
+   "voorbereiding": "uitgebreid",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "toepassen",
+    "evalueren"
+   ],
+   "differentiatie": [
+    "tempo",
+    "keuze-aanpak",
+    "niveau"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 3,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "differentiatie.json"
+  },
+  {
+   "id": "welke-hoort-er-niet-bij",
+   "naam": "Welke hoort er niet bij?",
+   "alias": [
+    "odd one out",
+    "de vreemde eend"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je toont vier woorden, getallen of beelden; leerlingen kiezen welke er niet bij hoort en waarom. Vaak is meer dan één antwoord goed.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "kaart-raden",
+   "naam": "Welke plek is dit?",
+   "alias": [
+    "kaart raden",
+    "plattegrond"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je toont een kaart, luchtfoto of plattegrond zonder namen; leerlingen raden welke plek het is aan de hand van aanwijzingen.",
+   "duur": {
+    "min": 3,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "wie-gebruikt-dit",
+   "naam": "Wie gebruikt dit op het werk?",
+   "alias": [
+    "beroepenhaak",
+    "relevantie in beroepen"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je laat een beroep of werkplek zien en vraagt leerlingen hoe iemand daar de stof van vandaag gebruikt.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "complimentenronde",
+   "naam": "Wie hielp jou vandaag?",
+   "alias": [
+    "complimentenronde",
+    "waardering"
+   ],
+   "categorie": "afsluiter",
+   "kort": "Aan het eind noemen een paar leerlingen kort wie hen vandaag hielp en waarmee.",
+   "duur": {
+    "min": 2,
+    "max": 3
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "afsluiting"
+   ],
+   "denkniveau": [
+    "evalueren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [
+    "gemeenschappelijkheid"
+   ],
+   "beginHier": null,
+   "bestand": "afsluiters.json"
+  },
+  {
+   "id": "drie-hints",
+   "naam": "Wie of wat ben ik?",
+   "alias": [
+    "drie hints",
+    "raad het begrip"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je geeft drie hints na elkaar over een persoon of begrip, van moeilijk naar makkelijk; leerlingen raden zo vroeg mogelijk.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "wie-zei-het",
+   "naam": "Wie zei het?",
+   "alias": [
+    "citaat raden",
+    "uitspraak"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je zet een uitspraak of citaat op het bord en leerlingen raden wie het zei, wanneer en waarom.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "willekeurige-beurt",
+   "naam": "Willekeurige beurt met wachttijd",
+   "alias": [
+    "geen vingers",
+    "beurtstokjes",
+    "koude beurt"
+   ],
+   "categorie": "formatieve-check",
+   "kort": "Je stelt een vraag, laat iedereen nadenken en kiest dan willekeurig wie antwoordt, zodat iedereen moet nadenken.",
+   "duur": {
+    "min": 2,
+    "max": 5
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "instructie",
+    "check"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "aanpassen",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "goed",
+    "hoogbegaafd": "aanpassen"
    },
    "energie": "rustig",
    "instapniveau": 1,
@@ -3924,6 +7973,55 @@
    "bestand": "activerend.json"
   },
   {
+   "id": "zelfcorrectie-antwoordmodel",
+   "naam": "Zelf nakijken met antwoordmodel",
+   "alias": [
+    "nakijken in kleur",
+    "zelfcorrectie"
+   ],
+   "categorie": "formatieve-check",
+   "kort": "Leerlingen kijken hun eigen werk na met een antwoordmodel, in een andere kleur, en schrijven bij elke fout wat er misging.",
+   "duur": {
+    "min": 5,
+    "max": 10
+   },
+   "groepsvorm": [
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "check",
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "evalueren"
+   ],
+   "differentiatie": [
+    "ondersteuning"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "aanpassen",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "formatief.json"
+  },
+  {
    "id": "zelfuitleg-elaboratie",
    "naam": "Zelfuitleg en waarom-vragen",
    "alias": [
@@ -3975,6 +8073,102 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "leerstrategie.json"
+  },
+  {
+   "id": "zoek-de-verschillen",
+   "naam": "Zoek de verschillen",
+   "alias": [
+    "voor en na",
+    "vergelijkplaat"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Je toont twee bijna gelijke afbeeldingen, teksten of uitwerkingen en leerlingen zoeken de verschillen.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "analyseren"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "zoemgroepen",
+   "naam": "Zoemgroepen",
+   "alias": [
+    "buzz groups",
+    "korte groepsvraag"
+   ],
+   "categorie": "activerende-werkvorm",
+   "kort": "Groepjes van drie of vier bespreken een paar minuten één vraag en melden één antwoord terug.",
+   "duur": {
+    "min": 5,
+    "max": 10
+   },
+   "groepsvorm": [
+    "groepje"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "verwerken"
+   ],
+   "denkniveau": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "differentiatie": [
+    "groepering"
+   ],
+   "ondersteuning": {
+    "dyslexie": "aanpassen",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "activerend.json"
   }
  ]
 }

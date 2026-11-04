@@ -3,7 +3,7 @@
 import { html, raw, $, escape } from '../util/html.js';
 import { laadAlleWerkvormen } from '../data/laden.js';
 import { genereerLes, herbereken } from '../engine/opbouw.js';
-import { laadDocent, laadConcept, pasAanpassingenToe } from '../wizard/staat.js';
+import { laadDocent, laadConcept, pasAanpassingenToe, generatorInvoer } from '../wizard/staat.js';
 import * as opslag from '../opslag/opslag.js';
 
 const VOOR_LEERLING = {
@@ -25,7 +25,7 @@ export default {
     const docent = laadDocent(profiel);
     const concept = laadConcept(profiel, docent);
     const data = { profiel, items };
-    const les = herbereken(pasAanpassingenToe(genereerLes({ ...concept.invoer, opties: { ...concept.invoer.opties, duimen: opslag.lees('duimen', {}) }, stand: concept.gekozenStand ?? concept.invoer.stand }, data), concept.aanpassingen), items);
+    const les = herbereken(pasAanpassingenToe(genereerLes({ ...generatorInvoer(concept), stand: concept.gekozenStand ?? concept.invoer.stand }, data), concept.aanpassingen), items);
     const doel = les.doel.lesdoelen[0]?.tekst ?? '';
     const groepNaam = (id) => les.groepen.find((g) => g.id === id)?.naam.split(' · ')[0] ?? id;
     const staat = { i: 0, rest: les.fases[0].duur * 60, loopt: false, geluid: opslag.lees('digibord-geluid', 'fluisteren'), laag: null, kiezerGehad: [], geluidAan: false };

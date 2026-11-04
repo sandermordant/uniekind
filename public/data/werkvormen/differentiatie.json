@@ -2005,6 +2005,828 @@
       "materiaal": [
         "menukaart"
       ]
+    },
+    {
+      "id": "weektaak",
+      "naam": "Weektaak",
+      "alias": [
+        "planbord",
+        "weekplanning",
+        "studiewijzer"
+      ],
+      "categorie": "differentiatievorm",
+      "kort": "Leerlingen krijgen voor een week een takenlijst met verplichte en keuzetaken, en plannen zelf wanneer ze wat doen.",
+      "startzin": "Dit is je weektaak. Wat met een ster staat moet af; de rest kies je zelf. Plan nu eerst wanneer je wat doet.",
+      "stappen": [
+        "Maak een takenlijst voor een week: verplichte taken, keuzetaken en een pluskolom.",
+        "Geef bij elke taak een tijdsindicatie en waar je de uitleg vindt.",
+        "Laat leerlingen in de eerste les plannen (5 minuten).",
+        "Gebruik elke les een kort moment om de planning te checken.",
+        "Bespreek aan het eind van de week: wat is af, wat lukte niet, hoe kwam dat?"
+      ],
+      "duur": {
+        "min": 20,
+        "max": 60
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "weektaakformulier"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
+      "voorbereiding": "uitgebreid",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "evalueren"
+      ],
+      "differentiatie": [
+        "tempo",
+        "keuze-aanpak",
+        "niveau"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Maak de opdrachtkaarten dyslexievriendelijk en kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart bij opdrachten met rekenwerk."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Vaktaalkaart en voorbeelden bij elke opdracht."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Eigen tempo; checkmomenten zonder cijfer."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Een vooraf ingevulde planning; pas later zelf plannen."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Pluskolom en ruimte voor een eigen onderzoek."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur"
+      ],
+      "instapniveau": 3,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen schuiven alles naar het eind van de week.",
+          "oplossing": "Spreek tussendoelen af en check die elke les."
+        },
+        {
+          "valkuil": "Zwakke planners raken achter.",
+          "oplossing": "Plan samen met hen of geef een ingevulde planning."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een kortere lijst met een ingevulde planning.",
+        "havo": "Een weektaak met keuzetaken.",
+        "vwo": "Een weektaak met een open onderzoeksopdracht.",
+        "steun": "Meer structuur en kleinere stappen.",
+        "basis": "Standaard.",
+        "verdieping": "Uitdagende onderdelen op hoger denkniveau."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Een week met lezen, spelling en een schrijfopdracht."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Paragraaf 4 met basis- en plusopgaven."
+        },
+        {
+          "vak": "Frans",
+          "voorbeeld": "Woorden leren, luisteropdracht en een gesprekje."
+        }
+      ],
+      "waarom": "Zelf plannen is een onderdeel van zelfregulatie (Zimmerman), maar dat moet je leren. Een weektaak werkt het best als je de planning begeleidt en die geleidelijk loslaat.",
+      "bewijs": "beperkt",
+      "bronnen": [
+        "zimmerman-2002"
+      ],
+      "materiaal": [
+        "leercontract",
+        "menukaart"
+      ]
+    },
+    {
+      "id": "leercontract-afspraak",
+      "naam": "Leercontract",
+      "alias": [
+        "leerafspraak",
+        "persoonlijk contract"
+      ],
+      "categorie": "differentiatievorm",
+      "kort": "Je maakt met een leerling een korte schriftelijke afspraak over een leerdoel, de aanpak en wanneer je samen kijkt hoe het ging.",
+      "startzin": "We maken samen een afspraak: wat wil jij bereiken, hoe ga je dat doen en wanneer kijken we samen terug?",
+      "stappen": [
+        "Kies samen met de leerling één concreet leerdoel.",
+        "Spreek de aanpak af: welke opdrachten, welke hulp.",
+        "Zet een datum voor een terugblik.",
+        "Laat de leerling het contract invullen; jij tekent mee.",
+        "Kijk op de afgesproken datum samen terug en stel bij."
+      ],
+      "duur": {
+        "min": 10,
+        "max": 20
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "leercontract"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "evalueren"
+      ],
+      "differentiatie": [
+        "niveau",
+        "tempo",
+        "keuze-aanpak"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "persoonsvorming",
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Maak de opdrachtkaarten dyslexievriendelijk en kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart bij opdrachten met rekenwerk."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Vaktaalkaart en voorbeelden bij elke opdracht."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Een kleine, haalbare stap geeft vertrouwen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Een concrete afspraak op papier geeft houvast."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Ruimte voor eigen keuzes en uitdaging."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "relatie"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het contract wordt een formaliteit.",
+          "oplossing": "Kies één doel en kijk echt terug op de afgesproken datum."
+        },
+        {
+          "valkuil": "Je doet dit met de hele klas en het kost te veel tijd.",
+          "oplossing": "Gebruik het voor een paar leerlingen die het nodig hebben."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een contract met voorgedrukte keuzes.",
+        "havo": "Een contract met een eigen doel.",
+        "vwo": "Een contract met een eigen onderzoeksvraag.",
+        "steun": "Meer structuur en kleinere stappen.",
+        "basis": "Standaard.",
+        "verdieping": "Uitdagende onderdelen op hoger denkniveau."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Ik oefen breuken met de extra opgaven en vraag hulp bij de instructietafel."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Ik lees deze maand een boek op mijn niveau."
+        },
+        {
+          "vak": "Lichamelijke opvoeding",
+          "voorbeeld": "Ik verbeter mijn conditie: elke les een rondje extra."
+        }
+      ],
+      "waarom": "Een concreet doel en een afspraak om terug te kijken helpen leerlingen hun eigen leren te sturen. Het bewijs voor contracten zelf is beperkt; de kracht zit in het gesprek.",
+      "bewijs": "beperkt",
+      "bronnen": [
+        "zimmerman-2002"
+      ],
+      "materiaal": [
+        "leercontract"
+      ]
+    },
+    {
+      "id": "leerling-als-tutor",
+      "naam": "Leerling als tutor",
+      "alias": [
+        "peer tutoring",
+        "maatjesleren"
+      ],
+      "categorie": "differentiatievorm",
+      "kort": "Een leerling die de stof beheerst, legt het met een uitlegkaart uit aan een klasgenoot die nog hulp nodig heeft.",
+      "startzin": "Jij kunt dit al goed. Wil jij het aan … uitleggen? Gebruik de uitlegkaart en laat de ander het zelf doen.",
+      "stappen": [
+        "Kies na een check wie het al beheerst en wie hulp nodig heeft.",
+        "Geef de tutor een uitlegkaart met stappen en een voorbeeld.",
+        "De tutor legt uit, de ander doet de opgave zelf.",
+        "De tutor stelt een controlevraag.",
+        "Kom zelf langs om te checken."
+      ],
+      "duur": {
+        "min": 10,
+        "max": 20
+      },
+      "groepsvorm": [
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "uitlegkaart-tutor"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "inoefenen",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "ondersteuning",
+        "groepering"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Maak de opdrachtkaarten dyslexievriendelijk en kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart bij opdrachten met rekenwerk."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Vaktaalkaart en voorbeelden bij elke opdracht."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Hulp van een klasgenoot voelt vaak veiliger."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Een overzicht met vaste stappen en afvinkmomenten."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Niet altijd als tutor inzetten; ook zij hebben recht op eigen uitdaging."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "samenwerken",
+        "relatie"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De tutor geeft het antwoord voor.",
+          "oplossing": "Op de uitlegkaart: jij legt uit, de ander schrijft."
+        },
+        {
+          "valkuil": "Steeds dezelfde leerlingen zijn tutor.",
+          "oplossing": "Wissel en geef tutors ook zelf uitdaging."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Tutor met een uitlegkaart met stappen.",
+        "havo": "Tutor met een voorbeeldopgave.",
+        "vwo": "Tutor die een eigen oefenopgave maakt.",
+        "steun": "Meer structuur en kleinere stappen.",
+        "basis": "Standaard.",
+        "verdieping": "Uitdagende onderdelen op hoger denkniveau."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Uitleg van het oplossen van een vergelijking."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Uitleg van de persoonsvorm vinden."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Uitleg van het kloppend maken van een reactievergelijking."
+        }
+      ],
+      "waarom": "Uitleggen aan een ander helpt de tutor om de stof beter te begrijpen, en de ontvanger krijgt directe hulp. De EEF-toolkit noemt peer tutoring als een aanpak met positieve effecten.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "eef-toolkit"
+      ],
+      "materiaal": [
+        "uitlegkaart-tutor"
+      ]
+    },
+    {
+      "id": "keuze-in-context",
+      "naam": "Keuze in context",
+      "alias": [
+        "interessekeuze",
+        "zelfde doel, eigen onderwerp"
+      ],
+      "categorie": "differentiatievorm",
+      "kort": "Leerlingen werken aan hetzelfde lesdoel, maar kiezen zelf de context of het onderwerp waarin ze het toepassen.",
+      "startzin": "Iedereen oefent hetzelfde, maar jij kiest waarover: sport, muziek, dieren of iets uit de buurt.",
+      "stappen": [
+        "Bepaal het lesdoel dat voor iedereen gelijk is.",
+        "Maak drie of vier versies van dezelfde opdracht in verschillende contexten.",
+        "Laat leerlingen kiezen.",
+        "Check dat de moeilijkheid gelijk is.",
+        "Laat in de afsluiting een paar uitwerkingen vergelijken."
+      ],
+      "duur": {
+        "min": 15,
+        "max": 30
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "opdrachtkaarten per context"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
+      "voorbereiding": "uitgebreid",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen"
+      ],
+      "differentiatie": [
+        "interesse",
+        "keuze-aanpak"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Maak de opdrachtkaarten dyslexievriendelijk en kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart bij opdrachten met rekenwerk."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Vaktaalkaart en voorbeelden bij elke opdracht."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Leerlingen werken in eigen tempo zonder publiek."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Een overzicht met vaste stappen en afvinkmomenten."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Ruimte voor eigen keuzes en uitdaging."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie",
+        "ontdekken"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De versies zijn niet even moeilijk.",
+          "oplossing": "Houd de som of de kern hetzelfde; verander alleen de context."
+        },
+        {
+          "valkuil": "Leerlingen doen lang over het kiezen.",
+          "oplossing": "Geef één minuut om te kiezen."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Twee contexten, met voorbeelden.",
+        "havo": "Drie of vier contexten.",
+        "vwo": "Een eigen context bedenken.",
+        "steun": "Meer structuur en kleinere stappen.",
+        "basis": "Standaard.",
+        "verdieping": "Uitdagende onderdelen op hoger denkniveau."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Procenten in sport, mode of gamen."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Een brief aan een sportclub, band of dierenasiel."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Ecosysteem: kies de Geul, een bos of je eigen tuin."
+        }
+      ],
+      "waarom": "Keuze en interesse kunnen motivatie vergroten zonder het doel te verlagen. Tomlinson beschrijft interesse als een van de manieren om te differentiëren; het bewijs is vooral praktijk.",
+      "bewijs": "beperkt",
+      "bronnen": [
+        "tomlinson-2014"
+      ],
+      "materiaal": [
+        "menukaart"
+      ]
+    },
+    {
+      "id": "flexibele-groepen",
+      "naam": "Flexibele groepen na een check",
+      "alias": [
+        "herindelen",
+        "groepen op basis van check"
+      ],
+      "categorie": "differentiatievorm",
+      "kort": "Na een korte check deel je de klas voor dit lesdeel in drie groepen in: instructie, oefenen en verdieping. Volgende les is de indeling weer anders.",
+      "startzin": "Op basis van de check zit je nu even in groep A, B of C. Dat is alleen voor vandaag. Volgende keer kijken we weer.",
+      "stappen": [
+        "Doe een korte check (wisbordjes, exit-ticket van vorige les).",
+        "Deel in: A extra instructie, B oefenen, C verdieping.",
+        "Geef A instructie aan de instructietafel; B en C werken met opdrachtkaarten.",
+        "Check na 10 minuten of iemand van groep mag wisselen.",
+        "Zeg hardop dat de groepen elke keer anders zijn."
+      ],
+      "duur": {
+        "min": 15,
+        "max": 35
+      },
+      "groepsvorm": [
+        "groepje",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "opdrachtkaarten per groep",
+          "instructietafel"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "niveau",
+        "groepering",
+        "ondersteuning"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Maak de opdrachtkaarten dyslexievriendelijk en kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart bij opdrachten met rekenwerk."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Vaktaalkaart en voorbeelden bij elke opdracht."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Noem de groepen niet sterk of zwak; benoem wat ze doen."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Een overzicht met vaste stappen en afvinkmomenten."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Ruimte voor eigen keuzes en uitdaging."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "uitleggen"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Groepen worden vaste niveaugroepen.",
+          "oplossing": "Deel elke keer opnieuw in op basis van een nieuwe check."
+        },
+        {
+          "valkuil": "Leerlingen voelen zich gelabeld.",
+          "oplossing": "Gebruik neutrale namen en wissel vaak."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Twee groepen: instructie en zelfstandig.",
+        "havo": "Drie groepen.",
+        "vwo": "Drie groepen met een keuze voor wie twijfelt.",
+        "steun": "Meer structuur en kleinere stappen.",
+        "basis": "Standaard.",
+        "verdieping": "Uitdagende onderdelen op hoger denkniveau."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Na een startcheck over breuken."
+        },
+        {
+          "vak": "Frans",
+          "voorbeeld": "Na een woordjescheck: herhalen, oefenen of lezen."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Na een scharniervraag over vraag en aanbod."
+        }
+      ],
+      "waarom": "Groeperen op basis van wat leerlingen nu nodig hebben, en dat vaak herzien, voorkomt de nadelen van vaste niveaugroepen. De EEF waarschuwt voor vaste niveaugroepen; flexibel groeperen na een check sluit aan bij formatief handelen.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "eef-toolkit",
+        "wiliam-2011"
+      ],
+      "materiaal": [
+        "instructietafel-kaart",
+        "werkblad-steun",
+        "werkblad-basis",
+        "werkblad-verdieping"
+      ]
+    },
+    {
+      "id": "ankeropdracht",
+      "naam": "Ankeropdracht",
+      "alias": [
+        "vaste doorwerkopdracht",
+        "anchor activity"
+      ],
+      "categorie": "differentiatievorm",
+      "kort": "Een vaste, zinvolle opdracht waar leerlingen altijd aan kunnen werken als ze klaar zijn of moeten wachten.",
+      "startzin": "Klaar of moet je wachten? Pak je ankeropdracht. Die ligt altijd klaar in de bak.",
+      "stappen": [
+        "Kies een opdracht die bij het vak past en lang meegaat (leesboek, woordenlijst, project, oefenbundel).",
+        "Leg hem altijd op dezelfde plek.",
+        "Spreek af: klaar of wachten betekent ankeropdracht.",
+        "Kijk af en toe het werk in.",
+        "Vernieuw de opdracht elke periode."
+      ],
+      "duur": {
+        "min": 5,
+        "max": 20
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "ankeropdracht in een bak"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "onthouden"
+      ],
+      "differentiatie": [
+        "tempo"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Maak de opdrachtkaarten dyslexievriendelijk en kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart bij opdrachten met rekenwerk."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Vaktaalkaart en voorbeelden bij elke opdracht."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Leerlingen werken in eigen tempo zonder publiek."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Altijd duidelijk wat je moet doen als je klaar bent."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Maak voor hen een uitdagender anker."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De ankeropdracht voelt als straf.",
+          "oplossing": "Kies iets wat zinvol is en dat leerlingen een beetje leuk vinden."
+        },
+        {
+          "valkuil": "Niemand kijkt er ooit naar.",
+          "oplossing": "Bespreek het werk af en toe."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een oefenbundel met antwoorden.",
+        "havo": "Een lees- of woordenlijst.",
+        "vwo": "Een eigen project dat over weken loopt.",
+        "steun": "Meer structuur en kleinere stappen.",
+        "basis": "Standaard.",
+        "verdieping": "Uitdagende onderdelen op hoger denkniveau."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Engels",
+          "voorbeeld": "Een leesboek op eigen niveau."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Een bundel met puzzels en herhaalopgaven."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een tijdlijn die je de hele periode aanvult."
+        }
+      ],
+      "waarom": "Een vaste ankeropdracht voorkomt wachttijd en onrust en geeft snelle leerlingen zinvol werk. Tomlinson beschrijft het als basis van een gedifferentieerde klas; het bewijs is praktijk.",
+      "bewijs": "praktijk",
+      "bronnen": [
+        "tomlinson-2014"
+      ],
+      "materiaal": [
+        "pluskaart"
+      ]
     }
   ]
 }

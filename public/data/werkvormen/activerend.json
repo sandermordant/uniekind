@@ -2106,6 +2106,1885 @@
         "adviesformulier",
         "vaktaal-steunkaart"
       ]
+    },
+    {
+      "id": "debat-in-tweetallen",
+      "naam": "Debat in tweetallen",
+      "alias": [
+        "kort debat",
+        "voor en tegen"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Twee leerlingen krijgen elk een kant van een stelling en wisselen in korte rondes argumenten uit; daarna wisselen ze van kant.",
+      "startzin": "Jij bent voor, jij bent tegen, ook als je het er niet mee eens bent. Je hebt één minuut voor je argument. Daarna draaien we om.",
+      "stappen": [
+        "Formuleer een stelling die bij de stof hoort.",
+        "Wijs in elk tweetal een voor- en een tegenkant aan.",
+        "Geef twee minuten om argumenten te verzamelen uit de stof.",
+        "Ronde 1: voor één minuut, tegen één minuut.",
+        "Wissel van kant en herhaal.",
+        "Vraag in de klas: welk argument was het sterkst, en waarom?"
+      ],
+      "duur": {
+        "min": 10,
+        "max": 15
+      },
+      "groepsvorm": [
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "stellingkaart",
+          "timer"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "evalueren"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "divergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [
+        "rechtvaardigheid"
+      ],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Alleen met je partner, niet voor de klas."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Zet de stappen en tijden op het bord en gebruik een timer."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "samenwerken",
+        "ontdekken"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "valkuilen": [
+        {
+          "valkuil": "Het wordt een ruzie over meningen.",
+          "oplossing": "Vraag om argumenten uit de stof, niet om eigen meningen."
+        },
+        {
+          "valkuil": "Leerlingen weten geen argumenten.",
+          "oplossing": "Geef een argumentenkaart met drie startpunten per kant."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Met een argumentenkaart en zinsstarters.",
+        "havo": "Met argumenten uit een tekst.",
+        "vwo": "Met tegenargumenten en weerleggingen.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Maatschappijleer",
+          "voorbeeld": "Stelling: de stemleeftijd moet naar 16."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Stelling: genetische modificatie van gewassen moet worden toegestaan."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Debate in English: School uniforms should be compulsory."
+        }
+      ],
+      "waarom": "Argumenteren van beide kanten dwingt leerlingen om de stof te gebruiken en een ander perspectief in te nemen. Praktijkervaring; past bij burgerschap.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": [
+        "stellingkaarten"
+      ]
+    },
+    {
+      "id": "rollenspel",
+      "naam": "Rollenspel",
+      "alias": [
+        "naspelen",
+        "situatie spelen"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Leerlingen spelen in groepjes een korte situatie uit de stof na, elk vanuit een rol met een eigen belang.",
+      "startzin": "Jullie krijgen een situatie en elk een rol. Lees je rolkaart. Je hebt vijf minuten om het gesprek te spelen zoals jouw persoon het zou doen.",
+      "stappen": [
+        "Bedenk een situatie met drie of vier rollen die elk iets anders willen.",
+        "Maak rolkaarten met belang, kennis en één geheim.",
+        "Laat groepjes kort voorbereiden (3 minuten).",
+        "Speel de situatie (5 minuten), alle groepjes tegelijk.",
+        "Bespreek: wat wilde jouw rol, en waarom?",
+        "Koppel terug aan de stof."
+      ],
+      "duur": {
+        "min": 15,
+        "max": 25
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "rolkaarten"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "uitgebreid",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren",
+        "evalueren"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "divergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [
+        "gemeenschappelijkheid"
+      ],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Alle groepjes spelen tegelijk; niemand speelt voor de hele klas."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Een rolkaart met precies wat je zegt in de eerste zin."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "actief",
+      "docentstijl": [
+        "samenwerken",
+        "relatie"
+      ],
+      "instapniveau": 3,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "valkuilen": [
+        {
+          "valkuil": "Het wordt toneel zonder inhoud.",
+          "oplossing": "Zet op de rolkaart wat de rol moet weten en willen."
+        },
+        {
+          "valkuil": "Leerlingen gaan los en het wordt luid.",
+          "oplossing": "Spreek een geluidsniveau af en gebruik een timer."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een herkenbare situatie met heldere rollen.",
+        "havo": "Een situatie met tegenstrijdige belangen.",
+        "vwo": "Een onderhandeling waarbij de uitkomst open is.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Economie",
+          "voorbeeld": "Onderhandeling tussen een werkgever en een vakbond."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "In een Duitse winkel iets terugbrengen."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een gemeenteraadsvergadering in 1965 over de sluiting van de mijnen."
+        }
+      ],
+      "waarom": "In een rol stappen helpt om belangen en perspectieven te begrijpen en kennis toe te passen. Het onderzoek is beperkt; het werkt het best met duidelijke rolkaarten en een nabespreking.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": [
+        "rolkaarten"
+      ]
+    },
+    {
+      "id": "fishbowl",
+      "naam": "Fishbowl",
+      "alias": [
+        "vissenkom",
+        "binnen- en buitencirkel gesprek"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Een klein groepje voert een gesprek in het midden; de rest kijkt toe met een observatieopdracht en kan later instappen.",
+      "startzin": "Vier van jullie praten in het midden. De rest luistert en let op één ding. Wil je meedoen? Tik iemand aan en neem die plek in.",
+      "stappen": [
+        "Zet vier of vijf stoelen of krukken in het midden.",
+        "Geef de buitenkring een observatieopdracht (argumenten noteren, vragen bedenken).",
+        "Start het gesprek met een open vraag.",
+        "Laat leerlingen uit de buitenkring wisselen met iemand in het midden.",
+        "Rond af met de observaties van de buitenkring."
+      ],
+      "duur": {
+        "min": 15,
+        "max": 25
+      },
+      "groepsvorm": [
+        "groepje",
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "observatieformulier"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "evalueren"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "divergent",
+      "doeldomein": [
+        "socialisatie",
+        "kwalificatie"
+      ],
+      "burgerschap": [
+        "gemeenschappelijkheid"
+      ],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Instappen is vrijwillig; observeren is ook meedoen."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Een duidelijke observatieopdracht met een formulier."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "samenwerken",
+        "relatie"
+      ],
+      "instapniveau": 3,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "valkuilen": [
+        {
+          "valkuil": "Steeds dezelfde leerlingen zitten in het midden.",
+          "oplossing": "Zet een regel: iedereen mag één keer instappen voordat iemand twee keer gaat."
+        },
+        {
+          "valkuil": "De buitenkring haakt af.",
+          "oplossing": "Geef een concrete observatieopdracht."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een concrete vraag; observatie met een afvinklijst.",
+        "havo": "Een open vraag; observatie van argumenten.",
+        "vwo": "Een dilemma; observatie van de kwaliteit van de redeneringen.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Levensbeschouwing",
+          "voorbeeld": "Is eerlijkheid altijd het beste?"
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Gesprek over het einde van een gelezen boek."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Moeten er windmolens komen in het Heuvelland?"
+        }
+      ],
+      "waarom": "Een fishbowl maakt een goed gesprek zichtbaar voor de hele klas en geeft toeschouwers een actieve taak. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": [
+        "vragenkaart-docent"
+      ]
+    },
+    {
+      "id": "zoemgroepen",
+      "naam": "Zoemgroepen",
+      "alias": [
+        "buzz groups",
+        "korte groepsvraag"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Groepjes van drie of vier bespreken een paar minuten één vraag en melden één antwoord terug.",
+      "startzin": "Draai je naar je groepje. Jullie hebben drie minuten voor één vraag. Kies wie straks jullie antwoord vertelt.",
+      "stappen": [
+        "Formuleer één heldere vraag.",
+        "Vorm groepjes van drie of vier (draai je om).",
+        "Geef drie minuten met een timer.",
+        "Laat een woordvoerder per groepje één antwoord geven.",
+        "Vat samen op het bord."
+      ],
+      "duur": {
+        "min": 5,
+        "max": 10
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "timer"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Geef een duidelijke rol en laat voorbereiden voordat iemand hardop iets zegt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Zet de stappen en tijden op het bord en gebruik een timer."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "samenwerken",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Groepjes praten over iets anders.",
+          "oplossing": "Houd het kort en loop rond."
+        },
+        {
+          "valkuil": "Steeds dezelfde woordvoerder.",
+          "oplossing": "Wijs de woordvoerder aan: wie het dichtst bij het raam zit."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een concrete vraag met keuzeantwoorden.",
+        "havo": "Een open vraag.",
+        "vwo": "Een vraag waarbij het groepje een keuze moet onderbouwen.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Welke van deze drie oplossingen is de handigste en waarom?"
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Wat gebeurt er met je lichaam als je hard loopt?"
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Waarom zijn tweedehands spullen populairder geworden?"
+        }
+      ],
+      "waarom": "Kort in een klein groepje praten zorgt dat iedereen actief is, ook in een grote klas. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "legkaart",
+      "naam": "Legkaart",
+      "alias": [
+        "jigsaw",
+        "puzzelmethode"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Elk lid van een groepje leest een ander deel van de stof en legt het daarna uit aan de anderen; samen hebben ze het hele verhaal.",
+      "startzin": "Ieder van jullie krijgt een ander stuk. Jij bent straks de enige in je groepje die dit weet. Lees het zo dat je het in twee minuten kunt uitleggen.",
+      "stappen": [
+        "Verdeel de stof in drie of vier stukken van gelijke moeilijkheid.",
+        "Geef elk groepslid een ander stuk.",
+        "Leerlingen lezen hun stuk (5–10 minuten) en maken drie steekwoorden.",
+        "Om de beurt legt iedereen het eigen stuk uit (2 minuten per persoon).",
+        "Sluit af met een vraag die alleen te beantwoorden is als je alle stukken kent."
+      ],
+      "duur": {
+        "min": 20,
+        "max": 35
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "tekstdelen",
+          "steekwoordenkaart"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "uitgebreid",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "groepering",
+        "niveau"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Geef deze leerling het kortste of best gestructureerde stuk, eventueel voorgelezen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Een stuk met plaatjes en een vaktaalkaart."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Geef een duidelijke rol en laat voorbereiden voordat iemand hardop iets zegt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Zet de stappen en tijden op het bord en gebruik een timer."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "samenwerken"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Een leerling begrijpt het eigen stuk niet en de hele groep mist het.",
+          "oplossing": "Laat eerst expertgroepen vormen met iedereen die hetzelfde stuk heeft."
+        },
+        {
+          "valkuil": "Leerlingen lezen hun stuk voor in plaats van uit te leggen.",
+          "oplossing": "Laat alleen steekwoorden gebruiken."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Korte stukken met vragen erbij.",
+        "havo": "Langere stukken met steekwoorden.",
+        "vwo": "Stukken die elkaar tegenspreken; het groepje moet een oordeel vormen.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Vier oorzaken van de Eerste Wereldoorlog, één per groepslid."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Vier organen van de spijsvertering."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Vier klimaatzones."
+        }
+      ],
+      "waarom": "De legkaart maakt leerlingen afhankelijk van elkaar, zodat iedereen moet bijdragen. Coöperatief leren met een gedeeld doel en individuele verantwoordelijkheid heeft in onderzoek positieve effecten (Johnson en Johnson).",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "aronson-patnoe-2011",
+        "johnson-2009"
+      ],
+      "materiaal": [
+        "opdrachtkaart-route"
+      ]
+    },
+    {
+      "id": "domino-memory",
+      "naam": "Begrippendomino of memory",
+      "alias": [
+        "kaartspel",
+        "begrippen koppelen"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Leerlingen koppelen in tweetallen kaartjes met begrippen aan uitleg, plaatjes of voorbeelden, als domino of memory.",
+      "startzin": "Je krijgt een stapel kaartjes. Leg de kaartjes zo aan elkaar dat begrip en uitleg kloppen. Wie heeft als eerste de hele rij?",
+      "stappen": [
+        "Maak 12–20 kaartjes: begrip en uitleg (of voorbeeld, plaatje).",
+        "Verdeel de stapels over tweetallen.",
+        "Leerlingen leggen de kaartjes aan elkaar (domino) of zoeken paren (memory).",
+        "Laat bij twijfel overleggen en uitleggen waarom.",
+        "Controleer met het antwoordblad."
+      ],
+      "duur": {
+        "min": 8,
+        "max": 15
+      },
+      "groepsvorm": [
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "kaartjes",
+          "antwoordblad"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "uitgebreid",
+      "lesfase": [
+        "inoefenen",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Kort per kaartje, groot lettertype, eventueel plaatjes."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Kaartjes met plaatjes helpen vaktaal te leren."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Geef een duidelijke rol en laat voorbereiden voordat iemand hardop iets zegt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Zet de stappen en tijden op het bord en gebruik een timer."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "samenwerken",
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De voorbereiding kost veel tijd.",
+          "oplossing": "Laat leerlingen de kaartjes zelf maken in een eerdere les, of bewaar sets in enveloppen."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Begrip en plaatje.",
+        "havo": "Begrip en uitleg.",
+        "vwo": "Begrip, uitleg en voorbeeld: trio’s in plaats van paren.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Frans",
+          "voorbeeld": "Woord en vertaling."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Stofnaam en formule."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Begrip en voorbeeld uit het dagelijks leven."
+        }
+      ],
+      "waarom": "Koppelen is een vorm van ophalen en ordenen, wat helpt bij het onthouden van begrippen. Praktijkervaring; de onderliggende ophaaleffecten zijn goed onderzocht.",
+      "bewijs": "praktijk",
+      "bronnen": [
+        "roediger-karpicke-2006"
+      ],
+      "materiaal": [
+        "sorteerkaartjes"
+      ]
+    },
+    {
+      "id": "diamant-rangschikken",
+      "naam": "Diamant rangschikken",
+      "alias": [
+        "diamond ranking",
+        "negen kaartjes"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Groepjes leggen negen kaartjes in een ruitvorm van belangrijkst naar minst belangrijk en moeten het eens worden.",
+      "startzin": "Leg deze negen kaartjes in een ruit: bovenaan het belangrijkste, onderaan het minst belangrijke. Jullie moeten het samen eens worden.",
+      "stappen": [
+        "Maak negen kaartjes met oorzaken, argumenten of factoren.",
+        "Leg de ruitvorm uit: 1, 2, 3, 2, 1.",
+        "Groepjes leggen en bespreken (10 minuten).",
+        "Laat twee groepjes hun bovenste en onderste kaart vergelijken.",
+        "Bespreek de verschillen in onderbouwing."
+      ],
+      "duur": {
+        "min": 12,
+        "max": 20
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "negen kaartjes per groepje"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "evalueren"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "divergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Geef een duidelijke rol en laat voorbereiden voordat iemand hardop iets zegt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Zet de stappen en tijden op het bord en gebruik een timer."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "samenwerken",
+        "ontdekken"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen leggen snel zonder overleg.",
+          "oplossing": "Vraag elk groepje bij elke kaart: waarom hier?"
+        },
+        {
+          "valkuil": "Er is geen goed antwoord en dat voelt onzeker.",
+          "oplossing": "Zeg dat de onderbouwing telt, niet de volgorde."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Zes kaartjes in een piramide.",
+        "havo": "Negen kaartjes.",
+        "vwo": "Negen kaartjes met één lege die het groepje zelf invult.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Negen oorzaken van de Franse Revolutie."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Negen maatregelen tegen wateroverlast in Zuid-Limburg."
+        },
+        {
+          "vak": "Lichamelijke opvoeding",
+          "voorbeeld": "Negen factoren voor een goede conditie."
+        }
+      ],
+      "waarom": "Rangschikken dwingt tot afwegen en onderbouwen, en het samen eens worden levert een inhoudelijk gesprek op. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": [
+        "sorteerkaartjes"
+      ]
+    },
+    {
+      "id": "escaperoom-papier",
+      "naam": "Escaperoom op papier",
+      "alias": [
+        "breakout",
+        "puzzeltocht"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Groepjes lossen een reeks opdrachten op; elk antwoord levert een code op die het volgende slot opent.",
+      "startzin": "Jullie zitten opgesloten. Elk antwoord geeft een code. Met alle codes kom je eruit. Begin met envelop 1.",
+      "stappen": [
+        "Maak vier tot zes opdrachten over de stof; elk antwoord is een getal of woord.",
+        "Stop elke opdracht in een genummerde envelop of zet ze op een blad.",
+        "Groepjes lossen de opdrachten op en laten de code aan jou zien (of controleren met een codeblad).",
+        "Bij een fout: hint-kaart of terug naar de stof.",
+        "Bespreek welke opdracht het moeilijkst was."
+      ],
+      "duur": {
+        "min": 20,
+        "max": 40
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "enveloppen met opdrachten",
+          "codeblad"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
+      "voorbereiding": "uitgebreid",
+      "lesfase": [
+        "inoefenen",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "groepering",
+        "ondersteuning"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Samen in een groepje, geen cijfer."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Een overzicht met alle stappen om af te vinken."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "actief",
+      "docentstijl": [
+        "samenwerken",
+        "ontdekken",
+        "digitaal"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Eén leerling lost alles op.",
+          "oplossing": "Geef elk groepslid een eigen envelop of rol."
+        },
+        {
+          "valkuil": "Een groepje loopt vast en raakt gefrustreerd.",
+          "oplossing": "Leg hintkaarten klaar."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Vier opdrachten met hintkaarten.",
+        "havo": "Vijf opdrachten.",
+        "vwo": "Zes opdrachten waarvan de laatste een combinatie van alles is.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Elk antwoord van een vergelijking is een cijfer van het slot."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Jaartallen uit de les vormen de code."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Woorden uit een leestekst vormen het wachtwoord."
+        }
+      ],
+      "waarom": "Spelelementen kunnen motiveren, maar het leren hangt af van de opdrachten zelf. Zorg dat elke opdracht echt over de stof gaat. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": [
+        "hintkaarten",
+        "werkblad"
+      ]
+    },
+    {
+      "id": "quiz-in-teams",
+      "naam": "Quiz in teams",
+      "alias": [
+        "teamquiz",
+        "kennisquiz"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Teams van drie of vier beantwoorden samen quizvragen op een wisbordje; elk team overlegt en schrijft één antwoord op.",
+      "startzin": "Elk team heeft een wisbordje. Je overlegt zacht, schrijft één antwoord op en houdt het omhoog als ik \"nu\" zeg.",
+      "stappen": [
+        "Maak 8–12 vragen van verschillende moeilijkheid.",
+        "Vorm teams van drie of vier.",
+        "Stel een vraag, geef 30–60 seconden overleg.",
+        "Alle teams tonen tegelijk hun antwoord.",
+        "Bespreek kort de vragen die veel teams fout hebben."
+      ],
+      "duur": {
+        "min": 10,
+        "max": 20
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "wisbordjes",
+          "vragen op het bord"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "inoefenen",
+        "check"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Een team antwoordt, niet één persoon."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Zet de stappen en tijden op het bord en gebruik een timer."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "actief",
+      "docentstijl": [
+        "samenwerken",
+        "structuur",
+        "digitaal"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De competitie wordt belangrijker dan het leren.",
+          "oplossing": "Geef geen grote prijzen en bespreek altijd de fouten."
+        },
+        {
+          "valkuil": "In elk team praat één leerling.",
+          "oplossing": "Wissel per vraag wie schrijft; de schrijver moet het antwoord kunnen uitleggen."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Meerkeuzevragen.",
+        "havo": "Open vragen.",
+        "vwo": "Vragen met een \"waarom\"-bonus.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Topografie van Limburg."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Formules en stofnamen."
+        },
+        {
+          "vak": "Muziek",
+          "voorbeeld": "Instrumenten herkennen aan het geluid."
+        }
+      ],
+      "waarom": "Een quiz is een vorm van ophaaloefening, die het onthouden versterkt. In teams wordt overleggen deel van het leren.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "roediger-karpicke-2006",
+        "agarwal-bain-2019"
+      ],
+      "materiaal": [
+        "wisbordjes"
+      ]
+    },
+    {
+      "id": "lopend-dictee",
+      "naam": "Lopend dictee",
+      "alias": [
+        "running dictation",
+        "renner en schrijver"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Een tekst hangt verderop in het lokaal; de loper leest een stukje, onthoudt het en dicteert het aan de schrijver.",
+      "startzin": "De loper loopt naar de tekst, onthoudt een stuk en vertelt het aan de schrijver. Niet rennen, niet roepen. Halverwege wissel je.",
+      "stappen": [
+        "Hang een korte tekst op een paar plekken in het lokaal of op de gang.",
+        "Vorm tweetallen: loper en schrijver.",
+        "De loper onthoudt zinnen, loopt terug en dicteert.",
+        "Halverwege wisselen de rollen.",
+        "Laat het tweetal de eigen tekst nakijken met het origineel."
+      ],
+      "duur": {
+        "min": 10,
+        "max": 15
+      },
+      "groepsvorm": [
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": false,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "tekst op A4 op meerdere plekken"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Laat deze leerling liever loper zijn, of gebruik een kortere tekst."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Geef een duidelijke rol en laat voorbereiden voordat iemand hardop iets zegt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Duidelijke regels: lopen, niet rennen; vaste wissel."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "actief",
+      "docentstijl": [
+        "samenwerken",
+        "relatie"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": true,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het wordt druk en luid.",
+          "oplossing": "Leg de tekst op meerdere plekken en spreek fluisteren af."
+        },
+        {
+          "valkuil": "In een M-lokaal is er geen ruimte om te lopen.",
+          "oplossing": "Doe dit alleen in een L-lokaal met ruimte."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Korte zinnen.",
+        "havo": "Een alinea.",
+        "vwo": "Een tekst die het tweetal daarna moet samenvatten.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Engels",
+          "voorbeeld": "Een korte tekst met nieuwe woorden."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "De definitie van fotosynthese in drie zinnen."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Een gedicht."
+        }
+      ],
+      "waarom": "Lopend dictee combineert lezen, onthouden, spreken en schrijven met beweging. Praktijkervaring, vooral bij moderne vreemde talen.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "vragen-bedenken",
+      "naam": "Toetsvragen bedenken",
+      "alias": [
+        "zelf vragen maken",
+        "vragenmaker"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Leerlingen maken zelf toetsvragen met antwoord over de stof en wisselen die uit met een ander tweetal.",
+      "startzin": "Jullie maken drie vragen over de stof van vandaag: één makkelijke, één gemiddelde en één moeilijke. Met antwoord.",
+      "stappen": [
+        "Leg uit wat een goede vraag is (met een voorbeeld van makkelijk en moeilijk).",
+        "Tweetallen maken drie vragen met antwoorden.",
+        "Ze wisselen uit met een ander tweetal en beantwoorden elkaars vragen.",
+        "Ze controleren elkaars antwoorden.",
+        "Verzamel de beste vragen voor een oefentoets."
+      ],
+      "duur": {
+        "min": 10,
+        "max": 20
+      },
+      "groepsvorm": [
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "vragenformulier"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen",
+        "creeren"
+      ],
+      "differentiatie": [
+        "niveau"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Geef een duidelijke rol en laat voorbereiden voordat iemand hardop iets zegt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Zet de stappen en tijden op het bord en gebruik een timer."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "samenwerken",
+        "structuur"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Alle vragen zijn feitvragen.",
+          "oplossing": "Geef vraagstarters per niveau: Wat is…, Waarom…, Wat zou er gebeuren als…"
+        }
+      ],
+      "varianten": {
+        "vmbo": "Met vraagstarters en een voorbeeld.",
+        "havo": "Drie niveaus.",
+        "vwo": "Vragen die een denkfout uitlokken (met uitleg van de fout).",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Vragen over de Gouden Eeuw."
+        },
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Rekenvragen over snelheid."
+        },
+        {
+          "vak": "Frans",
+          "voorbeeld": "Vragen over de leestekst."
+        }
+      ],
+      "waarom": "Vragen maken dwingt om na te denken over wat belangrijk is en hoe je het toetst. Het bewijs is beperkt; het werkt het best als leerlingen de vragen ook echt beantwoorden.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": [
+        "werkblad"
+      ]
+    },
+    {
+      "id": "stellingen-in-groepjes",
+      "naam": "Stellingenspel in groepjes",
+      "alias": [
+        "stellingkaarten",
+        "eens of oneens aan tafel"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Een groepje trekt om de beurt een stellingkaart, kiest eens of oneens en onderbouwt; de anderen reageren met een argument.",
+      "startzin": "Trek een kaart, lees de stelling voor en zeg: eens of oneens, omdat… Daarna reageert iedereen met één argument.",
+      "stappen": [
+        "Maak 8–12 stellingkaarten over de stof.",
+        "Groepjes van vier leggen de stapel in het midden.",
+        "Om de beurt: trekken, voorlezen, kiezen en onderbouwen.",
+        "De anderen reageren met één argument (eens of oneens).",
+        "Elk groepje kiest de stelling met de beste discussie en meldt die."
+      ],
+      "duur": {
+        "min": 10,
+        "max": 20
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "stellingkaarten"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "evalueren"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "divergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Geef een duidelijke rol en laat voorbereiden voordat iemand hardop iets zegt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Zet de stappen en tijden op het bord en gebruik een timer."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "samenwerken",
+        "relatie"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen zeggen alleen eens of oneens.",
+          "oplossing": "Zet \"omdat…\" op elke kaart."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Eenvoudige stellingen met argumentenkaart.",
+        "havo": "Stellingen uit de stof.",
+        "vwo": "Stellingen met een dilemma.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Stelling: iedereen moet orgaandonor zijn, tenzij je nee zegt."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Stelling: de hoofdpersoon is een held."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Stelling: sparen is altijd verstandig."
+        }
+      ],
+      "waarom": "Kleine groepjes met een vaste beurt zorgen dat iedereen aan het woord komt. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": [
+        "stellingkaarten"
+      ]
+    },
+    {
+      "id": "speeddate",
+      "naam": "Speeddate",
+      "alias": [
+        "wisselende tweetallen",
+        "carrouselgesprek"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Leerlingen praten in korte rondes van twee minuten met steeds een andere partner over een vraag; na elke ronde schuift één rij door.",
+      "startzin": "Je praat twee minuten met je partner over de vraag op het bord. Bij het signaal schuift de rij bij het raam één plek op.",
+      "stappen": [
+        "Zet leerlingen in twee rijen tegenover elkaar (of gebruik de tafelopstelling).",
+        "Geef per ronde een vraag.",
+        "Twee minuten praten, dan schuift één rij door.",
+        "Doe drie of vier rondes met steeds een nieuwe vraag of verdieping.",
+        "Vraag: wat hoorde je van een ander dat je nog niet wist?"
+      ],
+      "duur": {
+        "min": 10,
+        "max": 15
+      },
+      "groepsvorm": [
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": false,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "vragen op het bord",
+          "timer"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "socialisatie",
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Steeds maar één gesprekspartner; geef de vraag vooraf."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Vaste looprichting en een duidelijk signaal."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "actief",
+      "docentstijl": [
+        "samenwerken",
+        "relatie"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": true,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het doorschuiven kost veel tijd.",
+          "oplossing": "Oefen het één keer zonder vraag."
+        },
+        {
+          "valkuil": "In een M-lokaal past het niet.",
+          "oplossing": "Kies dan binnen- en buitenkring met de tafels, of een andere werkvorm."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Eenvoudige vragen met zinsstarters.",
+        "havo": "Vragen die opbouwen in moeilijkheid.",
+        "vwo": "Elke ronde een ander perspectief.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Duits",
+          "voorbeeld": "Spreekvaardigheid: stel je voor en vraag naar hobby’s."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Leg aan je partner uit hoe je deze som oplost."
+        },
+        {
+          "vak": "Maatschappijleer",
+          "voorbeeld": "Wat vind jij van de stelling, en waarom?"
+        }
+      ],
+      "waarom": "Wisselende partners geven veel spreektijd en laten leerlingen dezelfde stof steeds opnieuw verwoorden. Praktijkervaring; verwant aan binnen- en buitenkring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "peer-instruction",
+      "naam": "Peer instruction",
+      "alias": [
+        "overtuig je buur",
+        "conceptvraag met herstemming"
+      ],
+      "categorie": "activerende-werkvorm",
+      "kort": "Je stelt een meerkeuzevraag, iedereen kiest, daarna overtuigen buren elkaar en stemt de klas opnieuw.",
+      "startzin": "Kies eerst alleen: A, B, C of D. Laat je kaart zien. Zoek nu iemand met een ander antwoord en overtuig elkaar.",
+      "stappen": [
+        "Maak een meerkeuzevraag over een begrip, met misvattingen als foute antwoorden.",
+        "Iedereen kiest alleen en toont het antwoord.",
+        "Bij 30–70% goed: laat buren met een ander antwoord elkaar overtuigen (2 minuten).",
+        "Stem opnieuw.",
+        "Leg het juiste antwoord uit en waarom de andere fout zijn."
+      ],
+      "duur": {
+        "min": 6,
+        "max": 12
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "abcd-kaarten",
+          "vraag op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "instructie",
+        "check"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Houd teksten kort, lees opdrachten voor en laat antwoorden ook mondeling of met steekwoorden toe."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geef een rekenhulpkaart als er gerekend moet worden."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef zinsstarters en een vaktaalkaart; koppel aan een geduldige partner."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Geef een duidelijke rol en laat voorbereiden voordat iemand hardop iets zegt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Zet de stappen en tijden op het bord en gebruik een timer."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geef een rol of vraag met meer complexiteit."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "uitleggen",
+        "samenwerken"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "alsDan": [
+        {
+          "als": "Meer dan 70% goed",
+          "dan": "Kort uitleggen en door."
+        },
+        {
+          "als": "30 tot 70% goed",
+          "dan": "Buren overtuigen elkaar, daarna opnieuw stemmen."
+        },
+        {
+          "als": "Minder dan 30% goed",
+          "dan": "Opnieuw uitleggen voordat je de vraag herhaalt."
+        }
+      ],
+      "valkuilen": [
+        {
+          "valkuil": "De vraag is te makkelijk of te moeilijk.",
+          "oplossing": "Mik op een vraag waar ongeveer de helft het goed heeft."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Drie keuzes met een plaatje.",
+        "havo": "Vier keuzes met misvattingen.",
+        "vwo": "Vier keuzes waarvan meerdere deels goed zijn.",
+        "steun": "Geef een voorbeeld of zinsstarters vooraf.",
+        "basis": "Standaard.",
+        "verdieping": "Een moeilijkere vraag of rol."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Twee ballen vallen tegelijk van een toren, de ene is zwaarder. Welke is eerder beneden?"
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Wat gebeurt er met de prijs als het aanbod stijgt?"
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Waar komt de massa van een boom vandaan?"
+        }
+      ],
+      "waarom": "Uitleggen aan een klasgenoot met een ander antwoord dwingt beide om hun redenering te toetsen. De methode is ontwikkeld in het hoger onderwijs; in het voortgezet onderwijs is het onderzoek beperkter.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "mazur-1997"
+      ],
+      "materiaal": [
+        "abcd-kaarten",
+        "scharniervraag"
+      ]
     }
   ]
 }

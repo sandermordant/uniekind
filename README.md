@@ -6,7 +6,9 @@ Uniekind helpt docenten gedifferentieerde lessen te ontwerpen. De docent geeft a
 
 De eerste versie is gemaakt voor **Sophianum** (Gulpen). Later volgt een **algemene versie**, waarin elke school haar eigen visie, lokalen en lestijden instelt. Beide versies gebruiken dezelfde code; het verschil zit alleen in het schoolprofiel.
 
-> Status: **fase 4 (slim invoeren)**. Foto van een paragraaf herkennen (lokaal), AI-brug met Copilot-prompt en import, bronnen- en zoeklinks.
+> Status: **fase 5 (kennisbank en eigen ervaring)**. Kennisbank met 160 werkvormen (41 openers), de pagina's Hulp en Mijn profiel, reflectie na de les en "Jouw werkvormen die werken".
+
+> Eerder: **fase 4 (slim invoeren)**. Foto van een paragraaf herkennen (lokaal), AI-brug met Copilot-prompt en import, bronnen- en zoeklinks.
 >
 > Eerder: **fase 3 (materiaal en export)**. Bovenop fase 2: het complete materiaalpakket, digibordmodus, export naar PDF, Word en PowerPoint, lesbestand en Les openen.
 >
@@ -55,7 +57,7 @@ public/
   huisstijl/           logo en hoogtelijnenmotief
 src/
   main.js              start: profiel laden, huisstijl toepassen, routeren
-  pages/               de pagina's (home, bibliotheek, werkvorm, begin hier, visie, invulformulier)
+  pages/               de pagina's (home, bibliotheek, werkvorm, begin hier, visie, invulformulier, les maken, les openen, digibord, hulp, mijn profiel)
   data/                laden van profiel en kennisbank, leesbare labels
   opslag/              veilige browseropslag (werkt ook als opslag geblokkeerd is)
   stijl/               CSS: lettertypen, basisstijl, printstijl
@@ -118,7 +120,7 @@ De generator (`src/engine/`) is deterministisch: dezelfde invoer geeft dezelfde 
 2. **Sjabloon** (`sjablonen.js`): de lesopbouw met uitgewerkte tijden voor 35, 50, 70 en 100 minuten; een vrije lesduur wordt geschaald. In een M-lokaal is instructie maximaal 15 minuten aaneen, en geen fase duurt langer dan 25 minuten.
 3. **Splitsplanner** (`splitsplanner.js`): bij meer leerlingen dan het lokaal bergt (of bij stand 3) kiest Uniekind een opzet: gespreide start, startcheck, carrousel, flipped start, met onderwijsassistent of stilteruimte.
 4. **Harde filters** (`filters.js`): tijd, ruimte, telefoon (nooit), laptops, assistent, plein, instapniveau.
-5. **Score** (`score.js`): denkniveau, lesfase en plek in de reeks, docentprofiel, klas, schoolvisie, variatie, eigen ervaring. De gewichten staan in het schoolprofiel (`generator.gewichten`).
+5. **Score** (`score.js`): denkniveau, lesfase en plek in de reeks, een vakvoorbeeld uit het eigen vak, docentprofiel, klas, schoolvisie, variatie (werkvormen uit je vorige twee lessen van dit vak krijgen een min), eigen ervaring (duimen uit je reflecties) en een kleine vaste afwisseling bij openers, energizers en afsluiters (op basis van onderwerp en vak, zodat niet elke les met dezelfde opener begint). De gewichten staan in het schoolprofiel (`generator.gewichten`).
 6. **Controle** (`controle.js`): veertien harde eisen, zichtbaar als checklist in de les.
 7. **Uitleg** (`uitleg.js`): bij elke werkvorm "Waarom deze?" en bij de les twee zinnen waarom deze opzet past.
 
@@ -126,6 +128,8 @@ De generator (`src/engine/`) is deterministisch: dezelfde invoer geeft dezelfde 
 
 - Uniekind vraagt **nooit namen van leerlingen**, alleen aantallen. Er gaat niets naar een server.
 - Docentprofiel, voorkeuren en concepten worden in de browser (localStorage) bewaard. Als opslag geblokkeerd is, werkt de site gewoon, maar onthoudt hij niets.
+- **Mijn lessen** (`src/opslag/logboek.js`, sleutel `uniekind:lessen`): per les alleen datum, onderwerp, vak, afdeling, lesduur, stand, opzet, de werkvormen en de reflectie van de docent (duim per werkvorm, twee korte teksten). Hooguit 40 lessen. De duimen gaan als `uniekind:duimen` naar de generator. In Mijn profiel kan de docent alles downloaden, inlezen op een andere laptop en wissen.
+- Een **lesbestand** bewaart de gekozen werkvorm per blok, zodat een les op een andere computer hetzelfde opent, ook als daar andere reflecties staan.
 - De Sophianum-versie heeft `noindex`, zodat zoekmachines hem niet opnemen.
 - **Toegangscode:** in het profiel staat `"toegangscode": null`. Vul je daar een woord in, dan vraagt de site het één keer bij het eerste bezoek. **Dit is een drempel, geen beveiliging**: iedereen kan het woord in de broncode lezen. Zet er dus nooit iets vertrouwelijks achter.
 
@@ -161,7 +165,7 @@ build-commando `npm run build`, publiceermap `dist`.
 | 2 | Wizard, filter- en scorelogica, lessjablonen 35/50/70/100, splitsplanner, "Waarom deze?" | klaar (zie docs/testverslag-fase2.md) |
 | 3 | Materialen, digibordmodus, export PDF/Word/PowerPoint/lesbestand | klaar (zie docs/testverslag-fase3.md) |
 | 4 | OCR, AI-brug (Copilot), zoeklinks | klaar (zie docs/testverslag-fase4.md) |
-| 5 | Kennisbank naar 150+, pagina's Hulp, Mijn profiel, reflectie | volgt |
+| 5 | Kennisbank naar 150+ (160, waarvan 41 openers), pagina's Hulp en Mijn profiel, reflectie na de les | klaar (zie docs/testverslag-fase5.md) |
 | 6 | Testen, toegankelijkheid, publiceren, handleiding, pitch | volgt |
 | 7 | Algemene versie met schoolprofiel-wizard | volgt |
 

@@ -4,6 +4,7 @@ import './stijl/basis.css';
 import './stijl/wizard.css';
 import './stijl/materiaal.css';
 import './stijl/digibord.css';
+import './stijl/paginas.css';
 import './stijl/print.css';
 
 import { html, escape } from './util/html.js';
@@ -18,13 +19,17 @@ import invulformulier from './pages/invulformulier.js';
 import lesMaken from './pages/les-maken.js';
 import lesOpenen from './pages/les-openen.js';
 import digibord from './pages/digibord.js';
+import hulp from './pages/hulp.js';
+import mijnProfiel from './pages/mijn-profiel.js';
 
 const NAV = [
   { hash: 'les-maken', label: 'Maak een les' },
   { hash: 'bibliotheek', label: 'Werkvormen' },
   { hash: 'begin-hier', label: 'Begin hier' },
   { hash: 'les-openen', label: 'Les openen' },
-  { hash: 'visie', label: 'Visie' }
+  { hash: 'visie', label: 'Visie' },
+  { hash: 'mijn-profiel', label: 'Mijn profiel' },
+  { hash: 'hulp', label: 'Hulp' }
 ];
 
 // Routes: plain hash-namen (#bibliotheek, #werkvorm-wisbordjes), zodat links ook in previews werken.
@@ -38,7 +43,9 @@ function kiesPagina(hash) {
     'invulformulier': invulformulier,
     'les-maken': lesMaken,
     'les-openen': lesOpenen,
-    'digibord': digibord
+    'digibord': digibord,
+    'hulp': hulp,
+    'mijn-profiel': mijnProfiel
   };
   return { pagina: routes[hash] ?? home, nav: routes[hash] ? hash : '' };
 }
@@ -70,7 +77,7 @@ function shell(profiel) {
     <footer class="voet">
       <div class="wrap">
         <span>${profiel.uniekind.titel} voor ${profiel.school.naam}. Alles draait in je browser; er worden geen leerlinggegevens opgeslagen.</span>
-        <span><a href="#invulformulier">Werkvorm toevoegen</a></span>
+        <span class="voetlinks"><a href="#hulp">Hulp en privacy</a> <a href="#mijn-profiel">Mijn gegevens</a> <a href="#invulformulier">Werkvorm toevoegen</a></span>
       </div>
     </footer>`;
 }

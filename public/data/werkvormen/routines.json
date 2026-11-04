@@ -5,7 +5,12 @@
     {
       "id": "startopdracht",
       "naam": "Startopdracht die altijd klaarligt",
-      "alias": ["binnenkomopdracht", "do now", "starter", "instapopdracht"],
+      "alias": [
+        "binnenkomopdracht",
+        "do now",
+        "starter",
+        "instapopdracht"
+      ],
       "categorie": "routine",
       "kort": "Bij binnenkomst staat er altijd een korte opdracht op het bord die leerlingen zonder uitleg kunnen beginnen, bij voorkeur een ophaaloefening.",
       "startzin": "Welkom. Je weet wat je doet: jas uit, spullen op tafel, en begin aan de startopdracht op het bord. Je hebt vier minuten.",
@@ -16,34 +21,94 @@
         "Bespreek de antwoorden kort (1-2 minuten) of laat zelf nakijken.",
         "Maak het elke les hetzelfde ritueel, zodat het vanzelf gaat."
       ],
-      "duur": { "min": 3, "max": 6 },
-      "groepsvorm": ["individueel"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["startopdracht op het bord of op papier"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 3,
+        "max": 6
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "startopdracht op het bord of op papier"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["opening", "voorkennis"],
-      "denkniveau": ["onthouden", "begrijpen", "toepassen"],
-      "differentiatie": ["tempo"],
+      "lesfase": [
+        "opening",
+        "voorkennis"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "tempo"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Kort en groot op het bord." },
-        "dyscalculie": { "past": "aanpassen", "tip": "Rekenhulpkaart op tafel als rekenen niet het doel is." },
-        "nt2": { "past": "goed", "tip": "Voorspelbaar ritueel; kernwoorden erbij." },
-        "faalangst": { "past": "goed", "tip": "Rustige, voorspelbare start zonder publiek." },
-        "structuur": { "past": "goed", "tip": "Juist voor deze leerlingen: elke les dezelfde start." },
-        "hoogbegaafd": { "past": "aanpassen", "tip": "Zet er een bonusvraag bij." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Kort en groot op het bord."
+        },
+        "dyscalculie": {
+          "past": "aanpassen",
+          "tip": "Rekenhulpkaart op tafel als rekenen niet het doel is."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Voorspelbaar ritueel; kernwoorden erbij."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Rustige, voorspelbare start zonder publiek."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Juist voor deze leerlingen: elke les dezelfde start."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Zet er een bonusvraag bij."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "uitleggen", "houvast"],
+      "docentstijl": [
+        "structuur",
+        "uitleggen",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "De opdracht vraagt uitleg, dus leerlingen wachten toch op jou.", "oplossing": "Alleen opdrachten die zonder uitleg kunnen: ophalen en herhalen." },
-        { "valkuil": "Je slaat de bespreking over en de opdracht verliest waarde.", "oplossing": "Altijd kort nakijken, ook al is het 1 minuut." }
+        {
+          "valkuil": "De opdracht vraagt uitleg, dus leerlingen wachten toch op jou.",
+          "oplossing": "Alleen opdrachten die zonder uitleg kunnen: ophalen en herhalen."
+        },
+        {
+          "valkuil": "Je slaat de bespreking over en de opdracht verliest waarde.",
+          "oplossing": "Altijd kort nakijken, ook al is het 1 minuut."
+        }
       ],
       "varianten": {
         "vmbo": "Twee of drie vragen, met plaatjes.",
@@ -54,14 +119,30 @@
         "verdieping": "Bonusvraag."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Drie sommen: vorige les, vorige week, vorige maand." },
-        { "vak": "Engels", "voorbeeld": "Vijf woordjes vertalen en één zin in de past simple." },
-        { "vak": "Biologie", "voorbeeld": "Benoem de delen van de cel op een schets." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Drie sommen: vorige les, vorige week, vorige maand."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Vijf woordjes vertalen en één zin in de past simple."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Benoem de delen van de cel op een schets."
+        }
       ],
       "waarom": "Een vaste startopdracht zorgt voor een rustige, voorspelbare start en benut de eerste minuten voor ophalen; Rosenshine begint zijn principes met een dagelijkse terugblik. Bij differentiatie geeft het jou ruimte om ondertussen een groep te laten vertrekken of iemand te helpen.",
       "bewijs": "redelijk",
-      "bronnen": ["rosenshine-2012", "lemov-2015", "roediger-karpicke-2006"],
-      "materiaal": ["startopdracht", "digibord-opener"],
+      "bronnen": [
+        "rosenshine-2012",
+        "lemov-2015",
+        "roediger-karpicke-2006"
+      ],
+      "materiaal": [
+        "startopdracht",
+        "digibord-opener"
+      ],
       "beginHier": {
         "volgorde": 6,
         "uitleg": "De eerste vijf minuten van een les gaan vaak op aan binnenkomen, jassen en wachten. Zet vandaag een startopdracht op het bord voordat de klas binnenkomt: drie of vier korte vragen, waarvan één over stof van een paar weken geleden. Leerlingen beginnen meteen, zonder dat jij iets hoeft te zeggen. Na een paar lessen is het een gewoonte. Je wint rust, je wint leertijd, en ophalen uit het geheugen is een van de best onderbouwde manieren om stof te onthouden. Bonus: je hebt ineens tijd om een leerling apart te spreken of een groepje naar het plein te sturen."
@@ -70,7 +151,11 @@
     {
       "id": "signaalkaarten",
       "naam": "Signaalkaarten rood en groen",
-      "alias": ["hulpkaart", "vraagkaart", "rood-groen-kaart"],
+      "alias": [
+        "hulpkaart",
+        "vraagkaart",
+        "rood-groen-kaart"
+      ],
       "categorie": "routine",
       "kort": "Leerlingen hebben een kaart die rood (ik zit vast) of groen (ik werk door) op tafel ligt, zodat ze zonder vinger in de lucht hulp kunnen vragen.",
       "startzin": "Je kaart ligt op groen: je werkt door. Zit je vast en heb je al drie klasgenoten gevraagd? Draai hem op rood en ga intussen verder met een volgende opgave. Ik kom langs.",
@@ -81,33 +166,87 @@
         "Spreek af wat je doet als je op rood wacht (volgende opgave, hintkaart).",
         "Evalueer na een week met de klas: werkt het?"
       ],
-      "duur": { "min": 1, "max": 30 },
-      "groepsvorm": ["individueel"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["signaalkaarten (rood/groen)"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 1,
+        "max": 30
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "signaalkaarten (rood/groen)"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["verwerken", "inoefenen"],
-      "denkniveau": ["toepassen"],
-      "differentiatie": ["ondersteuning"],
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "toepassen"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
       "richting": "nvt",
-      "doeldomein": ["persoonsvorming"],
+      "doeldomein": [
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Kleur, geen tekst." },
-        "dyscalculie": { "past": "goed", "tip": "Hulp zonder je hand op te steken." },
-        "nt2": { "past": "goed", "tip": "Taalonafhankelijk." },
-        "faalangst": { "past": "goed", "tip": "Hulp vragen zonder dat iedereen het ziet." },
-        "structuur": { "past": "goed", "tip": "Vaste afspraak." },
-        "hoogbegaafd": { "past": "goed", "tip": "Ook zij kunnen rood zetten bij een pluskaart." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Kleur, geen tekst."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Hulp zonder je hand op te steken."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Taalonafhankelijk."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Hulp vragen zonder dat iedereen het ziet."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste afspraak."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Ook zij kunnen rood zetten bij een pluskaart."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "houvast", "relatie"],
+      "docentstijl": [
+        "structuur",
+        "houvast",
+        "relatie"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen stoppen met werken als ze op rood staan.", "oplossing": "Afspraak: bij rood ga je door met een volgende opgave of een hintkaart." }
+        {
+          "valkuil": "Leerlingen stoppen met werken als ze op rood staan.",
+          "oplossing": "Afspraak: bij rood ga je door met een volgende opgave of een hintkaart."
+        }
       ],
       "varianten": {
         "vmbo": "Grote kaart of bekertje.",
@@ -118,19 +257,34 @@
         "verdieping": "Groen: pluskaart."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Tijdens zelfstandig oefenen ziet de docent drie rode kaarten en gaat daar eerst langs." },
-        { "vak": "Nederlands", "voorbeeld": "Tijdens het schrijven aan een betoog." },
-        { "vak": "Beroepsgericht profielvak", "voorbeeld": "Tijdens een praktijkopdracht in het praktijklokaal." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Tijdens zelfstandig oefenen ziet de docent drie rode kaarten en gaat daar eerst langs."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Tijdens het schrijven aan een betoog."
+        },
+        {
+          "vak": "Beroepsgericht profielvak",
+          "voorbeeld": "Tijdens een praktijkopdracht in het praktijklokaal."
+        }
       ],
       "waarom": "Signaalkaarten maken hulpvragen zichtbaar zonder de les te verstoren en helpen leerlingen om zelf te bepalen wanneer ze hulp nodig hebben. Het is een praktijkroutine zonder eigen onderzoeksbasis; het ondersteunt wel instructie in kleine groepen.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["signaalkaarten"]
+      "materiaal": [
+        "signaalkaarten"
+      ]
     },
     {
       "id": "eerst-drie-dan-ik",
       "naam": "Eerst drie, dan ik",
-      "alias": ["drie voor mij", "C3B4ME", "eerst drie bronnen"],
+      "alias": [
+        "drie voor mij",
+        "C3B4ME",
+        "eerst drie bronnen"
+      ],
       "categorie": "routine",
       "kort": "Leerlingen raadplegen eerst drie bronnen (boek, hintkaart, klasgenoot) voordat ze de docent om hulp vragen.",
       "startzin": "Heb je een vraag? Eerst drie, dan ik: kijk in je boek of schrift, pak een hintkaart, vraag een klasgenoot. Pas daarna kom je bij mij.",
@@ -141,33 +295,92 @@
         "Waardeer leerlingen die het zelf hebben opgelost.",
         "Maak een uitzondering voor persoonlijke of dringende zaken."
       ],
-      "duur": { "min": 1, "max": 30 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["poster 'eerst drie, dan ik'", "hintkaarten"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 1,
+        "max": 30
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "poster 'eerst drie, dan ik'",
+          "hintkaarten"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["verwerken", "inoefenen"],
-      "denkniveau": ["toepassen"],
-      "differentiatie": ["ondersteuning"],
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "toepassen"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
       "richting": "nvt",
-      "doeldomein": ["persoonsvorming", "socialisatie"],
-      "burgerschap": ["gemeenschappelijkheid"],
+      "doeldomein": [
+        "persoonsvorming",
+        "socialisatie"
+      ],
+      "burgerschap": [
+        "gemeenschappelijkheid"
+      ],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Klasgenoot kan voorlezen." },
-        "dyscalculie": { "past": "goed", "tip": "Rekenhulpkaart als een van de drie bronnen." },
-        "nt2": { "past": "goed", "tip": "Vaktaalkaart als een van de drie bronnen." },
-        "faalangst": { "past": "aanpassen", "tip": "Vaste duopartner als eerste klasgenoot." },
-        "structuur": { "past": "goed", "tip": "Duidelijke volgorde." },
-        "hoogbegaafd": { "past": "goed", "tip": "Kan als klasgenoot-bron helpen." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Klasgenoot kan voorlezen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart als een van de drie bronnen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaktaalkaart als een van de drie bronnen."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Vaste duopartner als eerste klasgenoot."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Duidelijke volgorde."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Kan als klasgenoot-bron helpen."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "samenwerken", "houvast"],
+      "docentstijl": [
+        "structuur",
+        "samenwerken",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Klasgenoten zeggen antwoorden voor.", "oplossing": "Afspraak: je helpt met een vraag of hint, niet met het antwoord." }
+        {
+          "valkuil": "Klasgenoten zeggen antwoorden voor.",
+          "oplossing": "Afspraak: je helpt met een vraag of hint, niet met het antwoord."
+        }
       ],
       "varianten": {
         "vmbo": "Pictogrammen op tafel.",
@@ -178,19 +391,34 @@
         "verdieping": "Klasgenoot-bron."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Uitwerkingen achterin het boek als eerste bron." },
-        { "vak": "Frans", "voorbeeld": "Woordenlijst, grammaticakaart, buur." },
-        { "vak": "Aardrijkskunde", "voorbeeld": "Atlas, boek, buur." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Uitwerkingen achterin het boek als eerste bron."
+        },
+        {
+          "vak": "Frans",
+          "voorbeeld": "Woordenlijst, grammaticakaart, buur."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Atlas, boek, buur."
+        }
       ],
       "waarom": "De routine maakt jou vrij voor de instructietafel en laat leerlingen eerst zelf oplossingen zoeken. Het is een praktijkroutine; het helpt zelfstandigheid en maakt differentiatie in de klas organiseerbaar.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["poster-eerst-drie"]
+      "materiaal": [
+        "poster-eerst-drie"
+      ]
     },
     {
       "id": "overgangsscript-lokaal-plein",
       "naam": "Overgangsscript lokaal en plein",
-      "alias": ["wisselscript", "wisselprotocol", "overgang naar het plein"],
+      "alias": [
+        "wisselscript",
+        "wisselprotocol",
+        "overgang naar het plein"
+      ],
       "categorie": "routine",
       "kort": "Een vaste, korte instructie voor elke wissel tussen lokaal en plein: wie, wanneer, met welke opdracht en wanneer terug.",
       "startzin": "Groep B, luister: jullie pakken nu je laptop en de oranje opdrachtkaart. Jullie gaan naar de tafels bij het raam op het plein. Om 10.25 uur zijn jullie terug. Ga maar.",
@@ -201,33 +429,89 @@
         "Check na 5 minuten even op het plein (of laat de assistent dat doen).",
         "Geef bij terugkomst een vast signaal en een korte opdracht om direct mee te beginnen."
       ],
-      "duur": { "min": 1, "max": 2 },
-      "groepsvorm": ["groepje", "klas"],
-      "ruimte": { "M": true, "L": false, "plein": true, "stilte": false, "beweging": true },
-      "middelen": { "lijst": ["routeschema op het digibord", "opdrachtkaarten in een kleur per groep", "timer"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 1,
+        "max": 2
+      },
+      "groepsvorm": [
+        "groepje",
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": false,
+        "plein": true,
+        "stilte": false,
+        "beweging": true
+      },
+      "middelen": {
+        "lijst": [
+          "routeschema op het digibord",
+          "opdrachtkaarten in een kleur per groep",
+          "timer"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["verwerken", "instructie"],
-      "denkniveau": ["toepassen"],
-      "differentiatie": ["leeromgeving"],
+      "lesfase": [
+        "verwerken",
+        "instructie"
+      ],
+      "denkniveau": [
+        "toepassen"
+      ],
+      "differentiatie": [
+        "leeromgeving"
+      ],
       "richting": "nvt",
-      "doeldomein": ["persoonsvorming"],
+      "doeldomein": [
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Mondeling plus schema met kleuren." },
-        "dyscalculie": { "past": "goed", "tip": "Tijd ook als 'over 20 minuten' noemen." },
-        "nt2": { "past": "goed", "tip": "Vaste formulering, elke keer hetzelfde." },
-        "faalangst": { "past": "goed", "tip": "Duidelijkheid geeft rust." },
-        "structuur": { "past": "goed", "tip": "Juist voor deze leerlingen: vaste volgorde." },
-        "hoogbegaafd": { "past": "goed", "tip": "Geen aanpassing nodig." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Mondeling plus schema met kleuren."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Tijd ook als 'over 20 minuten' noemen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaste formulering, elke keer hetzelfde."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Duidelijkheid geeft rust."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Juist voor deze leerlingen: vaste volgorde."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["structuur", "houvast"],
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": true },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": true
+      },
       "beweegmoment": true,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Wissels kosten 5 minuten onrust.", "oplossing": "Oefen de wissel in de eerste weken; complimenteer een snelle, rustige wissel." }
+        {
+          "valkuil": "Wissels kosten 5 minuten onrust.",
+          "oplossing": "Oefen de wissel in de eerste weken; complimenteer een snelle, rustige wissel."
+        }
       ],
       "varianten": {
         "vmbo": "Groep met een kleur en een vaste tafel op het plein.",
@@ -238,19 +522,36 @@
         "verdieping": "Vertrekt vaak als eerste."
       },
       "vakvoorbeelden": [
-        { "vak": "Economie", "voorbeeld": "Groep C vertrekt na de startcheck naar het plein met de casuskaart." },
-        { "vak": "Biologie", "voorbeeld": "Na de instructie wisselen groep A en B." },
-        { "vak": "Duits", "voorbeeld": "Groep B gaat met de luisteropdracht en koptelefoons naar het plein." }
+        {
+          "vak": "Economie",
+          "voorbeeld": "Groep C vertrekt na de startcheck naar het plein met de casuskaart."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Na de instructie wisselen groep A en B."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Groep B gaat met de luisteropdracht en koptelefoons naar het plein."
+        }
       ],
       "waarom": "Duidelijke routines bij overgangen beperken verloren leertijd en onrust; dat is een bekend inzicht uit onderzoek naar klassenmanagement. Het script zelf is een praktijkhulpmiddel voor de situatie met deelpleinen.",
       "bewijs": "praktijk",
-      "bronnen": ["lemov-2015"],
-      "materiaal": ["overgangsscript", "routeschema"]
+      "bronnen": [
+        "lemov-2015"
+      ],
+      "materiaal": [
+        "overgangsscript",
+        "routeschema"
+      ]
     },
     {
       "id": "pleinafspraken",
       "naam": "Afsprakenkaart voor het plein",
-      "alias": ["pleinregels", "pleincontract"],
+      "alias": [
+        "pleinregels",
+        "pleincontract"
+      ],
       "categorie": "routine",
       "kort": "Een vaste kaart met de afspraken voor werken op het deelplein, die leerlingen kennen en die bij elke pleinopdracht hoort.",
       "startzin": "Voordat je naar het plein gaat: we lezen de vier afspraken nog een keer. Laptop alleen voor deze opdracht, fluisteren, op je plek blijven, om … uur terug.",
@@ -261,33 +562,89 @@
         "Benoem wat goed gaat bij terugkomst.",
         "Bij herhaald overtreden: die leerling werkt de volgende keer in het lokaal."
       ],
-      "duur": { "min": 1, "max": 2 },
-      "groepsvorm": ["klas", "groepje"],
-      "ruimte": { "M": true, "L": false, "plein": true, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["pleinafsprakenkaart"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 1,
+        "max": 2
+      },
+      "groepsvorm": [
+        "klas",
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": false,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "pleinafsprakenkaart"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["verwerken"],
-      "denkniveau": ["onthouden"],
-      "differentiatie": ["leeromgeving"],
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [
+        "leeromgeving"
+      ],
       "richting": "nvt",
-      "doeldomein": ["persoonsvorming", "socialisatie"],
-      "burgerschap": ["gemeenschappelijkheid"],
+      "doeldomein": [
+        "persoonsvorming",
+        "socialisatie"
+      ],
+      "burgerschap": [
+        "gemeenschappelijkheid"
+      ],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Pictogrammen bij de afspraken." },
-        "dyscalculie": { "past": "goed", "tip": "Geen aanpassing nodig." },
-        "nt2": { "past": "goed", "tip": "Pictogrammen en korte zinnen." },
-        "faalangst": { "past": "goed", "tip": "Duidelijke afspraken geven rust." },
-        "structuur": { "past": "goed", "tip": "Vast en zichtbaar." },
-        "hoogbegaafd": { "past": "goed", "tip": "Geen aanpassing nodig." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Pictogrammen bij de afspraken."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Pictogrammen en korte zinnen."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Duidelijke afspraken geven rust."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vast en zichtbaar."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "houvast"],
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": true },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": true
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Afspraken worden na een paar weken vergeten.", "oplossing": "Kaart gaat altijd mee; kort herhalen bij elke wissel." }
+        {
+          "valkuil": "Afspraken worden na een paar weken vergeten.",
+          "oplossing": "Kaart gaat altijd mee; kort herhalen bij elke wissel."
+        }
       ],
       "varianten": {
         "vmbo": "Vier afspraken met pictogrammen.",
@@ -298,19 +655,34 @@
         "verdieping": "Standaard."
       },
       "vakvoorbeelden": [
-        { "vak": "Alle vakken", "voorbeeld": "Dezelfde kaart bij elke pleinopdracht, in elke klas." },
-        { "vak": "Nederlands", "voorbeeld": "Afspraak extra: tijdens het schrijven geen overleg." },
-        { "vak": "O&O", "voorbeeld": "Afspraak extra: materiaal opruimen voordat je terugkomt." }
+        {
+          "vak": "Alle vakken",
+          "voorbeeld": "Dezelfde kaart bij elke pleinopdracht, in elke klas."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Afspraak extra: tijdens het schrijven geen overleg."
+        },
+        {
+          "vak": "O&O",
+          "voorbeeld": "Afspraak extra: materiaal opruimen voordat je terugkomt."
+        }
       ],
       "waarom": "Heldere, vooraf afgesproken regels zijn een basis van goed klassenmanagement. De kaart maakt de schoolregel voor het plein (alleen laptop, voor lesdoelen, onder toezicht) concreet voor leerlingen. Het is een praktijkhulpmiddel.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["pleinafsprakenkaart"]
+      "materiaal": [
+        "pleinafsprakenkaart"
+      ]
     },
     {
       "id": "timer-geluidsniveau",
       "naam": "Timer en geluidsniveau zichtbaar",
-      "alias": ["geluidsmeter", "stemvolume", "zichtbare tijd"],
+      "alias": [
+        "geluidsmeter",
+        "stemvolume",
+        "zichtbare tijd"
+      ],
       "categorie": "routine",
       "kort": "Op het digibord staan altijd de tijd voor de huidige fase en het afgesproken geluidsniveau (stil, fluisteren, overleggen).",
       "startzin": "Kijk naar het bord: we zitten nu op 'fluisteren' en je hebt nog 12 minuten.",
@@ -320,33 +692,86 @@
         "Wijs ernaar in plaats van te roepen.",
         "Waardeer als de klas zich eraan houdt."
       ],
-      "duur": { "min": 1, "max": 100 },
-      "groepsvorm": ["klas"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["digibord met timer en geluidsniveau"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 1,
+        "max": 100
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord met timer en geluidsniveau"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["verwerken", "inoefenen", "instructie"],
-      "denkniveau": ["onthouden"],
+      "lesfase": [
+        "verwerken",
+        "inoefenen",
+        "instructie"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
       "differentiatie": [],
       "richting": "nvt",
-      "doeldomein": ["persoonsvorming"],
+      "doeldomein": [
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Visueel, weinig tekst nodig." },
-        "dyscalculie": { "past": "goed", "tip": "Gebruik een timer met balk, niet alleen cijfers." },
-        "nt2": { "past": "goed", "tip": "Pictogrammen." },
-        "faalangst": { "past": "goed", "tip": "Weten hoe lang iets duurt geeft rust." },
-        "structuur": { "past": "goed", "tip": "Voorspelbaar." },
-        "hoogbegaafd": { "past": "goed", "tip": "Geen aanpassing nodig." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Visueel, weinig tekst nodig."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Gebruik een timer met balk, niet alleen cijfers."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Pictogrammen."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Weten hoe lang iets duurt geeft rust."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Voorspelbaar."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "digitaal", "houvast"],
+      "docentstijl": [
+        "structuur",
+        "digitaal",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "De timer loopt af en niemand doet iets.", "oplossing": "Koppel aan het einde altijd een vast signaal en een actie." }
+        {
+          "valkuil": "De timer loopt af en niemand doet iets.",
+          "oplossing": "Koppel aan het einde altijd een vast signaal en een actie."
+        }
       ],
       "varianten": {
         "vmbo": "Pictogrammen en kleur.",
@@ -357,19 +782,34 @@
         "verdieping": "Standaard."
       },
       "vakvoorbeelden": [
-        { "vak": "Alle vakken", "voorbeeld": "Timer en niveau bij elke fase op het digibord." },
-        { "vak": "Wiskunde", "voorbeeld": "'Stil, 10 minuten' tijdens zelfstandig oefenen." },
-        { "vak": "Engels", "voorbeeld": "'Overleggen, 5 minuten' tijdens de spreekopdracht." }
+        {
+          "vak": "Alle vakken",
+          "voorbeeld": "Timer en niveau bij elke fase op het digibord."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "'Stil, 10 minuten' tijdens zelfstandig oefenen."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "'Overleggen, 5 minuten' tijdens de spreekopdracht."
+        }
       ],
       "waarom": "Zichtbare tijd en verwachtingen maken het verloop van de les voorspelbaar en verminderen het aantal correcties. Dit is een praktijkroutine; het helpt vooral bij lessen met meerdere routes tegelijk.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["digibord-timer"]
+      "materiaal": [
+        "digibord-timer"
+      ]
     },
     {
       "id": "rolkaarten",
       "naam": "Rolkaarten voor samenwerking",
-      "alias": ["groepsrollen", "taakrollen", "rollen in het groepje"],
+      "alias": [
+        "groepsrollen",
+        "taakrollen",
+        "rollen in het groepje"
+      ],
       "categorie": "routine",
       "kort": "Elk groepslid krijgt een rol met een duidelijke taak: voorzitter, tijdbewaker, schrijver, controleur.",
       "startzin": "Iedereen in je groepje krijgt een rolkaart. Lees je kaart: daar staat wat jij doet en wat je zegt. Wissel volgende keer van rol.",
@@ -380,33 +820,90 @@
         "Wissel rollen per les of per opdracht.",
         "Vraag aan het eind elke rol om één zin: hoe ging het?"
       ],
-      "duur": { "min": 1, "max": 100 },
-      "groepsvorm": ["groepje"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["rolkaarten (voorzitter, tijdbewaker, schrijver, controleur)"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 1,
+        "max": 100
+      },
+      "groepsvorm": [
+        "groepje"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "rolkaarten (voorzitter, tijdbewaker, schrijver, controleur)"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["verwerken"],
-      "denkniveau": ["toepassen", "evalueren"],
-      "differentiatie": ["groepering"],
+      "lesfase": [
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "evalueren"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
       "richting": "nvt",
-      "doeldomein": ["socialisatie", "persoonsvorming"],
-      "burgerschap": ["gemeenschappelijkheid"],
+      "doeldomein": [
+        "socialisatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [
+        "gemeenschappelijkheid"
+      ],
       "ondersteuning": {
-        "dyslexie": { "past": "aanpassen", "tip": "Geef niet automatisch de schrijversrol; of laat typen op de laptop." },
-        "dyscalculie": { "past": "goed", "tip": "Tijdbewaker met een timer in plaats van klok." },
-        "nt2": { "past": "goed", "tip": "De zinnen op de kaart helpen met taal." },
-        "faalangst": { "past": "goed", "tip": "Een duidelijke taak maakt meedoen veiliger; begin met controleur of tijdbewaker." },
-        "structuur": { "past": "goed", "tip": "Duidelijke taak." },
-        "hoogbegaafd": { "past": "aanpassen", "tip": "Geef ook eens de rol van tijdbewaker in plaats van voorzitter." }
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Geef niet automatisch de schrijversrol; of laat typen op de laptop."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Tijdbewaker met een timer in plaats van klok."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "De zinnen op de kaart helpen met taal."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Een duidelijke taak maakt meedoen veiliger; begin met controleur of tijdbewaker."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Duidelijke taak."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Geef ook eens de rol van tijdbewaker in plaats van voorzitter."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["samenwerken", "structuur", "houvast"],
+      "docentstijl": [
+        "samenwerken",
+        "structuur",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Rollen worden genegeerd.", "oplossing": "Vraag halverwege: 'Tijdbewakers, hoeveel tijd hebben jullie nog?'" }
+        {
+          "valkuil": "Rollen worden genegeerd.",
+          "oplossing": "Vraag halverwege: 'Tijdbewakers, hoeveel tijd hebben jullie nog?'"
+        }
       ],
       "varianten": {
         "vmbo": "Rolkaarten met pictogram en twee zinnen.",
@@ -417,19 +914,37 @@
         "verdieping": "Voorzitter met extra verantwoordelijkheid."
       },
       "vakvoorbeelden": [
-        { "vak": "O&O", "voorbeeld": "Rollen tijdens een ontwerpopdracht in groepjes." },
-        { "vak": "Aardrijkskunde", "voorbeeld": "Rollen tijdens een kaartopdracht." },
-        { "vak": "Maatschappijleer", "voorbeeld": "Rollen tijdens het voorbereiden van een debat." }
+        {
+          "vak": "O&O",
+          "voorbeeld": "Rollen tijdens een ontwerpopdracht in groepjes."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Rollen tijdens een kaartopdracht."
+        },
+        {
+          "vak": "Maatschappijleer",
+          "voorbeeld": "Rollen tijdens het voorbereiden van een debat."
+        }
       ],
       "waarom": "Rollen zorgen voor individuele verantwoordelijkheid en wederzijdse afhankelijkheid binnen een groep, twee voorwaarden voor effectief samenwerkend leren volgens Johnson en Johnson. Het EEF benadrukt dat samenwerken gestructureerd moet zijn om te werken.",
       "bewijs": "redelijk",
-      "bronnen": ["johnson-2009", "eef-toolkit"],
-      "materiaal": ["rolkaarten"]
+      "bronnen": [
+        "johnson-2009",
+        "eef-toolkit"
+      ],
+      "materiaal": [
+        "rolkaarten"
+      ]
     },
     {
       "id": "vaste-duopartner",
       "naam": "Vaste duopartner",
-      "alias": ["maatje", "schoudermaatje", "vaste buur"],
+      "alias": [
+        "maatje",
+        "schoudermaatje",
+        "vaste buur"
+      ],
       "categorie": "routine",
       "kort": "Elke leerling heeft voor een periode een vaste partner met wie hij overlegt, controleert en oefent; dat geeft veiligheid en snelheid.",
       "startzin": "Voor de komende weken heb je een vaste duopartner. Als ik zeg 'overleg met je duo', weet je meteen met wie.",
@@ -440,33 +955,92 @@
         "Wissel duo's na 4-6 weken.",
         "Houd er rekening mee: namen worden nergens in Uniekind opgeslagen."
       ],
-      "duur": { "min": 1, "max": 100 },
-      "groepsvorm": ["tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["plattegrond of duolijst (alleen voor jezelf)"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 1,
+        "max": 100
+      },
+      "groepsvorm": [
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "plattegrond of duolijst (alleen voor jezelf)"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["inoefenen", "verwerken"],
-      "denkniveau": ["begrijpen", "toepassen"],
-      "differentiatie": ["groepering"],
+      "lesfase": [
+        "inoefenen",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "groepering"
+      ],
       "richting": "nvt",
-      "doeldomein": ["socialisatie", "persoonsvorming"],
-      "burgerschap": ["inclusie"],
+      "doeldomein": [
+        "socialisatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [
+        "inclusie"
+      ],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Duo kan voorlezen." },
-        "dyscalculie": { "past": "goed", "tip": "Duo controleert rekenstappen." },
-        "nt2": { "past": "goed", "tip": "Koppel aan een geduldige, taalsterke partner." },
-        "faalangst": { "past": "goed", "tip": "Een vertrouwde partner is de belangrijkste veiligheid." },
-        "structuur": { "past": "goed", "tip": "Voorspelbaar." },
-        "hoogbegaafd": { "past": "aanpassen", "tip": "Af en toe koppelen aan een gelijkgestemde." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Duo kan voorlezen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Duo controleert rekenstappen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Koppel aan een geduldige, taalsterke partner."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Een vertrouwde partner is de belangrijkste veiligheid."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Voorspelbaar."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Af en toe koppelen aan een gelijkgestemde."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["relatie", "structuur", "houvast", "samenwerken"],
+      "docentstijl": [
+        "relatie",
+        "structuur",
+        "houvast",
+        "samenwerken"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Een duo werkt niet samen.", "oplossing": "Kort gesprek met het duo; wissel als het echt niet werkt." }
+        {
+          "valkuil": "Een duo werkt niet samen.",
+          "oplossing": "Kort gesprek met het duo; wissel als het echt niet werkt."
+        }
       ],
       "varianten": {
         "vmbo": "Vaste plek naast elkaar.",
@@ -477,11 +1051,644 @@
         "verdieping": "Gelijkgestemde partner."
       },
       "vakvoorbeelden": [
-        { "vak": "Alle vakken", "voorbeeld": "'Overleg met je duo' bij elke denk-deelvraag." },
-        { "vak": "Engels", "voorbeeld": "Spreekoefeningen met het vaste duo." },
-        { "vak": "Wiskunde", "voorbeeld": "Nakijken en uitleggen met het vaste duo." }
+        {
+          "vak": "Alle vakken",
+          "voorbeeld": "'Overleg met je duo' bij elke denk-deelvraag."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Spreekoefeningen met het vaste duo."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Nakijken en uitleggen met het vaste duo."
+        }
       ],
       "waarom": "Een vaste partner verlaagt de drempel om samen te werken en geeft vooral leerlingen met faalangst of een andere taalachtergrond houvast. Dit is een praktijkkeuze die samenwerkingsvormen sneller en veiliger maakt.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "aandachtssignaal",
+      "naam": "Vast aandachtssignaal",
+      "alias": [
+        "stiltesignaal",
+        "hand omhoog"
+      ],
+      "categorie": "routine",
+      "kort": "Een vast signaal, zoals een opgestoken hand of een aftelling, waarop iedereen stopt, kijkt en luistert.",
+      "startzin": "Als ik mijn hand opsteek, stop je met praten, steek je ook je hand op en kijk je naar mij.",
+      "stappen": [
+        "Kies één signaal en houd het vast (hand omhoog, 3-2-1, belletje).",
+        "Oefen het in de eerste les een paar keer.",
+        "Wacht tot het echt stil is voordat je begint te praten.",
+        "Bedank de klas kort.",
+        "Gebruik het elke les op dezelfde manier."
+      ],
+      "duur": {
+        "min": 1,
+        "max": 1
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "geen"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "instructie",
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Pictogrammen naast de tekst."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaste routines zijn taalarm en voorspelbaar."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Duidelijke afspraken geven rust."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Juist voor deze leerlingen: elke les hetzelfde."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Je begint te praten voordat het stil is.",
+          "oplossing": "Wacht. Ook als het tien seconden duurt."
+        },
+        {
+          "valkuil": "Je gebruikt telkens een ander signaal.",
+          "oplossing": "Kies er één en houd het vast."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Hand omhoog.",
+        "havo": "Aftellen 3-2-1.",
+        "vwo": "Een geluid van de digibordmodus.",
+        "steun": "Standaard.",
+        "basis": "Standaard.",
+        "verdieping": "Standaard."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Techniek",
+          "voorbeeld": "In het praktijklokaal met machines."
+        },
+        {
+          "vak": "Lichamelijke opvoeding",
+          "voorbeeld": "In de gymzaal."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Tijdens zelfstandig werken."
+        }
+      ],
+      "waarom": "Een vast signaal bespaart tijd en stemkracht. Lemov beschrijft het als basis van klassenmanagement.",
+      "bewijs": "praktijk",
+      "bronnen": [
+        "lemov-2015"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "laptopafspraken",
+      "naam": "Laptopafspraken",
+      "alias": [
+        "klep dicht",
+        "schermen omlaag"
+      ],
+      "categorie": "routine",
+      "kort": "Vaste afspraken voor de schoollaptop: wanneer open, wanneer half dicht, en wat er op het scherm mag staan.",
+      "startzin": "Klep op 45 graden: we gaan luisteren. Klep open: je werkt aan de opdracht. Alleen het tabblad van de opdracht staat open.",
+      "stappen": [
+        "Spreek drie standen af: dicht, half (luisteren), open (werken).",
+        "Zet de afspraken op een kaart bij het bord.",
+        "Gebruik steeds dezelfde woorden.",
+        "Loop rond en kijk naar schermen, niet alleen naar gezichten.",
+        "Sluit af met: laptops dicht en opruimen."
+      ],
+      "duur": {
+        "min": 1,
+        "max": 2
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "afsprakenkaart"
+        ],
+        "laptop": "vereist",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Pictogrammen naast de tekst."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaste routines zijn taalarm en voorspelbaar."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Duidelijke afspraken geven rust."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Juist voor deze leerlingen: elke les hetzelfde."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "houvast",
+        "digitaal"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen hebben andere tabbladen open.",
+          "oplossing": "Laat bij twijfel het scherm zien; spreek af wat de gevolgen zijn."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Strakke afspraken met pictogrammen.",
+        "havo": "Afspraken met korte herhaling.",
+        "vwo": "Afspraken die leerlingen zelf bewaken.",
+        "steun": "Standaard.",
+        "basis": "Standaard.",
+        "verdieping": "Standaard."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Een schrijfopdracht in een document."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Een kaartopdracht met een atlas online."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Een opdracht in een spreadsheet."
+        }
+      ],
+      "waarom": "Duidelijke afspraken voorkomen dat de laptop afleidt. Praktijkervaring; past bij de schoolregel dat telefoons in de kluis blijven en alleen de schoollaptop wordt gebruikt.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "begroeten-bij-de-deur",
+      "naam": "Begroeten bij de deur",
+      "alias": [
+        "ontvangst bij de deur",
+        "welkom heten"
+      ],
+      "categorie": "routine",
+      "kort": "Je staat bij binnenkomst bij de deur, begroet elke leerling kort en wijst op de startopdracht.",
+      "startzin": "Goedemorgen, fijn dat je er bent. De startopdracht staat op het bord.",
+      "stappen": [
+        "Sta bij de deur als de leerlingen binnenkomen.",
+        "Begroet iedereen kort, bij naam als het kan.",
+        "Wijs op de startopdracht op het bord.",
+        "Merk op wie er anders binnenkomt dan normaal.",
+        "Sluit de deur en begin."
+      ],
+      "duur": {
+        "min": 1,
+        "max": 3
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "startopdracht op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "persoonsvorming",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Pictogrammen naast de tekst."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaste routines zijn taalarm en voorspelbaar."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Duidelijke afspraken geven rust."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Juist voor deze leerlingen: elke les hetzelfde."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "relatie",
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Je staat er wel, maar de klas begint niet.",
+          "oplossing": "Zorg dat de startopdracht altijd klaarstaat."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een groet en een vraag.",
+        "havo": "Een groet.",
+        "vwo": "Een groet en een persoonlijke vraag.",
+        "steun": "Standaard.",
+        "basis": "Standaard.",
+        "verdieping": "Standaard."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Alle vakken",
+          "voorbeeld": "Aan het begin van elke les."
+        },
+        {
+          "vak": "Mentoruur",
+          "voorbeeld": "Om te zien hoe het met iedereen gaat."
+        },
+        {
+          "vak": "Lichamelijke opvoeding",
+          "voorbeeld": "Bij de kleedkamer."
+        }
+      ],
+      "waarom": "Een persoonlijke begroeting geeft een rustige start en laat leerlingen merken dat ze gezien worden. Er is beperkt onderzoek dat wijst op meer betrokkenheid; het is vooral praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "lesprogramma-op-het-bord",
+      "naam": "Lesprogramma op het bord",
+      "alias": [
+        "agenda van de les",
+        "dagplanning"
+      ],
+      "categorie": "routine",
+      "kort": "Het programma van de les staat zichtbaar op het bord, met tijden, en je vinkt af wat klaar is.",
+      "startzin": "Dit is ons programma vandaag. We zijn nu hier.",
+      "stappen": [
+        "Zet de onderdelen van de les met tijden op het bord.",
+        "Noem bij de start kort het programma.",
+        "Vink af wat klaar is.",
+        "Zeg bij een wijziging hardop wat er verandert.",
+        "Gebruik in de digibordmodus het routeschema als het kan."
+      ],
+      "duur": {
+        "min": 1,
+        "max": 1
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "programma op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "instructie",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Pictogrammen naast de tekst."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaste routines zijn taalarm en voorspelbaar."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Duidelijke afspraken geven rust."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Precies weten wat er komt geeft rust."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het programma staat er wel maar je volgt het niet.",
+          "oplossing": "Pas het aan en zeg het hardop."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Met pictogrammen.",
+        "havo": "Met tijden.",
+        "vwo": "Met lesdoel en succescriteria erbij.",
+        "steun": "Standaard.",
+        "basis": "Standaard.",
+        "verdieping": "Standaard."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Alle vakken",
+          "voorbeeld": "Aan het begin van elk blokuur."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Bij een les met instructie en zelfstandig werken."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Bij een les met vier vaardigheden."
+        }
+      ],
+      "waarom": "Voorspelbaarheid helpt vooral leerlingen die structuur nodig hebben, en geeft de hele klas overzicht. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "einde-les-routine",
+      "naam": "Einde-lesroutine",
+      "alias": [
+        "opruimen",
+        "afsluiten en vertrekken"
+      ],
+      "categorie": "routine",
+      "kort": "De laatste twee minuten verlopen elke les hetzelfde: opruimen, laptop dicht, huiswerk noteren en pas bij jouw signaal vertrekken.",
+      "startzin": "Twee minuten. Laptop dicht, spullen op, huiswerk in je planner. Je gaat pas als ik het zeg.",
+      "stappen": [
+        "Zet twee minuten voor het einde een timer.",
+        "Leerlingen ruimen op en noteren het huiswerk.",
+        "Check of het lokaal netjes is.",
+        "Laat de klas pas gaan na jouw signaal.",
+        "Sta bij de deur bij het vertrek."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 3
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "timer"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "afsluiting"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Pictogrammen naast de tekst."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaste routines zijn taalarm en voorspelbaar."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Duidelijke afspraken geven rust."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Juist voor deze leerlingen: elke les hetzelfde."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De bel gaat en iedereen rent weg.",
+          "oplossing": "Begin op tijd met de routine."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Met een afvinklijstje.",
+        "havo": "Standaard.",
+        "vwo": "Een leerling leidt de routine.",
+        "steun": "Standaard.",
+        "basis": "Standaard.",
+        "verdieping": "Standaard."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Techniek",
+          "voorbeeld": "Gereedschap terug op de plek."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Na een practicum."
+        },
+        {
+          "vak": "Alle vakken",
+          "voorbeeld": "Na werken met laptops."
+        }
+      ],
+      "waarom": "Een vaste afsluiting voorkomt chaos bij het vertrek en laat het lokaal netjes achter. Praktijkervaring.",
       "bewijs": "praktijk",
       "bronnen": [],
       "materiaal": []

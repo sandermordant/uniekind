@@ -2,6 +2,7 @@
 // Alles in de browser; nooit leerlingnamen.
 import * as opslag from '../opslag/opslag.js';
 import { standaardInvoer } from '../engine/context.js';
+import { recentGebruikt } from '../opslag/logboek.js';
 
 const KLOON = (x) => JSON.parse(JSON.stringify(x));
 
@@ -50,4 +51,17 @@ export function pasAanpassingenToe(les, aanp = {}) {
   }
   if (aanp.duur) for (const f of les.fases) if (aanp.duur[f.id] != null) f.duur = Math.max(1, Number(aanp.duur[f.id]) || 1);
   return les;
+}
+
+/**
+ * De invoer voor de generator: het concept plus wat de docent eerder ervoer.
+ * Ervaring (duimen uit reflecties) en afwisseling (werkvormen uit de vorige lessen van dit vak) wegen licht mee.
+ * Lesmaker en digibord gebruiken allebei deze functie, zodat ze precies dezelfde les tonen.
+ */
+export function generatorInvoer(concept) {
+  const inv = concept.invoer;
+  return {
+    ...inv,
+    opties: { ...inv.opties, duimen: opslag.lees('duimen', {}), vorigeLes: [...new Set([...(inv.opties?.vorigeLes ?? []), ...recentGebruikt({ vak: inv.context?.vak, behalve: concept.logId })])] }
+  };
 }

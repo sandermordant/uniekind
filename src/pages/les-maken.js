@@ -5,7 +5,8 @@ import { leesAntwoord } from '../ai/import.js';
 import { genereerLes, genereerVarianten, herbereken } from '../engine/opbouw.js';
 import { vindLesdoelen, vindKernbegrippen } from '../engine/tekst.js';
 import * as opslag from '../opslag/opslag.js';
-import { laadDocent, bewaarDocent, laadConcept, bewaarConcept, nieuwConcept, lees, zet, pasAanpassingenToe } from '../wizard/staat.js';
+import { legVast, nieuwId } from '../opslag/logboek.js';
+import { laadDocent, bewaarDocent, laadConcept, bewaarConcept, nieuwConcept, lees, zet, pasAanpassingenToe, generatorInvoer } from '../wizard/staat.js';
 import { stapProfiel, stapContext, stapInhoud, stapKlas, stapSnel, standKiezer, doelCheck, capaciteitMelding } from '../wizard/stappen.js';
 import { varianten, lesplan } from '../wizard/lesplan.js';
 import { materiaalStap, exporteer, printAlles } from '../wizard/materiaalstap.js';
@@ -34,7 +35,7 @@ export default {
     let concept = laadConcept(profiel, docent);
 
     const inv = () => concept.invoer;
-    const invoerVoorGenerator = () => ({ ...inv(), opties: { ...inv().opties, duimen: opslag.lees('duimen', {}) } });
+    const invoerVoorGenerator = () => generatorInvoer(concept);
     const stappen = () => STAPPEN[concept.modus] ?? STAPPEN.snel;
     const matStaat = () => (concept.materiaal ??= { doc: 'lesplan', dyslexie: false, rustig: false });
     const huidigeLes = () => {
@@ -52,7 +53,13 @@ export default {
       if (s === 'snel') return html`${stapSnel(ctx)}${standKiezer('stand', inv().stand, 'Hoe ver wil je gaan?')}`;
       if (s === 'varianten') return varianten(genereerVarianten(invoerVoorGenerator(), data));
       if (s === 'aanpassen') return lesplan(huidigeLes(), itemMap, { profiel });
-      if (s === 'materiaal') return materiaalStap(huidigeLes(), { ...data, itemMap }, matStaat(), concept, bronnenPerVak);
+      if (s === 'materiaal') {
+        const les = huidigeLes();
+        if (!concept.logId) { concept.logId = nieuwId(); bewaarConcept(concept); }
+        legVast(concept.logId, les, { vak: inv().context.vak, afdeling: inv().context.afdeling });
+        return html`<p class="melding zacht niet-printen">Deze les staat nu in <a href="#mijn-profiel">Mijn lessen</a>, alleen op deze computer. Kijk na de les even terug: welke werkvormen werkten? Dan houdt Uniekind daar rekening mee.</p>
+          ${materiaalStap(les, { ...data, itemMap }, matStaat(), concept, bronnenPerVak)}`;
+      }
       return '';
     }
 
@@ -185,7 +192,7 @@ export default {
             if (!vakken.includes(inv().context.vak)) inv().context.vak = vakken[0];
           }
           if (pad.startsWith('docent.') || pad === 'docent.stand') bewaarDocent(docent);
-          if (pad.startsWith('context.') || pad.startsWith('klas.') || pad.startsWith('inhoud.')) concept.aanpassingen = {};
+          if (pad.startsWith('context.') || pad.startsWith('klas.') || pad.startsWith('inhoud.')) { concept.aanpassingen = {}; delete inv().opties.gekozen; }
           bewaar();
           if (el.dataset.doel) koppelDoelchecks();
           const cap = $('#capaciteit', root);

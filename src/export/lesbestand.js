@@ -1,6 +1,6 @@
 // Lesbestand (.uniekind): een les bewaren als bestand en later weer openen.
 // Intern JSON met een versienummer. Bevat alleen de invoer (aantallen, geen namen) en je aanpassingen;
-// de les zelf wordt bij openen opnieuw opgebouwd, dus ook met een nieuwere kennisbank werkt het.
+// de les zelf wordt bij openen opnieuw opgebouwd (met de gekozen werkvormen als voorkeur), dus ook met een nieuwere kennisbank werkt het.
 
 import { IDS } from '../ai/formaat.js';
 
@@ -25,18 +25,26 @@ function schoon(invoer) {
       dyslexie: getal(k.dyslexie), dyscalculie: getal(k.dyscalculie), nt2: getal(k.nt2), faalangst: getal(k.faalangst), structuur: getal(k.structuur), hoogbegaafd: getal(k.hoogbegaafd),
       dynamiek: k.dynamiek, samenwerken: k.samenwerken
     },
-    opties: { vastgezet: invoer.opties?.vastgezet ?? {}, overslaan: invoer.opties?.overslaan ?? {}, splitsing: invoer.opties?.splitsing ?? null }
+    opties: {
+      vastgezet: invoer.opties?.vastgezet ?? {}, overslaan: invoer.opties?.overslaan ?? {}, splitsing: invoer.opties?.splitsing ?? null,
+      gekozen: Object.fromEntries(Object.entries(invoer.opties?.gekozen ?? {}).filter(([k, v]) => typeof v === 'string' && k.length < 80).map(([k, v]) => [k, v.slice(0, 80)]))
+    }
   };
 }
 
 export function maakLesbestand(concept, les, profielId) {
+  // De gekozen werkvorm per blok gaat mee, zodat de les op een andere computer hetzelfde opent
+  // (daar kunnen andere reflecties en eerdere lessen staan). Bestaat een werkvorm niet meer, dan kiest Uniekind opnieuw.
+  const gekozen = {};
+  if (les) for (const f of les.fases) for (const b of f.blokken) if (b.sleutel && b.werkvorm && !gekozen[b.sleutel]) gekozen[b.sleutel] = b.werkvorm.id;
+  const invoer = { ...concept.invoer, opties: { ...concept.invoer?.opties, gekozen } };
   return JSON.stringify({
     formaat: FORMAAT,
     versie: VERSIE,
     gemaakt: new Date().toISOString(),
     profiel: profielId,
     titel: les?.doel?.onderwerp || concept.invoer?.inhoud?.onderwerp || 'Les',
-    concept: { modus: concept.modus, invoer: schoon(concept.invoer), aanpassingen: concept.aanpassingen ?? {}, gekozenStand: concept.gekozenStand ?? null, ai: schoonAi(concept.ai), links: schoonLinks(concept.links) },
+    concept: { modus: concept.modus, invoer: schoon(invoer), aanpassingen: concept.aanpassingen ?? {}, gekozenStand: concept.gekozenStand ?? null, ai: schoonAi(concept.ai), links: schoonLinks(concept.links) },
     samenvatting: les ? {
       lesduur: les.lesduur, stand: les.standNaam, opzet: les.opzetNaam,
       werkvormen: [...new Set(les.fases.flatMap((f) => f.blokken.map((b) => b.werkvorm?.id).filter(Boolean)))]

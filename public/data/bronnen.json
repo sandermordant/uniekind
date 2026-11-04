@@ -226,6 +226,42 @@
       "jaar": null,
       "url": "https://www.nro.nl",
       "status": "gecontroleerd"
+    },
+    "mazur-1997": {
+      "titel": "Peer Instruction: A User’s Manual",
+      "auteur": "Mazur, E.",
+      "jaar": 1997,
+      "waar": "Prentice Hall",
+      "status": "gecontroleerd"
+    },
+    "weinstein-2018": {
+      "titel": "Teaching the science of learning",
+      "auteur": "Weinstein, Y., Madan, C. R. & Sumeracki, M. A.",
+      "jaar": 2018,
+      "waar": "Cognitive Research: Principles and Implications, 3(2)",
+      "url": "https://doi.org/10.1186/s41235-017-0087-y",
+      "status": "gecontroleerd"
+    },
+    "hattie-timperley-2007": {
+      "titel": "The Power of Feedback",
+      "auteur": "Hattie, J. & Timperley, H.",
+      "jaar": 2007,
+      "waar": "Review of Educational Research, 77(1), 81-112",
+      "status": "gecontroleerd"
+    },
+    "zimmerman-2002": {
+      "titel": "Becoming a Self-Regulated Learner: An Overview",
+      "auteur": "Zimmerman, B. J.",
+      "jaar": 2002,
+      "waar": "Theory Into Practice, 41(2), 64-70",
+      "status": "gecontroleerd"
+    },
+    "tomlinson-2014": {
+      "titel": "The Differentiated Classroom: Responding to the Needs of All Learners (2e druk)",
+      "auteur": "Tomlinson, C. A.",
+      "jaar": 2014,
+      "waar": "ASCD",
+      "status": "gecontroleerd"
     }
   }
 }

@@ -48,7 +48,7 @@ export default {
             $('#vorige', root)?.addEventListener('click', () => {
               const huidig = opslag.lees('concept');
               const c = huidig ?? geladen.concept;
-              c.invoer.opties = { ...c.invoer.opties, vorigeLes: s.werkvormen, vastgezet: {}, overslaan: {} };
+              c.invoer.opties = { ...c.invoer.opties, vorigeLes: s.werkvormen, vastgezet: {}, overslaan: {}, gekozen: {} };
               c.stap = c.modus === 'uitgebreid' ? 'context' : 'snel';
               c.gekozenStand = null;
               opslag.schrijf('concept', c);

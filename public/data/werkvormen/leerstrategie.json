@@ -5,7 +5,12 @@
     {
       "id": "ophaaloefening",
       "naam": "Ophaaloefening (brain dump)",
-      "alias": ["retrieval practice", "brain dump", "uit je hoofd opschrijven", "quizzen zonder cijfer"],
+      "alias": [
+        "retrieval practice",
+        "brain dump",
+        "uit je hoofd opschrijven",
+        "quizzen zonder cijfer"
+      ],
       "categorie": "leerstrategie",
       "kort": "Leerlingen schrijven zonder boek of schrift alles op wat ze nog weten over een onderwerp, of maken een korte quiz zonder cijfer.",
       "startzin": "Boek dicht, schrift dicht. Je hebt drie minuten. Schrijf alles op wat je nog weet over … Alles telt: woorden, voorbeelden, tekeningetjes.",
@@ -16,34 +21,96 @@
         "Tot slot kijken ze in boek of schrift wat ze vergeten zijn en vullen dat in een derde kleur aan.",
         "Vraag: wat was je vergeten? Dat is precies wat je nog moet herhalen."
       ],
-      "duur": { "min": 3, "max": 8 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["papier of schrift", "pennen in drie kleuren"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 3,
+        "max": 8
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "papier of schrift",
+          "pennen in drie kleuren"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["opening", "voorkennis", "afsluiting"],
-      "denkniveau": ["onthouden", "begrijpen"],
-      "differentiatie": ["ondersteuning"],
+      "lesfase": [
+        "opening",
+        "voorkennis",
+        "afsluiting"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Steekwoorden en tekeningen tellen ook." },
-        "dyscalculie": { "past": "goed", "tip": "Bij wiskunde: formules en voorbeelden opschrijven mag." },
-        "nt2": { "past": "aanpassen", "tip": "Geef 3-4 kernwoorden als startpunt." },
-        "faalangst": { "past": "goed", "tip": "Geen cijfer, niemand kijkt mee; vergeten is normaal en nuttig." },
-        "structuur": { "past": "goed", "tip": "Vaste start van de les." },
-        "hoogbegaafd": { "past": "goed", "tip": "Laat verbanden tussen onderwerpen opschrijven." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Steekwoorden en tekeningen tellen ook."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Bij wiskunde: formules en voorbeelden opschrijven mag."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef 3-4 kernwoorden als startpunt."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Geen cijfer, niemand kijkt mee; vergeten is normaal en nuttig."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste start van de les."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat verbanden tussen onderwerpen opschrijven."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "uitleggen", "houvast"],
+      "docentstijl": [
+        "structuur",
+        "uitleggen",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen voelen het als een overhoring.", "oplossing": "Zeg vaak: geen cijfer, vergeten hoort erbij, juist daarvan leer je." },
-        { "valkuil": "Altijd over de vorige les.", "oplossing": "Vraag ook naar stof van weken geleden: dan werkt het het best." }
+        {
+          "valkuil": "Leerlingen voelen het als een overhoring.",
+          "oplossing": "Zeg vaak: geen cijfer, vergeten hoort erbij, juist daarvan leer je."
+        },
+        {
+          "valkuil": "Altijd over de vorige les.",
+          "oplossing": "Vraag ook naar stof van weken geleden: dan werkt het het best."
+        }
       ],
       "varianten": {
         "vmbo": "Drie kernwoorden als start; tekeningen mogen.",
@@ -54,19 +121,36 @@
         "verdieping": "Verbanden met andere hoofdstukken."
       },
       "vakvoorbeelden": [
-        { "vak": "Geschiedenis", "voorbeeld": "Schrijf alles op wat je nog weet over de Romeinen in Limburg." },
-        { "vak": "Scheikunde", "voorbeeld": "Schrijf alles op over atoombouw." },
-        { "vak": "Engels", "voorbeeld": "Schrijf alle woorden op die je nog weet over het thema 'travel'." }
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Schrijf alles op wat je nog weet over de Romeinen in Limburg."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Schrijf alles op over atoombouw."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Schrijf alle woorden op die je nog weet over het thema 'travel'."
+        }
       ],
       "waarom": "Iets uit je geheugen ophalen versterkt het geheugen meer dan het opnieuw lezen. Dit 'testing effect' behoort tot de best onderbouwde leerstrategieën (Dunlosky e.a. gaven het een hoge bruikbaarheid). Het werkt ook zonder cijfer.",
       "bewijs": "sterk",
-      "bronnen": ["roediger-karpicke-2006", "dunlosky-2013", "agarwal-bain-2019"],
+      "bronnen": [
+        "roediger-karpicke-2006",
+        "dunlosky-2013",
+        "agarwal-bain-2019"
+      ],
       "materiaal": []
     },
     {
       "id": "gespreide-herhaling",
       "naam": "Gespreide herhaling",
-      "alias": ["spaced practice", "spreiden", "terugkerende quiz"],
+      "alias": [
+        "spaced practice",
+        "spreiden",
+        "terugkerende quiz"
+      ],
       "categorie": "leerstrategie",
       "kort": "Je laat stof van eerdere lessen en weken terugkomen in korte quizvragen, in plaats van alles in één keer te oefenen.",
       "startzin": "Vier vragen: één van vorige les, één van vorige week, één van vorige maand, en één verrassing. Geen cijfer.",
@@ -77,33 +161,89 @@
         "Bespreek de antwoorden kort; laat zelf nakijken.",
         "Houd bij welke onderwerpen vaak fout gaan en laat die vaker terugkomen."
       ],
-      "duur": { "min": 3, "max": 8 },
-      "groepsvorm": ["individueel"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["quizvragen op het bord of op papier"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 3,
+        "max": 8
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "quizvragen op het bord of op papier"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["opening", "voorkennis"],
-      "denkniveau": ["onthouden", "begrijpen", "toepassen"],
-      "differentiatie": ["tempo"],
+      "lesfase": [
+        "opening",
+        "voorkennis"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "tempo"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "aanpassen", "tip": "Vragen voorlezen; korte antwoorden." },
-        "dyscalculie": { "past": "aanpassen", "tip": "Rekenhulpkaart waar rekenen niet het doel is." },
-        "nt2": { "past": "aanpassen", "tip": "Eenvoudige vraagstelling." },
-        "faalangst": { "past": "goed", "tip": "Geen cijfer; regelmaat maakt het vertrouwd. Helpt ook tegen examenstress." },
-        "structuur": { "past": "goed", "tip": "Vaste routine." },
-        "hoogbegaafd": { "past": "aanpassen", "tip": "Een uitdagingsvraag erbij." }
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Vragen voorlezen; korte antwoorden."
+        },
+        "dyscalculie": {
+          "past": "aanpassen",
+          "tip": "Rekenhulpkaart waar rekenen niet het doel is."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Eenvoudige vraagstelling."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Geen cijfer; regelmaat maakt het vertrouwd. Helpt ook tegen examenstress."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste routine."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Een uitdagingsvraag erbij."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "uitleggen", "houvast"],
+      "docentstijl": [
+        "structuur",
+        "uitleggen",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Alleen vragen over de vorige les.", "oplossing": "Bewust ook oude stof." }
+        {
+          "valkuil": "Alleen vragen over de vorige les.",
+          "oplossing": "Bewust ook oude stof."
+        }
       ],
       "varianten": {
         "vmbo": "Drie korte vragen.",
@@ -114,19 +254,38 @@
         "verdieping": "Verrassingsvraag op hoger niveau."
       },
       "vakvoorbeelden": [
-        { "vak": "Frans", "voorbeeld": "Elke les drie woordjes uit eerdere hoofdstukken." },
-        { "vak": "Wiskunde", "voorbeeld": "Elke les één som uit een eerder hoofdstuk." },
-        { "vak": "Aardrijkskunde", "voorbeeld": "Elke les één kaartvraag uit eerdere stof." }
+        {
+          "vak": "Frans",
+          "voorbeeld": "Elke les drie woordjes uit eerdere hoofdstukken."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Elke les één som uit een eerder hoofdstuk."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Elke les één kaartvraag uit eerdere stof."
+        }
       ],
       "waarom": "Oefenen verspreid over tijd leidt tot beter onthouden dan dezelfde hoeveelheid oefening in één keer; dit is een van de meest robuuste bevindingen uit de leerpsychologie (Cepeda e.a.; Dunlosky e.a.). Het helpt ook bij toetsvoorbereiding en examenstress, omdat leerlingen minder hoeven in te halen.",
       "bewijs": "sterk",
-      "bronnen": ["cepeda-2006", "dunlosky-2013", "surma-2019"],
-      "materiaal": ["startquiz"]
+      "bronnen": [
+        "cepeda-2006",
+        "dunlosky-2013",
+        "surma-2019"
+      ],
+      "materiaal": [
+        "startquiz"
+      ]
     },
     {
       "id": "afwisselen-opgavetypen",
       "naam": "Afwisselen van opgavetypen",
-      "alias": ["interleaving", "door elkaar oefenen", "gemengd oefenen"],
+      "alias": [
+        "interleaving",
+        "door elkaar oefenen",
+        "gemengd oefenen"
+      ],
       "categorie": "leerstrategie",
       "kort": "Leerlingen oefenen verschillende soorten opgaven door elkaar, zodat ze moeten herkennen welke aanpak bij welke opgave hoort.",
       "startzin": "Deze opgaven staan expres door elkaar. Bij elke opgave vraag je je eerst af: wat voor soort som is dit, en welke aanpak hoort erbij?",
@@ -137,34 +296,92 @@
         "Dan pas oplossen.",
         "Bespreek: hoe herkende je welk type het was?"
       ],
-      "duur": { "min": 10, "max": 25 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["gemengd oefenblad"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 10,
+        "max": 25
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "gemengd oefenblad"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["inoefenen", "verwerken"],
-      "denkniveau": ["toepassen", "analyseren"],
-      "differentiatie": ["niveau"],
+      "lesfase": [
+        "inoefenen",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "niveau"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Ruime opmaak." },
-        "dyscalculie": { "past": "aanpassen", "tip": "Begin met twee types en een herkenningskaart." },
-        "nt2": { "past": "goed", "tip": "Signaalwoorden per type op een kaart." },
-        "faalangst": { "past": "aanpassen", "tip": "Voelt moeilijker dan blokoefenen; zeg dat dit normaal is en juist werkt." },
-        "structuur": { "past": "aanpassen", "tip": "Herkenningskaart met types." },
-        "hoogbegaafd": { "past": "goed", "tip": "Meer types door elkaar." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Ruime opmaak."
+        },
+        "dyscalculie": {
+          "past": "aanpassen",
+          "tip": "Begin met twee types en een herkenningskaart."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Signaalwoorden per type op een kaart."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Voelt moeilijker dan blokoefenen; zeg dat dit normaal is en juist werkt."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Herkenningskaart met types."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Meer types door elkaar."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "uitleggen"],
+      "docentstijl": [
+        "structuur",
+        "uitleggen"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Te vroeg mengen, terwijl een type nog niet beheerst wordt.", "oplossing": "Eerst apart oefenen, dan mengen." },
-        { "valkuil": "Leerlingen vinden het lastig en denken dat het slecht werkt.", "oplossing": "Leg uit dat 'moeilijk voelen' hier hoort bij beter onthouden." }
+        {
+          "valkuil": "Te vroeg mengen, terwijl een type nog niet beheerst wordt.",
+          "oplossing": "Eerst apart oefenen, dan mengen."
+        },
+        {
+          "valkuil": "Leerlingen vinden het lastig en denken dat het slecht werkt.",
+          "oplossing": "Leg uit dat 'moeilijk voelen' hier hoort bij beter onthouden."
+        }
       ],
       "varianten": {
         "vmbo": "Twee types.",
@@ -175,19 +392,37 @@
         "verdieping": "Ook types uit eerdere jaren."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Oppervlakte, omtrek en inhoud door elkaar." },
-        { "vak": "Duits", "voorbeeld": "Naamvallen na verschillende voorzetsels door elkaar." },
-        { "vak": "Natuurkunde", "voorbeeld": "Opgaven over snelheid, kracht en energie door elkaar." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Oppervlakte, omtrek en inhoud door elkaar."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Naamvallen na verschillende voorzetsels door elkaar."
+        },
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Opgaven over snelheid, kracht en energie door elkaar."
+        }
       ],
       "waarom": "Door elkaar oefenen dwingt leerlingen te kiezen welke aanpak past, wat beter werkt dan blokken van één type (Rohrer en Taylor). Dunlosky e.a. beoordeelden de bruikbaarheid als gemiddeld: de effecten zijn vooral sterk in wiskunde.",
       "bewijs": "redelijk",
-      "bronnen": ["rohrer-taylor-2007", "dunlosky-2013"],
-      "materiaal": ["werkblad"]
+      "bronnen": [
+        "rohrer-taylor-2007",
+        "dunlosky-2013"
+      ],
+      "materiaal": [
+        "werkblad"
+      ]
     },
     {
       "id": "dual-coding",
       "naam": "Dual coding: woord en beeld",
-      "alias": ["tekenen wat je leert", "schema bij tekst", "visualiseren"],
+      "alias": [
+        "tekenen wat je leert",
+        "schema bij tekst",
+        "visualiseren"
+      ],
       "categorie": "leerstrategie",
       "kort": "Leerlingen combineren tekst met een schema, tijdlijn of tekening, zodat ze de stof op twee manieren verwerken.",
       "startzin": "Lees deze alinea. Maak er daarna een schema of tekening van, zonder hele zinnen. Kun je het aan je buur uitleggen met alleen je tekening?",
@@ -198,34 +433,94 @@
         "Ze leggen hun schema uit aan een buur, zonder de tekst te gebruiken.",
         "Vergelijk en verbeter."
       ],
-      "duur": { "min": 8, "max": 20 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["schema-sjablonen (woordweb, oorzaak-gevolg, vergelijkingstabel, tijdlijn)"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 8,
+        "max": 20
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "schema-sjablonen (woordweb, oorzaak-gevolg, vergelijkingstabel, tijdlijn)"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["verwerken", "instructie"],
-      "denkniveau": ["begrijpen", "analyseren"],
-      "differentiatie": ["keuze-aanpak", "ondersteuning"],
+      "lesfase": [
+        "verwerken",
+        "instructie"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "keuze-aanpak",
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Minder tekst, meer beeld." },
-        "dyscalculie": { "past": "goed", "tip": "Getallenlijnen en schema's helpen." },
-        "nt2": { "past": "goed", "tip": "Beeld ondersteunt taal; laat begrippen bij de tekening schrijven." },
-        "faalangst": { "past": "goed", "tip": "Tekenkwaliteit telt niet." },
-        "structuur": { "past": "goed", "tip": "Sjabloon geeft structuur." },
-        "hoogbegaafd": { "past": "goed", "tip": "Zelf een schemavorm kiezen en verantwoorden." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Minder tekst, meer beeld."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Getallenlijnen en schema's helpen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Beeld ondersteunt taal; laat begrippen bij de tekening schrijven."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Tekenkwaliteit telt niet."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Sjabloon geeft structuur."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Zelf een schemavorm kiezen en verantwoorden."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["structuur", "uitleggen", "ontdekken"],
+      "docentstijl": [
+        "structuur",
+        "uitleggen",
+        "ontdekken"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen maken mooie tekeningen zonder inhoud.", "oplossing": "Het schema moet de structuur van de stof laten zien, niet versieren." },
-        { "valkuil": "Verward met leerstijlen ('visuele leerlingen').", "oplossing": "Dual coding helpt iedereen, niet een bepaald type leerling." }
+        {
+          "valkuil": "Leerlingen maken mooie tekeningen zonder inhoud.",
+          "oplossing": "Het schema moet de structuur van de stof laten zien, niet versieren."
+        },
+        {
+          "valkuil": "Verward met leerstijlen ('visuele leerlingen').",
+          "oplossing": "Dual coding helpt iedereen, niet een bepaald type leerling."
+        }
       ],
       "varianten": {
         "vmbo": "Halfvol sjabloon.",
@@ -236,19 +531,41 @@
         "verdieping": "Twee schema's vergelijken."
       },
       "vakvoorbeelden": [
-        { "vak": "Biologie", "voorbeeld": "De kringloop van water als schema tekenen." },
-        { "vak": "Geschiedenis", "voorbeeld": "Een tijdlijn van de gebeurtenissen in de paragraaf." },
-        { "vak": "Economie", "voorbeeld": "Een stroomschema van geld tussen gezinnen, bedrijven en overheid." }
+        {
+          "vak": "Biologie",
+          "voorbeeld": "De kringloop van water als schema tekenen."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een tijdlijn van de gebeurtenissen in de paragraaf."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Een stroomschema van geld tussen gezinnen, bedrijven en overheid."
+        }
       ],
       "waarom": "Woord en beeld samen aanbieden of laten maken verbetert het leren, mits het beeld de structuur van de stof weergeeft (Mayer). Dat is iets anders dan 'visueel leren' als leerstijl: dual coding werkt voor alle leerlingen.",
       "bewijs": "redelijk",
-      "bronnen": ["mayer-2009", "surma-2019"],
-      "materiaal": ["schema-woordweb", "schema-oorzaak-gevolg", "schema-vergelijking", "schema-tijdlijn"]
+      "bronnen": [
+        "mayer-2009",
+        "surma-2019"
+      ],
+      "materiaal": [
+        "schema-woordweb",
+        "schema-oorzaak-gevolg",
+        "schema-vergelijking",
+        "schema-tijdlijn"
+      ]
     },
     {
       "id": "zelfuitleg-elaboratie",
       "naam": "Zelfuitleg en waarom-vragen",
-      "alias": ["elaboratie", "self-explanation", "elaborative interrogation", "waarom-vragen"],
+      "alias": [
+        "elaboratie",
+        "self-explanation",
+        "elaborative interrogation",
+        "waarom-vragen"
+      ],
       "categorie": "leerstrategie",
       "kort": "Leerlingen leggen zichzelf of een ander uit waarom iets klopt, en verbinden nieuwe stof met wat ze al weten.",
       "startzin": "Bij elke stap stel je jezelf de vraag: waarom is dit zo? En: hoe hangt dit samen met wat ik al weet? Schrijf je antwoord in één zin in de kantlijn.",
@@ -259,33 +576,89 @@
         "Ze vergelijken hun uitleg met een buur.",
         "Bespreek een paar sterke uitleggen."
       ],
-      "duur": { "min": 5, "max": 15 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["tekst of uitgewerkt voorbeeld"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 5,
+        "max": 15
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "tekst of uitgewerkt voorbeeld"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["verwerken", "inoefenen"],
-      "denkniveau": ["begrijpen", "analyseren"],
-      "differentiatie": ["ondersteuning"],
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "aanpassen", "tip": "Mondeling uitleggen aan een maatje mag." },
-        "dyscalculie": { "past": "goed", "tip": "Uitleggen waarom een rekenstap klopt helpt begrip." },
-        "nt2": { "past": "aanpassen", "tip": "Zinsstarters: 'Dit klopt omdat…'." },
-        "faalangst": { "past": "goed", "tip": "Eerst voor jezelf, dan pas delen." },
-        "structuur": { "past": "goed", "tip": "Vaste vraag bij elke stap." },
-        "hoogbegaafd": { "past": "goed", "tip": "Diepere waarom-vragen; verbanden over hoofdstukken heen." }
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Mondeling uitleggen aan een maatje mag."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Uitleggen waarom een rekenstap klopt helpt begrip."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Zinsstarters: 'Dit klopt omdat…'."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Eerst voor jezelf, dan pas delen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste vraag bij elke stap."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Diepere waarom-vragen; verbanden over hoofdstukken heen."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["ontdekken", "uitleggen"],
+      "docentstijl": [
+        "ontdekken",
+        "uitleggen"
+      ],
       "instapniveau": 2,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen herhalen de tekst in plaats van uit te leggen.", "oplossing": "Vraag: 'Hoe zou je dit aan een brugklasser uitleggen?'" }
+        {
+          "valkuil": "Leerlingen herhalen de tekst in plaats van uit te leggen.",
+          "oplossing": "Vraag: 'Hoe zou je dit aan een brugklasser uitleggen?'"
+        }
       ],
       "varianten": {
         "vmbo": "Mondeling met zinsstarters.",
@@ -296,19 +669,35 @@
         "verdieping": "Verbanden over hoofdstukken heen."
       },
       "vakvoorbeelden": [
-        { "vak": "Natuurkunde", "voorbeeld": "Bij een uitgewerkte opgave: waarom wordt hier deze formule gebruikt?" },
-        { "vak": "Geschiedenis", "voorbeeld": "Waarom zou dit gebeurd zijn in juist deze tijd?" },
-        { "vak": "Biologie", "voorbeeld": "Waarom hebben woestijnplanten kleine bladeren?" }
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Bij een uitgewerkte opgave: waarom wordt hier deze formule gebruikt?"
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Waarom zou dit gebeurd zijn in juist deze tijd?"
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Waarom hebben woestijnplanten kleine bladeren?"
+        }
       ],
       "waarom": "Zelfuitleg bij voorbeelden (Chi e.a.) en waarom-vragen helpen leerlingen nieuwe stof te verbinden met bestaande kennis. Dunlosky e.a. gaven beide technieken een gemiddelde bruikbaarheid: goed onderbouwd, maar het effect hangt af van voorkennis.",
       "bewijs": "redelijk",
-      "bronnen": ["chi-1989", "dunlosky-2013"],
+      "bronnen": [
+        "chi-1989",
+        "dunlosky-2013"
+      ],
       "materiaal": []
     },
     {
       "id": "cornell-notities",
       "naam": "Tweekolommen- en Cornell-notities",
-      "alias": ["Cornell", "tweekolommennotities", "vragen-en-antwoordnotities"],
+      "alias": [
+        "Cornell",
+        "tweekolommennotities",
+        "vragen-en-antwoordnotities"
+      ],
       "categorie": "leerstrategie",
       "kort": "Leerlingen maken notities in een vaste vorm: rechts aantekeningen, links vragen of kernwoorden, onderaan een samenvatting, zodat ze er later zichzelf mee kunnen overhoren.",
       "startzin": "Verdeel je blad: rechts schrijf je wat ik uitleg, links laat je ruimte. Na de uitleg schrijf je links vragen bij je aantekeningen, en onderaan een samenvatting in twee zinnen.",
@@ -319,34 +708,93 @@
         "Onderaan: samenvatting in 2-3 zinnen.",
         "Overhoren: dek de rechterkant af en beantwoord de vragen links."
       ],
-      "duur": { "min": 10, "max": 20 },
-      "groepsvorm": ["individueel"],
-      "ruimte": { "M": true, "L": true, "plein": true, "stilte": true, "beweging": false },
-      "middelen": { "lijst": ["Cornell-sjabloon of schrift"], "laptop": "optioneel", "telefoon": false },
+      "duur": {
+        "min": 10,
+        "max": 20
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "Cornell-sjabloon of schrift"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["instructie", "verwerken"],
-      "denkniveau": ["onthouden", "begrijpen"],
-      "differentiatie": ["ondersteuning"],
+      "lesfase": [
+        "instructie",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
       "richting": "convergent",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "aanpassen", "tip": "Geef een halfvol sjabloon; steekwoorden zijn genoeg." },
-        "dyscalculie": { "past": "goed", "tip": "Formules en voorbeelden rechts, uitleg links." },
-        "nt2": { "past": "aanpassen", "tip": "Laat links vaktaal en betekenis schrijven." },
-        "faalangst": { "past": "goed", "tip": "Helpt bij zelfstandig leren voor toetsen." },
-        "structuur": { "past": "goed", "tip": "Vaste vorm." },
-        "hoogbegaafd": { "past": "goed", "tip": "Laat hen vragen op hoger denkniveau links zetten." }
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Geef een halfvol sjabloon; steekwoorden zijn genoeg."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Formules en voorbeelden rechts, uitleg links."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Laat links vaktaal en betekenis schrijven."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Helpt bij zelfstandig leren voor toetsen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste vorm."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen vragen op hoger denkniveau links zetten."
+        }
       },
       "energie": "rustig",
-      "docentstijl": ["uitleggen", "structuur", "houvast"],
+      "docentstijl": [
+        "uitleggen",
+        "structuur",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen schrijven alles over.", "oplossing": "Steekwoorden; geef aan wat de kernpunten zijn." },
-        { "valkuil": "De linkerkolom blijft leeg.", "oplossing": "Plan er tijd voor direct na de uitleg." }
+        {
+          "valkuil": "Leerlingen schrijven alles over.",
+          "oplossing": "Steekwoorden; geef aan wat de kernpunten zijn."
+        },
+        {
+          "valkuil": "De linkerkolom blijft leeg.",
+          "oplossing": "Plan er tijd voor direct na de uitleg."
+        }
       ],
       "varianten": {
         "vmbo": "Halfvol sjabloon.",
@@ -357,14 +805,693 @@
         "verdieping": "Vragen op hoger niveau."
       },
       "vakvoorbeelden": [
-        { "vak": "Geschiedenis", "voorbeeld": "Aantekeningen bij een uitleg over de Koude Oorlog, met links vragen." },
-        { "vak": "Biologie", "voorbeeld": "Notities bij een tekst over erfelijkheid." },
-        { "vak": "Maatschappijleer", "voorbeeld": "Notities bij een filmpje over de rechtsstaat." }
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Aantekeningen bij een uitleg over de Koude Oorlog, met links vragen."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Notities bij een tekst over erfelijkheid."
+        },
+        {
+          "vak": "Maatschappijleer",
+          "voorbeeld": "Notities bij een filmpje over de rechtsstaat."
+        }
       ],
       "waarom": "Notities met een vraagkolom maken van aantekeningen een overhoorinstrument, waardoor leerlingen ophaaloefening kunnen doen. Het Cornell-systeem zelf is een praktijkmethode van Pauk; de onderliggende principes (ophalen, samenvatten) zijn onderzocht.",
       "bewijs": "beperkt",
-      "bronnen": ["pauk", "roediger-karpicke-2006"],
-      "materiaal": ["cornell-sjabloon"]
+      "bronnen": [
+        "pauk",
+        "roediger-karpicke-2006"
+      ],
+      "materiaal": [
+        "cornell-sjabloon"
+      ]
+    },
+    {
+      "id": "flitskaarten",
+      "naam": "Flitskaarten met bakjes",
+      "alias": [
+        "leitnersysteem",
+        "flashcards"
+      ],
+      "categorie": "leerstrategie",
+      "kort": "Leerlingen maken kaartjes met vraag en antwoord en oefenen ze zo dat moeilijke kaartjes vaker terugkomen.",
+      "startzin": "Maak voor elk begrip een kaartje: vraag voor, antwoord achter. Wat je goed hebt, gaat een bakje verder.",
+      "stappen": [
+        "Leerlingen maken kaartjes: vraag of begrip voor, antwoord achter.",
+        "Ze overhoren zichzelf: eerst antwoord zeggen, dan omdraaien.",
+        "Goed: kaartje naar het volgende bakje; fout: terug naar bakje 1.",
+        "Bakje 1 elke dag, bakje 2 om de dag, bakje 3 elke week.",
+        "Laat ze in tweetallen elkaar overhoren als variatie."
+      ],
+      "duur": {
+        "min": 5,
+        "max": 15
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "kaartjes",
+          "enveloppen of bakjes"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [
+        "tempo"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Werk met korte stukken en laat hardop oefenen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Werkt ook met formules en rekenstappen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Goed om vaktaal vaker te herhalen."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Oefenen zonder cijfer geeft vertrouwen; helpt ook tegen examenstress."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste aanpak die leerlingen zelf kunnen herhalen."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen de strategie toepassen op moeilijkere stof."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen kijken te snel naar het antwoord.",
+          "oplossing": "Eerst hardop of op papier antwoorden, dan pas omdraaien."
+        },
+        {
+          "valkuil": "Kaartjes bevatten hele lappen tekst.",
+          "oplossing": "Eén vraag, één kort antwoord."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Kant-en-klare kaartjes.",
+        "havo": "Zelf gemaakte kaartjes.",
+        "vwo": "Kaartjes met een waarom-vraag op de achterkant.",
+        "steun": "Met een voorbeeld en een stappenkaart.",
+        "basis": "Standaard.",
+        "verdieping": "Toepassen op moeilijkere of eerdere stof."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Frans",
+          "voorbeeld": "Woordjes en werkwoordsvormen."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Begrippen en functies van organen."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Jaartallen en gebeurtenissen."
+        }
+      ],
+      "waarom": "Flitskaarten combineren ophalen en gespreid herhalen, twee van de best onderzochte leerstrategieën (Dunlosky; Weinstein).",
+      "bewijs": "sterk",
+      "bronnen": [
+        "dunlosky-2013",
+        "weinstein-2018",
+        "cepeda-2006"
+      ],
+      "materiaal": [
+        "sorteerkaartjes"
+      ]
+    },
+    {
+      "id": "concrete-voorbeelden",
+      "naam": "Concrete voorbeelden",
+      "alias": [
+        "voorbeeld en niet-voorbeeld",
+        "abstract maken concreet"
+      ],
+      "categorie": "leerstrategie",
+      "kort": "Bij een abstract begrip zoeken leerlingen twee concrete voorbeelden en één niet-voorbeeld, en leggen uit wat ze gemeen hebben.",
+      "startzin": "Bedenk twee voorbeelden van … uit je eigen leven, en één ding dat erop lijkt maar het niet is. Wat is het verschil?",
+      "stappen": [
+        "Geef het begrip en één voorbeeld van jezelf.",
+        "Leerlingen bedenken twee eigen voorbeelden.",
+        "Ze bedenken één niet-voorbeeld.",
+        "Ze leggen uit wat de voorbeelden gemeen hebben.",
+        "Bespreek een paar voorbeelden; corrigeer wat niet klopt."
+      ],
+      "duur": {
+        "min": 5,
+        "max": 12
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "werkblad"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "instructie",
+        "inoefenen",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "tempo"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Werk met korte stukken en laat hardop oefenen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Werkt ook met formules en rekenstappen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Concrete voorbeelden helpen bij abstracte vaktaal."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Oefenen zonder cijfer geeft vertrouwen; helpt ook tegen examenstress."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste aanpak die leerlingen zelf kunnen herhalen."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen de strategie toepassen op moeilijkere stof."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "uitleggen",
+        "structuur"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen onthouden het voorbeeld maar niet het begrip.",
+          "oplossing": "Laat steeds het gemeenschappelijke kenmerk benoemen."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Kiezen uit voorbeelden die jij geeft.",
+        "havo": "Zelf bedenken.",
+        "vwo": "Een grensgeval bedenken en bespreken.",
+        "steun": "Met een voorbeeld en een stappenkaart.",
+        "basis": "Standaard.",
+        "verdieping": "Toepassen op moeilijkere of eerdere stof."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Economie",
+          "voorbeeld": "Voorbeelden van opportuniteitskosten."
+        },
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Voorbeelden van energieomzetting."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Voorbeelden van een metafoor en een niet-metafoor."
+        }
+      ],
+      "waarom": "Concrete voorbeelden helpen om abstracte begrippen te begrijpen, vooral als je meerdere voorbeelden vergelijkt. Weinstein en collega’s noemen dit een van zes kernstrategieën.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "weinstein-2018"
+      ],
+      "materiaal": [
+        "werkblad"
+      ]
+    },
+    {
+      "id": "begrippenkaart",
+      "naam": "Begrippenkaart",
+      "alias": [
+        "concept map",
+        "mindmap met verbanden"
+      ],
+      "categorie": "leerstrategie",
+      "kort": "Leerlingen zetten de begrippen van een hoofdstuk op een blad en verbinden ze met pijlen waarop staat hoe ze samenhangen.",
+      "startzin": "Zet de begrippen van dit hoofdstuk op je blad. Trek pijlen, en schrijf op elke pijl hoe ze met elkaar te maken hebben.",
+      "stappen": [
+        "Geef 8–12 begrippen (of laat ze zelf kiezen).",
+        "Leerlingen zetten ze op een A3-blad.",
+        "Ze trekken pijlen en schrijven het verband erop (veroorzaakt, is een soort, bestaat uit).",
+        "Vergelijk met een buur: welke verbanden had jij niet?",
+        "Laat de kaart na een week uit het hoofd opnieuw maken."
+      ],
+      "duur": {
+        "min": 10,
+        "max": 20
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "A3-papier",
+          "begrippenlijst"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken",
+        "afsluiting"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "tempo"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Weinig tekst, veel structuur."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Werkt ook met formules en rekenstappen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Goed om vaktaal vaker te herhalen."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Oefenen zonder cijfer geeft vertrouwen; helpt ook tegen examenstress."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste aanpak die leerlingen zelf kunnen herhalen."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen de strategie toepassen op moeilijkere stof."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "ontdekken"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Pijlen zonder woorden.",
+          "oplossing": "Elke pijl moet een werkwoord hebben."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Met een half ingevulde kaart.",
+        "havo": "Met een begrippenlijst.",
+        "vwo": "Zelf begrippen kiezen en de kaart uit het hoofd maken.",
+        "steun": "Met een voorbeeld en een stappenkaart.",
+        "basis": "Standaard.",
+        "verdieping": "Toepassen op moeilijkere of eerdere stof."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Begrippen rond de bloedsomloop."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Begrippen rond erosie en landschap."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Begrippen rond de markt."
+        }
+      ],
+      "waarom": "Verbanden tussen begrippen zichtbaar maken helpt bij begrijpen (dual coding, elaboratie). Uit het hoofd opnieuw maken voegt ophalen toe.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "weinstein-2018",
+        "mayer-2009"
+      ],
+      "materiaal": [
+        "schema-woordweb"
+      ]
+    },
+    {
+      "id": "leerplanning",
+      "naam": "Leerplanning maken",
+      "alias": [
+        "toets plannen",
+        "spreiden plannen"
+      ],
+      "categorie": "leerstrategie",
+      "kort": "Leerlingen maken een planning voor een toets waarin ze het leren spreiden over meerdere dagen en elke dag zichzelf overhoren.",
+      "startzin": "De toets is over tien dagen. Maak een planning: niet alles op de laatste avond, maar elke keer een stukje, en elke keer jezelf overhoren.",
+      "stappen": [
+        "Leg uit waarom spreiden beter werkt dan stampen.",
+        "Leerlingen zetten de toetsdatum en de leerstof op een planning.",
+        "Ze verdelen de stof over vier of vijf korte momenten.",
+        "Bij elk moment schrijven ze hoe ze zichzelf overhoren.",
+        "Kijk de planning na een paar dagen even na."
+      ],
+      "duur": {
+        "min": 8,
+        "max": 15
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "planningsformulier"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "afsluiting",
+        "verwerken"
+      ],
+      "denkniveau": [
+        "evalueren"
+      ],
+      "differentiatie": [
+        "tempo"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "persoonsvorming",
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Werk met korte stukken en laat hardop oefenen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Werkt ook met formules en rekenstappen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Goed om vaktaal vaker te herhalen."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Een planning geeft rust voor de toets."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Een voorbeeldplanning helpt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen de strategie toepassen op moeilijkere stof."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De planning blijft in de tas.",
+          "oplossing": "Check halverwege in de les: wie is bij?"
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een ingevulde voorbeeldplanning aanpassen.",
+        "havo": "Zelf plannen met een sjabloon.",
+        "vwo": "Plannen voor meerdere vakken tegelijk.",
+        "steun": "Met een voorbeeld en een stappenkaart.",
+        "basis": "Standaard.",
+        "verdieping": "Toepassen op moeilijkere of eerdere stof."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Frans",
+          "voorbeeld": "Woordjes spreiden over vijf dagen."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een hoofdstuk in vier delen."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Elke dag drie opgaven van verschillende paragrafen."
+        }
+      ],
+      "waarom": "Gespreid leren werkt beter dan alles op één moment (Cepeda), en leerlingen doen het niet vanzelf. Plannen maakt het concreet.",
+      "bewijs": "sterk",
+      "bronnen": [
+        "cepeda-2006",
+        "dunlosky-2013",
+        "weinstein-2018"
+      ],
+      "materiaal": [
+        "leercontract"
+      ]
+    },
+    {
+      "id": "opdekmethode",
+      "naam": "Opdekmethode",
+      "alias": [
+        "afdekken en opzeggen",
+        "zelfoverhoring"
+      ],
+      "categorie": "leerstrategie",
+      "kort": "Leerlingen dekken de antwoorden of uitleg in hun boek of schrift af, proberen ze op te zeggen en controleren dan.",
+      "startzin": "Dek de rechterkolom af. Zeg zacht of schrijf op wat er staat. Dan pas kijken.",
+      "stappen": [
+        "Leg uit: herlezen voelt goed, maar ophalen werkt beter.",
+        "Leerlingen dekken antwoorden af met een blad.",
+        "Ze zeggen of schrijven het antwoord.",
+        "Ze controleren en zetten een streepje bij fouten.",
+        "Ze herhalen alleen wat fout ging."
+      ],
+      "duur": {
+        "min": 5,
+        "max": 10
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "blad om af te dekken"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [
+        "tempo"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Werk met korte stukken en laat hardop oefenen."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Werkt ook met formules en rekenstappen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Goed om vaktaal vaker te herhalen."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Oefenen zonder cijfer geeft vertrouwen; helpt ook tegen examenstress."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste aanpak die leerlingen zelf kunnen herhalen."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Laat hen de strategie toepassen op moeilijkere stof."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen spieken.",
+          "oplossing": "Laat het antwoord eerst opschrijven, dan pas kijken."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Met een tweetal: de een vraagt, de ander zegt op.",
+        "havo": "Alleen.",
+        "vwo": "Met uitleg in eigen woorden in plaats van letterlijk.",
+        "steun": "Met een voorbeeld en een stappenkaart.",
+        "basis": "Standaard.",
+        "verdieping": "Toepassen op moeilijkere of eerdere stof."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Engels",
+          "voorbeeld": "Woordenlijst Engels-Nederlands."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Begrippen met uitleg."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Topografie met een blinde kaart."
+        }
+      ],
+      "waarom": "Zelf overhoren is een vorm van ophalen, en die werkt beter dan herlezen (Roediger en Karpicke; Dunlosky).",
+      "bewijs": "sterk",
+      "bronnen": [
+        "roediger-karpicke-2006",
+        "dunlosky-2013"
+      ],
+      "materiaal": []
     }
   ]
 }

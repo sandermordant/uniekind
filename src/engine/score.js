@@ -20,6 +20,33 @@ const SLOT_FASE = {
   verwerken: 'verwerken', beweeg: 'inoefenen', afsluiting: 'afsluiting', steun: 'verwerken', verdieping: 'verwerken'
 };
 
+// Past de werkvorm bij het vak? Ja als een van de vakvoorbeelden uit dit vak komt.
+const vakSleutels = new WeakMap();
+function sleutelsVan(vak) {
+  if (!vak) return [];
+  if (!vakSleutels.has(vak)) {
+    const naam = String(vak.naam ?? '').toLowerCase();
+    const s = new Set([naam.split('(')[0].trim(), ...naam.split(/[^a-z\u00e0-\u00ff&]+/).filter((w) => w.length > 3)]);
+    s.delete('');
+    vakSleutels.set(vak, [...s]);
+  }
+  return vakSleutels.get(vak);
+}
+export function pastBijVak(item, vak) {
+  const sl = sleutelsVan(vak);
+  return sl.length > 0 && item.vakvoorbeelden.some((v) => { const x = v.vak.toLowerCase(); return sl.some((k) => x === k || x.startsWith(k) || k.startsWith(x)); });
+}
+
+// Openers, energizers en afsluiters lijken qua geschiktheid vaak op elkaar. Een kleine, vaste afwisseling op basis
+// van onderwerp en vak zorgt dat niet elke les met dezelfde opener begint. Zelfde invoer geeft dezelfde les.
+const LICHT = new Set(['aandachtrichter', 'energizer', 'afsluiter']);
+function afwisseling(item, ctx) {
+  if (!LICHT.has(item.categorie)) return 0;
+  let h = 2166136261;
+  for (const ch of `${ctx.inhoud?.onderwerp ?? ''}|${ctx.vakId ?? ''}|${item.id}`) h = Math.imul(h ^ ch.charCodeAt(0), 16777619) >>> 0;
+  return (h % 1000) / 1000;
+}
+
 function denkniveauScore(item, niveaus) {
   let best = 0;
   for (const n of niveaus) {
@@ -41,7 +68,8 @@ export function scoreWerkvorm(item, slotType, ctx) {
   const fase = SLOT_FASE[slotType] ?? slotType;
   const voork = REEKS[ctx.reeks];
   delen.lesfase = (item.lesfase.includes(fase) || (fase === 'verwerken' && item.lesfase.includes('inoefenen')) ? 1 : 0.2)
-    + (voork && (voork.ids.includes(item.id) || voork.cats.includes(item.categorie)) ? 0.4 : 0);
+    + (voork && (voork.ids.includes(item.id) || voork.cats.includes(item.categorie)) ? 0.4 : 0)
+    + (pastBijVak(item, ctx.vak) ? 0.25 : 0);
 
   // Docent: overeenkomst met het docentprofiel (1-5 per uitspraak)
   const st = ctx.docent.stijl ?? {};
@@ -82,10 +110,11 @@ export function scoreWerkvorm(item, slotType, ctx) {
   delen.visie = Math.min(1, visie);
 
   delen.variatie = ctx.opties.vorigeLes?.includes(item.id) ? -1 : 0;
+  delen.afwisseling = afwisseling(item, ctx);
   delen.ervaring = Math.max(-1, Math.min(1, Number(ctx.opties.duimen?.[item.id] ?? 0)));
 
   const wDoc = g.docentstijl?.[String(ctx.stand)] ?? 2;
   const score = g.denkniveau * delen.denkniveau + g.lesfase * delen.lesfase + wDoc * delen.docent + g.klas * delen.klas
-    + g.visie * delen.visie + g.variatie * delen.variatie + g.ervaring * delen.ervaring;
+    + g.visie * delen.visie + (g.afwisseling ?? 1) * delen.afwisseling + g.variatie * delen.variatie + g.ervaring * delen.ervaring;
   return { score: Math.round(score * 1000) / 1000, delen };
 }

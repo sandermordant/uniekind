@@ -1,3 +1,4 @@
+import { pastBijVak } from './score.js';
 // "Waarom deze?": de uitleg bij elke werkvorm en bij de les als geheel.
 // Toon: bemoedigend en collegiaal, nooit belerend.
 
@@ -49,6 +50,7 @@ export function uitlegWerkvorm(item, blok, delen = {}, ctx) {
   const top = topStijlen(ctx).filter((s) => item.docentstijl.includes(s));
   if (top.length) zinnen.push(`Past bij jou: ${STIJL[top[0]]}.`);
   if (ctx.vak?.kernwerkvormen?.includes(item.id)) zinnen.push(`Een werkvorm die bij ${ctx.vak.naam} hoort.`);
+  else if (pastBijVak(item, ctx.vak)) zinnen.push(`Er staat een voorbeeld uit ${ctx.vak.naam} bij.`);
   return {
     koppeling: zinnen.join(' '),
     visie: visieZin(item, ctx),

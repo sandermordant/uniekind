@@ -5,7 +5,11 @@
     {
       "id": "prikkelende-vraag",
       "naam": "Prikkelende vraag",
-      "alias": ["grote vraag", "denkvraag", "openingsvraag"],
+      "alias": [
+        "grote vraag",
+        "denkvraag",
+        "openingsvraag"
+      ],
       "categorie": "aandachtrichter",
       "kort": "Je opent de les met één vraag die nieuwsgierig maakt en waar leerlingen aan het eind van de les een beter antwoord op kunnen geven.",
       "startzin": "Ik heb een vraag voor jullie, en ik ga het antwoord nog niet geven: … Schrijf op wat jij denkt. Aan het eind van de les kijken we of je van mening bent veranderd.",
@@ -16,33 +20,89 @@
         "Hoor 2-3 antwoorden zonder te zeggen wat goed is.",
         "Kom aan het eind van de les terug op de vraag."
       ],
-      "duur": { "min": 2, "max": 4 },
-      "groepsvorm": ["klas", "individueel"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["vraag op het bord"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "vraag op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "geen",
-      "lesfase": ["opening"],
-      "denkniveau": ["begrijpen", "analyseren", "evalueren"],
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren",
+        "evalueren"
+      ],
       "differentiatie": [],
       "richting": "nvt",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Lees de vraag hardop voor." },
-        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk nodig." },
-        "nt2": { "past": "aanpassen", "tip": "Gebruik een beeld bij de vraag." },
-        "faalangst": { "past": "goed", "tip": "Er is (nog) geen fout antwoord." },
-        "structuur": { "past": "goed", "tip": "Vraag staat klaar bij binnenkomst." },
-        "hoogbegaafd": { "past": "goed", "tip": "Open vragen dagen uit." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees de vraag hardop voor."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Gebruik een beeld bij de vraag."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Er is (nog) geen fout antwoord."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vraag staat klaar bij binnenkomst."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Open vragen dagen uit."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["uitleggen", "ontdekken", "relatie", "houvast"],
+      "docentstijl": [
+        "uitleggen",
+        "ontdekken",
+        "relatie",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Je vergeet aan het eind terug te komen op de vraag.", "oplossing": "Zet het in je lesplan bij de afsluiting." }
+        {
+          "valkuil": "Je vergeet aan het eind terug te komen op de vraag.",
+          "oplossing": "Zet het in je lesplan bij de afsluiting."
+        }
       ],
       "varianten": {
         "vmbo": "Concrete, herkenbare vraag.",
@@ -53,19 +113,35 @@
         "verdieping": "Vraag om een onderbouwing."
       },
       "vakvoorbeelden": [
-        { "vak": "Natuurkunde", "voorbeeld": "'Waarom drijft een groot schip van staal, terwijl een spijker zinkt?'" },
-        { "vak": "Economie", "voorbeeld": "'Waarom kost een ijsje op de Vaalserberg meer dan in de supermarkt?'" },
-        { "vak": "Geschiedenis", "voorbeeld": "'Kan één persoon de loop van de geschiedenis veranderen?'" }
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "'Waarom drijft een groot schip van staal, terwijl een spijker zinkt?'"
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "'Waarom kost een ijsje op de Vaalserberg meer dan in de supermarkt?'"
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "'Kan één persoon de loop van de geschiedenis veranderen?'"
+        }
       ],
       "waarom": "Een vraag die nieuwsgierig maakt, richt de aandacht op het lesdoel en activeert voorkennis. Terugkomen op de vraag aan het eind maakt het leren zichtbaar. Dit is vooral praktijkkennis; het belang van voorkennis activeren is wel goed onderbouwd.",
       "bewijs": "praktijk",
-      "bronnen": ["surma-2019"],
-      "materiaal": ["digibord-opener"]
+      "bronnen": [
+        "surma-2019"
+      ],
+      "materiaal": [
+        "digibord-opener"
+      ]
     },
     {
       "id": "vind-de-fout",
       "naam": "Vind de fout",
-      "alias": ["foutenjacht", "wat klopt hier niet?"],
+      "alias": [
+        "foutenjacht",
+        "wat klopt hier niet?"
+      ],
       "categorie": "aandachtrichter",
       "kort": "Je toont een uitwerking, tekst of bewering met één of meer fouten, en leerlingen zoeken wat er niet klopt.",
       "startzin": "In deze uitwerking zit één fout. Wie vindt hem binnen een minuut? Schrijf op welke regel het is en wat er fout gaat.",
@@ -76,33 +152,88 @@
         "Bespreek: waarom is deze fout zo verleidelijk?",
         "Laat de juiste versie opschrijven."
       ],
-      "duur": { "min": 2, "max": 5 },
-      "groepsvorm": ["individueel", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["uitwerking met fout op het bord"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 2,
+        "max": 5
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "uitwerking met fout op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["opening", "voorkennis", "check"],
-      "denkniveau": ["analyseren", "evalueren"],
+      "lesfase": [
+        "opening",
+        "voorkennis",
+        "check"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "evalueren"
+      ],
       "differentiatie": [],
       "richting": "nvt",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "aanpassen", "tip": "Kort fragment, groot." },
-        "dyscalculie": { "past": "aanpassen", "tip": "Kies een fout in de redenering, niet in rekenwerk." },
-        "nt2": { "past": "goed", "tip": "Werkt ook met getallen of schema's." },
-        "faalangst": { "past": "goed", "tip": "De fout is van een ander, niet van jou." },
-        "structuur": { "past": "goed", "tip": "Duidelijke opdracht." },
-        "hoogbegaafd": { "past": "goed", "tip": "Verstop meerdere fouten." }
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Kort fragment, groot."
+        },
+        "dyscalculie": {
+          "past": "aanpassen",
+          "tip": "Kies een fout in de redenering, niet in rekenwerk."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Werkt ook met getallen of schema's."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "De fout is van een ander, niet van jou."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Duidelijke opdracht."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Verstop meerdere fouten."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["uitleggen", "ontdekken", "houvast"],
+      "docentstijl": [
+        "uitleggen",
+        "ontdekken",
+        "houvast"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen onthouden de foute versie.", "oplossing": "Eindig altijd met de juiste versie en laat die opschrijven." }
+        {
+          "valkuil": "Leerlingen onthouden de foute versie.",
+          "oplossing": "Eindig altijd met de juiste versie en laat die opschrijven."
+        }
       ],
       "varianten": {
         "vmbo": "Eén duidelijke fout.",
@@ -113,19 +244,34 @@
         "verdieping": "Meerdere fouten."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Een uitwerking waarin het min-teken bij haakjes wegwerken verkeerd gaat." },
-        { "vak": "Nederlands", "voorbeeld": "Een zin met een fout in de werkwoordspelling (dt)." },
-        { "vak": "Duits", "voorbeeld": "Een zin met de verkeerde naamval na 'mit'." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Een uitwerking waarin het min-teken bij haakjes wegwerken verkeerd gaat."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Een zin met een fout in de werkwoordspelling (dt)."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Een zin met de verkeerde naamval na 'mit'."
+        }
       ],
       "waarom": "Fouten analyseren dwingt tot nauwkeurig kijken en maakt veelvoorkomende misvattingen bespreekbaar. Het werkt het best als je daarna de juiste versie benadrukt; het onderzoek is vooral praktijkgericht.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["digibord-opener"]
+      "materiaal": [
+        "digibord-opener"
+      ]
     },
     {
       "id": "voorspellen",
       "naam": "Voorspellen",
-      "alias": ["wat gebeurt er als…?", "hypothese", "gok eerst"],
+      "alias": [
+        "wat gebeurt er als…?",
+        "hypothese",
+        "gok eerst"
+      ],
       "categorie": "aandachtrichter",
       "kort": "Leerlingen voorspellen wat er gaat gebeuren (in een proef, een verhaal, een grafiek) voordat je het laat zien.",
       "startzin": "Voordat ik het laat zien: wat denk jij dat er gaat gebeuren? Schrijf je voorspelling op, en waarom je dat denkt.",
@@ -136,33 +282,87 @@
         "Laat de uitkomst zien.",
         "Bespreek: wie had het goed, en waarom wijkt het af van wat veel mensen dachten?"
       ],
-      "duur": { "min": 3, "max": 6 },
-      "groepsvorm": ["individueel", "klas"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["demonstratie, filmfragment of grafiek"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 3,
+        "max": 6
+      },
+      "groepsvorm": [
+        "individueel",
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "demonstratie, filmfragment of grafiek"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["opening", "instructie"],
-      "denkniveau": ["begrijpen", "toepassen", "analyseren"],
+      "lesfase": [
+        "opening",
+        "instructie"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen",
+        "analyseren"
+      ],
       "differentiatie": [],
       "richting": "nvt",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Voorspelling mag in één woord of tekening." },
-        "dyscalculie": { "past": "goed", "tip": "Kiezen uit opties." },
-        "nt2": { "past": "goed", "tip": "Beeld en demonstratie zijn taalarm." },
-        "faalangst": { "past": "goed", "tip": "Een voorspelling kan niet fout zijn: het is een gok." },
-        "structuur": { "past": "goed", "tip": "Duidelijk verloop." },
-        "hoogbegaafd": { "past": "goed", "tip": "Vraag om een onderbouwde voorspelling." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Voorspelling mag in één woord of tekening."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Kiezen uit opties."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Beeld en demonstratie zijn taalarm."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Een voorspelling kan niet fout zijn: het is een gok."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Duidelijk verloop."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een onderbouwde voorspelling."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["ontdekken", "uitleggen"],
+      "docentstijl": [
+        "ontdekken",
+        "uitleggen"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Leerlingen voorspellen niet echt, maar wachten af.", "oplossing": "Laat de voorspelling opschrijven voordat je verdergaat." }
+        {
+          "valkuil": "Leerlingen voorspellen niet echt, maar wachten af.",
+          "oplossing": "Laat de voorspelling opschrijven voordat je verdergaat."
+        }
       ],
       "varianten": {
         "vmbo": "Kiezen uit twee of drie opties.",
@@ -173,19 +373,36 @@
         "verdieping": "Kwantitatieve voorspelling."
       },
       "vakvoorbeelden": [
-        { "vak": "Scheikunde", "voorbeeld": "'Wat gebeurt er als ik deze twee oplossingen bij elkaar giet?'" },
-        { "vak": "Nederlands", "voorbeeld": "'Hoe loopt dit verhaal af? Lees de titel en de eerste zin.'" },
-        { "vak": "Aardrijkskunde", "voorbeeld": "'Hoe ziet de bevolkingspiramide van Gulpen-Wittem er over 20 jaar uit?'" }
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "'Wat gebeurt er als ik deze twee oplossingen bij elkaar giet?'"
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "'Hoe loopt dit verhaal af? Lees de titel en de eerste zin.'"
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "'Hoe ziet de bevolkingspiramide van Gulpen-Wittem er over 20 jaar uit?'"
+        }
       ],
       "waarom": "Een voorspelling maakt leerlingen nieuwsgierig naar de uitkomst en maakt hun voorkennis en misvattingen zichtbaar. Er is onderzoek dat erop wijst dat eerst voorspellen het onthouden van de uitkomst kan verbeteren; het bewijs is nog beperkt.",
       "bewijs": "beperkt",
-      "bronnen": ["surma-2019"],
-      "materiaal": ["digibord-opener"]
+      "bronnen": [
+        "surma-2019"
+      ],
+      "materiaal": [
+        "digibord-opener"
+      ]
     },
     {
       "id": "foto-zonder-context",
       "naam": "Foto of voorwerp zonder context",
-      "alias": ["mysterie-object", "wat is dit?", "raadsel-afbeelding"],
+      "alias": [
+        "mysterie-object",
+        "wat is dit?",
+        "raadsel-afbeelding"
+      ],
       "categorie": "aandachtrichter",
       "kort": "Je toont een foto of voorwerp zonder uitleg, en leerlingen raden wat het is en wat het met de les te maken heeft.",
       "startzin": "Kijk goed. Wat zie je? Wat denk je dat het is? En wat heeft het volgens jou met de les van vandaag te maken?",
@@ -196,33 +413,89 @@
         "Hoor een paar antwoorden.",
         "Onthul de context en koppel aan het lesdoel."
       ],
-      "duur": { "min": 2, "max": 5 },
-      "groepsvorm": ["klas", "tweetal"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["foto op het digibord of voorwerp"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 2,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "foto op het digibord of voorwerp"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["opening"],
-      "denkniveau": ["begrijpen", "analyseren"],
-      "differentiatie": ["interesse"],
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "interesse"
+      ],
       "richting": "nvt",
-      "doeldomein": ["kwalificatie", "persoonsvorming"],
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Volledig visueel." },
-        "dyscalculie": { "past": "goed", "tip": "Geen rekenwerk." },
-        "nt2": { "past": "goed", "tip": "Beeld nodigt uit tot praten; geef zinsstarters." },
-        "faalangst": { "past": "goed", "tip": "Raden kan niet fout." },
-        "structuur": { "past": "goed", "tip": "Drie vaste vragen." },
-        "hoogbegaafd": { "past": "goed", "tip": "Vraag om meerdere hypotheses." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Volledig visueel."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Beeld nodigt uit tot praten; geef zinsstarters."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Raden kan niet fout."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Drie vaste vragen."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om meerdere hypotheses."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["ontdekken", "relatie", "uitleggen"],
+      "docentstijl": [
+        "ontdekken",
+        "relatie",
+        "uitleggen"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": true,
       "valkuilen": [
-        { "valkuil": "Het raden duurt te lang.", "oplossing": "Maximaal drie minuten, dan onthullen." }
+        {
+          "valkuil": "Het raden duurt te lang.",
+          "oplossing": "Maximaal drie minuten, dan onthullen."
+        }
       ],
       "varianten": {
         "vmbo": "Herkenbaar voorwerp uit het dagelijks leven.",
@@ -233,19 +506,34 @@
         "verdieping": "Meerdere hypotheses onderbouwen."
       },
       "vakvoorbeelden": [
-        { "vak": "Geschiedenis", "voorbeeld": "Een oude foto van de markt in Gulpen: wanneer is dit, en wat is er veranderd?" },
-        { "vak": "Biologie", "voorbeeld": "Een uitvergrote foto van een insectenoog." },
-        { "vak": "Aardrijkskunde", "voorbeeld": "Een luchtfoto van een mergelgroeve." }
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een oude foto van de markt in Gulpen: wanneer is dit, en wat is er veranderd?"
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Een uitvergrote foto van een insectenoog."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Een luchtfoto van een mergelgroeve."
+        }
       ],
       "waarom": "Een raadsel zonder context wekt nieuwsgierigheid en laat leerlingen voorkennis inzetten. Het is een praktijkwerkvorm; nieuwsgierigheid als motor van aandacht wordt in onderzoek genoemd, maar het effect van deze opener zelf is niet apart onderzocht.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["digibord-opener"]
+      "materiaal": [
+        "digibord-opener"
+      ]
     },
     {
       "id": "regionaal-nieuwsitem",
       "naam": "Nieuwsitem uit de regio",
-      "alias": ["actualiteit", "nieuws van de dag", "wat heeft dit met jou te maken?"],
+      "alias": [
+        "actualiteit",
+        "nieuws van de dag",
+        "wat heeft dit met jou te maken?"
+      ],
       "categorie": "aandachtrichter",
       "kort": "Je opent met een kort nieuwsbericht uit het Heuvelland, Limburg of de Euregio en vraagt: wat heeft dit met jou en met de les te maken?",
       "startzin": "Dit stond deze week in het nieuws, hier in de buurt. Lees de kop en de eerste alinea. Wat heeft dit met jou te maken? En met wat we vandaag gaan leren?",
@@ -256,34 +544,98 @@
         "Hoor 2-3 reacties, ook verschillende perspectieven.",
         "Koppel aan het lesdoel en de relevantie."
       ],
-      "duur": { "min": 3, "max": 6 },
-      "groepsvorm": ["tweetal", "klas"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["nieuwsbericht op het digibord"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 3,
+        "max": 6
+      },
+      "groepsvorm": [
+        "tweetal",
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "nieuwsbericht op het digibord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["opening"],
-      "denkniveau": ["begrijpen", "analyseren", "evalueren"],
-      "differentiatie": ["interesse"],
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren",
+        "evalueren"
+      ],
+      "differentiatie": [
+        "interesse"
+      ],
       "richting": "nvt",
-      "doeldomein": ["kwalificatie", "socialisatie", "persoonsvorming"],
-      "burgerschap": ["gemeenschappelijkheid", "rechtvaardigheid"],
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [
+        "gemeenschappelijkheid",
+        "rechtvaardigheid"
+      ],
       "ondersteuning": {
-        "dyslexie": { "past": "aanpassen", "tip": "Lees de tekst voor." },
-        "dyscalculie": { "past": "goed", "tip": "Bij cijfers in het nieuws: rond af." },
-        "nt2": { "past": "aanpassen", "tip": "Kies een bericht met foto; leg moeilijke woorden uit." },
-        "faalangst": { "past": "goed", "tip": "Eerst in tweetallen." },
-        "structuur": { "past": "goed", "tip": "Vaste vraag." },
-        "hoogbegaafd": { "past": "goed", "tip": "Vraag naar verschillende perspectieven of belangen." }
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Lees de tekst voor."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Bij cijfers in het nieuws: rond af."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Kies een bericht met foto; leg moeilijke woorden uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Eerst in tweetallen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste vraag."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag naar verschillende perspectieven of belangen."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["relatie", "ontdekken", "uitleggen"],
+      "docentstijl": [
+        "relatie",
+        "ontdekken",
+        "uitleggen"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": true,
       "valkuilen": [
-        { "valkuil": "Het gesprek dwaalt af naar het nieuws zelf.", "oplossing": "Timer van 5 minuten; daarna de brug naar het lesdoel." },
-        { "valkuil": "Gevoelig nieuws.", "oplossing": "Kies bewust; bij gevoelige onderwerpen de mentor of collega's betrekken." }
+        {
+          "valkuil": "Het gesprek dwaalt af naar het nieuws zelf.",
+          "oplossing": "Timer van 5 minuten; daarna de brug naar het lesdoel."
+        },
+        {
+          "valkuil": "Gevoelig nieuws.",
+          "oplossing": "Kies bewust; bij gevoelige onderwerpen de mentor of collega's betrekken."
+        }
       ],
       "varianten": {
         "vmbo": "Bericht met foto, één vraag.",
@@ -294,19 +646,34 @@
         "verdieping": "Perspectieven en belangen benoemen."
       },
       "vakvoorbeelden": [
-        { "vak": "Economie", "voorbeeld": "Een bericht over een winkel in een dorp in het Heuvelland die sluit." },
-        { "vak": "Aardrijkskunde", "voorbeeld": "Een bericht over hoogwater in de Geul." },
-        { "vak": "Duits", "voorbeeld": "Een kort Duitstalig bericht uit Aken." }
+        {
+          "vak": "Economie",
+          "voorbeeld": "Een bericht over een winkel in een dorp in het Heuvelland die sluit."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Een bericht over hoogwater in de Geul."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Een kort Duitstalig bericht uit Aken."
+        }
       ],
       "waarom": "Een herkenbaar voorbeeld uit de eigen omgeving maakt de relevantie van theorie zichtbaar, een leidend principe uit het schoolplan, en verbindt de les met de pijler regionale verbinding. Dit is een praktijkkeuze; specifiek onderzoek naar nieuwsopeners is er nauwelijks.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["digibord-opener"]
+      "materiaal": [
+        "digibord-opener"
+      ]
     },
     {
       "id": "verrassend-getal",
       "naam": "Een getal of grafiek die verbaast",
-      "alias": ["verrassend feit", "getal van de dag", "raar maar waar"],
+      "alias": [
+        "verrassend feit",
+        "getal van de dag",
+        "raar maar waar"
+      ],
       "categorie": "aandachtrichter",
       "kort": "Je toont één getal of één grafiek zonder uitleg en laat leerlingen raden wat het betekent.",
       "startzin": "Dit getal staat op het bord. Waar zou het over gaan? Je mag drie keer raden met je buur.",
@@ -317,33 +684,88 @@
         "Onthul de bron en betekenis.",
         "Vraag: waarom verrast dit? Wat zegt het over het onderwerp?"
       ],
-      "duur": { "min": 2, "max": 5 },
-      "groepsvorm": ["tweetal", "klas"],
-      "ruimte": { "M": true, "L": true, "plein": false, "stilte": false, "beweging": false },
-      "middelen": { "lijst": ["getal of grafiek op het digibord, met bron"], "laptop": "nee", "telefoon": false },
+      "duur": {
+        "min": 2,
+        "max": 5
+      },
+      "groepsvorm": [
+        "tweetal",
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "getal of grafiek op het digibord, met bron"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
       "voorbereiding": "kort",
-      "lesfase": ["opening"],
-      "denkniveau": ["begrijpen", "analyseren"],
-      "differentiatie": ["interesse"],
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "interesse"
+      ],
       "richting": "nvt",
-      "doeldomein": ["kwalificatie"],
+      "doeldomein": [
+        "kwalificatie"
+      ],
       "burgerschap": [],
       "ondersteuning": {
-        "dyslexie": { "past": "goed", "tip": "Weinig tekst." },
-        "dyscalculie": { "past": "aanpassen", "tip": "Kies ronde getallen of een duidelijke grafiek." },
-        "nt2": { "past": "goed", "tip": "Getallen zijn taalarm." },
-        "faalangst": { "past": "goed", "tip": "Raden in tweetallen." },
-        "structuur": { "past": "goed", "tip": "Kort en helder." },
-        "hoogbegaafd": { "past": "goed", "tip": "Vraag naar de betrouwbaarheid van de bron." }
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Weinig tekst."
+        },
+        "dyscalculie": {
+          "past": "aanpassen",
+          "tip": "Kies ronde getallen of een duidelijke grafiek."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Getallen zijn taalarm."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Raden in tweetallen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en helder."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag naar de betrouwbaarheid van de bron."
+        }
       },
       "energie": "gemiddeld",
-      "docentstijl": ["uitleggen", "ontdekken", "digitaal"],
+      "docentstijl": [
+        "uitleggen",
+        "ontdekken",
+        "digitaal"
+      ],
       "instapniveau": 1,
-      "vereist": { "onderwijsassistent": false, "plein": false },
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
       "beweegmoment": false,
       "perspectieven": false,
       "valkuilen": [
-        { "valkuil": "Een getal zonder betrouwbare bron.", "oplossing": "Gebruik bijvoorbeeld CBS of een officiële bron en toon die." }
+        {
+          "valkuil": "Een getal zonder betrouwbare bron.",
+          "oplossing": "Gebruik bijvoorbeeld CBS of een officiële bron en toon die."
+        }
       ],
       "varianten": {
         "vmbo": "Rond getal over iets herkenbaars.",
@@ -354,14 +776,4418 @@
         "verdieping": "Bron beoordelen."
       },
       "vakvoorbeelden": [
-        { "vak": "Wiskunde", "voorbeeld": "Een grafiek van het aantal inwoners van een Heuvellandgemeente door de jaren heen." },
-        { "vak": "Biologie", "voorbeeld": "Het aantal bacteriën op je handen." },
-        { "vak": "Geschiedenis", "voorbeeld": "Het aantal mensen dat in 1900 in de landbouw werkte." }
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Een grafiek van het aantal inwoners van een Heuvellandgemeente door de jaren heen."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Het aantal bacteriën op je handen."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Het aantal mensen dat in 1900 in de landbouw werkte."
+        }
       ],
       "waarom": "Een verrassend gegeven trekt de aandacht en nodigt uit tot denken. Dit is een praktijkopener; let op dat het getal klopt en de bron zichtbaar is, zodat het ook bijdraagt aan kritisch omgaan met informatie.",
       "bewijs": "praktijk",
       "bronnen": [],
-      "materiaal": ["digibord-opener"]
+      "materiaal": [
+        "digibord-opener"
+      ]
+    },
+    {
+      "id": "raadsel-van-de-dag",
+      "naam": "Raadsel van de dag",
+      "alias": [
+        "puzzel",
+        "denkertje"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Een kort raadsel of denkpuzzel op het bord dat aansluit bij de stof en dat leerlingen bij binnenkomst meteen aan het denken zet.",
+      "startzin": "Op het bord staat het raadsel van vandaag. Je hebt twee minuten. Weet je het? Schrijf het op en zeg het nog niet hardop.",
+      "stappen": [
+        "Kies of bedenk een raadsel dat met het onderwerp te maken heeft.",
+        "Zet het op het bord voordat de leerlingen binnenkomen.",
+        "Geef twee minuten stil denken; wie het weet, schrijft het op.",
+        "Laat één of twee leerlingen hun redenering uitleggen, niet alleen het antwoord.",
+        "Leg in één zin het verband met het lesdoel."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "raadsel op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "toepassen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "relatie",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het raadsel is leuk maar heeft niets met de les te maken.",
+          "oplossing": "Kies een raadsel waarbij het denkwerk lijkt op wat de les vraagt."
+        },
+        {
+          "valkuil": "Een paar snelle leerlingen roepen het antwoord.",
+          "oplossing": "Spreek af: opschrijven, niet roepen. Je vraagt daarna naar de redenering."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een raadsel met een plaatje erbij en een concrete situatie.",
+        "havo": "Een raadsel met een kleine wending.",
+        "vwo": "Een raadsel met meerdere oplossingen; vraag welke het sterkst is.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "'Ik ben een getal. Verdubbel me en tel er drie bij op, dan krijg je 17. Wie ben ik?' als opstap naar vergelijkingen."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "'Wat heeft een hoofd en een staart, maar geen lijf?' (een munt) als opstap naar beeldspraak."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "'Ik adem niet, maar zonder mij adem jij ook niet. Wat ben ik?' (een plant) bij fotosynthese."
+        }
+      ],
+      "waarom": "Een raadsel maakt nieuwsgierig en zet leerlingen meteen aan het denken. Er is weinig onderzoek naar raadsels als lesopening; de waarde zit in de praktijk: de les begint direct en rustig.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "mysterie-voorwerp",
+      "naam": "Mysterievoorwerp",
+      "alias": [
+        "voorwerp in een tas",
+        "wat zit erin"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je neemt een echt voorwerp mee dat met de les te maken heeft en laat leerlingen raden wat het is of waarvoor het dient.",
+      "startzin": "Ik heb iets meegenomen. Kijk goed, en schrijf op: wat denk jij dat dit is, en waarvoor zou je het gebruiken?",
+      "stappen": [
+        "Neem een voorwerp mee dat iets met het onderwerp te maken heeft (of een foto als het niet mee kan).",
+        "Laat het zien, of laat het rondgaan, zonder uitleg.",
+        "Leerlingen schrijven een gok op en waarom ze dat denken.",
+        "Hoor drie gokken.",
+        "Onthul het en maak de brug naar het lesdoel."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "een voorwerp of foto daarvan"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "relatie"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het voorwerp gaat de hele les rond en leidt af.",
+          "oplossing": "Laat het één keer zien en leg het daarna weg op je bureau."
+        },
+        {
+          "valkuil": "Leerlingen raden maar wat.",
+          "oplossing": "Vraag steeds: waaraan zie je dat?"
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een herkenbaar voorwerp uit het dagelijks leven of een beroep.",
+        "havo": "Een voorwerp met een verrassende functie.",
+        "vwo": "Een historisch of wetenschappelijk voorwerp; vraag naar de redenering.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een oude strijkbout of een munt met een gulden: hoe zag het dagelijks leven eruit?"
+        },
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Een thermoskan: hoe houdt dit je thee warm?"
+        },
+        {
+          "vak": "Techniek",
+          "voorbeeld": "Een onderdeel van een fiets: wat doet dit en wat gebeurt er als het kapotgaat?"
+        }
+      ],
+      "waarom": "Een echt voorwerp is concreet en trekt de aandacht, vooral bij leerlingen die minder uit tekst halen. Het bewijs is praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "twee-waar-een-niet",
+      "naam": "Twee waar, één niet",
+      "alias": [
+        "twee waarheden en een leugen",
+        "welke klopt niet"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je zet drie uitspraken over het onderwerp op het bord; twee kloppen en één niet. Leerlingen kiezen welke niet waar is.",
+      "startzin": "Op het bord staan drie uitspraken. Twee zijn waar, één niet. Welke is niet waar? Steek straks één, twee of drie vingers op.",
+      "stappen": [
+        "Schrijf drie korte uitspraken over het onderwerp; maak de onware geloofwaardig.",
+        "Laat leerlingen 30 seconden alleen nadenken.",
+        "Iedereen steekt tegelijk één, twee of drie vingers op.",
+        "Laat twee leerlingen met een verschillende keuze uitleggen waarom.",
+        "Onthul het antwoord; je komt er in de les op terug."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "drie uitspraken op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen",
+        "evalueren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "structuur",
+        "ontdekken",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De onware uitspraak is te makkelijk te herkennen.",
+          "oplossing": "Gebruik een veelvoorkomende misvatting als onware uitspraak."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Korte, concrete uitspraken met een plaatje.",
+        "havo": "Uitspraken met een kleine valkuil.",
+        "vwo": "Uitspraken waarbij precisie het verschil maakt.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "'De Maas ontspringt in Frankrijk.' 'Gulpen ligt in de Peel.' 'Limburg is de enige provincie met echte heuvels.'"
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "'Water kookt altijd bij 100 °C.' 'IJs is lichter dan water.' 'Zout lost op in water.'"
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Drie zinnen, waarvan één een veelgemaakte grammaticafout bevat."
+        }
+      ],
+      "waarom": "Kiezen tussen uitspraken activeert voorkennis en maakt misvattingen zichtbaar. Ophalen uit het geheugen helpt bij onthouden (Roediger en Karpicke); de vorm zelf is praktijk.",
+      "bewijs": "praktijk",
+      "bronnen": [
+        "roediger-karpicke-2006"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "wat-is-hier-gebeurd",
+      "naam": "Wat is hier gebeurd?",
+      "alias": [
+        "gevolg zonder oorzaak",
+        "detectivevraag"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je laat een beeld of situatie zien van een gevolg en leerlingen bedenken welke oorzaak erachter zit.",
+      "startzin": "Kijk naar deze foto. Er is hier iets gebeurd. Wat denk jij dat er gebeurd is, en waaraan zie je dat?",
+      "stappen": [
+        "Kies een beeld van een gevolg: een overstroming, een gebroken brug, een lege winkelstraat.",
+        "Toon het zonder uitleg.",
+        "Leerlingen schrijven twee mogelijke oorzaken op.",
+        "Verzamel oorzaken op het bord.",
+        "Zeg: vandaag zoeken we uit welke klopt."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "foto"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "divergent",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen blijven hangen in één verklaring.",
+          "oplossing": "Vraag om minstens twee verschillende oorzaken."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een duidelijk beeld met één voor de hand liggende oorzaak.",
+        "havo": "Een beeld met meerdere mogelijke oorzaken.",
+        "vwo": "Een beeld waarbij oorzaak en gevolg door elkaar lopen.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "De wateroverlast in Valkenburg in 2021: wat is hier gebeurd?"
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Een foto van een lange rij bij een tankstation."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Een foto van een bos met veel dode bomen."
+        }
+      ],
+      "waarom": "Redeneren van gevolg naar oorzaak is een kernvaardigheid in veel vakken. Een beeld als start maakt de vraag concreet. Praktijkervaring, geen apart onderzoek.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "kort-filmfragment",
+      "naam": "Kort filmfragment",
+      "alias": [
+        "videofragment",
+        "clip"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je toont een fragment van hooguit twee minuten met één kijkvraag die leerlingen vooraf krijgen.",
+      "startzin": "Je ziet zo een kort fragment. Let op één ding: … Na het fragment schrijf je je antwoord op.",
+      "stappen": [
+        "Kies een fragment van 30 tot 120 seconden dat direct bij het lesdoel past.",
+        "Geef vooraf één kijkvraag en zet die op het bord.",
+        "Speel het fragment af.",
+        "Leerlingen schrijven hun antwoord op en vergelijken met de buur.",
+        "Bespreek kort en koppel aan het lesdoel."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "filmfragment"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Bewegend beeld is toegankelijk; zet de kijkvraag ook op het bord."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondertiteling aan, en de kijkvraag in eenvoudige taal."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "digitaal"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het fragment duurt te lang of de techniek werkt niet.",
+          "oplossing": "Zet het fragment klaar op het juiste begintijdstip en test het voor de les."
+        },
+        {
+          "valkuil": "Leerlingen kijken passief.",
+          "oplossing": "Geef altijd een kijkvraag vooraf."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een herkenbaar fragment uit het dagelijks leven.",
+        "havo": "Een fragment uit nieuws of documentaire.",
+        "vwo": "Een fragment met een standpunt; vraag naar de bedoeling van de maker.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Maatschappijleer",
+          "voorbeeld": "Een fragment uit het jeugdjournaal: wie komen er aan het woord?"
+        },
+        {
+          "vak": "Lichamelijke opvoeding",
+          "voorbeeld": "Slow motion van een sprintstart: wat doen de armen?"
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Een reclamefilmpje in het Duits: welke drie woorden herken je?"
+        }
+      ],
+      "waarom": "Beeld en geluid samen kunnen begrip ondersteunen als ze goed op elkaar aansluiten (Mayer). Een kijkvraag vooraf voorkomt dat kijken passief wordt.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "mayer-2009"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "geluidsfragment",
+      "naam": "Raad het geluid",
+      "alias": [
+        "geluid zonder beeld",
+        "luisterfragment"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je laat een geluid of geluidsfragment horen zonder beeld en leerlingen raden wat het is en wat het met de les te maken heeft.",
+      "startzin": "Ogen dicht, of kijk naar je tafel. Luister. Wat hoor je? Schrijf het op zodra het stil is.",
+      "stappen": [
+        "Kies een geluid dat bij het onderwerp past: een machine, een stem, een dier, muziek uit een tijdperk.",
+        "Vraag leerlingen te luisteren zonder te praten.",
+        "Speel het geluid af (10 tot 30 seconden).",
+        "Leerlingen schrijven op wat ze denken te horen.",
+        "Onthul en leg het verband met de les."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord met geluid",
+          "geluidsfragment"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Luisteren vraagt geen leeswerk."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Een geluid is taalarm; geef woorden erbij na afloop."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag wat er nog meer te horen is."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "relatie"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het geluid is te zacht in het lokaal.",
+          "oplossing": "Test het volume voor de les."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Herkenbare geluiden uit de omgeving.",
+        "havo": "Een geluid met een tweede laag (een sfeer, een tijdperk).",
+        "vwo": "Een fragment waarbij je moet afleiden waar en wanneer het is opgenomen.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Muziek",
+          "voorbeeld": "Een kort stuk muziek: uit welke eeuw komt dit?"
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een oude radiotoespraak: wie spreekt hier en wanneer?"
+        },
+        {
+          "vak": "Frans",
+          "voorbeeld": "Een omroepbericht op een Frans station: waar ben je?"
+        }
+      ],
+      "waarom": "Een geluid zonder beeld richt de aandacht en vraagt leerlingen om actief te luisteren. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "eerste-zin",
+      "naam": "De eerste zin",
+      "alias": [
+        "openingszin",
+        "begin van een tekst"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je leest alleen de eerste zin van een tekst, verhaal of bron voor en leerlingen voorspellen waar het over gaat.",
+      "startzin": "Ik lees één zin voor. Alleen de eerste. Waar denk jij dat deze tekst over gaat?",
+      "stappen": [
+        "Kies een tekst of bron die je in de les gebruikt.",
+        "Lees of toon alleen de eerste zin.",
+        "Leerlingen schrijven op waar het volgens hen over gaat en waarom.",
+        "Hoor twee of drie voorspellingen.",
+        "Lees verder in de les en check de voorspellingen."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "tekst of bron"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "uitleggen",
+        "ontdekken",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De eerste zin geeft te weinig houvast.",
+          "oplossing": "Kies een zin met een concreet detail of geef de titel erbij."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een eerste zin met een concrete situatie.",
+        "havo": "Een eerste zin uit een zakelijke tekst.",
+        "vwo": "Een eerste zin die op het verkeerde been zet.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "De eerste zin van een kortverhaal of column."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "De eerste zin van een brief uit 1944."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "De eerste zin van een artikel over een nieuwe diersoort."
+        }
+      ],
+      "waarom": "Voorspellen voor het lezen is een bekende leesstrategie en zorgt dat leerlingen met een vraag in hun hoofd gaan lezen. Praktijk in leesonderwijs.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "dilemma",
+      "naam": "Dilemma",
+      "alias": [
+        "wat zou jij doen",
+        "keuzevraag"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je legt een kort dilemma voor zonder goed of fout antwoord; leerlingen kiezen een kant en geven één reden.",
+      "startzin": "Stel je voor: … Wat zou jij doen, A of B? Je hoeft het nog niet te zeggen, schrijf alleen je keuze en één reden op.",
+      "stappen": [
+        "Formuleer een herkenbaar dilemma met twee duidelijke keuzes.",
+        "Laat iedereen eerst alleen kiezen en een reden opschrijven.",
+        "Laat met een hand of kaart zien wie A en wie B kiest.",
+        "Hoor een reden van beide kanten.",
+        "Zeg welke kennis uit de les helpt om een betere keuze te maken."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 6
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "dilemma op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "evalueren"
+      ],
+      "differentiatie": [],
+      "richting": "divergent",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming",
+        "socialisatie"
+      ],
+      "burgerschap": [
+        "rechtvaardigheid"
+      ],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Er is geen fout antwoord; je mag je keuze voor je houden."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie",
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "valkuilen": [
+        {
+          "valkuil": "Het gesprek wordt een discussie die de hele les duurt.",
+          "oplossing": "Zeg vooraf hoe lang het duurt en sluit af met: we komen hier aan het eind op terug."
+        },
+        {
+          "valkuil": "Een dilemma raakt persoonlijk.",
+          "oplossing": "Kies een dilemma over een fictief persoon, niet over de leerlingen zelf."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een dilemma uit het dagelijks leven of een beroep.",
+        "havo": "Een maatschappelijk dilemma.",
+        "vwo": "Een dilemma waarbij beide keuzes nadelen hebben; vraag naar de afweging.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Maatschappijleer",
+          "voorbeeld": "Je ziet een klasgenoot iets stelen dat niet veel waard is. Meld je het?"
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Kies je een goedkope trui uit een verre fabriek of een dure uit Europa?"
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Mag je een dier gebruiken om een medicijn te testen?"
+        }
+      ],
+      "waarom": "Een dilemma brengt waarden en perspectieven in beeld en past bij burgerschap. Het maakt duidelijk waarom de kennis uit de les ertoe doet. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "ingezoomde-foto",
+      "naam": "Ingezoomde foto",
+      "alias": [
+        "zoom uit",
+        "detail raden"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je toont een sterk ingezoomd detail van een afbeelding en zoomt in stappen uit; leerlingen raden steeds wat het is.",
+      "startzin": "Je ziet een klein stukje van een foto. Wat zou het kunnen zijn? Ik zoom zo verder uit.",
+      "stappen": [
+        "Kies een afbeelding die bij het onderwerp past.",
+        "Maak drie of vier dia’s: van een detail naar het hele beeld.",
+        "Laat bij elke dia leerlingen hun gok opschrijven.",
+        "Vraag bij elke stap: wat zie je nu wat je eerst niet zag?",
+        "Toon het hele beeld en koppel aan het lesdoel."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "afbeelding in stappen"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het eerste detail is te herkenbaar.",
+          "oplossing": "Begin bij een detail dat op veel dingen kan lijken."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Drie stappen, met een duidelijk herkenbaar eindbeeld.",
+        "havo": "Vier stappen; vraag naar aanwijzingen.",
+        "vwo": "Een bron (schilderij, kaart) waarbij de context de betekenis verandert.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Een microscoopbeeld van een bladcel, uitzoomend naar het blad."
+        },
+        {
+          "vak": "Kunst",
+          "voorbeeld": "Een detail van een schilderij, uitzoomend naar het hele werk."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Een satellietbeeld van een akker, uitzoomend naar Zuid-Limburg."
+        }
+      ],
+      "waarom": "Stap voor stap meer informatie geven houdt de aandacht vast en oefent waarnemen. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "grafiek-zonder-titel",
+      "naam": "Grafiek zonder titel",
+      "alias": [
+        "wat laat dit zien",
+        "raad de grafiek"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je toont een grafiek of tabel zonder titel en zonder namen bij de assen; leerlingen raden wat hij laat zien.",
+      "startzin": "Hier zie je een grafiek, maar ik heb de titel weggehaald. Wat zou hij kunnen laten zien? Waaraan zie je dat?",
+      "stappen": [
+        "Kies een grafiek die bij het onderwerp past en haal titel en asnamen weg.",
+        "Toon hem zonder uitleg.",
+        "Leerlingen bedenken in tweetallen wat erop staat.",
+        "Verzamel twee of drie ideeën.",
+        "Onthul titel en assen en bespreek wat klopte."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "grafiek"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "aanpassen",
+          "tip": "Kies een eenvoudige lijngrafiek en vraag naar de vorm, niet naar getallen."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "uitleggen"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen weten niet waar ze moeten beginnen.",
+          "oplossing": "Vraag eerst: waar gaat het omhoog, waar omlaag?"
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een eenvoudige lijn met één duidelijke piek.",
+        "havo": "Een grafiek met twee lijnen.",
+        "vwo": "Een grafiek die op meerdere manieren te lezen is.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Economie",
+          "voorbeeld": "Een lijn met de prijs van energie door de jaren heen."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Een klimaatgrafiek: welke plaats zou dit zijn?"
+        },
+        {
+          "vak": "Lichamelijke opvoeding",
+          "voorbeeld": "Een hartslaggrafiek tijdens een les gym."
+        }
+      ],
+      "waarom": "Grafieken lezen is een vaardigheid in veel vakken. Door de titel weg te laten, gaan leerlingen echt kijken. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "wie-zei-het",
+      "naam": "Wie zei het?",
+      "alias": [
+        "citaat raden",
+        "uitspraak"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je zet een uitspraak of citaat op het bord en leerlingen raden wie het zei, wanneer en waarom.",
+      "startzin": "Lees deze uitspraak. Wie zou dit gezegd hebben, en wanneer? Schrijf je gok op.",
+      "stappen": [
+        "Kies een citaat dat bij het onderwerp past.",
+        "Zet het op het bord zonder naam.",
+        "Leerlingen raden de spreker en de tijd en geven een aanwijzing uit de tekst.",
+        "Hoor drie gokken.",
+        "Onthul en vraag: verandert dat hoe je het citaat leest?"
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "citaat op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "uitleggen"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "valkuilen": [
+        {
+          "valkuil": "Een citaat op internet blijkt niet echt van die persoon.",
+          "oplossing": "Controleer de herkomst; twijfel je, kies een ander citaat."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een citaat van een bekend persoon uit de leefwereld.",
+        "havo": "Een historisch of wetenschappelijk citaat.",
+        "vwo": "Een citaat dat in een andere tijd iets anders betekende.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een uitspraak van een politicus uit de jaren dertig."
+        },
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Een uitspraak van een natuurkundige over licht."
+        },
+        {
+          "vak": "Levensbeschouwing",
+          "voorbeeld": "Een uitspraak over vrijheid uit een andere cultuur."
+        }
+      ],
+      "waarom": "Een citaat koppelt een idee aan een persoon en een tijd, en vraagt leerlingen om context mee te wegen. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "welke-hoort-er-niet-bij",
+      "naam": "Welke hoort er niet bij?",
+      "alias": [
+        "odd one out",
+        "de vreemde eend"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je toont vier woorden, getallen of beelden; leerlingen kiezen welke er niet bij hoort en waarom. Vaak is meer dan één antwoord goed.",
+      "startzin": "Vier dingen op het bord. Eén hoort er niet bij. Welke, en waarom? Er kan meer dan één goed antwoord zijn.",
+      "stappen": [
+        "Kies vier begrippen, getallen of beelden uit de stof.",
+        "Zet ze op het bord.",
+        "Leerlingen kiezen alleen en schrijven een reden op.",
+        "Hoor verschillende keuzes met redenen.",
+        "Benoem welke kenmerken je in de les gaat gebruiken."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "vier items op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "divergent",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen zoeken naar het ene goede antwoord.",
+          "oplossing": "Zeg vooraf dat elke goed onderbouwde keuze telt."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Vier duidelijke begrippen met één opvallende uitzondering.",
+        "havo": "Vier begrippen met meerdere mogelijke uitzonderingen.",
+        "vwo": "Vraag om voor elk van de vier een reden te vinden.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "9, 16, 25, 30: welke hoort er niet bij?"
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Walvis, haai, dolfijn, zeehond."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "lopen, liep, gelopen, loper."
+        }
+      ],
+      "waarom": "Vergelijken en classificeren dwingt leerlingen naar kenmerken te kijken. Doordat meerdere antwoorden goed kunnen zijn, durven ook voorzichtige leerlingen mee te doen. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "schatvraag",
+      "naam": "Schatvraag",
+      "alias": [
+        "fermivraag",
+        "hoeveel denk je"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je stelt een vraag waar niemand het precieze antwoord op weet en laat leerlingen een onderbouwde schatting maken.",
+      "startzin": "Hoeveel … zijn er, denk je? Je hoeft het niet precies te weten. Schrijf je schatting op en hoe je eraan komt.",
+      "stappen": [
+        "Bedenk een schatvraag die met het onderwerp te maken heeft.",
+        "Leerlingen schrijven een schatting en een korte redenering op.",
+        "Laat een paar schattingen op een getallenlijn op het bord zetten.",
+        "Bespreek één redenering.",
+        "Geef het echte antwoord en koppel aan de les."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "vraag op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "aanpassen",
+          "tip": "Laat ruw schatten met ronde getallen; de redenering telt, niet de som."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen gokken zonder te denken.",
+          "oplossing": "Vraag altijd: hoe kom je daarop?"
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een schatvraag over iets wat ze kunnen zien (hoeveel tegels in de aula).",
+        "havo": "Een vraag die een tussenstap vraagt.",
+        "vwo": "Een fermivraag met meerdere aannames.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Hoeveel liter water gaat er in dit lokaal?"
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Hoeveel mensen wonen er in Gulpen-Wittem?"
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Hoe vaak klopt je hart in één dag?"
+        }
+      ],
+      "waarom": "Schatten vraagt om getalbegrip en redeneren, en iedereen kan meedoen. Praktijkervaring, vooral in reken- en bètavakken.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "toen-en-nu",
+      "naam": "Toen en nu",
+      "alias": [
+        "vergelijk de tijd",
+        "oud en nieuw"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je zet een oude en een nieuwe afbeelding naast elkaar en leerlingen benoemen wat er veranderd is en wat niet.",
+      "startzin": "Links zie je hoe het vroeger was, rechts hoe het nu is. Wat is er veranderd? Wat is hetzelfde gebleven?",
+      "stappen": [
+        "Zoek twee afbeeldingen van hetzelfde, uit verschillende tijden.",
+        "Toon ze naast elkaar.",
+        "Leerlingen noteren twee veranderingen en één overeenkomst.",
+        "Verzamel antwoorden.",
+        "Vraag: waarom zou dit veranderd zijn? Dat zoeken we vandaag uit."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "twee afbeeldingen"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "uitleggen"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen noemen alleen oppervlakkige verschillen.",
+          "oplossing": "Vraag door: wat zegt dat over hoe mensen leefden?"
+        }
+      ],
+      "varianten": {
+        "vmbo": "Twee foto’s van een herkenbare plek in de buurt.",
+        "havo": "Afbeeldingen met een maatschappelijke verandering.",
+        "vwo": "Afbeeldingen waarbij je oorzaken moet afleiden.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "De markt van Gulpen rond 1920 en nu."
+        },
+        {
+          "vak": "Techniek",
+          "voorbeeld": "Een telefoon uit 1980 en een laptop van nu: wat doet hetzelfde werk?"
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Een luchtfoto van een dorp in 1950 en nu."
+        }
+      ],
+      "waarom": "Vergelijken over tijd maakt verandering en continuïteit zichtbaar, een kernbegrip in mens- en maatschappijvakken. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "hoe-zou-jij-het-oplossen",
+      "naam": "Hoe zou jij het oplossen?",
+      "alias": [
+        "probleem vooraf",
+        "productieve worsteling"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je legt vóór de uitleg een echt probleem voor en laat leerlingen kort zelf een aanpak bedenken.",
+      "startzin": "Hier is een probleem. Je hebt de uitleg nog niet gehad, dus het mag fout gaan. Hoe zou jij het aanpakken?",
+      "stappen": [
+        "Kies een probleem dat de les gaat oplossen.",
+        "Laat leerlingen twee minuten alleen een aanpak bedenken.",
+        "Laat ze kort vergelijken met de buur.",
+        "Hoor twee aanpakken zonder te oordelen.",
+        "Zeg: in de uitleg zie je een aanpak die altijd werkt."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 6
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "probleem op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Zeg hardop dat fout gaan hier de bedoeling is; niemand hoeft de eigen aanpak te delen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen raken gefrustreerd.",
+          "oplossing": "Houd het kort en zeg dat het niet erg is als het niet lukt."
+        },
+        {
+          "valkuil": "Het probleem is te moeilijk om zelfs te beginnen.",
+          "oplossing": "Kies een probleem waar iedereen een eerste stap in kan zetten."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een concreet probleem uit het dagelijks leven.",
+        "havo": "Een probleem met meerdere aanpakken.",
+        "vwo": "Een probleem waarbij leerlingen eerst moeten bepalen welke informatie ontbreekt.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Je wilt een vloer betegelen die geen rechthoek is. Hoeveel tegels heb je nodig?"
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Hoe krijg je zout terug uit zout water?"
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Je hebt 50 euro voor een klassenfeest voor 25 leerlingen. Hoe verdeel je het?"
+        }
+      ],
+      "waarom": "Kort zelf worstelen voor de uitleg kan de uitleg daarna beter laten landen, maar alleen als het kort blijft en de uitleg volgt. Kirschner en anderen waarschuwen voor te veel ontdekken zonder begeleiding; daarom is dit een opening, geen vervanging van uitleg.",
+      "bewijs": "beperkt",
+      "bronnen": [
+        "kirschner-2006"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "misvatting-stelling",
+      "naam": "Klopt dit?",
+      "alias": [
+        "misvatting",
+        "mythe of feit"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je zet een veelvoorkomende misvatting als stelling op het bord en laat leerlingen kiezen: klopt of klopt niet.",
+      "startzin": "Op het bord staat een uitspraak die veel mensen geloven. Klopt hij, of niet? Duim omhoog of omlaag, tegelijk, na drie.",
+      "stappen": [
+        "Kies een misvatting die leerlingen vaak hebben over dit onderwerp.",
+        "Zet hem als stelling op het bord.",
+        "Iedereen kiest tegelijk met een duim.",
+        "Hoor één leerling van elke kant.",
+        "Zeg: aan het eind van de les weet je het zeker."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "stelling op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "evalueren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "uitleggen",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Je bevestigt per ongeluk de misvatting door hem groot op het bord te zetten.",
+          "oplossing": "Kom er in de les expliciet op terug en zet de juiste uitspraak ernaast."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een eenvoudige, veelgehoorde misvatting.",
+        "havo": "Een misvatting die half waar is.",
+        "vwo": "Vraag hoe de misvatting zou kunnen ontstaan.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "'Zware voorwerpen vallen sneller dan lichte.'"
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "'Je gebruikt maar 10 procent van je hersenen.'"
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "'Mensen in de middeleeuwen dachten dat de aarde plat was.'"
+        }
+      ],
+      "waarom": "Misvattingen zitten diep en verdwijnen niet vanzelf. Door ze expliciet te maken, kun je ze in de les gericht aanpakken. Praktijkervaring, in lijn met wat over voorkennis bekend is.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "kaart-raden",
+      "naam": "Welke plek is dit?",
+      "alias": [
+        "kaart raden",
+        "plattegrond"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je toont een kaart, luchtfoto of plattegrond zonder namen; leerlingen raden welke plek het is aan de hand van aanwijzingen.",
+      "startzin": "Je ziet een kaart zonder namen. Welke plek zou dit zijn? Zoek drie aanwijzingen.",
+      "stappen": [
+        "Kies een kaart of luchtfoto van een plek die in de les terugkomt.",
+        "Haal namen weg of dek ze af.",
+        "Leerlingen zoeken drie aanwijzingen (rivier, wegen, vorm).",
+        "Hoor gokken met aanwijzingen.",
+        "Onthul de plek en koppel aan het lesdoel."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "kaart"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De plek is onbekend voor iedereen.",
+          "oplossing": "Begin met een plek in de buurt, dan pas verder weg."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een kaart van de eigen omgeving.",
+        "havo": "Een kaart van een bekend land of stad.",
+        "vwo": "Een historische kaart; vraag wat er veranderd is.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Een luchtfoto van het Geuldal zonder namen."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een kaart van Europa in 1815 zonder landsnamen."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Een plattegrond van een natuurgebied: waar zou je welke dieren vinden?"
+        }
+      ],
+      "waarom": "Kaarten lezen is een vakvaardigheid; raden op aanwijzingen maakt het actief. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "korte-demonstratie",
+      "naam": "Korte demonstratie",
+      "alias": [
+        "proefje",
+        "demo"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je doet voorin een korte proef of handeling die verrast; leerlingen voorspellen eerst wat er gebeurt.",
+      "startzin": "Ik ga zo iets doen. Wat denk jij dat er gebeurt? Schrijf het op voordat ik begin.",
+      "stappen": [
+        "Kies een eenvoudige proef of handeling die in twee minuten kan.",
+        "Laat het materiaal zien en vraag om een voorspelling.",
+        "Voer de demonstratie uit.",
+        "Vraag: wat zag je? Klopte je voorspelling?",
+        "Zeg: in de les leren we waarom."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 6
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "materiaal voor de demonstratie"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "uitleggen"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De proef mislukt.",
+          "oplossing": "Oefen hem van tevoren; mislukt hij toch, vraag dan: waarom zou het misgaan?"
+        },
+        {
+          "valkuil": "Veiligheid.",
+          "oplossing": "Doe alleen proeven die veilig zijn in een gewoon lokaal."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een duidelijk zichtbaar effect.",
+        "havo": "Een effect dat tegen de intuïtie in gaat.",
+        "vwo": "Vraag om een verklaring met een begrip uit vorige lessen.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Een ei in een fles met heet water en kou: wat gebeurt er?"
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Bakpoeder en azijn in een ballon."
+        },
+        {
+          "vak": "Lichamelijke opvoeding",
+          "voorbeeld": "Een bal met en zonder effect gooien."
+        }
+      ],
+      "waarom": "Eerst voorspellen en dan zien wat er gebeurt, maakt leerlingen nieuwsgierig naar de verklaring. Praktijkervaring, vooral in de bètavakken.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "ontbrekend-stuk",
+      "naam": "Wat ontbreekt er?",
+      "alias": [
+        "gat in het schema",
+        "aanvullen"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je toont een tekst, schema of formule waar een stuk uit weg is en leerlingen bedenken wat er hoort te staan.",
+      "startzin": "In dit schema mist iets. Wat zou er moeten staan? Je mag gokken.",
+      "stappen": [
+        "Kies een schema, zin of formule die bij de stof hoort.",
+        "Haal één belangrijk onderdeel weg.",
+        "Leerlingen vullen het gat in en schrijven op waarom.",
+        "Vergelijk drie antwoorden.",
+        "Laat zien wat er stond en wat de les gaat uitleggen."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "schema of tekst op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "structuur",
+        "uitleggen",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het gat is onmogelijk te raden.",
+          "oplossing": "Laat genoeg aanwijzingen staan of geef drie keuzes."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een schema met drie keuzes voor het gat.",
+        "havo": "Een schema met één open gat.",
+        "vwo": "Een schema met twee gaten die van elkaar afhangen.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Een voedselketen met een lege plek."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Een rij getallen met één ontbrekend getal."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Een zin waar het werkwoord uit weg is."
+        }
+      ],
+      "waarom": "Aanvullen activeert voorkennis en laat zien wat leerlingen al weten. Ophalen uit het geheugen helpt bij onthouden.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "roediger-karpicke-2006"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "letterhusselaar",
+      "naam": "Letterhusselaar",
+      "alias": [
+        "anagram",
+        "woordpuzzel"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Het kernbegrip van de les staat met de letters door elkaar op het bord; wie ontcijfert het?",
+      "startzin": "Het belangrijkste woord van vandaag staat op het bord, maar de letters zijn door elkaar gehusseld. Wie vindt het?",
+      "stappen": [
+        "Hussel de letters van het kernbegrip.",
+        "Zet het op het bord bij binnenkomst.",
+        "Leerlingen proberen het te ontcijferen.",
+        "Geef na een minuut de eerste letter als hint.",
+        "Vraag: wat weet je al over dit woord?"
+      ],
+      "duur": {
+        "min": 1,
+        "max": 3
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "woord op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "minder",
+          "tip": "Letterpuzzels zijn lastig bij dyslexie; geef een plaatje als hint of laat deze leerling meedenken over de betekenis."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Geef een beeld als hint."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "structuur",
+        "relatie",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen met dyslexie haken af.",
+          "oplossing": "Geef snel een hint of laat in tweetallen werken."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een kort woord met een plaatje als hint.",
+        "havo": "Een langer begrip.",
+        "vwo": "Twee begrippen door elkaar: welk verband hebben ze?",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "TIEDAXIO wordt OXIDATIE."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "SIEROE wordt EROSIE."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "TIFLNIAE wordt INFLATIE."
+        }
+      ],
+      "waarom": "Een woordpuzzel zet het kernbegrip in de schijnwerper en geeft een rustige start. Het bewijs is praktijkervaring; let op leerlingen met dyslexie.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "minuut-schrijven",
+      "naam": "Eén minuut alles opschrijven",
+      "alias": [
+        "brainflits",
+        "schrijfminuut"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Leerlingen schrijven in één minuut alles op wat ze al weten over het onderwerp, zonder te stoppen.",
+      "startzin": "Je hebt precies één minuut. Schrijf alles op wat je al weet over … Stop niet met schrijven. Klaar? Start.",
+      "stappen": [
+        "Noem het onderwerp en zet de timer op één minuut.",
+        "Leerlingen schrijven alles op wat in hen opkomt.",
+        "Laat ze tellen hoeveel ze hebben.",
+        "Hoor van drie leerlingen het meest verrassende.",
+        "Zeg: aan het eind van de les vul je dit aan in een andere kleur."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 3
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "papier",
+          "timer"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "aanpassen",
+          "tip": "Steekwoorden of tekeningen tellen ook."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Woorden in de eigen taal mogen ook; vertaal daarna samen."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Sommige leerlingen hebben een leeg blad.",
+          "oplossing": "Geef een paar startwoorden of laat ze daarna bij de buur kijken."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Met drie startwoorden op het bord.",
+        "havo": "Zonder hulp.",
+        "vwo": "Daarna ordenen in twee of drie groepen.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Alles wat je weet over de Tweede Wereldoorlog in Limburg."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Alles wat je weet over het hart."
+        },
+        {
+          "vak": "Frans",
+          "voorbeeld": "Alle Franse woorden over eten die je kent."
+        }
+      ],
+      "waarom": "Vrij ophalen activeert voorkennis en laat leerlingen zien wat ze al weten. Ophaaloefeningen versterken onthouden.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "roediger-karpicke-2006",
+        "agarwal-bain-2019"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "rebus",
+      "naam": "Rebus of beeldraadsel",
+      "alias": [
+        "plaatjestaal",
+        "pictogrammenraadsel"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je zet het kernbegrip of een kernzin in plaatjes en pictogrammen op het bord; leerlingen ontcijferen het.",
+      "startzin": "Deze plaatjes samen vormen het onderwerp van vandaag. Wie weet het?",
+      "stappen": [
+        "Maak een rebus van het kernbegrip of een kernzin.",
+        "Toon hem op het bord bij binnenkomst.",
+        "Leerlingen proberen het alleen, daarna met de buur.",
+        "Laat iemand uitleggen hoe ze het ontcijferden.",
+        "Koppel aan het lesdoel."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "rebus"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Beelden in plaats van tekst."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Rebussen met klanken zijn lastig in een tweede taal; gebruik vooral beelden."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie",
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De rebus is te moeilijk.",
+          "oplossing": "Geef na één minuut een hint."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een rebus van één woord.",
+        "havo": "Een rebus van een korte zin.",
+        "vwo": "Leerlingen maken zelf een rebus bij een begrip uit de vorige les.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Een spreekwoord in plaatjes."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Een bij + een bloem + een pijl = bestuiving."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Een munt + een pijl omhoog + een winkelmand = inflatie."
+        }
+      ],
+      "waarom": "Een rebus is een speels begin dat het kernbegrip zichtbaar maakt. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "verhaal-van-de-docent",
+      "naam": "Kort verhaal van de docent",
+      "alias": [
+        "anekdote",
+        "persoonlijk verhaal"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je vertelt in twee minuten een echt, kort verhaal uit je eigen leven of werk dat met de stof te maken heeft.",
+      "startzin": "Ik wil jullie eerst iets vertellen wat mij een keer overkwam…",
+      "stappen": [
+        "Kies een kort, echt verhaal dat aansluit bij het onderwerp.",
+        "Vertel het in twee minuten, met een concreet detail.",
+        "Stop op een spannend moment of eindig met een vraag.",
+        "Vraag: wat zou jij gedaan hebben? Of: wat heeft dit met vandaag te maken?",
+        "Leg de brug naar het lesdoel."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "geen"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Vertel rustig en zet twee kernwoorden op het bord."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Luisteren zonder iets te hoeven zeggen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie",
+        "uitleggen"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het verhaal wordt te lang.",
+          "oplossing": "Oefen het in twee minuten."
+        },
+        {
+          "valkuil": "Het verhaal is te persoonlijk.",
+          "oplossing": "Deel alleen wat je ook op een ouderavond zou vertellen."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een herkenbaar verhaal uit het dagelijks leven.",
+        "havo": "Een verhaal met een dilemma.",
+        "vwo": "Een verhaal met een open einde.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Hoe je ooit een experiment in de keuken liet mislukken."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Een misverstand tijdens een vakantie in Engeland."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Je eerste bijbaantje en je eerste loonstrook."
+        }
+      ],
+      "waarom": "Verhalen blijven goed hangen en een echt verhaal bouwt aan de relatie met de klas. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "wie-gebruikt-dit",
+      "naam": "Wie gebruikt dit op het werk?",
+      "alias": [
+        "beroepenhaak",
+        "relevantie in beroepen"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je laat een beroep of werkplek zien en vraagt leerlingen hoe iemand daar de stof van vandaag gebruikt.",
+      "startzin": "Kijk naar deze foto van iemand aan het werk. Wat moet deze persoon weten van wat wij vandaag leren?",
+      "stappen": [
+        "Kies een beroep waarin de stof echt gebruikt wordt, liefst uit de regio.",
+        "Toon een foto of korte beschrijving.",
+        "Leerlingen bedenken in tweetallen wat deze persoon moet kunnen.",
+        "Verzamel twee antwoorden.",
+        "Zeg: dat leer jij vandaag."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "foto van een beroep"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie",
+        "uitleggen"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het verband is gezocht.",
+          "oplossing": "Kies alleen een beroep waarin het verband echt is."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een beroep uit de omgeving (bakker, monteur, verpleegkundige).",
+        "havo": "Een beroep met een vervolgopleiding op hbo-niveau.",
+        "vwo": "Een beroep dat in tien jaar verandert: wat blijft nodig?",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Een timmerman die een trap berekent."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Een vrachtwagenchauffeur die in Aken levert."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Een boer in het Heuvelland die de bodem test."
+        }
+      ],
+      "waarom": "Leerlingen leren beter als ze zien waarom iets ertoe doet. Een beroep maakt dat concreet en past bij loopbaanoriëntatie. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "vraag-uit-de-doos",
+      "naam": "Vraag uit de doos",
+      "alias": [
+        "vragenbox",
+        "vraag van vorig jaar"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je leest een echte, anonieme vraag voor die een leerling eerder over dit onderwerp stelde, en laat de klas eerst zelf antwoorden.",
+      "startzin": "Een leerling vroeg mij vorig jaar: … Wat zou jij antwoorden?",
+      "stappen": [
+        "Bewaar vragen die leerlingen stellen (zonder naam).",
+        "Kies er één die bij de les past.",
+        "Lees hem voor.",
+        "Laat leerlingen een kort antwoord opschrijven.",
+        "Zeg: aan het eind van de les kunnen jullie hem beter beantwoorden."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "vraag op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Het is de vraag van iemand anders; dat maakt het veilig."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie",
+        "uitleggen",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De vraag is herkenbaar van een leerling uit deze klas.",
+          "oplossing": "Gebruik alleen vragen zonder naam en uit een andere groep, of formuleer hem opnieuw."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een eenvoudige vraag.",
+        "havo": "Een vraag waar meerdere antwoorden op zijn.",
+        "vwo": "Een vraag waar je zelf ook geen eenduidig antwoord op hebt.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "'Waarom is de lucht blauw en niet paars?'"
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "'Waarom deed niemand iets?'"
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "'Waarom mag je niet delen door nul?'"
+        }
+      ],
+      "waarom": "Een vraag van een leeftijdgenoot voelt dichtbij. Je laat zien dat vragen stellen hoort bij leren. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "zoek-de-verschillen",
+      "naam": "Zoek de verschillen",
+      "alias": [
+        "voor en na",
+        "vergelijkplaat"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je toont twee bijna gelijke afbeeldingen, teksten of uitwerkingen en leerlingen zoeken de verschillen.",
+      "startzin": "Twee bijna dezelfde plaatjes. Hoeveel verschillen vind je in één minuut? En welk verschil is het belangrijkste?",
+      "stappen": [
+        "Kies twee afbeeldingen of teksten die op een belangrijk punt verschillen.",
+        "Zet ze naast elkaar.",
+        "Leerlingen zoeken één minuut naar verschillen.",
+        "Verzamel de verschillen.",
+        "Vraag welk verschil het belangrijkste is voor de les."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "twee afbeeldingen"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen zoeken alleen oppervlakkige verschillen.",
+          "oplossing": "Vraag bij elk verschil: maakt dit uit?"
+        }
+      ],
+      "varianten": {
+        "vmbo": "Plaatjes met duidelijke verschillen.",
+        "havo": "Twee teksten met een klein maar belangrijk verschil.",
+        "vwo": "Twee uitwerkingen van een som; welke klopt?",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Een plantencel en een dierencel."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Twee versies van dezelfde zin met andere interpunctie."
+        },
+        {
+          "vak": "Techniek",
+          "voorbeeld": "Twee bouwtekeningen van een brug."
+        }
+      ],
+      "waarom": "Vergelijken maakt kenmerken zichtbaar, en een tegenvoorbeeld helpt om te zien wat ertoe doet. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "snel-rangschikken",
+      "naam": "Snel rangschikken",
+      "alias": [
+        "op volgorde",
+        "ranking"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Leerlingen zetten vier of vijf dingen zo snel mogelijk op volgorde (grootte, tijd, belang) en vergelijken met de buur.",
+      "startzin": "Zet deze vijf dingen op volgorde van … naar … Je hebt één minuut. Daarna vergelijk je met je buur.",
+      "stappen": [
+        "Kies vier of vijf items die je kunt ordenen.",
+        "Zet ze op het bord in willekeurige volgorde.",
+        "Leerlingen ordenen alleen in één minuut.",
+        "Vergelijk met de buur: waar verschillen jullie?",
+        "Bespreek het item waar de klas het meest over twijfelt."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "items op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "evalueren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "structuur",
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Het ordenen gaat over smaak in plaats van kennis.",
+          "oplossing": "Kies een maat waar kennis bij nodig is."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Vier items met een duidelijke volgorde.",
+        "havo": "Vijf items met één lastige.",
+        "vwo": "Een ordening waarbij je zelf het criterium kiest en verantwoordt.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Vijf uitvindingen op volgorde van tijd."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Vijf steden op aantal inwoners."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Vijf stoffen op kookpunt."
+        }
+      ],
+      "waarom": "Ordenen activeert voorkennis en het verschil met de buur levert vanzelf een gesprek op. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "paradox",
+      "naam": "Iets wat niet kan",
+      "alias": [
+        "paradox",
+        "tegenstrijdigheid"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je laat iets zien dat onmogelijk lijkt en leerlingen bedenken hoe het toch kan.",
+      "startzin": "Dit lijkt niet te kunnen. Toch klopt het. Hoe kan dat?",
+      "stappen": [
+        "Kies een verschijnsel of uitspraak die tegenstrijdig lijkt.",
+        "Toon het zonder uitleg.",
+        "Leerlingen bedenken in tweetallen een verklaring.",
+        "Hoor twee verklaringen.",
+        "Zeg: de les geeft het antwoord."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "beeld of uitspraak op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "evalueren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De paradox is te abstract.",
+          "oplossing": "Kies iets wat leerlingen kunnen zien of herkennen."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een zichtbaar verschijnsel.",
+        "havo": "Een uitspraak die tegenstrijdig lijkt.",
+        "vwo": "Een paradox waar ook wetenschappers over discussiëren.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Een naald die op water blijft liggen."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Waarom wordt een product soms méér verkocht als het duurder wordt?"
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Een vierkant dat in stukken een grotere oppervlakte lijkt te hebben."
+        }
+      ],
+      "waarom": "Iets wat niet lijkt te kloppen, maakt nieuwsgierig naar de verklaring. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "wat-als",
+      "naam": "Wat als…?",
+      "alias": [
+        "stel je voor",
+        "gedachte-experiment"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je stelt een wat-als-vraag die de stof op zijn kop zet, en leerlingen bedenken wat er dan zou gebeuren.",
+      "startzin": "Stel je voor: … Wat zou er dan gebeuren? Bedenk twee gevolgen.",
+      "stappen": [
+        "Formuleer een wat-als-vraag die met het onderwerp te maken heeft.",
+        "Leerlingen bedenken alleen twee gevolgen.",
+        "Vergelijk met de buur.",
+        "Verzamel gevolgen op het bord.",
+        "Zeg welke kennis je nodig hebt om te weten of het klopt."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "individueel",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "vraag op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "creeren"
+      ],
+      "differentiatie": [],
+      "richting": "divergent",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Antwoorden worden fantasie zonder kennis.",
+          "oplossing": "Vraag: waarom denk je dat? Wat weet je dat dit ondersteunt?"
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een concreet wat-als uit het dagelijks leven.",
+        "havo": "Een wat-als met een keten van gevolgen.",
+        "vwo": "Een historisch wat-als met meerdere scenario’s.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Wat als alle bijen verdwijnen?"
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Wat als de boekdrukkunst nooit was uitgevonden?"
+        },
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Wat als er geen wrijving bestond?"
+        }
+      ],
+      "waarom": "Denken in gevolgen vraagt om oorzaak-gevolgredeneringen. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "advertentie-ontleden",
+      "naam": "Advertentie of verpakking",
+      "alias": [
+        "reclame",
+        "etiket"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je laat een advertentie, etiket of verpakking zien en leerlingen zoeken wat erop staat dat met de stof te maken heeft.",
+      "startzin": "Kijk naar deze verpakking. Wat probeert de maker jou te laten geloven? En wat staat er echt?",
+      "stappen": [
+        "Neem een verpakking, etiket of advertentie mee.",
+        "Toon hem groot op het bord.",
+        "Leerlingen zoeken twee dingen die met het onderwerp te maken hebben.",
+        "Bespreek kort.",
+        "Koppel aan het lesdoel."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "verpakking of advertentie"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "evalueren"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "relatie"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "valkuilen": [
+        {
+          "valkuil": "Je maakt per ongeluk reclame.",
+          "oplossing": "Kies verschillende merken of maak het merk onherkenbaar."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een verpakking uit de supermarkt.",
+        "havo": "Een advertentie met een verborgen boodschap.",
+        "vwo": "Vergelijk twee advertenties voor hetzelfde product.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Het voedingsetiket op een energiedrankje."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Een reclame met \"nu 50% korting\"."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "De slogan op een verpakking: welke overtuigingstechniek?"
+        }
+      ],
+      "waarom": "Alledaagse teksten en beelden maken de stof herkenbaar en oefenen kritisch kijken. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "drie-hints",
+      "naam": "Wie of wat ben ik?",
+      "alias": [
+        "drie hints",
+        "raad het begrip"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je geeft drie hints na elkaar over een persoon of begrip, van moeilijk naar makkelijk; leerlingen raden zo vroeg mogelijk.",
+      "startzin": "Ik ben iets uit de stof van vandaag. Hint één: … Weet je het al? Schrijf het op.",
+      "stappen": [
+        "Kies het kernbegrip of een persoon.",
+        "Bedenk drie hints, van vaag naar duidelijk.",
+        "Geef de hints één voor één; leerlingen schrijven na elke hint hun gok op.",
+        "Vraag wie het bij hint één al wist en waarom.",
+        "Onthul en koppel aan het lesdoel."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "hints op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "structuur",
+        "relatie",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "De eerste hint geeft het al weg.",
+          "oplossing": "Maak de eerste hint echt vaag."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Drie hints met een plaatje bij de laatste.",
+        "havo": "Drie tekstuele hints.",
+        "vwo": "Leerlingen bedenken zelf drie hints voor een begrip uit de vorige les.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Ik ben in 1533 geboren, ik sprak meerdere talen en ik werd vermoord in Delft."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Ik ben een gas, ik ben kleurloos, je ademt me uit."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Ik zit in elke cel, ik ben een lange draad, ik bevat jouw erfelijke informatie."
+        }
+      ],
+      "waarom": "Raden met steeds meer informatie oefent het verbinden van kenmerken aan een begrip. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "bericht-uit-het-verleden",
+      "naam": "Bericht uit het verleden",
+      "alias": [
+        "brief van toen",
+        "nep-bericht van een historisch persoon"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je toont een kort bericht, alsof het geschreven is door een persoon uit de stof, en leerlingen raden wie het schreef en wanneer.",
+      "startzin": "Dit bericht is geschreven door iemand uit de stof van vandaag. Het is niet echt, maar het had kunnen kloppen. Wie schreef het?",
+      "stappen": [
+        "Schrijf een kort bericht in de stem van een persoon uit de stof.",
+        "Zet duidelijk boven het bericht dat het verzonnen is.",
+        "Toon het op het bord.",
+        "Leerlingen raden wie het schreef en geven een aanwijzing.",
+        "Bespreek welke details klopten en welke niet."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "bericht op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie",
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen denken dat het bericht echt is.",
+          "oplossing": "Zet er altijd groot \"verzonnen\" boven en bespreek het verschil met een echte bron."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een bericht met veel duidelijke aanwijzingen.",
+        "havo": "Een bericht met een paar aanwijzingen.",
+        "vwo": "Een bericht met één historische fout erin; wie vindt hem?",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een bericht van een mijnwerker uit Kerkrade in 1950."
+        },
+        {
+          "vak": "Natuurkunde",
+          "voorbeeld": "Een bericht van Galilei na het bekijken van de maan."
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Een bericht van Darwin vanaf de Galapagoseilanden."
+        }
+      ],
+      "waarom": "Een verzonnen bericht maakt een persoon levend en vraagt om context. Het oefent ook het verschil tussen echte en nagemaakte bronnen. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "kijkvragen-bij-een-beeld",
+      "naam": "Drie kijkvragen bij een beeld",
+      "alias": [
+        "visual thinking",
+        "wat zie je"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Bij een rijk beeld stel je drie vaste vragen: wat gebeurt hier, waaraan zie je dat, wat zie je nog meer?",
+      "startzin": "Kijk een halve minuut stil naar dit beeld. Wat gebeurt hier? Waaraan zie je dat?",
+      "stappen": [
+        "Kies een rijk beeld: een schilderij, persfoto of tekening.",
+        "Laat leerlingen een halve minuut stil kijken.",
+        "Vraag: wat gebeurt hier?",
+        "Vraag bij elk antwoord: waaraan zie je dat?",
+        "Vraag: wat zie je nog meer? Sluit af met de brug naar de les."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 6
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "digibord",
+          "beeld"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Geen leeswerk."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Beeld is taalarm; vat antwoorden samen in eenvoudige woorden."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Laat eerst opschrijven of met een buur overleggen; geen beurt zonder voorbereiding."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "ontdekken",
+        "relatie",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "valkuilen": [
+        {
+          "valkuil": "Je geeft zelf te snel de betekenis.",
+          "oplossing": "Vat antwoorden samen zonder te oordelen; geef de achtergrond pas aan het eind."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een duidelijk beeld met één verhaal.",
+        "havo": "Een beeld met meerdere lagen.",
+        "vwo": "Een beeld waarover verschillende interpretaties mogelijk zijn.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Kunst",
+          "voorbeeld": "Een schilderij van Bruegel: wat gebeurt hier?"
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Een foto van de bevrijding van Maastricht."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Een foto van een markt in een ander werelddeel."
+        }
+      ],
+      "waarom": "De vaste vragen leren leerlingen kijken en hun uitspraak met bewijs uit het beeld onderbouwen. De aanpak komt uit museumeducatie; het onderzoek is beperkt, de praktijk sterk.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "wat-wil-jij-weten",
+      "naam": "Wat wil jij weten?",
+      "alias": [
+        "eigen vraag",
+        "nieuwsgierigheidsvraag"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Leerlingen schrijven bij binnenkomst één vraag op die zij hebben over het onderwerp; je kiest er een paar uit om de les mee te beginnen.",
+      "startzin": "Het onderwerp van vandaag staat op het bord. Wat zou jij erover willen weten? Schrijf één vraag op een briefje.",
+      "stappen": [
+        "Zet het onderwerp op het bord met een plaatje.",
+        "Iedereen schrijft één vraag op een briefje.",
+        "Haal de briefjes op of laat ze zien.",
+        "Lees er twee of drie voor (zonder naam).",
+        "Zeg welke vragen de les beantwoordt en waar je later op terugkomt."
+      ],
+      "duur": {
+        "min": 3,
+        "max": 5
+      },
+      "groepsvorm": [
+        "individueel",
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "briefjes"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Anoniem; niemand hoeft de eigen vraag voor te lezen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie",
+        "ontdekken"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Je hebt geen tijd om op de vragen in te gaan.",
+          "oplossing": "Kies er twee en hang de rest op; beantwoord ze later of in de afsluiting."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Met een startzin: Ik vraag me af…",
+        "havo": "Een open vraag.",
+        "vwo": "Een vraag die je nog niet kunt opzoeken.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Biologie",
+          "voorbeeld": "Onderwerp: het menselijk brein."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Onderwerp: de Romeinen in Limburg."
+        },
+        {
+          "vak": "Economie",
+          "voorbeeld": "Onderwerp: geld lenen."
+        }
+      ],
+      "waarom": "Eigen vragen geven leerlingen eigenaarschap en laten jou zien wat ze bezighoudt. Praktijkervaring.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": []
+    },
+    {
+      "id": "uitdaging-van-de-les",
+      "naam": "Uitdaging van de les",
+      "alias": [
+        "wedden dat",
+        "lesdoel als uitdaging"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Je toont aan het begin een opdracht die leerlingen nu nog niet kunnen, en belooft dat ze hem aan het eind wel kunnen.",
+      "startzin": "Kijk naar deze opdracht. Kun je hem nu al? Waarschijnlijk niet. Aan het eind van deze les wel. Wedden?",
+      "stappen": [
+        "Kies een opdracht die precies het lesdoel toetst.",
+        "Toon hem aan het begin.",
+        "Laat leerlingen op een schaal van 1 tot 5 aangeven hoe zeker ze zijn.",
+        "Leg uit wat ze vandaag leren om hem te kunnen.",
+        "Laat de opdracht aan het eind maken en de schaal opnieuw invullen."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "opdracht op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "toepassen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie",
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Benadruk dat niet kunnen aan het begin de bedoeling is."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "structuur",
+        "uitleggen",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Je komt aan het eind niet meer bij de opdracht.",
+          "oplossing": "Zet hem in je lesplan bij de afsluiting."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een eenvoudige opdracht.",
+        "havo": "Een toepassingsopdracht.",
+        "vwo": "Een opdracht met een stap extra.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Bereken de hoogte van de kerktoren met alleen een schaduw."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Schrijf een e-mail om een kamer te boeken."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Leg uit waarom een ijzeren hek roest en een aluminium hek niet."
+        }
+      ],
+      "waarom": "Een duidelijk doel aan het begin en een check aan het eind sluiten aan bij formatief handelen (Wiliam). Leerlingen zien hun eigen vooruitgang.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "wiliam-2011"
+      ],
+      "materiaal": []
     }
   ]
 }

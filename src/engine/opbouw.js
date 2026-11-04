@@ -94,6 +94,9 @@ function maakKiezer(ctx, items) {
       let keuze;
       const vast = ctx.opties.vastgezet?.[sleutel];
       if (vast) keuze = ok.find((k) => k.item.id === vast);
+      // Uit een lesbestand: de werkvorm die toen gekozen was, tenzij je om een andere suggestie vroeg
+      const eerder = !vast && !ctx.opties.overslaan?.[sleutel] ? ctx.opties.gekozen?.[sleutel] : null;
+      if (!keuze && eerder) keuze = pool.find((k) => k.item.id === eerder);
       if (!keuze) keuze = pool[(Number(ctx.opties.overslaan?.[sleutel]) || 0) % pool.length];
       if (!kern.has(keuze.item.id)) gebruikt.add(keuze.item.id); // vakeigen werkvormen mogen in een volgend blok doorlopen
       return {
@@ -491,7 +494,7 @@ export function genereerVarianten(invoer, data) {
   const gekozen = [1, 2, 3].includes(Number(invoer.stand)) ? Number(invoer.stand) : 2;
   return [gekozen, ...[1, 2, 3].filter((s) => s !== gekozen)].map((stand) => {
     const inv = { ...invoer, stand };
-    if (stand !== gekozen) inv.opties = { ...invoer.opties, vastgezet: {}, overslaan: {}, splitsing: null };
+    if (stand !== gekozen) inv.opties = { ...invoer.opties, vastgezet: {}, overslaan: {}, gekozen: {}, splitsing: null };
     return genereerLes(inv, data);
   });
 }

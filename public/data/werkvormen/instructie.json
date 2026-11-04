@@ -1272,6 +1272,323 @@
       "materiaal": [
         "opdrachtkaart-route"
       ]
+    },
+    {
+      "id": "ik-wij-jij",
+      "naam": "Ik doe, wij doen, jij doet",
+      "alias": [
+        "gradual release",
+        "voordoen, samen doen, zelf doen"
+      ],
+      "categorie": "instructiemodel",
+      "kort": "Je doet eerst voor, dan doe je het samen met de klas en daarna doen leerlingen het zelf, steeds met minder hulp.",
+      "startzin": "Eerst kijk je hoe ik het doe. Daarna doen we het samen. En dan doe jij het zelf.",
+      "stappen": [
+        "Ik doe: doe de opdracht hardop denkend voor.",
+        "Wij doen: maak een tweede opgave samen; leerlingen geven de stappen aan.",
+        "Jullie doen: tweetallen maken een opgave, jij loopt rond.",
+        "Check: korte check (wisbordjes).",
+        "Jij doet: zelfstandig; wie twijfelt, komt naar de instructietafel."
+      ],
+      "duur": {
+        "min": 10,
+        "max": 20
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "bord",
+          "voorbeeldopgaven"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "instructie",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "begrijpen",
+        "toepassen"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Zet de kernstappen ook op papier."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Laat het voorbeeld zichtbaar tijdens het oefenen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Noem en schrijf de kernbegrippen; gebruik een plaatje."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Iedereen antwoordt tegelijk; niemand alleen in de spotlight."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Vaste opbouw, zichtbaar op het bord."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Laat wie het al kan eerder zelfstandig verder."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "uitleggen",
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Je blijft te lang bij \"ik doe\".",
+          "oplossing": "Hooguit één of twee voorbeelden; daarna samen."
+        },
+        {
+          "valkuil": "Je slaat \"wij doen\" over.",
+          "oplossing": "Juist daar zie je of de klas klaar is voor zelfstandig werken."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Meer tijd bij wij doen.",
+        "havo": "Standaard.",
+        "vwo": "Snel naar jij doet, met een moeilijkere opgave.",
+        "steun": "Extra voorbeeld aan de instructietafel.",
+        "basis": "Zelfstandig oefenen na de check.",
+        "verdieping": "Sneller naar zelfstandig, met een moeilijkere opgave."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Een nieuw type vergelijking oplossen."
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Een samenvatting maken."
+        },
+        {
+          "vak": "Kunst",
+          "voorbeeld": "Een perspectieftekening maken."
+        }
+      ],
+      "waarom": "Geleidelijk de verantwoordelijkheid overdragen sluit aan bij de principes van Rosenshine: voordoen, begeleid oefenen, checken en dan zelfstandig.",
+      "bewijs": "sterk",
+      "bronnen": [
+        "rosenshine-2012"
+      ],
+      "materiaal": [
+        "uitgewerkt-voorbeeld",
+        "instructietafel-kaart"
+      ],
+      "opbouw": [
+        {
+          "fase": "Ik doe",
+          "wat": "Voordoen met hardop denken"
+        },
+        {
+          "fase": "Wij doen",
+          "wat": "Samen een opgave maken"
+        },
+        {
+          "fase": "Jullie doen",
+          "wat": "In tweetallen, docent loopt rond"
+        },
+        {
+          "fase": "Check",
+          "wat": "Iedereen tegelijk laten zien"
+        },
+        {
+          "fase": "Jij doet",
+          "wat": "Zelfstandig, met instructietafel"
+        }
+      ]
+    },
+    {
+      "id": "begeleid-ontdekken",
+      "naam": "Begeleid ontdekken",
+      "alias": [
+        "geleid onderzoek",
+        "guided discovery"
+      ],
+      "categorie": "instructiemodel",
+      "kort": "Leerlingen ontdekken een regel of verband uit een reeks zorgvuldig gekozen voorbeelden, met vragen van jou als leidraad, gevolgd door een expliciete samenvatting.",
+      "startzin": "Kijk naar deze voorbeelden. Wat valt je op? Welke regel zit erachter? Ik help je met een paar vragen.",
+      "stappen": [
+        "Kies vier tot zes voorbeelden die samen de regel laten zien.",
+        "Laat leerlingen in tweetallen patronen zoeken (5 minuten).",
+        "Stel sturende vragen: wat is hetzelfde, wat verschilt?",
+        "Verzamel de ontdekte regels.",
+        "Vat de regel expliciet samen en geef een voorbeeld.",
+        "Check of iedereen de regel kan toepassen."
+      ],
+      "duur": {
+        "min": 12,
+        "max": 20
+      },
+      "groepsvorm": [
+        "tweetal",
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "voorbeeldenreeks"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "uitgebreid",
+      "lesfase": [
+        "instructie"
+      ],
+      "denkniveau": [
+        "analyseren",
+        "begrijpen"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Zet de kernstappen ook op papier."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Laat het voorbeeld zichtbaar tijdens het oefenen."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Noem en schrijf de kernbegrippen; gebruik een plaatje."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "In tweetallen; benadruk dat zoeken de bedoeling is."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Geef een werkblad met de sturende vragen."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Laat wie het al kan eerder zelfstandig verder."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "ontdekken",
+        "uitleggen"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen ontdekken de verkeerde regel en onthouden die.",
+          "oplossing": "Sluit altijd af met een expliciete samenvatting en check."
+        },
+        {
+          "valkuil": "Te weinig sturing.",
+          "oplossing": "Kies de voorbeelden zorgvuldig en stel gerichte vragen."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Meer sturende vragen, minder voorbeelden.",
+        "havo": "Standaard.",
+        "vwo": "Een tegenvoorbeeld toevoegen.",
+        "steun": "Extra voorbeeld aan de instructietafel.",
+        "basis": "Zelfstandig oefenen na de check.",
+        "verdieping": "Sneller naar zelfstandig, met een moeilijkere opgave."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "Uit zinnen de regel voor de d/t-spelling afleiden."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Uit een reeks driehoeken de hoekensom ontdekken."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Uit proefresultaten de regel voor oplosbaarheid afleiden."
+        }
+      ],
+      "waarom": "Puur ontdekkend leren werkt meestal minder goed dan begeleide instructie (Kirschner en anderen). Met gerichte voorbeelden, sturende vragen en een expliciete samenvatting kan ontdekken wel werken.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "kirschner-2006"
+      ],
+      "materiaal": [
+        "werkblad"
+      ],
+      "opbouw": [
+        {
+          "fase": "Voorbeelden",
+          "wat": "Een zorgvuldig gekozen reeks"
+        },
+        {
+          "fase": "Zoeken",
+          "wat": "In tweetallen patronen zoeken"
+        },
+        {
+          "fase": "Sturen",
+          "wat": "Gerichte vragen van de docent"
+        },
+        {
+          "fase": "Samenvatten",
+          "wat": "De regel expliciet maken"
+        },
+        {
+          "fase": "Check",
+          "wat": "Toepassen op een nieuw voorbeeld"
+        }
+      ]
     }
   ]
 }
