@@ -1,0 +1,76 @@
+/* Digibordmodus: groot contrast, grote letters, leesbaar achterin het lokaal.
+   Bewust één vormgeving (donkerblauw met wit), ongeacht licht of donker thema. */
+body.digibord .kop, body.digibord .voet, body.digibord::before { display: none; }
+body.digibord { background: #071a33; }
+
+.db {
+  --db-bg: #071a33; --db-vlak: #0f2b52; --db-fg: #ffffff; --db-zacht: #c7d6ec; --db-accent: #ffcf21; --db-lijn: #2a4a78;
+  min-height: 100vh; min-height: 100dvh; display: grid; grid-template-rows: auto 1fr auto; background: var(--db-bg); color: var(--db-fg);
+  font-family: var(--f-tekst); outline: none; color-scheme: dark;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.db button, .db a.db-sluit {
+  font: 800 clamp(1rem, 1.6vw, 1.4rem) / 1.1 var(--f-tekst); color: var(--db-fg); background: var(--db-vlak); border: 2px solid var(--db-lijn);
+  border-radius: 999px; padding: 0.6rem 1.1rem; min-height: 52px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;
+}
+.db button:hover, .db a.db-sluit:hover { border-color: var(--db-zacht); }
+.db button:disabled { opacity: 0.35; cursor: default; }
+.db :focus-visible { outline: 4px solid var(--db-accent); outline-offset: 3px; }
+
+.db-kop { display: flex; justify-content: space-between; gap: 1rem; align-items: center; flex-wrap: wrap; padding-block: 1rem; border-bottom: 2px solid var(--db-lijn); }
+.db-lesdoel { font-size: clamp(1.1rem, 2vw, 1.8rem); font-weight: 700; color: var(--db-zacht); max-width: 60ch; }
+.db-geluid { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.db-geluid button[aria-pressed="true"].g-stil { background: #b3122b; border-color: #ff8a98; }
+.db-geluid button[aria-pressed="true"].g-fluisteren { background: #a35f00; border-color: #ffcf21; }
+.db-geluid button[aria-pressed="true"].g-overleggen { background: #1d7a33; border-color: #6fd08a; }
+
+.db-midden { display: grid; grid-template-columns: minmax(0, 1fr) clamp(14rem, 26vw, 24rem); gap: 2rem; align-items: center; padding-block: 2rem; }
+.db-stap { font-size: clamp(1rem, 1.5vw, 1.4rem); color: var(--db-zacht); font-weight: 700; letter-spacing: 0.04em; }
+.db h1 { color: var(--db-fg); font-size: clamp(2.6rem, 6vw, 5.5rem); line-height: 1.05; margin: 0.3rem 0 1.5rem; }
+.db-doel p { font-size: clamp(1.8rem, 3.6vw, 3.2rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.6rem; }
+.db-doel .db-vraag { color: var(--db-accent); }
+.db-blokken { display: grid; gap: 1rem; }
+.db-blokken.n2 { grid-template-columns: 1fr 1fr; }
+.db-blokken.n3 { grid-template-columns: repeat(3, 1fr); }
+.db-blok { background: var(--db-vlak); border-radius: 18px; padding: 1.2rem 1.4rem; border-top: 8px solid #6ea8ff; min-width: 0; }
+.db-blok[data-plek="plein"] { border-top-color: var(--huis-oranje); }
+.db-blok[data-plek="stilte"] { border-top-color: #c79bd0; }
+.db-wie { font-size: clamp(1rem, 1.6vw, 1.5rem); font-weight: 800; color: var(--db-zacht); }
+.db-wat { font-size: clamp(1.6rem, 3.2vw, 3rem); font-weight: 800; line-height: 1.2; margin: 0.3rem 0; }
+.db-werkvorm { font-size: clamp(1rem, 1.8vw, 1.6rem); color: var(--db-accent); font-weight: 700; }
+
+.db-timer { display: grid; gap: 0.8rem; justify-items: stretch; text-align: center; }
+.db-timer output { font: 900 clamp(4rem, 10vw, 9rem) / 1 var(--f-kop); font-variant-numeric: tabular-nums; color: var(--db-fg); }
+.db-timer output.over { color: #ff8a98; }
+.db-balk { height: 14px; border-radius: 999px; background: var(--db-vlak); overflow: hidden; }
+.db-balk span { display: block; height: 100%; background: var(--db-accent); transition: width 1s linear; }
+.db-timer .db-groot { justify-content: center; font-size: clamp(1.4rem, 2.4vw, 2rem); min-height: 64px; background: var(--db-accent); color: #071a33; border-color: var(--db-accent); }
+.db-timer button { justify-content: center; }
+
+.db-voet { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; padding-block: 1rem calc(1rem + env(safe-area-inset-bottom, 0px)); border-top: 2px solid var(--db-lijn); }
+.db-voet .db-sluit { margin-left: auto; }
+
+.db-laag {
+  position: fixed; inset: 4vh 4vw; z-index: 30; background: var(--db-bg); border: 3px solid var(--db-accent); border-radius: 20px;
+  padding: 2rem; overflow: auto; display: grid; gap: 1.2rem; align-content: start;
+}
+.db-laag h2 { color: var(--db-fg); font-size: clamp(2rem, 4vw, 3.4rem); }
+.db-laag table { width: 100%; border-collapse: collapse; font-size: clamp(1.1rem, 2vw, 1.8rem); }
+.db-laag th, .db-laag td { border: 2px solid var(--db-lijn); padding: 0.5rem 0.8rem; text-align: left; color: var(--db-fg); }
+.db-laag tr.nu td { background: var(--db-vlak); color: var(--db-accent); font-weight: 800; }
+.db-kiezer output { display: block; text-align: center; font: 900 clamp(6rem, 18vw, 14rem) / 1 var(--f-kop); color: var(--db-accent); }
+.db-knoppen { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.db-hint { color: var(--db-zacht); font-size: 1.1rem; }
+.db-namen summary { cursor: pointer; font-size: 1.2rem; font-weight: 700; }
+.db-namen label { display: block; margin: 0.5rem 0; color: var(--db-zacht); }
+.db-namen textarea { width: 100%; max-width: 40rem; font-size: 1.1rem; background: var(--db-vlak); color: var(--db-fg); border: 2px solid var(--db-lijn); border-radius: 10px; padding: 0.6rem; }
+.db-groepjes { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 0.8rem; }
+.db-groepjes div { background: var(--db-vlak); border-radius: 14px; padding: 0.9rem 1.1rem; display: grid; gap: 0.3rem; font-size: clamp(1.1rem, 1.8vw, 1.6rem); }
+.db-groepjes b { color: var(--db-accent); }
+
+@media (max-width: 860px) {
+  .db-midden { grid-template-columns: minmax(0, 1fr); }
+  .db-blokken.n2, .db-blokken.n3 { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { .db-balk span { transition: none; } }
+.db-laag thead th { background: var(--db-vlak); color: var(--db-accent); }

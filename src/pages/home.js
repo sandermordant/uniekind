@@ -40,7 +40,7 @@ export default {
             </div>
           </section>
           <section class="sectie">
-            <p class="fase-melding"><b>Preview fase 2.</b> De lesgenerator werkt: kies de snelle modus of alle zeven stappen. Materiaal en export volgen in fase 3.</p>
+            <p class="fase-melding"><b>Preview fase 3.</b> De lesgenerator, het materiaalpakket, de digibordmodus en de export naar PDF, Word en PowerPoint werken. Foto-herkenning en de AI-brug volgen in fase 4.</p>
           </section>
         </main>`,
       na(root) {

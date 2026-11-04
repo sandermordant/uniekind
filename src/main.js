@@ -2,6 +2,8 @@
 import './stijl/lettertypen.css';
 import './stijl/basis.css';
 import './stijl/wizard.css';
+import './stijl/materiaal.css';
+import './stijl/digibord.css';
 import './stijl/print.css';
 
 import { html, escape } from './util/html.js';
@@ -14,11 +16,14 @@ import beginHier from './pages/begin-hier.js';
 import visie from './pages/visie.js';
 import invulformulier from './pages/invulformulier.js';
 import lesMaken from './pages/les-maken.js';
+import lesOpenen from './pages/les-openen.js';
+import digibord from './pages/digibord.js';
 
 const NAV = [
   { hash: 'les-maken', label: 'Maak een les' },
   { hash: 'bibliotheek', label: 'Werkvormen' },
   { hash: 'begin-hier', label: 'Begin hier' },
+  { hash: 'les-openen', label: 'Les openen' },
   { hash: 'visie', label: 'Visie' }
 ];
 
@@ -31,7 +36,9 @@ function kiesPagina(hash) {
     'begin-hier': beginHier,
     'visie': visie,
     'invulformulier': invulformulier,
-    'les-maken': lesMaken
+    'les-maken': lesMaken,
+    'les-openen': lesOpenen,
+    'digibord': digibord
   };
   return { pagina: routes[hash] ?? home, nav: routes[hash] ? hash : '' };
 }
@@ -86,6 +93,7 @@ async function start() {
   async function toon() {
     const hash = decodeURIComponent(location.hash.replace(/^#/, ''));
     const { pagina, arg, nav } = kiesPagina(hash);
+    document.body.classList.toggle('digibord', hash === 'digibord');
     for (const a of document.querySelectorAll('[data-nav]')) {
       if (a.dataset.nav === nav) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');

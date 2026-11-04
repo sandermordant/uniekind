@@ -6,7 +6,9 @@ Uniekind helpt docenten gedifferentieerde lessen te ontwerpen. De docent geeft a
 
 De eerste versie is gemaakt voor **Sophianum** (Gulpen). Later volgt een **algemene versie**, waarin elke school haar eigen visie, lokalen en lestijden instelt. Beide versies gebruiken dezelfde code; het verschil zit alleen in het schoolprofiel.
 
-> Status: **fase 2 (generator)**. Schoolprofiel, kennisbank (74 werkvormen), bibliotheek en invulformulier (fase 1), plus de lesgenerator: wizard in 7 stappen of snel, filter- en scorelogica, lessjablonen, splitsplanner, "Waarom deze?" en aanpassen (fase 2). Materiaal en export volgen in fase 3.
+> Status: **fase 3 (materiaal en export)**. Bovenop fase 2: het complete materiaalpakket, digibordmodus, export naar PDF, Word en PowerPoint, lesbestand en Les openen.
+>
+> Eerder: **fase 2 (generator)**. Schoolprofiel, kennisbank (74 werkvormen), bibliotheek en invulformulier (fase 1), plus de lesgenerator: wizard in 7 stappen of snel, filter- en scorelogica, lessjablonen, splitsplanner, "Waarom deze?" en aanpassen (fase 2). Materiaal en export volgen in fase 3.
 
 ---
 
@@ -57,7 +59,8 @@ src/
   stijl/               CSS: lettertypen, basisstijl, printstijl
   engine/              de generator: context, filters, score, sjablonen, splitsplanner, opbouw, controle, uitleg
   wizard/              de stappen van de lesgenerator en de weergave van het lesplan
-  export/              (fase 3) PDF, Word, PowerPoint, lesbestand
+  materiaal/           documentmodel, materiaalgenerator, HTML-weergave
+  export/              PDF (pdfmake), Word (docx), PowerPoint (PptxGenJS), lesbestand (.uniekind)
   ai/                  (fase 4) AI-brug en voorbereide API-laag
 tools/
   valideer-kennisbank.js   controleert alles en maakt index.json
@@ -78,6 +81,15 @@ Alles wat schoolspecifiek is, staat in `public/profiles/sophianum.json`: naam, m
 Een ander profiel bouwen: `UNIEKIND_PROFIEL=naam npm run build` (met `public/profiles/naam.json`).
 
 ---
+
+## Materiaal en export
+
+Alle materiaal wordt eerst beschreven in één **documentmodel** (`src/materiaal/model.js`): koppen, alinea's, tabellen, vragen met schrijfregels, invulvelden, kaarten, schema's. Uit dat ene model maakt Uniekind de weergave op het scherm, de printversie, PDF en Word. Een nieuw werkblad hoef je dus maar één keer te maken.
+
+- `src/materiaal/maak.js` bepaalt welk materiaal bij een les hoort en hoeveel je van elk moet printen.
+- Velden die de docent zelf moet invullen staan tussen ⟦ en ⟧ en worden overal geel gemarkeerd.
+- De exportbibliotheken laden pas als je exporteert, zodat de site snel blijft.
+- De digibordmodus (`src/pages/digibord.js`) werkt met het toetsenbord: ← → fase, spatie timer, 1 2 3 geluidsniveau, R routeschema, K kiezer, G groepjes, F volledig scherm, Esc terug. Namen in de groepjesmaker worden nergens bewaard.
 
 ## Hoe de generator werkt
 
@@ -128,7 +140,7 @@ build-commando `npm run build`, publiceermap `dist`.
 | 0 | Plan | klaar |
 | 1 | Schoolprofiel, schema's, kennisbank (74 items), validatie, bibliotheek, invulformulier | klaar |
 | 2 | Wizard, filter- en scorelogica, lessjablonen 35/50/70/100, splitsplanner, "Waarom deze?" | klaar (zie docs/testverslag-fase2.md) |
-| 3 | Materialen, digibordmodus, export PDF/Word/PowerPoint/lesbestand | volgt |
+| 3 | Materialen, digibordmodus, export PDF/Word/PowerPoint/lesbestand | klaar (zie docs/testverslag-fase3.md) |
 | 4 | OCR, AI-brug (Copilot), zoeklinks | volgt |
 | 5 | Kennisbank naar 150+, pagina's Hulp, Mijn profiel, reflectie | volgt |
 | 6 | Testen, toegankelijkheid, publiceren, handleiding, pitch | volgt |

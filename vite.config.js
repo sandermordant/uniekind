@@ -20,6 +20,8 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: './',
+    // Niet-ASCII-tekens in JavaScript als escape-code schrijven: veilig voor elke server en preview.
+    esbuild: { charset: 'ascii' },
     define: { __PROFIEL__: JSON.stringify(profielId) },
     build: {
       // Lettertypen en kleine afbeeldingen worden in de CSS/JS opgenomen: geen externe verzoeken.

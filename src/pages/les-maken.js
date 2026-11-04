@@ -7,6 +7,7 @@ import * as opslag from '../opslag/opslag.js';
 import { laadDocent, bewaarDocent, laadConcept, bewaarConcept, nieuwConcept, lees, zet, pasAanpassingenToe } from '../wizard/staat.js';
 import { stapProfiel, stapContext, stapInhoud, stapKlas, stapSnel, standKiezer, doelCheck, capaciteitMelding } from '../wizard/stappen.js';
 import { varianten, lesplan } from '../wizard/lesplan.js';
+import { materiaalStap, exporteer, printAlles } from '../wizard/materiaalstap.js';
 
 const STAPPEN = {
   uitgebreid: [['profiel', 'Mijn profiel'], ['context', 'Lescontext'], ['inhoud', 'Inhoud'], ['klas', 'Klasbeeld'], ['varianten', 'Genereren'], ['aanpassen', 'Aanpassen'], ['materiaal', 'Materiaal']],
@@ -34,6 +35,7 @@ export default {
     const inv = () => concept.invoer;
     const invoerVoorGenerator = () => ({ ...inv(), opties: { ...inv().opties, duimen: opslag.lees('duimen', {}) } });
     const stappen = () => STAPPEN[concept.modus] ?? STAPPEN.snel;
+    const matStaat = () => (concept.materiaal ??= { doc: 'lesplan', dyslexie: false, rustig: false });
     const huidigeLes = () => {
       const les = genereerLes({ ...invoerVoorGenerator(), stand: concept.gekozenStand ?? inv().stand }, data);
       return herbereken(pasAanpassingenToe(les, concept.aanpassingen), items);
@@ -49,24 +51,8 @@ export default {
       if (s === 'snel') return html`${stapSnel(ctx)}${standKiezer('stand', inv().stand, 'Hoe ver wil je gaan?')}`;
       if (s === 'varianten') return varianten(genereerVarianten(invoerVoorGenerator(), data));
       if (s === 'aanpassen') return lesplan(huidigeLes(), itemMap, { profiel });
-      if (s === 'materiaal') return materiaalStap(huidigeLes());
+      if (s === 'materiaal') return materiaalStap(huidigeLes(), { ...data, itemMap }, matStaat());
       return '';
-    }
-
-    function materiaalStap(les) {
-      const nodig = [...new Set(les.fases.flatMap((f) => f.blokken.flatMap((b) => itemMap.get(b.werkvorm?.id)?.materiaal ?? [])))];
-      return html`
-        <p class="melding">Het volledige materiaalpakket (werkbladen per niveau, opdrachtkaarten, hintkaarten, exit tickets, vaktaalkaart, digibordmodus en export naar PDF, Word en PowerPoint) wordt gebouwd in fase 3.</p>
-        <section class="sectie"><h3>Wat deze les nodig heeft</h3>
-          <ul>${nodig.map((m) => html`<li>${m.replaceAll('-', ' ')}</li>`)}</ul>
-          <ul>
-            ${les.materiaalAdvies.dyslexievriendelijk ? html`<li>Dyslexievriendelijke versie van het leerlingmateriaal</li>` : ''}
-            ${les.materiaalAdvies.rustigeVersie ? html`<li>Rustige versie voor leerlingen met faalangst of behoefte aan structuur</li>` : ''}
-            <li>Vaktaal-steunkaart</li>
-            ${les.materiaalAdvies.rekenhulpkaart ? html`<li>Rekenhulpkaart</li>` : ''}
-            ${les.materiaalAdvies.oaKaart ? html`<li>Kaart voor de onderwijsassistent</li>` : ''}
-          </ul>
-        </section>`;
     }
 
     function pagina() {
@@ -182,6 +168,7 @@ export default {
           if (t.matches('[data-pad]')) return verwerkVeld(t, true);
           if (t.dataset.actie === 'kies-alt' && t.value) { inv().opties.vastgezet[t.dataset.sleutel] = t.value; bewaar(); teken(); }
           if (t.dataset.actie === 'splitsing') { inv().opties.splitsing = t.value; concept.aanpassingen = {}; bewaar(); teken(); }
+          if (t.dataset.actie === 'mat-optie') { matStaat()[t.dataset.optie] = t.checked; bewaar(); return teken(); }
           if (t.dataset.actie === 'duur') { concept.aanpassingen.duur = { ...concept.aanpassingen.duur, [t.dataset.fase]: Number(t.value) }; bewaar(); teken(); }
         });
         root.addEventListener('submit', (e) => e.preventDefault());
@@ -232,6 +219,17 @@ export default {
             if (inv().opties.vastgezet[s]) delete inv().opties.vastgezet[s];
             else inv().opties.vastgezet[s] = k.dataset.id;
             bewaar(); return teken();
+          }
+          if (a === 'mat-doc') { matStaat().doc = k.dataset.doc; bewaar(); teken(); $('.mat-blad', root)?.scrollIntoView({ block: 'nearest' }); return; }
+          if (a === 'print-alles') return printAlles(huidigeLes(), { ...data, itemMap }, matStaat());
+          if (a === 'exp') {
+            const oud = k.textContent;
+            k.textContent = 'Bezig…'; k.setAttribute('aria-busy', 'true');
+            exporteer(k.dataset.soort, huidigeLes(), { ...data, itemMap }, matStaat(), concept)
+              .then(() => { k.textContent = 'Gedownload'; })
+              .catch((err) => { console.error(err); k.textContent = 'Mislukt, probeer opnieuw'; })
+              .finally(() => { k.removeAttribute('aria-busy'); setTimeout(() => { k.textContent = oud; }, 2500); });
+            return;
           }
           if (a === 'omhoog' || a === 'omlaag') {
             const ids = $$('.fase', root).map((x) => x.dataset.fase);
