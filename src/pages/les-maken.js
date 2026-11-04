@@ -1,6 +1,7 @@
 // De lesgenerator-wizard. Zeven stappen, of de snelle modus.
 import { html, $, $$ } from '../util/html.js';
-import { laadAlleWerkvormen, laadTaxonomie } from '../data/laden.js';
+import { laadAlleWerkvormen, laadTaxonomie, laadBronnenPerVak } from '../data/laden.js';
+import { leesAntwoord } from '../ai/import.js';
 import { genereerLes, genereerVarianten, herbereken } from '../engine/opbouw.js';
 import { vindLesdoelen, vindKernbegrippen } from '../engine/tekst.js';
 import * as opslag from '../opslag/opslag.js';
@@ -26,7 +27,7 @@ const UITLEG = {
 
 export default {
   async render({ profiel }) {
-    const [items, taxonomie] = await Promise.all([laadAlleWerkvormen(), laadTaxonomie()]);
+    const [items, taxonomie, bronnenPerVak] = await Promise.all([laadAlleWerkvormen(), laadTaxonomie(), laadBronnenPerVak().catch(() => null)]);
     const itemMap = new Map(items.map((i) => [i.id, i]));
     const data = { profiel, items };
     let docent = laadDocent(profiel);
@@ -51,7 +52,7 @@ export default {
       if (s === 'snel') return html`${stapSnel(ctx)}${standKiezer('stand', inv().stand, 'Hoe ver wil je gaan?')}`;
       if (s === 'varianten') return varianten(genereerVarianten(invoerVoorGenerator(), data));
       if (s === 'aanpassen') return lesplan(huidigeLes(), itemMap, { profiel });
-      if (s === 'materiaal') return materiaalStap(huidigeLes(), { ...data, itemMap }, matStaat());
+      if (s === 'materiaal') return materiaalStap(huidigeLes(), { ...data, itemMap }, matStaat(), concept, bronnenPerVak);
       return '';
     }
 
@@ -124,6 +125,35 @@ export default {
           });
         }
         const herteken = () => teken();
+        // Lesdoelen en kernbegrippen uit de tekst halen (na plakken of na foto-herkenning)
+        const analyseer = () => {
+          const tekst = inv().inhoud.tekst ?? '';
+          const doelen = vindLesdoelen(tekst);
+          const bestaand = (inv().inhoud.lesdoelen ?? []).filter((d) => d.tekst?.trim());
+          if (doelen.length) inv().inhoud.lesdoelen = [...bestaand, ...doelen.filter((d) => !bestaand.some((b) => b.tekst === d)).map((t) => ({ tekst: t }))];
+          concept.suggesties = { ...concept.suggesties, begrippen: vindKernbegrippen(tekst) };
+          if (!inv().inhoud.onderwerp) inv().inhoud.onderwerp = tekst.split('\n').find((r) => r.trim())?.trim().slice(0, 80) ?? '';
+          return doelen.length;
+        };
+        // Foto van de paragraaf herkennen
+        const herkenFoto = async (bestand) => {
+          if (!bestand) return;
+          const st = $('#ocrStatus', root);
+          const toon = (f, t) => { if (st) st.innerHTML = `<div class="voortgang"><span style="width:${Math.round(f * 100)}%"></span></div><p class="hulp">${t}… ${Math.round(f * 100)}%</p>`; };
+          try {
+            const { herkenTekst } = await import('../ocr/ocr.js');
+            const { tekst, zekerheid } = await herkenTekst(bestand, toon);
+            if (!tekst) throw new Error('Er is geen tekst gevonden. Probeer een scherpere foto.');
+            inv().inhoud.tekst = tekst;
+            const n = analyseer();
+            concept.bron = 'tekst';
+            concept.ocrMelding = `Tekst herkend (zekerheid ${zekerheid}%). ${n ? `${n} lesdoel${n > 1 ? 'en' : ''} gevonden. ` : ''}Controleer de tekst, de lesdoelen en de kernbegrippen hieronder en verbeter wat niet klopt.`;
+            bewaar(); teken();
+          } catch (err) {
+            console.error(err);
+            if (st) st.innerHTML = `<p class="melding fout">${String(err.message || err).replace(/[<>&]/g, '')}</p>`;
+          }
+        };
 
         // Velden
         function verwerkVeld(el, isChange) {
@@ -168,6 +198,14 @@ export default {
           if (t.matches('[data-pad]')) return verwerkVeld(t, true);
           if (t.dataset.actie === 'kies-alt' && t.value) { inv().opties.vastgezet[t.dataset.sleutel] = t.value; bewaar(); teken(); }
           if (t.dataset.actie === 'splitsing') { inv().opties.splitsing = t.value; concept.aanpassingen = {}; bewaar(); teken(); }
+          if (t.id === 'ocrBestand') return herkenFoto(t.files?.[0]);
+          if (t.dataset.actie === 'ai-pakket') { matStaat().aiPakket = t.value; bewaar(); return teken(); }
+          if (t.dataset.actie === 'link') {
+            const l = { titel: t.dataset.titel, url: t.dataset.url };
+            concept.links = (concept.links ?? []).filter((x) => x.url !== l.url);
+            if (t.checked) concept.links.push(l);
+            bewaar(); return teken();
+          }
           if (t.dataset.actie === 'mat-optie') { matStaat()[t.dataset.optie] = t.checked; bewaar(); return teken(); }
           if (t.dataset.actie === 'duur') { concept.aanpassingen.duur = { ...concept.aanpassingen.duur, [t.dataset.fase]: Number(t.value) }; bewaar(); teken(); }
         });
@@ -191,15 +229,7 @@ export default {
           if (a === 'eigen-erbij') { docent.eigenStijl = [...(docent.eigenStijl ?? []), { tekst: '', waarde: 3 }]; inv().docent.eigenStijl = docent.eigenStijl; bewaarDocent(docent); bewaar(); return teken(); }
           if (a === 'eigen-weg') { docent.eigenStijl.splice(Number(k.dataset.i), 1); inv().docent.eigenStijl = docent.eigenStijl; bewaarDocent(docent); bewaar(); return teken(); }
           if (a === 'bron') { concept.bron = k.dataset.bron; bewaar(); return teken(); }
-          if (a === 'analyseer') {
-            const tekst = inv().inhoud.tekst ?? '';
-            const doelen = vindLesdoelen(tekst);
-            const bestaand = (inv().inhoud.lesdoelen ?? []).filter((d) => d.tekst?.trim());
-            if (doelen.length) inv().inhoud.lesdoelen = [...bestaand, ...doelen.filter((d) => !bestaand.some((b) => b.tekst === d)).map((t) => ({ tekst: t }))];
-            concept.suggesties = { ...concept.suggesties, begrippen: vindKernbegrippen(tekst) };
-            if (!inv().inhoud.onderwerp) inv().inhoud.onderwerp = tekst.split('\n').find((r) => r.trim())?.trim().slice(0, 80) ?? '';
-            bewaar(); return teken();
-          }
+          if (a === 'analyseer') { analyseer(); concept.ocrMelding = ''; bewaar(); return teken(); }
           if (a === 'doel-erbij') { inv().inhoud.lesdoelen = [...(inv().inhoud.lesdoelen ?? []), { tekst: '' }]; bewaar(); return teken(); }
           if (a === 'doel-weg') { inv().inhoud.lesdoelen.splice(Number(k.dataset.i), 1); bewaar(); return teken(); }
           if (a === 'begrip-erbij') {
@@ -220,8 +250,45 @@ export default {
             else inv().opties.vastgezet[s] = k.dataset.id;
             bewaar(); return teken();
           }
+          if (a === 'ai-kopieer') {
+            const veld = $('#aiPrompt', root);
+            if (!veld) return;
+            navigator.clipboard?.writeText(veld.value).then(() => { k.textContent = 'Gekopieerd'; }).catch(() => { veld.select(); k.textContent = 'Geselecteerd: kopieer met Ctrl+C'; });
+            if (!navigator.clipboard) { veld.select(); k.textContent = 'Geselecteerd: kopieer met Ctrl+C'; }
+            setTimeout(() => { k.textContent = 'Kopieer prompt'; }, 2500);
+            return;
+          }
+          if (a === 'ai-lees') {
+            const tekst = $('#aiAntwoord', root)?.value ?? '';
+            matStaat().aiAntwoord = tekst;
+            matStaat().aiVoorstel = leesAntwoord(tekst);
+            bewaar(); return teken();
+          }
+          if (a === 'ai-toepassen') {
+            concept.ai = { ...(concept.ai ?? {}), ...(matStaat().aiVoorstel?.blokken ?? {}) };
+            matStaat().aiVoorstel = null; matStaat().aiAntwoord = '';
+            bewaar(); return teken();
+          }
+          if (a === 'ai-wis') { concept.ai = {}; bewaar(); return teken(); }
+          if (a === 'link-erbij') {
+            const titel = $('#linkTitel', root)?.value.trim();
+            const url = $('#linkUrl', root)?.value.trim();
+            if (!titel || !/^https?:\/\/\S+\.\S+/.test(url ?? '')) { $('#linkUrl', root)?.focus(); return; }
+            concept.links = [...(concept.links ?? []).filter((x) => x.url !== url), { titel, url }];
+            bewaar(); return teken();
+          }
+          if (a === 'link-weg') { concept.links.splice(Number(k.dataset.i), 1); bewaar(); return teken(); }
+          if (a === 'voorstel') {
+            const v = { vak: inv().context.vak, titel: $('#voorstelTitel', root)?.value.trim(), url: $('#voorstelUrl', root)?.value.trim(), omschrijving: $('#voorstelOmschrijving', root)?.value.trim() };
+            const uit = $('#voorstelUit', root);
+            if (!v.titel || !/^https?:\/\//.test(v.url ?? '')) { uit.hidden = false; uit.textContent = 'Vul een titel en een adres (https://…) in.'; return; }
+            uit.hidden = false;
+            uit.textContent = JSON.stringify({ titel: v.titel, url: v.url, omschrijving: v.omschrijving }, null, 2) + `\n\n(voor het vak: ${v.vak})`;
+            navigator.clipboard?.writeText(uit.textContent).catch(() => {});
+            return;
+          }
           if (a === 'mat-doc') { matStaat().doc = k.dataset.doc; bewaar(); teken(); $('.mat-blad', root)?.scrollIntoView({ block: 'nearest' }); return; }
-          if (a === 'print-alles') return printAlles(huidigeLes(), { ...data, itemMap }, matStaat());
+          if (a === 'print-alles') return printAlles(huidigeLes(), { ...data, itemMap }, matStaat(), concept);
           if (a === 'exp') {
             const oud = k.textContent;
             k.textContent = 'Bezig…'; k.setAttribute('aria-busy', 'true');
@@ -243,6 +310,9 @@ export default {
         });
         koppelDoelchecks();
         koppelSlepen();
+        root.addEventListener('toggle', (e) => { const d = e.target; if (d.matches?.('details.paneel')) { (matStaat().open ??= {})[d.dataset.paneel] = d.open; bewaar(); } }, true);
+        root.addEventListener('dragover', (e) => { if (e.target.closest('#ocrVak')) { e.preventDefault(); e.target.closest('#ocrVak').classList.add('over'); } });
+        root.addEventListener('drop', (e) => { const v = e.target.closest('#ocrVak'); if (v) { e.preventDefault(); v.classList.remove('over'); herkenFoto(e.dataTransfer.files?.[0]); } });
       }
     };
   }

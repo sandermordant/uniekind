@@ -7,11 +7,13 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run valideer && vite build",
-    "build:sophianum": "npm run valideer && vite build --mode sophianum",
-    "build:algemeen": "npm run valideer && vite build --mode algemeen",
+    "build:sophianum": "node tools/kopieer-ocr.js && npm run valideer && vite build --mode sophianum",
+    "build:algemeen": "node tools/kopieer-ocr.js && npm run valideer && vite build --mode algemeen",
     "preview": "vite preview",
     "valideer": "node tools/valideer-kennisbank.js",
-    "test": "vitest run"
+    "test": "vitest run",
+    "predev": "node tools/kopieer-ocr.js",
+    "prebuild": "node tools/kopieer-ocr.js"
   },
   "license": "UNLICENSED",
   "devDependencies": {
@@ -22,9 +24,11 @@
   "dependencies": {
     "@fontsource/nunito": "^5.3.0",
     "@fontsource/nunito-sans": "^5.3.0",
+    "@tesseract.js-data/nld": "^1.0.0",
     "ajv": "^8.20.0",
     "docx": "^9.15.2",
     "pdfmake": "^0.2.23",
-    "pptxgenjs": "^3.12.0"
+    "pptxgenjs": "^3.12.0",
+    "tesseract.js": "^6.0.1"
   }
 }

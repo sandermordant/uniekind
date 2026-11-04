@@ -2,7 +2,11 @@
 // Intern JSON met een versienummer. Bevat alleen de invoer (aantallen, geen namen) en je aanpassingen;
 // de les zelf wordt bij openen opnieuw opgebouwd, dus ook met een nieuwere kennisbank werkt het.
 
+import { IDS } from '../ai/formaat.js';
+
 export const FORMAAT = 'uniekind-les';
+const schoonAi = (ai) => Object.fromEntries(Object.entries(ai ?? {}).filter(([k, v]) => IDS.includes(k) && typeof v === 'string').map(([k, v]) => [k, v.slice(0, 20000)]));
+const schoonLinks = (l) => (Array.isArray(l) ? l : []).filter((x) => x && /^https?:\/\//.test(x.url ?? '')).map((x) => ({ titel: String(x.titel ?? x.url).slice(0, 200), url: String(x.url).slice(0, 500) })).slice(0, 30);
 export const VERSIE = 1;
 
 const getal = (x) => (Number.isFinite(Number(x)) ? Number(x) : 0);
@@ -32,7 +36,7 @@ export function maakLesbestand(concept, les, profielId) {
     gemaakt: new Date().toISOString(),
     profiel: profielId,
     titel: les?.doel?.onderwerp || concept.invoer?.inhoud?.onderwerp || 'Les',
-    concept: { modus: concept.modus, invoer: schoon(concept.invoer), aanpassingen: concept.aanpassingen ?? {}, gekozenStand: concept.gekozenStand ?? null },
+    concept: { modus: concept.modus, invoer: schoon(concept.invoer), aanpassingen: concept.aanpassingen ?? {}, gekozenStand: concept.gekozenStand ?? null, ai: schoonAi(concept.ai), links: schoonLinks(concept.links) },
     samenvatting: les ? {
       lesduur: les.lesduur, stand: les.standNaam, opzet: les.opzetNaam,
       werkvormen: [...new Set(les.fases.flatMap((f) => f.blokken.map((b) => b.werkvorm?.id).filter(Boolean)))]
@@ -56,7 +60,8 @@ export function leesLesbestand(tekst) {
     concept: {
       versie: 1, modus: d.concept.modus === 'uitgebreid' ? 'uitgebreid' : 'snel', stap: 'aanpassen',
       invoer: { ...inv, opties: { ...inv.opties, vorigeLes: [], duimen: {} } },
-      aanpassingen: d.concept.aanpassingen ?? {}, gekozenStand: d.concept.gekozenStand ?? inv.stand
+      aanpassingen: d.concept.aanpassingen ?? {}, gekozenStand: d.concept.gekozenStand ?? inv.stand,
+      ai: schoonAi(d.concept.ai), links: schoonLinks(d.concept.links)
     }
   };
 }

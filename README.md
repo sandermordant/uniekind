@@ -6,7 +6,9 @@ Uniekind helpt docenten gedifferentieerde lessen te ontwerpen. De docent geeft a
 
 De eerste versie is gemaakt voor **Sophianum** (Gulpen). Later volgt een **algemene versie**, waarin elke school haar eigen visie, lokalen en lestijden instelt. Beide versies gebruiken dezelfde code; het verschil zit alleen in het schoolprofiel.
 
-> Status: **fase 3 (materiaal en export)**. Bovenop fase 2: het complete materiaalpakket, digibordmodus, export naar PDF, Word en PowerPoint, lesbestand en Les openen.
+> Status: **fase 4 (slim invoeren)**. Foto van een paragraaf herkennen (lokaal), AI-brug met Copilot-prompt en import, bronnen- en zoeklinks.
+>
+> Eerder: **fase 3 (materiaal en export)**. Bovenop fase 2: het complete materiaalpakket, digibordmodus, export naar PDF, Word en PowerPoint, lesbestand en Les openen.
 >
 > Eerder: **fase 2 (generator)**. Schoolprofiel, kennisbank (74 werkvormen), bibliotheek en invulformulier (fase 1), plus de lesgenerator: wizard in 7 stappen of snel, filter- en scorelogica, lessjablonen, splitsplanner, "Waarom deze?" en aanpassen (fase 2). Materiaal en export volgen in fase 3.
 
@@ -61,7 +63,8 @@ src/
   wizard/              de stappen van de lesgenerator en de weergave van het lesplan
   materiaal/           documentmodel, materiaalgenerator, HTML-weergave
   export/              PDF (pdfmake), Word (docx), PowerPoint (PptxGenJS), lesbestand (.uniekind)
-  ai/                  (fase 4) AI-brug en voorbereide API-laag
+  ai/                  AI-brug: uitwisselformaat, prompt, import, adapter (API voorbereid)
+  ocr/                 foto van een paragraaf herkennen (Tesseract.js, lokaal)
 tools/
   valideer-kennisbank.js   controleert alles en maakt index.json
   maak-preview.js          maakt een preview-versie voor claude.ai
@@ -90,6 +93,22 @@ Alle materiaal wordt eerst beschreven in één **documentmodel** (`src/materiaal
 - Velden die de docent zelf moet invullen staan tussen ⟦ en ⟧ en worden overal geel gemarkeerd.
 - De exportbibliotheken laden pas als je exporteert, zodat de site snel blijft.
 - De digibordmodus (`src/pages/digibord.js`) werkt met het toetsenbord: ← → fase, spatie timer, 1 2 3 geluidsniveau, R routeschema, K kiezer, G groepjes, F volledig scherm, Esc terug. Namen in de groepjesmaker worden nergens bewaard.
+
+## Foto van een paragraaf (OCR)
+
+De herkenning draait volledig in de browser met Tesseract.js en het Nederlandse taalpakket. `tools/kopieer-ocr.js` zet de benodigde bestanden (worker, rekenkern, taalpakket; samen ongeveer 11 MB) bij het bouwen in `public/ocr/`, zodat de site niets van een andere server hoeft te halen. De foto verlaat de computer niet en wordt niet bewaard; alleen het taalpakket blijft in de cache van de browser. Na herkenning haalt Uniekind de lesdoelen (patronen als "Leerdoelen", "Je kunt…") en kernbegrippen uit de tekst; de docent controleert en verbetert.
+
+## De AI-brug
+
+Bij het materiaal staat **Maak af met AI**. Uniekind maakt een prompt met alleen lesinhoud (vak, niveau, lesdoelen, kernbegrippen, de tekst, de werkvormen) en vraagt het antwoord in vaste blokken (`### VRAGEN-BASIS`, `### HINTKAART-1`, …; zie `src/ai/formaat.js`). De docent plakt de prompt in de AI-tool van de school, plakt het antwoord terug, en Uniekind zet herkende blokken in de juiste sjablonen. Wat niet herkend wordt, toont Uniekind apart. Er zijn ook kleine prompts per materiaalsoort.
+
+- `src/ai/prompt.js` controleert dat er geen klasgegevens in de prompt staan.
+- `src/ai/import.js` leest ook markdown, vetgedrukte koppen en JSON.
+- De API-route is voorbereid maar staat uit; zie [`docs/api-route.md`](docs/api-route.md).
+
+## Bronnen en media
+
+Per les maakt Uniekind zoeklinks met het onderwerp (Schooltv, Wikiwijs, Kennisnet, YouTube, Jeugdjournaal, L1 en de methodewebsite van de sectie) en toont het een gecureerde lijst per vak uit `public/data/bronnen-per-vak.json`. Een link komt pas in het lesplan als de docent hem aanvinkt of zelf toevoegt. Secties stellen nieuwe bronnen voor via een formuliertje dat een stukje tekst voor de beheerder maakt.
 
 ## Hoe de generator werkt
 
@@ -141,7 +160,7 @@ build-commando `npm run build`, publiceermap `dist`.
 | 1 | Schoolprofiel, schema's, kennisbank (74 items), validatie, bibliotheek, invulformulier | klaar |
 | 2 | Wizard, filter- en scorelogica, lessjablonen 35/50/70/100, splitsplanner, "Waarom deze?" | klaar (zie docs/testverslag-fase2.md) |
 | 3 | Materialen, digibordmodus, export PDF/Word/PowerPoint/lesbestand | klaar (zie docs/testverslag-fase3.md) |
-| 4 | OCR, AI-brug (Copilot), zoeklinks | volgt |
+| 4 | OCR, AI-brug (Copilot), zoeklinks | klaar (zie docs/testverslag-fase4.md) |
 | 5 | Kennisbank naar 150+, pagina's Hulp, Mijn profiel, reflectie | volgt |
 | 6 | Testen, toegankelijkheid, publiceren, handleiding, pitch | volgt |
 | 7 | Algemene versie met schoolprofiel-wizard | volgt |

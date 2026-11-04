@@ -3,6 +3,10 @@
 // staat een gemarkeerd invulveld (⟦…⟧) met een voorbeeld. Met de AI-brug (fase 4) worden die gevuld.
 // Er staan nooit leerlingnamen in: alleen aantallen en groepsletters.
 import { kop, alinea, lijst, vink, tabel, vraag, regels, invulveld, kader, schaal, schema, kaarten, pagina } from './model.js';
+import * as AI from '../ai/import.js';
+
+const zonderNummer = (r) => r.replace(/^\d+[.)]\s*/, '');
+const aiVragen = (t, start = 1, regelsPer = 3) => AI.vragen(t).map((v, i) => vraag(start + i, v.tekst, regelsPer, v.label));
 
 const NIVEAU_NAAM = { onthouden: 'Onthouden', begrijpen: 'Begrijpen', toepassen: 'Toepassen', analyseren: 'Analyseren', evalueren: 'Evalueren', creeren: 'Creëren' };
 const RTTI = { onthouden: 'R', begrijpen: 'T1', toepassen: 'T2', analyseren: 'I', evalueren: 'I', creeren: 'I' };
@@ -102,7 +106,7 @@ function schemaVoor(les, inf, b) {
 
 /* ───────────────────────── Leerlingmateriaal ───────────────────────── */
 
-function werkbladen(les, inf, per) {
+function werkbladen(les, inf, per, ai = {}) {
   const b = begrippenVan(les);
   const o = inf.onderwerp;
   const tax = inf.taxonomie;
@@ -117,15 +121,15 @@ function werkbladen(les, inf, per) {
     blokken: [
       ...kopregel, doelKader,
       kop('1. Kijk eerst naar het voorbeeld'),
-      kader('Uitgewerkt voorbeeld', [invulveld('Zet hier een uitgewerkt voorbeeld met alle stappen.', `Bijvoorbeeld een opgave over ${o} waarbij elke stap is uitgeschreven, met één zin uitleg per stap.`)]),
+      kader('Uitgewerkt voorbeeld', ai['UITGEWERKT-VOORBEELD'] ? [lijst(AI.regelsVan(ai['UITGEWERKT-VOORBEELD']).map(zonderNummer), true)] : [invulveld('Zet hier een uitgewerkt voorbeeld met alle stappen.', `Bijvoorbeeld een opgave over ${o} waarbij elke stap is uitgeschreven, met één zin uitleg per stap.`)]),
       vraag(1, 'Waarom staat stap 2 in het voorbeeld? Leg het uit in één zin.', 2, 'Zelfuitleg'),
       kop('2. Maak de opgave af'),
-      kader('Aanvulopdracht', [invulveld('Zet hier een opgave die lijkt op het voorbeeld, met de eerste stappen al ingevuld.', 'Laat de laatste één of twee stappen leeg.'), regels(4)]),
+      kader('Aanvulopdracht', [...(ai.AANVULOPDRACHT ? AI.regelsVan(ai.AANVULOPDRACHT).map((r) => alinea(r)) : [invulveld('Zet hier een opgave die lijkt op het voorbeeld, met de eerste stappen al ingevuld.', 'Laat de laatste één of twee stappen leeg.')]), regels(4)]),
       kop('3. De belangrijkste begrippen'),
       tabel(['Begrip', 'Uit de tekst', 'Wat betekent het? (in je eigen woorden)'], b.map((x) => [x, zinMet(tekst, x) || '', ''])),
       kop('4. Vragen'),
       alinea(`Begin zo: "${ZINSSTARTERS[0]}" of "${ZINSSTARTERS[2]}"`, { klein: true }),
-      ...vragenVoor([['onthouden', 2], ['begrijpen', 2]], b, o, tax, 2),
+      ...(ai['VRAGEN-STEUN'] ? aiVragen(ai['VRAGEN-STEUN'], 2) : vragenVoor([['onthouden', 2], ['begrijpen', 2]], b, o, tax, 2)),
       kop('5. Zet de begrippen in een woordweb'),
       schema('woordweb', [o, ...b.slice(0, 5)]),
       alinea('Klaar? Laat je werk zien aan je docent en pak dan het werkblad basis.', { nadruk: true })
@@ -137,11 +141,11 @@ function werkbladen(les, inf, per) {
     blokken: [
       ...kopregel, doelKader,
       kop('Vragen'),
-      ...vragenVoor([['begrijpen', 2], ['toepassen', 2], ['analyseren', 1]], b, o, tax),
+      ...(ai['VRAGEN-BASIS'] ? aiVragen(ai['VRAGEN-BASIS']) : vragenVoor([['begrijpen', 2], ['toepassen', 2], ['analyseren', 1]], b, o, tax)),
       kop('Schema'),
       schemaVoor(les, inf, b),
       kop('Opgave van je docent'),
-      invulveld('Zet hier een opgave uit de methode of een eigen opgave.', `Bijvoorbeeld: opgave … uit paragraaf ${o}.`),
+      ...(ai['OPGAVE-BASIS'] ? AI.regelsVan(ai['OPGAVE-BASIS']).map((r) => alinea(r)) : [invulveld('Zet hier een opgave uit de methode of een eigen opgave.', `Bijvoorbeeld: opgave … uit paragraaf ${o}.`)]),
       regels(4),
       alinea('Loop je vast? Pak hint 1. Klaar? Kijk je werk na en pak een pluskaart of het werkblad verdieping.', { nadruk: true })
     ]
@@ -153,9 +157,9 @@ function werkbladen(les, inf, per) {
       ...kopregel, doelKader,
       alinea('Je beheerst de basis al. Op dit werkblad ga je verder dan het lesdoel: verbanden leggen, beoordelen en zelf iets maken.'),
       kop('Vragen'),
-      ...vragenVoor([['analyseren', 1], ['evalueren', 2], ['creeren', 2]], b, o, tax),
+      ...(ai['VRAGEN-VERDIEPING'] ? aiVragen(ai['VRAGEN-VERDIEPING'], 1, 4) : vragenVoor([['analyseren', 1], ['evalueren', 2], ['creeren', 2]], b, o, tax)),
       kop('Open opdracht'),
-      kader('Uitdaging', [invulveld('Zet hier een open opdracht of onderzoeksvraag.', `Bijvoorbeeld: zoek uit hoe ${o} een rol speelt in de regio en maak er een korte uitleg van voor de klas.`), regels(6)]),
+      kader('Uitdaging', [...(ai.UITDAGING ? AI.regelsVan(ai.UITDAGING).map((r) => alinea(r)) : [invulveld('Zet hier een open opdracht of onderzoeksvraag.', `Bijvoorbeeld: zoek uit hoe ${o} een rol speelt in de regio en maak er een korte uitleg van voor de klas.`)]), regels(6)]),
       kop('Maak je eigen schema'),
       schema('woordweb', [o]),
       alinea('Klaar? Bespreek je antwoord bij de laatste vraag met een andere leerling uit de verdiepingsroute.', { nadruk: true })
@@ -210,9 +214,14 @@ function opdrachtkaarten(les, inf) {
   };
 }
 
-function hintkaarten(les, inf) {
+function hintkaarten(les, inf, ai = {}) {
   const b = begrippenVan(les);
-  const set = [1, 2].flatMap((n) => [
+  const uitAi = ['HINTKAART-1', 'HINTKAART-2'].filter((k) => ai[k]).map((k) => AI.hintkaart(ai[k]));
+  const set = uitAi.length ? uitAi.flatMap((h, n) => [
+    { titel: `Opgave ${n + 1} · Hint 1`, kleur: 'groen', blokken: [alinea(h.opgave, { klein: true }), alinea(h.hint1)] },
+    { titel: `Opgave ${n + 1} · Hint 2`, kleur: 'oranje', blokken: [alinea(h.opgave, { klein: true }), alinea(h.hint2)] },
+    { titel: `Opgave ${n + 1} · Uitwerking`, kleur: 'rood', blokken: [alinea('Pak deze kaart pas als je hint 1 en 2 hebt gebruikt.', { klein: true }), alinea(h.uitwerking)] }
+  ]) : [1, 2].flatMap((n) => [
     { titel: `Opgave ⟦${n === 1 ? 'nummer' : 'nummer'}⟧ · Hint 1`, kleur: 'groen', blokken: [alinea(`Welke begrippen horen bij deze opgave? Kijk op je vaktaalkaart: ${b.slice(0, 3).join(', ')}.`), alinea('Lees de vraag nog een keer. Wat wordt er precies gevraagd?', { klein: true })] },
     { titel: `Opgave ⟦nummer⟧ · Hint 2`, kleur: 'oranje', blokken: [alinea('Kijk naar het uitgewerkte voorbeeld. Wat is de eerste stap?'), invulveld('Schrijf hier de eerste stap van deze opgave.', 'Bijvoorbeeld: "Schrijf eerst op wat gegeven is en wat er gevraagd wordt."')] },
     { titel: `Opgave ⟦nummer⟧ · Uitwerking`, kleur: 'rood', blokken: [alinea('Pak deze kaart pas als je hint 1 en 2 hebt gebruikt.', { klein: true }), invulveld('Zet hier de uitwerking.', '')] }
@@ -240,11 +249,16 @@ function succescriteria(les, inf) {
   };
 }
 
-function exitTickets(les, inf, per) {
+function exitTickets(les, inf, per, ai = {}) {
   const doel = les.doel.lesdoelen[0]?.tekst ?? '⟦lesdoel⟧';
   const b = begrippenVan(les);
   const zeker = alinea('Hoe zeker ben je?   1   2   3   4   5', { klein: true });
-  const varianten = [
+  const et = ai['EXIT-TICKET'] ? AI.exitTicket(ai['EXIT-TICKET']) : null;
+  const varianten = et ? [
+    { titel: 'Exit ticket · steun', kleur: 'groen', aantal: per.steun, blokken: [alinea(`Lesdoel: ${doel}`, { klein: true }), vraag(1, et.steun, 2), zeker] },
+    { titel: 'Exit ticket · basis', kleur: 'oranje', aantal: per.basis, blokken: [alinea(`Lesdoel: ${doel}`, { klein: true }), vraag(1, et.basis, 3), zeker] },
+    { titel: 'Exit ticket · verdieping', kleur: 'rood', aantal: per.verdieping, blokken: [alinea(`Lesdoel: ${doel}`, { klein: true }), vraag(1, et.verdieping, 3)] }
+  ] : [
     { titel: 'Exit ticket · steun', kleur: 'groen', aantal: per.steun, blokken: [alinea(`Lesdoel: ${doel}`, { klein: true }), vraag(1, `Wat betekent ${b[0]}? Maak de zin af: "${b[0]} is …"`, 2), zeker] },
     { titel: 'Exit ticket · basis', kleur: 'oranje', aantal: per.basis, blokken: [alinea(`Lesdoel: ${doel}`, { klein: true }), vraag(1, `Leg in je eigen woorden uit wat ${b[0]} is.`, 2), vraag(2, '⟦Toepassingsvraag bij het lesdoel⟧', 2), zeker] },
     { titel: 'Exit ticket · verdieping', kleur: 'rood', aantal: per.verdieping, blokken: [alinea(`Lesdoel: ${doel}`, { klein: true }), vraag(1, `Hoe hangen ${b[0]} en ${b[1] ?? b[0]} samen?`, 2), vraag(2, 'Bedenk een vraag over de les van vandaag die een klasgenoot moeilijk zou vinden.', 2)] }
@@ -257,9 +271,17 @@ function exitTickets(les, inf, per) {
   };
 }
 
-function vaktaalkaart(les, inf) {
+function vaktaalkaart(les, inf, ai = {}) {
   const b = begrippenVan(les);
   const tekst = les.invoer?.inhoud?.tekst ?? '';
+  const uitAi = ai.VAKTAAL ? AI.vaktaal(ai.VAKTAAL) : [];
+  if (uitAi.length) {
+    return {
+      id: 'vaktaalkaart', titel: `Vaktaal-steunkaart: ${inf.titel}`, voor: 'leerling', soort: 'kaart',
+      aantal: Math.max(1, Math.ceil(les.aantal / 2)), aantalUitleg: 'één per tweetal; extra voor NT2- en taalzwakke leerlingen',
+      blokken: [alinea('Deze woorden heb je vandaag nodig. Gebruik ze in je antwoorden.'), tabel(['Woord', 'Wat betekent het?', 'Voorbeeld'], uitAi.map((x) => [x.begrip, x.omschrijving, x.voorbeeld])), kop('Zo begin je een zin', 3), lijst(ZINSSTARTERS)]
+    };
+  }
   return {
     id: 'vaktaalkaart', titel: `Vaktaal-steunkaart: ${inf.titel}`, voor: 'leerling', soort: 'kaart',
     aantal: Math.max(1, Math.ceil(les.aantal / 2)), aantalUitleg: 'één per tweetal; extra voor NT2- en taalzwakke leerlingen',
@@ -383,9 +405,17 @@ function pluskaarten(les, inf) {
   };
 }
 
-function startcheck(les, inf) {
+function startcheck(les, inf, ai = {}) {
   const b = begrippenVan(les);
   const tax = inf.taxonomie;
+  if (ai.STARTCHECK) {
+    const sc = AI.startcheck(ai.STARTCHECK);
+    return {
+      id: 'startcheck', titel: `Startcheck: ${inf.titel}`, voor: 'leerling', soort: 'werkblad',
+      aantal: les.aantal, aantalUitleg: 'één per leerling (of gebruik wisbordjes)',
+      blokken: [alinea('Dit is geen toets. Het helpt om te kiezen wat jij vandaag het beste kunt doen. Werk alleen, zonder overleg.'), ...sc.vragen.map((v, i) => vraag(i + 1, v.tekst, 3, v.label)), alinea('Kijk je antwoorden na met de antwoordkaart. Alles goed: route verdieping. Eén of twee fout: route basis. Meer fout: route steun.', { klein: true })]
+    };
+  }
   return {
     id: 'startcheck', titel: `Startcheck: ${inf.titel}`, voor: 'leerling', soort: 'werkblad',
     aantal: les.aantal, aantalUitleg: 'één per leerling (of gebruik wisbordjes)',
@@ -404,14 +434,14 @@ function startcheck(les, inf) {
 
 const BEGELEIDING = { docent: 'bij jou', zelfstandig: 'zelfstandig', 'op afstand': 'zelfstandig (jij houdt toezicht)', oa: 'met de onderwijsassistent' };
 
-function lesplanDoc(les, inf, profiel, itemMap) {
+function lesplanDoc(les, inf, profiel, itemMap, ai = {}) {
   const rijen = [];
   for (const f of les.fases) {
     for (const b of f.blokken) {
       const it = b.werkvorm ? itemMap.get(b.werkvorm.id) : null;
       const groep = les.groepen.length > 1 ? b.groepen.map((g) => les.groepen.find((x) => x.id === g)?.naam.split(' · ')[0] ?? g).join(' + ') + ', ' : '';
       const wat = b.rol === 'doel'
-        ? `Lesdoel noemen. ${les.doel.relevantie.vraag}${les.doel.relevantie.regionaal ? ` Idee: ${les.doel.relevantie.regionaal}.` : ''} ⟦eigen voorbeeld⟧`
+        ? `Lesdoel noemen. ${les.doel.relevantie.vraag} ${ai.RELEVANTIE ? AI.regelsVan(ai.RELEVANTIE).join(' ') : `${les.doel.relevantie.regionaal ? `Idee: ${les.doel.relevantie.regionaal}. ` : ''}⟦eigen voorbeeld⟧`}`
         : it ? `${it.naam}${b.vervolg ? ' (loopt door)' : `. Je zegt: "${it.startzin}"`}` : (b.tekst ?? '');
       rijen.push([`${f.start}–${f.start + f.duur}`, f.titel, `${groep}${PLEK[b.plek].replace(/^het |^de /, '')}, ${BEGELEIDING[b.begeleiding] ?? b.begeleiding}`, wat]);
     }
@@ -425,6 +455,7 @@ function lesplanDoc(les, inf, profiel, itemMap) {
     id: 'lesplan', titel: `Lesplan: ${inf.titel}`, voor: 'docent', soort: 'lesplan', aantal: 1,
     ondertitel: [inf.vak, inf.klas, `${les.lesduur} minuten`, les.ruimteNaam, `${les.aantal} leerlingen`, `${les.standNaam} · ${les.opzetNaam}`].filter(Boolean).join(' · '),
     blokken: [
+      ...(Object.keys(ai).length ? [alinea('Deze les bevat materiaal dat met AI is gemaakt. Lees het altijd na op juistheid en niveau voordat je het gebruikt.', { nadruk: true })] : []),
       kader('Lesdoelen', [
         lijst(les.doel.lesdoelen.length ? les.doel.lesdoelen.map((d) => `${d.tekst} (${denkLabel(d.niveau, inf.taxonomie)})`) : ['⟦lesdoel⟧']),
         les.doel.begrippen?.length ? alinea(`Kernbegrippen: ${les.doel.begrippen.join(', ')}.`) : invulveld('Kernbegrippen', '')
@@ -433,6 +464,7 @@ function lesplanDoc(les, inf, profiel, itemMap) {
       kop('Verloop'),
       tabel(['Min', 'Fase', 'Wie en waar', 'Werkvorm en wat je zegt'], rijen, [9, 18, 22, 51]),
       ...(checks.length ? [kop('Checks: als je dit ziet, doe dan dit'), ...checks] : []),
+      ...(ai.CHECKVRAAG ? (() => { const c = AI.checkvraag(ai.CHECKVRAAG); return [kop('Scharniervraag', 3), alinea(c.vraag), lijst([`A: ${c.a}`, `B: ${c.b}`, `C: ${c.c}`, `D: ${c.d}`]), alinea(`Goed: ${c.goed}. ${c.misvattingen}`, { klein: true })]; })() : []),
       kop('Differentiatie'),
       lijst(les.differentiatie.map((d) => d.naam)),
       ...(les.oa ? [alinea(`Onderwijsassistent: ${les.oa.rol}`)] : []),
@@ -538,7 +570,18 @@ function voorbereiding(les, inf, docs, itemMap) {
 
 /* ───────────────────────── Alles samen ───────────────────────── */
 
-export function maakMateriaal(les, data) {
+function antwoordkaart(les, inf, ai) {
+  const blokken = [];
+  if (ai.ANTWOORDEN) blokken.push(kop('Werkbladen', 3), ...AI.regelsVan(ai.ANTWOORDEN).map((r) => alinea(r)));
+  if (ai.STARTCHECK) { const sc = AI.startcheck(ai.STARTCHECK); if (sc.antwoorden) blokken.push(kop('Startcheck', 3), alinea(sc.antwoorden)); }
+  if (ai.CHECKVRAAG) { const c = AI.checkvraag(ai.CHECKVRAAG); blokken.push(kop('Scharniervraag', 3), alinea(`Goed antwoord: ${c.goed}. ${c.misvattingen}`)); }
+  for (const k of ['HINTKAART-1', 'HINTKAART-2']) if (ai[k]) { const h = AI.hintkaart(ai[k]); blokken.push(kop(`Uitwerking ${k.toLowerCase().replace('hintkaart-', 'opgave ')}`, 3), alinea(h.opgave, { klein: true }), alinea(h.uitwerking)); }
+  if (!blokken.length) return null;
+  return { id: 'antwoordkaart', titel: `Antwoordkaart: ${inf.titel}`, voor: 'docent', soort: 'antwoorden', aantal: 1, aantalUitleg: 'voor jezelf of om leerlingen zelf te laten nakijken', blokken: [alinea('Gemaakt met AI: controleer de antwoorden voordat je ze gebruikt.', { klein: true }), ...blokken] };
+}
+
+export function maakMateriaal(les, data, ai = {}, links = []) {
+  ai = ai ?? {};
   const { profiel } = data;
   const itemMap = data.itemMap ?? new Map(data.items.map((i) => [i.id, i]));
   const inf = info(les, profiel);
@@ -546,14 +589,14 @@ export function maakMateriaal(les, data) {
   const ids = new Set(les.fases.flatMap((f) => [...f.blokken.map((b) => b.werkvorm?.id), ...(f.extra ?? []).map((e) => e.id)]).filter(Boolean));
 
   const leerling = [
-    ...werkbladen(les, inf, per),
+    ...werkbladen(les, inf, per, ai),
     opdrachtkaarten(les, inf),
-    hintkaarten(les, inf),
+    hintkaarten(les, inf, ai),
     succescriteria(les, inf),
-    exitTickets(les, inf, per),
-    vaktaalkaart(les, inf)
+    exitTickets(les, inf, per, ai),
+    vaktaalkaart(les, inf, ai)
   ];
-  if (ids.has('startcheck-routes')) leerling.unshift(startcheck(les, inf));
+  if (ids.has('startcheck-routes') || ai.STARTCHECK) leerling.unshift(startcheck(les, inf, ai));
   if (ids.has('plusopdracht-klaar') || per.verdieping > 0) leerling.push(pluskaarten(les, inf));
   if (les.materiaalAdvies.rekenhulpkaart) { const r = rekenhulpkaart(inf); r.aantal = Math.max(1, Math.ceil(les.aantal / 2)); leerling.push(r); }
   if (les.routines.includes('rolkaarten')) leerling.push(rolkaarten(les, inf));
@@ -562,13 +605,17 @@ export function maakMateriaal(les, data) {
   if ([...ids].some((id) => PRODUCT.includes(id))) leerling.push(rubric(les, inf));
 
   const docent = [
-    lesplanDoc(les, inf, profiel, itemMap),
+    lesplanDoc(les, inf, profiel, itemMap, ai),
     differentiatieDoc(les, inf, per),
     kijkwijzer(les, inf, profiel),
     reflectiekaart(les, inf)
   ];
   if (les.oa) docent.push(oaKaart(les, inf));
+  const ak = antwoordkaart(les, inf, ai);
+  if (ak) docent.push(ak);
   docent.splice(1, 0, voorbereiding(les, inf, [...docent, ...leerling], itemMap));
+  // Aangevinkte bronnen in het lesplan (alleen wat de docent zelf heeft gekozen)
+  if (links?.length) docent[0].blokken.push(kop('Bronnen en media'), lijst(links.map((l) => `${l.titel}: ${l.url}`)));
   // Materialenlijst in het lesplan
   docent[0].blokken.push(kop('Materialen'), lijst([...docent.slice(1), ...leerling].filter((d) => d.aantal > 0).map((d) => `${d.aantal}× ${d.titel.split(':')[0]}`)));
 

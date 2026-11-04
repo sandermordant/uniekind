@@ -172,7 +172,14 @@ export function stapInhoud({ concept, taxonomie }) {
         <textarea id="v-inhoud-tekst" data-pad="inhoud.tekst" rows="7" aria-label="Tekst van de paragraaf" placeholder="Plak hier de tekst van de paragraaf, inclusief de leerdoelen als die erbij staan.">${inh.tekst ?? ''}</textarea>
         <div class="knoppen klein-boven"><button type="button" class="knop secundair klein" data-actie="analyseer">Haal lesdoelen en kernbegrippen uit de tekst</button></div>` : ''}
       ${bron === 'kernwoorden' ? html`<p class="hulp">Typ hieronder bij Kernbegrippen de woorden die centraal staan. Meer is niet nodig.</p>` : ''}
-      ${bron === 'foto' ? html`<p class="melding">Een foto van de paragraaf laten herkennen kan vanaf de volgende versie (fase 4). De foto blijft dan op je eigen computer.</p>` : ''}
+      ${bron === 'foto' ? html`
+        <label class="dropvak" id="ocrVak" for="ocrBestand">
+          <span><b>Kies of sleep een foto van de paragraaf</b><br>Een scherpe, rechte foto werkt het best.</span>
+          <input type="file" id="ocrBestand" accept="image/*" capture="environment">
+        </label>
+        <p class="hulp">De foto blijft op je computer. Uniekind herkent de tekst in je browser, stuurt de foto nergens heen en bewaart hem niet.</p>
+        <div id="ocrStatus" aria-live="polite"></div>` : ''}
+      ${concept.ocrMelding ? html`<p class="melding">${concept.ocrMelding}</p>` : ''}
     </fieldset>
     <fieldset class="veld"><legend>Lesdoelen ${info('Schrijf het doel zo dat je kunt zien of horen of het gelukt is: "Je kunt uitleggen…", niet "Je begrijpt…". Uniekind koppelt elk doel aan een denkniveau.')}</legend>
       <div class="doelen">

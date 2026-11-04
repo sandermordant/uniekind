@@ -1,6 +1,7 @@
 // Les → PowerPoint (.pptx) met PptxGenJS: een dia per lesfase in de huisstijl.
 // De docent past hem verder aan in PowerPoint. In de notities staat wat je zegt en hoe de werkvorm gaat.
 import { segmenten, hex } from './delen.js';
+import { checkvraag, regelsVan } from '../ai/import.js';
 
 const PLEK = { lokaal: 'Lokaal', plein: 'Plein', stilte: 'Stilteruimte' };
 
@@ -20,6 +21,8 @@ export async function naarPptx(les, data, o = {}) {
   const doelen = les.doel.lesdoelen.map((d) => d.tekst);
   const onderwerp = les.doel.onderwerp || 'Les';
   const font = 'Arial';
+  const ai = data.ai ?? {};
+  const cv = ai.CHECKVRAAG ? checkvraag(ai.CHECKVRAAG) : null;
 
   pptx.defineSlideMaster({
     title: 'UNIEKIND',
@@ -52,7 +55,7 @@ export async function naarPptx(les, data, o = {}) {
         ...doelen.map((d) => ({ text: d, options: { bullet: true, fontSize: 26 } })),
         { text: ' ', options: { breakLine: true } },
         { text: les.doel.relevantie.vraag, options: { fontSize: 22, bold: true, color: A, breakLine: true } },
-        ...tekstRuns('⟦Zet hier je eigen voorbeeld uit het leven van je leerlingen of uit de regio⟧', { fontSize: 20 })
+        ...(ai.RELEVANTIE ? [{ text: regelsVan(ai.RELEVANTIE).join(' '), options: { fontSize: 20 } }] : tekstRuns('⟦Zet hier je eigen voorbeeld uit het leven van je leerlingen of uit de regio⟧', { fontSize: 20 }))
       ], { x: 0.7, y: 1.9, w: 12, h: 4.8, valign: 'top', fontFace: font, color: '111827' });
       if (les.doel.relevantie.regionaal) notities.push(`Idee uit de regio: ${les.doel.relevantie.regionaal}`);
     } else if (f.type === 'verwerken' && blokken.length > 1) {
@@ -79,8 +82,14 @@ export async function naarPptx(les, data, o = {}) {
         const regels = [];
         if (it) regels.push({ text: it.naam, options: { fontSize: 30, bold: true, color: A, breakLine: true } });
         if (['check', 'tussencheck', 'startcheck'].includes(f.type)) {
-          regels.push(...tekstRuns('⟦Checkvraag: zet hier je vraag met antwoorden A, B, C en D⟧', { fontSize: 24, breakLine: true }));
-          regels.push({ text: 'A ……   B ……   C ……   D ……', options: { fontSize: 24, color: '374151', breakLine: true } });
+          if (cv && f.type !== 'startcheck') {
+            regels.push({ text: cv.vraag, options: { fontSize: 26, breakLine: true } });
+            for (const l of ['a', 'b', 'c', 'd']) regels.push({ text: `${l.toUpperCase()}   ${cv[l]}`, options: { fontSize: 24, color: '374151', breakLine: true } });
+            notities.push(`Scharniervraag. Goed: ${cv.goed}. ${cv.misvattingen}`);
+          } else {
+            regels.push(...tekstRuns('⟦Checkvraag: zet hier je vraag met antwoorden A, B, C en D⟧', { fontSize: 24, breakLine: true }));
+            regels.push({ text: 'A ……   B ……   C ……   D ……', options: { fontSize: 24, color: '374151', breakLine: true } });
+          }
         } else if (f.type === 'opening') {
           regels.push(...tekstRuns('⟦Zet hier je vraag, foto, getal of voorwerp⟧', { fontSize: 24, breakLine: true }));
         } else if (f.type === 'afsluiting') {

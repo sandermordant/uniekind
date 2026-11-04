@@ -41,3 +41,4 @@ export async function laadAlleWerkvormen() {
   const cats = await Promise.all(index.categorieen.map((c) => json(`./data/werkvormen/${c.bestand}`)));
   return cats.flatMap((c) => c.items);
 }
+export const laadBronnenPerVak = () => json('./data/bronnen-per-vak.json');

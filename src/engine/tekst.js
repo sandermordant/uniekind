@@ -37,8 +37,11 @@ export function vindLesdoelen(tekst) {
   const doelen = [];
   let inBlok = false;
   for (const regel of ruw) {
-    const opsomming = /^\s*([•\-–*·]|\d+[.)])\s+/.test(regel);
-    const r = regel.replace(/^[\s•\-–*·\d.)]+/, '').trim();
+    // Opsommingstekens worden door OCR soms als «, », o, e of * gelezen
+    const opsomming = /^\s*([•\-–*·«»‣◦○●▪]|\d+[.)]|[oeO]\s(?=[A-Z]))\s*/.test(regel);
+    let r = regel.replace(/^[\s•\-–*·«»‣◦○●▪\d.)]+/, '').trim();
+    const begin = r.search(/(je kunt|je kan|ik kan|je leert)\b/i);
+    if (begin > 0 && begin <= 3) r = r.slice(begin);
     const l = r.toLowerCase();
     if (/^(leerdoelen|lesdoelen|doelen|wat ga je leren|dit ga je leren)\b/.test(l)) { inBlok = true; continue; }
     const isDoel = /^(je kunt|je kan|ik kan|je leert|na (deze|dit) (paragraaf|hoofdstuk|les)|aan het (eind|einde) van)/.test(l);
@@ -51,7 +54,7 @@ export function vindLesdoelen(tekst) {
   return [...new Set(doelen)].slice(0, 6);
 }
 
-const STOP = new Set(`de het een en of maar want dus dat die dit deze is zijn was waren wordt worden werd werden heeft hebben had hadden in op aan van voor met door bij uit naar over onder tussen tegen tot om als dan ook nog al niet geen wel er hier daar wat wie welke waar hoe waarom zo veel meer minder te je jij jouw jullie we wij ons onze hij zij ze hem haar hun zich men iets iemand alle elk elke ieder iedere andere ander kan kunnen kun moet moeten mag mogen zal zullen zou zouden wil willen gaat gaan komt komen maakt maken zie zien bijvoorbeeld zoals omdat terwijl wanneer toen sinds nadat voordat waardoor waarbij waarin daarom daardoor dus echter ook alleen zelfs vaak soms altijd nooit steeds heel erg zeer vooral eerst daarna later nu dan even één twee drie vier vijf eerste tweede laatste grote groot klein kleine nieuwe nieuw goed goede hoeveel deel delen manier mensen tijd jaar jaren dag dagen paragraaf hoofdstuk opdracht vraag vragen bron figuur tabel les leerdoelen je kunt uitleggen noemen`.split(/\s+/));
+const STOP = new Set(`de het een en of maar want dus dat die dit deze is zijn was waren wordt worden werd werden heeft hebben had hadden in op aan van voor met door bij uit naar over onder tussen tegen tot om als dan ook nog al niet geen wel er hier daar wat wie welke waar hoe waarom zo veel meer minder te je jij jouw jullie we wij ons onze hij zij ze hem haar hun zich men iets iemand alle elk elke ieder iedere andere ander kan kunnen kun moet moeten mag mogen zal zullen zou zouden wil willen gaat gaan komt komen maakt maken zie zien bijvoorbeeld zoals omdat terwijl wanneer toen sinds nadat voordat waardoor waarbij waarin daarom daardoor dus echter ook alleen zelfs vaak soms altijd nooit steeds heel erg zeer vooral eerst daarna later nu dan even één twee drie vier vijf eerste tweede laatste grote groot klein kleine nieuwe nieuw goed goede nodig maakt maken neemt komt ontstaat gebruikt gebruiken hoeveel deel delen manier mensen tijd jaar jaren dag dagen paragraaf hoofdstuk opdracht vraag vragen bron figuur tabel les leerdoelen je kunt uitleggen noemen`.split(/\s+/));
 
 /** Stel kernbegrippen voor: vaak voorkomende woorden zonder stopwoorden, plus woorden bij "begrip" of "definitie". */
 export function vindKernbegrippen(tekst, max = 10) {
@@ -71,5 +74,5 @@ export function vindKernbegrippen(tekst, max = 10) {
   const alle = [...new Set([...extra, ...vaak])];
   // Meervoud weglaten als het enkelvoud er al is (signaalwoorden → signaalwoord)
   const set = new Set(alle);
-  return alle.filter((w) => !(/(en|s)$/.test(w) && (set.has(w.replace(/en$/, '')) || set.has(w.replace(/s$/, ''))))).slice(0, max);
+  return alle.filter((w) => !((w.endsWith('en') && set.has(w.slice(0, -2))) || (w.endsWith('s') && set.has(w.slice(0, -1))))).slice(0, max);
 }

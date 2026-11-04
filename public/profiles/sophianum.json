@@ -930,5 +930,15 @@
       "url": "https://www.google.com/search?q=site%3Al1nieuws.nl+{q}"
     }
   ],
-  "bronnenZoekenToelichting": "Zoeklinks met het onderwerp ingevuld. Uniekind toont of embedt nooit automatisch een video; een link komt pas in het materiaal als de docent hem heeft aangevinkt."
+  "bronnenZoekenToelichting": "Zoeklinks met het onderwerp ingevuld. Uniekind toont of embedt nooit automatisch een video; een link komt pas in het materiaal als de docent hem heeft aangevinkt.",
+  "ai": {
+    "modus": "brug",
+    "tool": "Microsoft Copilot met je schoolaccount",
+    "toolAdres": "https://copilot.microsoft.com",
+    "aanname": true,
+    "toelichting": "Welke AI-tool collega's mogen gebruiken, bepaalt de school. Pas 'tool' en 'toolAdres' aan als dat een andere tool of een ander adres is.",
+    "apiBeschikbaar": false,
+    "apiAdres": null,
+    "apiToelichting": "De automatische koppeling staat uit. Zet hem pas aan na akkoord van de school en de functionaris gegevensbescherming van LVO, met een verwerkersovereenkomst en een afspraak over de kosten. Zie docs/api-route.md."
+  }
 }

@@ -1,0 +1,40 @@
+{
+  "toelichting": "Gecureerde bronnen per vak. Secties vullen deze lijst aan via 'Stel een bron voor' in het materiaalscherm; de beheerder plakt het voorstel hieronder bij het juiste vak. Alleen betrouwbare, gratis bronnen. Uniekind toont of embedt nooit automatisch een video: een link komt pas in het materiaal als de docent hem aanvinkt.",
+  "algemeen": [
+    { "titel": "Schooltv", "url": "https://schooltv.nl", "omschrijving": "Educatieve video's van de NTR, geordend per vak en niveau." },
+    { "titel": "Wikiwijs", "url": "https://www.wikiwijs.nl", "omschrijving": "Open lesmateriaal van docenten." },
+    { "titel": "NOS Jeugdjournaal", "url": "https://nos.nl/jeugdjournaal", "omschrijving": "Actualiteit in begrijpelijke taal." }
+  ],
+  "perVak": {
+    "economie": [
+      { "titel": "CBS", "url": "https://www.cbs.nl", "omschrijving": "Cijfers over prijzen, inkomen, werk en bevolking." },
+      { "titel": "Nibud", "url": "https://www.nibud.nl", "omschrijving": "Informatie over geld, budget en jongeren." }
+    ],
+    "bedrijfseconomie": [
+      { "titel": "CBS", "url": "https://www.cbs.nl", "omschrijving": "Cijfers over bedrijven en de economie." }
+    ],
+    "aardrijkskunde": [
+      { "titel": "CBS", "url": "https://www.cbs.nl", "omschrijving": "Cijfers over bevolking, wonen en regio's." },
+      { "titel": "KNMI", "url": "https://www.knmi.nl", "omschrijving": "Weer, klimaat en klimaatverandering." }
+    ],
+    "geschiedenis": [
+      { "titel": "Canon van Nederland", "url": "https://www.canonvannederland.nl", "omschrijving": "Vensters op de Nederlandse geschiedenis, met bronnen per tijdvak." }
+    ],
+    "nederlands": [
+      { "titel": "Taaladvies.net", "url": "https://www.taaladvies.net", "omschrijving": "Taaladvies van de Nederlandse Taalunie." },
+      { "titel": "Onze Taal", "url": "https://onzetaal.nl", "omschrijving": "Uitleg over spelling, grammatica en woorden." }
+    ],
+    "engels": [
+      { "titel": "BBC Learning English", "url": "https://www.bbc.co.uk/learningenglish", "omschrijving": "Luister- en grammatica-oefeningen." }
+    ],
+    "duits": [
+      { "titel": "Goethe-Institut", "url": "https://www.goethe.de", "omschrijving": "Duitse taal en cultuur, met oefenmateriaal." }
+    ],
+    "frans": [
+      { "titel": "TV5Monde Apprendre", "url": "https://apprendre.tv5monde.com", "omschrijving": "Franse video's met oefeningen per niveau." }
+    ],
+    "maatschappijleer": [
+      { "titel": "ProDemos", "url": "https://prodemos.nl", "omschrijving": "Democratie en rechtsstaat, met lesmateriaal." }
+    ]
+  }
+}
