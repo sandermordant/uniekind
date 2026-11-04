@@ -5,6 +5,7 @@ import { laadAlleWerkvormen } from '../data/laden.js';
 import { genereerLes, herbereken } from '../engine/opbouw.js';
 import { laadDocent, laadConcept, pasAanpassingenToe, generatorInvoer } from '../wizard/staat.js';
 import * as opslag from '../opslag/opslag.js';
+import { termen } from '../data/termen.js';
 
 const VOOR_LEERLING = {
   opening: 'Kijk naar het bord en denk na.', doel: 'Luister mee: dit ga je vandaag leren.', voorkennis: 'Wat weet je nog?', startcheck: 'Maak de startcheck. Alleen, zonder overleg.',
@@ -14,7 +15,7 @@ const VOOR_LEERLING = {
   startopdracht: 'Begin meteen met de startopdracht.', voorbereiding: 'Herhaal de stof van vorige les.', beweeg: 'Sta op!', 'beweeg-zelf': 'Korte pauze: sta even op en kijk je werk na.',
   afsluiting: 'Maak je exit ticket.', stilte: 'Werk in stilte aan je opdracht.', zelfcheck: 'Kijk je werk na met de antwoordkaart.'
 };
-const PLEK = { lokaal: 'in het lokaal', plein: 'op het plein', stilte: 'in de stilteruimte' };
+const PLEK = { lokaal: 'in het lokaal', get plein() { return `op het ${termen.plein}`; }, get stilte() { return `in de ${termen.stilte}`; } };
 const GELUID = [['stil', 'Stil', '🤫'], ['fluisteren', 'Fluisteren', '💬'], ['overleggen', 'Overleggen', '🗣️']];
 
 const mmss = (s) => `${s < 0 ? '+' : ''}${Math.floor(Math.abs(s) / 60)}:${String(Math.abs(s) % 60).padStart(2, '0')}`;
@@ -53,7 +54,7 @@ export default {
       if (staat.laag === 'route') {
         const plekken = [...new Set(les.fases.flatMap((f) => f.blokken.map((b) => b.plek)))];
         return `<div class="db-laag" role="dialog" aria-label="Routeschema"><h2>Wie is waar?</h2>
-          <table><thead><tr><th>Minuut</th>${plekken.map((p) => `<th>${PLEK[p].replace('in het ', '').replace('op het ', '').replace('in de ', '')}</th>`).join('')}</tr></thead>
+          <table><thead><tr><th>Minuut</th>${plekken.map((p) => `<th>${PLEK[p].replace(/^(in het|op het|in de) /, '')}</th>`).join('')}</tr></thead>
           <tbody>${les.fases.map((f, i) => `<tr class="${i === staat.i ? 'nu' : ''}"><td>${f.start}–${f.start + f.duur}</td>${plekken.map((p) => `<td>${f.blokken.filter((b) => b.plek === p).map((b) => `${b.groepen.map(groepNaam).map(escape).join(' + ')}`).join('<br>')}</td>`).join('')}</tr>`).join('')}</tbody></table>
           <p class="db-hint">Druk op R of Esc om te sluiten.</p></div>`;
       }

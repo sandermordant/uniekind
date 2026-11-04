@@ -32,7 +32,7 @@ function aiPaneel(les, data, staat, concept) {
       <summary>Maak af met AI ${huidig.length ? html`<span class="chip">${huidig.length} onderdelen ingevuld</span>` : ''}</summary>
       <div class="paneel-inhoud">
         <p class="melding">Gebruik de AI-tool die de school toestaat, met je schoolaccount (${inst.tool}). De prompt bevat alleen lesinhoud: geen namen en geen gegevens over je klas.</p>
-        <p class="melding let-op"><b>Lees AI-materiaal altijd na op juistheid en niveau.</b> AI helpt bij het voorbereiden; jij blijft de vakexpert. Een AI-tool kan fouten maken die overtuigend klinken.</p>
+        <p class="melding let-op"><b>Lees AI-materiaal altijd na op juistheid en niveau.</b> AI helpt bij het voorbereiden; jij blijft de vakexpert. Een AI-tool kan fouten maken die overtuigend klinken. Gebruik AI als hulp, niet als vervanging van je eigen voorbereiding, zodat je er niet afhankelijk van wordt.</p>
         <ol class="ai-stappen">
           <li>
             <label for="aiPakket"><b>Wat wil je laten maken?</b></label>

@@ -2,8 +2,9 @@
 // De docent past hem verder aan in PowerPoint. In de notities staat wat je zegt en hoe de werkvorm gaat.
 import { segmenten, hex } from './delen.js';
 import { checkvraag, regelsVan } from '../ai/import.js';
+import { termen, groot } from '../data/termen.js';
 
-const PLEK = { lokaal: 'Lokaal', plein: 'Plein', stilte: 'Stilteruimte' };
+const PLEK = { lokaal: 'Lokaal', get plein() { return groot(termen.plein); }, get stilte() { return groot(termen.stilte); } };
 
 function tekstRuns(s, o = {}) {
   return segmenten(s).map((x) => ({ text: x.tekst, options: { ...o, ...(x.invul ? { highlight: 'FFF3C4', color: '7A4B00' } : {}) } }));

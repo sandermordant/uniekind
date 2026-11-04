@@ -176,7 +176,7 @@ ol.fasen { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; 
 .lesblok .wie { display: flex; flex-wrap: wrap; gap: 0.35rem 0.6rem; align-items: center; font-size: var(--t-xs); }
 .lesblok .plek { font-weight: 800; }
 .lesblok .plek[data-plek="lokaal"] { color: var(--plek-lokaal); }
-.lesblok .plek[data-plek="plein"] { color: color-mix(in srgb, var(--plek-plein) 70%, var(--fg)); }
+.lesblok .plek[data-plek="plein"] { color: color-mix(in srgb, var(--plek-plein) 55%, var(--fg)); }
 .lesblok .plek[data-plek="stilte"] { color: var(--plek-stilte); }
 .lesblok .begeleiding { color: var(--muted); }
 .lesblok .wat { display: grid; gap: 0.35rem; }

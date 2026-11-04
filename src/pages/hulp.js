@@ -5,6 +5,7 @@ import { laadIndex } from '../data/laden.js';
 import { DIFFERENTIATIE } from '../data/labels.js';
 import { STAND } from '../wizard/stappen.js';
 import { OPZETTEN } from '../engine/splitsplanner.js';
+import { termen } from '../data/termen.js';
 
 const DIFF_UITLEG = {
   niveau: ['Iedereen werkt aan hetzelfde doel, maar de opdracht verschilt in moeilijkheid: steun, basis en verdieping.', 'Werkblad op drie niveaus, of een pluskaart voor wie klaar is.'],
@@ -93,10 +94,10 @@ export default {
           <section class="sectie" aria-labelledby="kop-ruimte">
             <h2 id="kop-ruimte" tabindex="-1">Lokalen en grote klassen</h2>
             <div class="faq">
-              ${M ? html`<details open><summary>Wat doe ik met 30 leerlingen in een M-lokaal?</summary>
+              ${M ? html`<details open><summary>Wat doe ik met 30 leerlingen in een ${M.kort}?</summary>
                 <p>In een ${M.kort} passen ${M.capaciteit} leerlingen. Met 30 leerlingen moeten er dus minstens ${Math.max(0, 30 - M.capaciteit)} tegelijk ergens anders werken. Uniekind start de les dan meteen gesplitst en laat je kiezen hoe:</p>
                 <ul>${['gespreide-start', 'startcheck', 'carrousel', 'flipped', 'oa', 'stilte'].map(opzet)}</ul>
-                ${plein ? html`<p><b>Het deelplein.</b> ${plein.omschrijving} ${p.regels?.pleinToezichtDoorDocent ? 'Uniekind gaat ervan uit dat jij vanuit het M-lokaal toezicht houdt op het eigen deelplein. Twijfel je of dat in jouw situatie mag, vraag het dan na bij je teamleider.' : 'Uniekind zet alleen een groep op het plein als er een onderwijsassistent bij is.'}</p>` : ''}
+                ${plein ? html`<p><b>Het ${termen.plein}.</b> ${plein.omschrijving} ${p.regels?.pleinToezichtDoorDocent ? `Uniekind gaat ervan uit dat jij vanuit het ${termen.M} toezicht houdt op het eigen ${termen.plein}. Twijfel je of dat in jouw situatie mag, vraag het dan na bij je teamleider.` : 'Uniekind zet alleen een groep op het plein als er een onderwijsassistent bij is.'}</p>` : ''}
                 ${stilte ? html`<p><b>De stilteruimte.</b> Uniekind rekent met ${stilte.capaciteit} plekken.${stilte.aanname ? ' Dat is een voorzichtige standaard; de beheerder van Uniekind kan het aanpassen.' : ''}</p>` : ''}
                 <p>Ook als iedereen wel past, is lang zitten op krukken onprettig. Daarom houdt Uniekind aaneengesloten instructie in een ${M.kort} op hooguit ${M.maxInstructieAaneengesloten} minuten.</p>
               </details>` : ''}
@@ -156,6 +157,7 @@ export default {
               <details open><summary>Worden er gegevens van leerlingen opgeslagen?</summary>
                 <p>Nee. Je vult alleen aantallen in. Een groepslijst met namen voor het printen of de namenkiezer blijft alleen zolang de pagina openstaat en wordt nergens bewaard.</p>
                 <p>In je browser bewaart Uniekind alleen: je docentprofiel, je laatste lesconcept en je eigen lessen met reflecties. Dat zie en wis je in <a href="#mijn-profiel">Mijn profiel</a>. Er zijn geen accounts, geen trackers, geen statistieken en geen cookies waarvoor toestemming nodig is.</p>
+                <p>Alles op een rij in gewone taal: <a href="#privacy">Privacy</a>.</p>
               </details>
               <details><summary>Wat betekent “bron nog controleren”?</summary>
                 <p>Elke werkvorm heeft een eerlijke onderbouwing: sterk, redelijk, beperkt onderzoek, of praktijkervaring. Bronnen zijn echte publicaties. Staat er “bron nog controleren”, dan moet een detail (jaar, druk of link) nog worden nagelopen. Uniekind noemt bewust geen effectgroottes.</p>

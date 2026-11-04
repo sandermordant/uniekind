@@ -1692,6 +1692,135 @@
       "bewijs": "praktijk",
       "bronnen": [],
       "materiaal": []
+    },
+    {
+      "id": "vaste-plek-hulpkaarten",
+      "naam": "Vaste plek voor hulpkaarten",
+      "alias": [
+        "hulpkaartenhoek",
+        "zelfhulpplek"
+      ],
+      "categorie": "routine",
+      "kort": "Hintkaarten, uitgewerkte voorbeelden en vaktaalkaarten liggen altijd op dezelfde plek, zodat leerlingen zelf hulp kunnen halen.",
+      "startzin": "Zit je vast? Kijk eerst bij de hulpkaarten op de vensterbank. Begin bij hint 1.",
+      "stappen": [
+        "Kies een vaste plek die iedereen kan bereiken zonder anderen te storen.",
+        "Leg de hulpkaarten op volgorde: hint 1, hint 2, uitwerking.",
+        "Spreek af: eerst zelf, dan de hulpkaarten, dan een klasgenoot, dan jij.",
+        "Laat leerlingen de kaart na gebruik terugleggen.",
+        "Kijk aan het eind welke kaarten veel gebruikt zijn: dat vertelt je iets."
+      ],
+      "duur": {
+        "min": 1,
+        "max": 2
+      },
+      "groepsvorm": [
+        "klas"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "bakje of map met hulpkaarten"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "onthouden"
+      ],
+      "differentiatie": [
+        "ondersteuning"
+      ],
+      "richting": "nvt",
+      "doeldomein": [
+        "persoonsvorming"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Pictogrammen naast de tekst."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        },
+        "nt2": {
+          "past": "goed",
+          "tip": "Vaste routines zijn taalarm en voorspelbaar."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Hulp halen zonder je hand op te steken."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Altijd dezelfde plek en volgorde."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Geen aanpassing nodig."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "structuur",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Leerlingen pakken meteen de uitwerking.",
+          "oplossing": "Leg de uitwerking apart of geef hem pas na hint 2."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Hintkaarten met plaatjes.",
+        "havo": "Hintkaarten.",
+        "vwo": "Alleen een uitwerking om je eigen werk mee te controleren.",
+        "steun": "Standaard.",
+        "basis": "Standaard.",
+        "verdieping": "Standaard."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Hintkaarten bij de opgaven van deze paragraaf."
+        },
+        {
+          "vak": "Duits",
+          "voorbeeld": "Een kaart met de naamvallen."
+        },
+        {
+          "vak": "Scheikunde",
+          "voorbeeld": "Een uitgewerkt voorbeeld van een reactievergelijking."
+        }
+      ],
+      "waarom": "Leerlingen die zelf hulp kunnen halen, wachten minder en jij houdt tijd voor de instructietafel. Praktijkervaring, sluit aan bij scaffolding die je geleidelijk afbouwt (Wood, Bruner en Ross).",
+      "bewijs": "praktijk",
+      "bronnen": [
+        "wood-bruner-ross-1976"
+      ],
+      "materiaal": [
+        "hintkaarten"
+      ]
     }
   ]
 }

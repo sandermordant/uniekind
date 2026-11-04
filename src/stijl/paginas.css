@@ -55,3 +55,25 @@ kbd { font-family: ui-monospace, monospace; font-size: 0.85em; padding: 0.1rem 0
   .stijlbalken li { grid-template-columns: minmax(0, 1fr) 4rem; }
 }
 .voetlinks { display: inline-flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+
+/* Toegangscode */
+.toegang { padding-block: 4rem; display: grid; gap: 1rem; max-width: 34rem; }
+.toegang-form { display: grid; gap: 0.75rem; }
+.toegang-form .veldrij { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.toegang-form input { flex: 1 1 12rem; }
+
+/* Schoolprofiel-wizard */
+.schoolprofiel form { display: grid; gap: 0.75rem; margin-top: 1.5rem; }
+.schoolprofiel .paneel-inhoud { display: grid; gap: 1rem; }
+.lijstrij { border: 1px dashed var(--line); border-radius: var(--r); padding: 0.8rem 1rem; display: grid; gap: 0.75rem; }
+.vakrij summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; }
+.kleuren { display: grid; grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); gap: 0.75rem; }
+.kleurveld input[type="color"] { width: 100%; height: 2.6rem; padding: 0.15rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.logo-rij { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.uitvoer-sp textarea { width: 100%; font-family: ui-monospace, monospace; font-size: var(--t-xs); }
+.schoolprofiel .veldrij { align-items: start; }
+
+/* Naar de inhoud: alleen zichtbaar bij toetsenbordfocus */
+.overslaan { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: 0.6rem 1rem; border-radius: 8px; border: 0; background: var(--accent); color: var(--accent-fg); font-weight: 800; cursor: pointer; }
+.overslaan:focus { top: 0.5rem; outline: 3px solid var(--focus); outline-offset: 2px; }
+body.digibord .overslaan { display: none; }

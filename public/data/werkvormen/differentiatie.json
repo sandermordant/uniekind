@@ -2827,6 +2827,147 @@
       "materiaal": [
         "pluskaart"
       ]
+    },
+    {
+      "id": "bewust-groeperen",
+      "naam": "Bewust groeperen: homogeen of heterogeen",
+      "alias": [
+        "groepen indelen",
+        "homogene groepjes",
+        "heterogene groepjes",
+        "niveaugroepjes"
+      ],
+      "categorie": "differentiatievorm",
+      "kort": "Je kiest per opdracht bewust hoe je groepjes indeelt: gelijk niveau (homogeen) om gericht te oefenen, of gemengd (heterogeen) om van elkaar te leren.",
+      "startzin": "Voor deze opdracht heb ik de groepjes zelf gemaakt. Je vindt je groepsletter op het bord.",
+      "stappen": [
+        "Bepaal wat de opdracht vraagt: gericht oefenen op eigen niveau (homogeen) of uitleggen en verschillende ideeën (heterogeen).",
+        "Deel in op basis van een recente check, niet op een vast etiket.",
+        "Gebruik letters of nummers, nooit lijsten met namen die bewaard worden.",
+        "Geef homogene groepjes een opdracht op hun niveau; geef heterogene groepjes rollen.",
+        "Wissel de indeling regelmatig, zodat groepjes niet vast komen te zitten."
+      ],
+      "duur": {
+        "min": 10,
+        "max": 40
+      },
+      "groepsvorm": [
+        "groepje",
+        "tweetal"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": true,
+        "stilte": true,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "groepsindeling op het bord",
+          "rolkaarten"
+        ],
+        "laptop": "optioneel",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "verwerken",
+        "inoefenen"
+      ],
+      "denkniveau": [
+        "toepassen",
+        "analyseren"
+      ],
+      "differentiatie": [
+        "groepering",
+        "niveau"
+      ],
+      "richting": "convergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Maak de opdrachtkaarten dyslexievriendelijk en kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Rekenhulpkaart bij opdrachten met rekenwerk."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Vaktaalkaart en voorbeelden bij elke opdracht."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Zet een faalangstige leerling bij een rustige, vertrouwde partner."
+        },
+        "structuur": {
+          "past": "aanpassen",
+          "tip": "Een overzicht met vaste stappen en afvinkmomenten."
+        },
+        "hoogbegaafd": {
+          "past": "aanpassen",
+          "tip": "Laat hen niet altijd uitleggen in een gemengd groepje; geef ook eens een homogeen groepje met een uitdagende opdracht."
+        }
+      },
+      "energie": "rustig",
+      "docentstijl": [
+        "samenwerken",
+        "structuur"
+      ],
+      "instapniveau": 2,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Homogene groepjes worden vaste niveaugroepen.",
+          "oplossing": "Deel opnieuw in na elke check."
+        },
+        {
+          "valkuil": "In gemengde groepjes doet de sterkste alles.",
+          "oplossing": "Geef rollen en een opdracht die iedereen nodig heeft."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Tweetallen met een duidelijke rol.",
+        "havo": "Groepjes van drie of vier.",
+        "vwo": "Leerlingen kiezen zelf binnen de kaders die jij stelt.",
+        "steun": "Meer structuur en kleinere stappen.",
+        "basis": "Standaard.",
+        "verdieping": "Uitdagende onderdelen op hoger denkniveau."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Homogeen: groepjes oefenen op hun niveau na de startcheck."
+        },
+        {
+          "vak": "Geschiedenis",
+          "voorbeeld": "Heterogeen: gemengde groepjes analyseren samen een bron."
+        },
+        {
+          "vak": "Engels",
+          "voorbeeld": "Homogeen voor leesteksten op niveau, heterogeen voor een gesprek."
+        }
+      ],
+      "waarom": "Hoe je groepeert maakt uit voor wat leerlingen leren. De EEF waarschuwt dat vaste niveaugroepen zwakkere leerlingen kunnen benadelen; flexibel en doelgericht groeperen voorkomt dat.",
+      "bewijs": "redelijk",
+      "bronnen": [
+        "eef-toolkit",
+        "johnson-2009"
+      ],
+      "materiaal": [
+        "rolkaarten"
+      ]
     }
   ]
 }

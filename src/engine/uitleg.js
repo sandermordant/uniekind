@@ -1,4 +1,4 @@
-import { pastBijVak } from './score.js';
+import { pastBijVak, VISIE_ACCENTEN } from './score.js';
 // "Waarom deze?": de uitleg bij elke werkvorm en bij de les als geheel.
 // Toon: bemoedigend en collegiaal, nooit belerend.
 
@@ -29,10 +29,12 @@ function visieZin(item, ctx) {
   const pijler = (id) => p.pijlers?.find((x) => x.id === id)?.naam;
   const principe = (id) => p.principes?.find((x) => x.id === id);
   if (item.perspectieven && pijler('goed-samenleven')) return `Dit sluit aan bij ${pijler('goed-samenleven').toLowerCase()}: leerlingen leren van elkaars perspectief.`;
-  if (item.categorie === 'differentiatievorm' && principe('differentiatie-instructie')) return `Dit sluit aan bij het principe ${principe('differentiatie-instructie').naam.toLowerCase()} (schoolplan § ${principe('differentiatie-instructie').paragraaf}): gedifferentieerde instructie en begeleiding.`;
+  if (item.categorie === 'differentiatievorm' && principe('differentiatie-instructie')) return `Dit sluit aan bij het principe ${principe('differentiatie-instructie').naam.toLowerCase()} ${principe('differentiatie-instructie').paragraaf ? `(schoolplan § ${principe('differentiatie-instructie').paragraaf})` : ''}: gedifferentieerde instructie en begeleiding.`;
   if ((item.groepsvorm.includes('tweetal') || item.groepsvorm.includes('groepje')) && p.koers?.citaat) return `"${p.koers.citaat.split('.')[0]}." Samenwerkend leren naast individueel leren.`;
   if (item.categorie === 'formatieve-check') return 'Evidence-informed: je beslist op basis van wat je ziet bij de hele klas, niet op gevoel.';
   if (item.doeldomein.includes('persoonsvorming') && pijler('goed-leven')) return `Dit raakt aan ${pijler('goed-leven').toLowerCase()}: leerlingen leren hun eigen aanpak kennen.`;
+  const accent = (p.generator?.visieAccenten ?? []).map((a) => VISIE_ACCENTEN[a]).find((a) => a && a.bonus && a.past(item));
+  if (accent) return `Dit past bij de visie van ${p.school.naam}: ${accent.naam.charAt(0).toLowerCase()}${accent.naam.slice(1)}.`;
   return 'Evidence-informed: een werkvorm met een eerlijke onderbouwing.';
 }
 
@@ -51,6 +53,7 @@ export function uitlegWerkvorm(item, blok, delen = {}, ctx) {
   if (top.length) zinnen.push(`Past bij jou: ${STIJL[top[0]]}.`);
   if (ctx.vak?.kernwerkvormen?.includes(item.id)) zinnen.push(`Een werkvorm die bij ${ctx.vak.naam} hoort.`);
   else if (pastBijVak(item, ctx.vak)) zinnen.push(`Er staat een voorbeeld uit ${ctx.vak.naam} bij.`);
+  if (ctx.sectie?.werkvormVanDeMaand === item.id) zinnen.push(`De werkvorm van de maand in je ${ctx.profiel.terminologie?.sectie ?? 'sectie'}.`);
   return {
     koppeling: zinnen.join(' '),
     visie: visieZin(item, ctx),

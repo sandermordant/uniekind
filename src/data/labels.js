@@ -1,3 +1,4 @@
+import { termen, groot } from './termen.js';
 // Leesbare namen voor de sleutels uit de kennisbank.
 
 export const CATEGORIE = {
@@ -43,7 +44,7 @@ export const ONDERSTEUNING = {
 };
 export const PAST = { goed: 'Past goed', aanpassen: 'Met aanpassing', minder: 'Minder geschikt' };
 
-export const RUIMTE = { M: 'M-lokaal', L: 'L-lokaal', plein: 'Deelplein', stilte: 'Stilteruimte' };
+export const RUIMTE = { get M() { return groot(termen.M); }, get L() { return groot(termen.L); }, get plein() { return groot(termen.plein); }, get stilte() { return groot(termen.stilte); } };
 
 export const VOORBEREIDING = { geen: 'Geen voorbereiding', kort: 'Korte voorbereiding (< 10 min)', uitgebreid: 'Uitgebreide voorbereiding' };
 export const ENERGIE = { rustig: 'Rustig', gemiddeld: 'Gemiddeld', actief: 'Actief' };

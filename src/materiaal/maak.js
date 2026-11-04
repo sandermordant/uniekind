@@ -4,13 +4,14 @@
 // Er staan nooit leerlingnamen in: alleen aantallen en groepsletters.
 import { kop, alinea, lijst, vink, tabel, vraag, regels, invulveld, kader, schaal, schema, kaarten, pagina } from './model.js';
 import * as AI from '../ai/import.js';
+import { termen } from '../data/termen.js';
 
 const zonderNummer = (r) => r.replace(/^\d+[.)]\s*/, '');
 const aiVragen = (t, start = 1, regelsPer = 3) => AI.vragen(t).map((v, i) => vraag(start + i, v.tekst, regelsPer, v.label));
 
 const NIVEAU_NAAM = { onthouden: 'Onthouden', begrijpen: 'Begrijpen', toepassen: 'Toepassen', analyseren: 'Analyseren', evalueren: 'Evalueren', creeren: 'Creëren' };
 const RTTI = { onthouden: 'R', begrijpen: 'T1', toepassen: 'T2', analyseren: 'I', evalueren: 'I', creeren: 'I' };
-const PLEK = { lokaal: 'het lokaal', plein: 'het deelplein', stilte: 'de stilteruimte' };
+const PLEK = { lokaal: 'het lokaal', get plein() { return `het ${termen.plein}`; }, get stilte() { return `de ${termen.stilte}`; } };
 const ROLNAAM = { steun: 'steun', basis: 'basis', verdieping: 'verdieping', zelfstandig: 'zelfstandig', stilte: 'stilteruimte', wissel: 'wissel', klas: 'hele klas' };
 const PRODUCT = ['ontwerpopdracht', 'casusopdracht', 'galerijwandeling', 'keuzebord', 'compacten-verrijken', 'expertgroepen'];
 
@@ -553,7 +554,7 @@ function voorbereiding(les, inf, docs, itemMap) {
   const inrichten = [];
   if (les.fases.some((f) => f.blokken.some((b) => b.rol === 'steun'))) inrichten.push('Een instructietafel met plek voor 4 tot 6 leerlingen.');
   if (les.differentiatie.some((d) => d.id === 'hoeken-l-lokaal')) inrichten.push('Drie zones in het lokaal: instructie, stil werken, overleggen (met zonekaarten).');
-  if (les.fases.some((f) => f.blokken.some((b) => b.plek === 'plein'))) inrichten.push('Een vaste plek op het deelplein voor de pleingroep, met de afsprakenkaart.');
+  if (les.fases.some((f) => f.blokken.some((b) => b.plek === 'plein'))) inrichten.push(`Een vaste plek op het ${termen.plein} voor de pleingroep, met de afsprakenkaart.`);
   if (les.fases.some((f) => f.blokken.some((b) => b.plek === 'stilte'))) inrichten.push('Afspraak over de stilteruimte: is hij vrij, en wie houdt toezicht?');
   inrichten.push('Hintkaarten en pluskaarten op een vaste plek.');
   return {

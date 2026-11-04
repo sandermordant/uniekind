@@ -21,6 +21,9 @@ import lesOpenen from './pages/les-openen.js';
 import digibord from './pages/digibord.js';
 import hulp from './pages/hulp.js';
 import mijnProfiel from './pages/mijn-profiel.js';
+import privacy from './pages/privacy.js';
+import schoolprofiel from './pages/schoolprofiel.js';
+import { zetTermen } from './data/termen.js';
 
 const NAV = [
   { hash: 'les-maken', label: 'Maak een les' },
@@ -45,7 +48,9 @@ function kiesPagina(hash) {
     'les-openen': lesOpenen,
     'digibord': digibord,
     'hulp': hulp,
-    'mijn-profiel': mijnProfiel
+    'mijn-profiel': mijnProfiel,
+    'privacy': privacy,
+    'schoolprofiel': schoolprofiel
   };
   return { pagina: routes[hash] ?? home, nav: routes[hash] ? hash : '' };
 }
@@ -61,6 +66,7 @@ function shell(profiel) {
     ? html`<span class="logo-plaat"><img src="${profiel.huisstijl.logo}" alt="${profiel.huisstijl.logoAlt ?? profiel.school.naam}" width="146" height="34"></span>`
     : '';
   return html`
+    <button type="button" class="overslaan" id="overslaan">Naar de inhoud</button>
     <header class="kop">
       <div class="wrap">
         <a class="merk" href="#" aria-label="${profiel.uniekind.titel}, naar de startpagina">
@@ -68,18 +74,50 @@ function shell(profiel) {
           <span><span class="merk-naam">${profiel.uniekind.titel}</span><span class="merk-sub">${profiel.uniekind.ondertitel}</span></span>
         </a>
         <nav class="nav" aria-label="Hoofdmenu">
-          ${NAV.map((n) => html`<a href="#${n.hash}" data-nav="${n.hash}">${n.label}</a>`)}
+          ${[...NAV, ...(profiel.uniekind.eigenProfiel ? [{ hash: 'schoolprofiel', label: 'Schoolprofiel' }] : [])].map((n) => html`<a href="#${n.hash}" data-nav="${n.hash}">${n.label}</a>`)}
         </nav>
       </div>
       <div class="kleurbalk" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
     </header>
     <div id="inhoud" tabindex="-1"></div>
+    <p id="paginaMelding" class="visueel-verborgen" aria-live="polite"></p>
     <footer class="voet">
       <div class="wrap">
         <span>${profiel.uniekind.titel} voor ${profiel.school.naam}. Alles draait in je browser; er worden geen leerlinggegevens opgeslagen.</span>
-        <span class="voetlinks"><a href="#hulp">Hulp en privacy</a> <a href="#mijn-profiel">Mijn gegevens</a> <a href="#invulformulier">Werkvorm toevoegen</a></span>
+        <span class="voetlinks"><a href="#hulp">Hulp</a> <a href="#privacy">Privacy</a> <a href="#mijn-profiel">Mijn gegevens</a> <a href="#invulformulier">Werkvorm toevoegen</a> <a href="#schoolprofiel">Schoolprofiel</a></span>
       </div>
     </footer>`;
+}
+
+// Toegangscode: een drempel bij het eerste bezoek, géén beveiliging (het woord staat in het profiel en is dus
+// voor iedereen te lezen). Leeg of null in het profiel betekent: geen drempel.
+const normaal = (w) => String(w ?? '').trim().toLowerCase();
+function toegangOk(profiel, app) {
+  const code = profiel.uniekind.toegangscode;
+  if (!code) return true;
+  try { if (localStorage.getItem('uniekind:toegang') === normaal(code)) return true; } catch { /* geen opslag: elke keer vragen */ }
+  return new Promise((klaar) => {
+    app.innerHTML = String(html`
+      <main class="wrap toegang">
+        <h1>${profiel.uniekind.titel}</h1>
+        <p class="lead">${profiel.uniekind.ondertitel}</p>
+        <form id="toegangForm" class="toegang-form">
+          <label for="toegangCode">Vul het schoolwoord in dat je van je collega's hebt gekregen.</label>
+          <div class="veldrij"><input id="toegangCode" type="text" autocomplete="off" autocapitalize="off" required>
+          <button type="submit" class="knop">Verder</button></div>
+          <p id="toegangFout" class="melding fout" role="alert" hidden>Dat woord klopt niet. Probeer het nog eens.</p>
+        </form>
+      </main>`);
+    const f = document.getElementById('toegangForm');
+    document.getElementById('toegangCode').focus();
+    f.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (normaal(f.toegangCode.value) === normaal(code)) {
+        try { localStorage.setItem('uniekind:toegang', normaal(code)); } catch { /* niets */ }
+        klaar(true);
+      } else document.getElementById('toegangFout').hidden = false;
+    });
+  });
 }
 
 async function start() {
@@ -92,6 +130,8 @@ async function start() {
     return;
   }
   pasHuisstijlToe(profiel);
+  zetTermen(profiel);
+  if (!(await toegangOk(profiel, app))) return;
   app.innerHTML = String(shell(profiel));
   let inhoud = document.getElementById('inhoud');
   const ctx = { profiel };
@@ -115,6 +155,8 @@ async function start() {
       inhoud = nieuw;
       inhoud.innerHTML = String(resultaat.html);
       document.title = `${resultaat.titel ? resultaat.titel + ' · ' : ''}${profiel.uniekind.titel} – ${profiel.school.naam}`;
+      const m = document.getElementById('paginaMelding');
+      if (m) m.textContent = `${resultaat.titel || 'Startpagina'} geladen`;
       resultaat.na?.(inhoud);
       window.scrollTo(0, 0);
       if (hash) inhoud.focus({ preventScroll: true });
@@ -123,6 +165,7 @@ async function start() {
       inhoud.innerHTML = `<main class="wrap"><p class="leeg">Er ging iets mis bij het laden van deze pagina: ${escape(e.message)}</p></main>`;
     }
   }
+  document.getElementById('overslaan').addEventListener('click', () => { const h = inhoud.querySelector('h1, h2'); (h ?? inhoud).setAttribute('tabindex', '-1'); (h ?? inhoud).focus(); });
   window.addEventListener('hashchange', toon);
   toon();
 }

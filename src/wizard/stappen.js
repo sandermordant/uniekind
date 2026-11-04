@@ -198,7 +198,8 @@ export function stapInhoud({ concept, taxonomie }) {
     </fieldset>
     ${tekstveld('inhoud.voorkennis', 'Voorkennis: wat hebben ze eerder gehad?', inh.voorkennis, { lang: true, rijen: 2 })}
     ${knoppenveld('inhoud.voorkennisZeker', 'Hoe zeker ben je dat die voorkennis er zit?', [['zeker', 'Zeker'], ['twijfel', 'Twijfel'], ['niet', 'Waarschijnlijk niet']], inh.voorkennisZeker, { hulp: inh.voorkennisZeker !== 'zeker' ? 'Uniekind voegt een activeringsopdracht toe aan het begin van de les.' : '' , herteken: true })}
-    ${tekstveld('inhoud.misvattingen', 'Bekende misvattingen of struikelpunten (mag leeg)', inh.misvattingen, { lang: true, rijen: 2 })}`;
+    ${tekstveld('inhoud.misvattingen', 'Bekende misvattingen of struikelpunten (mag leeg)', inh.misvattingen, { lang: true, rijen: 2 })}
+    ${ja('inhoud.actualiteit', 'Begin met een actualiteitsmoment: een nieuwsbericht uit de regio dat bij het onderwerp past', inh.actualiteit)}`;
 }
 
 /* ── Stap 4 · Klasbeeld ─────────────────────────── */

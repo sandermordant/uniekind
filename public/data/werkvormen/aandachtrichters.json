@@ -5188,6 +5188,261 @@
         "wiliam-2011"
       ],
       "materiaal": []
+    },
+    {
+      "id": "dertig-secondenuitdaging",
+      "naam": "30-secondenuitdaging",
+      "alias": [
+        "halve-minuutopdracht",
+        "snelle uitdaging"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Een korte opdracht die precies 30 seconden duurt, met de timer groot op het bord: wie krijgt het voor elkaar?",
+      "startzin": "Je hebt 30 seconden. Opdracht: … Klaar? De timer loopt. Start!",
+      "stappen": [
+        "Bedenk een opdracht die in 30 seconden kan en bij de stof past (noem er zoveel mogelijk, teken, reken uit).",
+        "Zet de timer van de digibordmodus op 30 seconden.",
+        "Iedereen werkt alleen, op papier of wisbordje.",
+        "Laat bij het signaal iedereen tegelijk de pen neerleggen.",
+        "Vraag twee leerlingen wat ze hebben en leg het verband met het lesdoel."
+      ],
+      "duur": {
+        "min": 1,
+        "max": 3
+      },
+      "groepsvorm": [
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "timer",
+          "papier of wisbordje"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "geen",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "onthouden",
+        "toepassen"
+      ],
+      "differentiatie": [],
+      "richting": "nvt",
+      "doeldomein": [
+        "kwalificatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Tekenen of steekwoorden mogen ook."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "aanpassen",
+          "tip": "Benadruk dat het niet erg is als je niet klaar bent; niemand hoeft het te laten zien."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "actief",
+      "docentstijl": [
+        "structuur",
+        "relatie",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": false,
+      "valkuilen": [
+        {
+          "valkuil": "Snelle leerlingen roepen meteen.",
+          "oplossing": "Alles op papier; pas na het signaal mag er gepraat worden."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een opdracht met een voorbeeld erbij.",
+        "havo": "Een opdracht met een kleine draai.",
+        "vwo": "Een opdracht waarbij je ook moet kiezen of ordenen.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Frans",
+          "voorbeeld": "Noem in 30 seconden zoveel mogelijk Franse woorden over het weer."
+        },
+        {
+          "vak": "Wiskunde",
+          "voorbeeld": "Schrijf in 30 seconden zoveel mogelijk sommen op met uitkomst 24."
+        },
+        {
+          "vak": "Aardrijkskunde",
+          "voorbeeld": "Noem in 30 seconden zoveel mogelijk Limburgse gemeenten."
+        }
+      ],
+      "waarom": "Een korte, afgebakende opdracht zet iedereen meteen aan het werk en haalt voorkennis op. Ophalen helpt onthouden; de tijdsdruk zelf is een praktijkkeuze, houd hem licht.",
+      "bewijs": "beperkt",
+      "bronnen": [
+        "roediger-karpicke-2006"
+      ],
+      "materiaal": []
+    },
+    {
+      "id": "stelling-bij-binnenkomst",
+      "naam": "Stelling bij binnenkomst",
+      "alias": [
+        "stelling op het bord",
+        "eens of oneens"
+      ],
+      "categorie": "aandachtrichter",
+      "kort": "Bij binnenkomst staat een prikkelende stelling op het bord; leerlingen kiezen eens of oneens en schrijven één reden op.",
+      "startzin": "Lees de stelling op het bord. Eens of oneens? Schrijf je keuze en één reden op. Aan het eind van de les kijken we of je nog hetzelfde vindt.",
+      "stappen": [
+        "Formuleer een stelling over de stof waar je echt verschillend over kunt denken.",
+        "Zet hem op het bord voordat de klas binnenkomt.",
+        "Leerlingen schrijven eens of oneens en één reden op.",
+        "Laat met een hand of kaart zien hoe de klas verdeeld is.",
+        "Hoor één reden van elke kant en kom aan het eind terug op de stelling."
+      ],
+      "duur": {
+        "min": 2,
+        "max": 4
+      },
+      "groepsvorm": [
+        "klas",
+        "individueel"
+      ],
+      "ruimte": {
+        "M": true,
+        "L": true,
+        "plein": false,
+        "stilte": false,
+        "beweging": false
+      },
+      "middelen": {
+        "lijst": [
+          "stelling op het bord"
+        ],
+        "laptop": "nee",
+        "telefoon": false
+      },
+      "voorbereiding": "kort",
+      "lesfase": [
+        "opening"
+      ],
+      "denkniveau": [
+        "evalueren",
+        "begrijpen"
+      ],
+      "differentiatie": [],
+      "richting": "divergent",
+      "doeldomein": [
+        "kwalificatie",
+        "socialisatie"
+      ],
+      "burgerschap": [],
+      "ondersteuning": {
+        "dyslexie": {
+          "past": "goed",
+          "tip": "Lees tekst op het bord hardop voor en houd het kort."
+        },
+        "dyscalculie": {
+          "past": "goed",
+          "tip": "Geen rekenwerk nodig; rond getallen af als ze erin staan."
+        },
+        "nt2": {
+          "past": "aanpassen",
+          "tip": "Ondersteun met een beeld en leg moeilijke woorden kort uit."
+        },
+        "faalangst": {
+          "past": "goed",
+          "tip": "Eerst opschrijven; je hoeft je keuze niet hardop te verdedigen."
+        },
+        "structuur": {
+          "past": "goed",
+          "tip": "Kort en voorspelbaar: zeg vooraf hoe lang het duurt."
+        },
+        "hoogbegaafd": {
+          "past": "goed",
+          "tip": "Vraag om een tweede, verrassende verklaring."
+        }
+      },
+      "energie": "gemiddeld",
+      "docentstijl": [
+        "relatie",
+        "ontdekken",
+        "houvast"
+      ],
+      "instapniveau": 1,
+      "vereist": {
+        "onderwijsassistent": false,
+        "plein": false
+      },
+      "beweegmoment": false,
+      "perspectieven": true,
+      "valkuilen": [
+        {
+          "valkuil": "De stelling heeft een duidelijk goed antwoord.",
+          "oplossing": "Kies een stelling waar redelijke mensen over verschillen, of die half waar is."
+        }
+      ],
+      "varianten": {
+        "vmbo": "Een herkenbare stelling uit het dagelijks leven.",
+        "havo": "Een stelling uit de stof.",
+        "vwo": "Een stelling met een dilemma of een tegenstrijdigheid.",
+        "steun": "Geef twee mogelijke antwoorden om uit te kiezen.",
+        "basis": "Standaard.",
+        "verdieping": "Vraag om een onderbouwing of een tweede verklaring."
+      },
+      "vakvoorbeelden": [
+        {
+          "vak": "Economie",
+          "voorbeeld": "'Een hoger minimumloon is altijd goed voor werknemers.'"
+        },
+        {
+          "vak": "Biologie",
+          "voorbeeld": "'Dieren in de dierentuin hebben het beter dan in het wild.'"
+        },
+        {
+          "vak": "Nederlands",
+          "voorbeeld": "'Een boek is altijd beter dan de film.'"
+        }
+      ],
+      "waarom": "Een stelling maakt meningen en voorkennis zichtbaar en geeft de les een vraag om naar toe te werken. Praktijkervaring; past bij goed samenleven en verschillende perspectieven.",
+      "bewijs": "praktijk",
+      "bronnen": [],
+      "materiaal": [
+        "stellingkaarten"
+      ]
     }
   ]
 }

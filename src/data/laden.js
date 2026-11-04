@@ -2,6 +2,7 @@
 // (een lichte samenvatting), en een volledige categorie pas als een werkvorm wordt geopend.
 
 /* global __PROFIEL__ */
+import { kiesProfiel } from './profiel.js';
 const cache = new Map();
 
 async function json(pad) {
@@ -21,7 +22,10 @@ async function json(pad) {
 
 export const profielId = typeof __PROFIEL__ !== 'undefined' ? __PROFIEL__ : 'sophianum';
 
-export const laadProfiel = () => json(`./profiles/${profielId}.json`);
+// Het standaardprofiel van deze build, of (in de algemene versie) het eigen profiel van de school.
+let gekozen = null;
+export const laadStandaardProfiel = () => json(`./profiles/${profielId}.json`);
+export const laadProfiel = () => (gekozen ??= laadStandaardProfiel().then((basis) => kiesProfiel(basis, json)));
 export const laadIndex = () => json('./data/werkvormen/index.json');
 export const laadBronnen = () => json('./data/bronnen.json').then((d) => d.bronnen);
 export const laadTaxonomie = () => json('./data/taxonomie.json');

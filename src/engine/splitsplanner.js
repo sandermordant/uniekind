@@ -1,10 +1,11 @@
+import { termen } from '../data/termen.js';
 // De splitsplanner: wat doe je als de klas groter is dan het lokaal, of als je bewust splitst?
 // Geeft alle opties met haalbaarheid; de opbouw maakt van de gekozen optie een tijdlijn.
 
 export const OPZETTEN = {
   klassikaal: { naam: 'Klassikaal-plus', kort: 'Je vertrouwde les met één differentiatie-element erin.' },
   routes: { naam: 'Routes vanuit het lokaal', kort: 'Iedereen begint samen; daarna steun aan de instructietafel, zelfstandig basis en verdieping op een eigen plek.' },
-  'gespreide-start': { naam: 'Gespreide start', kort: 'De verdiepingsgroep begint direct op het deelplein met een zelfstandige startopdracht. De rest krijgt instructie in het lokaal.' },
+  'gespreide-start': { naam: 'Gespreide start', get kort() { return `De verdiepingsgroep begint direct op het ${termen.plein} met een zelfstandige startopdracht. De rest krijgt instructie in het lokaal.`; } },
   startcheck: { naam: 'Startcheck bepaalt de route', kort: 'Iedereen start op het plein met 3 tot 5 vragen. Wie alles goed heeft, blijft op het plein voor verdieping; de rest gaat naar binnen voor instructie.' },
   carrousel: { naam: 'Carrousel', kort: 'Twee groepen wisselen halverwege tussen het lokaal (instructie) en het plein (verwerken).' },
   flipped: { naam: 'Flipped start', kort: 'De pleingroep krijgt de instructie via een kennisclip op de laptop; jij geeft instructie in het lokaal.' },
@@ -26,7 +27,7 @@ export function planSplitsing(ctx) {
 
   if (overflow === 0) optie('routes', true, '', { pleinGroep: 0 });
   const p = ctx.pleinMogelijk;
-  const geenPlein = ctx.ruimte !== 'M' ? 'Dit lokaal heeft geen deelplein.' : 'Er is geen toezicht op het plein mogelijk.';
+  const geenPlein = ctx.ruimte !== 'M' ? `Dit lokaal heeft geen ${termen.plein}.` : 'Er is geen toezicht op het plein mogelijk.';
   optie('gespreide-start', p && (v.bekend ? v.verdieping >= Math.max(1, overflow) : true) && pleinGroep <= ctx.capaciteit.plein,
     !p ? geenPlein : 'De verdiepingsgroep is kleiner dan het aantal leerlingen dat niet in het lokaal past.', { pleinGroep });
   optie('startcheck', p && n <= ctx.capaciteit.plein, !p ? geenPlein : 'De hele klas past niet op het plein.', { pleinGroep });

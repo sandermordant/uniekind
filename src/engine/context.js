@@ -1,5 +1,6 @@
 // Zet de invoer van de wizard om naar een volledige context met verstandige standaardwaarden.
 import { controleerLesdoel } from './tekst.js';
+import { zetTermen } from '../data/termen.js';
 
 export const STIJLEN = ['uitleggen', 'structuur', 'samenwerken', 'ontdekken', 'digitaal', 'relatie', 'houvast'];
 const NIVEAU_PER_REEKS = {
@@ -20,7 +21,7 @@ export function standaardInvoer(profiel) {
     },
     context: {
       afdeling: afd.id, leerjaar: afd.leerjaren[0], vak: profiel.vakken[0]?.id ?? '',
-      lesduur: afd.standaardLesduur, ruimte: 'M', stilte: false, aantal: 24, oa: false,
+      lesduur: afd.standaardLesduur, ruimte: profiel.ruimtes.some((r) => r.id === 'M') ? 'M' : 'L', stilte: false, aantal: 24, oa: false,
       laptops: 'alle', reeks: 'uitleg', tijdstip: 'midden'
     },
     inhoud: { onderwerp: '', tekst: '', lesdoelen: [], begrippen: [], voorkennis: '', voorkennisZeker: 'zeker', misvattingen: '' },
@@ -36,6 +37,7 @@ export function standaardInvoer(profiel) {
 const getal = (x, std = 0) => (Number.isFinite(Number(x)) && x !== '' && x != null ? Number(x) : std);
 
 export function maakContext(invoer, profiel) {
+  zetTermen(profiel);
   const std = standaardInvoer(profiel);
   const d = { ...std.docent, ...invoer.docent, stijl: { ...std.docent.stijl, ...(invoer.docent?.stijl ?? {}) } };
   const c = { ...std.context, ...invoer.context };
@@ -45,7 +47,10 @@ export function maakContext(invoer, profiel) {
 
   const afdeling = profiel.afdelingen.find((a) => a.id === c.afdeling) ?? profiel.afdelingen[0];
   const lesduur = Math.max(20, Math.min(240, Math.round(getal(c.lesduur, afdeling.standaardLesduur))));
-  const ruimteId = ['M', 'L', 'anders'].includes(c.ruimte) ? c.ruimte : 'L';
+  // Alleen ruimtes die de school heeft; anders de eerste die er wel is.
+  const heeft = (id) => profiel.ruimtes.some((r) => r.id === id);
+  const gevraagd = ['M', 'L', 'anders'].includes(c.ruimte) ? c.ruimte : 'L';
+  const ruimteId = heeft(gevraagd) || gevraagd === 'anders' ? gevraagd : ['L', 'M', 'anders'].find((r) => r === 'anders' || heeft(r));
   const ruimteDef = profiel.ruimtes.find((r) => r.id === ruimteId);
   const pleinDef = profiel.ruimtes.find((r) => r.id === 'plein');
   const stilteDef = profiel.ruimtes.find((r) => r.id === 'stilte');
@@ -87,11 +92,19 @@ export function maakContext(invoer, profiel) {
   if (bekend && verdeling.verdieping > 0) behoeften.hoogbegaafd = Math.max(behoeften.hoogbegaafd, 0);
 
   const vak = profiel.vakken.find((v) => v.id === c.vak);
+  const sectie = profiel.sectieAccenten?.perVak?.[c.vak] ?? {};
   const stand = [1, 2, 3].includes(Number(invoer.stand)) ? Number(invoer.stand) : 2;
 
   return {
     profiel, stand,
-    docent: { ...d, lesmodel: d.lesmodel || profiel.didactiek.lesmodel, taxonomie: d.taxonomie || profiel.didactiek.taxonomie },
+    // Drie lagen: school (profiel), sectie (accenten per vak) en docent. Een sectie-accent geldt zolang de
+    // docent zelf de schoolstandaard heeft laten staan; kiest de docent bewust iets anders, dan wint de docent.
+    docent: {
+      ...d,
+      lesmodel: (!d.lesmodel || d.lesmodel === profiel.didactiek.lesmodel) && sectie.lesmodel ? sectie.lesmodel : d.lesmodel || profiel.didactiek.lesmodel,
+      taxonomie: (!d.taxonomie || d.taxonomie === profiel.didactiek.taxonomie) && sectie.taxonomie ? sectie.taxonomie : d.taxonomie || profiel.didactiek.taxonomie
+    },
+    sectie,
     afdeling, niveau: afdeling.niveau, leerjaar: getal(c.leerjaar, afdeling.leerjaren[0]),
     vak, vakId: c.vak, lesduur, ruimte: ruimteId, ruimteDef, aantal, oa,
     laptops: ['alle', 'deel', 'geen'].includes(c.laptops) ? c.laptops : 'alle',

@@ -67,7 +67,9 @@ function maakKiezer(ctx, items) {
       if (spec.vast && spec.ids) bonus += (spec.ids.length - spec.ids.indexOf(item.id)) * 0.5;
       if (rol === 'instructie' && item.id === lesmodelItem) bonus += 5;
       if (kern.has(item.id)) bonus += 2.5;
+      if (ctx.inhoud.actualiteit && item.id === 'regionaal-nieuwsitem') bonus += 4; // optioneel actualiteitsmoment (schoolplan 1.3)
       if (o.voorkeur?.[item.id]) bonus += o.voorkeur[item.id];
+      if (ctx.sectie?.werkvormVanDeMaand === item.id) bonus += 1; // PLG: de werkvorm van de maand van je sectie
       // Past de werkvorm qua lengte bij het blok? Een werkvorm van 5 minuten vult geen blok van 20.
       if (!['element', 'steun'].includes(rol)) { // die lopen naast het verwerken, de lengte telt dan niet
         if (item.duur.max >= slot.duur) bonus += 1;
@@ -475,8 +477,24 @@ export function bouwLes(ctx, items) {
     invoer: null
   };
   if (ctx.reeks === 'toets' || ctx.behoeften.faalangst > 0) les.tips.push('Examenstress en faalangst spelen bij veel leerlingen. Oefen zonder cijfer, maak succescriteria zichtbaar en laat antwoorden eerst op papier of een wisbordje geven.');
+  // Verwijzing naar het ondersteuningsaanbod van de school (uit het profiel), alleen bij behoeften die in deze klas spelen.
+  const aanbod = (id) => ctx.profiel.ondersteuning?.find((o) => o.id === id);
+  const verwijs = [];
+  for (const b of ['dyslexie', 'dyscalculie', 'nt2', 'faalangst', 'hoogbegaafd']) {
+    const o = aanbod(b);
+    if (ctx.behoeften[b] > 0 && o?.aanbod) verwijs.push(`${o.naam}: ${o.aanbod.charAt(0).toLowerCase()}${o.aanbod.slice(1)}`);
+  }
+  if (ctx.verdeling.bekend && ctx.verdeling.verdieping > 0 && !(ctx.behoeften.hoogbegaafd > 0) && aanbod('hoogbegaafd')?.aanbod) verwijs.push(`${aanbod('hoogbegaafd').naam}: ${aanbod('hoogbegaafd').aanbod.charAt(0).toLowerCase()}${aanbod('hoogbegaafd').aanbod.slice(1)}`);
+  if (ctx.verdeling.bekend && ctx.verdeling.steun > 0 && (ctx.vak?.taal || ctx.vak?.rekenen) && aanbod('taal-rekenen')?.inDeLes) verwijs.push(`${aanbod('taal-rekenen').naam}: ${aanbod('taal-rekenen').inDeLes.charAt(0).toLowerCase()}${aanbod('taal-rekenen').inDeLes.slice(1)}`);
+  if (verwijs.length) les.tips.push(`Op school is er ondersteuning buiten de les. ${verwijs.map((v) => v.replace(/\.+$/, '')).join('. ')}.`);
+  if (ctx.reeks === 'toets' && aanbod('examenstress')?.inDeLes) les.tips.push(aanbod('examenstress').inDeLes);
   if (ctx.inhoud.misvattingen) les.tips.push(`Bekende struikelpunten: ${ctx.inhoud.misvattingen}. Gebruik ze als foute antwoorden in je check.`);
   if (split.waarschuwing) les.tips.push(split.waarschuwing);
+  if (ctx.inhoud.actualiteit) les.tips.push('Actualiteitsmoment: kies een nieuwsbericht van deze week. Bij Materiaal staan zoeklinks naar nieuwsbronnen; laat leerlingen ook een ander perspectief op het bericht bedenken.');
+  if (ctx.sectie?.lesmodel && ctx.docent.lesmodel === ctx.sectie.lesmodel && ctx.sectie.lesmodel !== ctx.profiel.didactiek.lesmodel) {
+    const naam = ctx.profiel.didactiek.lesmodelOpties.find((o) => o.id === ctx.sectie.lesmodel)?.naam ?? ctx.sectie.lesmodel;
+    les.tips.push(`Je ${ctx.profiel.terminologie?.sectie ?? 'sectie'} werkt met ${naam}; daarom volgt deze les dat model. Kies in je profiel een ander lesmodel als je dat wilt.`);
+  }
   les.waarom = uitlegLes(les, ctx, items);
   les.controles = controleerLes(les, items);
   return les;

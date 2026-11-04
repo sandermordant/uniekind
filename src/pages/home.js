@@ -27,7 +27,7 @@ export default {
             <div class="tellers">
               ${index.categorieen.map((c) => html`
                 <a class="teller" href="#bibliotheek" data-categorie="${c.categorie}">
-                  <b style="color:${kleur(c.categorie)}">${c.aantal}</b><span>${CATEGORIE[c.categorie] ?? c.titel}</span>
+                  <b style="color:color-mix(in srgb, ${kleur(c.categorie)} 55%, var(--fg))">${c.aantal}</b><span>${CATEGORIE[c.categorie] ?? c.titel}</span>
                 </a>`)}
             </div>
           </section>
@@ -36,11 +36,8 @@ export default {
             <div class="pijlers">
               <div class="pijler"><span class="nr">Jij</span><h3>Vertrekt vanuit je eigen kracht</h3><p>Leg je graag uit? Dan blijft de uitleg. Uniekind voegt er één stap aan toe, zoals een instructietafel of een pluskaart.</p></div>
               <div class="pijler"><span class="nr">De klas</span><h3>Krijgt wat ze nodig heeft</h3><p>Extra steun voor wie het nodig heeft, verdieping voor wie klaar is. Je vult alleen aantallen in, nooit namen.</p></div>
-              <div class="pijler"><span class="nr">De school</span><h3>Zit er al in</h3><p>De M-lokalen, deelpleinen, lestijden en de visie van ${profiel.school.naam} zijn ingebouwd. Telefoons komen er niet aan te pas.</p></div>
+              <div class="pijler"><span class="nr">De school</span><h3>Zit er al in</h3><p>De lokalen, lestijden, regels en de visie van ${profiel.school.naam} zijn ingebouwd${profiel.regels?.telefoon?.toegestaan === false ? '. Telefoons komen er niet aan te pas' : ''}.</p></div>
             </div>
-          </section>
-          <section class="sectie">
-            <p class="fase-melding"><b>Preview fase 5.</b> Lesgenerator, materiaal, digibord, export, foto-herkenning en AI-brug werken, met ${index.items.length} werkvormen, Hulp en Mijn profiel met reflectie na de les. In fase 6 volgen de laatste tests, de toegankelijkheidscontrole en de publicatie.</p>
           </section>
         </main>`,
       na(root) {

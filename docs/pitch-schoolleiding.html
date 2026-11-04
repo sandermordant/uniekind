@@ -1,0 +1,100 @@
+<title>Uniekind voor Sophianum</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+<style>
+/* Eén A4 voor de schoolleiding: kop met vijfkleurenbalk, daarna twee kolommen, onderaan het voorstel. */
+:root {
+  --bg: #ffffff; --vlak: #f1f5fb; --fg: #142038; --zacht: #4f5b73; --lijn: #d6dfeb;
+  --blauw: #00489a; --paars: #934d98; --rood: #d70926; --oranje: #f39000; --geel: #ffcf21; --groen: #2ea836;
+  --kop: "Nunito", ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --tekst: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0f1729; --vlak: #18233b; --fg: #e7edf7; --zacht: #a9b5ca; --lijn: #2a3754; --blauw: #8fb6ec; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #0f1729; --vlak: #18233b; --fg: #e7edf7; --zacht: #a9b5ca; --lijn: #2a3754; --blauw: #8fb6ec; color-scheme: dark }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 15px/1.5 var(--tekst); }
+.blad { max-width: 52rem; margin: 0 auto; padding-block: 2rem 2.5rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 1.1rem; }
+.balk { display: grid; grid-template-columns: repeat(5, 1fr); height: 5px; border-radius: 3px; overflow: hidden; }
+.balk span:nth-child(1) { background: var(--paars); } .balk span:nth-child(2) { background: var(--rood); } .balk span:nth-child(3) { background: var(--oranje); } .balk span:nth-child(4) { background: var(--geel); } .balk span:nth-child(5) { background: var(--groen); }
+header { display: grid; gap: 0.35rem; }
+.eyebrow { font: 800 0.72rem/1 var(--kop); letter-spacing: 0.09em; text-transform: uppercase; color: var(--zacht); }
+h1 { font: 900 1.9rem/1.1 var(--kop); color: var(--blauw); margin: 0; text-wrap: balance; }
+.motto { font: 700 1.02rem/1.35 var(--kop); margin: 0; }
+h2 { font: 800 1.02rem/1.2 var(--kop); color: var(--blauw); margin: 0 0 0.3rem; }
+p { margin: 0; } ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.2rem; }
+.kolommen { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.6rem; }
+.kolommen > section { min-width: 0; display: grid; gap: 0.25rem; align-content: start; }
+.cijfers { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; font-size: 0.86rem; color: var(--zacht); }
+.cijfers b { font: 900 1.15rem/1 var(--kop); color: var(--fg); font-variant-numeric: tabular-nums; margin-right: 0.2rem; }
+.voorstel { background: var(--vlak); border: 1px solid var(--lijn); border-radius: 10px; padding: 0.9rem 1.1rem; display: grid; gap: 0.45rem; }
+.voorstel ol { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.2rem; }
+.voet { font-size: 0.78rem; color: var(--zacht); }
+@media (max-width: 640px) { .kolommen { grid-template-columns: 1fr; } h1 { font-size: 1.55rem; } }
+@page { size: A4; margin: 11mm 13mm; }
+@media print {
+  :root { --bg: #fff; --vlak: #f1f5fb; --fg: #142038; --zacht: #4f5b73; --lijn: #d6dfeb; --blauw: #00489a; color-scheme: light; }
+  body { font-size: 9.9pt; line-height: 1.4; }
+  .blad { max-width: none; padding: 0; gap: 3.2mm; }
+  h1 { font-size: 19pt; } h2 { font-size: 10.4pt; } .motto { font-size: 10.5pt; }
+  .kolommen { gap: 3mm 7mm; } .voorstel { padding: 3mm 4mm; } ul, .voorstel ol { gap: 0.6mm; }
+}
+</style>
+
+<main class="blad">
+  <div class="balk" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <header>
+    <p class="eyebrow">Voorstel aan de schoolleiding · Sophianum</p>
+    <h1>Uniekind: lessen op maat, al was het maar voor één kind</h1>
+    <p class="motto">Een gratis website die collega's in drie minuten een gedifferentieerde les geeft, met al het materiaal, vanuit hoe ze nu al lesgeven.</p>
+  </header>
+
+  <div class="kolommen">
+    <section>
+      <h2>Het probleem</h2>
+      <p>Na de verbouwing heeft Sophianum andere ruimtes: M-lokalen voor maximaal 26 leerlingen op krukken, met een deelplein. Klassen zijn soms 30 leerlingen. Dat vraagt om veel meer differentiëren, terwijl veel collega's al jaren vooral klassikaal lesgeven. Differentiëren voelt dan als helemaal opnieuw beginnen, en het voorbereiden kost tijd die er niet is.</p>
+    </section>
+    <section>
+      <h2>De oplossing</h2>
+      <p>De docent vult onderwerp, lesdoel, lokaal en aantal leerlingen in. Uniekind maakt een complete les die past bij die docent, die klas en dat lokaal, met werkbladen op drie niveaus, kaarten, checks, een digibordscherm en een presentatie.</p>
+      <ul>
+        <li>Drie standen: van de vertrouwde les met één extra stap tot volledig gedifferentieerd.</li>
+        <li>Bij 30 leerlingen in een M-lokaal plant Uniekind zelf de splitsing: wie is waar, wanneer.</li>
+        <li>Na de les een korte reflectie; Uniekind leert wat bij de docent werkt.</li>
+      </ul>
+      <p class="cijfers"><span><b>164</b>werkvormen</span><span><b>19</b>soorten materiaal</span><span><b>3</b>niveaus</span></p>
+    </section>
+    <section>
+      <h2>Aansluiting op het schoolplan</h2>
+      <ul>
+        <li>Het motto als rode draad: elke les heeft steun voor wie dreigt af te haken én uitdaging voor wie meer kan.</li>
+        <li>Gedifferentieerde instructie (1.1), individueel én samen leren (1.3), tempo, niveau en keuze in aanpak (1.4), vaktaal en rekenen (1.10–1.12) zitten als vaste regels in elke les.</li>
+        <li>Evidence-informed: elke werkvorm heeft een eerlijke onderbouwing, met echte bronnen (Rosenshine, Wiliam, EEF).</li>
+        <li>Speerpunt didactiek: bij elke les een kijkwijzer voor collegiaal lesbezoek; secties kunnen een werkvorm van de maand kiezen voor de PLG.</li>
+        <li>Burgerschap en regionale verbinding: werkvormen zijn gelabeld, relevantie-haken komen uit het Heuvelland en de Euregio.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Kosten: nul</h2>
+      <p>Uniekind is een gewone website zonder server, database of accounts. Hosting op Netlify of GitHub Pages is gratis, er zijn geen licenties. De kennisbank vullen collega's zelf aan via een formulier. Voor vakinhoud werkt Uniekind met de AI-tool die de school al toestaat; een betaalde koppeling komt er alleen na uw akkoord.</p>
+      <h2>Privacy</h2>
+      <ul>
+        <li>Geen leerlinggegevens: alleen aantallen, nooit namen.</li>
+        <li>Alles draait in de browser; geen trackers, geen cookies, geen accounts.</li>
+        <li>Een foto van een lesboekpagina wordt op de laptop gelezen en niet bewaard.</li>
+        <li>Wat naar een AI-tool gaat, bevat alleen lesinhoud.</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="voorstel">
+    <h2>Voorstel: een pilot met 3 tot 5 docenten</h2>
+    <ol>
+      <li>Drie tot vijf docenten uit verschillende secties, bij voorkeur ook iemand die vooral klassikaal lesgeeft, gebruiken Uniekind zes weken voor minstens één les per week.</li>
+      <li>Ze geven na elke les een korte reflectie in Uniekind en bespreken hun ervaring halverwege en aan het eind in een PLG-bijeenkomst, met de kijkwijzer bij een collegiaal lesbezoek.</li>
+      <li>We evalueren kort: tijdwinst bij het voorbereiden, wat werkte in de klas, wat beter moet. Dit nemen we mee in de interne review.</li>
+    </ol>
+    <p><b>Gevraagd besluit:</b> akkoord voor de pilot, toestemming om Uniekind te publiceren, bevestiging welke AI-tool collega's mogen gebruiken, en een aanspreekpunt voor de kennisbank.</p>
+  </section>
+
+  <p class="voet">De site, de broncode en de handleiding voor collega’s liggen klaar. Vragen of een demonstratie: Sander.</p>
+</main>

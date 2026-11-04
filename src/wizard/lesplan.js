@@ -1,6 +1,7 @@
 // Weergave van een gegenereerde les: varianten, tijdlijn, wie is waar, lesplan met aanpassen.
 import { html } from '../util/html.js';
 import { CATEGORIE, DENKNIVEAU } from '../data/labels.js';
+import { termen, groot } from '../data/termen.js';
 
 export const ROL = {
   opening: 'Aandachtrichter', doel: 'Lesdoel en relevantie', voorkennis: 'Voorkennis activeren', startcheck: 'Startcheck',
@@ -10,7 +11,7 @@ export const ROL = {
 };
 const BEGELEIDING = { docent: 'bij jou', zelfstandig: 'zelfstandig', 'op afstand': 'zelfstandig, jij houdt toezicht', oa: 'met de onderwijsassistent' };
 
-export const plekNaam = (les, plek) => (plek === 'lokaal' ? (les.ruimte === 'M' ? 'M-lokaal' : les.ruimte === 'L' ? 'L-lokaal' : 'Lokaal') : plek === 'plein' ? 'Deelplein' : 'Stilteruimte');
+export const plekNaam = (les, plek) => groot(plek === 'lokaal' ? (les.ruimte === 'M' ? termen.M : les.ruimte === 'L' ? termen.L : 'lokaal') : plek === 'plein' ? termen.plein : termen.stilte);
 export const tijd = (f) => `${f.start}–${f.start + f.duur} min`;
 
 /* ── Tijdlijn: één rij per groep, kleur per plek ── */
@@ -86,6 +87,7 @@ function blokWeergave(les, f, b, items, ctx) {
     ${it ? html`
       <div class="wat">
         <span class="chip" style="--c:${kleur}"><span class="stip"></span>${CATEGORIE[it.categorie]}</span>
+        ${it.perspectieven ? html`<span class="chip">Actualiteit en diversiteit</span>` : ''}${it.burgerschap?.length ? html` <span class="chip">Burgerschap: ${it.burgerschap.join(', ')}</span>` : ''}
         <h4>${it.naam}${b.vervolg ? html` <small>(loopt door)</small>` : ''}${b.vastgezet ? html` <small class="vast">vastgezet</small>` : ''}</h4>
         <p class="kort">${it.kort}</p>
         ${!b.vervolg ? html`<p class="startzin-klein"><b>Je zegt:</b> ${it.startzin}</p>` : ''}

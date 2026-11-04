@@ -1,0 +1,98 @@
+<title>Uniekind in één pagina</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+<style>
+/* Handleiding op één A4: de vijf stappen als echte volgorde, daarna losse blokken om op te zoeken. */
+:root {
+  --bg: #ffffff; --vlak: #f1f5fb; --fg: #142038; --zacht: #4f5b73; --lijn: #d6dfeb;
+  --blauw: #00489a; --paars: #934d98; --rood: #d70926; --oranje: #f39000; --geel: #ffcf21; --groen: #2ea836;
+  --kop: "Nunito", ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --tekst: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0f1729; --vlak: #18233b; --fg: #e7edf7; --zacht: #a9b5ca; --lijn: #2a3754; --blauw: #8fb6ec; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #0f1729; --vlak: #18233b; --fg: #e7edf7; --zacht: #a9b5ca; --lijn: #2a3754; --blauw: #8fb6ec; color-scheme: dark }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 15px/1.5 var(--tekst); }
+.blad { max-width: 52rem; margin: 0 auto; padding-block: 2rem 2.5rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 1rem; }
+.balk { display: grid; grid-template-columns: repeat(5, 1fr); height: 5px; border-radius: 3px; overflow: hidden; }
+.balk span:nth-child(1) { background: var(--paars); } .balk span:nth-child(2) { background: var(--rood); } .balk span:nth-child(3) { background: var(--oranje); } .balk span:nth-child(4) { background: var(--geel); } .balk span:nth-child(5) { background: var(--groen); }
+header { display: grid; gap: 0.3rem; }
+.eyebrow { font: 800 0.72rem/1 var(--kop); letter-spacing: 0.09em; text-transform: uppercase; color: var(--zacht); }
+h1 { font: 900 1.8rem/1.1 var(--kop); color: var(--blauw); margin: 0; text-wrap: balance; }
+.lead { margin: 0; font-size: 1.02rem; }
+h2 { font: 800 1rem/1.2 var(--kop); color: var(--blauw); margin: 0 0 0.25rem; }
+p { margin: 0; } ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.18rem; }
+.stappen { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.6rem; counter-reset: stap; }
+.stappen li { background: var(--vlak); border: 1px solid var(--lijn); border-radius: 10px; padding: 0.7rem 0.75rem; display: block; counter-increment: stap; font-size: 0.9rem; min-width: 0; }
+.stappen li::before { content: counter(stap); display: block; margin-bottom: 0.3rem; font: 900 1.25rem/1 var(--kop); color: var(--blauw); }
+.stappen b { display: block; margin-bottom: 0.15rem; }
+.stappen b { font-family: var(--kop); }
+.blokken { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem 1.3rem; }
+.blokken > section { min-width: 0; display: grid; gap: 0.2rem; align-content: start; font-size: 0.93rem; }
+.standen { display: grid; gap: 0.25rem; }
+.standen span { font: 800 0.86rem var(--kop); }
+kbd { font: 700 0.78rem/1 ui-monospace, monospace; padding: 0.08rem 0.3rem; border: 1px solid var(--lijn); border-bottom-width: 2px; border-radius: 4px; background: var(--vlak); }
+.voet { font-size: 0.82rem; color: var(--zacht); border-top: 1px solid var(--lijn); padding-top: 0.6rem; }
+@media (max-width: 760px) { .stappen { grid-template-columns: 1fr 1fr; } .blokken { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .stappen { grid-template-columns: 1fr; } }
+@page { size: A4; margin: 11mm 12mm; }
+@media print {
+  :root { --bg: #fff; --vlak: #f1f5fb; --fg: #142038; --zacht: #4f5b73; --lijn: #d6dfeb; --blauw: #00489a; color-scheme: light; }
+  body { font-size: 10.6pt; line-height: 1.42; }
+  .blad { max-width: none; padding: 0; gap: 5mm; }
+  h1 { font-size: 21pt; } h2 { font-size: 11.5pt; }
+  .stappen { gap: 2mm; } .stappen li { padding: 3mm 3mm; font-size: 9.8pt; }
+  .blokken { gap: 5mm 6mm; } .blokken > section { font-size: 10.2pt; }
+}
+</style>
+
+<main class="blad">
+  <div class="balk" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <header>
+    <p class="eyebrow">Handleiding voor collega's · Uniekind Sophianum</p>
+    <h1>Een gedifferentieerde les in drie minuten</h1>
+    <p class="lead">Je hoeft niet opnieuw te leren lesgeven. Uniekind begint bij hoe jij nu lesgeeft en helpt je stap voor stap verder, met materiaal dat al klaarligt.</p>
+  </header>
+
+  <ol class="stappen">
+    <li><b>Maak een les</b> Open Uniekind op je laptop en klik op <i>Maak een les</i>. Blijf in de modus <i>Snel</i>.</li>
+    <li><b>Vul in</b> Afdeling, vak, lesduur, lokaal, aantal leerlingen, onderwerp en lesdoel. Een foto van de paragraaf mag ook.</li>
+    <li><b>Kies</b> hoe ver je wilt gaan en klik op <i>Genereer de les</i>. Je krijgt drie varianten; kies er één.</li>
+    <li><b>Pas aan</b> Schuif met fasen, verander minuten, vraag een <i>andere suggestie</i> of zet een werkvorm vast.</li>
+    <li><b>Print of toon</b> Bij <i>Materiaal</i>: alles printen, PDF, Word, PowerPoint of de digibordmodus.</li>
+  </ol>
+
+  <div class="blokken">
+    <section>
+      <h2>De drie standen</h2>
+      <div class="standen">
+        <p><span>Klassikaal-plus</span>: je vertrouwde les met één differentiatie-element.</p>
+        <p><span>Een stap verder</span>: korte instructie, instructietafel en verdieping.</p>
+        <p><span>Volledig Uniekind</span>: startcheck, routes, lokaal plus plein of stilteruimte.</p>
+      </div>
+      <p>Begin gerust bij de eerste stand.</p>
+    </section>
+    <section>
+      <h2>30 leerlingen in een M-lokaal?</h2>
+      <p>Er passen er 26. Uniekind splitst de les dan zelf, bijvoorbeeld met een gespreide start of een startcheck, en maakt een schema <i>wie is waar, wanneer</i> en een overgangsscript. Het plein komt nooit in een les in een L-lokaal.</p>
+    </section>
+    <section>
+      <h2>Het materiaal</h2>
+      <p>Lesplan, werkbladen op drie niveaus, opdracht- en hintkaarten, exit tickets, vaktaalkaart en meer, met het aantal dat je moet printen. Geel gemarkeerde velden vul je zelf in. Zet <i>Dyslexievriendelijk</i> aan voor wie dat nodig heeft.</p>
+    </section>
+    <section>
+      <h2>Digibordmodus</h2>
+      <p><kbd>→</kbd> volgende fase, <kbd>spatie</kbd> timer, <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> geluidsniveau, <kbd>R</kbd> wie is waar, <kbd>K</kbd> kiezer, <kbd>G</kbd> groepjes, <kbd>F</kbd> volledig scherm.</p>
+    </section>
+    <section>
+      <h2>Foto en AI</h2>
+      <p>De foto van een paragraaf wordt op je laptop gelezen en niet bewaard. Met <i>Maak af met AI</i> kopieer je een opdracht naar de AI-tool van school en plak je het antwoord terug. Lees AI-materiaal altijd na.</p>
+    </section>
+    <section>
+      <h2>Na de les</h2>
+      <p>Ga naar <i>Mijn profiel</i> en geef per werkvorm een duim omhoog of omlaag. Uniekind kiest daarna vaker wat bij jou werkt en laat zien welke werkvormen werken.</p>
+    </section>
+  </div>
+
+  <p class="voet"><b>Privacy:</b> je vult alleen aantallen in, nooit namen. Alles blijft in je browser. <b>Zelf ontdekken:</b> <i>Begin hier</i> geeft 10 werkvormen voor morgen; bij <i>Werkvormen</i> vind je er 164, elk met stappenplan en wat je letterlijk zegt. Vragen? Kijk bij <i>Hulp</i> of mis je een werkvorm, gebruik <i>Werkvorm toevoegen</i> onderaan de site.</p>
+</main>

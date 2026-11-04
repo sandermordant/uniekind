@@ -1,5 +1,6 @@
 import { html, inFrame } from '../util/html.js';
 import { laadWerkvorm, laadBronnen, laadTaxonomie } from '../data/laden.js';
+import { termen } from '../data/termen.js';
 import {
   CATEGORIE, LESFASE, GROEPSVORM, DENKNIVEAU, DIFFERENTIATIE, RICHTING, ONDERSTEUNING, PAST, RUIMTE,
   VOORBEREIDING, ENERGIE, INSTAP, BEWIJS, DOELDOMEIN, BURGERSCHAP, DOCENTSTIJL, VARIANT, duurTekst
@@ -110,7 +111,7 @@ export default {
                 <div><dt>Denkniveau</dt><dd>${w.denkniveau.map((d) => DENKNIVEAU[d]).join(', ')}${rtti.length ? ` (RTTI: ${rtti.join(', ')})` : ''}</dd></div>
                 <div><dt>Energie</dt><dd>${ENERGIE[w.energie]}</dd></div>
                 <div><dt>Instap</dt><dd>${INSTAP[w.instapniveau]}</dd></div>
-                ${w.vereist.plein ? html`<div><dt>Let op</dt><dd>Alleen in een M-lokaal met deelplein, met toezicht op het plein.</dd></div>` : ''}
+                ${w.vereist.plein ? html`<div><dt>Let op</dt><dd>Alleen in een ${termen.M} met ${termen.plein}, met toezicht daar.</dd></div>` : ''}
                 ${w.vereist.onderwijsassistent ? html`<div><dt>Let op</dt><dd>Vraagt een onderwijsassistent.</dd></div>` : ''}
               </dl>
               ${w.differentiatie.length ? html`<div class="blok"><h4>Differentieert op</h4><p>${w.differentiatie.map((d) => DIFFERENTIATIE[d]).join(', ')}</p>${RICHTING[w.richting] ? html`<p style="color:var(--muted)">${RICHTING[w.richting]}</p>` : ''}</div>` : ''}

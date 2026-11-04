@@ -7,6 +7,7 @@ import {
   VOORBEREIDING, ENERGIE, INSTAP, BEWIJS, DOELDOMEIN, BURGERSCHAP, DOCENTSTIJL, VARIANT
 } from '../data/labels.js';
 import * as opslag from '../opslag/opslag.js';
+import { termen } from '../data/termen.js';
 
 const RICHTING_OPT = { convergent: 'Convergent', divergent: 'Divergent', beide: 'Beide', nvt: 'Niet van toepassing' };
 const LAPTOP_OPT = { nee: 'Niet nodig', optioneel: 'Kan, hoeft niet', vereist: 'Nodig' };
@@ -127,7 +128,7 @@ export default {
               ${ja('beweging', 'Leerlingen moeten kunnen bewegen', b.beweging)}
               ${vak('middelen', 'Benodigde middelen (één per regel; nooit een telefoon)', b.middelen)}
               ${kies('laptop', 'Schoollaptop', LAPTOP_OPT, b.laptop)}
-              ${ja('vereistPlein', 'Kan alleen met een deelplein', b.vereistPlein)}
+              ${ja('vereistPlein', `Kan alleen met een ${termen.plein}`, b.vereistPlein)}
               ${ja('vereistOa', 'Vraagt een onderwijsassistent', b.vereistOa)}
             </fieldset>
             <fieldset class="groep"><legend>Didactiek</legend>
@@ -163,7 +164,7 @@ export default {
                 ${inFrame ? '' : html`<button type="button" class="knop secundair klein" id="download">Download als bestand</button>`}
                 <button type="button" class="knop secundair klein" id="leeg">Begin met een leeg formulier</button>
               </div>
-              <details><summary>Bekijk het JSON-item</summary><pre id="json"></pre></details>
+              <details><summary>Bekijk het JSON-item</summary><pre id="json" tabindex="0" aria-label="Het JSON-item"></pre></details>
             </div>
           </form>
         </main>`,

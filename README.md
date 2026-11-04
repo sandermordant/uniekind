@@ -2,17 +2,18 @@
 
 **Lessen op maat, al was het maar voor één kind.**
 
-Uniekind helpt docenten gedifferentieerde lessen te ontwerpen. De docent geeft aan wat hij wil behandelen en in welke situatie. Uniekind kiest uit een kennisbank de best passende werkvormen en levert een complete les met materiaal.
+Uniekind helpt docenten gedifferentieerde lessen te ontwerpen. De docent geeft aan wat er behandeld wordt en in welke situatie. Uniekind kiest uit een kennisbank van 164 werkvormen de best passende vormen en levert een complete les met al het materiaal, klaar om te geven.
 
-De eerste versie is gemaakt voor **Sophianum** (Gulpen). Later volgt een **algemene versie**, waarin elke school haar eigen visie, lokalen en lestijden instelt. Beide versies gebruiken dezelfde code; het verschil zit alleen in het schoolprofiel.
+> *Je hoeft niet opnieuw te leren lesgeven. Uniekind begint bij hoe jij nu lesgeeft en helpt je stap voor stap verder, met materiaal dat al klaarligt.*
 
-> Status: **fase 5 (kennisbank en eigen ervaring)**. Kennisbank met 160 werkvormen (41 openers), de pagina's Hulp en Mijn profiel, reflectie na de les en "Jouw werkvormen die werken".
+Er zijn **twee versies, één codebasis**:
 
-> Eerder: **fase 4 (slim invoeren)**. Foto van een paragraaf herkennen (lokaal), AI-brug met Copilot-prompt en import, bronnen- en zoeklinks.
->
-> Eerder: **fase 3 (materiaal en export)**. Bovenop fase 2: het complete materiaalpakket, digibordmodus, export naar PDF, Word en PowerPoint, lesbestand en Les openen.
->
-> Eerder: **fase 2 (generator)**. Schoolprofiel, kennisbank (74 werkvormen), bibliotheek en invulformulier (fase 1), plus de lesgenerator: wizard in 7 stappen of snel, filter- en scorelogica, lessjablonen, splitsplanner, "Waarom deze?" en aanpassen (fase 2). Materiaal en export volgen in fase 3.
+| Versie | Profiel | Map na het bouwen | Adres na publiceren |
+|---|---|---|---|
+| **Uniekind Sophianum** (Gulpen), "Lessen op maat, al was het maar voor één kind" | `public/profiles/sophianum.json` | `dist/` | `/` |
+| **Uniekind algemeen**, "De lesgenerator voor gedifferentieerd lesgeven", met schoolprofiel-wizard | `public/profiles/voorbeeld-algemeen.json` | `dist-voorbeeld-algemeen/` | `/algemeen/` |
+
+> Status: **klaar (fase 0 tot en met 7)**. Zie [`docs/testverslag-fase6-7.md`](docs/testverslag-fase6-7.md) voor de eindcontrole, [`docs/handleiding-collegas.md`](docs/handleiding-collegas.md) voor de handleiding van één pagina en [`docs/pitch-schoolleiding.md`](docs/pitch-schoolleiding.md) voor de pitch.
 
 ---
 
@@ -24,11 +25,13 @@ Je hebt [Node.js](https://nodejs.org) versie 20 of hoger nodig.
 npm install          # eenmalig
 npm run dev          # ontwikkelserver op http://localhost:5173
 npm run valideer     # controleer de kennisbank en de profielen
-npm run build        # bouw de website in dist/ (valideert eerst)
-npm test             # draai de tests van de generator (testcases, 600 willekeurige lessen)
+npm run dev:algemeen # hetzelfde voor de algemene versie
+npm test             # alle tests: testcases 1-9, 900 willekeurige lessen, materiaal, export, OCR, AI-brug
+npm run build:alles  # bouw beide versies (valideert eerst)
+npm run site         # bouw beide en zet ze samen in site/ (Sophianum op /, algemeen op /algemeen/)
 ```
 
-De map `dist/` is de complete website. Die zet je op Netlify of GitHub Pages; er is geen server nodig.
+De map `site/` is de complete website. Er is geen server nodig; zie *Publiceren* hieronder.
 
 ---
 
@@ -48,18 +51,19 @@ De map `dist/` is de complete website. Die zet je op Netlify of GitHub Pages; er
 
 ```
 public/
-  profiles/            schoolprofielen (sophianum.json) + profiel.schema.json
+  profiles/            schoolprofielen (sophianum.json, voorbeeld-algemeen.json) + profiel.schema.json
   data/
     werkvormen/        de kennisbank: één JSON per categorie + werkvorm.schema.json
                        index.json wordt automatisch gemaakt door `npm run valideer`
     bronnen.json       alle bronnen waar werkvormen naar verwijzen
     taxonomie.json     Bloom en RTTI, met vraagstammen
-  huisstijl/           logo en hoogtelijnenmotief
+  huisstijl/           logo en hoogtelijnenmotief (sophianum/), neutraal motief (algemeen/)
 src/
   main.js              start: profiel laden, huisstijl toepassen, routeren
-  pages/               de pagina's (home, bibliotheek, werkvorm, begin hier, visie, invulformulier, les maken, les openen, digibord, hulp, mijn profiel)
-  data/                laden van profiel en kennisbank, leesbare labels
-  opslag/              veilige browseropslag (werkt ook als opslag geblokkeerd is)
+  pages/               de pagina's (home, bibliotheek, werkvorm, begin hier, visie, invulformulier, les maken, les openen,
+                       digibord, hulp, privacy, mijn profiel, schoolprofiel)
+  data/                laden en opschonen van profielen, kennisbank, leesbare labels, ruimtenamen (termen.js)
+  opslag/              veilige browseropslag en Mijn lessen (logboek.js)
   stijl/               CSS: lettertypen, basisstijl, printstijl
   engine/              de generator: context, filters, score, sjablonen, splitsplanner, opbouw, controle, uitleg
   wizard/              de stappen van de lesgenerator en de weergave van het lesplan
@@ -70,7 +74,11 @@ src/
 tools/
   valideer-kennisbank.js   controleert alles en maakt index.json
   maak-preview.js          maakt een preview-versie voor claude.ai
-docs/                  handleidingen
+  maak-site.js             zet beide versies samen in site/
+  kopieer-ocr.js           zet de OCR-bestanden klaar in public/ocr/
+docs/                  handleiding collega's, pitch, onderhoud kennisbank, API-route, testverslagen
+netlify.toml           publiceren op Netlify
+.github/workflows/     publiceren op GitHub Pages
 ```
 
 ---
@@ -83,7 +91,22 @@ Alles wat schoolspecifiek is, staat in `public/profiles/sophianum.json`: naam, m
 - Velden met `"aanname": true` komen **niet** uit het schoolplan of de schoolgids. Het zijn instelbare standaardwaarden, bijvoorbeeld de capaciteit van de stilteruimte (8) en het deelplein (40). Pas ze aan als de werkelijkheid anders is.
 - De huisstijlkleuren zijn gemeten in de PDF van de schoolgids 2026-2027.
 
-Een ander profiel bouwen: `UNIEKIND_PROFIEL=naam npm run build` (met `public/profiles/naam.json`).
+**Drie lagen.** Uniekind combineert de school (visie en regels in het profiel), de sectie (accenten per vak: lesmodel, taxonomie, methodewebsite, werkvorm van de maand; `sectieAccenten.perVak`) en de docent (eigen stijl en kracht, in de browser). Een sectie-accent geldt zolang de docent zelf de schoolstandaard laat staan.
+
+**De visie stuurt de generator.** `generator.visieAccenten` bepaalt welke werkvormen een visiebonus krijgen (bijvoorbeeld samenwerkend leren, eigenaarschap, formatief handelen, burgerschap; zie `VISIE_ACCENTEN` in `src/engine/score.js`). De ruimtenamen in alle teksten komen uit het profiel (`src/data/termen.js`), zodat een andere school "leerplein" of "studiezaal" ziet.
+
+### De algemene versie en de schoolprofiel-wizard
+
+Op de pagina **Schoolprofiel** stelt een school in: naam, motto, logo en kleuren; visie in eigen woorden plus de principes die de gewichten bepalen; lokalen met eigen namen en capaciteit (ook "dit hebben wij niet"); afdelingen en lestijden; vakken en sectie-accenten; regels (telefoon, laptop, plein-toezicht); taxonomie en lesmodel; terminologie (sectie/vakgroep, mentor/coach); regio-onderwerpen; AI-tool; toegangscode.
+
+Het resultaat is een JSON-bestand dat de school downloadt, deelt en weer inleest. In de algemene versie kan de school het profiel ook:
+- **in de eigen browser gebruiken** (knop *Gebruik dit profiel*);
+- **als deellink versturen**: het profiel zit gecomprimeerd in de link (`?profiel=…`), er hoeft niets op een server te staan;
+- **op de website zetten**: bestand in `public/profiles/naam.json`, dan werkt `…/algemeen/?school=naam` als vaste link.
+
+Alles wat van buiten komt, wordt opgeschoond (`src/data/profiel.js`): kleuren alleen als `#rrggbb`, logo alleen als afbeelding, links alleen `https`, ontbrekende delen aangevuld. In de Sophianum-versie toont de pagina alleen *Profiel downloaden*, voor de beheerder.
+
+Een ander profiel bouwen als eigen site: `UNIEKIND_PROFIEL=naam npm run build` (met `public/profiles/naam.json`).
 
 ---
 
@@ -131,6 +154,7 @@ De generator (`src/engine/`) is deterministisch: dezelfde invoer geeft dezelfde 
 - **Mijn lessen** (`src/opslag/logboek.js`, sleutel `uniekind:lessen`): per les alleen datum, onderwerp, vak, afdeling, lesduur, stand, opzet, de werkvormen en de reflectie van de docent (duim per werkvorm, twee korte teksten). Hooguit 40 lessen. De duimen gaan als `uniekind:duimen` naar de generator. In Mijn profiel kan de docent alles downloaden, inlezen op een andere laptop en wissen.
 - Een **lesbestand** bewaart de gekozen werkvorm per blok, zodat een les op een andere computer hetzelfde opent, ook als daar andere reflecties staan.
 - De Sophianum-versie heeft `noindex`, zodat zoekmachines hem niet opnemen.
+- De pagina **Privacy** legt dit in gewone taal uit.
 - **Toegangscode:** in het profiel staat `"toegangscode": null`. Vul je daar een woord in, dan vraagt de site het één keer bij het eerste bezoek. **Dit is een drempel, geen beveiliging**: iedereen kan het woord in de broncode lezen. Zet er dus nooit iets vertrouwelijks achter.
 
 ---
@@ -147,12 +171,30 @@ Zie [`docs/onderhoud-kennisbank.md`](docs/onderhoud-kennisbank.md). Kort:
 
 ---
 
+## Toegankelijkheid
+
+Gecontroleerd met axe-core op WCAG 2.1 A en AA: alle pagina's en alle wizardstappen, in licht en donker thema, voor beide versies: geen overtredingen. Verder handmatig: alles met het toetsenbord te bedienen (knop *Naar de inhoud*, zichtbare focusrand), digibord op 1920×1080 met opdrachten in 88 px, telefoon (375 px) zonder horizontaal scrollen, en een printvoorbeeld van alle 19 materiaalsoorten. Zie het testverslag.
+
+---
+
 ## Publiceren
 
-**Netlify** (aanbevolen, omdat de latere API-route serverless functions nodig heeft):
-build-commando `npm run build`, publiceermap `dist`.
+Beide manieren zijn gratis en hebben geen server nodig. De site staat daarna op `/` (Sophianum) en `/algemeen/` (algemene versie).
 
-**GitHub Pages:** bouw met `npm run build` en publiceer de map `dist` (bijvoorbeeld met een GitHub Action).
+**Netlify** (aanbevolen, omdat de latere API-route serverless functions nodig heeft)
+1. Zet deze map in een (privé) GitHub-repository.
+2. Maak een gratis account op netlify.com → *Add new site* → *Import an existing project* → kies de repository.
+3. Netlify leest `netlify.toml`: bouwcommando `npm run site`, publiceermap `site`. Klik op *Deploy*.
+4. Eventueel: *Domain settings* voor een eigen adres, bijvoorbeeld uniekind.sophianum.nl (dan moet de ICT-afdeling een DNS-regel toevoegen).
+
+Zonder GitHub kan het ook: draai `npm run site` en sleep de map `site/` naar app.netlify.com/drop.
+
+**GitHub Pages**
+1. Zet deze map in een GitHub-repository (Pages werkt gratis met een publieke repository).
+2. *Settings → Pages → Source: GitHub Actions*.
+3. Push naar `main`. De workflow `.github/workflows/pages.yml` draait de tests, bouwt beide versies en publiceert.
+
+`netlify.toml` zet ook veilige headers en `X-Robots-Tag: noindex` voor de Sophianum-versie.
 
 ---
 
@@ -166,11 +208,28 @@ build-commando `npm run build`, publiceermap `dist`.
 | 3 | Materialen, digibordmodus, export PDF/Word/PowerPoint/lesbestand | klaar (zie docs/testverslag-fase3.md) |
 | 4 | OCR, AI-brug (Copilot), zoeklinks | klaar (zie docs/testverslag-fase4.md) |
 | 5 | Kennisbank naar 150+ (160, waarvan 41 openers), pagina's Hulp en Mijn profiel, reflectie na de les | klaar (zie docs/testverslag-fase5.md) |
-| 6 | Testen, toegankelijkheid, publiceren, handleiding, pitch | volgt |
-| 7 | Algemene versie met schoolprofiel-wizard | volgt |
+| 6 | Alle tests, toegankelijkheid, publicatie klaarzetten, README, handleiding, pitch, plus wat bij de eindcontrole nog ontbrak (privacypagina, toegangscode, sectie-accenten, vier werkvormen) | klaar (zie docs/testverslag-fase6-7.md) |
+| 7 | Algemene versie: voorbeeldprofiel, neutrale huisstijl, schoolprofiel-wizard, profiel via bestand, link of `?school=` | klaar (zie docs/testverslag-fase6-7.md) |
 
 ---
 
 ## De API-route (later, pas na akkoord)
 
-Nu werkt Uniekind zonder AI, of met de **AI-brug**: de site maakt een prompt, de docent plakt die in de AI-tool van de school (Copilot) en plakt het antwoord terug. Een directe koppeling met een taalmodel kan later via een serverless function op Netlify. De API-sleutel staat dan in een omgevingsvariabele en komt nooit in de browser. Er gaan nooit leerlinggegevens mee. Vooraf nodig: akkoord van de school en de functionaris gegevensbescherming van LVO, een verwerkersovereenkomst met de aanbieder, en een afspraak over de kosten. Details volgen in fase 4.
+Nu werkt Uniekind zonder AI, of met de **AI-brug**: de site maakt een prompt, de docent plakt die in de AI-tool van de school (Copilot) en plakt het antwoord terug. Een directe koppeling met een taalmodel kan later via een serverless function op Netlify. De API-sleutel staat dan in een omgevingsvariabele en komt nooit in de browser. Er gaan nooit leerlinggegevens mee; alleen lesinhoud, in dezelfde vaste uitvoerformaten als de AI-brug. Met een limiet per gebruiker per dag, een maandbudget en logging zonder persoonsgegevens. Vooraf nodig: akkoord van de school en de functionaris gegevensbescherming van LVO, een verwerkersovereenkomst met de aanbieder, en een afspraak over wie betaalt. Zie [`docs/api-route.md`](docs/api-route.md) en `netlify/functions/uniekind-ai.voorbeeld.js`.
+
+---
+
+## Wat later nog beter kan (roadmap)
+
+Niet gebouwd, maar de opzet blokkeert het niet:
+
+- **Lessenreeks-planner**: 3 tot 6 lessen plannen met gespreide herhaling. Het logboek in Mijn profiel en de variatie tussen lessen zijn er al.
+- **Gedeelde lesbank per sectie**, met inloggen via het schoolaccount; pas zinvol na de pilot. Lesbestanden kun je nu al delen.
+- **Koppeling met PTO en PTA**: lesdoelen koppelen aan toetsdoelen van de sectie.
+- **Leerlingfeedback**: een korte, anonieme vraag aan het eind van de les over hoe de route beviel.
+- **Docentontwikkeling**: een groeipad op basis van Mijn lessen ("je deed 3 keer een instructietafel, probeer eens een carrousel").
+- **PLG-modus**: de werkvorm van de maand staat al in de sectie-accenten; een bespreekkaart erbij is de volgende stap.
+- **Regionale contextbank** per vak, aansluitend op de regio-onderwerpen in het profiel.
+- **Meertaligheid**: Duitstalige of Engelstalige materialen.
+- **API-route**: volledig automatische inhoud, na akkoord.
+- **Effectonderzoek** met de pilotdocenten, meegenomen in de interne review.

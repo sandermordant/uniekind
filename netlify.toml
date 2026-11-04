@@ -1,0 +1,33 @@
+# Uniekind op Netlify (gratis). Netlify bouwt de site zelf uit deze repository.
+# Sophianum staat op de hoofdpagina, de algemene versie op /algemeen/.
+[build]
+  command = "npm run site"
+  publish = "site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Veilige standaardinstellingen; geen trackers, geen cookies.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    X-Frame-Options = "SAMEORIGIN"
+
+# De Sophianum-versie hoort niet in zoekmachines (zie ook de meta-tag in de pagina).
+[[headers]]
+  for = "/"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Het taalpakket voor de foto-herkenning mag lang in de cache.
+[[headers]]
+  for = "/ocr/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"

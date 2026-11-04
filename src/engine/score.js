@@ -47,6 +47,28 @@ function afwisseling(item, ctx) {
   return (h % 1000) / 1000;
 }
 
+export const VISIE_ACCENTEN = {
+  socialisatie: { naam: 'Socialisatie: samen leren leven', past: (i) => i.doeldomein.includes('socialisatie'), bonus: 0.15 },
+  persoonsvorming: { naam: 'Persoonsvorming: eigenheid en veerkracht', past: (i) => i.doeldomein.includes('persoonsvorming'), bonus: 0.15 },
+  burgerschap: { naam: 'Burgerschap en verschillende perspectieven', past: (i) => i.perspectieven || i.burgerschap.length > 0, bonus: (i) => (i.perspectieven ? 0.25 : 0) + (i.burgerschap.length ? 0.1 : 0) },
+  'samenwerkend-leren': { naam: 'Samenwerkend leren', past: (i) => i.groepsvorm.includes('tweetal') || i.groepsvorm.includes('groepje'), bonus: 0.15 },
+  eigenaarschap: { naam: 'Eigenaarschap van leerlingen', past: (i) => i.differentiatie.includes('keuze-aanpak') || i.differentiatie.includes('tempo') || i.categorie === 'leerstrategie', bonus: 0.15 },
+  'formatief-handelen': { naam: 'Formatief handelen', past: (i) => i.categorie === 'formatieve-check' || (i.alsDan?.length ?? 0) > 0, bonus: 0.15 },
+  talentontwikkeling: { naam: 'Talentontwikkeling', past: (i) => i.differentiatie.includes('interesse') || i.differentiatie.includes('niveau'), bonus: 0.15 },
+  'individueel-samenwerkend': { naam: 'Balans tussen individueel en samenwerkend leren', past: () => false, bonus: 0, toelichting: 'Bewaakt door de harde eisen: elke les heeft beide.' },
+  relevantie: { naam: 'Relevantie: waarom leren we dit?', past: () => false, bonus: 0, toelichting: 'Elke les heeft een relevantie-haak.' },
+  regionaal: { naam: 'Regionale verbinding', past: () => false, bonus: 0, toelichting: 'De relevantie-haak gebruikt de voorbeelden uit de regio in het profiel.' }
+};
+
+export function visieScore(item, accenten) {
+  let v = BEWIJS[item.bewijs] ?? 0;
+  for (const a of accenten) {
+    const d = VISIE_ACCENTEN[a];
+    if (d && d.past(item)) v += typeof d.bonus === 'function' ? d.bonus(item) : d.bonus;
+  }
+  return Math.min(1, v);
+}
+
 function denkniveauScore(item, niveaus) {
   let best = 0;
   for (const n of niveaus) {
@@ -101,13 +123,9 @@ export function scoreWerkvorm(item, slotType, ctx) {
   if (slotType === 'steun' && item.differentiatie.includes('ondersteuning')) klas += 0.15;
   delen.klas = Math.max(0, Math.min(1.3, klas));
 
-  // Schoolvisie
-  let visie = BEWIJS[item.bewijs] ?? 0;
-  if (item.perspectieven) visie += 0.25;
-  if (item.doeldomein.includes('socialisatie')) visie += 0.15;
-  if (item.doeldomein.includes('persoonsvorming')) visie += 0.15;
-  if (item.burgerschap.length) visie += 0.1;
-  delen.visie = Math.min(1, visie);
+  // Schoolvisie: welke accenten tellen, staat in het schoolprofiel (generator.visieAccenten).
+  // Onderbouwing telt altijd mee: evidence-informed is een uitgangspunt van Uniekind zelf.
+  delen.visie = visieScore(item, ctx.profiel.generator.visieAccenten ?? []);
 
   delen.variatie = ctx.opties.vorigeLes?.includes(item.id) ? -1 : 0;
   delen.afwisseling = afwisseling(item, ctx);

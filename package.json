@@ -2,7 +2,7 @@
   "name": "uniekind",
   "version": "0.1.0",
   "private": true,
-  "description": "Uniekind – lessen op maat, al was het maar voor één kind. Lesgenerator voor gedifferentieerd lesgeven.",
+  "description": "Uniekind \u2013 lessen op maat, al was het maar voor \u00e9\u00e9n kind. Lesgenerator voor gedifferentieerd lesgeven.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,11 +13,16 @@
     "valideer": "node tools/valideer-kennisbank.js",
     "test": "vitest run",
     "predev": "node tools/kopieer-ocr.js",
-    "prebuild": "node tools/kopieer-ocr.js"
+    "prebuild": "node tools/kopieer-ocr.js",
+    "dev:algemeen": "vite --mode algemeen",
+    "build:alles": "npm run build:sophianum && npm run build:algemeen",
+    "preview:algemeen": "vite preview --mode algemeen --port 4174",
+    "site": "npm run build:alles && node tools/maak-site.js"
   },
   "license": "UNLICENSED",
   "devDependencies": {
     "ajv-formats": "^3.0.1",
+    "axe-core": "^4.10.2",
     "vite": "^6.4.5",
     "vitest": "^3.2.7"
   },

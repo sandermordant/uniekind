@@ -25,7 +25,7 @@
   --accent-zacht: color-mix(in srgb, var(--huis-hoofd) 9%, var(--surface));
   --lijnen: color-mix(in srgb, var(--huis-hoofd) 22%, transparent);
   --focus: color-mix(in srgb, var(--huis-oranje) 85%, #000);
-  --goed: #1f7a3a;
+  --goed: #1a6b32;
   --let-op: #9a5b00;
   --minder: #a1182b;
 

@@ -1,3 +1,4 @@
+import { termen } from '../data/termen.js';
 // Harde eisen die in elke gegenereerde les moeten kloppen. De interface toont ze als checklist,
 // en de tests gebruiken dezelfde functie.
 
@@ -15,7 +16,7 @@ export function controleerLes(les, items) {
   eis('lesduur', `De les telt op tot ${les.lesduur} minuten`, totaal === les.lesduur, totaal === les.lesduur ? '' : `Nu ${totaal} minuten: ${totaal > les.lesduur ? totaal - les.lesduur + ' te veel' : les.lesduur - totaal + ' te weinig'}.`);
 
   eis('telefoon', 'Geen werkvorm met een telefoon', werkvormen.every((w) => w.middelen.telefoon === false));
-  eis('plein', 'Geen plein in een lokaal zonder deelplein', les.ruimte === 'M' || !blokken.some((b) => b.plek === 'plein'));
+  eis('plein', `Geen plein in een lokaal zonder ${termen.plein}`, les.ruimte === 'M' || !blokken.some((b) => b.plek === 'plein'));
 
   const teVol = [];
   for (const f of les.fases) {
@@ -57,7 +58,7 @@ export function controleerLes(les, items) {
       vorige = sleutel;
     }
   }
-  eis('instructie', `Aaneengesloten instructie maximaal ${les.instructieMax} minuten${les.ruimte === 'M' ? ' (krukken in het M-lokaal)' : ''}`, !teLang.length, [...new Set(teLang)].join('; '));
+  eis('instructie', `Aaneengesloten instructie maximaal ${les.instructieMax} minuten${les.ruimte === 'M' ? ` (krukken in het ${termen.M})` : ''}`, !teLang.length, [...new Set(teLang)].join('; '));
   eis('wissel', 'Uiterlijk na 25 minuten een wissel of beweegmoment', !geenWissel.length, [...new Set(geenWissel)].join('; '));
   if (les.lesduur >= 70) {
     const beweeg = les.fases.filter((f) => f.type === 'beweeg').length + (werkvormen.some((w) => w.beweegmoment && w.categorie !== 'energizer') ? 1 : 0);

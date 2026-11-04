@@ -5,7 +5,7 @@
    "categorie": "aandachtrichter",
    "titel": "Aandachtrichters en lesopeners",
    "bestand": "aandachtrichters.json",
-   "aantal": 41
+   "aantal": 43
   },
   {
    "categorie": "activerende-werkvorm",
@@ -23,7 +23,7 @@
    "categorie": "differentiatievorm",
    "titel": "Differentiatievormen en organisatievormen",
    "bestand": "differentiatie.json",
-   "aantal": 20
+   "aantal": 21
   },
   {
    "categorie": "energizer",
@@ -53,7 +53,7 @@
    "categorie": "routine",
    "titel": "Klassenmanagement-routines voor differentiatie",
    "bestand": "routines.json",
-   "aantal": 13
+   "aantal": 14
   }
  ],
  "items": [
@@ -107,6 +107,53 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "formatief.json"
+  },
+  {
+   "id": "dertig-secondenuitdaging",
+   "naam": "30-secondenuitdaging",
+   "alias": [
+    "halve-minuutopdracht",
+    "snelle uitdaging"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Een korte opdracht die precies 30 seconden duurt, met de timer groot op het bord: wie krijgt het voor elkaar?",
+   "duur": {
+    "min": 1,
+    "max": 3
+   },
+   "groepsvorm": [
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "geen",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "onthouden",
+    "toepassen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "actief",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
   },
   {
    "id": "abcd-kaarten",
@@ -758,6 +805,60 @@
    "burgerschap": [],
    "beginHier": null,
    "bestand": "aandachtrichters.json"
+  },
+  {
+   "id": "bewust-groeperen",
+   "naam": "Bewust groeperen: homogeen of heterogeen",
+   "alias": [
+    "groepen indelen",
+    "homogene groepjes",
+    "heterogene groepjes",
+    "niveaugroepjes"
+   ],
+   "categorie": "differentiatievorm",
+   "kort": "Je kiest per opdracht bewust hoe je groepjes indeelt: gelijk niveau (homogeen) om gericht te oefenen, of gemengd (heterogeen) om van elkaar te leren.",
+   "duur": {
+    "min": 10,
+    "max": 40
+   },
+   "groepsvorm": [
+    "groepje",
+    "tweetal"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "optioneel",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken",
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "toepassen",
+    "analyseren"
+   ],
+   "differentiatie": [
+    "groepering",
+    "niveau"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "aanpassen",
+    "structuur": "aanpassen",
+    "hoogbegaafd": "aanpassen"
+   },
+   "energie": "rustig",
+   "instapniveau": 2,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "differentiatie.json"
   },
   {
    "id": "binnen-buitenkring",
@@ -5979,6 +6080,54 @@
    "bestand": "differentiatie.json"
   },
   {
+   "id": "stelling-bij-binnenkomst",
+   "naam": "Stelling bij binnenkomst",
+   "alias": [
+    "stelling op het bord",
+    "eens of oneens"
+   ],
+   "categorie": "aandachtrichter",
+   "kort": "Bij binnenkomst staat een prikkelende stelling op het bord; leerlingen kiezen eens of oneens en schrijven één reden op.",
+   "duur": {
+    "min": 2,
+    "max": 4
+   },
+   "groepsvorm": [
+    "klas",
+    "individueel"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": false,
+    "stilte": false,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "opening"
+   ],
+   "denkniveau": [
+    "evalueren",
+    "begrijpen"
+   ],
+   "differentiatie": [],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "aanpassen",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "gemiddeld",
+   "instapniveau": 1,
+   "burgerschap": [],
+   "beginHier": null,
+   "bestand": "aandachtrichters.json"
+  },
+  {
    "id": "stellingenlijn",
    "naam": "Stellingenlijn",
    "alias": [
@@ -6829,6 +6978,55 @@
    "burgerschap": [
     "inclusie"
    ],
+   "beginHier": null,
+   "bestand": "routines.json"
+  },
+  {
+   "id": "vaste-plek-hulpkaarten",
+   "naam": "Vaste plek voor hulpkaarten",
+   "alias": [
+    "hulpkaartenhoek",
+    "zelfhulpplek"
+   ],
+   "categorie": "routine",
+   "kort": "Hintkaarten, uitgewerkte voorbeelden en vaktaalkaarten liggen altijd op dezelfde plek, zodat leerlingen zelf hulp kunnen halen.",
+   "duur": {
+    "min": 1,
+    "max": 2
+   },
+   "groepsvorm": [
+    "klas"
+   ],
+   "ruimte": {
+    "M": true,
+    "L": true,
+    "plein": true,
+    "stilte": true,
+    "beweging": false
+   },
+   "laptop": "nee",
+   "voorbereiding": "kort",
+   "lesfase": [
+    "verwerken",
+    "inoefenen"
+   ],
+   "denkniveau": [
+    "onthouden"
+   ],
+   "differentiatie": [
+    "ondersteuning"
+   ],
+   "ondersteuning": {
+    "dyslexie": "goed",
+    "dyscalculie": "goed",
+    "nt2": "goed",
+    "faalangst": "goed",
+    "structuur": "goed",
+    "hoogbegaafd": "goed"
+   },
+   "energie": "rustig",
+   "instapniveau": 1,
+   "burgerschap": [],
    "beginHier": null,
    "bestand": "routines.json"
   },

@@ -15,8 +15,9 @@ export default {
         <main class="wrap">
           <section class="sectie">
             <p class="citaat">“${p.motto.tekst}”</p>
+            ${p.visie?.tekst ? html`<p class="lees">${p.visie.tekst}</p>` : ''}
             <div class="lees">
-              <p>${p.motto.herkomst}. ${p.motto.toelichting}</p>
+              <p>${p.motto.herkomst ? `${p.motto.herkomst}. ` : ''}${p.motto.toelichting ?? ''}</p>
               <p><b>In elke les:</b> ${p.motto.inDeLes}</p>
             </div>
           </section>
@@ -45,7 +46,7 @@ export default {
             <h2>Leidende principes en wat Uniekind ermee doet</h2>
             <div class="tabelvak"><table>
               <thead><tr><th scope="col">Schoolplan</th><th scope="col">Principe</th><th scope="col">Wat Uniekind ermee doet</th></tr></thead>
-              <tbody>${p.principes.map((pr) => html`<tr><td style="white-space:nowrap">§ ${pr.paragraaf}</td><td><b>${pr.naam}</b>${pr.schoolplan ? html`<br><span style="color:var(--muted)">${pr.schoolplan}</span>` : ''}</td><td>${pr.uniekind}</td></tr>`)}</tbody>
+              <tbody>${p.principes.map((pr) => html`<tr><td style="white-space:nowrap">${pr.paragraaf ? `§ ${pr.paragraaf}` : ''}</td><td><b>${pr.naam}</b>${pr.schoolplan ? html`<br><span style="color:var(--muted)">${pr.schoolplan}</span>` : ''}</td><td>${pr.uniekind}</td></tr>`)}</tbody>
             </table></div>
           </section>
 
