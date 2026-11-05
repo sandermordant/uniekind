@@ -525,7 +525,6 @@
       "id": "filosofie",
       "naam": "Filosofie",
       "afdelingen": [
-        "havo",
         "vwo-a",
         "vwo-g"
       ],
@@ -548,8 +547,7 @@
       "naam": "M&M (Mens & Maatschappij)",
       "afdelingen": [
         "vmbo-b",
-        "vmbo-k",
-        "mavo"
+        "vmbo-k"
       ],
       "rekenen": false,
       "onderbouwVakoverstijgend": true,
