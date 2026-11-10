@@ -115,3 +115,54 @@ body.digibord .overslaan { display: none; }
 .et-voorstel { display: flex; gap: 0.5rem; align-items: flex-start; cursor: pointer; }
 .et-voorstel input { margin-top: 0.2rem; accent-color: var(--accent); width: 1.05rem; height: 1.05rem; flex: none; }
 .examenopgave textarea { width: 100%; }
+
+/* ── Menu per soort klas ── */
+.nav .modus { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; margin-right: 0.35rem; background: var(--surface-2); }
+.nav .modus a { border-radius: 999px; font-weight: 700; }
+.nav .modus a.actief { background: var(--accent); color: var(--accent-fg, #fff); }
+.nav .modus a.actief:hover { background: var(--accent); }
+@media (max-width: 640px) { .nav .modus { width: 100%; margin: 0 0 0.25rem; } .nav .modus a { flex: 1; text-align: center; } }
+
+/* ── Startpagina: kies je klas ── */
+.keuze-kop { font-size: var(--t-l, 1.25rem); margin: 1.5rem 0 0.6rem; }
+.modus-keuze { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 0.9rem; max-width: 52rem; }
+.modus-kaart { display: grid; gap: 0.3rem; padding: 1rem 1.15rem; border-radius: 12px; background: var(--surface); border: 2px solid var(--line); color: var(--fg); text-decoration: none; }
+.modus-kaart b { font-family: var(--f-kop); font-size: 1.25rem; color: var(--accent); }
+.modus-kaart span { font-size: var(--t-s); color: var(--muted); }
+.modus-kaart:hover, .modus-kaart:focus-visible { border-color: var(--accent); }
+
+/* ── Werkplek ── */
+.ws-klas { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 0.75rem 1rem; align-items: end; margin-top: 1.25rem; max-width: 46rem; }
+.ws-vast { margin: 0; padding: 0.5rem 0; font-weight: 600; }
+.ws-knoppen { margin-top: 1rem; }
+.ws-voortgang { margin: 0.75rem 0 1rem; }
+.ws-voortgang .voortgang { max-width: 28rem; }
+.ws-domeinen { display: grid; gap: 0.5rem; }
+.ws-domein summary { display: flex; flex-wrap: wrap; gap: 0.2rem 0.8rem; justify-content: space-between; align-items: baseline; }
+.ws-kopje { list-style: none; font-size: var(--t-xs); font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); padding: 0.6rem 0.4rem 0.15rem calc(0.4rem + var(--d, 0) * 1.1rem); }
+.ws-gedaan .es-tekst > span:first-child { color: var(--fg); }
+.ws-vink { font-size: var(--t-xs); font-weight: 700; color: var(--goed, #1a6b32); border: 1px solid currentColor; border-radius: 4px; padding: 0 0.3rem; white-space: nowrap; }
+.ws-vink::before { content: "✓ "; }
+.ws-paneel-rij { list-style: none; }
+.ws-verder .pijler { text-decoration: none; color: var(--fg); }
+.ws-verder .pijler:hover h3 { text-decoration: underline; }
+
+/* ── Materiaalpaneel bij een onderwerp ── */
+.om-paneel { margin: 0.4rem 0 0.9rem; padding: 1rem; border: 2px solid var(--accent); border-radius: 12px; background: var(--surface); }
+.om-paneel:focus { outline: none; }
+.om-paneel:focus-visible { outline: 3px solid var(--focus, var(--accent)); outline-offset: 2px; }
+.om-kop { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; }
+.om-kop h3 { margin: 0; font-size: 1.1rem; }
+.om-acties { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.6rem 0 0.4rem; }
+.om-blokken { display: grid; gap: 1rem; margin-top: 0.6rem; }
+.om-blok { border-top: 1px solid var(--line); padding-top: 0.75rem; min-width: 0; }
+.om-blok h4 { margin: 0 0 0.35rem; }
+.om-mat { margin-top: 0.5rem; }
+.om-mat .mat-blad { max-height: 34rem; overflow: auto; }
+.om-links { margin: 0.3rem 0; padding-left: 1.1rem; display: grid; gap: 0.25rem; font-size: var(--t-s); }
+.om-paneel textarea { width: 100%; }
+.bm-lijst { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+.bm-lijst > li { padding: 0.6rem 0.75rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.bm-lijst p { margin: 0 0 0.2rem; }
+.om-paneel { scroll-margin-top: 11rem; }
+@media (max-width: 640px) { .om-paneel { scroll-margin-top: 1rem; padding: 0.75rem; } }

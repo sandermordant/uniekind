@@ -133,7 +133,7 @@ function gegevensBlok(lessen) {
     <section class="sectie" aria-labelledby="kop-gegevens">
       <h2 id="kop-gegevens">Wat Uniekind onthoudt</h2>
       <div class="lees">
-        <p>Alles op deze pagina staat alleen in deze browser, op deze computer. Er gaat niets naar een server en er zijn geen accounts. Uniekind bewaart: je docentprofiel, je laatste lesconcept, de examenopgave waar je het laatst aan werkte, en per les het onderwerp, vak, de lesduur, de werkvormen en je reflectie. Nooit namen, cijfers of andere gegevens van leerlingen.</p>
+        <p>Alles op deze pagina staat alleen in deze browser, op deze computer. Er gaat niets naar een server en er zijn geen accounts. Uniekind bewaart: je docentprofiel, de klas waarvoor je voorbereidt, je laatste lesconcept, de examenopgave waar je het laatst aan werkte, links die je bij onderwerpen bewaarde, en per les het onderwerp, vak, de lesduur, de werkvormen en je reflectie. Nooit namen, cijfers of andere gegevens van leerlingen.</p>
         <p>Werk je op een andere laptop? Neem je lessen mee als bestand.</p>
       </div>
       <div class="knoppen">
@@ -227,7 +227,7 @@ export default {
           } else if (a === 'wis-alles') {
             if (window.confirm('Alles wissen: je profiel, je laatste les, je lessen en reflecties? Dit kan niet ongedaan worden gemaakt.')) {
               wisAlles();
-              for (const s of ['docentprofiel', 'concept', 'digibord-geluid', 'examenopgave', 'examenstof-staat', 'profielconcept']) opslag.wis(s);
+              for (const s of ['docentprofiel', 'concept', 'digibord-geluid', 'examenopgave', 'examenstof-staat', 'profielconcept', 'klas', 'materiaal', 'onderwerp-ai', 'werkplek-open']) opslag.wis(s);
               teken('Alles is gewist. Uniekind begint weer blanco.');
             }
           }

@@ -28,7 +28,9 @@ export default {
               <li>je docentprofiel: vakken, afdelingen, hoe je lesgeeft en je kracht in één zin;</li>
               <li>de les waar je het laatst aan werkte;</li>
               <li>je lessen met je eigen reflectie (onderwerp, vak, lesduur, werkvormen en je duimen);</li>
-              <li>de examenopgave waar je het laatst aan werkte bij Opgave op niveau, en je zoekinstellingen bij Examenstof;</li>
+              <li>de klas waarvoor je voorbereidt (eindexamenklas of andere klas, afdeling, leerjaar en vak; geen namen of klascodes);</li>
+              <li>de examenopgave waar je het laatst aan werkte bij Opgave op niveau, en je zoekinstellingen bij Stof en materiaal;</li>
+              <li>links die je bij onderwerpen bewaarde, en AI-tekst die je bij een onderwerp terugplakte (de laatste 30 onderwerpen);</li>
               <li>kleine voorkeuren, zoals het geluidsniveau in de digibordmodus.</li>
             </ul>
             <p>Je ziet en wist dit in <a href="#mijn-profiel">Mijn profiel</a>. Werk je op een gedeelde computer, wis het dan na gebruik, of gebruik een privévenster: dan onthoudt Uniekind niets.</p>

@@ -5,6 +5,8 @@ import { CATEGORIE } from '../data/labels.js';
 export default {
   async render({ profiel }) {
     const index = await laadIndex();
+    // Examenjaren uit het profiel, zoals "vmbo 4, havo 5, vwo 6"
+    const eindNamen = [...new Map(profiel.afdelingen.map((a) => [`${a.niveau}`, `${a.niveau} ${Math.max(...a.leerjaren)}`])).values()].join(', ');
     const kleur = (c) => `var(--huis-${profiel.huisstijl.categoriekleur?.[c] ?? 'hoofd'})`;
     return {
       titel: '',
@@ -14,10 +16,18 @@ export default {
             <p class="eyebrow">${profiel.school.volledigeNaam}</p>
             <h1 class="motto-citaat">“${profiel.motto.tekst}”</h1>
             <p class="lead">${profiel.uniekind.kernbelofte}</p>
-            <div class="knoppen">
-              <a class="knop" href="#les-maken">Maak een les <span class="pijl" aria-hidden="true">→</span></a>
-              <a class="knop secundair" href="#begin-hier">Begin hier: 10 werkvormen voor morgen</a>
+            <h2 class="keuze-kop">Voor welke klas bereid je voor?</h2>
+            <div class="modus-keuze">
+              <a class="modus-kaart" href="#examenklas">
+                <b>Eindexamenklas</b>
+                <span>${eindNamen}. Alle examenstof met de syllabus, opgaven op niveau en materiaal per onderwerp.</span>
+              </a>
+              <a class="modus-kaart" href="#klas">
+                <b>Andere klassen</b>
+                <span>Onderbouw en de jaren voor het examen. Kerndoelen, onderwerpen en lessen op maat.</span>
+              </a>
             </div>
+            <p class="klein-boven"><a href="#begin-hier">Of begin met 10 werkvormen voor morgen</a></p>
           </div>
         </section>
         <main class="wrap">

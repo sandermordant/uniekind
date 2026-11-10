@@ -66,7 +66,7 @@
     "beroepsgericht",
     "bouwen-wonen-en-interieur"
    ],
-   "aantal": 1
+   "aantal": 3
   },
   {
    "naam": "BSM (Bewegen, sport en maatschappij)",
@@ -119,7 +119,7 @@
    "uniekind": [
     "dp"
    ],
-   "aantal": 1
+   "aantal": 3
   },
   {
    "naam": "Dans",
@@ -169,7 +169,7 @@
     "beroepsgericht",
     "economie-en-ondernemen"
    ],
-   "aantal": 1
+   "aantal": 3
   },
   {
    "naam": "Engels",
@@ -234,7 +234,7 @@
     "beroepsgericht",
     "groen"
    ],
-   "aantal": 1
+   "aantal": 3
   },
   {
    "naam": "Horeca, Bakkerij en Recreatie",
@@ -243,7 +243,7 @@
     "beroepsgericht",
     "horeca-bakkerij-en-recreatie"
    ],
-   "aantal": 1
+   "aantal": 3
   },
   {
    "naam": "Informatica",
@@ -329,7 +329,7 @@
     "beroepsgericht",
     "maritiem-en-techniek"
    ],
-   "aantal": 1
+   "aantal": 3
   },
   {
    "naam": "Media, Vormgeving en ICT",
@@ -338,7 +338,7 @@
     "beroepsgericht",
     "media-vormgeving-en-ict"
    ],
-   "aantal": 1
+   "aantal": 3
   },
   {
    "naam": "Mens en maatschappij",
@@ -371,7 +371,7 @@
     "beroepsgericht",
     "mobiliteit-en-transport"
    ],
-   "aantal": 1
+   "aantal": 3
   },
   {
    "naam": "Moderne vreemde talen",
@@ -430,7 +430,7 @@
     "beroepsgericht",
     "produceren-installeren-en-energie"
    ],
-   "aantal": 1
+   "aantal": 3
   },
   {
    "naam": "Russisch",
@@ -506,7 +506,7 @@
     "beroepsgericht",
     "zorg-en-welzijn"
    ],
-   "aantal": 1
+   "aantal": 3
   }
  ],
  "kaders": [
@@ -727,6 +727,7 @@
     "havo"
    ],
    "sloVak": "Aardrijkskunde",
+   "ep": "examenprogramma-ak-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -749,6 +750,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Aardrijkskunde",
+   "ep": "examenprogramma-ak-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -771,6 +773,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Aardrijkskunde",
+   "ep": "examenprogramma-ak-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -793,6 +796,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Aardrijkskunde",
+   "ep": "examenprogramma-ak-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -815,6 +819,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Aardrijkskunde",
+   "ep": "examenprogramma-ak-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -837,6 +842,7 @@
     "vwo"
    ],
    "sloVak": "Aardrijkskunde",
+   "ep": "examenprogramma-ak-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1111,6 +1117,7 @@
     "havo"
    ],
    "sloVak": "Arabisch",
+   "ep": "examenprogramma-mvt-ar-h",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1133,6 +1140,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Arabisch",
+   "ep": "examenprogramma-ar-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1155,6 +1163,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Arabisch",
+   "ep": "examenprogramma-ar-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1177,6 +1186,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Arabisch",
+   "ep": "examenprogramma-ar-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1199,6 +1209,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Arabisch",
+   "ep": "examenprogramma-ar-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1221,6 +1232,7 @@
     "vwo"
    ],
    "sloVak": "Arabisch",
+   "ep": "examenprogramma-mvt-ar-v",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1391,6 +1403,7 @@
     "havo"
    ],
    "sloVak": "Bedrijfseconomie",
+   "ep": "examenprogramma-be-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1413,6 +1426,7 @@
     "vwo"
    ],
    "sloVak": "Bedrijfseconomie",
+   "ep": "examenprogramma-be-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1739,6 +1753,7 @@
     "vwo"
    ],
    "sloVak": "Beeldende vakken",
+   "ep": "examenprogramma-tht-h-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1761,6 +1776,7 @@
     "havo"
    ],
    "sloVak": "Beeldende vakken",
+   "ep": "examenprogramma-tht-h-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1783,6 +1799,7 @@
     "havo"
    ],
    "sloVak": "Beeldende vakken",
+   "ep": "examenprogramma-kua-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1805,6 +1822,7 @@
     "vwo"
    ],
    "sloVak": "Beeldende vakken",
+   "ep": "examenprogramma-kua-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1827,6 +1845,7 @@
     "havo"
    ],
    "sloVak": "Beeldende vakken",
+   "ep": "examenprogramma-tht-t-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -1849,6 +1868,7 @@
     "havo"
    ],
    "sloVak": "Beeldende vakken",
+   "ep": "examenprogramma-tht-tv-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -2119,6 +2139,7 @@
     "havo"
    ],
    "sloVak": "Biologie",
+   "ep": "examenprogramma-bio-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -2141,6 +2162,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Biologie",
+   "ep": "examenprogramma-bio-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -2163,6 +2185,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Biologie",
+   "ep": "examenprogramma-bio-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -2185,6 +2208,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Biologie",
+   "ep": "examenprogramma-bio-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -2207,6 +2231,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Biologie",
+   "ep": "examenprogramma-bio-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -2229,6 +2254,7 @@
     "vwo"
    ],
    "sloVak": "Biologie",
+   "ep": "examenprogramma-bio-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -2262,6 +2288,52 @@
    ],
    "bestand": "vak-bouwen-wonen-en-interieur.json",
    "aantal": 20
+  },
+  {
+   "id": "beroepsgericht-bwi-profielvak",
+   "titel": "Profielvak Bouwen, Wonen en Interieur: kern en profielmodules",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Bouwen, Wonen en Interieur",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (profielvak, afgesloten met het centraal schriftelijk en praktisch examen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "bouwen-wonen-en-interieur"
+   ],
+   "bestand": "vak-bouwen-wonen-en-interieur.json",
+   "aantal": 115
+  },
+  {
+   "id": "beroepsgericht-bwi-keuzevakken",
+   "titel": "Keuzevakken Bouwen, Wonen en Interieur",
+   "soort": "keuzevakken",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Bouwen, Wonen en Interieur",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (keuzevakken, afgesloten in het schoolexamen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "bouwen-wonen-en-interieur"
+   ],
+   "bestand": "vak-bouwen-wonen-en-interieur.json",
+   "aantal": 583
   },
   {
    "id": "examenprogramma-bsm-havo",
@@ -2507,6 +2579,7 @@
     "vwo"
    ],
    "sloVak": "Chinees",
+   "ep": "examenprogramma-ctc-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -2730,6 +2803,50 @@
    ],
    "bestand": "vak-d-p-dienstverlening-en-producten.json",
    "aantal": 20
+  },
+  {
+   "id": "beroepsgericht-dp-profielvak",
+   "titel": "Profielvak D&P (Dienstverlening en Producten): kern en profielmodules",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "D&P (Dienstverlening en Producten)",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (profielvak, afgesloten met het centraal schriftelijk en praktisch examen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "dp"
+   ],
+   "bestand": "vak-d-p-dienstverlening-en-producten.json",
+   "aantal": 89
+  },
+  {
+   "id": "beroepsgericht-dp-keuzevakken",
+   "titel": "Keuzevakken D&P (Dienstverlening en Producten)",
+   "soort": "keuzevakken",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "D&P (Dienstverlening en Producten)",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (keuzevakken, afgesloten in het schoolexamen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "dp"
+   ],
+   "bestand": "vak-d-p-dienstverlening-en-producten.json",
+   "aantal": 278
   },
   {
    "id": "examenprogramma-da-vmbo",
@@ -3226,6 +3343,7 @@
     "havo"
    ],
    "sloVak": "Duits",
+   "ep": "examenprogramma-mvt-dui-h",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3248,6 +3366,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Duits",
+   "ep": "examenprogramma-du-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3270,6 +3389,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Duits",
+   "ep": "examenprogramma-du-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3292,6 +3412,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Duits",
+   "ep": "examenprogramma-du-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3314,6 +3435,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Duits",
+   "ep": "examenprogramma-du-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3336,6 +3458,7 @@
     "vwo"
    ],
    "sloVak": "Duits",
+   "ep": "examenprogramma-mvt-dui-v",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3566,6 +3689,7 @@
     "havo"
    ],
    "sloVak": "Economie",
+   "ep": "examenprogramma-ec-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3588,6 +3712,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Economie",
+   "ep": "examenprogramma-ec-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3610,6 +3735,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Economie",
+   "ep": "examenprogramma-ec-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3632,6 +3758,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Economie",
+   "ep": "examenprogramma-ec-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3654,6 +3781,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Economie",
+   "ep": "examenprogramma-ec-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3676,6 +3804,7 @@
     "vwo"
    ],
    "sloVak": "Economie",
+   "ep": "examenprogramma-ec-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3709,6 +3838,52 @@
    ],
    "bestand": "vak-economie-en-ondernemen.json",
    "aantal": 20
+  },
+  {
+   "id": "beroepsgericht-eo-profielvak",
+   "titel": "Profielvak Economie en Ondernemen: kern en profielmodules",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Economie en Ondernemen",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (profielvak, afgesloten met het centraal schriftelijk en praktisch examen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "economie-en-ondernemen"
+   ],
+   "bestand": "vak-economie-en-ondernemen.json",
+   "aantal": 92
+  },
+  {
+   "id": "beroepsgericht-eo-keuzevakken",
+   "titel": "Keuzevakken Economie en Ondernemen",
+   "soort": "keuzevakken",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Economie en Ondernemen",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (keuzevakken, afgesloten in het schoolexamen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "economie-en-ondernemen"
+   ],
+   "bestand": "vak-economie-en-ondernemen.json",
+   "aantal": 197
   },
   {
    "id": "kerndoelen-onderbouw-engels",
@@ -3947,6 +4122,7 @@
     "havo"
    ],
    "sloVak": "Engels",
+   "ep": "examenprogramma-mvt-en-h",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3969,6 +4145,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Engels",
+   "ep": "examenprogramma-en-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -3991,6 +4168,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Engels",
+   "ep": "examenprogramma-en-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4013,6 +4191,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Engels",
+   "ep": "examenprogramma-en-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4035,6 +4214,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Engels",
+   "ep": "examenprogramma-en-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4057,6 +4237,7 @@
     "vwo"
    ],
    "sloVak": "Engels",
+   "ep": "examenprogramma-mvt-en-v",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4223,6 +4404,7 @@
     "havo"
    ],
    "sloVak": "Filosofie",
+   "ep": "examenprogramma-fi-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4245,6 +4427,7 @@
     "vwo"
    ],
    "sloVak": "Filosofie",
+   "ep": "examenprogramma-fi-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4455,6 +4638,7 @@
     "havo"
    ],
    "sloVak": "Frans",
+   "ep": "examenprogramma-mvt-fa-h",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4477,6 +4661,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Frans",
+   "ep": "examenprogramma-fa-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4499,6 +4684,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Frans",
+   "ep": "examenprogramma-fa-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4521,6 +4707,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Frans",
+   "ep": "examenprogramma-fa-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4543,6 +4730,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Frans",
+   "ep": "examenprogramma-fa-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4565,6 +4753,7 @@
     "vwo"
    ],
    "sloVak": "Frans",
+   "ep": "examenprogramma-mvt-fa-v",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4775,6 +4964,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Fries",
+   "ep": "examenprogramma-fr-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -4798,6 +4988,7 @@
     "havo"
    ],
    "sloVak": "Fries",
+   "ep": "examenprogramma-fr-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5028,6 +5219,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Geschiedenis",
+   "ep": "examenprogramma-gs-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5050,6 +5242,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Geschiedenis",
+   "ep": "examenprogramma-gs-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5072,6 +5265,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Geschiedenis",
+   "ep": "examenprogramma-gs-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5094,6 +5288,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Geschiedenis",
+   "ep": "examenprogramma-gs-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5116,6 +5311,7 @@
     "havo"
    ],
    "sloVak": "Geschiedenis",
+   "ep": "examenprogramma-gs-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5138,6 +5334,7 @@
     "vwo"
    ],
    "sloVak": "Geschiedenis",
+   "ep": "examenprogramma-gs-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5222,6 +5419,7 @@
     "vwo"
    ],
    "sloVak": "Grieks",
+   "ep": "examenprogramma-gtc-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5257,6 +5455,52 @@
    "aantal": 20
   },
   {
+   "id": "beroepsgericht-gr-profielvak",
+   "titel": "Profielvak Groen: kern en profielmodules",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Groen",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (profielvak, afgesloten met het centraal schriftelijk en praktisch examen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "groen"
+   ],
+   "bestand": "vak-groen.json",
+   "aantal": 114
+  },
+  {
+   "id": "beroepsgericht-gr-keuzevakken",
+   "titel": "Keuzevakken Groen",
+   "soort": "keuzevakken",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Groen",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (keuzevakken, afgesloten in het schoolexamen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "groen"
+   ],
+   "bestand": "vak-groen.json",
+   "aantal": 361
+  },
+  {
    "id": "nieuw-examenprogramma-praktijkgericht-programma-horeca-bakkerij-en-recreatie",
    "titel": "Examenprogramma praktijkgericht programma Horeca, Bakkerij en Recreatie",
    "soort": "examenprogramma",
@@ -5276,6 +5520,52 @@
    ],
    "bestand": "vak-horeca-bakkerij-en-recreatie.json",
    "aantal": 20
+  },
+  {
+   "id": "beroepsgericht-hbr-profielvak",
+   "titel": "Profielvak Horeca, Bakkerij en Recreatie: kern en profielmodules",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Horeca, Bakkerij en Recreatie",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (profielvak, afgesloten met het centraal schriftelijk en praktisch examen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "horeca-bakkerij-en-recreatie"
+   ],
+   "bestand": "vak-horeca-bakkerij-en-recreatie.json",
+   "aantal": 101
+  },
+  {
+   "id": "beroepsgericht-hbr-keuzevakken",
+   "titel": "Keuzevakken Horeca, Bakkerij en Recreatie",
+   "soort": "keuzevakken",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Horeca, Bakkerij en Recreatie",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (keuzevakken, afgesloten in het schoolexamen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "horeca-bakkerij-en-recreatie"
+   ],
+   "bestand": "vak-horeca-bakkerij-en-recreatie.json",
+   "aantal": 103
   },
   {
    "id": "examenprogramma-inf-havo",
@@ -5498,6 +5788,7 @@
     "havo"
    ],
    "sloVak": "Italiaans",
+   "ep": "examenprogramma-mvt-it-h",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5520,6 +5811,7 @@
     "vwo"
    ],
    "sloVak": "Italiaans",
+   "ep": "examenprogramma-mvt-it-v",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5650,6 +5942,7 @@
     "vwo"
    ],
    "sloVak": "Latijn",
+   "ep": "examenprogramma-ltc-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5934,6 +6227,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Maatschappijkunde",
+   "ep": "examenprogramma-mk-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5957,6 +6251,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Maatschappijkunde",
+   "ep": "examenprogramma-mk-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -5980,6 +6275,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Maatschappijkunde",
+   "ep": "examenprogramma-mk-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -6003,6 +6299,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Maatschappijkunde",
+   "ep": "examenprogramma-mk-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -6238,6 +6535,7 @@
     "havo"
    ],
    "sloVak": "Maatschappijwetenschappen",
+   "ep": "examenprogramma-maw-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -6260,6 +6558,7 @@
     "vwo"
    ],
    "sloVak": "Maatschappijwetenschappen",
+   "ep": "examenprogramma-maw-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -6295,6 +6594,52 @@
    "aantal": 20
   },
   {
+   "id": "beroepsgericht-mt-profielvak",
+   "titel": "Profielvak Maritiem en Techniek: kern en profielmodules",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Maritiem en Techniek",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (profielvak, afgesloten met het centraal schriftelijk en praktisch examen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "maritiem-en-techniek"
+   ],
+   "bestand": "vak-maritiem-en-techniek.json",
+   "aantal": 128
+  },
+  {
+   "id": "beroepsgericht-mt-keuzevakken",
+   "titel": "Keuzevakken Maritiem en Techniek",
+   "soort": "keuzevakken",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Maritiem en Techniek",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (keuzevakken, afgesloten in het schoolexamen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "maritiem-en-techniek"
+   ],
+   "bestand": "vak-maritiem-en-techniek.json",
+   "aantal": 366
+  },
+  {
    "id": "nieuw-examenprogramma-praktijkgericht-programma-media-vormgeving-en-ict",
    "titel": "Examenprogramma praktijkgericht programma Media, Vormgeving en ICT",
    "soort": "examenprogramma",
@@ -6314,6 +6659,52 @@
    ],
    "bestand": "vak-media-vormgeving-en-ict.json",
    "aantal": 20
+  },
+  {
+   "id": "beroepsgericht-mvi-profielvak",
+   "titel": "Profielvak Media, Vormgeving en ICT: kern en profielmodules",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Media, Vormgeving en ICT",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (profielvak, afgesloten met het centraal schriftelijk en praktisch examen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "media-vormgeving-en-ict"
+   ],
+   "bestand": "vak-media-vormgeving-en-ict.json",
+   "aantal": 152
+  },
+  {
+   "id": "beroepsgericht-mvi-keuzevakken",
+   "titel": "Keuzevakken Media, Vormgeving en ICT",
+   "soort": "keuzevakken",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Media, Vormgeving en ICT",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (keuzevakken, afgesloten in het schoolexamen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "media-vormgeving-en-ict"
+   ],
+   "bestand": "vak-media-vormgeving-en-ict.json",
+   "aantal": 227
   },
   {
    "id": "kerndoelen-onderbouw-mens-en-maatschappij",
@@ -6431,6 +6822,52 @@
    ],
    "bestand": "vak-mobiliteit-en-transport.json",
    "aantal": 20
+  },
+  {
+   "id": "beroepsgericht-met-profielvak",
+   "titel": "Profielvak Mobiliteit en Transport: kern en profielmodules",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Mobiliteit en Transport",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (profielvak, afgesloten met het centraal schriftelijk en praktisch examen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "mobiliteit-en-transport"
+   ],
+   "bestand": "vak-mobiliteit-en-transport.json",
+   "aantal": 112
+  },
+  {
+   "id": "beroepsgericht-met-keuzevakken",
+   "titel": "Keuzevakken Mobiliteit en Transport",
+   "soort": "keuzevakken",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Mobiliteit en Transport",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (keuzevakken, afgesloten in het schoolexamen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "mobiliteit-en-transport"
+   ],
+   "bestand": "vak-mobiliteit-en-transport.json",
+   "aantal": 265
   },
   {
    "id": "nieuw-kerndoelen-moderne-vreemde-talen",
@@ -6881,6 +7318,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Natuurkunde",
+   "ep": "examenprogramma-nask1-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -6903,6 +7341,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Natuurkunde",
+   "ep": "examenprogramma-nask1-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -6925,6 +7364,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Natuurkunde",
+   "ep": "examenprogramma-nask1-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -6947,6 +7387,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Natuurkunde",
+   "ep": "examenprogramma-nask1-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -6969,6 +7410,7 @@
     "havo"
    ],
    "sloVak": "Natuurkunde",
+   "ep": "examenprogramma-na-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -6991,6 +7433,7 @@
     "vwo"
    ],
    "sloVak": "Natuurkunde",
+   "ep": "examenprogramma-na-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7241,6 +7684,7 @@
     "havo"
    ],
    "sloVak": "Nederlands",
+   "ep": "examenprogramma-ne-h",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7263,6 +7707,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Nederlands",
+   "ep": "examenprogramma-ne-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7285,6 +7730,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Nederlands",
+   "ep": "examenprogramma-ne-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7307,6 +7753,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Nederlands",
+   "ep": "examenprogramma-ne-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7329,6 +7776,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Nederlands",
+   "ep": "examenprogramma-ne-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7351,6 +7799,7 @@
     "vwo"
    ],
    "sloVak": "Nederlands",
+   "ep": "examenprogramma-ne-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7510,6 +7959,52 @@
    "aantal": 20
   },
   {
+   "id": "beroepsgericht-pie-profielvak",
+   "titel": "Profielvak Produceren, Installeren en Energie: kern en profielmodules",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Produceren, Installeren en Energie",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (profielvak, afgesloten met het centraal schriftelijk en praktisch examen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "produceren-installeren-en-energie"
+   ],
+   "bestand": "vak-produceren-installeren-en-energie.json",
+   "aantal": 110
+  },
+  {
+   "id": "beroepsgericht-pie-keuzevakken",
+   "titel": "Keuzevakken Produceren, Installeren en Energie",
+   "soort": "keuzevakken",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Produceren, Installeren en Energie",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (keuzevakken, afgesloten in het schoolexamen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "produceren-installeren-en-energie"
+   ],
+   "bestand": "vak-produceren-installeren-en-energie.json",
+   "aantal": 553
+  },
+  {
    "id": "examenprogramma-mvt-ru-h",
    "titel": "Examenprogramma Moderne vreemde talen Russisch havo",
    "soort": "examenprogramma",
@@ -7642,6 +8137,7 @@
     "havo"
    ],
    "sloVak": "Russisch",
+   "ep": "examenprogramma-mvt-ru-h",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7664,6 +8160,7 @@
     "vwo"
    ],
    "sloVak": "Russisch",
+   "ep": "examenprogramma-mvt-ru-v",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7874,6 +8371,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Scheikunde",
+   "ep": "examenprogramma-nask2-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7896,6 +8394,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Scheikunde",
+   "ep": "examenprogramma-nask2-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7918,6 +8417,7 @@
     "havo"
    ],
    "sloVak": "Scheikunde",
+   "ep": "examenprogramma-sk-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -7940,6 +8440,7 @@
     "vwo"
    ],
    "sloVak": "Scheikunde",
+   "ep": "examenprogramma-sk-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8170,6 +8671,7 @@
     "havo"
    ],
    "sloVak": "Spaans",
+   "ep": "examenprogramma-mvt-sp-h",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8192,6 +8694,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Spaans",
+   "ep": "examenprogramma-sp-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8214,6 +8717,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Spaans",
+   "ep": "examenprogramma-sp-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8236,6 +8740,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Spaans",
+   "ep": "examenprogramma-sp-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8258,6 +8763,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Spaans",
+   "ep": "examenprogramma-sp-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8280,6 +8786,7 @@
     "vwo"
    ],
    "sloVak": "Spaans",
+   "ep": "examenprogramma-mvt-sp-v",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8633,6 +9140,7 @@
     "havo"
    ],
    "sloVak": "Turks",
+   "ep": "examenprogramma-mvt-tu-h",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8655,6 +9163,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Turks",
+   "ep": "examenprogramma-tu-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8677,6 +9186,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Turks",
+   "ep": "examenprogramma-tu-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8699,6 +9209,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Turks",
+   "ep": "examenprogramma-tu-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8721,6 +9232,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Turks",
+   "ep": "examenprogramma-tu-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -8743,6 +9255,7 @@
     "vwo"
    ],
    "sloVak": "Turks",
+   "ep": "examenprogramma-mvt-tu-v",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -9310,6 +9823,7 @@
     "havo"
    ],
    "sloVak": "Wiskunde",
+   "ep": "examenprogramma-wi-a-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -9333,6 +9847,7 @@
     "vwo"
    ],
    "sloVak": "Wiskunde",
+   "ep": "examenprogramma-wi-a-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -9356,6 +9871,7 @@
     "havo"
    ],
    "sloVak": "Wiskunde",
+   "ep": "examenprogramma-wi-b-havo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -9379,6 +9895,7 @@
     "vwo"
    ],
    "sloVak": "Wiskunde",
+   "ep": "examenprogramma-wi-b-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -9402,6 +9919,7 @@
     "vwo"
    ],
    "sloVak": "Wiskunde",
+   "ep": "examenprogramma-wi-c-vwo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -9425,6 +9943,7 @@
     "vmbo-bb"
    ],
    "sloVak": "Wiskunde",
+   "ep": "examenprogramma-wi-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -9448,6 +9967,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Wiskunde",
+   "ep": "examenprogramma-wi-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -9471,6 +9991,7 @@
     "vmbo-kb"
    ],
    "sloVak": "Wiskunde",
+   "ep": "examenprogramma-wi-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -9494,6 +10015,7 @@
     "vmbo-gltl"
    ],
    "sloVak": "Wiskunde",
+   "ep": "examenprogramma-wi-vmbo",
    "bron": {
     "naam": "SLO/CvTE, syllabus centraal examen",
     "repo": "slonl/curriculum-syllabus",
@@ -9528,6 +10050,52 @@
    ],
    "bestand": "vak-zorg-en-welzijn.json",
    "aantal": 20
+  },
+  {
+   "id": "beroepsgericht-zw-profielvak",
+   "titel": "Profielvak Zorg en Welzijn: kern en profielmodules",
+   "soort": "examenprogramma",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Zorg en Welzijn",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (profielvak, afgesloten met het centraal schriftelijk en praktisch examen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "zorg-en-welzijn"
+   ],
+   "bestand": "vak-zorg-en-welzijn.json",
+   "aantal": 131
+  },
+  {
+   "id": "beroepsgericht-zw-keuzevakken",
+   "titel": "Keuzevakken Zorg en Welzijn",
+   "soort": "keuzevakken",
+   "status": "geldend",
+   "niveaus": [
+    "vmbo-bb",
+    "vmbo-kb",
+    "vmbo-gltl"
+   ],
+   "sloVak": "Zorg en Welzijn",
+   "bron": {
+    "naam": "SLO, examenprogramma beroepsgericht vmbo (keuzevakken, afgesloten in het schoolexamen)",
+    "repo": "slonl/curriculum-examenprogramma-bg",
+    "versie": "2026-10-15"
+   },
+   "vakken": [
+    "beroepsgericht",
+    "zorg-en-welzijn"
+   ],
+   "bestand": "vak-zorg-en-welzijn.json",
+   "aantal": 321
   }
  ]
 }

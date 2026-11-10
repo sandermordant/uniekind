@@ -67,9 +67,30 @@ export default {
                 <p>De koppeling staat in je lesplan en gaat mee in de AI-opdracht. In <a href="#mijn-profiel">Mijn profiel</a> zie je per kader wat al aan bod kwam en wat nog niet.</p>
                 <p>De teksten komen uit de open data van SLO. Kaders met "concept" zijn nieuwe kerndoelen of examenprogramma's die nog niet wettelijk gelden.</p>
               </details>
-              <details><summary>Wat staat er bij Examenstof?</summary>
-                <p>Alles wat SLO als open data publiceert voor vmbo, mavo, havo en vwo: de kerndoelen onderbouw, de leerdoelenkaarten met de onderwerpen per vak, alle examenprogramma's met domeinen en eindtermen, en de syllabi voor het centraal examen met de toelichtingen en vakbegrippen. Ook de nieuwe kerndoelen en conceptexamenprogramma's staan erin; die zijn gemarkeerd als concept en gelden nog niet.</p>
-                <p>Zoek op een woord in één vak of in alle vakken. Bij elke eindterm kies je <b>In een les</b> of <b>Opgave op niveau</b>.</p>
+              <details><summary>Eindexamenklas of Andere klassen: wat is het verschil?</summary>
+                <p>Bovenin kies je voor welke klas je voorbereidt. Het menu past zich aan.</p>
+                <ul>
+                  <li><b>Eindexamenklas</b> (vmbo 4, havo 5, vwo 6): je werkplek toont alle examenstof van je vak, het examenprogramma met onder elk domein de uitwerking uit de syllabus van het centraal examen. Op vmbo staan ook de beroepsgerichte profielvakken en keuzevakken erin. In het menu staat Opgave op niveau.</li>
+                  <li><b>Andere klassen</b> (onderbouw en de jaren voor het examen): je werkplek toont de kerndoelen, de onderwerpen uit de leerdoelenkaart en, in de bovenbouw, het examenprogramma.</li>
+                </ul>
+                <p>Je kiest afdeling, leerjaar en vak één keer. Maak een les, Opgave op niveau en Stof en materiaal nemen die klas over.</p>
+              </details>
+              <details><summary>Hoe vind ik materiaal bij een onderwerp?</summary>
+                <p>Klik in je werkplek of bij Stof en materiaal op <b>Materiaal</b> naast een onderwerp. Je krijgt:</p>
+                <ol>
+                  <li><b>Direct klaar</b>: een leerkaart, een oefenblad op drie niveaus, begrippenkaartjes en een docentblad, gemaakt uit de eindtermen, toelichting en vakbegrippen van SLO. Als PDF of Word.</li>
+                  <li><b>Met AI</b>: een opdracht voor de AI-tool van school die uitleg en oefenvragen schrijft. Plak het antwoord terug en het materiaal vult zich. Lees het altijd na.</li>
+                  <li><b>Zoeken</b>: links naar Schooltv, Wikiwijs, Kennisnet, YouTube, Wikipedia en, in de examenklas, Examenblad, met een zoekterm die bij het onderwerp past.</li>
+                  <li><b>Bewaard</b>: wat jij en je sectie bij dit onderwerp bewaarden.</li>
+                </ol>
+                <p>Uniekind heeft zelf geen video's of methodeteksten: het maakt een basis, zoekt gericht en onthoudt wat jullie vinden.</p>
+              </details>
+              <details><summary>Hoe deel ik materiaal met mijn sectie?</summary>
+                <p>Bij <a href="#materiaal">Bewaard materiaal</a> klik je op Exporteer. Stuur het bestand naar je sectiegenoten; zij klikken op Importeer. Wil je dat iedereen het ziet, vraag de beheerder het bestand in de website te zetten. Er staan alleen titels en links in, nooit gegevens over leerlingen.</p>
+              </details>
+              <details><summary>Wat staat er bij Stof en materiaal?</summary>
+                <p>Alles wat SLO als open data publiceert voor vmbo, mavo, havo en vwo: de kerndoelen onderbouw, de leerdoelenkaarten met de onderwerpen per vak, alle examenprogramma's met domeinen en eindtermen, de syllabi voor het centraal examen met de toelichtingen en vakbegrippen, en de beroepsgerichte profielvakken en keuzevakken van vmbo. Ook de nieuwe kerndoelen en conceptexamenprogramma's staan erin; die zijn gemarkeerd als concept en gelden nog niet.</p>
+                <p>Zoek op een woord in één vak of in alle vakken. Bij elke eindterm kies je <b>Materiaal</b>, <b>In een les</b> of <b>Opgave op niveau</b>.</p>
               </details>
               <details><summary>Hoe bied ik een examenopgave op niveau aan?</summary>
                 <ol>

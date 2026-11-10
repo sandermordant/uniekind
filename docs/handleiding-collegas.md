@@ -6,7 +6,7 @@
 
 ## Een gedifferentieerde les in drie minuten
 
-1. **Maak een les.** Open Uniekind op je laptop en klik op *Maak een les*. Blijf in de modus *Snel*.
+1. **Kies je klas.** Open Uniekind op je laptop en kies bovenin *Eindexamenklas* of *Andere klassen*, met afdeling, leerjaar en vak. Je ziet alle stof; bij elk onderwerp staat *Materiaal*. Klik dan op *Maak een les* en blijf in de modus *Snel*.
 2. **Vul in.** Onderwerp, één of meer lesdoelen, afdeling en leerjaar (bijvoorbeeld havo 4), vak, lesduur, lokaal en aantal leerlingen. Koppel je les eventueel aan de kerndoelen of eindtermen van SLO.
 3. **Kies** hoe ver je wilt gaan en klik op *Genereer de les*. Je krijgt drie varianten; kies er één.
 4. **Pas aan.** Schuif met fasen, verander minuten, vraag een *andere suggestie* of zet een werkvorm vast.

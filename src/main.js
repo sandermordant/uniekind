@@ -7,7 +7,7 @@ import './stijl/digibord.css';
 import './stijl/paginas.css';
 import './stijl/print.css';
 
-import { html, escape } from './util/html.js';
+import { html, raw, escape } from './util/html.js';
 import { laadProfiel } from './data/laden.js';
 
 import home from './pages/home.js';
@@ -25,18 +25,45 @@ import privacy from './pages/privacy.js';
 import schoolprofiel from './pages/schoolprofiel.js';
 import examenstof from './pages/examenstof.js';
 import examenopgave from './pages/examenopgave.js';
+import werkplek from './pages/werkplek.js';
+import materiaal from './pages/materiaal.js';
 import { zetTermen } from './data/termen.js';
+import { MODUS, huidigeModus } from './data/klas.js';
 
-const NAV = [
-  { hash: 'les-maken', label: 'Maak een les' },
-  { hash: 'bibliotheek', label: 'Werkvormen' },
-  { hash: 'examenstof', label: 'Examenstof' },
-  { hash: 'begin-hier', label: 'Begin hier' },
-  { hash: 'les-openen', label: 'Les openen' },
-  { hash: 'visie', label: 'Visie' },
-  { hash: 'mijn-profiel', label: 'Mijn profiel' },
-  { hash: 'hulp', label: 'Hulp' }
-];
+// Het menu hangt af van de klas waarvoor je voorbereidt: eindexamenklas of een andere klas.
+const NAV = {
+  examen: [
+    { hash: 'les-maken', label: 'Maak een les' },
+    { hash: 'examenopgave', label: 'Opgave op niveau' },
+    { hash: 'examenstof', label: 'Stof en materiaal' },
+    { hash: 'bibliotheek', label: 'Werkvormen' },
+    { hash: 'mijn-profiel', label: 'Mijn profiel' },
+    { hash: 'hulp', label: 'Hulp' }
+  ],
+  regulier: [
+    { hash: 'les-maken', label: 'Maak een les' },
+    { hash: 'examenstof', label: 'Stof en materiaal' },
+    { hash: 'bibliotheek', label: 'Werkvormen' },
+    { hash: 'begin-hier', label: 'Begin hier' },
+    { hash: 'mijn-profiel', label: 'Mijn profiel' },
+    { hash: 'hulp', label: 'Hulp' }
+  ]
+};
+const modusVoor = (hash) => (hash === 'examenklas' ? 'examen' : hash === 'klas' ? 'regulier' : huidigeModus());
+
+function navHtml(profiel, hash) {
+  const modus = modusVoor(hash);
+  const { nav } = kiesPagina(hash);
+  const items = [...NAV[modus], ...(profiel.uniekind.eigenProfiel ? [{ hash: 'schoolprofiel', label: 'Schoolprofiel' }] : [])];
+  // examenopgave valt in het gewone menu onder Stof en materiaal
+  const actief = modus === 'regulier' && hash === 'examenopgave' ? 'examenstof' : nav;
+  const huidig = (h) => (h === actief ? 'aria-current="page"' : '');
+  return html`
+    <span class="modus" role="group" aria-label="Voor welke klas bereid je voor?">
+      ${Object.values(MODUS).map((m) => html`<a href="#${m.hash}" class="${m.id === modus ? 'actief' : ''}" ${hash === m.hash ? raw('aria-current="page"') : m.id === modus ? raw('aria-current="true"') : ''}>${m.naam}</a>`)}
+    </span>
+    ${items.map((n) => html`<a href="#${n.hash}" data-nav="${n.hash}" ${raw(huidig(n.hash))}>${n.label}</a>`)}`;
+}
 
 // Routes: plain hash-namen (#bibliotheek, #werkvorm-wisbordjes), zodat links ook in previews werken.
 function kiesPagina(hash) {
@@ -55,9 +82,11 @@ function kiesPagina(hash) {
     'privacy': privacy,
     'schoolprofiel': schoolprofiel,
     'examenstof': examenstof,
-    'examenopgave': examenopgave
+    'examenopgave': examenopgave,
+    'materiaal': materiaal
   };
-  return { pagina: routes[hash] ?? home, nav: hash === 'examenopgave' ? 'examenstof' : routes[hash] ? hash : '' };
+  if (hash === 'examenklas' || hash === 'klas') return { pagina: werkplek, arg: modusVoor(hash), nav: '' };
+  return { pagina: routes[hash] ?? home, nav: hash === 'materiaal' ? 'examenstof' : routes[hash] ? hash : '' };
 }
 
 function pasHuisstijlToe(profiel) {
@@ -78,9 +107,7 @@ function shell(profiel) {
           ${logo}
           <span><span class="merk-naam">${profiel.uniekind.titel}</span><span class="merk-sub">${profiel.uniekind.ondertitel}</span></span>
         </a>
-        <nav class="nav" aria-label="Hoofdmenu">
-          ${[...NAV, ...(profiel.uniekind.eigenProfiel ? [{ hash: 'schoolprofiel', label: 'Schoolprofiel' }] : [])].map((n) => html`<a href="#${n.hash}" data-nav="${n.hash}">${n.label}</a>`)}
-        </nav>
+        <nav class="nav" id="hoofdnav" aria-label="Hoofdmenu"></nav>
       </div>
       <div class="kleurbalk" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
     </header>
@@ -89,7 +116,7 @@ function shell(profiel) {
     <footer class="voet">
       <div class="wrap">
         <span>${profiel.uniekind.titel} voor ${profiel.school.naam}. Alles draait in je browser; er worden geen leerlinggegevens opgeslagen.</span>
-        <span class="voetlinks"><a href="#hulp">Hulp</a> <a href="#privacy">Privacy</a> <a href="#mijn-profiel">Mijn gegevens</a> <a href="#invulformulier">Werkvorm toevoegen</a> <a href="#schoolprofiel">Schoolprofiel</a></span>
+        <span class="voetlinks"><a href="#hulp">Hulp</a> <a href="#visie">Visie</a> <a href="#les-openen">Les openen</a> <a href="#materiaal">Bewaard materiaal</a> <a href="#privacy">Privacy</a> <a href="#mijn-profiel">Mijn gegevens</a> <a href="#invulformulier">Werkvorm toevoegen</a> <a href="#schoolprofiel">Schoolprofiel</a></span>
       </div>
     </footer>`;
 }
@@ -144,12 +171,9 @@ async function start() {
   let teller = 0;
   async function toon() {
     const hash = decodeURIComponent(location.hash.replace(/^#/, ''));
-    const { pagina, arg, nav } = kiesPagina(hash);
+    const { pagina, arg } = kiesPagina(hash);
     document.body.classList.toggle('digibord', hash === 'digibord');
-    for (const a of document.querySelectorAll('[data-nav]')) {
-      if (a.dataset.nav === nav) a.setAttribute('aria-current', 'page');
-      else a.removeAttribute('aria-current');
-    }
+    document.getElementById('hoofdnav').innerHTML = String(navHtml(profiel, hash));
     const mijn = ++teller;
     try {
       const resultaat = await pagina.render(ctx, arg);

@@ -22,6 +22,15 @@ export function nieuwConcept(profiel, docent) {
     const afd = profiel.afdelingen.find((a) => a.id === docent.afdelingen[0]);
     if (afd) { inv.context.afdeling = afd.id; inv.context.leerjaar = afd.leerjaren[0]; inv.context.lesduur = afd.standaardLesduur; }
   }
+  // De klas uit de werkplek (eindexamenklas of andere klas) gaat voor
+  const klas = opslag.lees('klas', null);
+  const kAfd = klas && profiel.afdelingen.find((a) => a.id === klas.afdeling);
+  if (kAfd) {
+    inv.context.afdeling = kAfd.id;
+    inv.context.leerjaar = kAfd.leerjaren.includes(Number(klas.leerjaar)) ? Number(klas.leerjaar) : kAfd.leerjaren[0];
+    inv.context.lesduur = kAfd.standaardLesduur;
+    if (klas.vak && profiel.vakken.some((v) => v.id === klas.vak && (v.afdelingen === 'alle' || v.afdelingen.includes(kAfd.id)))) inv.context.vak = klas.vak;
+  }
   inv.inhoud.lesdoelen = [{ tekst: '' }];
   return { versie: 1, modus: 'snel', stap: 'snel', invoer: inv, aanpassingen: {}, gekozenStand: null };
 }

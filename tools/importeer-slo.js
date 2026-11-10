@@ -6,10 +6,12 @@
  *   https://github.com/slonl/curriculum-syllabus           alle syllabi: specifieke eindtermen, toelichtingen, vakbegrippen
  *   https://github.com/slonl/curriculum-fo                 nieuwe kerndoelen, praktijkgerichte en conceptexamenprogramma's
  *   https://github.com/slonl/curriculum-leerdoelenkaarten  leerdoelenkaarten: de onderwerpen per vak
+ *   https://github.com/slonl/curriculum-examenprogramma-bg beroepsgerichte profielvakken en keuzevakken vmbo
+ *   https://github.com/slonl/curriculum-basis              niveaus (welke leerweg bij een beroepsgerichte eindterm hoort)
  *
  * Gebruik (eenmaal per jaar, als SLO een nieuwe release heeft):
  *   mkdir slo && cd slo
- *   for r in kerndoelen examenprogramma syllabus fo leerdoelenkaarten; do git clone --depth 1 https://github.com/slonl/curriculum-$r; done
+ *   for r in kerndoelen examenprogramma syllabus fo leerdoelenkaarten examenprogramma-bg basis; do git clone --depth 1 https://github.com/slonl/curriculum-$r; done
  *   cd .. && npm run importeer-slo -- slo
  *
  * Schrijft public/data/kaders/index.json en één bestand per vak (alle kaders van dat vak samen).
@@ -123,6 +125,7 @@ const vlag = (x) => ({ ...(x.ce ? { ce: 1 } : {}), ...(x.se ? { se: 1 } : {}) })
 }
 
 /* 2. Examenprogramma's, alle vakken */
+const epKader = new Map(); // id van SLO → id van het kader, zodat een syllabus naar zijn examenprogramma kan wijzen
 const epLijst = lees('curriculum-examenprogramma', 'examenprogramma.json');
 const toelichtingen = heeft('curriculum-syllabus') ? perId(lees('curriculum-syllabus', 'toelichtingen.json')) : new Map();
 const vakbegrippen = heeft('curriculum-syllabus') ? perId(lees('curriculum-syllabus', 'vakbegrippen.json')) : new Map();
@@ -149,12 +152,14 @@ const begrTekst = (b) => tekst(b.description ? `${b.title}: ${b.description}` : 
         ...eind(d.examenprogramma_eindterm_id)
       ]
     }));
-    voegToe({
+    const k = {
       id: `examenprogramma-${slug(ep.prefix || ep.title)}`, titel: tekst(ep.title), soort: 'examenprogramma', status: 'geldend',
       niveaus: niveausUitTitel(`${ep.title} ${ep.prefix}`), sloVak: vakNaam(ep.title),
       bron: { naam: 'SLO, examenprogramma', repo: 'slonl/curriculum-examenprogramma', versie: versieVan('curriculum-examenprogramma'), url: ep.url || null, ingang: tekst(ep.ingangsdatum) || null },
       items
-    });
+    };
+    voegToe(k);
+    epKader.set(ep.id, k.id);
   }
 }
 
@@ -206,7 +211,7 @@ if (heeft('curriculum-syllabus')) {
       .map(([d, k]) => ({ c: d, t: d, k: k.sort((a, b) => a.c.localeCompare(b.c, 'nl', { numeric: true })) }));
     voegToe({
       id: `syllabus-${slug(s.title.replace(/^Syllabus /, ''))}`, titel: tekst(s.title), soort: 'syllabus', status: s.status && s.status !== 'definitief' ? 'concept' : 'geldend',
-      niveaus: [...niveaus], sloVak: vakNaam(e.title),
+      niveaus: [...niveaus], sloVak: vakNaam(e.title), ep: epKader.get(e.id) ?? null,
       bron: { naam: 'SLO/CvTE, syllabus centraal examen', repo: 'slonl/curriculum-syllabus', versie: versieVan('curriculum-syllabus'), url: s.url || null, examenjaar: s.examenjaar || null },
       items
     });
@@ -267,11 +272,59 @@ if (heeft('curriculum-leerdoelenkaarten')) {
   }
 }
 
+/* 6. Beroepsgerichte examenprogramma's vmbo (curriculum-examenprogramma-bg): per profielvak de kern, de profielmodules
+      en alle keuzevakken, uitgewerkt tot deeltaken en globale eindtermen, met per eindterm de leerwegen. */
+if (heeft('curriculum-examenprogramma-bg')) {
+  const r = 'curriculum-examenprogramma-bg';
+  const kern = perId(lees(r, 'kern.json'));
+  const kerndeel = perId(lees(r, 'kerndeel.json'));
+  const module = perId(lees(r, 'module.json'));
+  const keuzevak = perId(lees(r, 'keuzevak.json'));
+  const deeltaak = perId(lees(r, 'deeltaak.json'));
+  const glob = perId(lees(r, 'globale_eindterm.json'));
+  // Leerwegen van een eindterm uit de niveaus van SLO (curriculum-basis), anders alle drie
+  const niveauNaam = heeft('curriculum-basis') ? new Map(lees('curriculum-basis', 'niveaus.json').map((n) => [n.id, n.title])) : new Map();
+  const LW = { 'bb vmbo bb': 'bb', 'bb vmbo kb': 'kb', 'bb vmbo gl': 'gl' };
+  const leerwegen = (x) => [...new Set((x.niveau_id ?? []).map((i) => LW[niveauNaam.get(i)]).filter(Boolean))];
+  const NAAM = { BWI: 'Bouwen, Wonen en Interieur', DP: 'D&P (Dienstverlening en Producten)', EO: 'Economie en Ondernemen', GR: 'Groen',
+    HBR: 'Horeca, Bakkerij en Recreatie', MT: 'Maritiem en Techniek', MVI: 'Media, Vormgeving en ICT', MET: 'Mobiliteit en Transport',
+    PIE: 'Produceren, Installeren en Energie', ZW: 'Zorg en Welzijn' };
+  const eindterm = (i) => {
+    const x = glob.get(i);
+    if (!x) return null;
+    const lw = leerwegen(x);
+    return { c: tekst(x.prefix), t: tekst(x.title), ...(lw.length && lw.length < 3 ? { d: `alleen ${lw.join(' en ')}` } : {}) };
+  };
+  const eindtermen = (ids) => (ids ?? []).map(eindterm).filter(Boolean);
+  const taak = (i) => { const x = deeltaak.get(i); return x && { c: tekst(x.prefix), t: tekst(x.title), k: eindtermen(x.examenprogramma_bg_globale_eindterm_id) }; };
+  const metTaken = (x) => ({ c: tekst(x.prefix), t: tekst(x.title), ...(x.description ? { toel: [tekst(x.description, 1500)] } : {}), k: (x.examenprogramma_bg_deeltaak_id ?? []).map(taak).filter(Boolean) });
+  const bron = (wat) => ({ naam: `SLO, examenprogramma beroepsgericht vmbo (${wat})`, repo: 'slonl/curriculum-examenprogramma-bg', versie: versieVan(r) });
+  for (const p of lees(r, 'profiel.json')) {
+    const sloVak = NAAM[p.prefix] ?? vakNaam(tekst(p.title).replace(/^Examenprogramma beroepsgericht\s+/i, ''));
+    const items = [
+      ...(p.examenprogramma_bg_kern_id ?? []).map((i) => kern.get(i)).filter(Boolean).map((k) => ({
+        c: tekst(k.prefix), t: tekst(k.title),
+        k: (k.examenprogramma_bg_kerndeel_id ?? []).map((i) => kerndeel.get(i)).filter(Boolean).map((d) => ({ c: tekst(d.prefix), t: tekst(d.title), k: eindtermen(d.examenprogramma_bg_globale_eindterm_id) }))
+      })),
+      { c: 'Profielmodules', t: 'Profielmodules', k: (p.examenprogramma_bg_module_id ?? []).map((i) => module.get(i)).filter(Boolean).sort((a, b) => a.prefix.localeCompare(b.prefix, 'nl', { numeric: true })).map(metTaken) }
+    ];
+    voegToe({
+      id: `beroepsgericht-${slug(p.prefix)}-profielvak`, titel: `Profielvak ${sloVak}: kern en profielmodules`, soort: 'examenprogramma', status: 'geldend',
+      niveaus: ['vmbo-bb', 'vmbo-kb', 'vmbo-gltl'], sloVak, bron: bron('profielvak, afgesloten met het centraal schriftelijk en praktisch examen'), items
+    });
+    const kv = (p.examenprogramma_bg_keuzevak_id ?? []).map((i) => keuzevak.get(i)).filter(Boolean).sort((a, b) => a.prefix.localeCompare(b.prefix, 'nl', { numeric: true }));
+    voegToe({
+      id: `beroepsgericht-${slug(p.prefix)}-keuzevakken`, titel: `Keuzevakken ${sloVak}`, soort: 'keuzevakken', status: 'geldend',
+      niveaus: ['vmbo-bb', 'vmbo-kb', 'vmbo-gltl'], sloVak, bron: bron('keuzevakken, afgesloten in het schoolexamen'), items: kv.map((x) => ({ ...metTaken(x), se: 1 }))
+    });
+  }
+}
+
 /* ── Schrijven: één bestand per vak, plus een index ── */
 rmSync(uit, { recursive: true, force: true });
 mkdirSync(uit, { recursive: true });
 const tel = (l) => l.reduce((n, x) => n + 1 + tel(x.k ?? []), 0);
-const SOORT = { kerndoelen: 0, leerdoelenkaart: 1, examenprogramma: 2, syllabus: 3 };
+const SOORT = { kerndoelen: 0, leerdoelenkaart: 1, examenprogramma: 2, syllabus: 3, keuzevakken: 4 };
 const index = [];
 const vakken = [];
 for (const v of [...perVak.values()].sort((a, b) => a.naam.localeCompare(b.naam, 'nl'))) {

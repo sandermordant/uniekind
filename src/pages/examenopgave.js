@@ -17,8 +17,11 @@ export default {
     const index = await laadKaderIndex();
     const docent = laadDocent(profiel);
     const opgeslagen = opslag.lees('examenopgave', {}) ?? {};
-    const startVak = opgeslagen.sloVak ?? index.vakken.find((v) => v.uniekind.some((u) => (docent.vakken ?? []).includes(u)))?.naam ?? 'Nederlands';
-    const startNiveau = opgeslagen.niveau ?? sloNiveau(profiel.afdelingen.find((a) => (docent.afdelingen ?? []).includes(a.id))) ?? 'havo';
+    // Zonder eerdere opgave: de klas uit de werkplek, anders het docentprofiel
+    const klas = opslag.lees('klas', null);
+    const klasAfd = klas && profiel.afdelingen.find((a) => a.id === klas.afdeling);
+    const startVak = opgeslagen.sloVak ?? index.vakken.find((v) => v.uniekind.includes(klas?.vak))?.naam ?? index.vakken.find((v) => v.uniekind.some((u) => (docent.vakken ?? []).includes(u)))?.naam ?? 'Nederlands';
+    const startNiveau = opgeslagen.niveau ?? sloNiveau(klasAfd) ?? sloNiveau(profiel.afdelingen.find((a) => (docent.afdelingen ?? []).includes(a.id))) ?? 'havo';
     const s = { sloVak: startVak, niveau: startNiveau, bronNiveau: startNiveau, opgave: '', antwoord: '', eindtermen: [], ai: {}, doc: 'opgave-steun', ...opgeslagen };
     const vakCache = new Map();
     let voorstellen = null;
@@ -41,10 +44,10 @@ export default {
       const zoekVak = encodeURIComponent(`site:examenblad.nl ${s.sloVak} ${NIVEAU_NAAM[s.niveau] ?? s.niveau} examen`);
       return html`
         <section class="band band-klein"><div class="wrap">
-          <p class="eyebrow">Examenstof</p>
+          <p class="eyebrow">Stof en materiaal</p>
           <h1>Opgave op niveau</h1>
           <p class="lead">Plak een examenopgave, koppel hem aan de eindtermen en bied hem aan in drie versies: met steun, op niveau en met verdieping. Of laat hem herschrijven naar een ander niveau.</p>
-          <div class="inhoudsopgave"><a class="knop secundair klein" href="#examenstof">Zoeken en bekijken</a><a class="knop klein" href="#examenopgave" aria-current="page">Opgave op niveau</a></div>
+          <div class="inhoudsopgave"><a class="knop secundair klein" href="#examenstof">Zoeken en bekijken</a><a class="knop klein" href="#examenopgave" aria-current="page">Opgave op niveau</a><a class="knop secundair klein" href="#materiaal">Bewaard materiaal</a></div>
         </div></section>
         <main class="wrap examenopgave">
           <section class="sectie">
@@ -72,11 +75,11 @@ export default {
             <h2>2. Welke eindterm toetst deze opgave?</h2>
             ${s.eindtermen.length ? html`<ul class="et-gekozen">${s.eindtermen.map((g) => html`<li><span>${g.code ? html`<b>${g.code}</b> ` : ''}${g.tekst}<span class="hulp">${g.kaderTitel}</span></span><span class="knoppen-klein"><button type="button" class="knop secundair klein" data-actie="et-weg" data-sleutel="${g.sleutel}" aria-label="Ontkoppel ${g.code || 'deze eindterm'}">×</button></span></li>`)}</ul>` : ''}
             <div class="knoppen"><button type="button" class="knop secundair klein" data-actie="zoek-et" ${s.opgave.trim() && k.length ? '' : 'disabled'}>Zoek passende eindtermen in ${k.length ? k.length === 1 ? 'het examenprogramma' : 'het examenprogramma en de syllabus' : 'de syllabus'}</button>
-              <a class="knop secundair klein" href="#examenstof">Zelf kiezen bij Examenstof</a></div>
+              <a class="knop secundair klein" href="#examenstof">Zelf kiezen bij Stof en materiaal</a></div>
             ${!k.length ? html`<p class="hulp">Voor ${s.sloVak} op ${NIVEAU_NAAM[s.niveau]} is er geen geldend examenprogramma in de gegevens van SLO.</p>` : ''}
             ${voorstellen ? (voorstellen.length ? html`<p class="hulp">Voorstellen op basis van de woorden in de opgave. Vink aan wat klopt.</p>
               <ul class="es-lijst">${voorstellen.map((r) => html`<li class="es-regel"><label class="et-voorstel"><input type="checkbox" data-actie="et-kies" value="${r.sleutel}" ${s.eindtermen.some((g) => g.sleutel === r.sleutel) ? 'checked' : ''}>
-                <span>${r.code ? html`<b>${r.code}</b> ` : ''}${r.tekst}${r.ce ? html` <span class="et-tag">CE</span>` : ''} <span class="hulp">${r.info.titel}</span></span></label></li>`)}</ul>` : html`<p class="hulp">Geen duidelijke match gevonden. Kies de eindterm zelf bij Examenstof.</p>`) : ''}
+                <span>${r.code ? html`<b>${r.code}</b> ` : ''}${r.tekst}${r.ce ? html` <span class="et-tag">CE</span>` : ''} <span class="hulp">${r.info.titel}</span></span></label></li>`)}</ul>` : html`<p class="hulp">Geen duidelijke match gevonden. Kies de eindterm zelf bij Stof en materiaal.</p>`) : ''}
           </section>
 
           <section class="sectie">

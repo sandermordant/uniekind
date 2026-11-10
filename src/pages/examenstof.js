@@ -1,9 +1,13 @@
 // Examenstof: alle kerndoelen, leerdoelenkaarten, examenprogramma's en syllabi van SLO doorzoeken en bekijken,
 // voor vmbo, mavo, havo en vwo. Vanuit hier koppel je een eindterm aan een les of maak je er een opgave op niveau bij.
-import { html, $ } from '../util/html.js';
+import { html, raw } from '../util/html.js';
 import { laadKaderIndex, laadVak, vlak, SOORT_NAAM } from '../data/kaders.js';
 import { laadDocent, laadConcept, bewaarConcept } from '../wizard/staat.js';
 import * as opslag from '../opslag/opslag.js';
+import { laadIndex } from '../data/laden.js';
+import { laadKlas, klasInfo } from '../data/klas.js';
+import { kinderenVan } from '../data/stof.js';
+import { maakMateriaalBeheer, laadSectieMateriaal } from '../examen/materiaalpaneel.js';
 
 const NIVEAUS = [['', 'Alle niveaus'], ['onderbouw', 'Onderbouw (kerndoelen)'], ['vmbo-bb', 'vmbo basis'], ['vmbo-kb', 'vmbo kader'], ['vmbo-gltl', 'vmbo gl/tl (mavo)'], ['havo', 'havo'], ['vwo', 'vwo']];
 const NIVEAU_NAAM = Object.fromEntries(NIVEAUS);
@@ -21,11 +25,13 @@ export function zoekInKader(kader, info, woorden) {
 
 export default {
   async render({ profiel }) {
-    const index = await laadKaderIndex();
+    const [index, werkvormIndex, sectie] = await Promise.all([laadKaderIndex(), laadIndex(), laadSectieMateriaal()]);
     const docent = laadDocent(profiel);
-    // Startvak: het eerste vak van de docent dat SLO kent, anders Nederlands
-    const startVak = index.vakken.find((v) => v.uniekind.some((u) => (docent.vakken ?? []).includes(u)))?.naam ?? 'Nederlands';
-    const staat = { vak: startVak, niveau: '', soort: '', concept: false, zoek: '', overal: false, open: new Set(), ...(opslag.lees('examenstof-staat', {}) ?? {}) };
+    // Startvak en -niveau: die van je klas in de werkplek, anders je eerste vak dat SLO kent, anders Nederlands
+    const klas = opslag.lees('klas', null) ? laadKlas(profiel, docent) : null;
+    const startVak = index.vakken.find((v) => v.uniekind.includes(klas?.vak))?.naam ?? index.vakken.find((v) => v.uniekind.some((u) => (docent.vakken ?? []).includes(u)))?.naam ?? 'Nederlands';
+    const startNiveau = klas ? (klasInfo(profiel, klas).niveau ?? '') : '';
+    const staat = { vak: startVak, niveau: startNiveau, soort: '', concept: false, zoek: '', overal: false, open: new Set(), ...(opslag.lees('examenstof-staat', {}) ?? {}) };
     staat.open = new Set(staat.open ?? []);
     const vakCache = new Map();
     let laden = false;
@@ -37,17 +43,27 @@ export default {
     const kadersVanVak = () => index.kaders.filter((k) => k.sloVak === staat.vak && passend(k));
     const woorden = () => norm(staat.zoek).split(/\s+/).filter((w) => w.length > 1);
 
+    const beheer = maakMateriaalBeheer({
+      profiel, werkvormen: werkvormIndex.items, sectie,
+      context: (r) => {
+        const info = r?.info;
+        const niv = staat.niveau && info?.niveaus.includes(staat.niveau) ? staat.niveau : info?.niveaus.find((n) => NIVEAU_NAAM[n] && n !== 'onderbouw') ?? null;
+        const vakId = index.vakken.find((x) => x.naam === info?.sloVak)?.uniekind.find((u) => profiel.vakken.some((p) => p.id === u)) ?? null;
+        return { vakNaam: info?.sloVak ?? staat.vak, niveauNaam: niv ? NIVEAU_NAAM[niv] : info?.niveaus.includes('onderbouw') ? 'onderbouw' : '', niveau: niv, examen: ['examenprogramma', 'syllabus', 'keuzevakken'].includes(info?.soort), vakId, klas: null };
+      }
+    });
     const regel = (r, metKader = false) => html`<li class="es-regel" style="--d:${r.diepte ?? 0}">
       <div class="es-tekst">
         ${metKader ? html`<span class="hulp">${r.info.sloVak} · ${r.info.titel}</span>` : ''}
         <span>${r.code ? html`<b>${r.code}</b> ` : ''}${r.kop ? html`<i>${r.kop}.</i> ` : ''}${r.tekst}${r.ce ? html` <span class="et-tag">CE</span>` : ''}${r.se && !r.ce ? html` <span class="et-tag">SE</span>` : ''}${r.d ? html` <span class="hulp">(${r.d})</span>` : ''}</span>
         ${r.toel.length || r.begrippen.length ? html`<details class="et-extra"><summary>${[r.toel.length ? 'Toelichting' : '', r.begrippen.length ? 'vakbegrippen' : ''].filter(Boolean).join(' en ')}</summary>${r.toel.map((t) => html`<p>${t}</p>`)}${r.begrippen.length ? html`<p><b>Vakbegrippen:</b> ${r.begrippen.join(' · ')}</p>` : ''}</details>` : ''}
       </div>
-      ${!r.heeftKinderen ? html`<span class="es-acties">
-        <button type="button" class="knop secundair klein" data-actie="in-les" data-sleutel="${r.sleutel}" data-kader="${r.info.id}">In een les</button>
-        <button type="button" class="knop secundair klein" data-actie="naar-opgave" data-sleutel="${r.sleutel}" data-kader="${r.info.id}">Opgave op niveau</button>
-      </span>` : ''}
-    </li>`;
+      <span class="es-acties">
+        <button type="button" class="knop ${beheer.isOpen(r.sleutel) ? '' : 'secundair'} klein" data-actie="es-materiaal" data-sleutel="${r.sleutel}" data-kader="${r.info.id}" aria-expanded="${beheer.isOpen(r.sleutel)}">Materiaal</button>
+        ${!r.heeftKinderen ? html`<button type="button" class="knop secundair klein" data-actie="in-les" data-sleutel="${r.sleutel}" data-kader="${r.info.id}">In een les</button>
+        <button type="button" class="knop secundair klein" data-actie="naar-opgave" data-sleutel="${r.sleutel}" data-kader="${r.info.id}">Opgave op niveau</button>` : ''}
+      </span>
+    </li>${beheer.isOpen(r.sleutel) ? html`<li class="ws-paneel-rij">${raw(String(beheer.html()))}</li>` : ''}`;
 
     const pagina = () => {
       const v = vakInfo();
@@ -58,10 +74,10 @@ export default {
       const treffers = bestand && w.length ? kaders.flatMap((k) => zoekInKader(bestand.kaders[k.id], k, w)) : [];
       return html`
         <section class="band band-klein"><div class="wrap">
-          <p class="eyebrow">Examenstof</p>
-          <h1>Kerndoelen, eindtermen en syllabi</h1>
-          <p class="lead">Alles wat SLO beschrijft voor vmbo, mavo, havo en vwo: ${index.kaders.length} kaders in ${index.vakken.length} vakken, met de toelichtingen en vakbegrippen uit de syllabi. Zoek, bekijk, koppel aan een les of maak er een opgave op niveau bij.</p>
-          <div class="inhoudsopgave"><a class="knop klein" href="#examenstof" aria-current="page">Zoeken en bekijken</a><a class="knop secundair klein" href="#examenopgave">Opgave op niveau</a></div>
+          <p class="eyebrow">Stof en materiaal</p>
+          <h1>Alle stof, alle vakken, alle niveaus</h1>
+          <p class="lead">Alles wat SLO beschrijft voor vmbo, mavo, havo en vwo: ${index.kaders.length} kaders in ${index.vakken.length} vakken, van kerndoelen tot syllabi en beroepsgerichte keuzevakken. Bij elk onderwerp vind of maak je materiaal, maak je een les of een opgave op niveau.</p>
+          <div class="inhoudsopgave"><a class="knop klein" href="#examenstof" aria-current="page">Zoeken en bekijken</a><a class="knop secundair klein" href="#examenopgave">Opgave op niveau</a><a class="knop secundair klein" href="#materiaal">Bewaard materiaal</a></div>
         </div></section>
         <main class="wrap examenstof">
           <form class="es-filters" id="esForm" role="search" aria-label="Zoek in de examenstof">
@@ -99,7 +115,7 @@ export default {
     };
 
     return {
-      titel: 'Examenstof',
+      titel: 'Stof en materiaal',
       html: pagina(),
       na(root) {
         const bewaar = () => opslag.schrijf('examenstof-staat', { ...staat, open: [...staat.open] });
@@ -119,7 +135,9 @@ export default {
           laadVak(v.bestand).then((f) => { vakCache.set(v.bestand, f); teken(); });
         };
         let timer;
+        let laatst = null;
         root.addEventListener('input', (e) => {
+          if (beheer.invoer(e.target)) return;
           if (e.target.dataset.es !== 'zoek') return;
           staat.zoek = e.target.value; overalTreffers = null;
           clearTimeout(timer); timer = setTimeout(() => { bewaar(); teken(); }, 300);
@@ -144,6 +162,25 @@ export default {
           const k = e.target.closest('[data-actie]');
           if (!k) return;
           const a = k.dataset.actie;
+          if (a.startsWith('om-')) {
+            const sl = laatst;
+            if (await beheer.actie(k, root)) teken();
+            if (a === 'om-sluit') root.querySelector(`[data-actie="es-materiaal"][data-sleutel="${CSS.escape(sl ?? '')}"]`)?.focus();
+            return;
+          }
+          if (a === 'es-materiaal') {
+            if (beheer.isOpen(k.dataset.sleutel)) { beheer.sluit(); return teken(); }
+            const info = index.kaders.find((x) => x.id === k.dataset.kader);
+            const f = vakCache.get(info.bestand) ?? await laadVak(info.bestand).then((x) => { vakCache.set(info.bestand, x); return x; });
+            const regels = vlak(f.kaders[info.id]).map((x) => ({ ...x, info }));
+            const r = regels.find((x) => x.sleutel === k.dataset.sleutel);
+            if (!r) return;
+            beheer.open(r, kinderenVan(regels, r));
+            laatst = r.sleutel;
+            teken();
+            { const el = root.querySelector('#omPaneel'); el?.focus({ preventScroll: true }); el?.scrollIntoView({ block: 'start' }); }
+            return;
+          }
           if (a === 'overal') {
             laden = true; teken();
             const w = woorden();
