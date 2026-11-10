@@ -8,9 +8,12 @@ async function json(pad) {
 }
 
 export const laadKaderIndex = () => json('./data/kaders/index.json');
-export const laadKader = (bestand) => json(`./data/kaders/${bestand}`);
+/** Eén kader (uit het bestand van zijn vak). */
+export const laadKader = (info) => json(`./data/kaders/${info.bestand}`).then((f) => f.kaders?.[info.id] ?? null);
+/** Alle kaders van één vak in één keer. */
+export const laadVak = (bestand) => json(`./data/kaders/${bestand}`);
 
-export const SOORT_NAAM = { kerndoelen: 'Kerndoelen', examenprogramma: 'Examenprogramma', syllabus: 'Syllabus (centraal examen)' };
+export const SOORT_NAAM = { kerndoelen: 'Kerndoelen', leerdoelenkaart: 'Leerdoelenkaart (onderwerpen)', examenprogramma: 'Examenprogramma', syllabus: 'Syllabus (centraal examen)' };
 
 /** Het SLO-niveau van een afdeling: vmbo-bb, vmbo-kb, vmbo-gltl, havo of vwo. */
 export function sloNiveau(afdeling) {
@@ -32,13 +35,13 @@ export function isOnderbouw(afdeling, leerjaar) {
 export function kadersVoor(index, { vak, afdeling, leerjaar }) {
   const niveau = sloNiveau(afdeling);
   const onder = isOnderbouw(afdeling, leerjaar);
-  const past = (k) => k.vakken.includes(vak) && (k.niveaus.includes('onderbouw') || !niveau || k.niveaus.includes(niveau) || (afdeling?.niveau === 'vmbo' && k.niveaus.some((n) => n.startsWith('vmbo'))));
+  const past = (k) => k.vakken.includes(vak) && (k.niveaus.includes('onderbouw') || k.niveaus.includes('alle') || !niveau || k.niveaus.includes(niveau) || (afdeling?.niveau === 'vmbo' && k.niveaus.some((n) => n.startsWith('vmbo'))));
   const gewicht = (k) => {
     let g = 0;
     if (k.status !== 'geldend') g += 10;
-    if (onder) g += k.soort === 'kerndoelen' ? 0 : 5;
-    else g += k.soort === 'kerndoelen' ? 6 : k.soort === 'examenprogramma' ? 0 : 1;
-    if (niveau && !k.niveaus.includes(niveau) && !k.niveaus.includes('onderbouw')) g += 3;
+    if (onder) g += k.soort === 'kerndoelen' ? 0 : k.soort === 'leerdoelenkaart' ? 1 : 5;
+    else g += k.soort === 'kerndoelen' ? 6 : k.soort === 'examenprogramma' ? 0 : k.soort === 'syllabus' ? 1 : 2;
+    if (niveau && !k.niveaus.includes(niveau) && !k.niveaus.includes('onderbouw') && !k.niveaus.includes('alle')) g += 3;
     return g;
   };
   return index.kaders.filter(past).sort((a, b) => gewicht(a) - gewicht(b) || a.titel.localeCompare(b.titel, 'nl'));
@@ -54,11 +57,16 @@ export function vlak(kader) {
     const eigen = mooi(x.c);
     // Staat de code al aan het begin van de tekst ("Domein B Concept schaarste"), dan niet nog eens ervoor
     const code = [...codes, x.t.startsWith(eigen) ? '' : eigen].filter((c) => c && !/^(Kerndoel|Overig)$/.test(c)).join(' · ');
-    uit.push({ sleutel, code, tekst: x.t, kop: x.kop, ce: !!x.ce, se: !!x.se, diepte, heeftKinderen: !!x.k?.length });
+    uit.push({ sleutel, code, tekst: x.t, kop: x.kop, d: x.d, toel: x.toel ?? [], begrippen: x.b ?? [], ce: !!x.ce, se: !!x.se, diepte, heeftKinderen: !!x.k?.length });
     if (x.k?.length) loop(x.k, [...pad, i], eigen ? [...codes, eigen] : codes, diepte + 1);
   });
   loop(kader.items, [], [], 0);
   return uit;
+}
+
+/** Korte vakbegrippen uit de syllabus, bruikbaar als kernbegrippen (lange opsommingen zoals topografie niet). */
+export function korteBegrippen(begrippen) {
+  return [...new Set((begrippen ?? []).map((b) => String(b).split(':')[0].trim()).filter((b) => b.length > 1 && b.length <= 40 && !b.includes(',')))];
 }
 
 /** Is dit een doelzin (De kandidaat kan…, De leerling…) en dus bruikbaar als lesdoel? */

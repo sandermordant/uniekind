@@ -2,7 +2,7 @@
 // De docent kiest een kader (voorgesteld op basis van vak, afdeling en leerjaar), zoekt en vinkt aan.
 // Gekozen regels gaan mee in het lesplan, het materiaal, de AI-prompt, het lesbestand en Mijn lessen.
 import { html } from '../util/html.js';
-import { kadersVoor, vlak, SOORT_NAAM, isOnderbouw, isDoelzin } from '../data/kaders.js';
+import { kadersVoor, vlak, SOORT_NAAM, isOnderbouw, isDoelzin, korteBegrippen } from '../data/kaders.js';
 
 const kaderLabel = (k) => `${k.titel}${k.status !== 'geldend' ? ' (concept, nog niet geldend)' : ''}`;
 
@@ -20,7 +20,7 @@ export function eindtermenVeld({ profiel, concept, kaders }, { open = false } = 
   const vakNaam = profiel.vakken.find((v) => v.id === c.vak)?.naam ?? c.vak;
   const staat = (concept.kader ??= {});
   const kader = lijst.find((k) => k.id === staat.id) ?? lijst[0];
-  const data = kader ? kaders.cache.get(kader.bestand) : null;
+  const data = kader ? kaders.cache.get(kader.id) : null;
   const zoek = String(staat.zoek ?? '').trim().toLowerCase();
   const regels = data ? vlak(data) : [];
   const isGekozen = (s) => gekozen.some((g) => g.sleutel === s);
@@ -32,10 +32,14 @@ export function eindtermenVeld({ profiel, concept, kaders }, { open = false } = 
     if (r.diepte === 0) groepen.push({ kop: r, rest: [] });
     else groepen.at(-1)?.rest.push(r);
   }
-  const vinkje = (r) => html`<label class="et-regel" style="--d:${r.diepte}">
+  // Toelichting en vakbegrippen staan buiten het label, zodat openklappen het vinkje niet omzet
+  const vinkje = (r) => html`<div class="et-regel" style="--d:${r.diepte}">
+    <label>
       <input type="checkbox" data-actie="et-vink" value="${r.sleutel}" ${isGekozen(r.sleutel) ? 'checked' : ''}>
-      <span>${r.code ? html`<b>${r.code}</b> ` : ''}${r.kop ? html`<i>${r.kop}.</i> ` : ''}${r.tekst}${r.ce ? html` <span class="et-tag">CE</span>` : ''}${r.se && !r.ce ? html` <span class="et-tag">SE</span>` : ''}</span>
-    </label>`;
+      <span>${r.code ? html`<b>${r.code}</b> ` : ''}${r.kop ? html`<i>${r.kop}.</i> ` : ''}${r.tekst}${r.ce ? html` <span class="et-tag">CE</span>` : ''}${r.se && !r.ce ? html` <span class="et-tag">SE</span>` : ''}${r.d ? html` <span class="hulp">(${r.d})</span>` : ''}</span>
+    </label>
+    ${r.toel.length || r.begrippen.length ? html`<details class="et-extra"><summary>${[r.toel.length ? 'Toelichting' : '', r.begrippen.length ? 'vakbegrippen' : ''].filter(Boolean).join(' en ')}</summary>${r.toel.map((t) => html`<p>${t}</p>`)}${r.begrippen.length ? html`<p><b>Vakbegrippen:</b> ${r.begrippen.join(' · ')}</p>` : ''}</details>` : ''}
+  </div>`;
 
   return html`
     <details class="eindtermen paneel" data-paneel="eindtermen" ${open || gekozen.length || staat.open ? 'open' : ''}>
@@ -51,7 +55,7 @@ export function eindtermenVeld({ profiel, concept, kaders }, { open = false } = 
         ${lijst.length ? html`
           <div class="veldrij">
             <div class="veld"><label for="etKader">Kader voor ${vakNaam}</label>
-              <select id="etKader" data-actie="et-kader">${['kerndoelen', 'examenprogramma', 'syllabus'].map((soort) => {
+              <select id="etKader" data-actie="et-kader">${['kerndoelen', 'leerdoelenkaart', 'examenprogramma', 'syllabus'].map((soort) => {
                 const ks = lijst.filter((k) => k.soort === soort);
                 return ks.length ? html`<optgroup label="${SOORT_NAAM[soort]}">${ks.map((k) => html`<option value="${k.id}" ${k.id === kader?.id ? 'selected' : ''}>${kaderLabel(k)}</option>`)}</optgroup>` : '';
               })}</select>
@@ -78,8 +82,8 @@ export function eindtermenVeld({ profiel, concept, kaders }, { open = false } = 
 export function regelBijSleutel(kaders, index, sleutel) {
   const [id] = sleutel.split(':');
   const k = index.kaders.find((x) => x.id === id);
-  const data = k ? kaders.get(k.bestand) : null;
+  const data = k ? kaders.get(k.id) : null;
   if (!data) return null;
   const r = vlak(data).find((x) => x.sleutel === sleutel);
-  return r ? { sleutel, kader: k.id, kaderTitel: k.titel, code: r.code, tekst: r.tekst } : null;
+  return r ? { sleutel, kader: k.id, kaderTitel: k.titel, code: r.code, tekst: r.tekst, ...(r.begrippen.length ? { begrippen: korteBegrippen(r.begrippen).slice(0, 12) } : {}) } : null;
 }

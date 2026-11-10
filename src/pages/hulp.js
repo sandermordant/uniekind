@@ -67,6 +67,19 @@ export default {
                 <p>De koppeling staat in je lesplan en gaat mee in de AI-opdracht. In <a href="#mijn-profiel">Mijn profiel</a> zie je per kader wat al aan bod kwam en wat nog niet.</p>
                 <p>De teksten komen uit de open data van SLO. Kaders met "concept" zijn nieuwe kerndoelen of examenprogramma's die nog niet wettelijk gelden.</p>
               </details>
+              <details><summary>Wat staat er bij Examenstof?</summary>
+                <p>Alles wat SLO als open data publiceert voor vmbo, mavo, havo en vwo: de kerndoelen onderbouw, de leerdoelenkaarten met de onderwerpen per vak, alle examenprogramma's met domeinen en eindtermen, en de syllabi voor het centraal examen met de toelichtingen en vakbegrippen. Ook de nieuwe kerndoelen en conceptexamenprogramma's staan erin; die zijn gemarkeerd als concept en gelden nog niet.</p>
+                <p>Zoek op een woord in één vak of in alle vakken. Bij elke eindterm kies je <b>In een les</b> of <b>Opgave op niveau</b>.</p>
+              </details>
+              <details><summary>Hoe bied ik een examenopgave op niveau aan?</summary>
+                <ol>
+                  <li>Ga naar <a href="#examenopgave">Opgave op niveau</a>, kies vak en niveau en plak de opgave, met de nummers van de vragen. Een foto mag ook.</li>
+                  <li>Laat Uniekind de passende eindtermen zoeken en vink aan wat klopt.</li>
+                  <li>Je krijgt meteen drie versies: steun (vaktaal, een stappenplan per vraagwoord, hintkaarten), basis (met een nakijkcheck) en verdieping (met extra denkvragen), plus een docentblad.</li>
+                  <li>Wil je de opgave echt laten herschrijven, bijvoorbeeld een havo-opgave voor vmbo kader? Kies bij "De opgave komt van" het andere niveau en gebruik de AI-brug. Lees het resultaat altijd na.</li>
+                </ol>
+                <p>Uniekind bevat zelf geen examenopgaven: die zijn van het CvTE en staan op Examenblad. Je opgave blijft in je browser.</p>
+              </details>
               <details><summary>Ik zie mijn vak niet in de lijst</summary>
                 <p>De vakkenlijst hangt af van de afdeling. Latijn en Grieks staan bijvoorbeeld bij vwo gymnasium, T&T bij vmbo-tl/mavo. Mis je een vak helemaal, vraag de beheerder het toe te voegen in het schoolprofiel.</p>
               </details>

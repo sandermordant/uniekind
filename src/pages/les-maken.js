@@ -121,14 +121,14 @@ export default {
           const c = inv().context;
           const lijst = kadersVoor(kaderIndex, { vak: c.vak, afdeling: profiel.afdelingen.find((a) => a.id === c.afdeling), leerjaar: c.leerjaar });
           const k = lijst.find((x) => x.id === concept.kader?.id) ?? lijst[0];
-          if (!k || kaderCache.has(k.bestand) || laadt.has(k.bestand)) return;
-          laadt.add(k.bestand);
-          laadKader(k.bestand).then((d) => { kaderCache.set(k.bestand, d); laadt.delete(k.bestand); teken(); }).catch(() => laadt.delete(k.bestand));
+          if (!k || kaderCache.has(k.id) || laadt.has(k.id)) return;
+          laadt.add(k.id);
+          laadKader(k).then((d) => { kaderCache.set(k.id, d); laadt.delete(k.id); teken(); }).catch(() => laadt.delete(k.id));
         }
         // Gekoppelde eindtermen uit eerdere kaders ook laden, zodat "ontkoppelen" en "gebruik als lesdoel" werken
         const zorgVoorSleutel = async (sleutel) => {
           const k = kaderIndex?.kaders.find((x) => x.id === sleutel.split(':')[0]);
-          if (k && !kaderCache.has(k.bestand)) kaderCache.set(k.bestand, await laadKader(k.bestand));
+          if (k && !kaderCache.has(k.id)) kaderCache.set(k.id, await laadKader(k));
         };
         const gaNaar = (stap) => { concept.stap = stap; bewaar(); teken(true); $('#wizard h2', root)?.focus?.(); };
         const tax = () => inv().docent.taxonomie;
@@ -234,7 +234,12 @@ export default {
           if (t.dataset.actie === 'et-kader') { concept.kader = { id: t.value, zoek: '', open: true }; bewaar(); return teken(); }
           if (t.dataset.actie === 'et-vink') {
             const lijst = (inv().inhoud.eindtermen ??= []);
-            if (t.checked) { const r = regelBijSleutel(kaderCache, kaderIndex, t.value); if (r && !lijst.some((g) => g.sleutel === r.sleutel)) lijst.push(r); }
+            if (t.checked) {
+              const r = regelBijSleutel(kaderCache, kaderIndex, t.value);
+              if (r && !lijst.some((g) => g.sleutel === r.sleutel)) lijst.push(r);
+              // vakbegrippen uit de syllabus komen bij de voorgestelde kernbegrippen
+              if (r?.begrippen?.length) concept.suggesties = { ...(concept.suggesties ?? {}), begrippen: [...new Set([...(concept.suggesties?.begrippen ?? []), ...r.begrippen])] };
+            }
             else inv().inhoud.eindtermen = lijst.filter((g) => g.sleutel !== t.value);
             (concept.kader ??= {}).open = true;
             bewaar(); return teken();

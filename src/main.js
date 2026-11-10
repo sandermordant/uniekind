@@ -23,11 +23,14 @@ import hulp from './pages/hulp.js';
 import mijnProfiel from './pages/mijn-profiel.js';
 import privacy from './pages/privacy.js';
 import schoolprofiel from './pages/schoolprofiel.js';
+import examenstof from './pages/examenstof.js';
+import examenopgave from './pages/examenopgave.js';
 import { zetTermen } from './data/termen.js';
 
 const NAV = [
   { hash: 'les-maken', label: 'Maak een les' },
   { hash: 'bibliotheek', label: 'Werkvormen' },
+  { hash: 'examenstof', label: 'Examenstof' },
   { hash: 'begin-hier', label: 'Begin hier' },
   { hash: 'les-openen', label: 'Les openen' },
   { hash: 'visie', label: 'Visie' },
@@ -50,9 +53,11 @@ function kiesPagina(hash) {
     'hulp': hulp,
     'mijn-profiel': mijnProfiel,
     'privacy': privacy,
-    'schoolprofiel': schoolprofiel
+    'schoolprofiel': schoolprofiel,
+    'examenstof': examenstof,
+    'examenopgave': examenopgave
   };
-  return { pagina: routes[hash] ?? home, nav: routes[hash] ? hash : '' };
+  return { pagina: routes[hash] ?? home, nav: hash === 'examenopgave' ? 'examenstof' : routes[hash] ? hash : '' };
 }
 
 function pasHuisstijlToe(profiel) {

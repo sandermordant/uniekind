@@ -133,7 +133,7 @@ function gegevensBlok(lessen) {
     <section class="sectie" aria-labelledby="kop-gegevens">
       <h2 id="kop-gegevens">Wat Uniekind onthoudt</h2>
       <div class="lees">
-        <p>Alles op deze pagina staat alleen in deze browser, op deze computer. Er gaat niets naar een server en er zijn geen accounts. Uniekind bewaart: je docentprofiel, je laatste lesconcept, en per les het onderwerp, vak, de lesduur, de werkvormen en je reflectie. Nooit namen, cijfers of andere gegevens van leerlingen.</p>
+        <p>Alles op deze pagina staat alleen in deze browser, op deze computer. Er gaat niets naar een server en er zijn geen accounts. Uniekind bewaart: je docentprofiel, je laatste lesconcept, de examenopgave waar je het laatst aan werkte, en per les het onderwerp, vak, de lesduur, de werkvormen en je reflectie. Nooit namen, cijfers of andere gegevens van leerlingen.</p>
         <p>Werk je op een andere laptop? Neem je lessen mee als bestand.</p>
       </div>
       <div class="knoppen">
@@ -214,7 +214,7 @@ export default {
             laadKaderIndex().then(async (index) => {
               const info = index.kaders.find((x) => x.id === k.dataset.kader);
               if (!info) throw new Error('kader niet gevonden');
-              const kader = await laadKader(info.bestand);
+              const kader = await laadKader(info);
               const gehad = new Set(dekking().find((x) => x.kader === k.dataset.kader)?.regels.map((r) => r.sleutel));
               // alleen de onderste regels (eindtermen, kerndoelen), niet de domeinkoppen
               nogNiet[k.dataset.kader] = vlak(kader).filter((r) => !r.heeftKinderen && !gehad.has(r.sleutel));
@@ -227,7 +227,7 @@ export default {
           } else if (a === 'wis-alles') {
             if (window.confirm('Alles wissen: je profiel, je laatste les, je lessen en reflecties? Dit kan niet ongedaan worden gemaakt.')) {
               wisAlles();
-              for (const s of ['docentprofiel', 'concept', 'digibord-geluid']) opslag.wis(s);
+              for (const s of ['docentprofiel', 'concept', 'digibord-geluid', 'examenopgave', 'examenstof-staat', 'profielconcept']) opslag.wis(s);
               teken('Alles is gewist. Uniekind begint weer blanco.');
             }
           }

@@ -19,7 +19,7 @@ export function schoon(t) {
 /**
  * @returns {{ blokken: Record<string,string>, onbekend: string[], herkend: string[] }}
  */
-export function leesAntwoord(tekst) {
+export function leesAntwoord(tekst, ids = IDS) {
   const ruw = String(tekst ?? '').trim();
   const blokken = {};
   const onbekend = [];
@@ -32,7 +32,7 @@ export function leesAntwoord(tekst) {
       for (const [k, v] of Object.entries(obj)) {
         const id = norm(k);
         const tekstWaarde = Array.isArray(v) ? v.map((x, i) => (typeof x === 'string' ? `${i + 1}. ${x}` : JSON.stringify(x))).join('\n') : typeof v === 'string' ? v : JSON.stringify(v, null, 1);
-        if (IDS.includes(id)) blokken[id] = schoon(tekstWaarde);
+        if (ids.includes(id)) blokken[id] = schoon(tekstWaarde);
         else onbekend.push(`${k}: ${tekstWaarde}`);
       }
       return { blokken, onbekend, herkend: Object.keys(blokken) };
@@ -53,7 +53,7 @@ export function leesAntwoord(tekst) {
   for (const r of regels) {
     const m = r.match(kopRe);
     const id = m ? norm(m[1]) : null;
-    const isKop = id && IDS.includes(id);
+    const isKop = id && ids.includes(id);
     const andereKop = !isKop && /^\s*#{1,6}\s+\S/.test(r);
     if (isKop) { sluit(); huidig = id; continue; }
     if (andereKop) { sluit(); huidig = null; buffer.push(r.replace(/^\s*#+\s*/, '')); continue; }

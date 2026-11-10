@@ -112,12 +112,14 @@ for (const p of readdirSync(profDir).filter((f) => f.endsWith('.json') && f !== 
 // Leerdoelenkaders van SLO (tools/importeer-slo.js): index en bestanden moeten kloppen
 const kaderDir = join(root, 'public/data/kaders');
 let kaderAantal = 0;
+const kaderBestanden = {};
 try {
   const ki = lees(join(kaderDir, 'index.json'));
   for (const k of ki.kaders) {
     kaderAantal++;
     let data;
-    try { data = lees(join(kaderDir, k.bestand)); } catch { fout(`kader ${k.id}`, `bestand ${k.bestand} ontbreekt of is geen JSON`); continue; }
+    try { data = (kaderBestanden[k.bestand] ??= lees(join(kaderDir, k.bestand))).kaders?.[k.id]; } catch { fout(`kader ${k.id}`, `bestand ${k.bestand} ontbreekt of is geen JSON`); continue; }
+    if (!data) { fout(`kader ${k.id}`, `staat niet in ${k.bestand}`); continue; }
     if (data.id !== k.id || !Array.isArray(data.items) || !data.items.length) fout(`kader ${k.id}`, 'id klopt niet of er staan geen regels in');
   }
 } catch { let_op('kaders', 'public/data/kaders/index.json ontbreekt; draai tools/importeer-slo.js'); }

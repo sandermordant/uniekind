@@ -137,17 +137,24 @@ Per les maakt Uniekind zoeklinks met het onderwerp (Schooltv, Wikiwijs, Kennisne
 
 ## Kerndoelen, examenprogramma's en syllabi (SLO)
 
-Docenten kunnen hun les koppelen aan de officiële leerdoelen. De gegevens komen uit de **open data van SLO** (licentie MIT, [github.com/slonl](https://github.com/slonl)) en staan als kleine JSON-bestanden in `public/data/kaders/` (één per kader, ongeveer 2,7 MB in totaal, geladen per vak als de docent het opent):
+Uniekind bevat alles wat SLO als **open data** publiceert voor vmbo, mavo, havo en vwo (licentie MIT, [github.com/slonl](https://github.com/slonl)):
 
-- de **58 kerndoelen onderbouw VO** (geldend), per leergebied;
-- de **examenprogramma's** (geldend) met domeinen, subdomeinen en eindtermen, voor vmbo, havo en vwo;
-- de **syllabi** voor het centraal examen (nieuwste per examenprogramma en per vmbo-leerweg), met de specifieke eindtermen;
-- de **nieuwe kerndoelen** (definitief concept, nog niet wettelijk), onder meer voor digitale geletterdheid en burgerschap;
-- de **praktijkgerichte programma's** (onder meer Technologie en Toepassing, Dienstverlening en Producten) en het conceptexamenprogramma Onderzoeken en Ontwerpen.
+- de **58 kerndoelen onderbouw VO** (geldend);
+- de **leerdoelenkaarten**: de onderwerpen per vak (vakkern, subkern, inhoud) voor 21 vakken;
+- **alle examenprogramma's** (geldend), ook van vakken buiten het Sophianum-profiel (Spaans, NLT, ANW, M&O, maatschappijwetenschappen, BSM, dans en meer), met domeinen, subdomeinen en eindtermen;
+- **alle syllabi** voor het centraal examen (de nieuwste per examenprogramma en per vmbo-leerweg), met de specifieke eindtermen, **toelichtingen** en **vakbegrippen**;
+- de **nieuwe kerndoelen** en **conceptexamenprogramma's** (gemarkeerd als concept, nog niet geldend) en de **praktijkgerichte programma's** van vmbo (onder meer Technologie en Toepassing, Groen, Zorg en Welzijn; gekoppeld aan het beroepsgerichte profielvak).
 
-In de wizard kiest Uniekind het kader bij vak, afdeling en leerjaar: onderbouw (vmbo t/m 2, havo/vwo t/m 3; instelbaar met `onderbouwTot` per afdeling) eerst kerndoelen, bovenbouw eerst examenprogramma en syllabus van het eigen niveau (`slo` per afdeling: `vmbo-bb`, `vmbo-kb`, `vmbo-gltl`, `havo`, `vwo`). Gekoppelde regels staan in het lesplan, het lesplandocument, de AI-prompt, het lesbestand en Mijn lessen. Mijn profiel toont per kader wat al aan bod kwam en wat nog niet.
+Samen 422 kaders in 59 vakken, bijna 20.000 regels, in `public/data/kaders/`: één JSON-bestand per vak (5,8 MB in totaal), dat pas laadt als de docent dat vak opent.
 
-**Bijwerken** (eenmaal per jaar, als SLO een nieuwe release heeft): clone de vier repositories (`curriculum-kerndoelen`, `curriculum-examenprogramma`, `curriculum-syllabus`, `curriculum-fo`) in één map en draai `npm run importeer-slo -- <map>`. Welke SLO-kaders bij welk vak horen, staat bovenin `tools/importeer-slo.js`; een nieuw vak in het schoolprofiel met een passende id (bijvoorbeeld `drama`) krijgt de kaders vanzelf.
+**Waar het terugkomt**
+- In de wizard: lesdoelen koppelen aan kerndoelen of eindtermen (de vakbegrippen van een gekoppelde eindterm worden kernbegrippen voorgesteld). De koppeling staat in het lesplan, het lesplandocument, de AI-prompt, het lesbestand en Mijn lessen; Mijn profiel toont per kader wat al aan bod kwam.
+- **Examenstof** (`#examenstof`, `src/pages/examenstof.js`): alle kaders bekijken en doorzoeken, per vak, niveau en soort, of in alle vakken tegelijk.
+- **Opgave op niveau** (`#examenopgave`, `src/pages/examenopgave.js`, logica in `src/examen/opgave.js`): een examenopgave plakken of fotograferen; Uniekind herkent de vragen, punten en vraagwoorden, zoekt de passende eindtermen en maakt een docentblad en drie versies (steun met vaktaal, stappenplan per vraagwoord en hintkaarten; basis met nakijkcheck; verdieping met extra denkvragen). Herschrijven naar een ander niveau gaat via de AI-brug (blokken `### OPGAVE-STEUN`, `OPGAVE-BASIS`, `OPGAVE-VERDIEPING`, `HINTS`, `ANTWOORDMODEL`). Export naar PDF en Word. Uniekind bevat zelf geen examenopgaven: die zijn van het CvTE (Examenblad).
+
+**Niveaus.** In de wizard kiest Uniekind het kader bij vak, afdeling en leerjaar: onderbouw (vmbo t/m 2, havo/vwo t/m 3; `onderbouwTot` per afdeling) eerst kerndoelen en leerdoelenkaart, bovenbouw eerst examenprogramma en syllabus van het eigen niveau (`slo` per afdeling: `vmbo-bb`, `vmbo-kb`, `vmbo-gltl`, `havo`, `vwo`).
+
+**Bijwerken** (eenmaal per jaar, als SLO een nieuwe release heeft): clone de vijf repositories (`curriculum-kerndoelen`, `-examenprogramma`, `-syllabus`, `-fo`, `-leerdoelenkaarten`) in één map en draai `npm run importeer-slo -- <map>`. Welke SLO-vakken bij welk Uniekind-vak horen, staat in `VAK_NAAR_UNIEKIND` in `tools/importeer-slo.js`; een vak in het schoolprofiel met een passende id krijgt de kaders vanzelf.
 
 ## Hoe de generator werkt
 

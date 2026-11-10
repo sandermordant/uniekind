@@ -143,12 +143,12 @@ describe('Kerndoelen en eindtermen van SLO', async () => {
   const { readFileSync } = await import('node:fs');
   const { kadersVoor, vlak, alsLesdoel, isOnderbouw } = await import('../src/data/kaders.js');
   const index = JSON.parse(readFileSync('public/data/kaders/index.json', 'utf8'));
-  const kader = (k) => JSON.parse(readFileSync(`public/data/kaders/${k.bestand}`, 'utf8'));
+  const kader = (k) => JSON.parse(readFileSync(`public/data/kaders/${k.bestand}`, 'utf8')).kaders[k.id];
   const afd = (id) => sopho.profiel.afdelingen.find((a) => a.id === id);
 
-  it('elk vak van Sophianum heeft een kader, behalve de vakken waarvoor SLO er geen heeft', () => {
+  it('elk vak van Sophianum heeft een kader', () => {
     const zonder = sopho.profiel.vakken.filter((v) => !index.kaders.some((k) => k.vakken.includes(v.id))).map((v) => v.id);
-    expect(zonder).toEqual(['beroepsgericht']);
+    expect(zonder).toEqual([]);
   });
   it('onderbouw krijgt eerst de geldende kerndoelen, bovenbouw eerst het examenprogramma van het eigen niveau', () => {
     const h1 = kadersVoor(index, { vak: 'economie', afdeling: afd('havo'), leerjaar: 1 });
@@ -165,8 +165,8 @@ describe('Kerndoelen en eindtermen van SLO', async () => {
   });
   it('digitale geletterdheid, T&T en O&O hebben een kader, met de juiste status', () => {
     const dg = kadersVoor(index, { vak: 'digitale-geletterdheid', afdeling: afd('havo'), leerjaar: 1 });
-    expect(dg[0].titel).toBe('Kerndoelen digitale geletterdheid');
-    expect(dg[0].status).toBe('concept');
+    expect(dg.find((k) => k.titel === 'Kerndoelen digitale geletterdheid')?.status).toBe('concept');
+    expect(dg[0].status).toBe('geldend');
     expect(index.kaders.some((k) => k.vakken.includes('tt') && /Technologie en Toepassing/.test(k.titel))).toBe(true);
     expect(index.kaders.some((k) => k.vakken.includes('oo') && /onderzoek en ontwerpen havo/.test(k.titel))).toBe(true);
   });
