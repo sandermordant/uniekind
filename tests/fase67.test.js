@@ -4,10 +4,12 @@ import { genereerLes } from '../src/engine/opbouw.js';
 import { maakContext } from '../src/engine/context.js';
 import { visieScore } from '../src/engine/score.js';
 import { termen } from '../src/data/termen.js';
+import { readFileSync } from 'node:fs';
 import { laadData, invoer, idsIn, mislukt } from './helpers.js';
 
 const sopho = laadData('sophianum');
-const alg = laadData('voorbeeld-algemeen');
+// Een profiel van een andere school (fixture): de generator moet met elk geldig profiel werken
+const alg = { ...laadData('sophianum'), profiel: JSON.parse(readFileSync(new URL('./fixtures/profiel-andere-school.json', import.meta.url), 'utf8')) };
 const kloon = (x) => JSON.parse(JSON.stringify(x));
 
 function lcg(seed) { let s = seed; return () => (s = (s * 1664525 + 1013904223) % 4294967296) / 4294967296; }

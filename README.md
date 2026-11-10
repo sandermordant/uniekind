@@ -6,12 +6,7 @@ Uniekind helpt docenten gedifferentieerde lessen te ontwerpen. De docent geeft a
 
 > *Je hoeft niet opnieuw te leren lesgeven. Uniekind begint bij hoe jij nu lesgeeft en helpt je stap voor stap verder, met materiaal dat al klaarligt.*
 
-Er zijn **twee versies, één codebasis**:
-
-| Versie | Profiel | Map na het bouwen | Adres na publiceren |
-|---|---|---|---|
-| **Uniekind Sophianum** (Gulpen), "Lessen op maat, al was het maar voor één kind" | `public/profiles/sophianum.json` | `dist/` | `/` |
-| **Uniekind algemeen**, "De lesgenerator voor gedifferentieerd lesgeven", met schoolprofiel-wizard | `public/profiles/voorbeeld-algemeen.json` | `dist-voorbeeld-algemeen/` | `/algemeen/` |
+Eén website voor het **Sophianum** (Gulpen), gebouwd uit het schoolprofiel `public/profiles/sophianum.json`. Bovenin kiest de docent *Eindexamenklas* of *Andere klassen*; alles (lessen maken, stof, materiaal, opgaven op niveau, werkvormen, digibord) zit in die ene tool.
 
 > Status: **klaar (fase 0 tot en met 7)**. Zie [`docs/testverslag-fase6-7.md`](docs/testverslag-fase6-7.md) voor de eindcontrole, [`docs/handleiding-collegas.md`](docs/handleiding-collegas.md) voor de handleiding van één pagina en [`docs/pitch-schoolleiding.md`](docs/pitch-schoolleiding.md) voor de pitch.
 
@@ -25,10 +20,9 @@ Je hebt [Node.js](https://nodejs.org) versie 20 of hoger nodig.
 npm install          # eenmalig
 npm run dev          # ontwikkelserver op http://localhost:5173
 npm run valideer     # controleer de kennisbank, de profielen en de SLO-kaders
-npm run dev:algemeen # hetzelfde voor de algemene versie
 npm test             # alle tests: testcases 1-9, 900 willekeurige lessen, materiaal, export, OCR, AI-brug
-npm run build:alles  # bouw beide versies (valideert eerst)
-npm run site         # bouw beide en zet ze samen in site/ (Sophianum op /, algemeen op /algemeen/)
+npm run build:sophianum  # bouw de website in dist/ (valideert eerst)
+npm run site         # bouw en zet de website in site/, klaar om te publiceren
 ```
 
 De map `site/` is de complete website. Er is geen server nodig; zie *Publiceren* hieronder.
@@ -51,13 +45,13 @@ De map `site/` is de complete website. Er is geen server nodig; zie *Publiceren*
 
 ```
 public/
-  profiles/            schoolprofielen (sophianum.json, voorbeeld-algemeen.json) + profiel.schema.json
+  profiles/            schoolprofiel (sophianum.json) + profiel.schema.json
   data/
     werkvormen/        de kennisbank: één JSON per categorie + werkvorm.schema.json
                        index.json wordt automatisch gemaakt door `npm run valideer`
     bronnen.json       alle bronnen waar werkvormen naar verwijzen
     taxonomie.json     Bloom en RTTI, met vraagstammen
-  huisstijl/           logo en hoogtelijnenmotief (sophianum/), neutraal motief (algemeen/)
+  huisstijl/           logo en hoogtelijnenmotief
 src/
   main.js              start: profiel laden, huisstijl toepassen, routeren
   pages/               de pagina's (home, bibliotheek, werkvorm, begin hier, visie, invulformulier, les maken, les openen,
@@ -74,7 +68,7 @@ src/
 tools/
   valideer-kennisbank.js   controleert alles en maakt index.json
   maak-preview.js          maakt een preview-versie voor claude.ai
-  maak-site.js             zet beide versies samen in site/
+  maak-site.js             zet de gebouwde website in site/
   kopieer-ocr.js           zet de OCR-bestanden klaar in public/ocr/
 docs/                  handleiding collega's, pitch, onderhoud kennisbank, API-route, testverslagen
 netlify.toml           publiceren op Netlify
@@ -95,18 +89,11 @@ Alles wat schoolspecifiek is, staat in `public/profiles/sophianum.json`: naam, m
 
 **De visie stuurt de generator.** `generator.visieAccenten` bepaalt welke werkvormen een visiebonus krijgen (bijvoorbeeld samenwerkend leren, eigenaarschap, formatief handelen, burgerschap; zie `VISIE_ACCENTEN` in `src/engine/score.js`). De ruimtenamen in alle teksten komen uit het profiel (`src/data/termen.js`), zodat een andere school "leerplein" of "studiezaal" ziet.
 
-### De algemene versie en de schoolprofiel-wizard
+### De pagina Schoolprofiel (voor de beheerder)
 
-Op de pagina **Schoolprofiel** stelt een school in: naam, motto, logo en kleuren; visie in eigen woorden plus de principes die de gewichten bepalen; lokalen met eigen namen en capaciteit (ook "dit hebben wij niet"); afdelingen en lestijden; vakken en sectie-accenten; regels (telefoon, laptop, plein-toezicht); taxonomie en lesmodel; terminologie (sectie/vakgroep, mentor/coach); regio-onderwerpen; AI-tool; toegangscode.
+Op de pagina **Schoolprofiel** (link onderaan) past de beheerder de instellingen van het Sophianum aan zonder code: naam, motto, logo en kleuren; visie en principes; lokalen en capaciteit; afdelingen en lestijden; vakken en sectie-accenten; regels (telefoon, laptop, plein-toezicht); terminologie; regio-onderwerpen; AI-tool; toegangscode. Het resultaat is een JSON-bestand: download het en zet het in `public/profiles/sophianum.json`. Alles wordt opgeschoond (`src/data/profiel.js`): kleuren alleen als `#rrggbb`, logo alleen als afbeelding, links alleen `https`.
 
-Het resultaat is een JSON-bestand dat de school downloadt, deelt en weer inleest. In de algemene versie kan de school het profiel ook:
-- **in de eigen browser gebruiken** (knop *Gebruik dit profiel*);
-- **als deellink versturen**: het profiel zit gecomprimeerd in de link (`?profiel=…`), er hoeft niets op een server te staan;
-- **op de website zetten**: bestand in `public/profiles/naam.json`, dan werkt `…/algemeen/?school=naam` als vaste link.
-
-Alles wat van buiten komt, wordt opgeschoond (`src/data/profiel.js`): kleuren alleen als `#rrggbb`, logo alleen als afbeelding, links alleen `https`, ontbrekende delen aangevuld. In de Sophianum-versie toont de pagina alleen *Profiel downloaden*, voor de beheerder.
-
-Een ander profiel bouwen als eigen site: `UNIEKIND_PROFIEL=naam npm run build` (met `public/profiles/naam.json`).
+De code werkt met elk geldig schoolprofiel (de tests gebruiken ook `tests/fixtures/profiel-andere-school.json`). Een ander profiel bouwen als eigen site: `UNIEKIND_PROFIEL=naam npm run build` (met `public/profiles/naam.json`).
 
 ---
 
@@ -200,13 +187,13 @@ Zie [`docs/onderhoud-kennisbank.md`](docs/onderhoud-kennisbank.md). Kort:
 
 ## Toegankelijkheid
 
-Gecontroleerd met axe-core op WCAG 2.1 A en AA: alle pagina's en alle wizardstappen, in licht en donker thema, voor beide versies: geen overtredingen. Verder handmatig: alles met het toetsenbord te bedienen (knop *Naar de inhoud*, zichtbare focusrand), digibord op 1920×1080 met opdrachten in 88 px, telefoon (375 px) zonder horizontaal scrollen, en een printvoorbeeld van alle 19 materiaalsoorten. Zie het testverslag.
+Gecontroleerd met axe-core op WCAG 2.1 A en AA: alle pagina's en alle wizardstappen, in licht en donker thema: geen overtredingen. Verder handmatig: alles met het toetsenbord te bedienen (knop *Naar de inhoud*, zichtbare focusrand), digibord op 1920×1080 met opdrachten in 88 px, telefoon (375 px) zonder horizontaal scrollen, en een printvoorbeeld van alle 19 materiaalsoorten. Zie het testverslag.
 
 ---
 
 ## Publiceren
 
-Beide manieren zijn gratis en hebben geen server nodig. De site staat daarna op `/` (Sophianum) en `/algemeen/` (algemene versie).
+Beide manieren zijn gratis en hebben geen server nodig. Gekozen route: **GitHub Pages**; zie [`docs/online-zetten.md`](docs/online-zetten.md) voor de stappen.
 
 **Netlify** (aanbevolen, omdat de latere API-route serverless functions nodig heeft)
 1. Zet deze map in een (privé) GitHub-repository.
@@ -219,9 +206,9 @@ Zonder GitHub kan het ook: draai `npm run site` en sleep de map `site/` naar app
 **GitHub Pages**
 1. Zet deze map in een GitHub-repository (Pages werkt gratis met een publieke repository).
 2. *Settings → Pages → Source: GitHub Actions*.
-3. Push naar `main`. De workflow `.github/workflows/pages.yml` draait de tests, bouwt beide versies en publiceert.
+3. Push naar `main`. De workflow `.github/workflows/pages.yml` draait de tests, bouwt de website en publiceert. Het adres wordt `https://<account>.github.io/<repository>/`.
 
-`netlify.toml` zet ook veilige headers en `X-Robots-Tag: noindex` voor de Sophianum-versie.
+`netlify.toml` zet ook veilige headers en `X-Robots-Tag: noindex`. Op GitHub Pages zorgt de meta-tag `noindex` in de pagina ervoor dat zoekmachines de site overslaan.
 
 ---
 

@@ -1,5 +1,4 @@
 # Uniekind op Netlify (gratis). Netlify bouwt de site zelf uit deze repository.
-# Sophianum staat op de hoofdpagina, de algemene versie op /algemeen/.
 [build]
   command = "npm run site"
   publish = "site"

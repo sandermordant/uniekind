@@ -1,16 +1,13 @@
 #!/usr/bin/env node
 /**
- * Zet beide versies samen in één map om te publiceren:
- *   site/            Uniekind Sophianum   (uit dist/)
- *   site/algemeen/   Uniekind algemeen    (uit dist-voorbeeld-algemeen/)
- * Gebruik: npm run site   (bouwt eerst beide versies)
+ * Zet de gebouwde website (dist/) in site/, klaar om te publiceren op GitHub Pages of Netlify.
+ * Gebruik: npm run site   (bouwt eerst de Sophianum-versie)
  */
 import { cpSync, rmSync, existsSync, writeFileSync } from 'node:fs';
 
-for (const m of ['dist', 'dist-voorbeeld-algemeen']) if (!existsSync(m)) { console.error(`Map ${m} ontbreekt. Draai eerst npm run build:alles.`); process.exit(1); }
+if (!existsSync('dist')) { console.error('Map dist ontbreekt. Draai eerst npm run build:sophianum.'); process.exit(1); }
 rmSync('site', { recursive: true, force: true });
 cpSync('dist', 'site', { recursive: true });
-cpSync('dist-voorbeeld-algemeen', 'site/algemeen', { recursive: true });
 // GitHub Pages: geen Jekyll-verwerking
 writeFileSync('site/.nojekyll', '');
-console.log('Klaar: site/ (Sophianum) en site/algemeen/ (algemene versie).');
+console.log('Klaar: site/ bevat de website van Uniekind voor het Sophianum.');

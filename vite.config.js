@@ -1,19 +1,17 @@
 // Uniekind – Vite-configuratie.
-// Eén codebasis, meerdere schoolprofielen. Het profiel wordt gekozen met de build-modus:
-//   npm run build:sophianum  → profiles/sophianum.json
-//   npm run build:algemeen   → profiles/voorbeeld-algemeen.json, in de map dist-voorbeeld-algemeen/
+// De website bouwt het profiel van het Sophianum (profiles/sophianum.json) in de map dist/.
+// Een ander profiel kan met UNIEKIND_PROFIEL=<id>; dat komt dan in dist-<id>/.
 // Titel, noindex en themakleur worden bij het bouwen uit het profiel in index.html gezet.
 import { defineConfig } from 'vite';
 import { readFileSync, existsSync } from 'node:fs';
 
-function kiesProfiel(mode) {
+function kiesProfiel() {
   if (process.env.UNIEKIND_PROFIEL) return process.env.UNIEKIND_PROFIEL;
-  if (mode === 'algemeen') return 'voorbeeld-algemeen';
   return 'sophianum';
 }
 
-export default defineConfig(({ mode }) => {
-  const profielId = kiesProfiel(mode);
+export default defineConfig(() => {
+  const profielId = kiesProfiel();
   const pad = `public/profiles/${profielId}.json`;
   if (!existsSync(pad)) throw new Error(`Schoolprofiel niet gevonden: ${pad}`);
   const profiel = JSON.parse(readFileSync(pad, 'utf8'));
