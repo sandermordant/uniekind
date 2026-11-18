@@ -55,7 +55,7 @@ export function eindtermenVeld({ profiel, concept, kaders }, { open = false } = 
         ${lijst.length ? html`
           <div class="veldrij">
             <div class="veld"><label for="etKader">Kader voor ${vakNaam}</label>
-              <select id="etKader" data-actie="et-kader">${['kerndoelen', 'leerdoelenkaart', 'examenprogramma', 'syllabus'].map((soort) => {
+              <select id="etKader" data-actie="et-kader">${['kerndoelen', 'leerdoelenkaart', 'examenprogramma', 'syllabus', 'keuzevakken', 'referentiekader'].map((soort) => {
                 const ks = lijst.filter((k) => k.soort === soort);
                 return ks.length ? html`<optgroup label="${SOORT_NAAM[soort]}">${ks.map((k) => html`<option value="${k.id}" ${k.id === kader?.id ? 'selected' : ''}>${kaderLabel(k)}</option>`)}</optgroup>` : '';
               })}</select>

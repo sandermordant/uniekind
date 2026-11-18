@@ -83,6 +83,7 @@ netlify.toml           publiceren op Netlify
 Alles wat schoolspecifiek is, staat in `public/profiles/sophianum.json`: naam, motto, visie, pijlers, leidende principes, huisstijlkleuren, afdelingen en lestijden, vakken, lokalen met capaciteit, regels (telefoon, plein), ondersteuningsaanbod, standaard lesmodel en taxonomie, en de gewichten van de generator.
 
 - **De code bevat geen Sophianum-tekst.** Een andere school krijgt een eigen profiel.
+- **Overige vakken** (`src/data/overige-vakken.js`): vakken waarvoor SLO stof publiceert maar die niet in het profiel staan (Spaans, Italiaans, Russisch, Turks, Arabisch, Chinees, Fries, NLT, ANW, maatschappijwetenschappen, drama, dans, film). Ze zijn kiesbaar in de lesmaker en de werkplek onder het kopje *Overige vakken*, maar zeggen niets over wat de school aanbiedt. Op de pagina Schoolprofiel en in de download staan ze niet. Zet je een vak met dezelfde id in het profiel, dan wint het profiel.
 - Velden met `"aanname": true` komen **niet** uit het schoolplan of de schoolgids. Het zijn instelbare standaardwaarden, bijvoorbeeld de capaciteit van de stilteruimte (8) en het deelplein (40). Pas ze aan als de werkelijkheid anders is.
 - De huisstijlkleuren zijn gemeten in de PDF van de schoolgids 2026-2027.
 
@@ -132,9 +133,11 @@ Uniekind bevat alles wat SLO als **open data** publiceert voor vmbo, mavo, havo 
 - **alle examenprogramma's** (geldend), ook van vakken buiten het Sophianum-profiel (Spaans, NLT, ANW, M&O, maatschappijwetenschappen, BSM, dans en meer), met domeinen, subdomeinen en eindtermen;
 - **alle syllabi** voor het centraal examen (de nieuwste per examenprogramma en per vmbo-leerweg), met de specifieke eindtermen, **toelichtingen** en **vakbegrippen**;
 - de **nieuwe kerndoelen** en **conceptexamenprogramma's** (gemarkeerd als concept, nog niet geldend) en de **praktijkgerichte programma's** van vmbo (onder meer Technologie en Toepassing, Groen, Zorg en Welzijn; gekoppeld aan het beroepsgerichte profielvak);
-- de **beroepsgerichte examenprogramma's** van vmbo: per profielvak de kern en de vier profielmodules, en alle 158 **keuzevakken**, uitgewerkt tot deeltaken en globale eindtermen, met per eindterm de leerwegen.
+- de **beroepsgerichte examenprogramma's** van vmbo: per profielvak de kern en de vier profielmodules, en alle 158 **keuzevakken**, uitgewerkt tot deeltaken en globale eindtermen, met per eindterm de leerwegen;
+- het **referentiekader Nederlandse taal en rekenen**: per domein en onderwerp wat een leerling kan op 1F, 1S, 2F, 3F en 4F (bij Nederlands en bij wiskunde en rekenen);
+- het **ERK** (Europees referentiekader voor de talen): per taalactiviteit en competentie de schalen met de beschrijvingen van pre-A1 tot en met C2, met voorbeelden (bij alle moderne vreemde talen).
 
-Samen 442 kaders in 59 vakken, ruim 24.000 regels, in `public/data/kaders/`: één JSON-bestand per vak (6,4 MB in totaal), dat pas laadt als de docent dat vak opent. Een syllabus wijst met `ep` naar zijn examenprogramma.
+Samen 445 kaders in 60 vakken, ruim 26.500 regels, in `public/data/kaders/`: één JSON-bestand per vak (6,9 MB in totaal), dat pas laadt als de docent dat vak opent. Een syllabus wijst met `ep` naar zijn examenprogramma.
 
 **Eén tool, een menu per soort klas.** Bovenin kiest de docent *Eindexamenklas* (vmbo 4, havo 5, vwo 6) of *Andere klassen*; het menu past zich aan (`NAV` in `src/main.js`). De keuze (modus, afdeling, leerjaar, vak) staat in `uniekind:klas` (`src/data/klas.js`) en wordt overgenomen door de lesmaker, Opgave op niveau en Stof en materiaal.
 - **Werkplek** (`#examenklas` en `#klas`, `src/pages/werkplek.js`): alle stof voor die klas en dat vak. Een examenprogramma en zijn syllabi vormen één overzicht: onder elk domein staat de uitwerking uit de syllabus (`src/data/stof.js`). Per domein inklapbaar, doorzoekbaar, met de dekking uit je lessen en een filter "alleen wat nog niet in een les zat".
@@ -148,7 +151,7 @@ Samen 442 kaders in 59 vakken, ruim 24.000 regels, in `public/data/kaders/`: é�
 
 **Niveaus.** In de wizard kiest Uniekind het kader bij vak, afdeling en leerjaar: onderbouw (vmbo t/m 2, havo/vwo t/m 3; `onderbouwTot` per afdeling) eerst kerndoelen en leerdoelenkaart, bovenbouw eerst examenprogramma en syllabus van het eigen niveau (`slo` per afdeling: `vmbo-bb`, `vmbo-kb`, `vmbo-gltl`, `havo`, `vwo`).
 
-**Bijwerken** (eenmaal per jaar, als SLO een nieuwe release heeft): clone de zeven repositories (`curriculum-kerndoelen`, `-examenprogramma`, `-syllabus`, `-fo`, `-leerdoelenkaarten`, `-examenprogramma-bg`, `-basis`) in één map en draai `npm run importeer-slo -- <map>`. Welke SLO-vakken bij welk Uniekind-vak horen, staat in `VAK_NAAR_UNIEKIND` in `tools/importeer-slo.js`; een vak in het schoolprofiel met een passende id krijgt de kaders vanzelf.
+**Bijwerken** (eenmaal per jaar, als SLO een nieuwe release heeft): clone de negen repositories (`curriculum-kerndoelen`, `-examenprogramma`, `-syllabus`, `-fo`, `-leerdoelenkaarten`, `-examenprogramma-bg`, `-basis`, `-referentiekader`, `-erk`) in één map en draai `npm run importeer-slo -- <map>`. Welke SLO-vakken bij welk Uniekind-vak horen, staat in `VAK_NAAR_UNIEKIND` in `tools/importeer-slo.js`; een vak in het schoolprofiel met een passende id krijgt de kaders vanzelf.
 
 ## Hoe de generator werkt
 
@@ -161,6 +164,8 @@ De generator (`src/engine/`) is deterministisch: dezelfde invoer geeft dezelfde 
 5. **Score** (`score.js`): denkniveau, lesfase en plek in de reeks, een vakvoorbeeld uit het eigen vak, docentprofiel, klas, schoolvisie, variatie (werkvormen uit je vorige twee lessen van dit vak krijgen een min), eigen ervaring (duimen uit je reflecties) en een kleine vaste afwisseling bij openers, energizers en afsluiters (op basis van onderwerp en vak, zodat niet elke les met dezelfde opener begint). De gewichten staan in het schoolprofiel (`generator.gewichten`).
 6. **Controle** (`controle.js`): veertien harde eisen, zichtbaar als checklist in de les.
 7. **Uitleg** (`uitleg.js`): bij elke werkvorm "Waarom deze?" en bij de les twee zinnen waarom deze opzet past.
+
+**Rustig in beeld** (`src/wizard/lesplan.js`). In *Genereren* staat de gekozen variant groot; de andere twee staan ingeklapt onder *Liever iets anders?*. In *Aanpassen* zie je per lesfase alleen wat je doet en zegt. Minuten, volgorde, andere suggesties, vastzetten en "Waarom deze?" staan achter de knop **Wijzig** bij die fase, en de keuze hoe je de klas verdeelt achter **Wijzig** bij *Zo verdeel je de klas*. Welke panelen open staan, onthoudt alleen het scherm zelf (`openWijzig` in `src/pages/les-maken.js`). De controle staat er als één regel; de volledige lijst eisen klap je open.
 
 ## Privacy en de toegangscode
 

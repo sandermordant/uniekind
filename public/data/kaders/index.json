@@ -1,7 +1,7 @@
 {
  "toelichting": "Gemaakt door tools/importeer-slo.js uit de open data van SLO (licentie MIT). Niet met de hand aanpassen: draai het script opnieuw.",
  "licentie": "Bron: SLO, nationaal expertisecentrum leerplanontwikkeling. Open data onder MIT-licentie, https://github.com/slonl",
- "gemaakt": "2026-11-10",
+ "gemaakt": "2026-11-18",
  "vakken": [
   {
    "naam": "Aardrijkskunde",
@@ -178,6 +178,22 @@
     "engels"
    ],
    "aantal": 17
+  },
+  {
+   "naam": "ERK (moderne vreemde talen)",
+   "bestand": "vak-erk-moderne-vreemde-talen.json",
+   "uniekind": [
+    "engels",
+    "duits",
+    "frans",
+    "spaans",
+    "italiaans",
+    "russisch",
+    "turks",
+    "arabisch",
+    "chinees"
+   ],
+   "aantal": 1
   },
   {
    "naam": "Film",
@@ -405,7 +421,7 @@
    "uniekind": [
     "nederlands"
    ],
-   "aantal": 17
+   "aantal": 18
   },
   {
    "naam": "NLT (Natuur, leven en technologie)",
@@ -497,7 +513,7 @@
     "wiskunde",
     "rekenen"
    ],
-   "aantal": 34
+   "aantal": 35
   },
   {
    "naam": "Zorg en Welzijn",
@@ -4252,6 +4268,34 @@
    "aantal": 2
   },
   {
+   "id": "referentiekader-erk",
+   "titel": "ERK: Europees referentiekader voor de talen (pre-A1 tot en met C2)",
+   "soort": "referentiekader",
+   "status": "geldend",
+   "niveaus": [
+    "alle"
+   ],
+   "sloVak": "ERK (moderne vreemde talen)",
+   "bron": {
+    "naam": "SLO, ERK (Europees referentiekader voor de talen)",
+    "repo": "slonl/curriculum-erk",
+    "versie": "2026-08-17"
+   },
+   "vakken": [
+    "engels",
+    "duits",
+    "frans",
+    "spaans",
+    "italiaans",
+    "russisch",
+    "turks",
+    "arabisch",
+    "chinees"
+   ],
+   "bestand": "vak-erk-moderne-vreemde-talen.json",
+   "aantal": 1362
+  },
+  {
    "id": "nieuw-conceptexamenprogramma-film-havo",
    "titel": "Conceptexamenprogramma film havo",
    "soort": "examenprogramma",
@@ -7814,6 +7858,26 @@
    "aantal": 30
   },
   {
+   "id": "referentiekader-taal",
+   "titel": "Referentiekader taal (niveaus 1F tot en met 4F)",
+   "soort": "referentiekader",
+   "status": "geldend",
+   "niveaus": [
+    "alle"
+   ],
+   "sloVak": "Nederlands",
+   "bron": {
+    "naam": "SLO, referentiekader Nederlandse taal en rekenen",
+    "repo": "slonl/curriculum-referentiekader",
+    "versie": "2026-08-17"
+   },
+   "vakken": [
+    "nederlands"
+   ],
+   "bestand": "vak-nederlands.json",
+   "aantal": 553
+  },
+  {
    "id": "examenprogramma-nlt-havo",
    "titel": "Examenprogramma Natuur, leven en technologie havo",
    "soort": "examenprogramma",
@@ -10029,6 +10093,27 @@
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 125
+  },
+  {
+   "id": "referentiekader-rekenen",
+   "titel": "Referentiekader rekenen (niveaus 1F tot en met 4F)",
+   "soort": "referentiekader",
+   "status": "geldend",
+   "niveaus": [
+    "alle"
+   ],
+   "sloVak": "Wiskunde",
+   "bron": {
+    "naam": "SLO, referentiekader Nederlandse taal en rekenen",
+    "repo": "slonl/curriculum-referentiekader",
+    "versie": "2026-08-17"
+   },
+   "vakken": [
+    "wiskunde",
+    "rekenen"
+   ],
+   "bestand": "vak-wiskunde.json",
+   "aantal": 577
   },
   {
    "id": "nieuw-examenprogramma-praktijkgericht-programma-zorg-en-welzijn",

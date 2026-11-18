@@ -11,6 +11,8 @@ import { dekking } from '../opslag/logboek.js';
 import { NIVEAU_NAAM } from '../examen/opgave.js';
 import { maakMateriaalBeheer, laadSectieMateriaal, mijnMateriaal } from '../examen/materiaalpaneel.js';
 import * as opslag from '../opslag/opslag.js';
+import { vakKeuzes } from '../data/overige-vakken.js';
+import { optiesMetGroepen } from '../wizard/stappen.js';
 
 const norm = (s) => String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 const MAX_FILTER = 200;
@@ -105,7 +107,7 @@ export default {
             ${modus === 'examen'
               ? html`<div class="veld"><span class="label" id="wsJaarLabel">Leerjaar</span><p class="ws-vast" aria-labelledby="wsJaarLabel">${i.afd.naam} ${examenjaar(i.afd)} (examenjaar)</p></div>`
               : html`<div class="veld"><label for="wsJaar">Leerjaar</label><select id="wsJaar" data-klas="leerjaar">${jaren.map((j) => html`<option value="${j}" ${j === klas.leerjaar ? 'selected' : ''}>${i.afd.naam} ${j}</option>`)}</select></div>`}
-            <div class="veld"><label for="wsVak">Vak</label><select id="wsVak" data-klas="vak">${vakkenVoor(profiel, klas.afdeling).map((x) => html`<option value="${x.id}" ${x.id === klas.vak ? 'selected' : ''}>${x.naam}</option>`)}</select></div>
+            <div class="veld"><label for="wsVak">Vak</label><select id="wsVak" data-klas="vak">${optiesMetGroepen(vakKeuzes(vakkenVoor(profiel, klas.afdeling)), klas.vak)}</select></div>
           </form>
           <div class="knoppen ws-knoppen">
             <button type="button" class="knop" data-actie="ws-les">Maak een les voor deze klas <span class="pijl" aria-hidden="true">→</span></button>

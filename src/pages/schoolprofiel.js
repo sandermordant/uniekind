@@ -3,6 +3,7 @@
 // profiel ook meteen in deze browser gebruiken of als deellink versturen. Geen code nodig.
 import { html, $ } from '../util/html.js';
 import { laadStandaardProfiel, laadIndex } from '../data/laden.js';
+import { zonderOverigeVakken } from '../data/overige-vakken.js';
 import { schoonProfiel, profielNaarCode, bewaarEigenProfiel, wisEigenProfiel, eigenProfielActief } from '../data/profiel.js';
 import { VISIE_ACCENTEN } from '../engine/score.js';
 import { lees, zet } from '../wizard/staat.js';
@@ -167,7 +168,7 @@ export default {
     const [basis, index] = await Promise.all([laadStandaardProfiel(), laadIndex()]);
     const werkvormen = [...index.items].sort((a, b) => a.naam.localeCompare(b.naam, 'nl'));
     const algemeen = !!basis.uniekind?.eigenProfiel;
-    let werk = opslag.lees('profielconcept') ?? kloon(profiel);
+    let werk = opslag.lees('profielconcept') ?? kloon(zonderOverigeVakken(profiel));
     delete werk.eigen;
     const bewaar = () => opslag.schrijf('profielconcept', werk);
     let open = new Set(['school']);
@@ -315,7 +316,7 @@ export default {
           } else if (a === 'standaard') {
             wisEigenProfiel(); opslag.wis('profielconcept'); location.reload();
           } else if (a === 'opnieuw') {
-            if (window.confirm('Opnieuw beginnen met het profiel dat nu in gebruik is? Je wijzigingen gaan verloren.')) { opslag.wis('profielconcept'); werk = kloon(profiel); delete werk.eigen; teken(); }
+            if (window.confirm('Opnieuw beginnen met het profiel dat nu in gebruik is? Je wijzigingen gaan verloren.')) { opslag.wis('profielconcept'); werk = kloon(zonderOverigeVakken(profiel)); delete werk.eigen; teken(); }
           } else if (a === 'deellink') {
             try {
               const p = klaarProfiel(); delete p.eigen;

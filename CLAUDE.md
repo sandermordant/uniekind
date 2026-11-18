@@ -2,7 +2,7 @@
 
 Uniekind is een statische website (Vite, vanilla JS) die docenten van het Sophianum (Gulpen) helpt gedifferentieerde lessen te maken. Eigenaar: Sander. Online via GitHub Pages: https://sandermordant.github.io/uniekind/ (workflow `.github/workflows/pages.yml`, draait bij elke push naar `main` eerst `npm test`, dan `npm run site`).
 
-Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (laatste: `testverslag-livecontrole-1.md`).
+Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (laatste: `testverslag-rust-en-alle-stof.md`).
 
 ## Harde afspraken (niet van afwijken)
 - Route A: geen server, geen database, geen accounts, geen API-sleutel. Alles draait in de browser.
@@ -20,7 +20,7 @@ Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (la
 - Alleen de Sophianum-versie (de algemene versie is geschrapt; `tests/fixtures/profiel-andere-school.json` blijft als test).
 - Bovenin kiest de docent *Eindexamenklas* (vmbo 4, havo 5, vwo 6) of *Andere klassen*; het menu past zich aan.
 - M&M alleen vmbo basis en kader. Filosofie alleen vwo (atheneum en gymnasium). Latijn en Grieks bij vwo gymnasium.
-- SLO-data komt uit de open data op GitHub (MIT), te vernieuwen met `npm run importeer-slo -- <map>` (zie README). Examenopgaven zelf zitten er niet in (CvTE); docenten plakken of fotograferen ze.
+- SLO-data komt uit de open data op GitHub (MIT), te vernieuwen met `npm run importeer-slo -- <map>` (zie README): kerndoelen, leerdoelenkaarten, examenprogramma's, syllabi, beroepsgericht vmbo, referentiekader taal en rekenen en het ERK. Examenopgaven zelf zitten er niet in (CvTE); docenten plakken of fotograferen ze.
 
 ## Werkwijze
 - `npm test` en `npm run valideer` moeten groen zijn vóór elke push; controleer nieuwe schermen met axe en op 375 px.

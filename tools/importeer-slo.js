@@ -7,11 +7,13 @@
  *   https://github.com/slonl/curriculum-fo                 nieuwe kerndoelen, praktijkgerichte en conceptexamenprogramma's
  *   https://github.com/slonl/curriculum-leerdoelenkaarten  leerdoelenkaarten: de onderwerpen per vak
  *   https://github.com/slonl/curriculum-examenprogramma-bg beroepsgerichte profielvakken en keuzevakken vmbo
- *   https://github.com/slonl/curriculum-basis              niveaus (welke leerweg bij een beroepsgerichte eindterm hoort)
+ *   https://github.com/slonl/curriculum-basis              niveaus en doelen (leerwegen, 1F-4F, pre-A1-C2)
+ *   https://github.com/slonl/curriculum-referentiekader    referentiekader Nederlandse taal en rekenen (1F-4F)
+ *   https://github.com/slonl/curriculum-erk                ERK, Europees referentiekader voor de moderne vreemde talen
  *
  * Gebruik (eenmaal per jaar, als SLO een nieuwe release heeft):
  *   mkdir slo && cd slo
- *   for r in kerndoelen examenprogramma syllabus fo leerdoelenkaarten examenprogramma-bg basis; do git clone --depth 1 https://github.com/slonl/curriculum-$r; done
+ *   for r in kerndoelen examenprogramma syllabus fo leerdoelenkaarten examenprogramma-bg basis referentiekader erk; do git clone --depth 1 https://github.com/slonl/curriculum-$r; done
  *   cd .. && npm run importeer-slo -- slo
  *
  * Schrijft public/data/kaders/index.json en één bestand per vak (alle kaders van dat vak samen).
@@ -76,7 +78,8 @@ const VAK_NAAR_UNIEKIND = {
   Burgerschap: ['maatschappijleer', 'mm'], 'Kunst en cultuur': ['kunst', 'muziek', 'ckv', 'drama'], 'Culturele oriëntatie en creatieve expressie': ['kunst', 'muziek', 'ckv', 'drama'],
   'Moderne vreemde talen': ['duits', 'frans', 'spaans'], 'T&T (Technologie en Toepassing)': ['tt'], 'O&O (Onderzoeken en Ontwerpen)': ['oo'],
   'D&P (Dienstverlening en Producten)': ['dp'], 'NLT (Natuur, leven en technologie)': ['nlt'], 'ANW (Algemene natuurwetenschappen)': ['anw'],
-  'BSM (Bewegen, sport en maatschappij)': ['bsm', 'lo'], Maatschappijwetenschappen: ['maw'], Maatschappijkunde: ['maatschappijkunde', 'maatschappijleer']
+  'BSM (Bewegen, sport en maatschappij)': ['bsm', 'lo'], Maatschappijwetenschappen: ['maw'], Maatschappijkunde: ['maatschappijkunde', 'maatschappijleer'],
+  'ERK (moderne vreemde talen)': ['engels', 'duits', 'frans', 'spaans', 'italiaans', 'russisch', 'turks', 'arabisch', 'chinees']
 };
 // De praktijkgerichte programma's van vmbo horen bij het beroepsgerichte profielvak
 for (const p of ['Bouwen, Wonen en Interieur', 'Economie en Ondernemen', 'Groen', 'Horeca, Bakkerij en Recreatie', 'Maritiem en Techniek', 'Media, Vormgeving en ICT',
@@ -320,11 +323,100 @@ if (heeft('curriculum-examenprogramma-bg')) {
   }
 }
 
+/* Doelen per niveau uit curriculum-basis (gebruikt door het referentiekader en het ERK) */
+const basisDoel = heeft('curriculum-basis') ? perId(lees('curriculum-basis', 'doelen.json')) : new Map();
+const basisDoelniveau = heeft('curriculum-basis') ? perId(lees('curriculum-basis', 'doelniveaus.json')) : new Map();
+const basisNiveau = heeft('curriculum-basis') ? new Map(lees('curriculum-basis', 'niveaus.json').map((n) => [n.id, n.title])) : new Map();
+const NIVEAU_VOLGORDE = ['1F', '1S', '2F', '2S', '3F', '3S', '4F', '4S', 'pre A1', 'A1', 'A2', 'A2+', 'B1', 'B1+', 'B2', 'B2+', 'C1', 'C2'];
+const volgordeNiveau = (n) => { const i = NIVEAU_VOLGORDE.indexOf(n); return i < 0 ? 99 : i; };
+/** Doelen per niveau: één regel per doel; zijn er per niveau meer doelen, dan een kop per niveau. */
+function doelenPerNiveau(doelniveauIds) {
+  const per = new Map();
+  for (const dn of (doelniveauIds ?? []).map((i) => basisDoelniveau.get(i)).filter(Boolean)) {
+    const niveaus = (dn.niveau_id ?? []).map((i) => basisNiveau.get(i)).filter((n) => NIVEAU_VOLGORDE.includes(n));
+    for (const d of (dn.doel_id ?? []).map((i) => basisDoel.get(i)).filter(Boolean)) {
+      for (const n of niveaus) { if (!per.has(n)) per.set(n, []); if (!per.get(n).some((x) => x.t === tekst(d.title))) per.get(n).push({ c: n, t: tekst(d.title), ...(d.description ? { d: tekst(d.description, 800) } : {}) }); }
+    }
+  }
+  const niveaus = [...per.keys()].sort((a, b) => volgordeNiveau(a) - volgordeNiveau(b));
+  if (niveaus.every((n) => per.get(n).length === 1)) return niveaus.map((n) => per.get(n)[0]);
+  return niveaus.map((n) => ({ c: n, t: `Niveau ${n}`, k: per.get(n) }));
+}
+
+/* 7. Referentiekader taal en rekenen (curriculum-referentiekader): domeinen, subdomeinen en onderwerpen,
+      met per onderwerp wat een leerling kan op elk niveau (1F, 1S, 2F, 3F, 4F). */
+if (heeft('curriculum-referentiekader') && heeft('curriculum-basis')) {
+  const r = 'curriculum-referentiekader';
+  const dom = perId(lees(r, 'ref.domeinen.json'));
+  const sub = perId(lees(r, 'ref.subdomeinen.json'));
+  const ond = perId(lees(r, 'ref.onderwerpen.json'));
+  const deel = perId(lees(r, 'ref.deelonderwerpen.json'));
+  const knoop = (x, kinderen) => ({ c: tekst(x.prefix), t: tekst(x.title), ...(x.description ? { d: tekst(x.description, 800) } : {}), ...(kinderen.length ? { k: kinderen } : {}) });
+  for (const vlg of lees(r, 'ref.vakleergebieden.json')) {
+    const rekenen = /rekenen/i.test(vlg.title);
+    const items = (vlg.ref_domein_id ?? []).map((i) => dom.get(i)).filter(Boolean).map((d) => knoop(d,
+      (d.ref_subdomein_id ?? []).map((i) => sub.get(i)).filter(Boolean).map((s) => knoop(s, [
+        ...doelenPerNiveau(s.doelniveau_id),
+        ...(s.ref_onderwerp_id ?? []).map((i) => ond.get(i)).filter(Boolean).map((o) => knoop(o, [
+          ...doelenPerNiveau(o.doelniveau_id),
+          ...(o.ref_deelonderwerp_id ?? []).map((i) => deel.get(i)).filter(Boolean).map((x) => knoop(x, doelenPerNiveau(x.doelniveau_id)))
+        ]))
+      ]))));
+    voegToe({
+      id: `referentiekader-${rekenen ? 'rekenen' : 'taal'}`, titel: `Referentiekader ${rekenen ? 'rekenen' : 'taal'} (niveaus 1F tot en met 4F)`, soort: 'referentiekader', status: 'geldend',
+      niveaus: ['alle'], sloVak: rekenen ? 'Wiskunde' : 'Nederlands',
+      bron: { naam: 'SLO, referentiekader Nederlandse taal en rekenen', repo: 'slonl/curriculum-referentiekader', versie: versieVan(r) },
+      items
+    });
+  }
+}
+
+/* 8. ERK, het Europees referentiekader voor de talen (curriculum-erk): per taalactiviteit en competentie de schalen,
+      met per niveau (pre-A1 tot en met C2) wat een leerling kan. Geldt voor alle moderne vreemde talen. */
+if (heeft('curriculum-erk') && heeft('curriculum-basis')) {
+  const r = 'curriculum-erk';
+  const cat = perId(lees(r, 'erk.categorieen.json'));
+  const act = perId(lees(r, 'erk.taalactiviteiten.json'));
+  const schaal = perId(lees(r, 'erk.schalen.json'));
+  const cando = perId(lees(r, 'erk.candobeschrijvingen.json'));
+  const voorbeeld = perId(lees(r, 'erk.voorbeelden.json'));
+  const schaalKnoop = (i) => {
+    const s = schaal.get(i);
+    if (!s) return null;
+    const regels = (s.erk_candobeschrijving_id ?? []).map((j) => cando.get(j)).filter((x) => x && !x.isempty).map((x) => {
+      const n = (x.niveau_id ?? []).map((k) => basisNiveau.get(k)).find((k) => NIVEAU_VOLGORDE.includes(k)) ?? '';
+      const vb = (x.erk_voorbeeld_id ?? []).map((k) => voorbeeld.get(k)).filter(Boolean).slice(0, 3).map((v) => tekst(`Bijvoorbeeld: ${v.title}`, 400));
+      return { c: n, t: tekst(x.title), ...(vb.length ? { toel: vb } : {}) };
+    }).sort((a, b) => volgordeNiveau(a.c) - volgordeNiveau(b.c));
+    return regels.length ? { c: tekst(s.prefix) || tekst(s.title), t: tekst(s.title), ...(s.description ? { d: tekst(s.description, 800) } : {}), k: regels } : null;
+  };
+  const schalen = (ids) => (ids ?? []).map(schaalKnoop).filter(Boolean);
+  const items = lees(r, 'erk.gebieden.json').map((g) => ({
+    c: tekst(g.title), t: tekst(g.title),
+    k: [
+      ...(g.erk_categorie_id ?? []).map((i) => cat.get(i)).filter(Boolean).map((c) => ({
+        c: tekst(c.title), t: tekst(c.title),
+        k: [
+          ...(c.erk_taalactiviteit_id ?? []).map((i) => act.get(i)).filter(Boolean).map((a) => ({ c: tekst(a.title), t: tekst(a.title), k: schalen(a.erk_schaal_id) })).filter((a) => a.k.length),
+          ...schalen(c.erk_schaal_id)
+        ]
+      })).filter((c) => c.k.length),
+      ...schalen(g.erk_schaal_id)
+    ]
+  })).filter((g) => g.k.length);
+  voegToe({
+    id: 'referentiekader-erk', titel: 'ERK: Europees referentiekader voor de talen (pre-A1 tot en met C2)', soort: 'referentiekader', status: 'geldend',
+    niveaus: ['alle'], sloVak: 'ERK (moderne vreemde talen)',
+    bron: { naam: 'SLO, ERK (Europees referentiekader voor de talen)', repo: 'slonl/curriculum-erk', versie: versieVan(r) },
+    items
+  });
+}
+
 /* ── Schrijven: één bestand per vak, plus een index ── */
 rmSync(uit, { recursive: true, force: true });
 mkdirSync(uit, { recursive: true });
 const tel = (l) => l.reduce((n, x) => n + 1 + tel(x.k ?? []), 0);
-const SOORT = { kerndoelen: 0, leerdoelenkaart: 1, examenprogramma: 2, syllabus: 3, keuzevakken: 4 };
+const SOORT = { kerndoelen: 0, leerdoelenkaart: 1, examenprogramma: 2, syllabus: 3, keuzevakken: 4, referentiekader: 5 };
 const index = [];
 const vakken = [];
 for (const v of [...perVak.values()].sort((a, b) => a.naam.localeCompare(b.naam, 'nl'))) {

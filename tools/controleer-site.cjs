@@ -5,7 +5,8 @@
  * - axe-core (WCAG 2.1 A en AA) zonder overtredingen;
  * - nergens zijwaarts scrollen;
  * - geen verbindingen naar andere sites (geen trackers);
- * - een havo-les van 100 minuten: drie varianten die precies 100 minuten duren, stap 2 t/m 4 van de lesmaker;
+ * - een havo-les van 100 minuten: drie varianten die precies 100 minuten duren, stap 2 t/m 4 van de lesmaker,
+ *   met de ingeklapte varianten en een wijzigpaneel open;
  * - alle downloads in stap 4 leveren een bestand op.
  * Op laptop (1366×768), digibord (1920×1080) en telefoon (375 px), in licht en donker.
  *
@@ -67,6 +68,11 @@ const SCHERMEN = { laptop: { width: 1366, height: 768 }, digibord: { width: 1920
       await p.getByLabel('100 min').check();
       await p.click('text=Genereer de les →');
       await controleer('lesmaker stap 2');
+      // De andere twee varianten staan ingeklapt; klap ze open om alle drie te controleren
+      if (await p.locator('details.andere-varianten > summary').count()) {
+        await p.locator('details.andere-varianten > summary').click();
+        await controleer('lesmaker stap 2, alle varianten open');
+      }
       const regels = (await p.locator('main').innerText()).split('\n').filter((l) => /^\d+′/.test(l));
       const varianten = [];
       for (const l of regels) { if (/Opening/.test(l) || !varianten.length) varianten.push(0); varianten[varianten.length - 1] += +l.match(/^\d+/)[0]; }
@@ -74,6 +80,12 @@ const SCHERMEN = { laptop: { width: 1366, height: 768 }, digibord: { width: 1920
       if ((await p.locator('text=Voldoet aan alle eisen').count()) < 3) meld('lesmaker stap 2', 'niet elke variant voldoet aan alle eisen');
       await p.click('text=Kies de bovenste variant →');
       await controleer('lesmaker stap 3');
+      // Een wijzigpaneel openen: knoppen, keuzelijst en uitleg moeten ook in orde zijn
+      if (await p.locator('.fase [data-actie="wijzig"]').count()) {
+        await p.locator('.fase [data-actie="wijzig"]').nth(3).click();
+        if (!(await p.locator('.fase .wijzigpaneel').count())) meld('lesmaker stap 3', 'Wijzig opent geen paneel');
+        await controleer('lesmaker stap 3, Wijzig open');
+      }
       await p.locator('main button', { hasText: 'Volgende →' }).click();
       await controleer('lesmaker stap 4');
       if (scherm === 'laptop' && thema === 'light') {

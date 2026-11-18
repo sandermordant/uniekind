@@ -23,7 +23,7 @@ const UITLEG = {
   inhoud: 'Wat ga je behandelen? Lesdoelen en kernbegrippen bepalen welke werkvormen passen.',
   klas: 'Hoe ziet de klas eruit? Alleen aantallen.',
   varianten: 'Drie varianten van dezelfde les, van vertrouwd tot volledig gedifferentieerd. Kies er één om aan te passen.',
-  aanpassen: 'Schuif met fasen, pas minuten aan, vraag een andere suggestie of zet een werkvorm vast.',
+  aanpassen: 'Je les staat klaar. Wil je iets anders? Klik bij dat onderdeel op Wijzig.',
   materiaal: 'Het materiaalpakket bij je les.',
   snel: 'Een les in drie minuten.'
 };
@@ -40,6 +40,8 @@ export default {
     const inv = () => concept.invoer;
     const invoerVoorGenerator = () => generatorInvoer(concept);
     const stappen = () => STAPPEN[concept.modus] ?? STAPPEN.snel;
+    // Welke wijzigpanelen in stap 3 open staan (alleen voor dit scherm, niet bewaard)
+    const openWijzig = new Set();
     const matStaat = () => (concept.materiaal ??= { doc: 'lesplan', dyslexie: false, rustig: false });
     const huidigeLes = () => {
       const les = genereerLes({ ...invoerVoorGenerator(), stand: concept.gekozenStand ?? inv().stand }, data);
@@ -55,7 +57,7 @@ export default {
       if (s === 'klas') return html`${stapKlas(ctx)}${standKiezer('stand', inv().stand, 'Hoe ver wil je gaan in deze les?')}`;
       if (s === 'snel') return html`${stapSnel(ctx)}${standKiezer('stand', inv().stand, 'Hoe ver wil je gaan?')}`;
       if (s === 'varianten') return varianten(genereerVarianten(invoerVoorGenerator(), data));
-      if (s === 'aanpassen') return lesplan(huidigeLes(), itemMap, { profiel });
+      if (s === 'aanpassen') return lesplan(huidigeLes(), itemMap, { profiel, open: openWijzig });
       if (s === 'materiaal') {
         const les = huidigeLes();
         if (!concept.logId) { concept.logId = nieuwId(); bewaarConcept(concept); }
@@ -297,7 +299,14 @@ export default {
             if (v) { inv().inhoud.begrippen = [...new Set([...(inv().inhoud.begrippen ?? []), v])]; bewaar(); teken(); }
             return;
           }
-          if (a === 'kies-variant') { concept.gekozenStand = Number(k.dataset.stand); inv().stand = concept.gekozenStand; concept.aanpassingen = {}; return gaNaar('aanpassen'); }
+          if (a === 'wijzig') {
+            const id = k.dataset.wijzig;
+            if (openWijzig.has(id)) openWijzig.delete(id); else openWijzig.add(id);
+            teken();
+            $(`[data-actie="wijzig"][data-wijzig="${id}"]`, root)?.focus({ preventScroll: true });
+            return;
+          }
+          if (a === 'kies-variant') { openWijzig.clear(); concept.gekozenStand = Number(k.dataset.stand); inv().stand = concept.gekozenStand; concept.aanpassingen = {}; return gaNaar('aanpassen'); }
           if (a === 'andere') {
             const s = k.dataset.sleutel;
             inv().opties.overslaan = { ...inv().opties.overslaan, [s]: (Number(inv().opties.overslaan?.[s]) || 0) + 1 };

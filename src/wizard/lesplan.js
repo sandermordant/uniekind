@@ -52,11 +52,11 @@ export function wieWaar(les) {
     </tr>`)}</tbody></table></div>`;
 }
 
-/* ── Stap 5: drie varianten ── */
-export function varianten(lessen) {
-  return html`<div class="varianten">${lessen.map((les, i) => {
-    const fout = les.controles.filter((c) => !c.ok).length;
-    return html`<article class="variant ${i === 0 ? 'eerst' : ''}">
+/* ── Stap 5: drie varianten ──
+   Rustig: de gekozen variant groot; de andere twee ingeklapt en zonder lange uitleg. */
+function variantKaart(les, i) {
+  const fout = les.controles.filter((c) => !c.ok).length;
+  return html`<article class="variant ${i === 0 ? 'eerst' : ''}">
       <header>
         <p class="eyebrow">${i === 0 ? 'Jouw keuze · ' : ''}Stand ${les.stand}</p>
         <h3>${les.standNaam}</h3>
@@ -64,30 +64,39 @@ export function varianten(lessen) {
       </header>
       ${tijdlijn(les, { klein: true })}
       <ol class="variant-fasen">${les.fases.map((f) => html`<li><span class="tabnum">${f.duur}′</span> ${f.titel}${f.blokken.some((b) => b.werkvorm) ? html`: <i>${[...new Set(f.blokken.map((b) => b.werkvorm?.naam).filter(Boolean))].join(' / ')}</i>` : ''}</li>`)}</ol>
-      <p class="waarom">${les.waarom}</p>
+      ${i === 0 ? html`<details class="uitleg"><summary>Waarom deze opzet?</summary><p>${les.waarom}</p></details>` : ''}
       <p class="controle-kort ${fout ? 'let' : 'ok'}">${fout ? `${fout} aandachtspunt${fout > 1 ? 'en' : ''}` : 'Voldoet aan alle eisen'}</p>
-      <button type="button" class="knop ${i === 0 ? '' : 'secundair'}" data-actie="kies-variant" data-stand="${les.stand}">Kies deze en pas aan</button>
+      <button type="button" class="knop ${i === 0 ? '' : 'secundair'}" data-actie="kies-variant" data-stand="${les.stand}">${i === 0 ? 'Kies deze en pas aan' : `Kies ${les.standNaam}`}</button>
     </article>`;
-  })}</div>`;
+}
+export function varianten(lessen) {
+  const [eerste, ...rest] = lessen;
+  return html`<div class="varianten">
+    ${variantKaart(eerste, 0)}
+    ${rest.length ? html`<details class="andere-varianten">
+      <summary>Liever iets anders? Bekijk de andere ${rest.length === 1 ? 'variant' : `${rest.length} varianten`}</summary>
+      <div class="varianten-rest">${rest.map((les, i) => variantKaart(les, i + 1))}</div>
+    </details>` : ''}
+  </div>`;
 }
 
 /* ── Stap 6: lesplan met aanpassen ── */
-function blokWeergave(les, f, b, items, ctx) {
+function blokWeergave(les, f, b, items, ctx, wijzig) {
   const it = b.werkvorm ? items.get(b.werkvorm.id) : null;
   const groepNaam = (id) => les.groepen.find((g) => g.id === id)?.naam ?? id;
+  const kort = (id) => groepNaam(id).split(' · ')[0];
   const kleur = it ? `var(--huis-${ctx.profiel.huisstijl.categoriekleur?.[it.categorie] ?? 'hoofd'})` : 'var(--line)';
   return html`<div class="lesblok" data-plek="${b.plek}">
-    <div class="wie">
-      ${les.groepen.length > 1 ? b.groepen.map((g) => html`<span class="chip">${groepNaam(g)}</span>`) : ''}
-      <span class="plek" data-plek="${b.plek}">${plekNaam(les, b.plek)}</span>
-      <span class="begeleiding">${BEGELEIDING[b.begeleiding] ?? b.begeleiding} · ${b.aantal} lln</span>
-    </div>
+    <p class="wie">
+      ${les.groepen.length > 1 ? html`<b>${b.groepen.length === les.groepen.length ? 'Hele klas' : b.groepen.map(kort).join(' + ')}</b> · ` : ''}<span class="plek" data-plek="${b.plek}">${plekNaam(les, b.plek)}</span>
+      <span class="begeleiding">· ${BEGELEIDING[b.begeleiding] ?? b.begeleiding} · ${b.aantal} lln</span>
+    </p>
     ${b.rol === 'doel' ? doelWeergave(les) : ''}
     ${b.tekst ? html`<p>${b.tekst}</p>` : ''}
     ${it ? html`
       <div class="wat">
-        <span class="chip" style="--c:${kleur}"><span class="stip"></span>${CATEGORIE[it.categorie]}</span>
-        ${it.perspectieven ? html`<span class="chip">Actualiteit en diversiteit</span>` : ''}${it.burgerschap?.length ? html` <span class="chip">Burgerschap: ${it.burgerschap.join(', ')}</span>` : ''}
+        ${wijzig ? html`<p class="chips"><span class="chip" style="--c:${kleur}"><span class="stip"></span>${CATEGORIE[it.categorie]}</span>
+          ${it.perspectieven ? html`<span class="chip">Actualiteit en diversiteit</span>` : ''}${it.burgerschap?.length ? html` <span class="chip">Burgerschap: ${it.burgerschap.join(', ')}</span>` : ''}</p>` : ''}
         <h4>${it.naam}${b.vervolg ? html` <small>(loopt door)</small>` : ''}${b.vastgezet ? html` <small class="vast">vastgezet</small>` : ''}</h4>
         <p class="kort">${it.kort}</p>
         ${!b.vervolg ? html`<p class="startzin-klein"><b>Je zegt:</b> ${it.startzin}</p>` : ''}
@@ -95,10 +104,10 @@ function blokWeergave(les, f, b, items, ctx) {
           <div class="tabelvak alsdan" tabindex="0" role="region" aria-label="Als-dan bij ${it.naam}"><table><thead><tr><th scope="col">Als</th><th scope="col">Dan</th></tr></thead>
           <tbody>${it.alsDan.map((r) => html`<tr><td>${r.als}</td><td>${r.dan}</td></tr>`)}</tbody></table></div>` : ''}
       </div>
-      ${!b.vervolg && b.sleutel ? html`
+      ${wijzig && !b.vervolg && b.sleutel ? html`
         <div class="blokacties niet-printen">
           ${b.alternatieven.length ? html`<button type="button" class="knop secundair klein" data-actie="andere" data-sleutel="${b.sleutel}">Andere suggestie</button>` : ''}
-          ${b.alternatieven.length ? html`<label class="visueel-verborgen" for="alt-${b.sleutel}">Kies een alternatief</label>
+          ${b.alternatieven.length ? html`<label class="visueel-verborgen" for="alt-${b.sleutel}">Kies een alternatief voor ${it.naam}</label>
           <select id="alt-${b.sleutel}" class="alt" data-actie="kies-alt" data-sleutel="${b.sleutel}">
             <option value="">Ook passend…</option>
             ${b.alternatieven.map((id) => html`<option value="${id}">${items.get(id)?.naam ?? id}</option>`)}
@@ -125,12 +134,20 @@ function doelWeergave(les) {
   </div>`;
 }
 
+/* Knop die een wijzigpaneel open- en dichtklapt. De open panelen staan in ctx.open (een Set), zodat ze
+   na het opnieuw tekenen open blijven. */
+function wijzigKnop(id, label, open) {
+  return html`<button type="button" class="knop secundair klein wijzigknop niet-printen" data-actie="wijzig" data-wijzig="${id}" aria-expanded="${open}">${open ? 'Klaar' : 'Wijzig'}<span class="visueel-verborgen"> ${label}</span></button>`;
+}
+
 export function lesplan(les, items, ctx, alleLessen = []) {
+  const open = ctx.open ?? new Set();
   const totaal = les.fases.reduce((t, f) => t + f.duur, 0);
   const verschil = totaal - les.lesduur;
   const fouten = les.controles.filter((c) => !c.ok);
   const sp = les.splitsing;
   const opties = sp.opties.filter((o) => o.id !== 'routes' || sp.overflow === 0);
+  const opzetOpen = open.has('opzet');
   return html`
     <div class="totaalbalk ${verschil ? 'let' : 'ok'}" role="status">
       <span><b class="tabnum">${totaal}</b> van ${les.lesduur} minuten${verschil ? ` · ${Math.abs(verschil)} minuten te ${verschil > 0 ? 'veel' : 'weinig'}` : ''}</span>
@@ -138,21 +155,26 @@ export function lesplan(les, items, ctx, alleLessen = []) {
     </div>
 
     <section class="sectie">
-      <h2>${les.doel.onderwerp || 'Je les'} <small class="sub">${les.standNaam} · ${les.opzetNaam}</small></h2>
-      <p class="lees">${les.waarom}</p>
+      <h2>${les.doel.onderwerp || 'Je les'} <small class="sub">${les.standNaam}${les.opzetNaam !== les.standNaam ? ` · ${les.opzetNaam}` : ''}</small></h2>
       ${les.tips.map((t) => html`<p class="melding">${t}</p>`)}
+      <details class="uitleg"><summary>Waarom deze opzet?</summary><p>${les.waarom}</p></details>
     </section>
 
     ${sp.nodig && opties.length ? html`
-    <section class="sectie splitsplanner">
-      <h3>Splitsplanner</h3>
-      ${sp.reden ? html`<p class="lees">${sp.reden}</p>` : ''}
-      <div class="splitopties" role="radiogroup" aria-label="Kies hoe je de klas verdeelt">
-        ${opties.map((o) => html`<label class="splitoptie ${les.opzet === o.id ? 'aan' : ''} ${o.haalbaar ? '' : 'nee'}">
-          <input type="radio" name="splitsing" data-actie="splitsing" value="${o.id}" ${les.opzet === o.id ? 'checked' : ''} ${o.haalbaar ? '' : 'disabled'}>
-          <b>${o.naam}</b><span>${o.kort}</span>${o.haalbaar ? '' : html`<em>${o.waaromNiet}</em>`}
-        </label>`)}
+    <section class="sectie opzetregel">
+      <div class="regelkop">
+        <p><b>Zo verdeel je de klas:</b> ${les.opzetNaam}. <span class="hulp">${opties.find((o) => o.id === les.opzet)?.kort ?? ''}</span></p>
+        ${wijzigKnop('opzet', 'hoe je de klas verdeelt', opzetOpen)}
       </div>
+      ${opzetOpen ? html`<div class="wijzigpaneel splitsplanner">
+        ${sp.reden ? html`<p class="lees">${sp.reden}</p>` : ''}
+        <div class="splitopties" role="radiogroup" aria-label="Kies hoe je de klas verdeelt">
+          ${opties.map((o) => html`<label class="splitoptie ${les.opzet === o.id ? 'aan' : ''} ${o.haalbaar ? '' : 'nee'}">
+            <input type="radio" name="splitsing" data-actie="splitsing" value="${o.id}" ${les.opzet === o.id ? 'checked' : ''} ${o.haalbaar ? '' : 'disabled'}>
+            <b>${o.naam}</b><span>${o.kort}</span>${o.haalbaar ? '' : html`<em>${o.waaromNiet}</em>`}
+          </label>`)}
+        </div>
+      </div>` : ''}
     </section>` : ''}
 
     <section class="sectie">
@@ -162,23 +184,28 @@ export function lesplan(les, items, ctx, alleLessen = []) {
     </section>
 
     <section class="sectie">
-      <h3>Lesverloop <small class="sub">Versleep of gebruik de pijltjes; pas de minuten aan.</small></h3>
+      <h3>Lesverloop <small class="sub">Met <b>Wijzig</b> pas je minuten, volgorde of werkvorm aan.</small></h3>
       <ol class="fasen" id="fasen">
-        ${les.fases.map((f, i) => html`<li class="fase" data-fase="${f.id}" draggable="true">
+        ${les.fases.map((f, i) => {
+          const fo = open.has(`fase-${f.id}`);
+          return html`<li class="fase ${fo ? 'open' : ''}" data-fase="${f.id}" draggable="true">
           <div class="fase-kop">
-            <span class="greep niet-printen" aria-hidden="true">⋮⋮</span>
             <span class="tijd tabnum">${tijd(f)}</span>
             <h4>${f.titel}</h4>
-            <label class="duur niet-printen"><span class="visueel-verborgen">Minuten voor ${f.titel}</span><input type="number" min="1" max="100" value="${f.duur}" data-actie="duur" data-fase="${f.id}"> min</label>
-            <span class="pijlen niet-printen">
-              <button type="button" class="knop secundair klein" data-actie="omhoog" data-fase="${f.id}" ${i === 0 ? 'disabled' : ''} aria-label="${f.titel} omhoog">↑</button>
-              <button type="button" class="knop secundair klein" data-actie="omlaag" data-fase="${f.id}" ${i === les.fases.length - 1 ? 'disabled' : ''} aria-label="${f.titel} omlaag">↓</button>
-            </span>
+            ${wijzigKnop(`fase-${f.id}`, f.titel, fo)}
           </div>
+          ${fo ? html`<div class="wijzigpaneel fase-wijzig">
+            <label class="duur"><span>Minuten</span><input type="number" min="1" max="100" value="${f.duur}" data-actie="duur" data-fase="${f.id}" aria-label="Minuten voor ${f.titel}"></label>
+            <span class="pijlen">
+              <button type="button" class="knop secundair klein" data-actie="omhoog" data-fase="${f.id}" ${i === 0 ? 'disabled' : ''} aria-label="${f.titel} eerder in de les">↑ Eerder</button>
+              <button type="button" class="knop secundair klein" data-actie="omlaag" data-fase="${f.id}" ${i === les.fases.length - 1 ? 'disabled' : ''} aria-label="${f.titel} later in de les">↓ Later</button>
+            </span>
+          </div>` : ''}
           ${f.organisatie ? html`<p class="organisatie">Organisatie: <a href="#werkvorm-${f.organisatie.id}" target="_blank" rel="noopener">${f.organisatie.naam}</a></p>` : ''}
           ${f.extra?.length ? f.extra.map((e) => html`<div class="lesblok extra"><p><b>Differentiatie-element:</b> <a href="#werkvorm-${e.id}" target="_blank" rel="noopener">${e.naam}</a>. ${e.uitleg?.koppeling ?? ''}</p></div>`) : ''}
-          <div class="blokken">${f.blokken.map((b) => blokWeergave(les, f, b, items, ctx))}</div>
-        </li>`)}
+          <div class="blokken">${f.blokken.map((b) => blokWeergave(les, f, b, items, ctx, fo))}</div>
+        </li>`;
+        })}
       </ol>
       <p class="hulp">${les.vooruitblik}</p>
     </section>
@@ -186,14 +213,18 @@ export function lesplan(les, items, ctx, alleLessen = []) {
     <section class="sectie twee-kol">
       <div>
         <h3>Controle</h3>
-        <ul class="controles">${les.controles.map((c) => html`<li class="${c.ok ? 'ok' : 'let'}"><span aria-hidden="true">${c.ok ? '✓' : '!'}</span> ${c.eis}${c.toelichting && !c.ok ? html`<small>${c.toelichting}</small>` : ''}</li>`)}</ul>
+        ${fouten.length ? html`<ul class="controles">${fouten.map((c) => html`<li class="let"><span aria-hidden="true">!</span> ${c.eis}${c.toelichting ? html`<small>${c.toelichting}</small>` : ''}</li>`)}</ul>`
+          : html`<p class="controle-kort ok"><span aria-hidden="true">✓</span> Voldoet aan alle ${les.controles.length} eisen</p>`}
+        <details class="uitleg"><summary>Bekijk alle eisen</summary>
+          <ul class="controles">${les.controles.map((c) => html`<li class="${c.ok ? 'ok' : 'let'}"><span aria-hidden="true">${c.ok ? '✓' : '!'}</span> ${c.eis}</li>`)}</ul>
+        </details>
       </div>
       <div>
         <h3>Differentiatie in deze les</h3>
         <ul>${les.differentiatie.map((d) => html`<li><a href="#werkvorm-${d.id}" target="_blank" rel="noopener">${d.naam}</a></li>`)}</ul>
         ${les.groepen.length > 1 ? html`<p>${les.groepen.map((g) => `${g.naam}: ${g.aantal}`).join(' · ')}${les.verdelingGeschat ? ' (geschat; de startcheck bepaalt de echte verdeling)' : ''}</p>` : ''}
         ${les.oa ? html`<p><b>Onderwijsassistent:</b> ${les.oa.rol}</p>` : ''}
-        ${les.routines.length ? html`<h3 style="margin-top:1rem">Routines die helpen</h3><ul>${les.routines.map((r) => html`<li><a href="#werkvorm-${r}" target="_blank" rel="noopener">${items.get(r)?.naam ?? r}</a></li>`)}</ul>` : ''}
+        ${les.routines.length ? html`<details class="uitleg"><summary>Routines die helpen</summary><ul>${les.routines.map((r) => html`<li><a href="#werkvorm-${r}" target="_blank" rel="noopener">${items.get(r)?.naam ?? r}</a></li>`)}</ul></details>` : ''}
       </div>
     </section>`;
 }

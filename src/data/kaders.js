@@ -13,7 +13,7 @@ export const laadKader = (info) => json(`./data/kaders/${info.bestand}`).then((f
 /** Alle kaders van één vak in één keer. */
 export const laadVak = (bestand) => json(`./data/kaders/${bestand}`);
 
-export const SOORT_NAAM = { kerndoelen: 'Kerndoelen', leerdoelenkaart: 'Leerdoelenkaart (onderwerpen)', examenprogramma: 'Examenprogramma', syllabus: 'Syllabus (centraal examen)', keuzevakken: 'Keuzevakken (beroepsgericht)' };
+export const SOORT_NAAM = { kerndoelen: 'Kerndoelen', leerdoelenkaart: 'Leerdoelenkaart (onderwerpen)', examenprogramma: 'Examenprogramma', syllabus: 'Syllabus (centraal examen)', keuzevakken: 'Keuzevakken (beroepsgericht)', referentiekader: 'Referentiekader (taal, rekenen, ERK)' };
 
 /** Het SLO-niveau van een afdeling: vmbo-bb, vmbo-kb, vmbo-gltl, havo of vwo. */
 export function sloNiveau(afdeling) {

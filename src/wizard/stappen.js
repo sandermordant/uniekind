@@ -3,6 +3,7 @@ import { html, raw } from '../util/html.js';
 import { controleerLesdoel } from '../engine/tekst.js';
 import { DOCENTSTIJL, DENKNIVEAU } from '../data/labels.js';
 import { eindtermenVeld } from './eindtermen.js';
+import { vakKeuzes } from '../data/overige-vakken.js';
 
 /* ── Bouwstenen ─────────────────────────────────── */
 
@@ -21,11 +22,18 @@ export function tekstveld(pad, label, waarde, o = {}) {
   </div>`;
 }
 
+/** Opties [waarde, label, groep?]; opties met een groep komen in een <optgroup>. */
+export function optiesMetGroepen(opties, waarde) {
+  const optie = ([k, v]) => html`<option value="${k}" ${String(waarde) === String(k) ? 'selected' : ''}>${v}</option>`;
+  const groepen = [...new Set(opties.map((o) => o[2]).filter(Boolean))];
+  return html`${opties.filter((o) => !o[2]).map(optie)}${groepen.map((g) => html`<optgroup label="${g}">${opties.filter((o) => o[2] === g).map(optie)}</optgroup>`)}`;
+}
+
 export function keuzeveld(pad, label, opties, waarde, o = {}) {
   return html`<div class="veld">
     <label for="${veldId(pad)}">${label} ${o.info ? info(o.info) : ''}</label>
     <select id="${veldId(pad)}" data-pad="${pad}" ${o.getal ? 'data-type="getal"' : ''} ${o.herteken ? 'data-herteken' : ''}>
-      ${opties.map(([k, v]) => html`<option value="${k}" ${String(waarde) === String(k) ? 'selected' : ''}>${v}</option>`)}
+      ${optiesMetGroepen(opties, waarde)}
     </select>
     ${o.hulp ? html`<span class="hulp">${o.hulp}</span>` : ''}
   </div>`;
@@ -67,7 +75,7 @@ function afdelingOpties(profiel) {
   return profiel.afdelingen.map((a) => [a.id, a.naam]);
 }
 function vakOpties(profiel, afdelingId) {
-  return profiel.vakken.filter((v) => v.afdelingen === 'alle' || v.afdelingen.includes(afdelingId)).map((v) => [v.id, v.naam]);
+  return vakKeuzes(profiel.vakken.filter((v) => v.afdelingen === 'alle' || v.afdelingen.includes(afdelingId)));
 }
 function lesduurOpties(afd) {
   return [...afd.lesduren.map((d) => [String(d), `${d} min`]), ['vrij', 'Anders']];
@@ -257,7 +265,7 @@ export function stapSnel(ctx) {
       ${keuzeveld('context.leerjaar', 'Leerjaar', leerjaarOpties(afd), c.leerjaar, { getal: true, herteken: true })}
       ${keuzeveld('context.vak', 'Vak', vakOpties(profiel, afd.id), c.vak, { herteken: true })}
     </div>
-    <p class="hulp">${afd.naam} ${c.leerjaar ?? ''}. Zie je een vak niet? De vakkenlijst hangt af van de afdeling${profiel.vakken.some((v) => Array.isArray(v.afdelingen) && v.afdelingen.length === 1) ? `; ${profiel.vakken.filter((v) => Array.isArray(v.afdelingen) && v.afdelingen.length === 1).map((v) => `${v.naam} staat bij ${profiel.afdelingen.find((a) => a.id === v.afdelingen[0])?.naam ?? v.afdelingen[0]}`).join(', ')}` : ''}.</p>
+    <p class="hulp">${afd.naam} ${c.leerjaar ?? ''}. Zie je een vak niet? De vakkenlijst hangt af van de afdeling${profiel.vakken.some((v) => !v.overig && Array.isArray(v.afdelingen) && v.afdelingen.length === 1) ? `; ${profiel.vakken.filter((v) => !v.overig && Array.isArray(v.afdelingen) && v.afdelingen.length === 1).map((v) => `${v.naam} staat bij ${profiel.afdelingen.find((a) => a.id === v.afdelingen[0])?.naam ?? v.afdelingen[0]}`).join(', ')}` : ''}.</p>
     ${eindtermenVeld(ctx)}
     ${knoppenveld('lesduurKeuze', 'Lesduur', lesduurOpties(afd), vrij ? 'vrij' : String(c.lesduur), { herteken: true })}
     ${vrij ? tekstveld('context.lesduur', 'Lesduur in minuten', c.lesduur, { type: 'number', min: 20, max: 240 }) : ''}

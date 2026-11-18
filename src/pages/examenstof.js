@@ -76,7 +76,7 @@ export default {
         <section class="band band-klein"><div class="wrap">
           <p class="eyebrow">Stof en materiaal</p>
           <h1>Alle stof, alle vakken, alle niveaus</h1>
-          <p class="lead">Alles wat SLO beschrijft voor vmbo, mavo, havo en vwo: ${index.kaders.length} kaders in ${index.vakken.length} vakken, van kerndoelen tot syllabi en beroepsgerichte keuzevakken. Bij elk onderwerp vind of maak je materiaal, maak je een les of een opgave op niveau.</p>
+          <p class="lead">Alles wat SLO beschrijft voor vmbo, mavo, havo en vwo: ${index.kaders.length} kaders in ${index.vakken.length} vakken, van kerndoelen tot syllabi, beroepsgerichte keuzevakken en de referentiekaders voor taal, rekenen en de moderne vreemde talen (ERK). Bij elk onderwerp vind of maak je materiaal, maak je een les of een opgave op niveau.</p>
           <div class="inhoudsopgave"><a class="knop klein" href="#examenstof" aria-current="page">Zoeken en bekijken</a><a class="knop secundair klein" href="#examenopgave">Opgave op niveau</a><a class="knop secundair klein" href="#materiaal">Bewaard materiaal</a></div>
         </div></section>
         <main class="wrap examenstof">
