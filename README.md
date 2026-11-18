@@ -70,6 +70,7 @@ tools/
   maak-preview.js          maakt een preview-versie voor claude.ai
   maak-site.js             zet de gebouwde website in site/
   kopieer-ocr.js           zet de OCR-bestanden klaar in public/ocr/
+  controleer-site.cjs      controleert de live site in een browser (axe, telefoon, les, downloads)
 docs/                  handleiding collega's, pitch, onderhoud kennisbank, API-route, testverslagen
 netlify.toml           publiceren op Netlify
 .github/workflows/     publiceren op GitHub Pages
@@ -188,6 +189,8 @@ Zie [`docs/onderhoud-kennisbank.md`](docs/onderhoud-kennisbank.md). Kort:
 ## Toegankelijkheid
 
 Gecontroleerd met axe-core op WCAG 2.1 A en AA: alle pagina's en alle wizardstappen, in licht en donker thema: geen overtredingen. Verder handmatig: alles met het toetsenbord te bedienen (knop *Naar de inhoud*, zichtbare focusrand), digibord op 1920×1080 met opdrachten in 88 px, telefoon (375 px) zonder horizontaal scrollen, en een printvoorbeeld van alle 19 materiaalsoorten. Zie het testverslag. Tabellen en voorbeelden die op een smal scherm zijwaarts schuiven, zijn met het toetsenbord bereikbaar; `tests/toegankelijkheid.test.js` bewaakt dat.
+
+**De live site controleren:** `node tools/controleer-site.cjs` doorloopt alle pagina's en een les van 100 minuten op laptop, digibord en telefoon, in licht en donker. Het meldt axe-overtredingen, zijwaarts scrollen, fouten, verbindingen met andere sites en downloads die niets opleveren. Een geplande taak draait dit elke nacht; reparaties komen op een branch `claude/nachtcontrole-…` en gaan pas naar `main` na akkoord.
 
 ---
 

@@ -26,3 +26,7 @@ Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (la
 - `npm test` en `npm run valideer` moeten groen zijn vóór elke push; controleer nieuwe schermen met axe en op 375 px.
 - Na elke ronde: kort testverslag in `docs/`, README bijwerken.
 - Commit en push alleen als Sander erom vraagt of als het bij de opdracht hoort; geen pull requests tenzij gevraagd.
+
+## Nachtcontrole (geplande taak, elke nacht 02:17)
+- Een geplande sessie controleert elke nacht de live site met `node tools/controleer-site.cjs` en lost gevonden problemen op een branch `claude/nachtcontrole-JJJJ-MM-DD` op. Daarbij draaien `npm test` en `npm run valideer`, komt er een testverslag `docs/testverslag-nachtcontrole-JJJJ-MM-DD.md` en eventueel een nieuwe test. Nooit naar `main`, nooit een pull request, geen inhoudelijke keuzes (werkvormen, bronnen, lesregels): die worden alleen gemeld.
+- **Bij de start van elke gewone sessie met Sander:** kijk eerst met `git fetch origin` en `git branch -r --no-merged origin/main` of er branches `claude/nachtcontrole-*` klaarstaan. Zo ja: vat per branch kort samen wat er gevonden en gerepareerd is (lees het testverslag) en vraag of het naar `main` mag.
