@@ -41,7 +41,7 @@ export function tijdlijn(les, o = {}) {
 export function wieWaar(les) {
   const plekken = [...new Set(les.fases.flatMap((f) => f.blokken.map((b) => b.plek)))];
   const groepNaam = (id) => les.groepen.find((g) => g.id === id)?.naam.split(' · ')[0] ?? id;
-  return html`<div class="tabelvak"><table class="wiewaar">
+  return html`<div class="tabelvak" tabindex="0" role="region" aria-label="Wie is waar, wanneer"><table class="wiewaar">
     <thead><tr><th scope="col">Tijd</th>${plekken.map((p) => html`<th scope="col">${plekNaam(les, p)}</th>`)}</tr></thead>
     <tbody>${les.fases.map((f) => html`<tr>
       <th scope="row" class="tabnum">${tijd(f)}</th>
@@ -92,7 +92,7 @@ function blokWeergave(les, f, b, items, ctx) {
         <p class="kort">${it.kort}</p>
         ${!b.vervolg ? html`<p class="startzin-klein"><b>Je zegt:</b> ${it.startzin}</p>` : ''}
         ${!b.vervolg && it.alsDan?.length && ['check', 'startcheck', 'tussencheck'].includes(f.type) ? html`
-          <div class="tabelvak alsdan"><table><thead><tr><th scope="col">Als</th><th scope="col">Dan</th></tr></thead>
+          <div class="tabelvak alsdan" tabindex="0" role="region" aria-label="Als-dan bij ${it.naam}"><table><thead><tr><th scope="col">Als</th><th scope="col">Dan</th></tr></thead>
           <tbody>${it.alsDan.map((r) => html`<tr><td>${r.als}</td><td>${r.dan}</td></tr>`)}</tbody></table></div>` : ''}
       </div>
       ${!b.vervolg && b.sleutel ? html`

@@ -108,7 +108,7 @@ export default {
             ${inFrame ? html`<p class="export-melding">In deze ingebedde preview kan de browser downloaden tegenhouden. Op de echte website werkt het gewoon.</p>` : ''}
             <div class="mat">
               <nav class="mat-lijst" aria-label="Versies"><ul>${docs.map(knop)}</ul></nav>
-              <div class="mat-blad">${raw(documentHtml(huidig, { schoolnaam: profiel.school.naam }))}</div>
+              <div class="mat-blad" tabindex="0" role="region" aria-label="Voorbeeld: ${huidig.titel}">${raw(documentHtml(huidig, { schoolnaam: profiel.school.naam }))}</div>
             </div>
           </section>
         </main>`;

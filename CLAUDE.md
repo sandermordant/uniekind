@@ -2,7 +2,7 @@
 
 Uniekind is een statische website (Vite, vanilla JS) die docenten van het Sophianum (Gulpen) helpt gedifferentieerde lessen te maken. Eigenaar: Sander. Online via GitHub Pages: https://sandermordant.github.io/uniekind/ (workflow `.github/workflows/pages.yml`, draait bij elke push naar `main` eerst `npm test`, dan `npm run site`).
 
-Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (laatste: `testverslag-feedback-3.md`).
+Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (laatste: `testverslag-livecontrole-1.md`).
 
 ## Harde afspraken (niet van afwijken)
 - Route A: geen server, geen database, geen accounts, geen API-sleutel. Alles draait in de browser.

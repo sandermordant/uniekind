@@ -8,7 +8,7 @@ Uniekind helpt docenten gedifferentieerde lessen te ontwerpen. De docent geeft a
 
 Eén website voor het **Sophianum** (Gulpen), gebouwd uit het schoolprofiel `public/profiles/sophianum.json`. Bovenin kiest de docent *Eindexamenklas* of *Andere klassen*; alles (lessen maken, stof, materiaal, opgaven op niveau, werkvormen, digibord) zit in die ene tool.
 
-> Status: **klaar (fase 0 tot en met 7)**. Zie [`docs/testverslag-fase6-7.md`](docs/testverslag-fase6-7.md) voor de eindcontrole, [`docs/handleiding-collegas.md`](docs/handleiding-collegas.md) voor de handleiding van één pagina en [`docs/pitch-schoolleiding.md`](docs/pitch-schoolleiding.md) voor de pitch.
+> Status: **klaar (fase 0 tot en met 7)**. Zie [`docs/testverslag-fase6-7.md`](docs/testverslag-fase6-7.md) voor de eindcontrole, [`docs/testverslag-livecontrole-1.md`](docs/testverslag-livecontrole-1.md) voor de laatste controle van de live site, [`docs/handleiding-collegas.md`](docs/handleiding-collegas.md) voor de handleiding van één pagina en [`docs/pitch-schoolleiding.md`](docs/pitch-schoolleiding.md) voor de pitch.
 
 ---
 
@@ -187,7 +187,7 @@ Zie [`docs/onderhoud-kennisbank.md`](docs/onderhoud-kennisbank.md). Kort:
 
 ## Toegankelijkheid
 
-Gecontroleerd met axe-core op WCAG 2.1 A en AA: alle pagina's en alle wizardstappen, in licht en donker thema: geen overtredingen. Verder handmatig: alles met het toetsenbord te bedienen (knop *Naar de inhoud*, zichtbare focusrand), digibord op 1920×1080 met opdrachten in 88 px, telefoon (375 px) zonder horizontaal scrollen, en een printvoorbeeld van alle 19 materiaalsoorten. Zie het testverslag.
+Gecontroleerd met axe-core op WCAG 2.1 A en AA: alle pagina's en alle wizardstappen, in licht en donker thema: geen overtredingen. Verder handmatig: alles met het toetsenbord te bedienen (knop *Naar de inhoud*, zichtbare focusrand), digibord op 1920×1080 met opdrachten in 88 px, telefoon (375 px) zonder horizontaal scrollen, en een printvoorbeeld van alle 19 materiaalsoorten. Zie het testverslag. Tabellen en voorbeelden die op een smal scherm zijwaarts schuiven, zijn met het toetsenbord bereikbaar; `tests/toegankelijkheid.test.js` bewaakt dat.
 
 ---
 

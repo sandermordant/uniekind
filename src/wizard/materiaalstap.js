@@ -141,7 +141,7 @@ export function materiaalStap(les, data, staat, concept = {}, bronnenPerVak = nu
           <button type="button" class="knop secundair klein" data-actie="exp" data-soort="docx">Dit document als Word</button>
           ${huidig.aantal ? html`<span class="hulp">Print ${huidig.aantal}×${huidig.aantalUitleg ? `: ${huidig.aantalUitleg}` : ''}</span>` : ''}
         </div>
-        <div class="mat-blad">${raw(documentHtml(huidig, opties))}</div>
+        <div class="mat-blad" tabindex="0" role="region" aria-label="Voorbeeld: ${huidig.titel}">${raw(documentHtml(huidig, opties))}</div>
       </div>
     </div>`;
 }

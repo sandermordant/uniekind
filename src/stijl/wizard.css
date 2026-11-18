@@ -169,7 +169,8 @@ ol.fasen { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; 
 .pijlen .knop { min-width: 40px; padding-inline: 0.6rem; }
 .organisatie { font-size: var(--t-s); color: var(--muted); }
 .blokken { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 0.75rem; }
-.lesblok { display: grid; gap: 0.5rem; align-content: start; padding: 0.75rem 0.85rem; border-radius: 8px; background: var(--bg); border-top: 4px solid var(--plek-lokaal); min-width: 0; }
+/* minmax(0, 1fr): een lang keuzemenu of label mag het blok niet breder maken dan het scherm */
+.lesblok { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.5rem; align-content: start; padding: 0.75rem 0.85rem; border-radius: 8px; background: var(--bg); border-top: 4px solid var(--plek-lokaal); min-width: 0; }
 .lesblok[data-plek="plein"] { border-top-color: var(--plek-plein); }
 .lesblok[data-plek="stilte"] { border-top-color: var(--plek-stilte); }
 .lesblok.extra { border-top-color: var(--huis-paars); }
@@ -181,6 +182,7 @@ ol.fasen { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; 
 .lesblok .begeleiding { color: var(--muted); }
 .lesblok .wat { display: grid; gap: 0.35rem; }
 .lesblok h4 { font-size: 1.05rem; }
+.lesblok .chip { white-space: normal; max-width: 100%; }
 .lesblok h4 small { font-family: var(--f-tekst); font-weight: 600; color: var(--muted); font-size: var(--t-xs); }
 .lesblok h4 small.vast { color: var(--accent); }
 .lesblok .kort, .startzin-klein, .lesblok p { font-size: var(--t-s); }

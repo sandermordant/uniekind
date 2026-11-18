@@ -44,7 +44,7 @@ export default {
 
           <section class="sectie">
             <h2>Leidende principes en wat Uniekind ermee doet</h2>
-            <div class="tabelvak"><table>
+            <div class="tabelvak" tabindex="0" role="region" aria-label="Leidende principes en wat Uniekind ermee doet"><table>
               <thead><tr><th scope="col">Schoolplan</th><th scope="col">Principe</th><th scope="col">Wat Uniekind ermee doet</th></tr></thead>
               <tbody>${p.principes.map((pr) => html`<tr><td style="white-space:nowrap">${pr.paragraaf ? `§ ${pr.paragraaf}` : ''}</td><td><b>${pr.naam}</b>${pr.schoolplan ? html`<br><span style="color:var(--muted)">${pr.schoolplan}</span>` : ''}</td><td>${pr.uniekind}</td></tr>`)}</tbody>
             </table></div>

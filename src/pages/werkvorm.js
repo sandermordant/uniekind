@@ -49,7 +49,7 @@ export default {
               ${w.alsDan?.length ? html`
               <section class="sectie">
                 <h2>Als je dit ziet, doe dan dit</h2>
-                <div class="tabelvak"><table>
+                <div class="tabelvak" tabindex="0" role="region" aria-label="Als je dit ziet, doe dan dit"><table>
                   <thead><tr><th scope="col">Als</th><th scope="col">Dan</th></tr></thead>
                   <tbody>${w.alsDan.map((r) => html`<tr><td>${r.als}</td><td>${r.dan}</td></tr>`)}</tbody>
                 </table></div>
@@ -78,7 +78,7 @@ export default {
 
               <section class="sectie">
                 <h2>Voor leerlingen die iets extra nodig hebben</h2>
-                <div class="tabelvak"><table>
+                <div class="tabelvak" tabindex="0" role="region" aria-label="Voor leerlingen die iets extra nodig hebben"><table>
                   <thead><tr><th scope="col">Behoefte</th><th scope="col">Geschikt</th><th scope="col">Tip</th></tr></thead>
                   <tbody>${Object.entries(ONDERSTEUNING).map(([k, v]) => html`<tr><th scope="row">${v}</th><td><span class="past" data-p="${w.ondersteuning[k].past}">${PAST[w.ondersteuning[k].past]}</span></td><td>${w.ondersteuning[k].tip}</td></tr>`)}</tbody>
                 </table></div>
