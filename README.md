@@ -86,6 +86,8 @@ Alles wat schoolspecifiek is, staat in `public/profiles/sophianum.json`: naam, m
 - **Overige vakken** (`src/data/overige-vakken.js`): vakken waarvoor SLO stof publiceert maar die niet in het profiel staan (Spaans, Italiaans, Russisch, Turks, Arabisch, Chinees, Fries, NLT, ANW, maatschappijwetenschappen, drama, dans, film). Ze zijn kiesbaar in de lesmaker en de werkplek onder het kopje *Overige vakken*, maar zeggen niets over wat de school aanbiedt. Op de pagina Schoolprofiel en in de download staan ze niet. Zet je een vak met dezelfde id in het profiel, dan wint het profiel.
 - Velden met `"aanname": true` komen **niet** uit het schoolplan of de schoolgids. Het zijn instelbare standaardwaarden, bijvoorbeeld de capaciteit van de stilteruimte (8) en het deelplein (40). Pas ze aan als de werkelijkheid anders is.
 - De huisstijlkleuren zijn gemeten in de PDF van de schoolgids 2026-2027.
+- De vakken zijn gecontroleerd met de **lessentabellen 2025-2026** (downloads op sophianum.nl). Latijn, Grieks en Bedrijfseconomie zijn daarmee bevestigd. Informatica staat er niet in en is daarom uit het profiel gehaald; de stof staat bij de overige vakken.
+- **Plein** (informatie van Sander, november 2026): in een M-lokaal passen 26 leerlingen; Uniekind gaat uit van 36 plekken per leerplein. De docent houdt vanuit het M-lokaal toezicht. Bij vmbo en vwo grenst het plein met ramen aan het lokaal; bij mavo en havo is het zicht beperkt (`regels.pleinZichtPerKolom`). Daar geeft Uniekind zonder onderwijsassistent een tip over toezicht in de les. Op de pagina Schoolprofiel is dit per kolom in te stellen.
 
 **Drie lagen.** Uniekind combineert de school (visie en regels in het profiel), de sectie (accenten per vak: lesmodel, taxonomie, methodewebsite, werkvorm van de maand; `sectieAccenten.perVak`) en de docent (eigen stijl en kracht, in de browser). Een sectie-accent geldt zolang de docent zelf de schoolstandaard laat staan.
 
@@ -201,20 +203,20 @@ Gecontroleerd met axe-core op WCAG 2.1 A en AA: alle pagina's en alle wizardstap
 
 ## Publiceren
 
-Beide manieren zijn gratis en hebben geen server nodig. Gekozen route: **GitHub Pages**; zie [`docs/online-zetten.md`](docs/online-zetten.md) voor de stappen.
+Uniekind staat op **GitHub Pages**: https://sandermordant.github.io/uniekind/. Elke push naar `main` draait eerst de tests en publiceert dan de site; zie [`docs/online-zetten.md`](docs/online-zetten.md). Netlify is alleen nodig als de school later kiest voor de API-route (die vraagt een serverless function); `netlify.toml` staat daarvoor klaar.
 
-**Netlify** (aanbevolen, omdat de latere API-route serverless functions nodig heeft)
+**GitHub Pages (in gebruik)**
+1. Zet deze map in een GitHub-repository (Pages werkt gratis met een publieke repository).
+2. *Settings → Pages → Source: GitHub Actions*.
+3. Push naar `main`. De workflow `.github/workflows/pages.yml` draait de tests, bouwt de website en publiceert. Het adres wordt `https://<account>.github.io/<repository>/`.
+
+**Netlify** (pas bij de API-route)
 1. Zet deze map in een (privé) GitHub-repository.
 2. Maak een gratis account op netlify.com → *Add new site* → *Import an existing project* → kies de repository.
 3. Netlify leest `netlify.toml`: bouwcommando `npm run site`, publiceermap `site`. Klik op *Deploy*.
 4. Eventueel: *Domain settings* voor een eigen adres, bijvoorbeeld uniekind.sophianum.nl (dan moet de ICT-afdeling een DNS-regel toevoegen).
 
 Zonder GitHub kan het ook: draai `npm run site` en sleep de map `site/` naar app.netlify.com/drop.
-
-**GitHub Pages**
-1. Zet deze map in een GitHub-repository (Pages werkt gratis met een publieke repository).
-2. *Settings → Pages → Source: GitHub Actions*.
-3. Push naar `main`. De workflow `.github/workflows/pages.yml` draait de tests, bouwt de website en publiceert. Het adres wordt `https://<account>.github.io/<repository>/`.
 
 `netlify.toml` zet ook veilige headers en `X-Robots-Tag: noindex`. Op GitHub Pages zorgt de meta-tag `noindex` in de pagina ervoor dat zoekmachines de site overslaan.
 

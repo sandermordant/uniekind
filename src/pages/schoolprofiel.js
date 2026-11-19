@@ -137,6 +137,8 @@ function sectieRegels(p) {
     ${lang('regels.laptop', 'Laptopbeleid', p.regels.laptop, 'Bijvoorbeeld: elke leerling heeft een eigen laptop, of: er is een laptopkar per afdeling.')}
     ${lang('regels.plein', 'Regel voor het plein', p.regels.plein)}
     ${vink('regels.pleinToezichtDoorDocent', 'De docent mag vanuit het instructielokaal toezicht houden op het plein (anders alleen met een onderwijsassistent)', p.regels.pleinToezichtDoorDocent !== false)}
+    <p class="hulp">Zicht op het plein vanuit het instructielokaal, per kolom. Bij "beperkt" en zonder onderwijsassistent geeft Uniekind in de les een tip over toezicht.</p>
+    <div class="veldrij">${[...new Set(p.afdelingen.map((a) => a.kolom))].map((k) => keuze(`regels.pleinZichtPerKolom.${k}`, `Zicht op het plein: ${k}`, [['goed', 'Goed (plein grenst aan het lokaal)'], ['beperkt', 'Beperkt']], p.regels.pleinZichtPerKolom?.[k] ?? 'goed'))}</div>
     <div class="veldrij">
       ${keuze('didactiek.lesmodel', 'Standaard lesmodel', (p.didactiek.lesmodelOpties ?? []).map((o) => [o.id, o.naam]), p.didactiek.lesmodel)}
       ${keuze('didactiek.taxonomie', 'Standaard taxonomie', [['bloom', 'Bloom (herzien)'], ['rtti', 'RTTI']], p.didactiek.taxonomie)}

@@ -356,7 +356,7 @@
       "onderbouwTot": 3
     }
   ],
-  "afdelingToelichting": "vmbo-basis en vmbo-kader zitten in leerjaar 1 en 2 samen in vmbo-MiX; aan het eind van leerjaar 2 wordt de leerweg bepaald. Lesduren: havo/vwo 50 minuten (enkel uur) of 100 minuten (blokuur); vmbo/mavo (flexuurmodel) meestal 70, soms 35 minuten. Een vrije lesduur kan altijd.",
+  "afdelingToelichting": "vmbo-basis en vmbo-kader zitten in leerjaar 1 en 2 samen in vmbo-MiX; aan het eind van leerjaar 2 wordt de leerweg bepaald. Lesduren: havo/vwo 50 minuten (enkel uur) of 100 minuten (blokuur), bevestigd door Sander; vmbo/mavo (flexuurmodel) meestal 70, soms 35 minuten. Een vrije lesduur kan altijd.",
   "vakken": [
     {
       "id": "nederlands",
@@ -400,7 +400,7 @@
       ],
       "rekenen": false,
       "taal": true,
-      "aanname": true
+      "bron": "lessentabel vwo 2025-2026 (alleen gymnasium)"
     },
     {
       "id": "grieks",
@@ -410,7 +410,7 @@
       ],
       "rekenen": false,
       "taal": true,
-      "aanname": true
+      "bron": "lessentabel vwo 2025-2026 (alleen gymnasium)"
     },
     {
       "id": "wiskunde",
@@ -452,7 +452,7 @@
         "vwo-g"
       ],
       "rekenen": true,
-      "aanname": true
+      "bron": "lessentabellen havo en vwo 2025-2026 (havo 4-5, vwo 4-6)"
     },
     {
       "id": "maatschappijleer",
@@ -478,17 +478,6 @@
       "naam": "Scheikunde",
       "afdelingen": "alle",
       "rekenen": true
-    },
-    {
-      "id": "informatica",
-      "naam": "Informatica",
-      "afdelingen": [
-        "havo",
-        "vwo-a",
-        "vwo-g"
-      ],
-      "rekenen": false,
-      "aanname": true
     },
     {
       "id": "digitale-geletterdheid",
@@ -617,15 +606,15 @@
         15
       ],
       "heeftPlein": true,
-      "omschrijving": "Kleiner lokaal met krukken, gekoppeld aan een eigen deelplein. Lang zitten op krukken is onprettig: instructie bij voorkeur kort."
+      "omschrijving": "Kleiner lokaal met krukken, gekoppeld aan een eigen deelplein. Lang zitten op krukken is onprettig: instructie bij voorkeur kort.",
+      "bron": "Sander (november 2026): in een M-lokaal passen 26 leerlingen"
     },
     {
       "id": "plein",
       "naam": "Deelplein",
       "kort": "plein",
-      "capaciteit": 40,
-      "aanname": true,
-      "capaciteitToelichting": "Ruim voldoende voor de groep die uit het lokaal vertrekt. Het getal is instelbaar.",
+      "capaciteit": 36,
+      "capaciteitToelichting": "Het leerplein verschilt per kolom (vmbo, mavo, havo, vwo); Uniekind gaat uit van 36 plekken per leerplein (Sander, november 2026). Het getal is instelbaar.",
       "alleenBij": "M",
       "alleenLaptop": true,
       "toezicht": "docent of onderwijsassistent",
@@ -668,7 +657,14 @@
     "plein": "Op het leerplein mag alleen de (school)laptop worden gebruikt, voor lesdoelen, onder toezicht van de aanwezige docent of onderwijsassistent. Er is cameratoezicht.",
     "onderwijsassistenten": "Er zijn onderwijsassistenten op school. Of er één beschikbaar is, verschilt per les; de docent geeft dat aan.",
     "pleinToezichtDoorDocent": true,
-    "pleinToezichtToelichting": "Aanname: de docent houdt vanuit het M-lokaal toezicht op het eigen, gekoppelde deelplein (met cameratoezicht). Zet op false als er altijd een onderwijsassistent op het plein moet zijn."
+    "pleinToezichtToelichting": "De docent houdt vanuit het M-lokaal toezicht op het eigen, gekoppelde deelplein (met cameratoezicht). Er lopen onderwijsassistenten rond, maar niet altijd. Zet op false als er altijd een onderwijsassistent op het plein moet zijn.",
+    "pleinZichtPerKolom": {
+      "vmbo": "goed",
+      "mavo": "beperkt",
+      "havo": "beperkt",
+      "vwo": "goed"
+    },
+    "pleinZichtToelichting": "Bij vmbo en vwo grenst het leerplein aan het M-lokaal, met ramen: je ziet het plein vanuit je lokaal. Bij mavo en havo is dat lastiger. Bij \"beperkt\" en zonder onderwijsassistent geeft Uniekind in de les een tip over toezicht (Sander, november 2026)."
   },
   "ondersteuning": [
     {
@@ -967,7 +963,7 @@
     "tool": "Microsoft Copilot met je schoolaccount",
     "toolAdres": "https://copilot.microsoft.com",
     "aanname": true,
-    "toelichting": "Welke AI-tool collega's mogen gebruiken, bepaalt de school. Pas 'tool' en 'toolAdres' aan als dat een andere tool of een ander adres is.",
+    "toelichting": "Waarschijnlijk Microsoft Copilot met het schoolaccount (Sander, november 2026; nog te bevestigen bij ICT). Welke AI-tool collega's mogen gebruiken, bepaalt de school. Pas 'tool' en 'toolAdres' aan als dat een andere tool of een ander adres is.",
     "apiBeschikbaar": false,
     "apiAdres": null,
     "apiToelichting": "De automatische koppeling staat uit. Zet hem pas aan na akkoord van de school en de functionaris gegevensbescherming van LVO, met een verwerkersovereenkomst en een afspraak over de kosten. Zie docs/api-route.md."

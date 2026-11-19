@@ -9,6 +9,7 @@ import { scoreWerkvorm } from './score.js';
 import { planSplitsing, OPZETTEN } from './splitsplanner.js';
 import { controleerLes } from './controle.js';
 import { uitlegWerkvorm, uitlegLes } from './uitleg.js';
+import { termen } from '../data/termen.js';
 
 export const LESVERSIE = 1;
 export const STANDEN = { 1: 'Klassikaal-plus', 2: 'Een stap verder', 3: 'Volledig Uniekind' };
@@ -490,6 +491,9 @@ export function bouwLes(ctx, items) {
   if (ctx.reeks === 'toets' && aanbod('examenstress')?.inDeLes) les.tips.push(aanbod('examenstress').inDeLes);
   if (ctx.inhoud.misvattingen) les.tips.push(`Bekende struikelpunten: ${ctx.inhoud.misvattingen}. Gebruik ze als foute antwoorden in je check.`);
   if (split.waarschuwing) les.tips.push(split.waarschuwing);
+  if (ctx.pleinZicht === 'beperkt' && !ctx.oa && fases.some((f) => f.blokken.some((b) => b.plek === 'plein'))) {
+    les.tips.push(`Bij ${ctx.afdeling.naam} kijk je vanuit het ${termen.M} minder goed op het ${termen.plein}. Is er geen onderwijsassistent, zet dan de groep die het zelfstandigst werkt op het ${termen.plein}, spreek vooraf af waar ze zitten en loop er tussen twee instructiemomenten even langs.`);
+  }
   if (ctx.inhoud.actualiteit) les.tips.push('Actualiteitsmoment: kies een nieuwsbericht van deze week. Bij Materiaal staan zoeklinks naar nieuwsbronnen; laat leerlingen ook een ander perspectief op het bericht bedenken.');
   if (ctx.sectie?.lesmodel && ctx.docent.lesmodel === ctx.sectie.lesmodel && ctx.sectie.lesmodel !== ctx.profiel.didactiek.lesmodel) {
     const naam = ctx.profiel.didactiek.lesmodelOpties.find((o) => o.id === ctx.sectie.lesmodel)?.naam ?? ctx.sectie.lesmodel;

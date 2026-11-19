@@ -65,6 +65,8 @@ export function schoonProfiel(eigen, basis) {
   if (!['bloom', 'rtti'].includes(p.didactiek.taxonomie)) p.didactiek.taxonomie = basis.didactiek.taxonomie;
   if (!p.didactiek.lesmodelOpties?.some((o) => o.id === p.didactiek.lesmodel)) p.didactiek.lesmodel = basis.didactiek.lesmodel;
   p.regels.telefoon = { ...basis.regels.telefoon, ...(isObj(p.regels.telefoon) ? p.regels.telefoon : {}) };
+  // Zicht op het plein vanuit het instructielokaal, per kolom: 'goed' of 'beperkt' (onbekend = goed)
+  p.regels.pleinZichtPerKolom = Object.fromEntries(Object.entries(isObj(p.regels.pleinZichtPerKolom) ? p.regels.pleinZichtPerKolom : {}).filter(([k, v]) => typeof k === 'string' && ['goed', 'beperkt'].includes(v)));
   p.uniekind.titel = tekst(p.uniekind.titel, 40) || basis.uniekind.titel;
   p.uniekind.eigenProfiel = basis.uniekind.eigenProfiel;
   p.generator = { ...basis.generator, visieAccenten: Array.isArray(p.generator?.visieAccenten) ? p.generator.visieAccenten.filter((x) => typeof x === 'string').slice(0, 20) : basis.generator.visieAccenten };

@@ -110,6 +110,7 @@ export function maakContext(invoer, profiel) {
     laptops: ['alle', 'deel', 'geen'].includes(c.laptops) ? c.laptops : 'alle',
     reeks: c.reeks ?? 'uitleg', tijdstip: c.tijdstip ?? 'midden',
     capaciteit, pleinMogelijk, stilteMogelijk,
+    pleinZicht: profiel.regels.pleinZichtPerKolom?.[afdeling.kolom] ?? 'goed',
     inhoud: { ...inh, doelen: doelInfo }, niveaus,
     verdeling, behoeften,
     dynamiek: k.dynamiek ?? 'rustig', samenwerken: k.samenwerken ?? 'goed',
