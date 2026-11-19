@@ -2,7 +2,7 @@
 
 **Datum:** 18 november 2026
 
-**Automatische tests: 211 van 211 geslaagd** (`npm test`), waarvan 19 nieuw in `tests/overige-vakken.test.js`. Kennisbank, profielen en 445 kaders geldig (`npm run valideer`).
+**Automatische tests: 211 van 211 geslaagd** (`npm test`; met de aanvulling van 19 november 212), waarvan 19 nieuw in `tests/overige-vakken.test.js`. Kennisbank, profielen en 445 kaders geldig (`npm run valideer`).
 
 **Controle in de browser:** `node tools/controleer-site.cjs` op de gebouwde site. Uitkomst: 150 controles, 0 problemen (axe WCAG 2.1 AA, breedte, fouten, externe verbindingen, downloads). Getest op laptop, digibord en telefoon, in licht en donker. Daarnaast met axe op 375 px en op laptop, in licht en donker:
 - de werkplek havo met Nederlands en met Spaans;
@@ -71,6 +71,15 @@ Uitkomst: 0 overtredingen, nergens zijwaarts scrollen.
 - Codes zoals "RKT2.1" zijn van SLO; per niveau staat alleen het niveau zelf als code.
 
 **Controle van het importscript:** opnieuw draaien met de nieuwste SLO-data gaf voor de bestaande 442 kaders precies dezelfde uitkomst; alleen de datum verschilde. Er zijn dus geen bestaande gegevens veranderd. Totaal: 445 kaders in 60 vakken, ruim 26.500 regels (6,9 MB, per vak geladen als je het opent).
+
+## 4. Vakken op alfabet (aanvulling, 19 november)
+**Aanleiding.** Sander miste T&T bij mavo. Het vak stond er wel, maar achteraan de lijst, na Lichamelijke opvoeding. De volgorde kwam uit het schoolprofiel.
+
+**Oplossing.** In elke keuzelijst staan de vakken nu op alfabet (`opNaam` in `src/data/overige-vakken.js`): in de lesmaker, op de werkplek en bij *Mijn vakken*. T&T staat daardoor onder de T, tussen Scheikunde en Wiskunde. De overige vakken staan in hun eigen groep, ook op alfabet. Het schoolprofiel zelf houdt zijn volgorde, en Nederlands blijft het standaardvak.
+
+**Controle.**
+- `npm test`: 212 van 212 geslaagd. De nieuwe test bewaakt de volgorde en dat T&T na Scheikunde staat.
+- `node tools/controleer-site.cjs` op de gebouwde site: 150 controles, 0 problemen.
 
 ## Nachtcontrole
 `tools/controleer-site.cjs` klapt nu ook de andere varianten open en opent een Wijzig-paneel. Op de huidige live site, die deze onderdelen nog niet heeft, slaat het die stappen over: 138 controles, 0 problemen.

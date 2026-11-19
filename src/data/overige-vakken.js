@@ -34,5 +34,8 @@ export function metOverigeVakken(profiel) {
 /** Het profiel zonder de overige vakken, bijvoorbeeld om het schoolprofiel te bewerken of te downloaden. */
 export const zonderOverigeVakken = (profiel) => ({ ...profiel, vakken: profiel.vakken.filter((v) => !v.overig) });
 
-/** Keuzelijst [id, naam, groep] voor een select; de overige vakken komen in een eigen groep. */
-export const vakKeuzes = (vakken) => vakken.map((v) => [v.id, v.naam, v.overig ? 'Overige vakken (alle stof van SLO)' : '']);
+/** Vakken op alfabetische volgorde (T&T staat dan onder de T). Verandert de volgorde in het profiel niet. */
+export const opNaam = (vakken) => [...vakken].sort((a, b) => a.naam.localeCompare(b.naam, 'nl', { sensitivity: 'base' }));
+
+/** Keuzelijst [id, naam, groep] voor een select, op alfabet; de overige vakken komen in een eigen groep. */
+export const vakKeuzes = (vakken) => opNaam(vakken).map((v) => [v.id, v.naam, v.overig ? 'Overige vakken (alle stof van SLO)' : '']);

@@ -3,7 +3,7 @@ import { html, raw } from '../util/html.js';
 import { controleerLesdoel } from '../engine/tekst.js';
 import { DOCENTSTIJL, DENKNIVEAU } from '../data/labels.js';
 import { eindtermenVeld } from './eindtermen.js';
-import { vakKeuzes } from '../data/overige-vakken.js';
+import { vakKeuzes, opNaam } from '../data/overige-vakken.js';
 
 /* ── Bouwstenen ─────────────────────────────────── */
 
@@ -101,7 +101,7 @@ export function stapProfiel({ profiel, concept }) {
   </div>`;
   return html`
     <p class="stapintro">Dit vul je één keer in; Uniekind onthoudt het in deze browser. Er is geen goed of fout antwoord. Uniekind begint bij hoe jij nu lesgeeft.</p>
-    ${vinkveld('docent.vakken', 'Mijn vakken', profiel.vakken.map((v) => [v.id, v.naam]), d.vakken)}
+    ${vinkveld('docent.vakken', 'Mijn vakken', opNaam(profiel.vakken).map((v) => [v.id, v.naam]), d.vakken)}
     ${vinkveld('docent.afdelingen', 'Afdelingen waar ik lesgeef', afdelingOpties(profiel), d.afdelingen)}
     <fieldset class="veld"><legend>Hoe geef jij nu les? ${info('Uniekind zoekt werkvormen die bij jou passen. Bij "Klassikaal-plus" telt dit het zwaarst; bij "Volledig Uniekind" iets minder, zodat je kunt groeien zonder overvallen te worden.')}</legend>
       <div class="schalen">${Object.entries(DOCENTSTIJL).map(([k, t]) => schaal(k, t))}</div>

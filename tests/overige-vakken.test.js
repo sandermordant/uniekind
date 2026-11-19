@@ -41,6 +41,13 @@ describe('Overige vakken', () => {
     expect(zonderOverigeVakken(profiel).vakken).toHaveLength(data.profiel.vakken.length);
   });
 
+  it('in een keuzelijst staan de vakken op alfabet, dus T&T onder de T', () => {
+    const mavo = vakKeuzes(profiel.vakken.filter((v) => !v.overig && (v.afdelingen === 'alle' || v.afdelingen.includes('mavo')))).map((k) => k[1]);
+    expect(mavo).toEqual([...mavo].sort((a, b) => a.localeCompare(b, 'nl', { sensitivity: 'base' })));
+    expect(mavo.indexOf('T&T (Technologie & Toepassen)')).toBeGreaterThan(mavo.indexOf('Scheikunde'));
+    expect(profiel.vakken[0].id).toBe('nederlands'); // het profiel zelf houdt zijn volgorde
+  });
+
   it('in een keuzelijst staan de overige vakken in een eigen groep', () => {
     const k = vakKeuzes(profiel.vakken);
     expect(k.find(([id]) => id === 'nederlands')[2]).toBe('');
