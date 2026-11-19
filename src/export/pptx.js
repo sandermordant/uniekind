@@ -1,7 +1,7 @@
 // Les → PowerPoint (.pptx) met PptxGenJS: een dia per lesfase in de huisstijl.
 // De docent past hem verder aan in PowerPoint. In de notities staat wat je zegt en hoe de werkvorm gaat.
 import { segmenten, hex } from './delen.js';
-import { checkvraag, regelsVan } from '../ai/import.js';
+import { checkvraag, regelsVan, uitlegDias } from '../ai/import.js';
 import { termen, groot } from '../data/termen.js';
 
 const PLEK = { lokaal: 'Lokaal', get plein() { return groot(termen.plein); }, get stilte() { return groot(termen.stilte); } };
@@ -47,6 +47,7 @@ export async function naarPptx(les, data, o = {}) {
   t.addText(titelDoelen.length ? titelDoelen.map((d) => ({ text: d, options: { bullet: true } })) : [{ text: '⟦Lesdoel⟧', options: { bullet: true, highlight: 'FFF3C4' } }], { x: 0.9, y: 3.5, w: 11.5, h: 2.2, fontSize: 24, color: '111827', fontFace: font, valign: 'top' });
   t.addNotes(les.waarom);
 
+  const diaTekst = (d) => [{ text: d.titel, options: { fontSize: 30, bold: true, color: A, breakLine: true } }, ...d.regels.map((x) => ({ text: x, options: { bullet: true, fontSize: 24, breakLine: true } }))];
   for (const f of les.fases) {
     const s = pptx.addSlide({ masterName: 'UNIEKIND' });
     s.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: 13.333, h: 1.15, fill: { color: A } });
@@ -58,6 +59,7 @@ export async function naarPptx(les, data, o = {}) {
     if (fDoelen[0]) s.addText(`${laagVan(f) ? `Laag ${laag(laagVan(f)).code} · ` : ''}Lesdoel: ${fDoelen[0]}`, { x: 0.5, y: 1.25, w: 12.3, h: 0.45, fontSize: 14, color: '4B5563', fontFace: font });
 
     const notities = [];
+    let extraDias = [];
     const blokken = f.blokken.filter((b) => !b.vervolg || f.blokken.length > 1);
     if (f.type === 'doel') {
       s.addText([
@@ -85,8 +87,15 @@ export async function naarPptx(les, data, o = {}) {
       const it = b?.werkvorm ? itemMap.get(b.werkvorm.id) : null;
       const hoogte = anderen.length ? 3.6 : 4.8;
       if (f.type === 'instructie') {
-        s.addShape(pptx.ShapeType.rect, { x: 0.7, y: 1.95, w: 11.9, h: hoogte, line: { color: 'D79A00', dashType: 'dash', width: 1.5 }, fill: { color: 'FFFBEB' } });
-        s.addText('Plaats voor je eigen uitleg: tekst, schema, uitgewerkt voorbeeld', { x: 0.9, y: 1.95 + hoogte / 2 - 0.5, w: 11.5, h: 1, fontSize: 24, color: '7A4B00', align: 'center', fontFace: font });
+        // Uitlegdia's van AI (op basis van de stof en het eigen materiaal): de eerste op deze dia, de rest erachter
+        const dias = fAi['UITLEG-DIAS'] ? uitlegDias(fAi['UITLEG-DIAS']) : [];
+        if (dias.length) {
+          s.addText(diaTekst(dias[0]), { x: 0.7, y: 1.95, w: 12, h: hoogte, valign: 'top', fontFace: font, color: '111827' });
+          extraDias = dias.slice(1);
+        } else {
+          s.addShape(pptx.ShapeType.rect, { x: 0.7, y: 1.95, w: 11.9, h: hoogte, line: { color: 'D79A00', dashType: 'dash', width: 1.5 }, fill: { color: 'FFFBEB' } });
+          s.addText('Plaats voor je eigen uitleg: tekst, schema, uitgewerkt voorbeeld', { x: 0.9, y: 1.95 + hoogte / 2 - 0.5, w: 11.5, h: 1, fontSize: 24, color: '7A4B00', align: 'center', fontFace: font });
+        }
       } else {
         const regels = [];
         if (it) regels.push({ text: it.naam, options: { fontSize: 30, bold: true, color: A, breakLine: true } });
@@ -122,6 +131,12 @@ export async function naarPptx(les, data, o = {}) {
       if (it && !b.vervolg) notities.push(`${it.naam}${les.groepen.length > 1 ? ` (${b.groepen.join('+')}, ${PLEK[b.plek]})` : ''}\nJe zegt: "${it.startzin}"\n${it.stappen.map((x, i) => `${i + 1}. ${x}`).join('\n')}${it.alsDan?.length ? '\nAls-dan:\n' + it.alsDan.map((r) => `- Als ${r.als}: ${r.dan}`).join('\n') : ''}`);
     }
     if (notities.length) s.addNotes(notities.join('\n\n').replace(/[⟦⟧]/g, ''));
+    for (const d of extraDias) {
+      const e = pptx.addSlide({ masterName: 'UNIEKIND' });
+      e.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: 13.333, h: 1.15, fill: { color: A } });
+      e.addText(`${f.titel} (vervolg)`, { x: 0.5, y: 0.15, w: 12.3, h: 0.85, fontSize: 30, bold: true, color: 'FFFFFF', fontFace: font });
+      e.addText(diaTekst(d), { x: 0.7, y: 1.5, w: 12, h: 5.2, valign: 'top', fontFace: font, color: '111827' });
+    }
   }
 
   // Routeschema

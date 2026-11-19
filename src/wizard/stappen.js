@@ -5,6 +5,8 @@ import { DOCENTSTIJL, DENKNIVEAU } from '../data/labels.js';
 import { eindtermenVeld } from './eindtermen.js';
 import { vakKeuzes, opNaam } from '../data/overige-vakken.js';
 import { klasLabel, klasCode } from '../data/klas.js';
+import { SOORTEN, signalenLeerlinggegevens } from '../ocr/document-info.js';
+import { MAX_TEKST } from '../ai/prompt.js';
 
 /* ── Bouwstenen ─────────────────────────────────── */
 
@@ -128,6 +130,35 @@ export function standKiezer(pad, waarde, label) {
 }
 
 /** Lesdoelen: een of meer, elk met een controle op waarneembaarheid en denkniveau. */
+/** Bestand kiezen of slepen: Word, PowerPoint, PDF, tekst of een foto. Wordt in de browser gelezen. */
+function documentKiezer() {
+  return html`<label class="dropvak" id="docVak" for="docBestand">
+      <span><b>Kies of sleep je eigen materiaal</b><br>Word (.docx), PowerPoint (.pptx), PDF, tekst of een foto.</span>
+      <input type="file" id="docBestand" accept="${SOORTEN}">
+    </label>
+    <p class="hulp">Het bestand blijft op je computer: Uniekind leest het in je browser, stuurt het nergens heen en bewaart alleen de tekst in deze les. Haal namen en gegevens van leerlingen eruit.</p>
+    <div id="docStatus" aria-live="polite"></div>`;
+}
+
+/** Snelle modus: eigen materiaal (optioneel). De tekst is de basis voor de AI-opdracht en voor lesdoelen en kernbegrippen. */
+function eigenMateriaalVeld(concept) {
+  const tekst = concept.invoer.inhoud.tekst ?? '';
+  const woorden = tekst.trim() ? tekst.trim().split(/\s+/).length : 0;
+  const signalen = signalenLeerlinggegevens(tekst);
+  return html`<details class="uitleg eigen-materiaal" ${woorden || concept.docMelding ? 'open' : ''}>
+    <summary>Eigen materiaal of lesstof toevoegen <span class="hulp">(optioneel)</span></summary>
+    <p class="hulp">Heb je al een werkblad, PowerPoint of tekst uit de methode? Voeg het toe. Uniekind haalt er lesdoelen en kernbegrippen uit, en bij <b>Maak af met AI</b> gaat het mee als basis: de werkbladen op drie niveaus, de vragen en de uitlegdia's van de presentatie worden dan op jouw materiaal gebouwd.</p>
+    ${documentKiezer()}
+    ${concept.docMelding ? html`<p class="melding">${concept.docMelding}</p>` : ''}
+    <div class="veld"><label for="v-inhoud-tekst-snel">Of plak de tekst</label>
+      <textarea id="v-inhoud-tekst-snel" data-pad="inhoud.tekst" rows="5" placeholder="Plak hier de tekst van je werkblad, paragraaf of dia's.">${tekst}</textarea>
+      ${woorden ? html`<span class="hulp">${woorden} woorden. ${tekst.length > MAX_TEKST ? `Het is lang: de eerste ${MAX_TEKST.toLocaleString('nl-NL')} tekens gaan mee in de AI-opdracht.` : 'Dit gaat mee in de AI-opdracht.'}</span>` : ''}
+    </div>
+    ${signalen.length ? html`<p class="melding let-op">In je materiaal staan woorden als "${signalen.join('", "')}". Staan er gegevens over leerlingen in, haal ze er dan uit voordat je de AI-opdracht kopieert.</p>` : ''}
+    ${woorden ? html`<div class="knoppen klein-boven"><button type="button" class="knop secundair klein" data-actie="analyseer">Haal lesdoelen en kernbegrippen eruit</button></div>` : ''}
+  </details>`;
+}
+
 export function lesdoelenVeld(inh, tax, rtti) {
   return html`
     <fieldset class="veld"><legend>Lesdoelen ${info('Schrijf het doel zo dat je kunt zien of horen of het gelukt is: "Je kunt uitleggen…", niet "Je begrijpt…". Uniekind koppelt elk doel aan een denkniveau.')}</legend>
@@ -194,11 +225,12 @@ export function stapInhoud(ctx) {
     ${tekstveld('inhoud.onderwerp', 'Onderwerp of paragraaftitel', inh.onderwerp, { placeholder: 'Bijvoorbeeld: 3.2 Inflatie' })}
     <fieldset class="veld"><legend>De stof</legend>
       <div class="tabs" role="tablist">
-        ${[['tekst', 'Tekst plakken'], ['kernwoorden', 'Alleen kernwoorden'], ['foto', 'Foto van de paragraaf']].map(([k, v]) => html`<button type="button" role="tab" aria-selected="${bron === k}" data-actie="bron" data-bron="${k}">${v}</button>`)}
+        ${[['tekst', 'Tekst plakken'], ['document', 'Eigen document'], ['kernwoorden', 'Alleen kernwoorden'], ['foto', 'Foto van de paragraaf']].map(([k, v]) => html`<button type="button" role="tab" aria-selected="${bron === k}" data-actie="bron" data-bron="${k}">${v}</button>`)}
       </div>
       ${bron === 'tekst' ? html`
         <textarea id="v-inhoud-tekst" data-pad="inhoud.tekst" rows="7" aria-label="Tekst van de paragraaf" placeholder="Plak hier de tekst van de paragraaf, inclusief de leerdoelen als die erbij staan.">${inh.tekst ?? ''}</textarea>
         <div class="knoppen klein-boven"><button type="button" class="knop secundair klein" data-actie="analyseer">Haal lesdoelen en kernbegrippen uit de tekst</button></div>` : ''}
+      ${bron === 'document' ? documentKiezer() : ''}
       ${bron === 'kernwoorden' ? html`<p class="hulp">Typ hieronder bij Kernbegrippen de woorden die centraal staan. Meer is niet nodig.</p>` : ''}
       ${bron === 'foto' ? html`
         <label class="dropvak" id="ocrVak" for="ocrBestand">
@@ -262,6 +294,7 @@ export function stapSnel(ctx) {
     <p class="stapintro">Een paar vragen, de rest vult Uniekind in met verstandige standaardwaarden. Je kunt daarna alles aanpassen.</p>
     ${tekstveld('inhoud.onderwerp', 'Onderwerp', inh.onderwerp, { placeholder: 'Bijvoorbeeld: 3.2 Inflatie' })}
     ${lesdoelenVeld(inh, tax, rtti)}
+    ${eigenMateriaalVeld(concept)}
     <div class="veldrij">
       ${keuzeveld('context.afdeling', 'Afdeling', afdelingOpties(profiel), c.afdeling, { herteken: true })}
       ${keuzeveld('context.leerjaar', 'Leerjaar', leerjaarOpties(afd), c.leerjaar, { getal: true, herteken: true })}

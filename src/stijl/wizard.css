@@ -236,3 +236,9 @@ details.waaromdeze .onderbouwing { color: var(--muted); }
 .veldrij.klein-boven { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
 .voortgang { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin-top: 0.75rem; max-width: 40rem; }
 .voortgang span { display: block; height: 100%; background: var(--accent); transition: width 0.3s; }
+
+/* Eigen materiaal (snelle modus): de stapkolom mag niet breder worden dan het scherm */
+#stapinhoud { grid-template-columns: minmax(0, 1fr); }
+details.eigen-materiaal { min-width: 0; }
+details.eigen-materiaal[open] { display: grid; gap: 0.6rem; }
+details.eigen-materiaal textarea { width: 100%; }

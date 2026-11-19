@@ -4,7 +4,7 @@
 // Nooit klasgegevens: geen aantallen, geen ondersteuningsbehoeften, geen namen.
 import { ONDERDELEN, PAKKETTEN } from './formaat.js';
 
-const MAX_TEKST = 6000;
+export const MAX_TEKST = 12000; // eigen materiaal van de docent; langer wordt ingekort (de site meldt dat)
 const DENK = { onthouden: 'onthouden', begrijpen: 'begrijpen', toepassen: 'toepassen', analyseren: 'analyseren', evalueren: 'evalueren', creeren: 'creëren' };
 const ROUTE = { steun: 'steun (extra uitleg aan de instructietafel)', basis: 'basis (zelfstandig verwerken)', verdieping: 'verdieping (voor wie het lesdoel al beheerst)', zelfstandig: 'zelfstandig verwerken', wissel: 'wisselgroep', klas: 'hele klas', stilte: 'stilteruimte' };
 
@@ -38,7 +38,7 @@ export function maakPrompt(les, profiel, pakketId = 'alles', nodig = null) {
     `Routes: ${routes.join('; ')}. Iedereen werkt aan hetzelfde lesdoel, met meer of minder steun; alleen de verdieping gaat verder dan het doel.`,
     ...(les.invoer?.inhoud?.misvattingen ? [`Bekende misvattingen: ${les.invoer.inhoud.misvattingen}`] : []),
     '',
-    ...(bron ? ['TEKST VAN DE PARAGRAAF (gebruik deze als bron; ga er niet buiten tenzij het nodig is voor een voorbeeld)', '"""', bron, '"""', ''] : []),
+    ...(bron ? ['STOF EN EIGEN MATERIAAL VAN DE DOCENT (dit is de basis: neem de inhoud, voorbeelden, opgaven en volgorde over en maak er materiaal op drie niveaus van; ga er niet buiten tenzij het nodig is voor een voorbeeld)', '"""', bron, '"""', ''] : []),
     'REGELS',
     '- Blijf bij de stof en het niveau van deze les. Verzin geen feiten, jaartallen, cijfers of bronnen.',
     '- Opdrachten gebruiken nooit een mobiele telefoon. Digitaal werken gaat via de schoollaptop.',
@@ -54,8 +54,10 @@ export function maakPrompt(les, profiel, pakketId = 'alles', nodig = null) {
 /** Controleert of een prompt geen klas- of leerlinggegevens bevat (gebruikt in de tests en als vangnet). */
 export function bevatKlasgegevens(prompt, les) {
   const k = les.invoer?.klas ?? {};
+  // Het eigen materiaal van de docent (tussen """) telt hier niet mee: daarvoor krijgt de docent een eigen waarschuwing
+  const opgebouwd = String(prompt).replace(/"""[\s\S]*?"""/g, '');
   const woorden = /\b(dyslexie|dyscalculie|faalangst|nt2|hoogbegaafd|ondersteuningsbehoefte|leerlingnaam)\b/i;
-  if (woorden.test(prompt)) return true;
+  if (woorden.test(opgebouwd)) return true;
   const getallen = ['steun', 'basis', 'verdieping', 'dyslexie', 'nt2', 'faalangst'].map((x) => Number(k[x])).filter((n) => n > 1);
-  return getallen.some((n) => new RegExp(`\\b${n} leerlingen\\b`).test(prompt));
+  return getallen.some((n) => new RegExp(`\\b${n} leerlingen\\b`).test(opgebouwd));
 }

@@ -125,6 +125,16 @@ Alle materiaal wordt eerst beschreven in één **documentmodel** (`src/materiaal
 
 De herkenning draait volledig in de browser met Tesseract.js en het Nederlandse taalpakket. `tools/kopieer-ocr.js` zet de benodigde bestanden (worker, rekenkern, taalpakket; samen ongeveer 11 MB) bij het bouwen in `public/ocr/`, zodat de site niets van een andere server hoeft te halen. De foto verlaat de computer niet en wordt niet bewaard; alleen het taalpakket blijft in de cache van de browser. Na herkenning haalt Uniekind de lesdoelen (patronen als "Leerdoelen", "Je kunt…") en kernbegrippen uit de tekst; de docent controleert en verbetert.
 
+## Eigen materiaal van de docent
+
+Docenten kunnen eigen materiaal toevoegen: in de snelle modus via *Eigen materiaal of lesstof toevoegen* (optioneel), en in de uitgebreide modus bij Inhoud via het tabblad *Eigen document*.
+- **Wat Uniekind leest** (`src/ocr/document.js`): Word (.docx, ook tabellen), PowerPoint (.pptx, per dia), PDF met tekst (pdf.js van Mozilla, alleen geladen als iemand een PDF kiest), tekst en foto's (via de OCR).
+- **Privacy:** alles gebeurt in de browser. Het bestand gaat nergens heen en wordt niet bewaard; alleen de tekst komt in de les (`inhoud.tekst`).
+- **Wat Uniekind ermee doet:** het haalt er lesdoelen, kernbegrippen en een onderwerp uit. Bij *Maak af met AI* gaat de tekst mee als basis: werkbladen op drie niveaus, vragen en uitlegdia's worden op dat materiaal gebouwd. Langer dan 12.000 tekens wordt ingekort; de site meldt dat.
+- **Gegevens over leerlingen:** staan er woorden in als "dyslexie" of "handelingsplan" (`signalenLeerlinggegevens` in `src/ocr/document-info.js`), dan krijgt de docent een waarschuwing om gegevens over leerlingen eruit te halen. Een vakinhoudelijke tekst over bijvoorbeeld dyslexie blokkeert de opdracht niet. De controle op klasgegevens in de rest van de opdracht blijft streng.
+- **Uitlegdia's** (AI-onderdeel `UITLEG-DIAS`): 3 tot 6 dia's voor de instructie. Ze komen in de presentatie in plaats van het lege vak "Plaats voor je eigen uitleg", met vervolgdia's. De PowerPoint van de docent zelf blijft ongewijzigd; Uniekind maakt een nieuwe presentatie met die inhoud.
+- **Twee lagen:** het eigen materiaal hoort bij laag 1. Een laag met een ander onderwerp krijgt het niet mee in de AI-opdracht.
+
 ## De AI-brug
 
 Bij het materiaal staat **Maak af met AI**. Uniekind maakt een prompt met alleen lesinhoud (vak, niveau, lesdoelen, kernbegrippen, de tekst, de werkvormen) en vraagt het antwoord in vaste blokken (`### VRAGEN-BASIS`, `### HINTKAART-1`, …; zie `src/ai/formaat.js`). De docent plakt de prompt in de AI-tool van de school, plakt het antwoord terug, en Uniekind zet herkende blokken in de juiste sjablonen. Wat niet herkend wordt, toont Uniekind apart. Er zijn ook kleine prompts per materiaalsoort.
@@ -186,6 +196,7 @@ De generator (`src/engine/`) is deterministisch: dezelfde invoer geeft dezelfde 
 - Docentprofiel, voorkeuren en concepten worden in de browser (localStorage) bewaard. Als opslag geblokkeerd is, werkt de site gewoon, maar onthoudt hij niets.
 - **Mijn lessen** (`src/opslag/logboek.js`, sleutel `uniekind:lessen`): per les alleen datum, onderwerp, vak, afdeling, lesduur, stand, opzet, de werkvormen en de reflectie van de docent (duim per werkvorm, twee korte teksten). Hooguit 40 lessen. De duimen gaan als `uniekind:duimen` naar de generator. In Mijn profiel kan de docent alles downloaden, inlezen op een andere laptop en wissen.
 - Een **lesbestand** bewaart de gekozen werkvorm per blok, zodat een les op een andere computer hetzelfde opent, ook als daar andere reflecties staan.
+- **Eigen documenten** (Word, PowerPoint, PDF, foto) worden in de browser gelezen en nergens heen gestuurd; alleen de tekst komt in de les.
 - De Sophianum-versie heeft `noindex`, zodat zoekmachines hem niet opnemen.
 - De pagina **Privacy** legt dit in gewone taal uit.
 - **Toegangscode:** in het profiel staat `"toegangscode": null`. Vul je daar een woord in, dan vraagt de site het één keer bij het eerste bezoek. **Dit is een drempel, geen beveiliging**: iedereen kan het woord in de broncode lezen. Zet er dus nooit iets vertrouwelijks achter.

@@ -2,7 +2,7 @@
 
 Uniekind is een statische website (Vite, vanilla JS) die docenten van het Sophianum (Gulpen) helpt gedifferentieerde lessen te maken. Eigenaar: Sander. Online via GitHub Pages: https://sandermordant.github.io/uniekind/ (workflow `.github/workflows/pages.yml`, draait bij elke push naar `main` eerst `npm test`, dan `npm run site`).
 
-Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (laatste: `testverslag-twee-lagen.md`).
+Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (laatste: `testverslag-eigen-materiaal.md`).
 
 ## Harde afspraken (niet van afwijken)
 - Route A: geen server, geen database, geen accounts, geen API-sleutel. Alles draait in de browser.
@@ -27,6 +27,7 @@ Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (la
 - Plein: M-lokaal 26 leerlingen, leerplein 36. Docent houdt toezicht vanuit het M-lokaal; zicht goed bij vmbo en vwo, beperkt bij mavo en havo. Onderwijsassistenten zijn er niet altijd.
 - Geen toegangscode (advies: niets vertrouwelijks op de site, een code geeft alleen drempel en schijnveiligheid).
 - AI-tool: waarschijnlijk Copilot met het schoolaccount (nog te bevestigen).
+- Eigen materiaal (Word, PowerPoint, PDF, tekst, foto) wordt in de browser gelezen en nooit verstuurd of bewaard; alleen de tekst gaat mee in de les en, via de docent zelf, in de AI-opdracht. Geen API-kosten: de AI-brug is kopiëren en plakken in de AI-tool van de school.
 - SLO-data komt uit de open data op GitHub (MIT), te vernieuwen met `npm run importeer-slo -- <map>` (zie README): kerndoelen, leerdoelenkaarten, examenprogramma's, syllabi, beroepsgericht vmbo, referentiekader taal en rekenen en het ERK. Examenopgaven zelf zitten er niet in (CvTE); docenten plakken of fotograferen ze.
 
 ## Werkwijze

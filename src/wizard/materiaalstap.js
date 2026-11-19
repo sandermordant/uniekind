@@ -10,6 +10,8 @@ import { profielId } from '../data/laden.js';
 import { PAKKETTEN, ONDERDELEN, nodigVoorMateriaal } from '../ai/formaat.js';
 import { aiInstellingen, promptVoor } from '../ai/adapter.js';
 import { sectieVoor } from '../data/sectie-accenten.js';
+import { signalenLeerlinggegevens } from '../ocr/document-info.js';
+import { MAX_TEKST } from '../ai/prompt.js';
 import { eigenSectieAccenten } from './staat.js';
 
 export function pakketVoor(les, data, staat, concept = {}) {
@@ -42,11 +44,15 @@ function aiPaneel(les, data, staat, concept, p) {
   try { prompt = promptVoor(lesAi, data.profiel, pakket, nodig); } catch (e) { fout = e.message; }
   const v = staat.aiVoorstel;
   const huidig = Object.keys((laagId && laagId !== 'A' ? concept.aiLagen?.[laagId] : concept.ai) ?? {});
+  const eigen = String(lesAi.invoer?.inhoud?.tekst ?? '').trim();
+  const signalen = signalenLeerlinggegevens(eigen);
   return html`
     <details class="paneel" data-paneel="ai" ${staat.open?.ai ? 'open' : ''}>
       <summary>Maak af met AI ${huidig.length ? html`<span class="chip">${huidig.length} onderdelen ingevuld</span>` : ''}</summary>
       <div class="paneel-inhoud">
         <p class="melding">Gebruik de AI-tool die de school toestaat, met je schoolaccount (${inst.tool}). De prompt bevat alleen lesinhoud: geen namen en geen gegevens over je klas.</p>
+        ${eigen ? html`<p class="melding ok">Je eigen materiaal (${eigen.split(/\s+/).length} woorden) gaat mee als basis${eigen.length > MAX_TEKST ? `; het is lang, dus de eerste ${MAX_TEKST.toLocaleString('nl-NL')} tekens` : ''}. De werkbladen, vragen en uitlegdia's worden daarop gebouwd.</p>` : html`<p class="hulp">Heb je eigen materiaal? Voeg het toe bij de eerste stap (Eigen materiaal of lesstof); dan bouwt AI daarop.</p>`}
+        ${signalen.length ? html`<p class="melding let-op">In je eigen materiaal staan woorden als "${signalen.join('", "')}". Haal gegevens over leerlingen eruit voordat je de opdracht kopieert.</p>` : ''}
         <p class="melding let-op"><b>Lees AI-materiaal altijd na op juistheid en niveau.</b> AI helpt bij het voorbereiden; jij blijft de vakexpert. Een AI-tool kan fouten maken die overtuigend klinken. Gebruik AI als hulp, niet als vervanging van je eigen voorbereiding, zodat je er niet afhankelijk van wordt.</p>
         ${laagId ? html`<div class="veld"><label for="aiLaag"><b>Voor welke laag?</b></label>
           <select id="aiLaag" data-actie="ai-laag">${les.lagen.map((l) => html`<option value="${l.id}" ${l.id === laagId ? 'selected' : ''}>Laag ${l.code}${l.onderwerp ? `: ${l.onderwerp}` : ''}</option>`)}</select>

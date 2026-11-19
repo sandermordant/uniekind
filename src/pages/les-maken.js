@@ -168,6 +168,30 @@ export default {
           if (!inv().inhoud.onderwerp) inv().inhoud.onderwerp = tekst.split('\n').find((r) => r.trim())?.trim().slice(0, 80) ?? '';
           return doelen.length;
         };
+        // Eigen materiaal inlezen (Word, PowerPoint, PDF, tekst, foto): alleen de tekst komt in de les
+        const leesEigen = async (bestand) => {
+          if (!bestand) return;
+          const st = $('#docStatus', root);
+          const toon = (f, t) => { if (st) st.innerHTML = `<div class="voortgang"><span style="width:${Math.round(f * 100)}%"></span></div><p class="hulp">${t}… ${Math.round(f * 100)}%</p>`; };
+          if (st) st.innerHTML = '<p class="hulp">Bezig met lezen…</p>';
+          try {
+            const { leesDocument } = await import('../ocr/document.js');
+            const d = await leesDocument(bestand, toon);
+            if (!d.tekst?.trim()) throw new Error('In dit bestand vindt Uniekind geen tekst.');
+            const oud = (inv().inhoud.tekst ?? '').trim();
+            inv().inhoud.tekst = oud ? `${oud}\n\n--- ${d.naam} ---\n${d.tekst}` : d.tekst;
+            const n = analyseer();
+            // In de snelle modus staan geen kernbegrippen: neem de eerste suggesties over als er nog geen zijn
+            if (!(inv().inhoud.begrippen ?? []).length && concept.suggesties?.begrippen?.length) inv().inhoud.begrippen = concept.suggesties.begrippen.slice(0, 5);
+            const woorden = d.tekst.trim().split(/\s+/).length;
+            concept.docMelding = `${d.soort === 'foto' ? 'Tekst herkend in' : 'Gelezen:'} ${d.naam} (${woorden} woorden). ${n ? `${n} lesdoel${n > 1 ? 'en' : ''} gevonden. ` : ''}${(inv().inhoud.begrippen ?? []).length ? `Kernbegrippen: ${inv().inhoud.begrippen.join(', ')}. ` : ''}Controleer of het klopt; bij Maak af met AI gaat je materiaal mee als basis.`;
+            if (concept.bron === 'document') concept.bron = 'tekst';
+            bewaar(); teken();
+          } catch (err) {
+            console.error(err);
+            if (st) st.innerHTML = `<p class="melding fout">${String(err.message || err).replace(/[<>&]/g, '')}</p>`;
+          }
+        };
         // Foto van de paragraaf herkennen
         const herkenFoto = async (bestand) => {
           if (!bestand) return;
@@ -249,6 +273,7 @@ export default {
           if (t.dataset.actie === 'kies-alt' && t.value) { inv().opties.vastgezet[t.dataset.sleutel] = t.value; bewaar(); teken(); }
           if (t.dataset.actie === 'splitsing') { inv().opties.splitsing = t.value; concept.aanpassingen = {}; bewaar(); teken(); }
           if (t.id === 'ocrBestand') return herkenFoto(t.files?.[0]);
+          if (t.id === 'docBestand') return leesEigen(t.files?.[0]);
           if (t.dataset.actie === 'ai-pakket') { matStaat().aiPakket = t.value; bewaar(); return teken(); }
           if (t.dataset.actie === 'ai-laag') { matStaat().aiLaag = t.value; matStaat().aiVoorstel = null; bewaar(); teken(); $('#aiLaag', root)?.focus(); return; }
           if (t.dataset.actie === 'link') {
@@ -390,8 +415,13 @@ export default {
         koppelDoelchecks();
         koppelSlepen();
         root.addEventListener('toggle', (e) => { const d = e.target; if (d.matches?.('details.paneel')) { (matStaat().open ??= {})[d.dataset.paneel] = d.open; bewaar(); } }, true);
-        root.addEventListener('dragover', (e) => { if (e.target.closest('#ocrVak')) { e.preventDefault(); e.target.closest('#ocrVak').classList.add('over'); } });
-        root.addEventListener('drop', (e) => { const v = e.target.closest('#ocrVak'); if (v) { e.preventDefault(); v.classList.remove('over'); herkenFoto(e.dataTransfer.files?.[0]); } });
+        root.addEventListener('dragover', (e) => { const v = e.target.closest('#ocrVak, #docVak'); if (v) { e.preventDefault(); v.classList.add('over'); } });
+        root.addEventListener('drop', (e) => {
+          const v = e.target.closest('#ocrVak, #docVak');
+          if (!v) return;
+          e.preventDefault(); v.classList.remove('over');
+          if (v.id === 'docVak') leesEigen(e.dataTransfer.files?.[0]); else herkenFoto(e.dataTransfer.files?.[0]);
+        });
       }
     };
   }

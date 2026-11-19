@@ -603,7 +603,11 @@ export function lesVoorLaag(les, laagId) {
   return {
     ...les, aantal: l.aantal, laag: l,
     doel: { ...les.doel, onderwerp: l.onderwerp || les.doel.onderwerp, lesdoelen: l.lesdoelen, begrippen: l.begrippen?.length ? l.begrippen : (l.id === 'A' ? les.doel.begrippen : []), eindtermen: l.id === 'A' ? les.doel.eindtermen : [] },
-    invoer: { ...les.invoer, context: { ...(les.invoer?.context ?? {}), afdeling: l.afdeling, leerjaar: l.leerjaar } }
+    invoer: {
+      ...les.invoer, context: { ...(les.invoer?.context ?? {}), afdeling: l.afdeling, leerjaar: l.leerjaar },
+      // Het eigen materiaal hoort bij laag 1; een laag met een ander onderwerp krijgt het niet mee
+      inhoud: { ...(les.invoer?.inhoud ?? {}), tekst: l.id === 'A' || l.onderwerp === les.lagen[0].onderwerp ? les.invoer?.inhoud?.tekst ?? '' : '' }
+    }
   };
 }
 

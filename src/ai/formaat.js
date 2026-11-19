@@ -18,6 +18,7 @@ export const ONDERDELEN = [
   { id: 'EXIT-TICKET', label: 'Exit tickets', vorm: 'Drie regels met één vraag per niveau: "Steun: …", "Basis: …", "Verdieping: …".' },
   { id: 'VAKTAAL', label: 'Vaktaal-steunkaart', vorm: 'Voor elk kernbegrip één regel: "begrip | omschrijving in eenvoudig Nederlands (taalniveau A2-B1) | korte voorbeeldzin".' },
   { id: 'RELEVANTIE', label: 'Relevantie-haak', vorm: 'Twee of drie zinnen die leerlingen laten zien waarom dit ertoe doet, met een concreet voorbeeld uit {regio}. Verzin geen feiten, cijfers of namen van bedrijven; weet je iets niet zeker, kies dan een alledaags voorbeeld uit het leven van een tiener.' },
+  { id: 'UITLEG-DIAS', label: "Uitlegdia's", vorm: 'De uitleg voor de instructie, verdeeld over 3 tot 6 dia\'s. Begin elke dia met een regel "Dia: titel" en zet daaronder 2 tot 5 korte regels die op de dia komen (kernwoorden en korte zinnen, geen lappen tekst). Gebruik de stof en het eigen materiaal van de docent als dat hierboven staat.' },
   { id: 'ANTWOORDEN', label: 'Antwoorden', vorm: 'De antwoorden bij VRAGEN-STEUN, VRAGEN-BASIS en VRAGEN-VERDIEPING. Begin elk werkblad met een regel "Steun:", "Basis:" of "Verdieping:" en nummer de antwoorden.' }
 ];
 
@@ -39,5 +40,6 @@ export const PAKKETTEN = [
   { id: 'hints', label: 'Alleen hintkaarten', ids: ['HINTKAART-1', 'HINTKAART-2'] },
   { id: 'checks', label: 'Alleen startcheck, scharniervraag en exit tickets', ids: ['STARTCHECK', 'CHECKVRAAG', 'EXIT-TICKET'] },
   { id: 'vaktaal', label: 'Alleen een vaktaalkaart', ids: ['VAKTAAL'] },
+  { id: 'presentatie', label: "Alleen uitlegdia's voor de presentatie", ids: ['UITLEG-DIAS'] },
   { id: 'relevantie', label: 'Alleen een relevantie-haak met een voorbeeld uit de regio', ids: ['RELEVANTIE'] }
 ];

@@ -107,6 +107,16 @@ export function vaktaal(t) {
   return String(t ?? '').split('\n').map((r) => r.replace(/^-\s*|^\d+[.)]\s*/, '').trim()).filter((r) => r.includes('|'))
     .map((r) => { const [begrip, omschrijving, voorbeeld] = r.split('|').map((x) => x.trim()); return { begrip, omschrijving: omschrijving ?? '', voorbeeld: voorbeeld ?? '' }; });
 }
+/** Uitlegdia's: "Dia: titel" met daaronder de regels voor die dia. */
+export function uitlegDias(t) {
+  const dias = [];
+  for (const r of String(t ?? '').split('\n').map((x) => x.trim()).filter(Boolean)) {
+    const kop = r.match(/^(?:\*\*)?dia\s*\d*\s*[:.-]\s*(.+?)(?:\*\*)?$/i);
+    if (kop) dias.push({ titel: kop[1].trim(), regels: [] });
+    else if (dias.length) dias.at(-1).regels.push(r.replace(/^[-*•]\s*|^\d+[.)]\s*/, ''));
+  }
+  return dias.filter((d) => d.titel || d.regels.length).slice(0, 8);
+}
 export function startcheck(t) {
   const [vr, ...rest] = String(t ?? '').split(/^\s*Antwoorden\s*:/im);
   return { vragen: vragen(vr), antwoorden: rest.join('').trim() };
