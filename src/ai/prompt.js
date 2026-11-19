@@ -8,7 +8,7 @@ const MAX_TEKST = 6000;
 const DENK = { onthouden: 'onthouden', begrijpen: 'begrijpen', toepassen: 'toepassen', analyseren: 'analyseren', evalueren: 'evalueren', creeren: 'creëren' };
 const ROUTE = { steun: 'steun (extra uitleg aan de instructietafel)', basis: 'basis (zelfstandig verwerken)', verdieping: 'verdieping (voor wie het lesdoel al beheerst)', zelfstandig: 'zelfstandig verwerken', wissel: 'wisselgroep', klas: 'hele klas', stilte: 'stilteruimte' };
 
-export function maakPrompt(les, profiel, pakketId = 'alles') {
+export function maakPrompt(les, profiel, pakketId = 'alles', nodig = null) {
   const pakket = PAKKETTEN.find((p) => p.id === pakketId) ?? PAKKETTEN[0];
   const c = les.invoer?.context ?? {};
   const afd = profiel.afdelingen.find((a) => a.id === c.afdeling);
@@ -20,7 +20,7 @@ export function maakPrompt(les, profiel, pakketId = 'alles') {
   const bron = String(les.invoer?.inhoud?.tekst ?? '').trim().slice(0, MAX_TEKST);
   const werkvormen = [...new Set(les.fases.flatMap((f) => f.blokken.map((b) => b.werkvorm?.naam).filter(Boolean)))];
   const routes = [...new Set(les.groepen.map((g) => ROUTE[g.rol] ?? g.rol))];
-  const onderdelen = ONDERDELEN.filter((o) => pakket.ids.includes(o.id));
+  const onderdelen = ONDERDELEN.filter((o) => pakket.ids.includes(o.id) && (!nodig || nodig.includes(o.id)));
 
   return [
     `Je bent een ervaren docent ${vak?.naam ?? ''} in het Nederlandse voortgezet onderwijs. Maak lesmateriaal voor de les hieronder. Schrijf in het Nederlands, in de je-vorm, op het niveau van ${niveau || 'de leerlingen'}. Gebruik korte, duidelijke zinnen.`.replace(/\s+/g, ' '),

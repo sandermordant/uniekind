@@ -113,7 +113,8 @@ describe('Testcase 9 · AI-brug', () => {
     const doc = (m, id) => tekstVan(m.alle.find((d) => d.id === id));
     expect(doc(met, 'werkblad-basis')).toMatch(/donkere kast/);
     expect(doc(met, 'werkblad-steun')).toMatch(/Zet het in een schema/);
-    expect(doc(met, 'hintkaarten')).toMatch(/Welke stof maakt een plant/);
+    if (met.alle.some((d) => d.id === 'hintkaarten')) expect(doc(met, 'hintkaarten')).toMatch(/Welke stof maakt een plant/);
+    else expect(doc(met, 'antwoordkaart')).not.toMatch(/Uitwerking opgave/);
     expect(doc(met, 'vaktaalkaart')).toMatch(/groene stof in het blad/);
     expect(doc(met, 'lesplan')).toMatch(/Wat heeft een plant NIET nodig/);
     expect(doc(met, 'lesplan')).toMatch(/Lees het altijd na op juistheid en niveau/);
@@ -133,5 +134,46 @@ describe('Testcase 9 · AI-brug', () => {
     const terug = leesLesbestand(maakLesbestand(concept, les, 'sophianum'));
     expect(Object.keys(terug.concept.ai).sort()).toEqual(v.herkend.sort());
     expect(terug.concept.links).toEqual([{ titel: 'Schooltv', url: 'https://schooltv.nl' }]);
+  });
+});
+
+describe('AI-opdracht vraagt alleen wat het materiaal gebruikt', () => {
+  it('geen hintkaarten, exit tickets of startcheck als die niet in het materiaal zitten', async () => {
+    const { nodigVoorMateriaal } = await import('../src/ai/formaat.js');
+    const nodig = nodigVoorMateriaal(['lesplan', 'werkblad-basis', 'vaktaalkaart']);
+    expect(nodig).not.toContain('HINTKAART-1');
+    expect(nodig).not.toContain('EXIT-TICKET');
+    expect(nodig).not.toContain('STARTCHECK');
+    expect(nodig).toContain('VRAGEN-BASIS');
+    const p = maakPrompt(les, data.profiel, 'alles', nodig);
+    expect(p).not.toContain('### HINTKAART-1');
+    expect(p).toContain('### VRAGEN-BASIS');
+    expect(nodigVoorMateriaal(['hintkaarten', 'exit-tickets', 'startcheck'])).toEqual(IDS.filter((id) => id !== 'LESDOEL'));
+    expect(nodigVoorMateriaal(['hintkaarten', 'exit-tickets', 'startcheck'], false)).toEqual(IDS);
+  });
+});
+
+describe('Met een volledig AI-antwoord blijft niets open', () => {
+  it('ook zonder lesdoel en kernbegrippen: de begrippen komen dan uit de vaktaalkaart van AI', async () => {
+    const { tekstVan } = await import('../src/materiaal/model.js');
+    const kaal = genereerLes(invoer({ stand: 3, context: { afdeling: 'havo', leerjaar: 3, vak: 'biologie', lesduur: 50, ruimte: 'M', aantal: 26 }, inhoud: { onderwerp: 'Fotosynthese', lesdoelen: [] } }), data);
+    const blok = (id, tekst) => `### ${id}\n${tekst}`;
+    const vol = [
+      blok('LESDOEL', 'Je kunt uitleggen wat fotosynthese is.'),
+      blok('UITGEWERKT-VOORBEELD', '1. Stap een. Waarom.\n2. Stap twee. Waarom.'), blok('AANVULOPDRACHT', '1. Stap een.\n2. …'),
+      blok('VRAGEN-STEUN', '1. a [Onthouden]\n2. b [Begrijpen]\n3. c [Onthouden]\n4. d [Begrijpen]'),
+      blok('VRAGEN-BASIS', '1. a [Begrijpen]\n2. b [Begrijpen]\n3. c [Toepassen]\n4. d [Toepassen]\n5. e [Analyseren]'),
+      blok('VRAGEN-VERDIEPING', '1. a [Analyseren]\n2. b [Evalueren]\n3. c [Creëren]\n4. d [Analyseren]\n5. e [Evalueren]'),
+      blok('OPGAVE-BASIS', 'Een opgave.'), blok('UITDAGING', 'Een uitdaging.'),
+      blok('HINTKAART-1', 'Opgave: vraag 4\nHint 1: a\nHint 2: b\nUitwerking: c'), blok('HINTKAART-2', 'Opgave: vraag 5\nHint 1: a\nHint 2: b\nUitwerking: c'),
+      blok('CHECKVRAAG', 'Vraag: v\nA: a\nB: b\nC: c\nD: d\nGoed: B\nMisvattingen: x'),
+      blok('STARTCHECK', '1. a\n2. b\n3. c\n4. d\nAntwoorden: 1. a 2. b 3. c 4. d'),
+      blok('EXIT-TICKET', 'Steun: a\nBasis: b\nVerdieping: c'),
+      blok('VAKTAAL', '- fotosynthese | x | y\n- bladgroen | x | y\n- glucose | x | y'),
+      blok('RELEVANTIE', 'Twee zinnen.'), blok('ANTWOORDEN', 'Steun:\n1. a\nBasis:\n1. b\nVerdieping:\n1. c')
+    ].join('\n');
+    const m = maakMateriaal(kaal, data, leesAntwoord(vol).blokken);
+    const open = m.alle.flatMap((d) => (tekstVan(d).match(/⟦[^⟧]*⟧/g) ?? []).map((x) => `${d.id}: ${x}`));
+    expect(open).toEqual([]);
   });
 });

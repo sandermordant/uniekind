@@ -12,6 +12,14 @@
 .mat-lijst button:hover { background: var(--surface-2); }
 .mat-lijst button[aria-current="true"] { background: var(--accent-zacht); color: var(--accent); }
 .mat-lijst .n { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 700; flex: none; }
+/* Nodig voor deze les, met open velden; de extra's ingeklapt */
+.mat-lijst h3.mat-groep { color: var(--fg); letter-spacing: 0.04em; }
+.mat-lijst h4 { font-size: var(--t-xs); font-weight: 700; color: var(--muted); margin-bottom: 0.2rem; }
+.mat-lijst .open-velden { display: inline-block; margin-left: 0.3rem; padding: 0 0.4rem; border-radius: 999px; font-size: var(--t-xs); font-weight: 700; color: var(--let-op); border: 1px dashed var(--let-op); }
+details.mat-meer > summary { cursor: pointer; font-size: var(--t-s); font-weight: 700; color: var(--accent); padding: 0.3rem 0; }
+details.mat-meer > summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.knop-link { background: none; border: 0; padding: 0; font: inherit; font-weight: 700; color: var(--accent); text-decoration: underline; cursor: pointer; }
+.knop-link:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 .mat-acties { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
 .mat-opties { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
 .mat-blad { background: #e9edf3; border-radius: var(--r); padding: 1rem; overflow-x: auto; }

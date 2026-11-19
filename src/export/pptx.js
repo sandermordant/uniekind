@@ -94,7 +94,9 @@ export async function naarPptx(les, data, o = {}) {
         } else if (f.type === 'opening') {
           regels.push(...tekstRuns('⟦Zet hier je vraag, foto, getal of voorwerp⟧', { fontSize: 24, breakLine: true }));
         } else if (f.type === 'afsluiting') {
-          regels.push({ text: 'Exit ticket: maak het kaartje en lever het in bij de deur.', options: { fontSize: 24, breakLine: true } });
+          // De afsluiter die in de les is gekozen (niet altijd een exit ticket)
+          if (it?.id === 'exit-ticket') regels.push({ text: 'Maak het kaartje en lever het in bij de deur.', options: { fontSize: 24, breakLine: true } });
+          else if (it) regels.push({ text: it.kort, options: { fontSize: 22, color: '374151', breakLine: true } });
           regels.push({ text: 'Volgende les: ', options: { fontSize: 22, bold: true } });
           regels.push(...tekstRuns('⟦vooruitblik⟧', { fontSize: 22, breakLine: true }));
         } else if (it) {

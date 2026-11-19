@@ -2,12 +2,12 @@
 // en exporteren.
 import { html, raw, inFrame } from '../util/html.js';
 import { maakMateriaal } from '../materiaal/maak.js';
-import { rustig } from '../materiaal/model.js';
+import { rustig, tekstVan } from '../materiaal/model.js';
 import { documentHtml, allesHtml } from '../materiaal/html.js';
 import { bestandsnaam, download } from '../export/delen.js';
 import { maakLesbestand } from '../export/lesbestand.js';
 import { profielId } from '../data/laden.js';
-import { PAKKETTEN, ONDERDELEN } from '../ai/formaat.js';
+import { PAKKETTEN, ONDERDELEN, nodigVoorMateriaal } from '../ai/formaat.js';
 import { aiInstellingen, promptVoor } from '../ai/adapter.js';
 import { sectieVoor } from '../data/sectie-accenten.js';
 import { eigenSectieAccenten } from './staat.js';
@@ -15,18 +15,27 @@ import { eigenSectieAccenten } from './staat.js';
 export function pakketVoor(les, data, staat, concept = {}) {
   const p = maakMateriaal(les, data, concept.ai ?? {}, concept.links ?? []);
   if (staat.rustig) for (const lijst of [p.docent, p.leerling, p.alle]) lijst.forEach((d, i) => { lijst[i] = rustig(d); });
+  // Eerst wat je voor deze les nodig hebt; de extra's (overzicht, kijkwijzer, reflectie) staan apart
+  p.meer = p.alle.filter((d) => MEER.includes(d.id));
+  p.nodig = p.alle.filter((d) => !MEER.includes(d.id));
   return p;
 }
+
+const MEER = ['differentiatie-overzicht', 'kijkwijzer', 'reflectiekaart'];
+/** Hoeveel velden (tussen ⟦ en ⟧) in een document nog door de docent of met AI moeten worden ingevuld. */
+export const openVelden = (d) => new Set(tekstVan(d).match(/⟦[^⟧]*⟧/g) ?? []).size; // dezelfde plek op elke kopie telt één keer
 
 const zoekQ = (s) => encodeURIComponent(String(s ?? '').trim());
 const naamVan = (id) => ONDERDELEN.find((o) => o.id === id)?.label ?? id;
 
-function aiPaneel(les, data, staat, concept) {
+function aiPaneel(les, data, staat, concept, p) {
   const inst = aiInstellingen(data.profiel);
-  const pakket = staat.aiPakket ?? 'alles';
+  const nodig = nodigVoorMateriaal(p.alle.map((d) => d.id), les.doel.lesdoelen.length > 0);
+  const pakketten = PAKKETTEN.filter((x) => x.ids.some((id) => nodig.includes(id)));
+  const pakket = pakketten.some((x) => x.id === staat.aiPakket) ? staat.aiPakket : 'alles';
   let prompt = '';
   let fout = '';
-  try { prompt = promptVoor(les, data.profiel, pakket); } catch (e) { fout = e.message; }
+  try { prompt = promptVoor(les, data.profiel, pakket, nodig); } catch (e) { fout = e.message; }
   const v = staat.aiVoorstel;
   const huidig = Object.keys(concept.ai ?? {});
   return html`
@@ -38,7 +47,7 @@ function aiPaneel(les, data, staat, concept) {
         <ol class="ai-stappen">
           <li>
             <label for="aiPakket"><b>Wat wil je laten maken?</b></label>
-            <select id="aiPakket" data-actie="ai-pakket">${PAKKETTEN.map((p) => html`<option value="${p.id}" ${p.id === pakket ? 'selected' : ''}>${p.label}</option>`)}</select>
+            <select id="aiPakket" data-actie="ai-pakket">${pakketten.map((x) => html`<option value="${x.id}" ${x.id === pakket ? 'selected' : ''}>${x.label}</option>`)}</select>
           </li>
           <li>
             <b>Kopieer de prompt en plak hem in ${inst.tool}.</b>
@@ -111,7 +120,12 @@ export function materiaalStap(les, data, staat, concept = {}, bronnenPerVak = nu
   const p = pakketVoor(les, data, staat, concept);
   const huidig = p.alle.find((d) => d.id === staat.doc) ?? p.docent[0];
   const opties = { dyslexie: staat.dyslexie, schoolnaam: data.profiel.school.naam };
-  const knop = (d) => html`<li><button type="button" data-actie="mat-doc" data-doc="${d.id}" aria-current="${d.id === huidig.id}"><span>${d.titel.split(':')[0]}</span><span class="n">${d.aantal ? `${d.aantal}×` : ''}</span></button></li>`;
+  const knop = (d) => { const o = openVelden(d); return html`<li><button type="button" data-actie="mat-doc" data-doc="${d.id}" aria-current="${d.id === huidig.id}"><span>${d.titel.split(':')[0]}${o ? html` <span class="open-velden" aria-label="${o} ${o === 1 ? 'veld' : 'velden'} nog invullen">${o} open</span>` : ''}</span><span class="n">${d.aantal ? `${d.aantal}×` : ''}</span></button></li>`; };
+  const nodigDocent = p.nodig.filter((d) => d.voor === 'docent');
+  const nodigLeerling = p.nodig.filter((d) => d.voor !== 'docent');
+  const totaalOpen = p.nodig.reduce((n, d) => n + openVelden(d), 0);
+  const docsOpen = p.nodig.filter((d) => openVelden(d) > 0).length;
+  const huidigOpen = openVelden(huidig);
   return html`
     <div class="mat-acties niet-printen">
       <button type="button" class="knop klein" data-actie="print-alles">Alles printen</button>
@@ -123,18 +137,22 @@ export function materiaalStap(les, data, staat, concept = {}, bronnenPerVak = nu
     </div>
     ${inFrame ? html`<p class="export-melding">In deze ingebedde preview kan de browser downloaden en printen tegenhouden. Op de echte website werkt het gewoon.</p>` : ''}
     <div class="panelen niet-printen">
-      ${aiPaneel(les, data, staat, concept)}
+      ${aiPaneel(les, data, staat, concept, p)}
       ${bronnenPaneel(les, data, staat, concept, bronnenPerVak)}
     </div>
     <div class="mat-opties niet-printen">
       <label class="schakel"><input type="checkbox" data-actie="mat-optie" data-optie="dyslexie" ${staat.dyslexie ? 'checked' : ''}> <span>Dyslexievriendelijk leerlingmateriaal</span></label>
       <label class="schakel"><input type="checkbox" data-actie="mat-optie" data-optie="rustig" ${staat.rustig ? 'checked' : ''}> <span>Rustige versie (minder tegelijk op een blad)</span></label>
     </div>
+    ${totaalOpen ? html`<p class="melding open-samenvatting niet-printen">Nog <b>${totaalOpen} ${totaalOpen === 1 ? 'veld' : 'velden'}</b> in te vullen in ${docsOpen} ${docsOpen === 1 ? 'document' : 'documenten'} (gemarkeerd met een gele stippellijn). Vul ze zelf in in Word, of laat ze vullen met <button type="button" class="knop-link" data-actie="ai-open">Maak af met AI</button>.${!les.doel.lesdoelen.length || !les.doel.begrippen?.length ? ' Tip: vul bij de eerste stap ook een lesdoel en een paar kernbegrippen in; dan vult Uniekind een groot deel zelf.' : ''}</p>`
+      : html`<p class="melding ok niet-printen">Alles is ingevuld. Lees het materiaal nog even na op juistheid en niveau.</p>`}
     ${p.advies.dyslexievriendelijk && !staat.dyslexie ? html`<p class="melding">Er zitten leerlingen met dyslexie in deze klas. Zet "Dyslexievriendelijk" aan voor hun exemplaren.</p>` : ''}
     <div class="mat">
       <nav class="mat-lijst" aria-label="Documenten">
-        <div><h3>Voor jou</h3><ul>${p.docent.map(knop)}</ul></div>
-        <div><h3>Voor de leerlingen</h3><ul>${p.leerling.map(knop)}</ul></div>
+        <h3 class="mat-groep">Nodig voor deze les</h3>
+        <div><h4>Voor jou</h4><ul>${nodigDocent.map(knop)}</ul></div>
+        <div><h4>Voor de leerlingen</h4><ul>${nodigLeerling.map(knop)}</ul></div>
+        ${p.meer.length ? html`<details class="mat-meer" ${p.meer.some((d) => d.id === huidig.id) ? 'open' : ''}><summary>Meer materiaal (${p.meer.length})</summary><ul>${p.meer.map(knop)}</ul></details>` : ''}
         ${p.aantallen.geschat ? html`<p class="hulp">Aantallen per niveau zijn geschat.</p>` : ''}
       </nav>
       <div>
@@ -142,6 +160,7 @@ export function materiaalStap(les, data, staat, concept = {}, bronnenPerVak = nu
           <button type="button" class="knop secundair klein" data-actie="exp" data-soort="pdf">Dit document als PDF</button>
           <button type="button" class="knop secundair klein" data-actie="exp" data-soort="docx">Dit document als Word</button>
           ${huidig.aantal ? html`<span class="hulp">Print ${huidig.aantal}×${huidig.aantalUitleg ? `: ${huidig.aantalUitleg}` : ''}</span>` : ''}
+          ${huidigOpen ? html`<span class="hulp"><b>${huidigOpen} ${huidigOpen === 1 ? 'veld' : 'velden'} nog invullen.</b> <button type="button" class="knop-link" data-actie="ai-open">Maak af met AI</button></span>` : ''}
         </div>
         <div class="mat-blad" tabindex="0" role="region" aria-label="Voorbeeld: ${huidig.titel}">${raw(documentHtml(huidig, opties))}</div>
       </div>
@@ -156,11 +175,11 @@ export async function exporteer(soort, les, data, staat, concept) {
   const naam = les.doel.onderwerp || 'les';
   if (soort === 'pdf' || soort === 'alle-pdf') {
     const { naarPdf } = await import('../export/pdf.js');
-    const docs = soort === 'pdf' ? [huidig] : p.alle;
+    const docs = soort === 'pdf' ? [huidig] : p.nodig;
     download(await naarPdf(docs, { ...o, toonAantal: soort !== 'pdf' }), bestandsnaam(soort === 'pdf' ? `${huidig.id}-${naam}` : `materiaal-${naam}`, 'pdf'));
   } else if (soort === 'docx' || soort === 'alle-docx') {
     const { naarDocx } = await import('../export/docx.js');
-    const docs = soort === 'docx' ? [huidig] : p.alle;
+    const docs = soort === 'docx' ? [huidig] : p.nodig;
     download(await naarDocx(docs, { ...o, toonAantal: soort !== 'docx' }), bestandsnaam(soort === 'docx' ? `${huidig.id}-${naam}` : `materiaal-${naam}`, 'docx'));
   } else if (soort === 'pptx') {
     const { naarPptx } = await import('../export/pptx.js');
@@ -175,7 +194,7 @@ export function printAlles(les, data, staat, concept) {
   const p = pakketVoor(les, data, staat, concept);
   let vak = document.getElementById('printvak');
   if (!vak) { vak = document.createElement('div'); vak.id = 'printvak'; document.body.appendChild(vak); }
-  vak.innerHTML = allesHtml(p, { dyslexie: staat.dyslexie, schoolnaam: data.profiel.school.naam });
+  vak.innerHTML = allesHtml({ ...p, alle: p.nodig }, { dyslexie: staat.dyslexie, schoolnaam: data.profiel.school.naam });
   document.body.classList.add('print-alles');
   const klaar = () => { document.body.classList.remove('print-alles'); vak.innerHTML = ''; window.removeEventListener('afterprint', klaar); };
   window.addEventListener('afterprint', klaar);

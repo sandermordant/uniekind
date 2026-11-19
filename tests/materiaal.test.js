@@ -23,7 +23,18 @@ describe('Materiaalpakket', () => {
     const m = maakMateriaal(les, data);
     const ids = m.alle.map((d) => d.id);
     it(`${naam}: alle verplichte documenten`, () => {
-      for (const id of ['lesplan', 'voorbereiding', 'differentiatie-overzicht', 'kijkwijzer', 'reflectiekaart', 'werkblad-steun', 'werkblad-basis', 'werkblad-verdieping', 'opdrachtkaarten', 'hintkaarten', 'succescriteria', 'exit-tickets', 'vaktaalkaart', 'vandaag']) expect(ids).toContain(id);
+      for (const id of ['lesplan', 'voorbereiding', 'differentiatie-overzicht', 'kijkwijzer', 'reflectiekaart', 'werkblad-steun', 'werkblad-basis', 'werkblad-verdieping', 'succescriteria', 'vaktaalkaart', 'vandaag']) expect(ids).toContain(id);
+    });
+    it(`${naam}: exit tickets, hintkaarten en opdrachtkaarten alleen als de les ze gebruikt`, () => {
+      const wv = new Set(les.fases.flatMap((f) => [...f.blokken.map((b) => b.werkvorm?.id), ...(f.extra ?? []).map((e) => e.id)]));
+      expect(ids.includes('exit-tickets')).toBe(wv.has('exit-ticket'));
+      const noemtHint = [...wv].some((id) => (data.items.find((i) => i.id === id)?.alsDan ?? []).some((r) => /hintkaart/i.test(`${r.als} ${r.dan}`)));
+      const hint = wv.has('hintkaarten') || noemtHint;
+      expect(ids.includes('hintkaarten')).toBe(hint);
+      expect(ids.includes('opdrachtkaarten')).toBe(les.groepen.length > 1);
+      const alles = m.alle.map(tekstVan).join('\n');
+      if (!hint) expect(alles).not.toMatch(/hintkaart|hint 1|hint 2/i);
+      if (!wv.has('exit-ticket')) expect(alles).not.toMatch(/exit ticket/i);
     });
     it(`${naam}: werkbladen per niveau tellen op tot de klas`, () => {
       const n = ['werkblad-steun', 'werkblad-basis', 'werkblad-verdieping'].reduce((t, id) => t + m.alle.find((d) => d.id === id).aantal, 0);
@@ -75,5 +86,19 @@ describe('Exports', () => {
     const opnieuw = genereerLes({ ...terug.concept.invoer, stand: terug.concept.gekozenStand }, data);
     expect(opnieuw.fases.map((f) => f.id)).toEqual(les.fases.map((f) => f.id));
     expect(() => leesLesbestand('{"formaat":"iets anders"}')).toThrow(/geen Uniekind/);
+  });
+});
+
+describe('Presentatie volgt de gekozen afsluiter', () => {
+  it('de afsluitdia noemt alleen een exit ticket als dat de afsluiter is', async () => {
+    const JSZip = (await import('jszip')).default;
+    for (const inv of Object.values(GEVALLEN)) {
+      const les = genereerLes(invoer(inv), data);
+      const afsluiter = les.fases.find((f) => f.type === 'afsluiting')?.blokken[0]?.werkvorm?.id;
+      const zip = await JSZip.loadAsync(await naarPptx(les, data));
+      const dias = await Promise.all(Object.keys(zip.files).filter((f) => /^ppt\/slides\/slide\d+\.xml$/.test(f)).map((f) => zip.file(f).async('string')));
+      const tekst = dias.join(' ');
+      expect(/Exit ticket|lever het in bij de deur/i.test(tekst), `${inv.inhoud.onderwerp}: ${afsluiter}`).toBe(afsluiter === 'exit-ticket');
+    }
   });
 });

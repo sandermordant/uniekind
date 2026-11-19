@@ -4,6 +4,7 @@
 // Er staan nooit leerlingnamen in: alleen aantallen en groepsletters.
 import { kop, alinea, lijst, vink, tabel, vraag, regels, invulveld, kader, schaal, schema, kaarten, pagina } from './model.js';
 import * as AI from '../ai/import.js';
+import { controleerLesdoel } from '../engine/tekst.js';
 import { termen } from '../data/termen.js';
 
 const zonderNummer = (r) => r.replace(/^\d+[.)]\s*/, '');
@@ -148,7 +149,7 @@ function werkbladen(les, inf, per, ai = {}) {
       kop('Opgave van je docent'),
       ...(ai['OPGAVE-BASIS'] ? AI.regelsVan(ai['OPGAVE-BASIS']).map((r) => alinea(r)) : [invulveld('Zet hier een opgave uit de methode of een eigen opgave.', `Bijvoorbeeld: opgave … uit paragraaf ${o}.`)]),
       regels(4),
-      alinea('Loop je vast? Pak hint 1. Klaar? Kijk je werk na en pak een pluskaart of het werkblad verdieping.', { nadruk: true })
+      alinea(`Loop je vast? ${inf.heeft?.hint === false ? 'Vraag het eerst aan je buur.' : 'Pak hint 1.'} Klaar? Kijk je werk na en pak een pluskaart of het werkblad verdieping.`, { nadruk: true })
     ]
   };
   const verdieping = {
@@ -178,6 +179,12 @@ const STAPPEN_ROUTE = {
   wissel: ['Volg het routeschema op het bord.', 'Op het plein: werk aan je opdracht met de laptop alleen voor de les.', 'In het lokaal: je krijgt instructie van je docent.', 'Bij het signaal wissel je rustig van plek.'],
   klas: ['Pak het werkblad basis.', 'Werk de vragen op volgorde af.', 'Twijfel je na de uitleg? Schuif aan bij de instructietafel.', 'Klaar? Pak een pluskaart.']
 };
+/** Stappen per route; zonder hintkaarten in de les verwijzen ze er ook niet naar. */
+function routeStappen(rol, inf) {
+  const stappen = STAPPEN_ROUTE[rol] ?? STAPPEN_ROUTE.basis;
+  if (inf.heeft?.hint !== false) return stappen;
+  return stappen.map((s) => (/hint/i.test(s) ? 'Loop je vast? Vraag het eerst aan je buur, dan aan je docent.' : s));
+}
 const KLAAR = { steun: 'Klaar? Pak het werkblad basis.', basis: 'Klaar? Pak een pluskaart of het werkblad verdieping.', verdieping: 'Klaar? Maak de uitdaging en help daarna een klasgenoot met een vraag (niet met het antwoord).', zelfstandig: 'Klaar? Pak een pluskaart.', stilte: 'Klaar? Lees je antwoorden nog een keer na.', wissel: 'Klaar? Kijk je werk na met de antwoordkaart.', klas: 'Klaar? Pak een pluskaart.' };
 
 function groepPlanning(les, gid) {
@@ -200,7 +207,7 @@ function opdrachtkaarten(les, inf) {
       blokken: [
         alinea(`Waar: ${plekken.map((p) => PLEK[p]).join(', dan ')}. Tijd: van minuut ${van} tot ${tot}.`, { nadruk: true }),
         alinea(`Lesdoel: ${les.doel.lesdoelen[0] ? ikKan(les.doel.lesdoelen[0].tekst) : '⟦lesdoel⟧'}`),
-        lijst(STAPPEN_ROUTE[rol] ?? STAPPEN_ROUTE.basis, true),
+        lijst(routeStappen(rol, inf), true),
         werkvormen.length ? alinea(`Werkvorm: ${werkvormen.join(', ')}.`, { klein: true }) : null,
         alinea(KLAAR[rol] ?? KLAAR.basis),
         plekken.some((p) => p !== 'lokaal') ? alinea(`Om minuut ${tot} ben je terug in het lokaal.`, { nadruk: true }) : null
@@ -332,7 +339,7 @@ function rolkaarten(les, inf) {
   };
 }
 
-function pleinafspraken(les, profiel) {
+function pleinafspraken(les, profiel, heeft = {}) {
   const p = profiel.ruimtes.find((r) => r.id === 'plein');
   const eind = les.fases.filter((f) => f.blokken.some((b) => b.plek === 'plein')).at(-1);
   const terug = eind ? eind.start + eind.duur : null;
@@ -345,7 +352,7 @@ function pleinafspraken(les, profiel) {
         profiel.regels?.telefoon?.motto ? `Je telefoon is ${profiel.regels.telefoon.motto.toLowerCase()}.` : 'Geen telefoon.',
         'Je werkt op de plek die je docent heeft aangewezen.',
         'Je praat fluisterend. Anderen zijn ook aan het werk.',
-        'Loop je vast? Eerst je opdrachtkaart en de hintkaart, dan pas je docent.',
+        heeft.hint !== false ? 'Loop je vast? Eerst je opdrachtkaart en de hintkaart, dan pas je docent.' : 'Loop je vast? Eerst je opdrachtkaart, dan pas je docent.',
         terug != null ? `Om minuut ${terug} ben je terug in het lokaal.` : 'Je komt op de afgesproken tijd terug.'
       ], true),
       alinea(`Op het plein is er toezicht door je docent of een onderwijsassistent${p?.cameratoezicht ? ', en er is cameratoezicht' : ''}.`, { klein: true })
@@ -362,7 +369,7 @@ function vandaagkaarten(les, inf) {
       blokken: [
         alinea(`Lesdoel: ${les.doel.lesdoelen[0] ? ikKan(les.doel.lesdoelen[0].tekst) : '⟦lesdoel⟧'}`, { nadruk: true }),
         tabel(['Minuut', 'Wat', 'Waar'], plan.map(({ f, b }) => [`${f.start}–${f.start + f.duur}`, b.werkvorm?.naam ?? f.titel, PLEK[b.plek].replace(/^het |^de /, '')])),
-        alinea('Je weet dat je het kunt als je de exit ticket goed hebt én het aan een klasgenoot kunt uitleggen.', { klein: true })
+        alinea(inf.heeft?.exit === false ? 'Je weet dat je het kunt als je het lesdoel aan een klasgenoot kunt uitleggen.' : 'Je weet dat je het kunt als je de exit ticket goed hebt én het aan een klasgenoot kunt uitleggen.', { klein: true })
       ]
     });
   }
@@ -482,7 +489,8 @@ function differentiatieDoc(les, inf, per) {
     const plan = groepPlanning(les, g.id).filter(({ f }) => f.type === 'verwerken');
     const wat = [...new Set(plan.map(({ b }) => b.werkvorm?.naam).filter(Boolean))].join(', ') || '—';
     const waar = [...new Set(plan.map(({ b }) => PLEK[b.plek]))].join(', ') || PLEK.lokaal;
-    const mat = { steun: 'werkblad steun, hintkaarten', basis: 'werkblad basis, hintkaarten', verdieping: 'werkblad verdieping, pluskaarten', zelfstandig: 'werkblad basis', stilte: 'werkblad basis of verdieping', wissel: 'werkblad basis', klas: 'werkblad basis, pluskaarten' }[g.rol] ?? 'werkblad basis';
+    const hk = inf.heeft?.hint === false ? '' : ', hintkaarten';
+    const mat = { steun: `werkblad steun${hk}`, basis: `werkblad basis${hk}`, verdieping: 'werkblad verdieping, pluskaarten', zelfstandig: 'werkblad basis', stilte: 'werkblad basis of verdieping', wissel: 'werkblad basis', klas: 'werkblad basis, pluskaarten' }[g.rol] ?? 'werkblad basis';
     return [g.naam, String(g.aantal), wat, waar, mat];
   });
   return {
@@ -542,7 +550,7 @@ function oaKaart(les, inf) {
       alinea(`Lesdoel: ${les.doel.lesdoelen[0]?.tekst ?? '⟦lesdoel⟧'}`),
       momenten.length ? tabel(['Minuut', 'Groep', 'Waar', 'Werkvorm'], momenten) : alinea('Loop rond in het lokaal en help waar nodig.'),
       kop('Zo help je', 3),
-      lijst(['Geef geen antwoorden; stel een vraag of wijs op de hintkaart.', 'Leerling zit vast na hint 2? Stuur hem naar de instructietafel of laat het de docent weten.', 'Houd de tijd in de gaten en waarschuw vijf minuten voor de wissel.', 'Op het plein: alleen de schoollaptop, alleen voor de opdracht.']),
+      lijst([inf.heeft?.hint === false ? 'Geef geen antwoorden; stel een vraag die de leerling op weg helpt.' : 'Geef geen antwoorden; stel een vraag of wijs op de hintkaart.', inf.heeft?.hint === false ? 'Leerling zit echt vast? Stuur hem naar de instructietafel of laat het de docent weten.' : 'Leerling zit vast na hint 2? Stuur hem naar de instructietafel of laat het de docent weten.', 'Houd de tijd in de gaten en waarschuw vijf minuten voor de wissel.', 'Op het plein: alleen de schoollaptop, alleen voor de opdracht.']),
       kop('Waarschuw de docent als', 3),
       lijst(['meer dan een paar leerlingen dezelfde fout maken;', 'iemand niet aan het werk komt of zich niet aan de afspraken houdt;', 'een groep veel eerder klaar is dan gepland.'])
     ]
@@ -557,7 +565,8 @@ function voorbereiding(les, inf, docs, itemMap) {
   if (les.differentiatie.some((d) => d.id === 'hoeken-l-lokaal')) inrichten.push('Drie zones in het lokaal: instructie, stil werken, overleggen (met zonekaarten).');
   if (les.fases.some((f) => f.blokken.some((b) => b.plek === 'plein'))) inrichten.push(`Een vaste plek op het ${termen.plein} voor de pleingroep, met de afsprakenkaart.`);
   if (les.fases.some((f) => f.blokken.some((b) => b.plek === 'stilte'))) inrichten.push('Afspraak over de stilteruimte: is hij vrij, en wie houdt toezicht?');
-  inrichten.push('Hintkaarten en pluskaarten op een vaste plek.');
+  const kaartsoorten = [docs.some((d) => d.id === 'hintkaarten') && 'Hintkaarten', docs.some((d) => d.id === 'pluskaarten') && 'pluskaarten'].filter(Boolean);
+  if (kaartsoorten.length) inrichten.push(`${kaartsoorten.join(' en ').replace(/^p/, 'P')} op een vaste plek.`);
   return {
     id: 'voorbereiding', titel: `Voorbereiding: ${inf.titel}`, voor: 'docent', soort: 'checklist', aantal: 1,
     blokken: [
@@ -577,32 +586,47 @@ function antwoordkaart(les, inf, ai) {
   if (ai.ANTWOORDEN) blokken.push(kop('Werkbladen', 3), ...AI.regelsVan(ai.ANTWOORDEN).map((r) => alinea(r)));
   if (ai.STARTCHECK) { const sc = AI.startcheck(ai.STARTCHECK); if (sc.antwoorden) blokken.push(kop('Startcheck', 3), alinea(sc.antwoorden)); }
   if (ai.CHECKVRAAG) { const c = AI.checkvraag(ai.CHECKVRAAG); blokken.push(kop('Scharniervraag', 3), alinea(`Goed antwoord: ${c.goed}. ${c.misvattingen}`)); }
-  for (const k of ['HINTKAART-1', 'HINTKAART-2']) if (ai[k]) { const h = AI.hintkaart(ai[k]); blokken.push(kop(`Uitwerking ${k.toLowerCase().replace('hintkaart-', 'opgave ')}`, 3), alinea(h.opgave, { klein: true }), alinea(h.uitwerking)); }
+  for (const k of ['HINTKAART-1', 'HINTKAART-2']) if (ai[k] && inf.heeft?.hint !== false) { const h = AI.hintkaart(ai[k]); blokken.push(kop(`Uitwerking ${k.toLowerCase().replace('hintkaart-', 'opgave ')}`, 3), alinea(h.opgave, { klein: true }), alinea(h.uitwerking)); }
   if (!blokken.length) return null;
   return { id: 'antwoordkaart', titel: `Antwoordkaart: ${inf.titel}`, voor: 'docent', soort: 'antwoorden', aantal: 1, aantalUitleg: 'voor jezelf of om leerlingen zelf te laten nakijken', blokken: [alinea('Gemaakt met AI: controleer de antwoorden voordat je ze gebruikt.', { klein: true }), ...blokken] };
 }
 
 export function maakMateriaal(les, data, ai = {}, links = []) {
   ai = ai ?? {};
+  // Geen lesdoel ingevuld, maar wel een voorstel van AI? Dan geldt dat lesdoel in het materiaal.
+  if (!les.doel.lesdoelen.length && ai.LESDOEL) {
+    const doelen = AI.regelsVan(ai.LESDOEL).map((x) => x.replace(/^[-*•\d.)\s]+/, '').trim()).filter((x) => /^je (kunt|kan)\b/i.test(x)).slice(0, 2)
+      .map((tekst) => ({ tekst, niveau: controleerLesdoel(tekst).niveau ?? 'begrijpen' }));
+    if (doelen.length) les = { ...les, doel: { ...les.doel, lesdoelen: doelen } };
+  }
+  // Geen kernbegrippen ingevuld, maar wel een vaktaalkaart van AI? Dan gelden die begrippen als kernbegrippen.
+  if (!(les.doel.begrippen ?? []).filter(Boolean).length && ai.VAKTAAL) {
+    const uitAi = AI.vaktaal(ai.VAKTAAL).map((x) => x.begrip).filter(Boolean).slice(0, 6);
+    if (uitAi.length) les = { ...les, doel: { ...les.doel, begrippen: uitAi } };
+  }
   const { profiel } = data;
   const itemMap = data.itemMap ?? new Map(data.items.map((i) => [i.id, i]));
   const inf = info(les, profiel);
   const per = aantallen(les);
   const ids = new Set(les.fases.flatMap((f) => [...f.blokken.map((b) => b.werkvorm?.id), ...(f.extra ?? []).map((e) => e.id)]).filter(Boolean));
 
+  // Alleen materiaal dat de les echt gebruikt
+  // Hintkaarten ook als een werkvorm in de les ze in zijn als-dan-regels voorschrijft (bijvoorbeeld de startcheck)
+  const noemt = (woord) => [...ids].some((id) => (itemMap.get(id)?.alsDan ?? []).some((r) => new RegExp(woord, 'i').test(`${r.als} ${r.dan}`)));
+  inf.heeft = { hint: ids.has('hintkaarten') || noemt('hintkaart'), exit: ids.has('exit-ticket'), routes: les.groepen.length > 1 };
   const leerling = [
     ...werkbladen(les, inf, per, ai),
-    opdrachtkaarten(les, inf),
-    hintkaarten(les, inf, ai),
+    inf.heeft.routes ? opdrachtkaarten(les, inf) : null,
+    inf.heeft.hint ? hintkaarten(les, inf, ai) : null,
     succescriteria(les, inf),
-    exitTickets(les, inf, per, ai),
+    inf.heeft.exit ? exitTickets(les, inf, per, ai) : null,
     vaktaalkaart(les, inf, ai)
-  ];
+  ].filter(Boolean);
   if (ids.has('startcheck-routes') || ai.STARTCHECK) leerling.unshift(startcheck(les, inf, ai));
   if (ids.has('plusopdracht-klaar') || per.verdieping > 0) leerling.push(pluskaarten(les, inf));
   if (les.materiaalAdvies.rekenhulpkaart) { const r = rekenhulpkaart(inf); r.aantal = Math.max(1, Math.ceil(les.aantal / 2)); leerling.push(r); }
   if (les.routines.includes('rolkaarten')) leerling.push(rolkaarten(les, inf));
-  if (les.fases.some((f) => f.blokken.some((b) => b.plek === 'plein'))) leerling.push(pleinafspraken(les, profiel));
+  if (les.fases.some((f) => f.blokken.some((b) => b.plek === 'plein'))) leerling.push(pleinafspraken(les, profiel, inf.heeft));
   leerling.push(vandaagkaarten(les, inf));
   if ([...ids].some((id) => PRODUCT.includes(id))) leerling.push(rubric(les, inf));
 

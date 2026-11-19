@@ -319,6 +319,12 @@ export default {
             else inv().opties.vastgezet[s] = k.dataset.id;
             bewaar(); return teken();
           }
+          if (a === 'ai-open') {
+            (matStaat().open ??= {}).ai = true; bewaar(); teken();
+            const s = $('details[data-paneel="ai"] > summary', root);
+            s?.scrollIntoView({ block: 'start' }); s?.focus({ preventScroll: true });
+            return;
+          }
           if (a === 'ai-kopieer') {
             const veld = $('#aiPrompt', root);
             if (!veld) return;

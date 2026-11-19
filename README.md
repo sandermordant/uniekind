@@ -109,7 +109,10 @@ De code werkt met elk geldig schoolprofiel (de tests gebruiken ook `tests/fixtur
 Alle materiaal wordt eerst beschreven in één **documentmodel** (`src/materiaal/model.js`): koppen, alinea's, tabellen, vragen met schrijfregels, invulvelden, kaarten, schema's. Uit dat ene model maakt Uniekind de weergave op het scherm, de printversie, PDF en Word. Een nieuw werkblad hoef je dus maar één keer te maken.
 
 - `src/materiaal/maak.js` bepaalt welk materiaal bij een les hoort en hoeveel je van elk moet printen.
-- Velden die de docent zelf moet invullen staan tussen ⟦ en ⟧ en worden overal geel gemarkeerd.
+- Velden die de docent zelf moet invullen staan tussen ⟦ en ⟧ en worden overal geel gemarkeerd. In stap 4 staat per document hoeveel velden nog open zijn (dezelfde plek op elke kopie telt één keer), met een knop naar *Maak af met AI*.
+- **Alleen wat de les gebruikt.** Exit tickets komen er alleen bij als de afsluiter een exit ticket is. Hintkaarten komen erbij bij de werkvorm hintkaarten, of als een werkvorm ze in zijn als-dan-regels noemt (zoals de startcheck). Opdrachtkaarten komen er alleen bij als er routes zijn. Teksten in andere documenten (routekaarten, plein, onderwijsassistent, voorbereiding) passen zich aan. De presentatie toont bij de afsluiting de gekozen afsluiter.
+- **Nodig voor deze les.** Stap 4 toont eerst wat je nodig hebt; differentiatie-overzicht, kijkwijzer en reflectiekaart staan onder *Meer materiaal*. *Alles printen*, *Alles als PDF* en *Alles als Word* nemen alleen wat nodig is.
+- **Met AI helemaal ingevuld.** De AI-opdracht vraagt alleen om wat het materiaal gebruikt, en om een lesdoel als de docent er geen heeft ingevuld (`LESDOEL`). Zonder kernbegrippen gelden de begrippen uit de vaktaalkaart van AI. Met een volledig antwoord blijft er geen enkel veld open (test in `tests/aibrug.test.js`).
 - De exportbibliotheken laden pas als je exporteert, zodat de site snel blijft.
 - De digibordmodus (`src/pages/digibord.js`) werkt met het toetsenbord: ← → fase, spatie timer, 1 2 3 geluidsniveau, R routeschema, K kiezer, G groepjes, F volledig scherm, Esc terug. Namen in de groepjesmaker worden nergens bewaard.
 

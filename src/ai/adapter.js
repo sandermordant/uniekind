@@ -22,8 +22,8 @@ export function aiInstellingen(profiel) {
 }
 
 /** Stelt de prompt samen en controleert dat er geen klasgegevens in staan. */
-export function promptVoor(les, profiel, pakket) {
-  const prompt = maakPrompt(les, profiel, pakket);
+export function promptVoor(les, profiel, pakket, nodig = null) {
+  const prompt = maakPrompt(les, profiel, pakket, nodig);
   if (bevatKlasgegevens(prompt, les)) throw new Error('De prompt bevat klasgegevens; dat mag niet. Neem contact op met de beheerder.');
   return prompt;
 }

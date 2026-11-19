@@ -3,6 +3,7 @@
 // Dezelfde namen gelden voor de latere API-route, zodat de sjablonen niet hoeven te veranderen.
 
 export const ONDERDELEN = [
+  { id: 'LESDOEL', label: 'Lesdoel', vorm: 'Eén of twee lesdoelen voor deze les, elk op een eigen regel, beginnend met "Je kunt" en met een werkwoord dat je kunt zien of horen (bijvoorbeeld uitleggen, berekenen, vergelijken). Alleen nodig als er hierboven nog geen lesdoel staat.' },
   { id: 'UITGEWERKT-VOORBEELD', label: 'Uitgewerkt voorbeeld', vorm: 'Een opgave bij het lesdoel, volledig uitgewerkt in genummerde stappen (1., 2., 3., …). Zet achter elke stap in één korte zin waarom die stap nodig is.' },
   { id: 'AANVULOPDRACHT', label: 'Aanvulopdracht', vorm: 'Een opgave die lijkt op het uitgewerkte voorbeeld. Schrijf de eerste stappen uit en laat de laatste één of twee stappen open met "…".' },
   { id: 'VRAGEN-STEUN', label: 'Vragen werkblad steun', vorm: '4 genummerde vragen op het niveau onthouden en begrijpen, in eenvoudige taal en korte zinnen. Zet het denkniveau tussen rechte haken achter elke vraag, bijvoorbeeld [Begrijpen].' },
@@ -21,6 +22,12 @@ export const ONDERDELEN = [
 ];
 
 export const IDS = ONDERDELEN.map((o) => o.id);
+
+/** Welke onderdelen het materiaal van deze les echt gebruikt (geen hintkaarten, exit tickets of startcheck als die er niet zijn). */
+export function nodigVoorMateriaal(docIds, heeftLesdoel = true) {
+  const heeft = new Set(docIds);
+  return IDS.filter((id) => !((id === 'LESDOEL' && heeftLesdoel) || (id.startsWith('HINTKAART') && !heeft.has('hintkaarten')) || (id === 'EXIT-TICKET' && !heeft.has('exit-tickets')) || (id === 'STARTCHECK' && !heeft.has('startcheck'))));
+}
 
 /** Kleine prompts per materiaalsoort. */
 export const PAKKETTEN = [
