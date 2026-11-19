@@ -1,6 +1,7 @@
 // Zet de invoer van de wizard om naar een volledige context met verstandige standaardwaarden.
 import { controleerLesdoel } from './tekst.js';
 import { zetTermen } from '../data/termen.js';
+import { sectieVoor } from '../data/sectie-accenten.js';
 
 export const STIJLEN = ['uitleggen', 'structuur', 'samenwerken', 'ontdekken', 'digitaal', 'relatie', 'houvast'];
 const NIVEAU_PER_REEKS = {
@@ -65,6 +66,10 @@ export function maakContext(invoer, profiel) {
   const pleinMogelijk = ruimteId === 'M' && !!pleinDef && (oa || profiel.regels.pleinToezichtDoorDocent !== false);
   const stilteMogelijk = !!c.stilte && !!stilteDef && capaciteit.stilte > 0;
 
+  // Combinatieklas: de docent kiest het; bij een afdeling met een eigen naam voor leerjaar 1-2 (vmbo-MiX) staat het standaard aan
+  const leerjaar = getal(c.leerjaar, afdeling.leerjaren[0]);
+  const gemengd = k.gemengd === true || k.gemengd === 'true' || (k.gemengd == null && !!afdeling.label12 && leerjaar <= 2);
+
   // Verdeling over steun, basis, verdieping
   let verdeling;
   const bekend = !!k.verdelingBekend && getal(k.steun) + getal(k.basis) + getal(k.verdieping) > 0;
@@ -75,8 +80,9 @@ export function maakContext(invoer, profiel) {
     const verdieping = Math.round(getal(k.verdieping) * f);
     verdeling = { steun, basis: Math.max(0, aantal - steun - verdieping), verdieping, bekend: true };
   } else {
-    const steun = Math.round(aantal * 0.25);
-    const verdieping = Math.round(aantal * 0.2);
+    // In een combinatieklas (bijvoorbeeld vmbo-MiX of havo/mavo) liggen de niveaus verder uit elkaar
+    const steun = Math.round(aantal * (gemengd ? 0.3 : 0.25));
+    const verdieping = Math.round(aantal * (gemengd ? 0.3 : 0.2));
     verdeling = { steun, basis: aantal - steun - verdieping, verdieping, bekend: false };
   }
 
@@ -92,7 +98,8 @@ export function maakContext(invoer, profiel) {
   if (bekend && verdeling.verdieping > 0) behoeften.hoogbegaafd = Math.max(behoeften.hoogbegaafd, 0);
 
   const vak = profiel.vakken.find((v) => v.id === c.vak);
-  const sectie = profiel.sectieAccenten?.perVak?.[c.vak] ?? {};
+  // Sectie-accent: wat de docent zelf invulde (optioneel, Mijn profiel) gaat voor, de school vult aan
+  const sectie = sectieVoor(profiel, c.vak, d.sectieAccenten);
   const stand = [1, 2, 3].includes(Number(invoer.stand)) ? Number(invoer.stand) : 2;
 
   return {
@@ -105,7 +112,7 @@ export function maakContext(invoer, profiel) {
       taxonomie: (!d.taxonomie || d.taxonomie === profiel.didactiek.taxonomie) && sectie.taxonomie ? sectie.taxonomie : d.taxonomie || profiel.didactiek.taxonomie
     },
     sectie,
-    afdeling, niveau: afdeling.niveau, leerjaar: getal(c.leerjaar, afdeling.leerjaren[0]),
+    afdeling, niveau: afdeling.niveau, leerjaar, gemengd,
     vak, vakId: c.vak, lesduur, ruimte: ruimteId, ruimteDef, aantal, oa,
     laptops: ['alle', 'deel', 'geen'].includes(c.laptops) ? c.laptops : 'alle',
     reeks: c.reeks ?? 'uitleg', tijdstip: c.tijdstip ?? 'midden',

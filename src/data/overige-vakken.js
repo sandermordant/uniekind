@@ -13,6 +13,7 @@ export const OVERIGE_VAKKEN = [
   { id: 'chinees', naam: 'Chinees', afdelingen: ['havo', 'vwo-a', 'vwo-g'], taal: true },
   { id: 'fries', naam: 'Fries', afdelingen: 'alle', taal: true },
   { id: 'informatica', naam: 'Informatica', afdelingen: 'alle' },
+  { id: 'beroepsgericht', naam: 'Andere beroepsgerichte profielvakken (vmbo)', afdelingen: ['vmbo-b', 'vmbo-k', 'mavo'] },
   { id: 'nlt', naam: 'NLT (natuur, leven en technologie)', afdelingen: ['havo', 'vwo-a', 'vwo-g'] },
   { id: 'anw', naam: 'ANW (algemene natuurwetenschappen)', afdelingen: ['havo', 'vwo-a', 'vwo-g'] },
   { id: 'maw', naam: 'Maatschappijwetenschappen', afdelingen: ['havo', 'vwo-a', 'vwo-g'] },

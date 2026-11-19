@@ -149,7 +149,9 @@ describe('Kerndoelen en eindtermen van SLO', async () => {
   const afd = (id) => sopho.profiel.afdelingen.find((a) => a.id === id);
 
   it('elk vak van Sophianum heeft een kader', () => {
-    const zonder = sopho.profiel.vakken.filter((v) => !index.kaders.some((k) => k.vakken.includes(v.id))).map((v) => v.id);
+    // Eigen vakken van de school zonder landelijk kader van SLO (lessentabellen 2025-2026)
+    const eigen = ['taal-cultuur', 'mentoruur'];
+    const zonder = sopho.profiel.vakken.filter((v) => !eigen.includes(v.id) && !index.kaders.some((k) => k.vakken.includes(v.id))).map((v) => v.id);
     expect(zonder).toEqual([]);
   });
   it('onderbouw krijgt eerst de geldende kerndoelen, bovenbouw eerst het examenprogramma van het eigen niveau', () => {

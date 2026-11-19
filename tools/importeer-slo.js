@@ -69,11 +69,11 @@ function vakNaam(ruw) {
 }
 /* Welke vakken in Uniekind bij een SLO-vak horen (schoolprofielen gebruiken deze id's) */
 const VAK_NAAR_UNIEKIND = {
-  Nederlands: ['nederlands'], Engels: ['engels'], Duits: ['duits'], Frans: ['frans'], Spaans: ['spaans'], Latijn: ['latijn'], Grieks: ['grieks'],
-  Wiskunde: ['wiskunde', 'rekenen'], Geschiedenis: ['geschiedenis'], Aardrijkskunde: ['aardrijkskunde'], Economie: ['economie'],
+  Nederlands: ['nederlands', 'taal-rekenen'], Engels: ['engels'], Duits: ['duits'], Frans: ['frans'], Spaans: ['spaans'], Latijn: ['latijn'], Grieks: ['grieks'],
+  Wiskunde: ['wiskunde', 'rekenen', 'wiskunde-d', 'taal-rekenen'], Geschiedenis: ['geschiedenis'], Aardrijkskunde: ['aardrijkskunde'], Economie: ['economie'],
   Bedrijfseconomie: ['bedrijfseconomie'], Maatschappijleer: ['maatschappijleer'], Biologie: ['biologie'], Natuurkunde: ['natuurkunde'],
-  Scheikunde: ['scheikunde'], Informatica: ['informatica'], 'Beeldende vakken': ['kunst'], Muziek: ['muziek'], Drama: ['drama'], Dans: ['dans'],
-  CKV: ['ckv'], 'Lichamelijke opvoeding': ['lo'], 'Bewegen en sport': ['lo'], Filosofie: ['filosofie'], 'Digitale geletterdheid': ['digitale-geletterdheid', 'informatica'],
+  Scheikunde: ['scheikunde'], Informatica: ['informatica'], 'Beeldende vakken': ['kunst', 'tekenen'], Muziek: ['muziek'], Drama: ['drama'], Dans: ['dans'],
+  CKV: ['ckv'], 'Lichamelijke opvoeding': ['lo', 'sportorientatie'], 'Bewegen en sport': ['lo', 'sportorientatie'], Filosofie: ['filosofie'], 'Digitale geletterdheid': ['digitale-geletterdheid', 'informatica'],
   'Mens en maatschappij': ['mm', 'geschiedenis', 'aardrijkskunde', 'economie', 'maatschappijleer'], 'Mens en natuur': ['mn', 'biologie', 'natuurkunde', 'scheikunde', 'oo'],
   Burgerschap: ['maatschappijleer', 'mm'], 'Kunst en cultuur': ['kunst', 'muziek', 'ckv', 'drama'], 'Culturele oriëntatie en creatieve expressie': ['kunst', 'muziek', 'ckv', 'drama'],
   'Moderne vreemde talen': ['duits', 'frans', 'spaans'], 'T&T (Technologie en Toepassing)': ['tt'], 'O&O (Onderzoeken en Ontwerpen)': ['oo'],

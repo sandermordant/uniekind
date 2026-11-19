@@ -114,7 +114,13 @@ function maakKiezer(ctx, items) {
 /* ───────────── Opzetten: wie is waar ───────────── */
 
 const g = (id, naam, rol, aantal) => ({ id, naam, rol, aantal });
-const verdiepingPlek = (ctx) => (ctx.stand >= 2 && ctx.pleinMogelijk && ctx.dynamiek !== 'onrustig' ? 'plein' : ctx.stand === 3 && ctx.stilteMogelijk ? 'stilte' : 'lokaal');
+// Waar de verdiepingsgroep werkt: alleen op het plein of in de stilteruimte als de groep daar past (nooit boven de capaciteit)
+const verdiepingPlek = (ctx) => {
+  const n = ctx.verdeling.verdieping;
+  if (ctx.stand >= 2 && ctx.pleinMogelijk && ctx.dynamiek !== 'onrustig' && n <= ctx.capaciteit.plein) return 'plein';
+  if (ctx.stand === 3 && ctx.stilteMogelijk && n <= ctx.capaciteit.stilte) return 'stilte';
+  return 'lokaal';
+};
 
 function routeGroepen(ctx, zonder = 0) {
   // Verdeel de klas over steun, basis en verdieping; 'zonder' leerlingen gaan naar een aparte groep (uit verdieping eerst).
@@ -491,6 +497,7 @@ export function bouwLes(ctx, items) {
   if (ctx.reeks === 'toets' && aanbod('examenstress')?.inDeLes) les.tips.push(aanbod('examenstress').inDeLes);
   if (ctx.inhoud.misvattingen) les.tips.push(`Bekende struikelpunten: ${ctx.inhoud.misvattingen}. Gebruik ze als foute antwoorden in je check.`);
   if (split.waarschuwing) les.tips.push(split.waarschuwing);
+  if (ctx.gemengd) les.tips.push('Combinatieklas: iedereen werkt aan hetzelfde lesdoel, op het niveau dat past. De routes volgen wat leerlingen in deze les nodig hebben, niet hun advies; na de check mag een leerling gerust van route wisselen. Het materiaal staat klaar op drie niveaus.');
   if (ctx.pleinZicht === 'beperkt' && !ctx.oa && fases.some((f) => f.blokken.some((b) => b.plek === 'plein'))) {
     les.tips.push(`Bij ${ctx.afdeling.naam} kijk je vanuit het ${termen.M} minder goed op het ${termen.plein}. Is er geen onderwijsassistent, zet dan de groep die het zelfstandigst werkt op het ${termen.plein}, spreek vooraf af waar ze zitten en loop er tussen twee instructiemomenten even langs.`);
   }

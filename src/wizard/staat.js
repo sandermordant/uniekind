@@ -13,6 +13,10 @@ export function laadDocent(profiel) {
 }
 export const bewaarDocent = (docent) => opslag.schrijf('docentprofiel', docent);
 
+/** Sectie-accenten die de docent zelf invulde (optioneel; alleen in deze browser). */
+export const eigenSectieAccenten = () => opslag.lees('sectieaccenten', {}) ?? {};
+export const bewaarEigenSectieAccenten = (perVak) => opslag.schrijf('sectieaccenten', perVak);
+
 export function nieuwConcept(profiel, docent) {
   const inv = standaardInvoer(profiel);
   inv.docent = KLOON(docent);
@@ -71,6 +75,7 @@ export function generatorInvoer(concept) {
   const inv = concept.invoer;
   return {
     ...inv,
+    docent: { ...inv.docent, sectieAccenten: eigenSectieAccenten() },
     opties: { ...inv.opties, duimen: opslag.lees('duimen', {}), vorigeLes: [...new Set([...(inv.opties?.vorigeLes ?? []), ...recentGebruikt({ vak: inv.context?.vak, behalve: concept.logId })])] }
   };
 }

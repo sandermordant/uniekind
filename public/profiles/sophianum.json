@@ -428,14 +428,26 @@
     {
       "id": "geschiedenis",
       "naam": "Geschiedenis",
-      "afdelingen": "alle",
-      "rekenen": false
+      "afdelingen": [
+        "mavo",
+        "havo",
+        "vwo-a",
+        "vwo-g"
+      ],
+      "rekenen": false,
+      "bron": "lessentabellen 2025-2026: mavo, havo en vwo (op vmbo basis en kader in M&M)"
     },
     {
       "id": "aardrijkskunde",
       "naam": "Aardrijkskunde",
-      "afdelingen": "alle",
-      "rekenen": true
+      "afdelingen": [
+        "mavo",
+        "havo",
+        "vwo-a",
+        "vwo-g"
+      ],
+      "rekenen": true,
+      "bron": "lessentabellen 2025-2026: mavo, havo en vwo (op vmbo basis en kader in M&M)"
     },
     {
       "id": "economie",
@@ -470,14 +482,26 @@
     {
       "id": "natuurkunde",
       "naam": "Natuurkunde / NaSk",
-      "afdelingen": "alle",
-      "rekenen": true
+      "afdelingen": [
+        "mavo",
+        "havo",
+        "vwo-a",
+        "vwo-g"
+      ],
+      "rekenen": true,
+      "bron": "lessentabellen 2025-2026: mavo (Nask1), havo en vwo (op vmbo basis en kader in M&N)"
     },
     {
       "id": "scheikunde",
       "naam": "Scheikunde",
-      "afdelingen": "alle",
-      "rekenen": true
+      "afdelingen": [
+        "mavo",
+        "havo",
+        "vwo-a",
+        "vwo-g"
+      ],
+      "rekenen": true,
+      "bron": "lessentabellen 2025-2026: mavo (Nask2), havo en vwo (op vmbo basis en kader in M&N)"
     },
     {
       "id": "digitale-geletterdheid",
@@ -494,8 +518,13 @@
     {
       "id": "muziek",
       "naam": "Muziek",
-      "afdelingen": "alle",
-      "rekenen": false
+      "afdelingen": [
+        "havo",
+        "vwo-a",
+        "vwo-g"
+      ],
+      "rekenen": false,
+      "bron": "lessentabellen 2025-2026: havo en vwo (op vmbo en mavo binnen Kunst en Cultuur)"
     },
     {
       "id": "ckv",
@@ -512,13 +541,13 @@
     },
     {
       "id": "filosofie",
-      "naam": "Filosofie",
+      "naam": "Filosofie en levensbeschouwing",
       "afdelingen": [
         "vwo-a",
         "vwo-g"
       ],
       "rekenen": false,
-      "bron": "schoolgids: vwo"
+      "bron": "lessentabel vwo 2025-2026"
     },
     {
       "id": "dp",
@@ -529,7 +558,7 @@
       ],
       "rekenen": true,
       "onderbouwVakoverstijgend": true,
-      "bron": "schoolgids"
+      "bron": "schoolgids; lessentabel vmbo 2025-2026: het enige beroepsgerichte profielvak (DVPR)"
     },
     {
       "id": "mm",
@@ -582,14 +611,62 @@
       ]
     },
     {
-      "id": "beroepsgericht",
-      "naam": "Beroepsgericht profielvak",
+      "id": "wiskunde-d",
+      "naam": "Wiskunde D",
       "afdelingen": [
-        "vmbo-b",
-        "vmbo-k"
+        "vwo-a",
+        "vwo-g"
       ],
       "rekenen": true,
-      "aanname": true
+      "bron": "lessentabel vwo 2025-2026"
+    },
+    {
+      "id": "taal-rekenen",
+      "naam": "Taal & Rekenen",
+      "afdelingen": [
+        "havo"
+      ],
+      "rekenen": true,
+      "taal": true,
+      "bron": "lessentabel havo 2025-2026 (havo 1 en 4)"
+    },
+    {
+      "id": "tekenen",
+      "naam": "Tekenen",
+      "afdelingen": [
+        "havo",
+        "vwo-a",
+        "vwo-g"
+      ],
+      "rekenen": false,
+      "bron": "lessentabellen havo en vwo 2025-2026 (bovenbouw)"
+    },
+    {
+      "id": "taal-cultuur",
+      "naam": "Taal en Cultuur (T&C)",
+      "afdelingen": [
+        "vwo-a",
+        "vwo-g"
+      ],
+      "rekenen": false,
+      "taal": true,
+      "bron": "lessentabel vwo 2025-2026 (leerjaar 3, naast O&O)"
+    },
+    {
+      "id": "sportorientatie",
+      "naam": "Sportoriëntatie",
+      "afdelingen": [
+        "mavo"
+      ],
+      "rekenen": false,
+      "bron": "lessentabel mavo 2025-2026 (leerjaar 4)"
+    },
+    {
+      "id": "mentoruur",
+      "naam": "Mentoruur, studieles en coaching",
+      "afdelingen": "alle",
+      "rekenen": false,
+      "bron": "lessentabellen 2025-2026 (mentoruur, studieles, coaching)"
     }
   ],
   "vakkenToelichting": "Vakken met 'bron' komen uit de schoolgids. De overige zijn een standaardlijst die de school zelf aanvult of aanpast. 'rekenen: true' betekent dat Uniekind standaard een rekenhulpkaart aanbiedt. 'kernwerkvormen' zijn werkvormen die bij dit vak horen (zoals de ontwerpopdracht bij O&O): Uniekind stelt ze ook voor bij een lagere stand op de schuif.",

@@ -121,6 +121,7 @@ export function scoreWerkvorm(item, slotType, ctx) {
   if (ctx.tijdstip === 'eerste' && ['ophaaloefening', 'startopdracht', 'gespreide-herhaling'].includes(item.id)) klas += 0.1;
   if (slotType === 'verdieping' && (item.differentiatie.includes('niveau') || item.differentiatie.includes('tempo'))) klas += 0.15;
   if (slotType === 'steun' && item.differentiatie.includes('ondersteuning')) klas += 0.15;
+  if (ctx.gemengd && item.differentiatie.includes('niveau')) klas += 0.12; // combinatieklas: differentiëren op niveau
   delen.klas = Math.max(0, Math.min(1.3, klas));
 
   // Schoolvisie: welke accenten tellen, staat in het schoolprofiel (generator.visieAccenten).

@@ -4,6 +4,7 @@
 import { html, $ } from '../util/html.js';
 import { laadStandaardProfiel, laadIndex } from '../data/laden.js';
 import { zonderOverigeVakken } from '../data/overige-vakken.js';
+import { uitAccentBestand, voegAccentenSamen } from '../data/sectie-accenten.js';
 import { schoonProfiel, profielNaarCode, bewaarEigenProfiel, wisEigenProfiel, eigenProfielActief } from '../data/profiel.js';
 import { VISIE_ACCENTEN } from '../engine/score.js';
 import { lees, zet } from '../wizard/staat.js';
@@ -104,6 +105,8 @@ function sectieVakken(p, werkvormen) {
   const sectie = p.terminologie?.sectie ?? 'sectie';
   return html`
     <p class="hulp">Ook vakoverstijgende vakken. Per vak kan de ${sectie} een eigen accent leggen; leeg betekent de schoolstandaard.</p>
+    <p class="hulp">Kreeg je van een collega een bestand met sectie-accenten (uit Mijn profiel)? Lees het hier in; het komt bij de juiste vakken te staan.</p>
+    <label class="knop secundair klein bestandknop">Sectie-accenten van een collega inlezen<input type="file" accept=".json,application/json" data-actie="accenten-inlezen" class="visueel-verborgen"></label>
     ${p.vakken.map((v, i) => {
       const acc = p.sectieAccenten?.perVak?.[v.id] ?? {};
       return html`<details class="lijstrij vakrij"><summary><b>${v.naam}</b> <span class="hulp">${v.afdelingen === 'alle' ? 'alle afdelingen' : v.afdelingen.map((x) => p.afdelingen.find((a) => a.id === x)?.naam ?? x).join(', ')}${Object.keys(acc).length ? ` · ${sectie}-accent` : ''}</span></summary>
@@ -285,6 +288,14 @@ export default {
           } else if (a === 'inlezen' && t.files?.[0]) {
             try { werk = kloon(schoonProfiel(JSON.parse(await t.files[0].text()), basis)); delete werk.eigen; bewaar(); teken(); melding('Profiel ingelezen. Controleer de onderdelen en download of gebruik het.', 'ok'); }
             catch { melding('Dit bestand is geen geldig schoolprofiel.', 'fout'); }
+          } else if (a === 'accenten-inlezen' && t.files?.[0]) {
+            try {
+              const nieuw = uitAccentBestand(await t.files[0].text(), werk.vakken.map((v) => v.id));
+              werk.sectieAccenten = { ...(werk.sectieAccenten ?? {}), perVak: voegAccentenSamen(werk.sectieAccenten?.perVak, nieuw) };
+              bewaar(); teken();
+              const namen = Object.keys(nieuw).map((id) => werk.vakken.find((v) => v.id === id)?.naam ?? id);
+              melding(`Sectie-accenten ingelezen voor ${namen.join(', ')}. Download het profiel en zet het op de website, dan geldt het voor iedereen.`, 'ok');
+            } catch (err) { melding(err instanceof SyntaxError ? 'Dit bestand kan Uniekind niet lezen.' : err.message, 'fout'); }
           }
         });
         root.addEventListener('click', async (e) => {

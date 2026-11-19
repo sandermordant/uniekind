@@ -9,6 +9,8 @@ import { maakLesbestand } from '../export/lesbestand.js';
 import { profielId } from '../data/laden.js';
 import { PAKKETTEN, ONDERDELEN } from '../ai/formaat.js';
 import { aiInstellingen, promptVoor } from '../ai/adapter.js';
+import { sectieVoor } from '../data/sectie-accenten.js';
+import { eigenSectieAccenten } from './staat.js';
 
 export function pakketVoor(les, data, staat, concept = {}) {
   const p = maakMateriaal(les, data, concept.ai ?? {}, concept.links ?? []);
@@ -69,7 +71,7 @@ function bronnenPaneel(les, data, staat, concept, bronnenPerVak) {
   const vak = data.profiel.vakken.find((v) => v.id === c.vak);
   const onderwerp = (les.doel.onderwerp || vak?.naam || '').replace(/^\s*[\d.]+\s+/, '');
   const zoek = (data.profiel.bronnenZoeken ?? []).map((z) => ({ naam: z.naam, url: z.url.replace('{q}', zoekQ(onderwerp)) }));
-  const methode = data.profiel.sectieAccenten?.perVak?.[c.vak]?.methodesite;
+  const methode = sectieVoor(data.profiel, c.vak, eigenSectieAccenten()).methodesite;
   const curatie = [...(bronnenPerVak?.perVak?.[c.vak] ?? []), ...(bronnenPerVak?.algemeen ?? [])];
   const gekozen = concept.links ?? [];
   const isGekozen = (url) => gekozen.some((l) => l.url === url);

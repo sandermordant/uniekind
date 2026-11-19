@@ -222,7 +222,7 @@ export function stapInhoud(ctx) {
 
 /* ── Stap 4 · Klasbeeld ─────────────────────────── */
 
-export function stapKlas({ concept }) {
+export function stapKlas({ concept, profiel }) {
   const k = concept.invoer.klas;
   const n = Number(concept.invoer.context.aantal) || 0;
   const som = (Number(k.steun) || 0) + (Number(k.basis) || 0) + (Number(k.verdieping) || 0);
@@ -242,7 +242,8 @@ export function stapKlas({ concept }) {
       </div>
     </fieldset>
     ${knoppenveld('klas.dynamiek', 'Groepsdynamiek', [['rustig', 'Rustig'], ['levendig', 'Levendig'], ['onrustig', 'Onrustig']], k.dynamiek)}
-    ${knoppenveld('klas.samenwerken', 'Samenwerken gaat', [['goed', 'Goed'], ['wisselend', 'Wisselend'], ['moeizaam', 'Moeizaam']], k.samenwerken)}`;
+    ${knoppenveld('klas.samenwerken', 'Samenwerken gaat', [['goed', 'Goed'], ['wisselend', 'Wisselend'], ['moeizaam', 'Moeizaam']], k.samenwerken)}
+    ${combinatieklasVeld(concept, profiel?.afdelingen.find((a) => a.id === concept.invoer.context.afdeling))}`;
 }
 
 /* ── Snelle modus ───────────────────────────────── */
@@ -271,5 +272,14 @@ export function stapSnel(ctx) {
     ${vrij ? tekstveld('context.lesduur', 'Lesduur in minuten', c.lesduur, { type: 'number', min: 20, max: 240 }) : ''}
     ${knoppenveld('context.ruimte', 'Lokaal', profiel.ruimtes.filter((r) => ['M', 'L', 'anders'].includes(r.id)).map((r) => [r.id, r.kort.charAt(0).toUpperCase() + r.kort.slice(1)]), c.ruimte, { herteken: true })}
     ${tekstveld('context.aantal', 'Aantal leerlingen', c.aantal, { type: 'number', min: 1, max: 60 })}
+    ${Number(c.leerjaar) <= 2 ? combinatieklasVeld(concept, afd) : ''}
     <p class="melding let-op" id="capaciteit" ${melding ? '' : 'hidden'}>${melding}</p>`;
+}
+
+/** Combinatieklas (bijvoorbeeld vmbo-MiX, havo/mavo of vwo/havo): de les richt zich dan sterker op niveaudifferentiatie. */
+function combinatieklasVeld(concept, afd) {
+  const k = concept.invoer.klas;
+  const leerjaar = Number(concept.invoer.context.leerjaar) || 1;
+  const aan = k.gemengd ?? (!!afd?.label12 && leerjaar <= 2);
+  return knoppenveld('klas.gemengd', 'Combinatieklas?', [['true', 'Ja'], ['false', 'Nee']], String(!!aan), { bool: true, info: 'Bijvoorbeeld vmbo-MiX, havo/mavo of vwo/havo. Uniekind verdeelt de klas dan breder over steun, basis en verdieping en kiest vaker werkvormen die op niveau differentiëren.' });
 }

@@ -3,7 +3,10 @@
 import { html, $ } from '../util/html.js';
 import { DOCENTSTIJL } from '../data/labels.js';
 import { STAND } from '../wizard/stappen.js';
-import { laadDocent, laadConcept, bewaarConcept } from '../wizard/staat.js';
+import { laadDocent, laadConcept, bewaarConcept, eigenSectieAccenten, bewaarEigenSectieAccenten } from '../wizard/staat.js';
+import { schoonAccent, naarAccentBestand } from '../data/sectie-accenten.js';
+import { opNaam } from '../data/overige-vakken.js';
+import { laadIndex } from '../data/laden.js';
 import { alleLessen, bewaarReflectie, verwijder, wisAlles, ervaringen, naarBestand, uitBestand, dekking } from '../opslag/logboek.js';
 import { laadKaderIndex, laadKader, vlak } from '../data/kaders.js';
 import { download, bestandsnaam } from '../export/delen.js';
@@ -35,6 +38,47 @@ function profielBlok(profiel, docent, heeftProfiel) {
         </div>
       </div>` : html`<p class="lees">Je hebt nog geen profiel ingevuld. Dat duurt twee minuten en helpt Uniekind om bij jouw manier van lesgeven te beginnen.</p>`}
       <div class="knoppen klein-boven"><button type="button" class="knop secundair" data-actie="profiel-aanpassen">${heeftProfiel ? 'Profiel aanpassen' : 'Profiel invullen'}</button></div>
+    </section>`;
+}
+
+/* ── Accenten van je sectie (optioneel) ── */
+function sectieBlok(profiel, docent, werkvormen, gekozenVak) {
+  const sectie = profiel.terminologie?.sectie ?? 'sectie';
+  const eigen = eigenSectieAccenten();
+  const vakNaam = (id) => profiel.vakken.find((v) => v.id === id)?.naam ?? id;
+  const lmNaam = (id) => profiel.didactiek.lesmodelOpties.find((o) => o.id === id)?.naam ?? id;
+  const wvNaam = (id) => werkvormen.find((w) => w.id === id)?.naam ?? id;
+  const mijn = docent.vakken?.length ? docent.vakken : [];
+  const vakken = [...opNaam(profiel.vakken.filter((v) => mijn.includes(v.id))), ...opNaam(profiel.vakken.filter((v) => !mijn.includes(v.id)))];
+  const vak = gekozenVak ?? Object.keys(eigen)[0] ?? mijn[0] ?? vakken[0]?.id;
+  const a = eigen[vak] ?? {};
+  const school = profiel.sectieAccenten?.perVak?.[vak] ?? {};
+  const optie = (w, l, huidig) => html`<option value="${w}" ${w === (huidig ?? '') ? 'selected' : ''}>${l}</option>`;
+  return html`
+    <section class="sectie" aria-labelledby="kop-sectie">
+      <h2 id="kop-sectie">Accenten van je ${sectie} <small class="sub">Optioneel</small></h2>
+      <p class="lees">Werkt je ${sectie} met een vast lesmodel, een methodewebsite of een werkvorm van de maand? Vul het hier in, dan geldt het meteen voor jouw lessen in dat vak. Niets is verplicht: leeg betekent de schoolstandaard. Het staat alleen in deze browser.</p>
+      ${Object.keys(eigen).length ? html`<ul class="accentlijst">${Object.entries(eigen).map(([v, x]) => html`<li><b>${vakNaam(v)}</b>: ${[x.lesmodel && lmNaam(x.lesmodel), x.taxonomie && (x.taxonomie === 'rtti' ? 'RTTI' : 'Bloom'), x.werkvormVanDeMaand && `werkvorm van de maand: ${wvNaam(x.werkvormVanDeMaand)}`, x.methodesite && 'methodewebsite'].filter(Boolean).join(' · ')}
+        <button type="button" class="knop secundair klein" data-actie="accent-weg" data-vak="${v}" aria-label="Accent voor ${vakNaam(v)} weghalen">Weghalen</button></li>`)}</ul>` : ''}
+      <details class="uitleg" ${gekozenVak ? 'open' : ''}><summary>${Object.keys(eigen).length ? 'Een accent toevoegen of aanpassen' : 'Een accent invullen'}</summary>
+        <form class="accentform" novalidate>
+          <div class="veldrij">
+            <div class="veld"><label for="accVak">Vak</label><select id="accVak" name="vak" data-actie="accent-vak">${vakken.map((v) => optie(v.id, v.naam, vak))}</select></div>
+            <div class="veld"><label for="accLm">Lesmodel</label><select id="accLm" name="lesmodel">${optie('', school.lesmodel ? `Schoolinstelling (${lmNaam(school.lesmodel)})` : 'Schoolstandaard', a.lesmodel)}${profiel.didactiek.lesmodelOpties.map((o) => optie(o.id, o.naam, a.lesmodel))}</select></div>
+            <div class="veld"><label for="accTax">Taxonomie</label><select id="accTax" name="taxonomie">${optie('', 'Schoolstandaard', a.taxonomie)}${optie('bloom', 'Bloom (herzien)', a.taxonomie)}${optie('rtti', 'RTTI', a.taxonomie)}</select></div>
+          </div>
+          <div class="veldrij">
+            <div class="veld"><label for="accWv">Werkvorm van de maand</label><select id="accWv" name="werkvormVanDeMaand">${optie('', 'Geen', a.werkvormVanDeMaand)}${werkvormen.map((w) => optie(w.id, w.naam, a.werkvormVanDeMaand))}</select></div>
+            <div class="veld"><label for="accSite">Methodewebsite (adres)</label><input id="accSite" name="methodesite" type="url" placeholder="https://…" value="${a.methodesite ?? ''}"></div>
+          </div>
+          <div class="knoppen"><button type="submit" class="knop">Bewaren</button></div>
+          <p class="hulp" id="accentMelding" role="status" hidden></p>
+        </form>
+      </details>
+      ${Object.keys(eigen).length ? html`<div class="knoppen klein-boven">
+        <button type="button" class="knop secundair klein" data-actie="accent-bestand">Bestand voor de beheerder</button>
+        <span class="hulp">Wil je dat je hele ${sectie} dit krijgt? Stuur het bestand naar de beheerder van Uniekind; die leest het in op de pagina Schoolprofiel.</span>
+      </div>` : ''}
     </section>`;
 }
 
@@ -149,6 +193,8 @@ function gegevensBlok(lessen) {
 export default {
   async render({ profiel }) {
     const nogNiet = {};
+    const werkvormen = await laadIndex().then((i) => [...i.items].sort((a, b) => a.naam.localeCompare(b.naam, 'nl'))).catch(() => []);
+    let accentVak = null;
     const pagina = () => {
       const docent = laadDocent(profiel);
       const heeftProfiel = !!opslag.lees('docentprofiel');
@@ -161,6 +207,7 @@ export default {
         </div></section>
         <main class="wrap">
           ${profielBlok(profiel, docent, heeftProfiel)}
+          ${sectieBlok(profiel, docent, werkvormen, accentVak)}
           ${lessenBlok(profiel, lessen)}
           ${werktBlok(lessen)}
           ${dekkingBlok(lessen, nogNiet)}
@@ -178,6 +225,20 @@ export default {
           if (melding) { const m = $('#gegevensMelding', root); m.hidden = false; m.textContent = melding; }
         };
         root.addEventListener('submit', (e) => {
+          const af = e.target.closest('form.accentform');
+          if (af) {
+            e.preventDefault();
+            const vak = af.vak.value;
+            const accent = schoonAccent({ lesmodel: af.lesmodel.value, taxonomie: af.taxonomie.value, werkvormVanDeMaand: af.werkvormVanDeMaand.value, methodesite: af.methodesite.value });
+            const alle = { ...eigenSectieAccenten() };
+            if (Object.keys(accent).length) alle[vak] = accent; else delete alle[vak];
+            bewaarEigenSectieAccenten(alle);
+            accentVak = vak;
+            teken();
+            const m = $('#accentMelding', root);
+            if (m) { m.hidden = false; m.textContent = af.methodesite.value.trim() && !accent.methodesite ? 'Bewaard, maar het adres van de methodewebsite moet met https:// beginnen.' : Object.keys(accent).length ? 'Bewaard. Je volgende les in dit vak volgt dit accent.' : 'Leeg bewaard: dit vak volgt de schoolstandaard.'; }
+            return;
+          }
           const f = e.target.closest('form.reflectie');
           if (!f) return;
           e.preventDefault();
@@ -220,6 +281,13 @@ export default {
               nogNiet[k.dataset.kader] = vlak(kader).filter((r) => !r.heeftKinderen && !gehad.has(r.sleutel));
               teken();
             }).catch(() => { k.textContent = 'Dit kader is niet (meer) beschikbaar'; });
+          } else if (a === 'accent-weg') {
+            const alle = { ...eigenSectieAccenten() };
+            delete alle[k.dataset.vak];
+            bewaarEigenSectieAccenten(alle);
+            teken();
+          } else if (a === 'accent-bestand') {
+            download(new Blob([naarAccentBestand(eigenSectieAccenten())], { type: 'application/json' }), bestandsnaam('sectie-accenten', 'json'));
           } else if (a === 'download') {
             download(new Blob([naarBestand()], { type: 'application/json' }), bestandsnaam('mijn-lessen', 'json'));
           } else if (a === 'wis-lessen') {
@@ -227,13 +295,14 @@ export default {
           } else if (a === 'wis-alles') {
             if (window.confirm('Alles wissen: je profiel, je laatste les, je lessen en reflecties? Dit kan niet ongedaan worden gemaakt.')) {
               wisAlles();
-              for (const s of ['docentprofiel', 'concept', 'digibord-geluid', 'examenopgave', 'examenstof-staat', 'profielconcept', 'klas', 'materiaal', 'onderwerp-ai', 'werkplek-open']) opslag.wis(s);
+              for (const s of ['docentprofiel', 'concept', 'digibord-geluid', 'examenopgave', 'examenstof-staat', 'profielconcept', 'klas', 'materiaal', 'onderwerp-ai', 'werkplek-open', 'sectieaccenten']) opslag.wis(s);
               teken('Alles is gewist. Uniekind begint weer blanco.');
             }
           }
         });
         root.addEventListener('change', async (e) => {
           const t = e.target;
+          if (t.dataset?.actie === 'accent-vak') { accentVak = t.value; teken(); $('#accVak', root)?.focus(); return; }
           if (t.dataset?.actie !== 'inlezen' || !t.files?.[0]) return;
           try {
             const n = uitBestand(await t.files[0].text());

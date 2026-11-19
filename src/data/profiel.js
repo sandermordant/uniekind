@@ -6,6 +6,7 @@
 //   4. het standaardprofiel van deze build
 // Alles van buiten wordt eerst opgeschoond: alleen bekende vormen, kleuren als #rrggbb, logo alleen als afbeelding.
 
+import { schoonPerVak } from './sectie-accenten.js';
 const SLEUTEL = 'uniekind:schoolprofiel';
 const KLEUR = /^#[0-9a-fA-F]{6}$/;
 const kloon = (x) => JSON.parse(JSON.stringify(x));
@@ -71,12 +72,7 @@ export function schoonProfiel(eigen, basis) {
   p.uniekind.eigenProfiel = basis.uniekind.eigenProfiel;
   p.generator = { ...basis.generator, visieAccenten: Array.isArray(p.generator?.visieAccenten) ? p.generator.visieAccenten.filter((x) => typeof x === 'string').slice(0, 20) : basis.generator.visieAccenten };
   const perVak = isObj(p.sectieAccenten?.perVak) ? p.sectieAccenten.perVak : {};
-  p.sectieAccenten = { ...(basis.sectieAccenten ?? {}), ...(isObj(p.sectieAccenten) ? p.sectieAccenten : {}), perVak: Object.fromEntries(Object.entries(perVak).filter(([, a]) => isObj(a)).map(([vak, a]) => [vak, {
-    ...(['di', 'adi', 'edi', 'igdi', 'eigen'].includes(a.lesmodel) ? { lesmodel: a.lesmodel } : {}),
-    ...(['bloom', 'rtti'].includes(a.taxonomie) ? { taxonomie: a.taxonomie } : {}),
-    ...(typeof a.methodesite === 'string' && /^https?:\/\//.test(a.methodesite) ? { methodesite: a.methodesite.slice(0, 300) } : {}),
-    ...(typeof a.werkvormVanDeMaand === 'string' && /^[a-z0-9-]{1,80}$/.test(a.werkvormVanDeMaand) ? { werkvormVanDeMaand: a.werkvormVanDeMaand } : {})
-  }])) };
+  p.sectieAccenten = { ...(basis.sectieAccenten ?? {}), ...(isObj(p.sectieAccenten) ? p.sectieAccenten : {}), perVak: schoonPerVak(perVak) };
   p.bronnenZoeken = (Array.isArray(p.bronnenZoeken) ? p.bronnenZoeken : basis.bronnenZoeken ?? []).filter((b) => isObj(b) && /^https:\/\//.test(b.url ?? ''));
   p.eigen = true;
   return p;

@@ -1,7 +1,7 @@
 {
  "toelichting": "Gemaakt door tools/importeer-slo.js uit de open data van SLO (licentie MIT). Niet met de hand aanpassen: draai het script opnieuw.",
  "licentie": "Bron: SLO, nationaal expertisecentrum leerplanontwikkeling. Open data onder MIT-licentie, https://github.com/slonl",
- "gemaakt": "2026-11-18",
+ "gemaakt": "2026-11-19",
  "vakken": [
   {
    "naam": "Aardrijkskunde",
@@ -39,7 +39,8 @@
    "naam": "Beeldende vakken",
    "bestand": "vak-beeldende-vakken.json",
    "uniekind": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "aantal": 20
   },
@@ -47,7 +48,8 @@
    "naam": "Bewegen en sport",
    "bestand": "vak-bewegen-en-sport.json",
    "uniekind": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "aantal": 2
   },
@@ -300,7 +302,8 @@
    "naam": "Lichamelijke opvoeding",
    "bestand": "vak-lichamelijke-opvoeding.json",
    "uniekind": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "aantal": 9
   },
@@ -419,7 +422,8 @@
    "naam": "Nederlands",
    "bestand": "vak-nederlands.json",
    "uniekind": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "aantal": 18
   },
@@ -511,7 +515,9 @@
    "bestand": "vak-wiskunde.json",
    "uniekind": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "aantal": 35
   },
@@ -1475,7 +1481,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 78
@@ -1497,7 +1504,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 10
@@ -1519,7 +1527,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 9
@@ -1541,7 +1550,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 25
@@ -1563,7 +1573,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 26
@@ -1585,7 +1596,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 11
@@ -1607,7 +1619,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 11
@@ -1629,7 +1642,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 10
@@ -1651,7 +1665,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 9
@@ -1673,7 +1688,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 10
@@ -1695,7 +1711,8 @@
     "ingang": null
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 9
@@ -1715,7 +1732,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 29
@@ -1735,7 +1753,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 29
@@ -1755,7 +1774,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 29
@@ -1778,7 +1798,8 @@
     "examenjaar": "2023"
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 4
@@ -1801,7 +1822,8 @@
     "examenjaar": "2022"
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 12
@@ -1824,7 +1846,8 @@
     "examenjaar": "2023"
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 4
@@ -1847,7 +1870,8 @@
     "examenjaar": "2024"
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 5
@@ -1870,7 +1894,8 @@
     "examenjaar": "2023"
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 12
@@ -1893,7 +1918,8 @@
     "examenjaar": "2023"
    },
    "vakken": [
-    "kunst"
+    "kunst",
+    "tekenen"
    ],
    "bestand": "vak-beeldende-vakken.json",
    "aantal": 12
@@ -1913,7 +1939,8 @@
     "versie": "2026-08-17"
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-bewegen-en-sport.json",
    "aantal": 6
@@ -1933,7 +1960,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-bewegen-en-sport.json",
    "aantal": 13
@@ -6019,7 +6047,8 @@
     "ingang": null
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-lichamelijke-opvoeding.json",
    "aantal": 71
@@ -6041,7 +6070,8 @@
     "ingang": null
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-lichamelijke-opvoeding.json",
    "aantal": 81
@@ -6063,7 +6093,8 @@
     "ingang": null
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-lichamelijke-opvoeding.json",
    "aantal": 14
@@ -6085,7 +6116,8 @@
     "ingang": null
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-lichamelijke-opvoeding.json",
    "aantal": 14
@@ -6106,7 +6138,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-lichamelijke-opvoeding.json",
    "aantal": 22
@@ -6127,7 +6160,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-lichamelijke-opvoeding.json",
    "aantal": 22
@@ -6148,7 +6182,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-lichamelijke-opvoeding.json",
    "aantal": 22
@@ -6169,7 +6204,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-lichamelijke-opvoeding.json",
    "aantal": 22
@@ -6190,7 +6226,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "lo"
+    "lo",
+    "sportorientatie"
    ],
    "bestand": "vak-lichamelijke-opvoeding.json",
    "aantal": 22
@@ -7506,7 +7543,8 @@
     "versie": "2026-08-17"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 10
@@ -7526,7 +7564,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 34
@@ -7546,7 +7585,8 @@
     "versie": "2026-08-17"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 86
@@ -7568,7 +7608,8 @@
     "ingang": "Vanaf CE 2014"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 33
@@ -7590,7 +7631,8 @@
     "ingang": null
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 33
@@ -7614,7 +7656,8 @@
     "ingang": "Vanaf CE 2014"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 104
@@ -7634,7 +7677,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 28
@@ -7654,7 +7698,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 26
@@ -7674,7 +7719,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 26
@@ -7694,7 +7740,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 26
@@ -7714,7 +7761,8 @@
     "versie": "2026-10-15"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 28
@@ -7737,7 +7785,8 @@
     "examenjaar": "2024"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 30
@@ -7760,7 +7809,8 @@
     "examenjaar": "2024"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 50
@@ -7783,7 +7833,8 @@
     "examenjaar": "2024"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 43
@@ -7806,7 +7857,8 @@
     "examenjaar": "2024"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 51
@@ -7829,7 +7881,8 @@
     "examenjaar": "2024"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 43
@@ -7852,7 +7905,8 @@
     "examenjaar": "2024"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 30
@@ -7872,7 +7926,8 @@
     "versie": "2026-08-17"
    },
    "vakken": [
-    "nederlands"
+    "nederlands",
+    "taal-rekenen"
    ],
    "bestand": "vak-nederlands.json",
    "aantal": 553
@@ -9349,7 +9404,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 9
@@ -9370,7 +9427,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 38
@@ -9391,7 +9450,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 25
@@ -9412,7 +9473,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 25
@@ -9433,7 +9496,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 24
@@ -9454,7 +9519,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 25
@@ -9477,7 +9544,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 40
@@ -9500,7 +9569,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 41
@@ -9523,7 +9594,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 30
@@ -9546,7 +9619,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 40
@@ -9569,7 +9644,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 35
@@ -9592,7 +9669,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 33
@@ -9615,7 +9694,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 47
@@ -9640,7 +9721,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 91
@@ -9663,7 +9746,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 42
@@ -9684,7 +9769,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 38
@@ -9705,7 +9792,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 45
@@ -9726,7 +9815,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 48
@@ -9747,7 +9838,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 46
@@ -9768,7 +9861,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 49
@@ -9789,7 +9884,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 49
@@ -9810,7 +9907,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 55
@@ -9831,7 +9930,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 79
@@ -9852,7 +9953,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 86
@@ -9873,7 +9976,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 81
@@ -9897,7 +10002,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 99
@@ -9921,7 +10028,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 78
@@ -9945,7 +10054,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 116
@@ -9969,7 +10080,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 168
@@ -9993,7 +10106,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 103
@@ -10017,7 +10132,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 68
@@ -10041,7 +10158,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 125
@@ -10065,7 +10184,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 96
@@ -10089,7 +10210,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 125
@@ -10110,7 +10233,9 @@
    },
    "vakken": [
     "wiskunde",
-    "rekenen"
+    "rekenen",
+    "wiskunde-d",
+    "taal-rekenen"
    ],
    "bestand": "vak-wiskunde.json",
    "aantal": 577
