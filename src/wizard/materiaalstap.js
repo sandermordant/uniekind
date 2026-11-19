@@ -1,7 +1,7 @@
 // Stap 7: het materiaalpakket bekijken, aanvullen (AI-brug, bronnen), aanpassen (dyslexievriendelijk, rustig)
 // en exporteren.
 import { html, raw, inFrame } from '../util/html.js';
-import { maakMateriaal } from '../materiaal/maak.js';
+import { maakMateriaal, lesVoorLaag } from '../materiaal/maak.js';
 import { rustig, tekstVan } from '../materiaal/model.js';
 import { documentHtml, allesHtml } from '../materiaal/html.js';
 import { bestandsnaam, download } from '../export/delen.js';
@@ -13,7 +13,7 @@ import { sectieVoor } from '../data/sectie-accenten.js';
 import { eigenSectieAccenten } from './staat.js';
 
 export function pakketVoor(les, data, staat, concept = {}) {
-  const p = maakMateriaal(les, data, concept.ai ?? {}, concept.links ?? []);
+  const p = maakMateriaal(les, data, concept.ai ?? {}, concept.links ?? [], concept.aiLagen ?? {});
   if (staat.rustig) for (const lijst of [p.docent, p.leerling, p.alle]) lijst.forEach((d, i) => { lijst[i] = rustig(d); });
   // Eerst wat je voor deze les nodig hebt; de extra's (overzicht, kijkwijzer, reflectie) staan apart
   p.meer = p.alle.filter((d) => MEER.includes(d.id));
@@ -30,20 +30,27 @@ const naamVan = (id) => ONDERDELEN.find((o) => o.id === id)?.label ?? id;
 
 function aiPaneel(les, data, staat, concept, p) {
   const inst = aiInstellingen(data.profiel);
-  const nodig = nodigVoorMateriaal(p.alle.map((d) => d.id), les.doel.lesdoelen.length > 0);
+  // Combinatieklas met twee lagen: de AI-opdracht gaat over één laag tegelijk
+  const laagId = les.lagen ? (les.lagen.some((l) => l.id === staat.aiLaag) ? staat.aiLaag : 'A') : null;
+  const lesAi = laagId ? lesVoorLaag(les, laagId) : les;
+  const docsAi = laagId ? p.alle.filter((d) => !d.laag || d.laag === laagId) : p.alle;
+  const nodig = nodigVoorMateriaal(docsAi.map((d) => d.id), lesAi.doel.lesdoelen.length > 0);
   const pakketten = PAKKETTEN.filter((x) => x.ids.some((id) => nodig.includes(id)));
   const pakket = pakketten.some((x) => x.id === staat.aiPakket) ? staat.aiPakket : 'alles';
   let prompt = '';
   let fout = '';
-  try { prompt = promptVoor(les, data.profiel, pakket, nodig); } catch (e) { fout = e.message; }
+  try { prompt = promptVoor(lesAi, data.profiel, pakket, nodig); } catch (e) { fout = e.message; }
   const v = staat.aiVoorstel;
-  const huidig = Object.keys(concept.ai ?? {});
+  const huidig = Object.keys((laagId && laagId !== 'A' ? concept.aiLagen?.[laagId] : concept.ai) ?? {});
   return html`
     <details class="paneel" data-paneel="ai" ${staat.open?.ai ? 'open' : ''}>
       <summary>Maak af met AI ${huidig.length ? html`<span class="chip">${huidig.length} onderdelen ingevuld</span>` : ''}</summary>
       <div class="paneel-inhoud">
         <p class="melding">Gebruik de AI-tool die de school toestaat, met je schoolaccount (${inst.tool}). De prompt bevat alleen lesinhoud: geen namen en geen gegevens over je klas.</p>
         <p class="melding let-op"><b>Lees AI-materiaal altijd na op juistheid en niveau.</b> AI helpt bij het voorbereiden; jij blijft de vakexpert. Een AI-tool kan fouten maken die overtuigend klinken. Gebruik AI als hulp, niet als vervanging van je eigen voorbereiding, zodat je er niet afhankelijk van wordt.</p>
+        ${laagId ? html`<div class="veld"><label for="aiLaag"><b>Voor welke laag?</b></label>
+          <select id="aiLaag" data-actie="ai-laag">${les.lagen.map((l) => html`<option value="${l.id}" ${l.id === laagId ? 'selected' : ''}>Laag ${l.code}${l.onderwerp ? `: ${l.onderwerp}` : ''}</option>`)}</select>
+          <span class="hulp">Doe dit voor elke laag: het antwoord vult het materiaal van die laag.</span></div>` : ''}
         <ol class="ai-stappen">
           <li>
             <label for="aiPakket"><b>Wat wil je laten maken?</b></label>
@@ -151,7 +158,10 @@ export function materiaalStap(les, data, staat, concept = {}, bronnenPerVak = nu
       <nav class="mat-lijst" aria-label="Documenten">
         <h3 class="mat-groep">Nodig voor deze les</h3>
         <div><h4>Voor jou</h4><ul>${nodigDocent.map(knop)}</ul></div>
-        <div><h4>Voor de leerlingen</h4><ul>${nodigLeerling.map(knop)}</ul></div>
+        ${les.lagen
+          ? html`<div><h4>Voor de leerlingen, samen</h4><ul>${nodigLeerling.filter((d) => !d.laag).map(knop)}</ul></div>
+            ${les.lagen.map((l) => html`<div><h4>Laag ${l.code}${l.onderwerp ? ` · ${l.onderwerp}` : ''}</h4><ul>${nodigLeerling.filter((d) => d.laag === l.id).map(knop)}</ul></div>`)}`
+          : html`<div><h4>Voor de leerlingen</h4><ul>${nodigLeerling.map(knop)}</ul></div>`}
         ${p.meer.length ? html`<details class="mat-meer" ${p.meer.some((d) => d.id === huidig.id) ? 'open' : ''}><summary>Meer materiaal (${p.meer.length})</summary><ul>${p.meer.map(knop)}</ul></details>` : ''}
         ${p.aantallen.geschat ? html`<p class="hulp">Aantallen per niveau zijn geschat.</p>` : ''}
       </nav>
@@ -183,7 +193,7 @@ export async function exporteer(soort, les, data, staat, concept) {
     download(await naarDocx(docs, { ...o, toonAantal: soort !== 'docx' }), bestandsnaam(soort === 'docx' ? `${huidig.id}-${naam}` : `materiaal-${naam}`, 'docx'));
   } else if (soort === 'pptx') {
     const { naarPptx } = await import('../export/pptx.js');
-    download(await naarPptx(les, { ...data, ai: concept.ai ?? {} }), bestandsnaam(`presentatie-${naam}`, 'pptx'));
+    download(await naarPptx(les, { ...data, ai: concept.ai ?? {}, aiLagen: concept.aiLagen ?? {} }), bestandsnaam(`presentatie-${naam}`, 'pptx'));
   } else if (soort === 'les') {
     download(new Blob([maakLesbestand(concept, les, profielId)], { type: 'application/json' }), bestandsnaam(naam, 'uniekind'));
   }

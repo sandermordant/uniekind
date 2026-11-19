@@ -4,12 +4,13 @@ import { controleerLesdoel } from '../engine/tekst.js';
 import { DOCENTSTIJL, DENKNIVEAU } from '../data/labels.js';
 import { eindtermenVeld } from './eindtermen.js';
 import { vakKeuzes, opNaam } from '../data/overige-vakken.js';
+import { klasLabel, klasCode } from '../data/klas.js';
 
 /* ── Bouwstenen ─────────────────────────────────── */
 
 export const info = (tekst) => html`<details class="info"><summary aria-label="Uitleg">i</summary><p>${tekst}</p></details>`;
 
-const leerjaarOpties = (afd) => afd.leerjaren.map((j) => [j, `${afd.naam} ${j}${afd.label12 && j <= 2 ? ` (${afd.label12})` : ''}`]);
+const leerjaarOpties = (afd) => afd.leerjaren.map((j) => [j, klasLabel(afd, j)]);
 const veldId = (pad) => `v-${pad.replace(/\./g, '-')}`;
 
 export function tekstveld(pad, label, waarde, o = {}) {
@@ -243,7 +244,7 @@ export function stapKlas({ concept, profiel }) {
     </fieldset>
     ${knoppenveld('klas.dynamiek', 'Groepsdynamiek', [['rustig', 'Rustig'], ['levendig', 'Levendig'], ['onrustig', 'Onrustig']], k.dynamiek)}
     ${knoppenveld('klas.samenwerken', 'Samenwerken gaat', [['goed', 'Goed'], ['wisselend', 'Wisselend'], ['moeizaam', 'Moeizaam']], k.samenwerken)}
-    ${combinatieklasVeld(concept, profiel?.afdelingen.find((a) => a.id === concept.invoer.context.afdeling))}`;
+    ${combinatieklasVeld(concept, profiel?.afdelingen.find((a) => a.id === concept.invoer.context.afdeling), profiel)}`;
 }
 
 /* ── Snelle modus ───────────────────────────────── */
@@ -272,14 +273,35 @@ export function stapSnel(ctx) {
     ${vrij ? tekstveld('context.lesduur', 'Lesduur in minuten', c.lesduur, { type: 'number', min: 20, max: 240 }) : ''}
     ${knoppenveld('context.ruimte', 'Lokaal', profiel.ruimtes.filter((r) => ['M', 'L', 'anders'].includes(r.id)).map((r) => [r.id, r.kort.charAt(0).toUpperCase() + r.kort.slice(1)]), c.ruimte, { herteken: true })}
     ${tekstveld('context.aantal', 'Aantal leerlingen', c.aantal, { type: 'number', min: 1, max: 60 })}
-    ${Number(c.leerjaar) <= 2 ? combinatieklasVeld(concept, afd) : ''}
+    ${combinatieklasVeld(concept, afd, profiel)}
     <p class="melding let-op" id="capaciteit" ${melding ? '' : 'hidden'}>${melding}</p>`;
 }
 
-/** Combinatieklas (bijvoorbeeld vmbo-MiX, havo/mavo of vwo/havo): de les richt zich dan sterker op niveaudifferentiatie. */
-function combinatieklasVeld(concept, afd) {
+/** Combinatieklas (bijvoorbeeld vmbo-MiX, havo/mavo of GA4 met GA5). Optioneel met een tweede laag: een eigen
+    onderwerp en lesdoel, en materiaal per laag. De klas hierboven is laag 1. */
+function combinatieklasVeld(concept, afd, profiel) {
   const k = concept.invoer.klas;
-  const leerjaar = Number(concept.invoer.context.leerjaar) || 1;
+  const c = concept.invoer.context;
+  const leerjaar = Number(c.leerjaar) || 1;
   const aan = k.gemengd ?? (!!afd?.label12 && leerjaar <= 2);
-  return knoppenveld('klas.gemengd', 'Combinatieklas?', [['true', 'Ja'], ['false', 'Nee']], String(!!aan), { bool: true, info: 'Bijvoorbeeld vmbo-MiX, havo/mavo of vwo/havo. Uniekind verdeelt de klas dan breder over steun, basis en verdieping en kiest vaker werkvormen die op niveau differentiëren.' });
+  const l2 = k.laag2 ?? {};
+  const afd2 = profiel?.afdelingen.find((a) => a.id === l2.afdeling);
+  const code1 = afd ? (klasCode(afd, leerjaar) || `${afd.kort} ${leerjaar}`) : '';
+  return html`
+    ${knoppenveld('klas.gemengd', 'Combinatieklas?', [['true', 'Ja'], ['false', 'Nee']], String(!!aan), { bool: true, herteken: true, info: 'Bijvoorbeeld vmbo-MiX, havo/mavo of GA4 met GA5. Uniekind verdeelt de klas dan breder over steun, basis en verdieping. Met een tweede laag krijgt elke laag een eigen onderwerp, lesdoel en materiaal.' })}
+    ${aan && profiel ? html`
+      <fieldset class="veld laagvak"><legend>Tweede laag in deze klas <span class="hulp">(optioneel)</span></legend>
+        <p class="hulp">Laag 1 is de klas hierboven${code1 ? ` (${code1})` : ''}, met het onderwerp en lesdoel hierboven.</p>
+        <div class="veldrij">
+          ${keuzeveld('klas.laag2.afdeling', 'Afdeling', [['', 'Geen tweede laag'], ...profiel.afdelingen.map((a) => [a.id, a.naam])], l2.afdeling ?? '', { herteken: true })}
+          ${afd2 ? keuzeveld('klas.laag2.leerjaar', 'Leerjaar', afd2.leerjaren.map((j) => [j, klasLabel(afd2, j)]), afd2.leerjaren.includes(Number(l2.leerjaar)) ? Number(l2.leerjaar) : (afd2.id === afd?.id && afd2.leerjaren.includes(leerjaar + 1) ? leerjaar + 1 : afd2.leerjaren[0]), { getal: true, herteken: true }) : ''}
+          ${afd2 ? tekstveld('klas.laag2.aantal', 'Leerlingen in deze laag', l2.aantal ?? '', { type: 'number', min: 1, max: 60, placeholder: 'de helft' }) : ''}
+        </div>
+        ${afd2 ? html`
+          ${tekstveld('klas.laag2.onderwerp', 'Onderwerp van deze laag', l2.onderwerp ?? '', { placeholder: 'Leeg: hetzelfde onderwerp' })}
+          <div class="veldrij">
+            ${tekstveld('klas.laag2.doel1', 'Lesdoel van deze laag', l2.doel1 ?? '', { placeholder: 'Je kunt …' })}
+            ${tekstveld('klas.laag2.doel2', 'Tweede lesdoel (optioneel)', l2.doel2 ?? '', { placeholder: 'Je kunt …' })}
+          </div>` : ''}
+      </fieldset>` : ''}`;
 }

@@ -5,7 +5,7 @@ import { html, raw } from '../util/html.js';
 import { laadKaderIndex, laadVak, SOORT_NAAM } from '../data/kaders.js';
 import { laadIndex } from '../data/laden.js';
 import { laadDocent, nieuwConcept, bewaarConcept } from '../wizard/staat.js';
-import { MODUS, laadKlas, bewaarKlas, leerjarenVoor, vakkenVoor, klasInfo, examenjaar } from '../data/klas.js';
+import { MODUS, laadKlas, bewaarKlas, leerjarenVoor, vakkenVoor, klasInfo, examenjaar, klasLabel } from '../data/klas.js';
 import { onderdelenVoor, stofRegels, kinderenVan, isOnderwerp } from '../data/stof.js';
 import { dekking } from '../opslag/logboek.js';
 import { NIVEAU_NAAM } from '../examen/opgave.js';
@@ -105,8 +105,8 @@ export default {
           <form class="ws-klas" aria-label="Kies je klas">
             <div class="veld"><label for="wsAfd">Afdeling</label><select id="wsAfd" data-klas="afdeling">${profiel.afdelingen.filter((a) => leerjarenVoor(a, modus).length).map((a) => html`<option value="${a.id}" ${a.id === klas.afdeling ? 'selected' : ''}>${a.naam}</option>`)}</select></div>
             ${modus === 'examen'
-              ? html`<div class="veld"><span class="label" id="wsJaarLabel">Leerjaar</span><p class="ws-vast" aria-labelledby="wsJaarLabel">${i.afd.naam} ${examenjaar(i.afd)} (examenjaar)</p></div>`
-              : html`<div class="veld"><label for="wsJaar">Leerjaar</label><select id="wsJaar" data-klas="leerjaar">${jaren.map((j) => html`<option value="${j}" ${j === klas.leerjaar ? 'selected' : ''}>${i.afd.naam} ${j}</option>`)}</select></div>`}
+              ? html`<div class="veld"><span class="label" id="wsJaarLabel">Leerjaar</span><p class="ws-vast" aria-labelledby="wsJaarLabel">${klasLabel(i.afd, examenjaar(i.afd))}, examenjaar</p></div>`
+              : html`<div class="veld"><label for="wsJaar">Leerjaar</label><select id="wsJaar" data-klas="leerjaar">${jaren.map((j) => html`<option value="${j}" ${j === klas.leerjaar ? 'selected' : ''}>${klasLabel(i.afd, j)}</option>`)}</select></div>`}
             <div class="veld"><label for="wsVak">Vak</label><select id="wsVak" data-klas="vak">${optiesMetGroepen(vakKeuzes(vakkenVoor(profiel, klas.afdeling)), klas.vak)}</select></div>
           </form>
           <div class="knoppen ws-knoppen">

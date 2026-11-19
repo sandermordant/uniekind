@@ -25,7 +25,8 @@ export const IDS = ONDERDELEN.map((o) => o.id);
 
 /** Welke onderdelen het materiaal van deze les echt gebruikt (geen hintkaarten, exit tickets of startcheck als die er niet zijn). */
 export function nodigVoorMateriaal(docIds, heeftLesdoel = true) {
-  const heeft = new Set(docIds);
+  // Documenten per laag heten bijvoorbeeld 'hintkaarten-laag-B'
+  const heeft = new Set(docIds.map((id) => id.replace(/-laag-[A-Z]$/, '')));
   return IDS.filter((id) => !((id === 'LESDOEL' && heeftLesdoel) || (id.startsWith('HINTKAART') && !heeft.has('hintkaarten')) || (id === 'EXIT-TICKET' && !heeft.has('exit-tickets')) || (id === 'STARTCHECK' && !heeft.has('startcheck'))));
 }
 

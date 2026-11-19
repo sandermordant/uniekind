@@ -20,10 +20,14 @@ export async function naarPptx(les, data, o = {}) {
   const balk = [k.paars, k.rood, k.oranje, k.geel, k.groen].map(hex);
   const itemMap = data.itemMap ?? new Map(data.items.map((i) => [i.id, i]));
   const doelen = les.doel.lesdoelen.map((d) => d.tekst);
-  const onderwerp = les.doel.onderwerp || 'Les';
+  // Twee lagen: per dia het lesdoel (en het AI-materiaal) van de laag die op dat moment instructie krijgt
+  const laag = (id) => les.lagen?.find((l) => l.id === id);
+  const laagVan = (f) => (les.lagen ? f.blokken.find((b) => b.begeleiding === 'docent' && b.groepen.length === 1 && laag(b.groepen[0]))?.groepen[0] : null);
+  const doelenVan = (f) => { const l = laag(laagVan(f)); return l ? l.lesdoelen.map((d) => d.tekst) : doelen; };
+  const aiVan = (f) => (laagVan(f) && laagVan(f) !== 'A' ? (data.aiLagen?.[laagVan(f)] ?? {}) : (data.ai ?? {}));
+  const onderwerp = les.lagen ? les.lagen.map((l) => `${l.code}: ${l.onderwerp || les.doel.onderwerp || 'les'}`).join(' · ') : (les.doel.onderwerp || 'Les');
   const font = 'Arial';
   const ai = data.ai ?? {};
-  const cv = ai.CHECKVRAAG ? checkvraag(ai.CHECKVRAAG) : null;
 
   pptx.defineSlideMaster({
     title: 'UNIEKIND',
@@ -39,7 +43,8 @@ export async function naarPptx(les, data, o = {}) {
   const t = pptx.addSlide({ masterName: 'UNIEKIND' });
   t.addText(onderwerp, { x: 0.7, y: 1.6, w: 12, h: 1.2, fontSize: 44, bold: true, color: A, fontFace: font });
   t.addText('Vandaag ga je leren:', { x: 0.7, y: 3.0, w: 12, h: 0.5, fontSize: 20, color: '374151', fontFace: font });
-  t.addText(doelen.length ? doelen.map((d) => ({ text: d, options: { bullet: true } })) : [{ text: '⟦Lesdoel⟧', options: { bullet: true, highlight: 'FFF3C4' } }], { x: 0.9, y: 3.5, w: 11.5, h: 2.2, fontSize: 24, color: '111827', fontFace: font, valign: 'top' });
+  const titelDoelen = les.lagen ? les.lagen.flatMap((l) => l.lesdoelen.map((d) => `${l.code}: ${d.tekst}`)) : doelen;
+  t.addText(titelDoelen.length ? titelDoelen.map((d) => ({ text: d, options: { bullet: true } })) : [{ text: '⟦Lesdoel⟧', options: { bullet: true, highlight: 'FFF3C4' } }], { x: 0.9, y: 3.5, w: 11.5, h: 2.2, fontSize: 24, color: '111827', fontFace: font, valign: 'top' });
   t.addNotes(les.waarom);
 
   for (const f of les.fases) {
@@ -47,16 +52,19 @@ export async function naarPptx(les, data, o = {}) {
     s.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: 13.333, h: 1.15, fill: { color: A } });
     s.addText(f.titel, { x: 0.5, y: 0.15, w: 9.5, h: 0.85, fontSize: 30, bold: true, color: 'FFFFFF', fontFace: font });
     s.addText(`minuut ${f.start}–${f.start + f.duur}`, { x: 10, y: 0.15, w: 2.9, h: 0.85, fontSize: 20, color: 'FFFFFF', align: 'right', fontFace: font });
-    if (doelen[0]) s.addText(`Lesdoel: ${doelen[0]}`, { x: 0.5, y: 1.25, w: 12.3, h: 0.45, fontSize: 14, color: '4B5563', fontFace: font });
+    const fDoelen = doelenVan(f);
+    const fAi = aiVan(f);
+    const fCv = fAi.CHECKVRAAG ? checkvraag(fAi.CHECKVRAAG) : null;
+    if (fDoelen[0]) s.addText(`${laagVan(f) ? `Laag ${laag(laagVan(f)).code} · ` : ''}Lesdoel: ${fDoelen[0]}`, { x: 0.5, y: 1.25, w: 12.3, h: 0.45, fontSize: 14, color: '4B5563', fontFace: font });
 
     const notities = [];
     const blokken = f.blokken.filter((b) => !b.vervolg || f.blokken.length > 1);
     if (f.type === 'doel') {
       s.addText([
-        ...doelen.map((d) => ({ text: d, options: { bullet: true, fontSize: 26 } })),
+        ...fDoelen.map((d) => ({ text: d, options: { bullet: true, fontSize: 26 } })),
         { text: ' ', options: { breakLine: true } },
         { text: les.doel.relevantie.vraag, options: { fontSize: 22, bold: true, color: A, breakLine: true } },
-        ...(ai.RELEVANTIE ? [{ text: regelsVan(ai.RELEVANTIE).join(' '), options: { fontSize: 20 } }] : tekstRuns('⟦Zet hier je eigen voorbeeld uit het leven van je leerlingen of uit de regio⟧', { fontSize: 20 }))
+        ...(fAi.RELEVANTIE ? [{ text: regelsVan(fAi.RELEVANTIE).join(' '), options: { fontSize: 20 } }] : tekstRuns('⟦Zet hier je eigen voorbeeld uit het leven van je leerlingen of uit de regio⟧', { fontSize: 20 }))
       ], { x: 0.7, y: 1.9, w: 12, h: 4.8, valign: 'top', fontFace: font, color: '111827' });
       if (les.doel.relevantie.regionaal) notities.push(`Idee uit de regio: ${les.doel.relevantie.regionaal}`);
     } else if (f.type === 'verwerken' && blokken.length > 1) {
@@ -83,10 +91,10 @@ export async function naarPptx(les, data, o = {}) {
         const regels = [];
         if (it) regels.push({ text: it.naam, options: { fontSize: 30, bold: true, color: A, breakLine: true } });
         if (['check', 'tussencheck', 'startcheck'].includes(f.type)) {
-          if (cv && f.type !== 'startcheck') {
-            regels.push({ text: cv.vraag, options: { fontSize: 26, breakLine: true } });
-            for (const l of ['a', 'b', 'c', 'd']) regels.push({ text: `${l.toUpperCase()}   ${cv[l]}`, options: { fontSize: 24, color: '374151', breakLine: true } });
-            notities.push(`Scharniervraag. Goed: ${cv.goed}. ${cv.misvattingen}`);
+          if (fCv && f.type !== 'startcheck') {
+            regels.push({ text: fCv.vraag, options: { fontSize: 26, breakLine: true } });
+            for (const l of ['a', 'b', 'c', 'd']) regels.push({ text: `${l.toUpperCase()}   ${fCv[l]}`, options: { fontSize: 24, color: '374151', breakLine: true } });
+            notities.push(`Scharniervraag. Goed: ${fCv.goed}. ${fCv.misvattingen}`);
           } else {
             regels.push(...tekstRuns('⟦Checkvraag: zet hier je vraag met antwoorden A, B, C en D⟧', { fontSize: 24, breakLine: true }));
             regels.push({ text: 'A ……   B ……   C ……   D ……', options: { fontSize: 24, color: '374151', breakLine: true } });

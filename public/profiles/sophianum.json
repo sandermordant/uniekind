@@ -309,7 +309,14 @@
       ],
       "standaardLesduur": 50,
       "slo": "havo",
-      "onderbouwTot": 3
+      "onderbouwTot": 3,
+      "klascodes": {
+        "1": "HM1",
+        "2": "HM2",
+        "3": "H3",
+        "4": "H4",
+        "5": "H5"
+      }
     },
     {
       "id": "vwo-a",
@@ -331,7 +338,15 @@
       ],
       "standaardLesduur": 50,
       "slo": "vwo",
-      "onderbouwTot": 3
+      "onderbouwTot": 3,
+      "klascodes": {
+        "1": "GAH1",
+        "2": "GAH2",
+        "3": "GA3",
+        "4": "GA4",
+        "5": "GA5",
+        "6": "GA6"
+      }
     },
     {
       "id": "vwo-g",
@@ -353,10 +368,18 @@
       ],
       "standaardLesduur": 50,
       "slo": "vwo",
-      "onderbouwTot": 3
+      "onderbouwTot": 3,
+      "klascodes": {
+        "1": "GAH1",
+        "2": "GAH2",
+        "3": "GA3",
+        "4": "GA4",
+        "5": "GA5",
+        "6": "GA6"
+      }
     }
   ],
-  "afdelingToelichting": "vmbo-basis en vmbo-kader zitten in leerjaar 1 en 2 samen in vmbo-MiX; aan het eind van leerjaar 2 wordt de leerweg bepaald. Lesduren: havo/vwo 50 minuten (enkel uur) of 100 minuten (blokuur), bevestigd door Sander; vmbo/mavo (flexuurmodel) meestal 70, soms 35 minuten. Een vrije lesduur kan altijd.",
+  "afdelingToelichting": "vmbo-basis en vmbo-kader zitten in leerjaar 1 en 2 samen in vmbo-MiX; aan het eind van leerjaar 2 wordt de leerweg bepaald. Lesduren: havo/vwo 50 minuten (enkel uur) of 100 minuten (blokuur), bevestigd door Sander; vmbo/mavo (flexuurmodel) meestal 70, soms 35 minuten. Een vrije lesduur kan altijd. Klascodes (lessentabellen 2025-2026): havo HM1, HM2 (havo/mavo), H3-H5; vwo GAH1, GAH2 (gymnasium/atheneum/havo), GA3-GA6.",
   "vakken": [
     {
       "id": "nederlands",

@@ -2,7 +2,7 @@
 
 Uniekind is een statische website (Vite, vanilla JS) die docenten van het Sophianum (Gulpen) helpt gedifferentieerde lessen te maken. Eigenaar: Sander. Online via GitHub Pages: https://sandermordant.github.io/uniekind/ (workflow `.github/workflows/pages.yml`, draait bij elke push naar `main` eerst `npm test`, dan `npm run site`).
 
-Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (laatste: `testverslag-materiaal-wat-nodig-is.md`).
+Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (laatste: `testverslag-twee-lagen.md`).
 
 ## Harde afspraken (niet van afwijken)
 - Route A: geen server, geen database, geen accounts, geen API-sleutel. Alles draait in de browser.
@@ -21,7 +21,8 @@ Lees eerst `README.md`. De rondes en keuzes staan in `docs/testverslag-*.md` (la
 - Bovenin kiest de docent *Eindexamenklas* (vmbo 4, havo 5, vwo 6) of *Andere klassen*; het menu past zich aan.
 - M&M alleen vmbo basis en kader. Filosofie alleen vwo (atheneum en gymnasium). Latijn en Grieks bij vwo gymnasium.
 - Vakken volgen de lessentabellen op sophianum.nl (2025-2026). Informatica en de andere beroepsgerichte profielvakken staan niet in het profiel (wel bij de overige vakken). vmbo basis/kader: M&M, M&N, D&P in plaats van losse vakken.
-- Geen aparte brugklassen (HM, GAH) in het profiel; wel de optie *Combinatieklas* die de les meer op niveaudifferentiatie richt (standaard aan bij vmbo-MiX).
+- Geen aparte brugklassen (HM, GAH) in het profiel; wel de optie *Combinatieklas* die de les meer op niveaudifferentiatie richt (standaard aan bij vmbo-MiX), met optioneel een tweede laag (bijv. GA4 + GA5): eigen onderwerp, lesdoel en materiaal per laag, om de beurt instructie.
+- Klascodes uit de lessentabellen: havo HM1, HM2, H3-H5; vwo GAH1, GAH2, GA3-GA6 (vwo 4 = GA4). Voor vmbo en mavo geen codes verzinnen.
 - Sectie-accenten zijn optioneel: collega's vullen ze zelf in (Mijn profiel) en sturen een bestand naar de beheerder.
 - Plein: M-lokaal 26 leerlingen, leerplein 36. Docent houdt toezicht vanuit het M-lokaal; zicht goed bij vmbo en vwo, beperkt bij mavo en havo. Onderwijsassistenten zijn er niet altijd.
 - Geen toegangscode (advies: niets vertrouwelijks op de site, een code geeft alleen drempel en schijnveiligheid).

@@ -250,6 +250,7 @@ export default {
           if (t.dataset.actie === 'splitsing') { inv().opties.splitsing = t.value; concept.aanpassingen = {}; bewaar(); teken(); }
           if (t.id === 'ocrBestand') return herkenFoto(t.files?.[0]);
           if (t.dataset.actie === 'ai-pakket') { matStaat().aiPakket = t.value; bewaar(); return teken(); }
+          if (t.dataset.actie === 'ai-laag') { matStaat().aiLaag = t.value; matStaat().aiVoorstel = null; bewaar(); teken(); $('#aiLaag', root)?.focus(); return; }
           if (t.dataset.actie === 'link') {
             const l = { titel: t.dataset.titel, url: t.dataset.url };
             concept.links = (concept.links ?? []).filter((x) => x.url !== l.url);
@@ -340,11 +341,14 @@ export default {
             bewaar(); return teken();
           }
           if (a === 'ai-toepassen') {
-            concept.ai = { ...(concept.ai ?? {}), ...(matStaat().aiVoorstel?.blokken ?? {}) };
+            const nieuw = matStaat().aiVoorstel?.blokken ?? {};
+            const laag = huidigeLes().lagen && matStaat().aiLaag && matStaat().aiLaag !== 'A' ? matStaat().aiLaag : null;
+            if (laag) concept.aiLagen = { ...(concept.aiLagen ?? {}), [laag]: { ...(concept.aiLagen?.[laag] ?? {}), ...nieuw } };
+            else concept.ai = { ...(concept.ai ?? {}), ...nieuw };
             matStaat().aiVoorstel = null; matStaat().aiAntwoord = '';
             bewaar(); return teken();
           }
-          if (a === 'ai-wis') { concept.ai = {}; bewaar(); return teken(); }
+          if (a === 'ai-wis') { const laag = matStaat().aiLaag; if (laag && laag !== 'A' && concept.aiLagen) delete concept.aiLagen[laag]; else concept.ai = {}; bewaar(); return teken(); }
           if (a === 'link-erbij') {
             const titel = $('#linkTitel', root)?.value.trim();
             const url = $('#linkUrl', root)?.value.trim();

@@ -23,7 +23,12 @@ function schoon(invoer) {
       verdelingBekend: !!k.verdelingBekend,
       steun: getal(k.steun), basis: getal(k.basis), verdieping: getal(k.verdieping),
       dyslexie: getal(k.dyslexie), dyscalculie: getal(k.dyscalculie), nt2: getal(k.nt2), faalangst: getal(k.faalangst), structuur: getal(k.structuur), hoogbegaafd: getal(k.hoogbegaafd),
-      dynamiek: k.dynamiek, samenwerken: k.samenwerken
+      dynamiek: k.dynamiek, samenwerken: k.samenwerken,
+      ...(typeof k.gemengd === 'boolean' ? { gemengd: k.gemengd } : {}),
+      ...(k.laag2 && typeof k.laag2 === 'object' ? { laag2: {
+        afdeling: String(k.laag2.afdeling ?? '').slice(0, 40), leerjaar: getal(k.laag2.leerjaar) || null, aantal: getal(k.laag2.aantal) || null,
+        onderwerp: String(k.laag2.onderwerp ?? '').slice(0, 200), doel1: String(k.laag2.doel1 ?? '').slice(0, 300), doel2: String(k.laag2.doel2 ?? '').slice(0, 300)
+      } } : {})
     },
     opties: {
       vastgezet: invoer.opties?.vastgezet ?? {}, overslaan: invoer.opties?.overslaan ?? {}, splitsing: invoer.opties?.splitsing ?? null,
@@ -44,7 +49,7 @@ export function maakLesbestand(concept, les, profielId) {
     gemaakt: new Date().toISOString(),
     profiel: profielId,
     titel: les?.doel?.onderwerp || concept.invoer?.inhoud?.onderwerp || 'Les',
-    concept: { modus: concept.modus, invoer: schoon(invoer), aanpassingen: concept.aanpassingen ?? {}, gekozenStand: concept.gekozenStand ?? null, ai: schoonAi(concept.ai), links: schoonLinks(concept.links) },
+    concept: { modus: concept.modus, invoer: schoon(invoer), aanpassingen: concept.aanpassingen ?? {}, gekozenStand: concept.gekozenStand ?? null, ai: schoonAi(concept.ai), aiLagen: { B: schoonAi(concept.aiLagen?.B) }, links: schoonLinks(concept.links) },
     samenvatting: les ? {
       lesduur: les.lesduur, stand: les.standNaam, opzet: les.opzetNaam,
       werkvormen: [...new Set(les.fases.flatMap((f) => f.blokken.map((b) => b.werkvorm?.id).filter(Boolean)))]
@@ -69,7 +74,7 @@ export function leesLesbestand(tekst) {
       versie: 1, modus: d.concept.modus === 'uitgebreid' ? 'uitgebreid' : 'snel', stap: 'aanpassen',
       invoer: { ...inv, opties: { ...inv.opties, vorigeLes: [], duimen: {} } },
       aanpassingen: d.concept.aanpassingen ?? {}, gekozenStand: d.concept.gekozenStand ?? inv.stand,
-      ai: schoonAi(d.concept.ai), links: schoonLinks(d.concept.links)
+      ai: schoonAi(d.concept.ai), aiLagen: { B: schoonAi(d.concept.aiLagen?.B) }, links: schoonLinks(d.concept.links)
     }
   };
 }

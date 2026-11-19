@@ -43,7 +43,8 @@ export function schoonProfiel(eigen, basis) {
     id: a.id.slice(0, 40), naam: tekst(a.naam, 80) ?? a.id, niveau: ['vmbo', 'havo', 'vwo'].includes(a.niveau) ? a.niveau : 'havo',
     leerjaren: (Array.isArray(a.leerjaren) && a.leerjaren.length ? a.leerjaren : [1]).map(Number).filter((n) => n >= 1 && n <= 6),
     lesduren: a.lesduren.map(Number).filter((n) => n >= 10 && n <= 240),
-    standaardLesduur: Number(a.standaardLesduur) || Number(a.lesduren[0])
+    standaardLesduur: Number(a.standaardLesduur) || Number(a.lesduren[0]),
+    klascodes: Object.fromEntries(Object.entries(isObj(a.klascodes) ? a.klascodes : {}).filter(([j, c]) => /^[1-6]$/.test(j) && typeof c === 'string' && /^[A-Za-z0-9-]{1,10}$/.test(c)))
   })).filter((a) => a.lesduren.length && a.leerjaren.length);
   for (const a of p.afdelingen) if (!a.lesduren.includes(a.standaardLesduur)) a.standaardLesduur = a.lesduren[0];
   if (!p.afdelingen.length) p.afdelingen = kloon(basis.afdelingen);

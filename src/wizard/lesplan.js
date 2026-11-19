@@ -91,7 +91,7 @@ function blokWeergave(les, f, b, items, ctx, wijzig) {
       ${les.groepen.length > 1 ? html`<b>${b.groepen.length === les.groepen.length ? 'Hele klas' : b.groepen.map(kort).join(' + ')}</b> · ` : ''}<span class="plek" data-plek="${b.plek}">${plekNaam(les, b.plek)}</span>
       <span class="begeleiding">· ${BEGELEIDING[b.begeleiding] ?? b.begeleiding} · ${b.aantal} lln</span>
     </p>
-    ${b.rol === 'doel' ? doelWeergave(les) : ''}
+    ${b.rol === 'doel' ? doelWeergave(les, b.groepen) : ''}
     ${b.tekst ? html`<p>${b.tekst}</p>` : ''}
     ${it ? html`
       <div class="wat">
@@ -123,8 +123,17 @@ function blokWeergave(les, f, b, items, ctx, wijzig) {
   </div>`;
 }
 
-function doelWeergave(les) {
+function doelWeergave(les, groepen = []) {
   const d = les.doel;
+  // Twee lagen: per laag het eigen onderwerp en de eigen lesdoelen
+  if (les.lagen) {
+    const lagen = les.lagen.filter((l) => !groepen.length || groepen.includes(l.id));
+    return html`<div class="doelblok">
+      ${lagen.map((l) => html`<p><b>Laag ${l.code}</b> (${l.aantal} lln)${l.onderwerp ? `: ${l.onderwerp}` : ''}</p>
+        ${l.lesdoelen.length ? html`<ul class="lesdoelen">${l.lesdoelen.map((x) => html`<li>${x.tekst} <span class="doelcheck ok">${DENKNIVEAU[x.niveau] ?? x.niveau}</span></li>`)}</ul>` : html`<p class="invulveld">Vul hier het lesdoel van ${l.code} in.</p>`}`)}
+      <p><b>Relevantie-haak:</b> ${d.relevantie.vraag}</p>
+    </div>`;
+  }
   return html`<div class="doelblok">
     ${d.lesdoelen.length ? html`<ul class="lesdoelen">${d.lesdoelen.map((x) => html`<li>${x.tekst} <span class="doelcheck ok">${DENKNIVEAU[x.niveau] ?? x.niveau}</span></li>`)}</ul>` : html`<p class="invulveld">Vul hier je lesdoel in.</p>`}
     ${d.eindtermen?.length ? html`<p><b>Sluit aan bij:</b></p><ul class="lesdoelen">${d.eindtermen.map((g) => html`<li>${g.code ? html`<b>${g.code}</b> ` : ''}${g.tekst} <span class="hulp">${g.kaderTitel}</span></li>`)}</ul>` : ''}

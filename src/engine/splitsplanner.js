@@ -10,7 +10,8 @@ export const OPZETTEN = {
   carrousel: { naam: 'Carrousel', kort: 'Twee groepen wisselen halverwege tussen het lokaal (instructie) en het plein (verwerken).' },
   flipped: { naam: 'Flipped start', kort: 'De pleingroep krijgt de instructie via een kennisclip op de laptop; jij geeft instructie in het lokaal.' },
   oa: { naam: 'Docent plus onderwijsassistent', kort: 'De onderwijsassistent begeleidt de pleingroep met een eigen instructiekaart.' },
-  stilte: { naam: 'Stilteruimte', kort: 'Een kleine groep werkt met een eigen opdrachtkaart in de stilteruimte.' }
+  stilte: { naam: 'Stilteruimte', kort: 'Een kleine groep werkt met een eigen opdrachtkaart in de stilteruimte.' },
+  lagen: { naam: 'Twee lagen', kort: 'Om de beurt instructie per laag, elk met een eigen onderwerp en lesdoel. De andere laag werkt ondertussen zelfstandig aan de eigen opdracht.' }
 };
 
 export function planSplitsing(ctx) {
@@ -19,7 +20,7 @@ export function planSplitsing(ctx) {
   const overflow = Number.isFinite(cap) ? Math.max(0, n - cap) : 0;
   const v = ctx.verdeling;
   const gevraagd = ctx.opties.splitsing;
-  const nodig = overflow > 0 || (ctx.stand === 3 && ctx.ruimte === 'M') || (!!gevraagd && gevraagd !== 'routes' && gevraagd !== 'klassikaal');
+  const nodig = overflow > 0 || !!ctx.lagen || (ctx.stand === 3 && ctx.ruimte === 'M') || (!!gevraagd && gevraagd !== 'routes' && gevraagd !== 'klassikaal');
 
   const pleinGroep = Math.max(v.verdieping, overflow);
   const opties = [];
@@ -38,9 +39,17 @@ export function planSplitsing(ctx) {
   optie('stilte', ctx.stilteMogelijk && stilteGroep <= ctx.capaciteit.stilte && stilteGroep > 0,
     !ctx.stilteMogelijk ? 'Er is geen stilteruimte beschikbaar.' : `De stilteruimte heeft ${ctx.capaciteit.stilte} plekken.`, { pleinGroep: stilteGroep });
 
+  // Combinatieklas met twee lagen: om de beurt instructie. De wachtende laag werkt in het lokaal, of op het plein als het lokaal te vol is.
+  if (ctx.lagen) {
+    const grootste = Math.max(...ctx.lagen.map((l) => l.aantal));
+    optie('lagen', overflow === 0 || (p && grootste <= ctx.capaciteit.plein && grootste <= cap),
+      overflow > 0 && !p ? geenPlein : 'Een laag past niet op het plein of in het lokaal.', { pleinGroep: overflow > 0 ? grootste : 0 });
+  }
+
   let gekozen = null;
   const haalbaar = (id) => opties.find((o) => o.id === id && o.haalbaar);
   if (gevraagd && haalbaar(gevraagd)) gekozen = gevraagd;
+  else if (ctx.lagen && haalbaar('lagen')) gekozen = 'lagen';
   else if (overflow > 0) {
     gekozen = [ctx.oa && 'oa', v.bekend && 'gespreide-start', !v.bekend && 'startcheck', 'carrousel', 'gespreide-start', 'flipped', 'stilte']
       .filter(Boolean).find((id) => haalbaar(id)) ?? null;
@@ -48,6 +57,7 @@ export function planSplitsing(ctx) {
 
   let reden = '';
   if (overflow > 0) reden = `Er zijn ${n} leerlingen en het ${ctx.ruimteDef?.kort ?? 'lokaal'} biedt plaats aan ${cap}. ${overflow} leerling${overflow === 1 ? '' : 'en'} moet${overflow === 1 ? '' : 'en'} dus op een andere plek werken.`;
+  else if (ctx.lagen) reden = `Combinatieklas: ${ctx.lagen.map((l) => `${l.code} (${l.aantal})`).join(' en ')}. Elke laag krijgt om de beurt instructie bij het eigen lesdoel.`;
   else if (nodig) reden = 'Je koos voor volledig Uniekind: de les werkt met meerdere routes en plekken.';
 
   const waarschuwing = overflow > 0 && !gekozen

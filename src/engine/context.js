@@ -88,10 +88,30 @@ export function maakContext(invoer, profiel) {
 
   // Lesdoelen en denkniveau
   const doelen = (inh.lesdoelen ?? []).map((x) => (typeof x === 'string' ? { tekst: x } : x)).filter((x) => x.tekst?.trim());
-  const doelInfo = doelen.map((x) => {
+  const doelInfoVan = (lijst) => (lijst ?? []).map((x) => (typeof x === 'string' ? { tekst: x } : x)).filter((x) => x?.tekst?.trim()).map((x) => {
     const ch = controleerLesdoel(x.tekst);
     return { tekst: x.tekst.trim(), niveau: x.niveau || ch.niveau || NIVEAU_PER_REEKS[c.reeks] || 'begrijpen', waarneembaar: ch.waarneembaar, tip: ch.tip };
   });
+  const doelInfo = doelInfoVan(doelen);
+
+  // Combinatieklas met twee lagen (bijvoorbeeld GA4 en GA5): elke laag een eigen onderwerp en eigen lesdoelen.
+  // Laag A is de gekozen afdeling en het leerjaar; laag B staat in klas.laag2.
+  let lagen = null;
+  const l2 = k.laag2;
+  if (gemengd && l2 && typeof l2 === 'object' && l2.afdeling && aantal >= 2) {
+    const afd2 = profiel.afdelingen.find((a) => a.id === l2.afdeling) ?? afdeling;
+    // Standaard het leerjaar erboven in dezelfde afdeling (GA4 → GA5); alleen leerjaren die de afdeling heeft
+    const std2 = afd2.id === afdeling.id && afd2.leerjaren.includes(leerjaar + 1) ? leerjaar + 1 : afd2.leerjaren[0];
+    const jaar2 = afd2.leerjaren.includes(getal(l2.leerjaar, std2)) ? getal(l2.leerjaar, std2) : std2;
+    const code = (a, j) => a.klascodes?.[String(j)] ?? `${a.kort} ${j}`;
+    const n2 = Math.max(1, Math.min(aantal - 1, Math.round(getal(l2.aantal, Math.floor(aantal / 2)))));
+    if (!(afd2.id === afdeling.id && jaar2 === leerjaar)) {
+      lagen = [
+        { id: 'A', afdeling: afdeling.id, leerjaar, code: code(afdeling, leerjaar), aantal: aantal - n2, onderwerp: inh.onderwerp ?? '', doelen: doelInfo, begrippen: inh.begrippen ?? [] },
+        { id: 'B', afdeling: afd2.id, leerjaar: jaar2, code: code(afd2, jaar2), aantal: n2, onderwerp: String(l2.onderwerp ?? '').trim() || (inh.onderwerp ?? ''), doelen: doelInfoVan(Array.isArray(l2.lesdoelen) ? l2.lesdoelen : [l2.doel1, l2.doel2].filter(Boolean)), begrippen: Array.isArray(l2.begrippen) ? l2.begrippen : [] }
+      ];
+    }
+  }
   const niveaus = doelInfo.length ? [...new Set(doelInfo.map((x) => x.niveau))] : [NIVEAU_PER_REEKS[c.reeks] ?? 'begrijpen'];
 
   const behoeften = Object.fromEntries(['dyslexie', 'dyscalculie', 'nt2', 'faalangst', 'structuur', 'hoogbegaafd'].map((b) => [b, Math.max(0, getal(k[b]))]));
@@ -118,7 +138,7 @@ export function maakContext(invoer, profiel) {
     reeks: c.reeks ?? 'uitleg', tijdstip: c.tijdstip ?? 'midden',
     capaciteit, pleinMogelijk, stilteMogelijk,
     pleinZicht: profiel.regels.pleinZichtPerKolom?.[afdeling.kolom] ?? 'goed',
-    inhoud: { ...inh, doelen: doelInfo }, niveaus,
+    inhoud: { ...inh, doelen: doelInfo }, niveaus, lagen,
     verdeling, behoeften,
     dynamiek: k.dynamiek ?? 'rustig', samenwerken: k.samenwerken ?? 'goed',
     opties,

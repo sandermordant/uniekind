@@ -44,6 +44,9 @@ function info(les, profiel) {
 const ikKan = (doel) => doel.replace(/^je (kunt|kan)\s+/i, 'Ik kan ').replace(/^(?!Ik kan)/, 'Ik kan: ');
 const vul = (s, b, o) => s.replaceAll('{b}', b[0]).replaceAll('{b2}', b[1] ?? b[0]).replaceAll('{o}', o);
 
+/** Het lesdoel voor een groep: bij twee lagen dat van de eigen laag. */
+const doelVanGroep = (les, gid) => (les.lagen?.find((l) => l.id === gid)?.lesdoelen ?? les.doel.lesdoelen)[0]?.tekst ?? '';
+
 function begrippenVan(les) {
   const b = (les.doel.begrippen ?? []).filter(Boolean);
   return b.length ? b : ['⟦kernbegrip 1⟧', '⟦kernbegrip 2⟧', '⟦kernbegrip 3⟧'];
@@ -206,7 +209,7 @@ function opdrachtkaarten(les, inf) {
       titel: `${g.naam}`,
       blokken: [
         alinea(`Waar: ${plekken.map((p) => PLEK[p]).join(', dan ')}. Tijd: van minuut ${van} tot ${tot}.`, { nadruk: true }),
-        alinea(`Lesdoel: ${les.doel.lesdoelen[0] ? ikKan(les.doel.lesdoelen[0].tekst) : '⟦lesdoel⟧'}`),
+        alinea(`Lesdoel: ${doelVanGroep(les, g.id) ? ikKan(doelVanGroep(les, g.id)) : '⟦lesdoel⟧'}`),
         lijst(routeStappen(rol, inf), true),
         werkvormen.length ? alinea(`Werkvorm: ${werkvormen.join(', ')}.`, { klein: true }) : null,
         alinea(KLAAR[rol] ?? KLAAR.basis),
@@ -367,7 +370,7 @@ function vandaagkaarten(les, inf) {
     kaartenLijst.push({
       titel: `Vandaag · ${g.naam}`,
       blokken: [
-        alinea(`Lesdoel: ${les.doel.lesdoelen[0] ? ikKan(les.doel.lesdoelen[0].tekst) : '⟦lesdoel⟧'}`, { nadruk: true }),
+        alinea(`Lesdoel: ${doelVanGroep(les, g.id) ? ikKan(doelVanGroep(les, g.id)) : '⟦lesdoel⟧'}`, { nadruk: true }),
         tabel(['Minuut', 'Wat', 'Waar'], plan.map(({ f, b }) => [`${f.start}–${f.start + f.duur}`, b.werkvorm?.naam ?? f.titel, PLEK[b.plek].replace(/^het |^de /, '')])),
         alinea(inf.heeft?.exit === false ? 'Je weet dat je het kunt als je het lesdoel aan een klasgenoot kunt uitleggen.' : 'Je weet dat je het kunt als je de exit ticket goed hebt én het aan een klasgenoot kunt uitleggen.', { klein: true })
       ]
@@ -465,7 +468,9 @@ function lesplanDoc(les, inf, profiel, itemMap, ai = {}) {
     blokken: [
       ...(Object.keys(ai).length ? [alinea('Deze les bevat materiaal dat met AI is gemaakt. Lees het altijd na op juistheid en niveau voordat je het gebruikt.', { nadruk: true })] : []),
       kader('Lesdoelen', [
-        lijst(les.doel.lesdoelen.length ? les.doel.lesdoelen.map((d) => `${d.tekst} (${denkLabel(d.niveau, inf.taxonomie)})`) : ['⟦lesdoel⟧']),
+        ...(les.lagen ? les.lagen.flatMap((l) => [alinea(`Laag ${l.code} (${l.aantal} leerlingen)${l.onderwerp ? `: ${l.onderwerp}` : ''}`, { nadruk: true }),
+          lijst(l.lesdoelen.length ? l.lesdoelen.map((d) => `${d.tekst} (${denkLabel(d.niveau, inf.taxonomie)})`) : [`⟦lesdoel ${l.code}⟧`])])
+          : [lijst(les.doel.lesdoelen.length ? les.doel.lesdoelen.map((d) => `${d.tekst} (${denkLabel(d.niveau, inf.taxonomie)})`) : ['⟦lesdoel⟧'])]),
         les.doel.begrippen?.length ? alinea(`Kernbegrippen: ${les.doel.begrippen.join(', ')}.`) : invulveld('Kernbegrippen', ''),
         ...(les.doel.eindtermen?.length ? [alinea('Sluit aan bij:', { nadruk: true }), lijst(les.doel.eindtermen.map((g) => `${g.code ? `${g.code}: ` : ''}${g.tekst} (${g.kaderTitel})`))] : [])
       ]),
@@ -591,7 +596,21 @@ function antwoordkaart(les, inf, ai) {
   return { id: 'antwoordkaart', titel: `Antwoordkaart: ${inf.titel}`, voor: 'docent', soort: 'antwoorden', aantal: 1, aantalUitleg: 'voor jezelf of om leerlingen zelf te laten nakijken', blokken: [alinea('Gemaakt met AI: controleer de antwoorden voordat je ze gebruikt.', { klein: true }), ...blokken] };
 }
 
-export function maakMateriaal(les, data, ai = {}, links = []) {
+/** De les gezien vanuit één laag van een combinatieklas: eigen onderwerp, lesdoelen, aantal en klas. */
+export function lesVoorLaag(les, laagId) {
+  const l = les.lagen?.find((x) => x.id === laagId);
+  if (!l) return les;
+  return {
+    ...les, aantal: l.aantal, laag: l,
+    doel: { ...les.doel, onderwerp: l.onderwerp || les.doel.onderwerp, lesdoelen: l.lesdoelen, begrippen: l.begrippen?.length ? l.begrippen : (l.id === 'A' ? les.doel.begrippen : []), eindtermen: l.id === 'A' ? les.doel.eindtermen : [] },
+    invoer: { ...les.invoer, context: { ...(les.invoer?.context ?? {}), afdeling: l.afdeling, leerjaar: l.leerjaar } }
+  };
+}
+
+/** Een document voor één laag: eigen id en de laag in de titel. */
+const voorLaag = (d, l) => ({ ...d, id: `${d.id}-laag-${l.id}`, titel: d.titel.replace(/^([^:]+)/, `$1 · ${l.code}`), laag: l.id });
+
+export function maakMateriaal(les, data, ai = {}, links = [], aiPerLaag = {}) {
   ai = ai ?? {};
   // Geen lesdoel ingevuld, maar wel een voorstel van AI? Dan geldt dat lesdoel in het materiaal.
   if (!les.doel.lesdoelen.length && ai.LESDOEL) {
@@ -614,13 +633,31 @@ export function maakMateriaal(les, data, ai = {}, links = []) {
   // Hintkaarten ook als een werkvorm in de les ze in zijn als-dan-regels voorschrijft (bijvoorbeeld de startcheck)
   const noemt = (woord) => [...ids].some((id) => (itemMap.get(id)?.alsDan ?? []).some((r) => new RegExp(woord, 'i').test(`${r.als} ${r.dan}`)));
   inf.heeft = { hint: ids.has('hintkaarten') || noemt('hintkaart'), exit: ids.has('exit-ticket'), routes: les.groepen.length > 1 };
+  // Per laag (combinatieklas met twee lagen) of voor de hele klas: werkbladen, hintkaarten, succescriteria, exit tickets, vaktaal
+  const perLaag = (lesL, infL, perL, aiL) => [
+    ...werkbladen(lesL, infL, perL, aiL),
+    infL.heeft.hint ? hintkaarten(lesL, infL, aiL) : null,
+    succescriteria(lesL, infL),
+    infL.heeft.exit ? exitTickets(lesL, infL, perL, aiL) : null,
+    vaktaalkaart(lesL, infL, aiL)
+  ].filter(Boolean);
+  const laagDocs = les.lagen
+    ? les.lagen.flatMap((l) => {
+      const aiL = l.id === 'A' ? ai : (aiPerLaag?.[l.id] ?? {});
+      let lesL = lesVoorLaag(les, l.id);
+      if (!(lesL.doel.begrippen ?? []).length && aiL.VAKTAAL) lesL = { ...lesL, doel: { ...lesL.doel, begrippen: AI.vaktaal(aiL.VAKTAAL).map((x) => x.begrip).filter(Boolean).slice(0, 6) } };
+      if (!lesL.doel.lesdoelen.length && aiL.LESDOEL) lesL = { ...lesL, doel: { ...lesL.doel, lesdoelen: AI.regelsVan(aiL.LESDOEL).map((x) => x.replace(/^[-*•\d.)\s]+/, '').trim()).filter((x) => /^je (kunt|kan)\b/i.test(x)).slice(0, 2).map((tekst) => ({ tekst, niveau: controleerLesdoel(tekst).niveau ?? 'begrijpen' })) } };
+      const infL = { ...info(lesL, profiel), heeft: inf.heeft };
+      const f = l.aantal / Math.max(1, les.aantal);
+      const perL = { ...per, steun: Math.round(per.steun * f), verdieping: Math.round(per.verdieping * f) };
+      perL.basis = Math.max(0, l.aantal - perL.steun - perL.verdieping);
+      return perLaag(lesL, infL, perL, aiL).map((d) => voorLaag(d, l));
+    })
+    : perLaag(les, inf, per, ai);
   const leerling = [
-    ...werkbladen(les, inf, per, ai),
+    ...laagDocs.filter((d) => d.id.startsWith('werkblad')),
     inf.heeft.routes ? opdrachtkaarten(les, inf) : null,
-    inf.heeft.hint ? hintkaarten(les, inf, ai) : null,
-    succescriteria(les, inf),
-    inf.heeft.exit ? exitTickets(les, inf, per, ai) : null,
-    vaktaalkaart(les, inf, ai)
+    ...laagDocs.filter((d) => !d.id.startsWith('werkblad'))
   ].filter(Boolean);
   if (ids.has('startcheck-routes') || ai.STARTCHECK) leerling.unshift(startcheck(les, inf, ai));
   if (ids.has('plusopdracht-klaar') || per.verdieping > 0) leerling.push(pluskaarten(les, inf));
@@ -637,8 +674,16 @@ export function maakMateriaal(les, data, ai = {}, links = []) {
     reflectiekaart(les, inf)
   ];
   if (les.oa) docent.push(oaKaart(les, inf));
-  const ak = antwoordkaart(les, inf, ai);
-  if (ak) docent.push(ak);
+  if (les.lagen) {
+    for (const l of les.lagen) {
+      const aiL = l.id === 'A' ? ai : (aiPerLaag?.[l.id] ?? {});
+      const akL = antwoordkaart(lesVoorLaag(les, l.id), inf, aiL);
+      if (akL) docent.push(voorLaag(akL, l));
+    }
+  } else {
+    const ak = antwoordkaart(les, inf, ai);
+    if (ak) docent.push(ak);
+  }
   docent.splice(1, 0, voorbereiding(les, inf, [...docent, ...leerling], itemMap));
   // Aangevinkte bronnen in het lesplan (alleen wat de docent zelf heeft gekozen)
   if (links?.length) docent[0].blokken.push(kop('Bronnen en media'), lijst(links.map((l) => `${l.titel}: ${l.url}`)));

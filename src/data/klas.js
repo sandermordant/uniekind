@@ -10,6 +10,10 @@ export const MODUS = {
 };
 
 /** Het examenjaar van een afdeling: het laatste leerjaar (vmbo 4, havo 5, vwo 6). */
+/** Klascode uit het profiel (bijvoorbeeld GA4 of H4), anders niets. */
+export const klasCode = (afd, leerjaar) => afd?.klascodes?.[String(leerjaar)] ?? '';
+/** "vwo atheneum 4 (GA4)", "vmbo basis 1 (vmbo-MiX)" of "havo 4 (H4)". */
+export const klasLabel = (afd, j) => `${afd.naam} ${j}${klasCode(afd, j) ? ` (${klasCode(afd, j)})` : afd.label12 && j <= 2 ? ` (${afd.label12})` : ''}`;
 export const examenjaar = (afd) => Math.max(...(afd?.leerjaren?.length ? afd.leerjaren : [0]));
 export const isExamenjaar = (afd, leerjaar) => !!afd && Number(leerjaar) === examenjaar(afd);
 

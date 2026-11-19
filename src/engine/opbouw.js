@@ -297,6 +297,31 @@ const ORGANISATIE = { 'gespreide-start': 'gespreide-start', startcheck: 'startch
 
 /* ───────────── Relevantie-haak ───────────── */
 
+/* Twee lagen in één klas: als de carrousel, maar elke groep is een laag met een eigen lesdoel.
+   Laag A krijgt eerst instructie, laag B daarna. De wachtende laag werkt zelfstandig in het lokaal
+   (of op het plein als het lokaal te vol is). */
+function opzetLagen(ctx, basisSlots) {
+  const c = opzetCarrousel(ctx, basisSlots);
+  const [A, B] = ctx.lagen;
+  const overflow = Number.isFinite(ctx.capaciteit.lokaal) ? ctx.aantal - ctx.capaciteit.lokaal : 0;
+  const wacht = overflow > 0 && ctx.pleinMogelijk ? 'plein' : 'lokaal';
+  const beg = wacht === 'plein' ? 'op afstand' : 'zelfstandig';
+  const iWissel = c.slots.findIndex((s) => s.wissel);
+  return {
+    slots: c.slots, herhaalRollen: c.herhaalRollen,
+    groepen: [g('A', `Laag ${A.code} · eerst instructie`, 'wissel', A.aantal), g('B', `Laag ${B.code} · eerst zelfstandig`, 'wissel', B.aantal)],
+    plaats(s, i) {
+      if (i < iWissel) return [{ groep: 'A', plek: 'lokaal', rol: s.type, begeleiding: 'docent' }, { groep: 'B', plek: wacht, rol: s.type === 'opening' ? 'startopdracht' : 'voorbereiding', begeleiding: beg }];
+      if (s.type === 'doel' || s.type === 'instructie' || s.type === 'check') return [{ groep: 'B', plek: 'lokaal', rol: s.type, begeleiding: 'docent' }, { groep: 'A', plek: wacht, rol: 'zelfstandig', begeleiding: beg }];
+      if (s.type === 'beweeg') return [{ groep: 'B', plek: 'lokaal', rol: 'beweeg', begeleiding: 'docent' }, { groep: 'A', plek: wacht, rol: wacht === 'plein' ? 'beweeg-zelf' : 'beweeg', begeleiding: wacht === 'plein' ? beg : 'docent' }];
+      if (s.type === 'afsluiting') return wacht === 'plein'
+        ? [{ groep: 'B', plek: 'lokaal', rol: 'afsluiting', begeleiding: 'docent' }, { groep: 'A', plek: 'plein', rol: 'afsluiting', begeleiding: beg }]
+        : [{ groep: 'A', plek: 'lokaal', rol: 'afsluiting', begeleiding: 'docent' }, { groep: 'B', plek: 'lokaal', rol: 'afsluiting', begeleiding: 'docent' }];
+      return [{ groep: 'B', plek: 'lokaal', rol: 'basis', begeleiding: 'docent' }, { groep: 'A', plek: wacht, rol: 'zelfstandig', begeleiding: beg }];
+    }
+  };
+}
+
 function relevantie(ctx) {
   const haken = ctx.profiel.regio?.haken ?? [];
   const passend = haken.filter((h) => h.vakken.includes(ctx.vakId));
@@ -327,6 +352,7 @@ export function bouwLes(ctx, items) {
       : opzetId === 'routes' ? opzetRoutes(ctx, slots0)
         : opzetId === 'startcheck' ? opzetStartcheck(ctx, slots0, pg)
           : opzetId === 'carrousel' ? opzetCarrousel(ctx, slots0)
+            : opzetId === 'lagen' && ctx.lagen ? opzetLagen(ctx, slots0)
             : opzetPleinGroep(ctx, slots0, opzetId, pg);
 
   const groepAantal = Object.fromEntries(opzet.groepen.map((x) => [x.id, x.aantal]));
@@ -470,6 +496,7 @@ export function bouwLes(ctx, items) {
     splitsing: split,
     differentiatie: differentiatie.map((id) => ({ id, naam: items.find((i) => i.id === id)?.naam ?? id })),
     routines: [...new Set(routines)],
+    lagen: ctx.lagen ? ctx.lagen.map((l) => ({ id: l.id, code: l.code, afdeling: l.afdeling, leerjaar: l.leerjaar, aantal: l.aantal, onderwerp: l.onderwerp, lesdoelen: l.doelen, begrippen: l.begrippen })) : null,
     doel: { lesdoelen: ctx.inhoud.doelen, onderwerp: ctx.inhoud.onderwerp, begrippen: ctx.inhoud.begrippen ?? [], eindtermen: (ctx.inhoud.eindtermen ?? []).filter((g) => g && g.tekst).map((g) => ({ code: g.code, tekst: g.tekst, kaderTitel: g.kaderTitel })), relevantie: relevantie(ctx) },
     vooruitblik: 'Vertel kort wat de volgende les komt en hoe het aansluit op vandaag.',
     materiaalAdvies: {
