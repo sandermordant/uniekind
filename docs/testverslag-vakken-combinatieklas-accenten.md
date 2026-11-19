@@ -59,3 +59,20 @@ Opnieuw importeren gaf dezelfde 445 kaders; alleen de koppeling aan Uniekind-vak
 - de les volgt het lesmodel (EDI) en de werkvorm van de maand (wisbordjes);
 - het inlezen op Schoolprofiel zet het lesmodel van wiskunde op EDI;
 - zonder accent werkt alles zoals voorheen.
+
+## 4. Aanvulling: bronnen nagetrokken (19 november)
+Van de zes bronnen met de status "nog controleren" zijn er vijf online nagekeken en op `gecontroleerd` gezet (`public/data/bronnen.json`):
+
+| Bron | Gevonden | Aangepast |
+|---|---|---|
+| EEF, *Metacognition and Self-Regulated Learning* | eerste editie 2018, tweede editie 2025 | "herziene versie 2021" klopte niet; link naar de EEF-pagina |
+| Aronson & Patnoe, *Cooperation in the Classroom: The Jigsaw Method* (3e druk) | Pinter & Martin, Londen, 2011 | ISBN 978-1-905177-22-6 |
+| Ebbens & Ettekoven, *Effectief leren. Basisboek* | 4e druk, Noordhoff, 2015 | jaar 2013 werd 2015; ISBN 978-90-01-87312-7; 5e druk (2020) heet "De docent als regisseur" |
+| Naylor & Keogh, *Concept Cartoons in Science Education* | Millgate House, 2000 | ISBN 978-0-9527506-2-8 |
+| Daly-Smith e.a., systematische review bewegend leren | BMJ Open Sport & Exercise Medicine 4(1), e000341, 2018 | DOI 10.1136/bmjsem-2018-000341 |
+
+**IGDI** blijft op "nog controleren". Online is geen eenduidige oorspronkelijke bron te vinden, en Uniekind verzint er geen. Weet Sander of een collega de bron die de school gebruikt, dan kan die erin.
+
+`npm run valideer` meldt nu nog één bron om te controleren (igdi-slo).
+
+Daarnaast staat een concept voor een mail aan collega's om proef te draaien in `docs/mail-proefdraaien.md`.

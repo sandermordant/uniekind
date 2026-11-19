@@ -49,8 +49,9 @@
       "titel": "Metacognition and Self-Regulated Learning: Guidance Report",
       "auteur": "Education Endowment Foundation",
       "jaar": 2018,
-      "waar": "EEF (herziene versie 2021)",
-      "status": "nog-controleren"
+      "waar": "Education Endowment Foundation, Londen (eerste editie 2018; tweede editie 2025)",
+      "url": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition",
+      "status": "gecontroleerd"
     },
     "surma-2019": {
       "titel": "Wijze lessen: Twaalf bouwstenen voor effectieve didactiek",
@@ -147,8 +148,8 @@
       "titel": "Cooperation in the Classroom: The Jigsaw Method (3rd ed.)",
       "auteur": "Aronson, E. & Patnoe, S.",
       "jaar": 2011,
-      "waar": "Pinter & Martin",
-      "status": "nog-controleren"
+      "waar": "Pinter & Martin, Londen. ISBN 978-1-905177-22-6",
+      "status": "gecontroleerd"
     },
     "hollingsworth-ybarra-2009": {
       "titel": "Explicit Direct Instruction (EDI): The Power of the Well-Crafted, Well-Taught Lesson",
@@ -158,17 +159,17 @@
       "status": "gecontroleerd"
     },
     "ebbens-ettekoven": {
-      "titel": "Effectief leren (basisboek; activerende directe instructie)",
+      "titel": "Effectief leren. Basisboek (4e druk)",
       "auteur": "Ebbens, S. & Ettekoven, S.",
-      "jaar": 2013,
-      "waar": "Noordhoff Uitgevers (meerdere drukken; jaar en druk nog nalopen)",
-      "status": "nog-controleren"
+      "jaar": 2015,
+      "waar": "Noordhoff Uitgevers, Groningen. ISBN 978-90-01-87312-7. Vanaf de 5e druk (2020) als \"Effectief leren. De docent als regisseur\", met M. van Ast, O. de Loor en L. Spijkerboer",
+      "status": "gecontroleerd"
     },
     "igdi-slo": {
       "titel": "Interactief Gedifferentieerde Directe Instructie (IGDI), uitgewerkt in Nederlandse handreikingen (o.a. SLO en Expertisecentrum Nederlands)",
       "auteur": "diverse auteurs",
       "jaar": null,
-      "waar": "Nederlandse onderwijspraktijk; precieze bron nog kiezen",
+      "waar": "Nederlandse onderwijspraktijk. Online nagezocht (november 2026): geen eenduidige oorspronkelijke bron gevonden; nog kiezen",
       "status": "nog-controleren"
     },
     "lemov-2015": {
@@ -196,15 +197,16 @@
       "titel": "Concept Cartoons in Science Education",
       "auteur": "Naylor, S. & Keogh, B.",
       "jaar": 2000,
-      "waar": "Millgate House",
-      "status": "nog-controleren"
+      "waar": "Millgate House Publishers, Sandbach. ISBN 978-0-9527506-2-8",
+      "status": "gecontroleerd"
     },
     "daly-smith-2018": {
       "titel": "Systematic review of acute physically active learning and classroom movement breaks on children's physical activity, cognition, academic performance and classroom behaviour",
       "auteur": "Daly-Smith, A. J. e.a.",
       "jaar": 2018,
-      "waar": "BMJ Open Sport & Exercise Medicine, 4(1)",
-      "status": "nog-controleren"
+      "waar": "BMJ Open Sport & Exercise Medicine, 4(1), e000341",
+      "url": "https://doi.org/10.1136/bmjsem-2018-000341",
+      "status": "gecontroleerd"
     },
     "kennisnet": {
       "titel": "Kennisnet – kennis over ict en onderwijs",
